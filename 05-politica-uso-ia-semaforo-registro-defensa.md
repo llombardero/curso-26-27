@@ -8,7 +8,8 @@ Documentos relacionados:
 - `00-mapa-maestro-curso-2026-2027.md`
 - `01-matriz-integrada-ra-ce-evidencias-tareas.md`
 - `02-calendario-hitos-sprints-2026-2027.md`
-- `04-enunciados-entregables-y-modelo-laura.md`
+- `04A-enunciados-y-entregables-alumnado.md`
+- `04B-modelo-entregables-laura.md`
 
 ---
 
