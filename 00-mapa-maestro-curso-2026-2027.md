@@ -593,7 +593,5 @@ Estado: borrador inicial validable.
 Este mapa ya permite avanzar hacia una programación integrada, pero aún no debe considerarse documento final porque faltan:
 
 - matriz completa RA/CE/evidencias;
-- elección definitiva de la distribución horaria de Entornos;
-- comprobación de posibles días no lectivos adicionales;
 - rúbricas;
 - secuencia detallada por sesiones.
