@@ -346,7 +346,7 @@ Progresión recomendada:
 8. Pruebas, depuración y refactorización sistemática.
 9. Base de conocimiento y persistencia.
 10. Integración opcional con Gemini/Jarvis.
-11. Documentación, defensa y transferencia a Python/JavaScript.
+11. Documentación, defensa y comparación Java ↔ Python fuera del horario lectivo.
 
 ---
 
@@ -555,19 +555,21 @@ Resultado esperado de la semana:
 ### 13.2. Decisiones cerradas tras revisión
 
 1. Distribución de Entornos de Desarrollo:
-   - 2 horas el miércoles + 1 hora el viernes.
-   - Motivo: permite una sesión semanal de trabajo profundo en miércoles y una sesión corta de cierre, revisión, soporte a GitHub/portfolio, incidencias, retrospectiva técnica o preparación del siguiente sprint en viernes.
-2. No se contemplan más días festivos/no lectivos que los ya indicados en este mapa.
+   - 2 periodos lectivos el lunes + 1 periodo lectivo el martes.
+   - Motivo: la sesión doble del lunes permite trabajo técnico profundo coordinado con Programación, y la sesión del martes permite seguimiento inmediato, resolución de incidencias, GitHub/portfolio, pruebas, depuración o preparación del sprint.
+2. Todas las clases se imparten por la tarde.
+3. Cada periodo lectivo tiene una duración de 45 minutos.
+4. No se contemplan más días festivos/no lectivos que los ya indicados en este mapa.
 
 Cómputo provisional de Entornos con esta distribución:
 
-| Periodo | Horas Entornos aproximadas | Sesiones Entornos |
-|---|---:|---:|
-| 1.ª evaluación | 42 | 28 |
-| 2.ª evaluación | 32 | 21 |
-| 3.ª evaluación antes de FFEOE | 12 | 8 |
-| FFEOE | 0 | 0 |
-| Recuperación/cierre tras FFEOE | 9 | 6 |
+| Periodo | Periodos lectivos de 45 min | Horas reloj aproximadas | Días con sesión de Entornos |
+|---|---:|---:|---:|
+| 1.ª evaluación | 36 | 27 h | 25 |
+| 2.ª evaluación | 31 | 23,25 h | 21 |
+| 3.ª evaluación antes de FFEOE | 12 | 9 h | 8 |
+| FFEOE | 0 | 0 h | 0 |
+| Recuperación/cierre tras FFEOE | 12 | 9 h | 8 |
 
 ---
 

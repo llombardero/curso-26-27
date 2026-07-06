@@ -85,7 +85,7 @@ Documentos anexos:
 | Programación | PR RA3 imprescindible. Refuerzo de PR RA1/RA2. |
 | Entornos | ED RA3: pruebas, depuración, puntos de ruptura e incidencias. |
 | Evidencias | Código con estructuras de control; checklist de pruebas manuales; capturas de depuración; informe breve de incidencias. |
-| Tareas | Diseñar comandos; implementar menú; usar if/switch/bucles; manejar errores; crear casos de prueba; depurar en IntelliJ; documentar incidencias. |
+| Tareas | Diseñar comandos; implementar menú; usar if/switch/bucles; manejar errores; crear casos de prueba; depurar en IntelliJ; documentar incidencias; realizar en casa una comparación Java ↔ Python del mismo comportamiento. |
 | CE dominantes | PR RA3 a,b,c,d,e,f,g,h,i; ED RA3 a,b,c,d,e,h. |
 | Defensa | Modificar un comando en directo, explicar un breakpoint y justificar cómo se detectó un fallo. |
 | IA | Permitida para sugerir casos de prueba o localizar errores, con registro y verificación. |
@@ -98,10 +98,10 @@ Documentos anexos:
 | Programación | PR RA6 imprescindible. Refuerzo de PR RA3. |
 | Entornos | ED RA3: pruebas unitarias básicas si el nivel lo permite. |
 | Evidencias | Uso de arrays/listas/mapas; pruebas de memoria; README con ejemplos; portfolio de decisiones. |
-| Tareas | Modelar historial; elegir colección; añadir mensajes; listar memoria; buscar por patrón simple; probar casos límite; comparar implementación Java con Python/JS en mini-transferencia. |
+| Tareas | Modelar historial; elegir colección; añadir mensajes; listar memoria; buscar por patrón simple; probar casos límite; realizar en casa una comparación Java ↔ Python de la memoria temporal. |
 | CE dominantes | PR RA6 a,b,c,d,e,g,j; ED RA3 f,g,h si se introducen pruebas unitarias. |
 | Defensa | Explicar por qué se eligió una colección, cómo se recorre y cómo se prueba. |
-| IA | Uso amarillo permitido para transferir el mismo comportamiento a Python/JavaScript, con defensa obligatoria. |
+| IA | Uso amarillo permitido para generar o adaptar la comparación Java ↔ Python, con registro y defensa obligatoria. |
 
 ### H4. Agente orientado a objetos
 
@@ -150,7 +150,7 @@ Documentos anexos:
 | Programación | Consolidación de RA imprescindibles; RA7/RA8/RA9 según alcance. |
 | Entornos | Seguridad, documentación, pruebas, configuración, trazabilidad. |
 | Evidencias | Registro de prompts, validación humana, control de datos, pruebas de respuesta, limitaciones documentadas. |
-| Tareas | Definir casos de uso; preparar prompts; evitar datos personales; gestionar respuestas; validar; registrar; comparar modo simulado vs modo real. |
+| Tareas | Definir casos de uso; preparar prompts; evitar datos personales; gestionar respuestas; validar; registrar; comparar modo simulado vs modo real; realizar en casa comparación Java ↔ Python de la integración o simulación. |
 | CE dominantes | Dependerá del alcance. Debe usarse como integración y no como sustituto de fundamentos. |
 | Defensa | Explicar qué hace la IA, qué no hace, qué datos recibe, cómo se validó y qué errores puede cometer. |
 | IA | Uso explícito, trazado, defendido y limitado. |
@@ -171,46 +171,55 @@ Documentos anexos:
 
 ## 5. Evidencias transversales por entrega
 
-Cada hito, salvo H0 si se decide simplificar, debería producir:
+Cada hito, salvo H0 si se decide simplificar, deberá indicar con claridad qué se espera que entregue el alumnado, en qué formato y cómo se comprobará.
 
-| Evidencia | Individual/equipo | Uso |
-|---|---|---|
-| Código funcional | Equipo con trazabilidad individual | Producto técnico. |
-| Commits GitHub | Individual/equipo | Autoría, progreso, colaboración. |
-| README o documentación técnica | Equipo | Instalación, uso y decisiones. |
-| Portfolio individual | Individual | Reflexión, aprendizaje y comprensión. |
-| Registro de uso de IA | Individual/equipo según uso | Trazabilidad y ética. |
-| Pruebas/checklist | Equipo | Calidad y validación. |
-| Demo/review | Equipo | Comunicación técnica. |
-| Defensa oral | Individual | Comprensión real y autoría. |
-| Retrospectiva | Equipo + individual | Mejora continua. |
+| Evidencia | Individual/equipo | Qué debe entregar el alumnado | Uso |
+|---|---|---|---|
+| Código funcional | Equipo con trazabilidad individual | Proyecto ejecutable, código fuente organizado y versión etiquetada o identificable en GitHub. | Producto técnico. |
+| Commits GitHub | Individual/equipo | Historial de commits con mensajes comprensibles; ramas/issues si procede. | Autoría, progreso, colaboración. |
+| README o documentación técnica | Equipo | Instrucciones de instalación/ejecución, descripción del hito, comandos, limitaciones y ejemplos. | Instalación, uso y decisiones. |
+| Portfolio individual | Individual | Reflexión personal sobre qué hizo, qué aprendió, qué problemas tuvo y qué sabe defender. | Comprensión y evolución. |
+| Registro de uso de IA | Individual/equipo según uso | Herramienta usada, prompt/resumen, resultado aceptado, cambios propios, verificación y riesgos. | Trazabilidad y ética. |
+| Pruebas/checklist | Equipo | Tabla de casos de prueba, resultado esperado, resultado obtenido e incidencias detectadas. | Calidad y validación. |
+| Demo/review | Equipo | Presentación breve del incremento funcionando y explicación de decisiones. | Comunicación técnica. |
+| Defensa oral | Individual | Respuestas a preguntas, modificación o explicación de fragmentos del entregable. | Comprensión real y autoría. |
+| Retrospectiva | Equipo + individual | Qué funcionó, qué no funcionó, qué se cambiará en el siguiente sprint. | Mejora continua. |
+
+Ejemplo real de entregable elaborado como alumna:
+
+```text
+99-ejemplos-alumna/h1-primer-asistente/
+```
 
 ---
 
-## 6. Transferencia a Python y JavaScript
+## 6. Comparación Java ↔ Python fuera del horario lectivo
 
-La transferencia a otros lenguajes se aplicará al cerrar hitos relevantes.
+Desde el hito H2 hasta el hito H7 se incorporará una comparación sistemática entre Java y Python.
 
 Criterio:
 
-- El alumnado podrá usar IA de forma amplia para generar la versión Python/JavaScript.
-- La entrega no se valorará por memorizar sintaxis, sino por comprensión, comparación y defensa.
+- Estas comparaciones se realizarán como trabajo de casa, fuera del horario lectivo.
+- El tiempo presencial se reservará para Java, fundamentos, resolución de dudas, revisión, defensa y conexión con RA/CE.
+- El alumnado podrá usar IA de forma amplia para generar o adaptar la versión Python.
+- La entrega no se valorará por memorizar sintaxis de Python, sino por comprensión, comparación, validación y defensa.
 - Se harán preguntas para verificar que entienden lo generado.
+- JavaScript queda como posible ampliación o comparación adicional si el ritmo del grupo lo permite, pero la comparación obligatoria de H2 a H7 será Java ↔ Python.
 
-Hitos recomendados para transferencia:
+Hitos con comparación Java ↔ Python:
 
-| Hito | Transferencia sugerida |
+| Hito | Comparación para casa |
 |---|---|
-| H1 | Entrada/salida y reglas simples en Python/JavaScript. |
-| H2 | Menús, condicionales y bucles. |
-| H3 | Listas/diccionarios/arrays y memoria temporal. |
-| H4 | Clases básicas y objetos. |
-| H5 | Interfaces o equivalentes: duck typing, clases, módulos. |
-| H6 | Lectura/escritura de ficheros o JSON. |
+| H2 | Menús, condicionales, bucles, excepciones simples y depuración conceptual. |
+| H3 | Listas/diccionarios frente a arrays/listas/mapas; memoria temporal. |
+| H4 | Clases, objetos, constructores, métodos y visibilidad en Java frente a convenciones Python. |
+| H5 | Interfaces/composición/herencia en Java frente a duck typing, clases abstractas o protocolos informales en Python. |
+| H6 | Lectura/escritura de ficheros, JSON, logs y persistencia simple. |
+| H7 | Uso de API/servicio IA o simulación: entrada, salida, validación, trazabilidad y riesgos. |
 
 Preguntas de defensa:
 
-- ¿Qué cambia entre Java y Python/JavaScript?
+- ¿Qué cambia entre Java y Python?
 - ¿Dónde está el equivalente de una clase, método o colección?
 - ¿Qué parte generó la IA?
 - ¿Qué has modificado tú?
