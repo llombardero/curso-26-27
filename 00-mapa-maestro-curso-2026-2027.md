@@ -552,13 +552,22 @@ Resultado esperado de la semana:
 9. Las rúbricas serán definidas por Hermes a partir de los criterios de evaluación.
 10. La primera semana Scrum será diseñada por Hermes con sesiones y tiempos.
 
-### 13.2. Opciones abiertas
+### 13.2. Decisiones cerradas tras revisión
 
-1. Distribución de Entornos de Desarrollo. Opciones posibles:
-   - 3 horas agrupadas el miércoles.
+1. Distribución de Entornos de Desarrollo:
    - 2 horas el miércoles + 1 hora el viernes.
-   - 1 hora lunes + 1 hora miércoles + 1 hora viernes.
-2. Confirmar si existen días no lectivos adicionales de centro/municipio más allá de los ya indicados.
+   - Motivo: permite una sesión semanal de trabajo profundo en miércoles y una sesión corta de cierre, revisión, soporte a GitHub/portfolio, incidencias, retrospectiva técnica o preparación del siguiente sprint en viernes.
+2. No se contemplan más días festivos/no lectivos que los ya indicados en este mapa.
+
+Cómputo provisional de Entornos con esta distribución:
+
+| Periodo | Horas Entornos aproximadas | Sesiones Entornos |
+|---|---:|---:|
+| 1.ª evaluación | 42 | 28 |
+| 2.ª evaluación | 32 | 21 |
+| 3.ª evaluación antes de FFEOE | 12 | 8 |
+| FFEOE | 0 | 0 |
+| Recuperación/cierre tras FFEOE | 9 | 6 |
 
 ---
 
