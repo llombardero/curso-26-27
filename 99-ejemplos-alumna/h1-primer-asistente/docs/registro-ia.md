@@ -12,38 +12,41 @@ Herramienta usada: Jarvis/Gemini simulado para el ejemplo.
 
 Objetivo:
 
-Entender cuándo conviene usar `switch` en lugar de muchos `if`.
+Entender qué es una constante en Java y cuándo conviene usarla.
 
 Prompt/resumen:
 
 ```text
-Explícame de forma sencilla la diferencia entre if/else y switch en Java para un menú de comandos.
+Explícame de forma sencilla qué significa final en Java para una alumna que está empezando.
 ```
 
 Resultado útil:
 
-La IA explicó que `switch` es cómodo cuando se comparan varios valores concretos de una misma variable, como comandos escritos por teclado.
+La IA explicó que `final` permite indicar que una variable no debe cambiar después de asignarse.
 
 Qué acepté:
 
-- Usar `switch` para los comandos `ayuda`, `saluda`, `estado`, `java` y `salir`.
+- Usar `final String ASSISTANT_NAME` para guardar el nombre del asistente.
+- Usar `final int COURSE_YEAR` para guardar el año de inicio.
 
 Qué modifiqué yo:
 
 - Escribí mis propios mensajes.
-- Añadí la variable `running` para controlar el bucle.
-- Probé comandos incorrectos.
+- Quité el menú porque todavía era demasiado avanzado para este hito.
+- Dejé el programa centrado en entrada, salida, variables y constantes.
 
 Cómo lo verifiqué:
 
 - Ejecuté el programa.
-- Probé `ayuda`, `saluda`, `estado`, `java`, `salir` y un comando inventado.
+- Escribí mi nombre.
+- Comprobé que el programa mostraba los mensajes esperados.
 
 Qué aprendí:
 
-- `switch` hace más claro un menú simple.
-- El caso `default` sirve para entradas no reconocidas.
+- Una constante ayuda a que el código sea más claro cuando un valor no debería cambiar.
+- No conviene añadir código avanzado si todavía no sé explicarlo.
 
 Riesgos detectados:
 
-- Si copio código sin probarlo, puede parecer que funciona pero no entenderé cómo modificarlo.
+- La IA puede proponer soluciones demasiado completas para el nivel actual.
+- Si acepto todo lo que propone, puedo entregar código que no entiendo.

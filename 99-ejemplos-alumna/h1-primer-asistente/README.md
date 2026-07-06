@@ -9,16 +9,18 @@ Módulo coordinado: Entornos de Desarrollo
 
 ## 1. Qué entrega este hito
 
-Este entregable contiene un primer asistente por consola hecho en Java.
+Este entregable contiene una primera versión muy sencilla de un asistente por consola hecho en Java.
 
 El asistente:
 
 - muestra un mensaje de bienvenida;
 - pide el nombre de la persona usuaria;
-- acepta comandos básicos;
-- responde con reglas simples;
-- permite salir del programa;
+- guarda el nombre en una variable;
+- usa una constante para el nombre del asistente;
+- muestra varios mensajes por pantalla;
 - está preparado en un proyecto sencillo que puede abrirse en IntelliJ.
+
+Todavía no incluye menú, bucles, `switch`, excepciones ni comandos. Eso se trabajará en H2, cuando el hito se centre en estructuras de control y depuración.
 
 ---
 
@@ -40,49 +42,44 @@ Desde IntelliJ:
 
 ---
 
-## 3. Comandos disponibles
-
-| Comando | Respuesta |
-|---|---|
-| `ayuda` | Muestra comandos disponibles. |
-| `saluda` | Saluda usando el nombre introducido. |
-| `estado` | Indica que el asistente está funcionando. |
-| `java` | Explica de forma sencilla qué es Java. |
-| `salir` | Termina el programa. |
-
----
-
-## 4. Ejemplo de ejecución
+## 3. Ejemplo de ejecución
 
 ```text
 Hola, soy MiniJarvis.
 ¿Cómo te llamas? Laura
-Encantada, Laura. Escribe 'ayuda' para ver comandos.
-> ayuda
-Comandos disponibles: ayuda, saluda, estado, java, salir
-> saluda
-Hola Laura, estoy aprendiendo a ayudarte.
-> java
-Java es el lenguaje principal que estamos usando para construir este agente.
-> salir
-Hasta luego, Laura.
+Encantada, Laura.
+Este curso vamos a crear un pequeño agente IA.
+Curso de inicio: 2026.
+Primer objetivo: aprender la estructura básica de un programa Java.
 ```
 
 ---
 
-## 5. Qué he aprendido
+## 4. Qué he aprendido
 
 - Que un programa Java empieza a ejecutarse en el método `main`.
 - Que puedo guardar texto en variables de tipo `String`.
+- Que puedo guardar valores fijos en constantes con `final`.
 - Que `Scanner` sirve para leer datos introducidos por teclado.
-- Que un bucle `while` puede mantener vivo el programa hasta que se escriba `salir`.
-- Que `switch` permite responder de forma distinta según el comando.
+- Que `System.out.println` muestra información por pantalla.
+- Que el código debe ser sencillo y claro antes de añadir más funcionalidades.
+
+---
+
+## 5. Código limpio aplicado
+
+He intentado aplicar una primera idea de código limpio:
+
+- nombres comprensibles: `ASSISTANT_NAME`, `COURSE_YEAR`, `userName`;
+- programa corto y fácil de leer;
+- sin añadir todavía funciones que no pertenecen a este hito;
+- sin copiar código que no pueda explicar.
 
 ---
 
 ## 6. Uso de IA
 
-He usado IA solo para pedir una explicación de la diferencia entre `if` y `switch`.
+He usado IA solo para pedir una explicación de qué es una constante en Java.
 
 No he copiado el programa completo generado por IA. He escrito y probado el código paso a paso.
 

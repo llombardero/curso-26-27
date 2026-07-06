@@ -36,6 +36,8 @@ Se usarán de forma integrada:
 - Modelo HEXA.
 - DUA, por la heterogeneidad del alumnado.
 - Evaluación competencial mediante productos, procesos, defensas y evidencias.
+- Código limpio, inspirado en Robert C. Martin, trabajado de forma progresiva y adaptada al nivel inicial del alumnado.
+- Patrones de diseño, inspirados en Erich Gamma y el catálogo GoF, introducidos gradualmente cuando el alumnado tenga base suficiente de POO.
 
 Arquitectura metodológica confirmada:
 
@@ -117,6 +119,41 @@ Objetivo de la semana:
 ---
 
 ## 3. Fuentes documentales ya revisadas
+
+### 3.0. Propuesta de objetivos por módulos del IES
+
+Documento principal para objetivos por módulos:
+
+```text
+documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf
+```
+
+Este documento se considera la referencia prioritaria para orientar los objetivos de Programación + Entornos de Desarrollo, manteniendo no obstante la separación documental entre ambos módulos.
+
+Objetivo final del ciclo según la propuesta:
+
+> Resolver problemas como AI-Enhanced Developers.
+
+El alumnado debe avanzar hacia saber:
+
+1. Qué construir: arquitectura, modelo de datos, stack y comprensión del problema.
+2. Cómo construirlo rápido: prompting, agentes y automatización.
+3. Cómo asegurar que funciona y escalarlo: CI/CD, Docker, Git y pruebas.
+
+Objetivos específicos para Programación + Entornos de Desarrollo:
+
+- Fundamentos y algoritmia.
+- Paradigmas y arquitectura: POO, MVC e introducción práctica a arquitectura hexagonal.
+- Buenas prácticas y código limpio.
+- Flujo Git profesional: ramas, fusionado, resolución de conflictos, PRs y revisiones de código.
+- Estrategia de pruebas: unitarias e integración, ajustadas al nivel.
+- Desarrollo potenciado por IA: control del bucle del agente, lectura de stack traces, comprensión y validación de código generado.
+
+Implicación para este diseño:
+
+- Los temas del curso 2025/2026 se mantienen como referencia de contenidos.
+- La propuesta IESHLanz 2026/2027 orienta el perfil profesional y la integración Programación + Entornos.
+- Programación y Entornos seguirán separados en documentos y evaluación, pero coordinados por un proyecto común.
 
 ### 3.1. Perfil de salida y diseño inverso
 

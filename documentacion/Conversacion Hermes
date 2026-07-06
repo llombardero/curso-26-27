@@ -1,0 +1,84 @@
+quiero diseñar como voy a enfocar mis clases de  Programación y Entornos de desarrollo del priemer curso del ciclo formativo de grado superior de Desarrollo de aplicaciones web, en Andalucía.
+Quiero realizar un proyecto  que sea el que guié todo el proceso con pequeños proyectos  o tareas que ayuden a conseguir el fin.Tenía pensado que el proyecto completo fuera que programarán un pequeño agente ia propio.
+Te voy a dar la programación didáctica del curso pasado para que puedas conocer los Resultados de aprendizaje que se persiguen y sus criterios de evaluación. Quiero usar metodologías ágiles (Scrum), ABP y el modelo hexa y su secuenciación didactica. Para esto último te daré documentación propia.
+Quiero dedicar la primera semana a enseñar al alumnado cómo funciona scrum, para poder trabajar el resto del curso.
+El módulo de programación tiene 8 horas semanales y el de entornos 3 hpras. El curso se divide en 3 evaluaciones:  la 1ª del 15 de septiembre hasta el 23 de diciembre, la segunda  desde el 7 de enero al 31 de marzo y la tercera desde el 1 de abril al 23 de junio. Busca el calendario escolar de Granada para el curso escolar 2026/2027 para tener en cuenta los días festivos. Además, deben de realizar la FFEOE de 18 jornadas seguidas de duración acabando el día 28 de mayo.
+A alumnado se le permitira hacer un uso adecuado y eético de la IA, habrá que definir que significa esto. También quiero que una vez que lleguemos a un hito (Scrum, me hagan lo mismo en otros lenguaje de POO. En este último caso podrán hacerlo todo con la IA, pero se harán preguntas y tendrán que defenderlo frente a la clase.
+Hazme todas las preguntas que necesites antes de pasar a desarrollar el plan. Cuando me digas te subiré la documentación o la pondré disponible en una carpeta determinada.
+Empecemos.
+
+Bloque A
+PUedo subirte toda la documentación en un archivo zip o ponerla toda en una carpeta, cómo me digas.
+El curso pasado había programaciones didácticas separadas, te las proporciono, pero este curso me gustaría que aunque fueran dos documentos separados (lo exige la norma) se complementara uno con el otro.
+El modelo hexa está enn la documentación.
+Las rúbricas no las tengo, los resultados de aprendizaje y criterios de evaluación están en las normas que hay en la documentación.
+Las normas sobre el uso de la ia no están desarrolladas. Lo que quiero es que el alulumnado aprenda a usarlo responsablemente durante el curso. Lo importante es que les sirva en su aprendizaje no que lo usen para hacer preguntas y copiar resultados.
+Bloque B
+El alumnado viene tanto de bachillerato, como de grado medio, con nivel muy heterogéneo y poco conocimiento de programación. Por eso debemos de aplicar el modelo DUA.
+SErán en torno a 15-20 alumnos.
+Me parece bien tu hipótesis inicial sólo que yo haría los grupos de 3 o 4 alumnos. Puntualmente un alumno que no sea capaz de trabajar en grupo trabajaría solo.
+Bloque C
+Me gustaría que trabajarán con linux, pero el alumnado suele usar siempre windows. Podríamos intentar que usen Linux. Yo uso Debian 13, con portátiles propios y conexión a internet estable.
+Pueden instalar software libremente.
+Me gustaría que usarán Moodle, GitHub, IntelliJ, Java cómo lenguaje principal y Python y JavaScript cómo secundarios en cada hito y también Docker.
+Para el uso de la IA la JUnta de Andaluci tiene un acuerdo con Google y se puede usar Gemini, además tenemos nuestro propio modelo , Jarvis, al que van a poderle consultar.
+Bloque D
+Me quedo con la opción D.
+ Java cómo lenguaje principal y Python y JavaScript cómo secundarios en cada hito.
+ Si quiero que el agente tenga interfaz, pero eso dependerá de como avancemos, ya que no puedo saber ahora el nivel del alumnado y cual será el ritmo de la clase.
+ Si el proyecto debe integrar contenidos de entornos de desarrollo, según tu hipótesis.
+ Bloque E
+ Quiero que el proyecto guíe toda la evaluación, aunque puntualmente, pueda hacer una prueba individual.
+ si quiero una matriz RA/CE → evidencias → tareas.
+ No necesito adaptarla al formato oficial.
+ Bloque F
+ la programación se repartira en 2 horas los lunes, 3 los martes y jueves. Las tres horas de entorno no están todavía definidas. Yo seré el profesor de Programación y otro profesor dará Entornos, pero estaremos totalmente coordinados.
+ Si, usemos contruir una torre de papel.
+ Prefiero usar una vcersión adaptada al aula a los roles completos.
+ Sobre la duración me parece correcta tu hipótesis, aunque podríamos estudiar que hubiera 7 hitos en todo el curso, más la presentación final
+ Para Hexa tienes documentación en la carpeta de documentación o en el archivo, según decidamos. La arquitectura propuesta me parece perfecta.
+ Bloque H
+ Son fechas aproximadas, habra que tener en cuenta el calendario
+ Si la FFeoe afecta a todo el alumnado, no asisten a clase,son jornadas lectivas excluyendo fines de semana y festivos, no deben entregar tareas.
+ Si, podríamos dejar para después la presentación final.
+ El tiempo después de la FFEOE se dedicará a recuperación
+ Bloque I
+ Si quiero un política tipo semáforo.
+ Si quiero un registro.
+ Si, quiero que la defensa oral tenga preguntas sobre la IA.
+ Bloque J
+ Me parece bien construir primero un “Mapa maestro del curso” y después generar documentos derivados.
+
+ Me parece bien tu propuesta de trabajo.
+ La ruta a los documentos es: file:///mnt/compartido/Hlanz/Programacion/Curso 2026-2027
+ Un documento fundamental es "perfil-salida-diseno-inverso-dam-daw.md"
+
+ pregunta 1: A
+ pregunta 2: si
+ pregunta 3: si, me parece bien
+ pregunta 4: si, me parec bien. El alumnado usala el ide Intellij para java.
+ pregunta 5: seguir tu recomendación.
+ pregunta 6: si, quiero las tres
+
+
+ En el punto 4.1 Programación donde dice:
+ "Para superar el módulo es imprescindible superar cada Resultado de Aprendizaje con calificación mayor o igual a 5"
+ Pero la nueva programación didáctica lo nodificará de manera que para superar el módulo es imprescindible superar cada Resultado de Aprendizaje imprescindible con calificación mayor o igual a 5, los Resultados de Aprendizaje, 7, 8 y 9 no son imprescindibles, aunque se debentener en cuenta. Dependerá de como avance el grupo.
+
+ Dcisiones pendientes
+ 1. el horario de entornos, se puede agrupar las 3 horas en un día (miércoles), 2 horas un día (miércoles) y una hora (viernes), 1 hora cada día lunes, miércoles y viernes.
+ 2. El 27 de mayo es fiesta local y el 3 de mayo también.
+ 3. Asume tú el papel del profesor de entornoe.
+ 4. Las cuentas de Gemini y Jarvis serán nominales, cada alumno tendrá un usuario propio.
+ 5. Me gustaría Markdown en GitHub o documento mixto si el alumnado tiene problemas con GitHub.
+ 6. El diseño de la matriz te lo dejo a ti.
+ 7. Las rúbricas las defines tu, teniendo en cuenta lod criterios de evaluación.
+ 8. El diseño tambbién te lo dejo a ti.
+
+
+ Antes de dar el siguiente paso queiro que modifiques el calendario para entornos, serńa dos horas los lunes y una hora los martes. No he dicho que las clases son por la tarde y tienen una duración de 45 minutos.
+ También quiero que los hitos del 2 al 7 tengan una comparación con java y phyton, estas comprobaciones se dejarán en todos los hitos para realizarlas en casa, fuera del horario lectivo.
+ para cada entregable hay que dejar claro que se espera que entregue el alumnado, además, quiero que me des un ejemplo de entrgable pero que sea real. Es decir irás haciendo el proyecto como si fueras una alumna.
+Hay que ir trabajando con el alumnado el "código limpio", como lo entiende Robert C. Martin y también los "Patrones de diseño" según Erich Gamma. Una vez revisado ésto, en la entrega anterior creo que la clase Main que me has entregado tiene un nivel muy superior al que tendrá el alumnado y muy superior a lo que pides en el punto 3 Relación general RA-hitos del anexo deprogramación-ra-ce.
+la ruta es "Propuesta Ciclos Superiores IESHLanz 2026-27.pdf". Ahora sabiendo los objetivos de programación + entornos de desarrollo y manteniendo RAs y criterios revisa a fondo todo lo hecho hasta ahora para realiz
+ar las actualizaciones pendientes. En el documento  aparece programación + entornos, yo quiero seguir manteniendo la separación como lo has hecho hasta ahora. luego, quiero aprobar explícitamente la ejecución cuando Hermes/terminal lo solicite en la interfaz, si aparece un diálogo de aprobación.

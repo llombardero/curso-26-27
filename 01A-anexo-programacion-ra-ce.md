@@ -50,8 +50,8 @@ Criterio de seguridad evaluativa:
 
 | RA | Tipo | Hitos principales | Producto/evidencia principal |
 |---|---|---|---|
-| RA1 | Imprescindible | H1 | Primer asistente Java por consola: estructura, variables, operadores, comentarios, uso de IntelliJ. |
-| RA2 | Imprescindible | H1-H2 | Programas simples, objetos predefinidos, métodos, librerías básicas, compilación/ejecución. |
+| RA1 | Imprescindible | H1 | Primer asistente Java por consola: estructura, variables, constantes, comentarios útiles y uso de IntelliJ. |
+| RA2 | Imprescindible | H1-H2 | Programas simples, objetos predefinidos básicos, métodos/librerías introductorias y compilación/ejecución. |
 | RA3 | Imprescindible | H2 | Menús, decisiones, bucles, excepciones, depuración, aserciones y documentación. |
 | RA4 | Imprescindible | H4 | Diseño OO del agente: clases, atributos, métodos, constructores, visibilidad y objetos. |
 | RA5 | Imprescindible | H6 | Entrada/salida, ficheros, logs, base de conocimiento y posible interfaz simple. |
@@ -59,6 +59,37 @@ Criterio de seguridad evaluativa:
 | RA7 | No imprescindible | H5-H7 | Agente extensible: herencia, interfaces, composición, jerarquías y herramientas. |
 | RA8 | No imprescindible | H6-H7 | Persistencia orientada a objetos si el ritmo permite profundizar. |
 | RA9 | No imprescindible | H6-H7 | Gestión de información en base de datos si el ritmo permite profundizar. |
+
+### 3.1. Correspondencia con temas/unidades del curso 2025/2026
+
+Criterio aportado por el docente:
+
+> Cada tema trabajado en el curso 2025/2026 corresponde al RA equivalente. Por ejemplo, "Tema 1. Aspectos básicos de la programación" corresponde a RA1.
+
+Matiz posterior:
+
+> Los temas son una referencia de contenidos y secuencia. La referencia principal de objetivos por módulos es `documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`.
+
+Esta correspondencia se tendrá en cuenta al diseñar hitos, tareas, entregables y materiales de apoyo, aunque el nuevo curso se organice mediante el proyecto guía del agente IA.
+
+| Tema/UD 2025/2026 | Nombre | RA asociado | Uso en el nuevo diseño |
+|---|---|---|---|
+| Tema 1 / UD1 | Aspectos básicos de la programación | RA1 | Base de H1: estructura, variables, constantes, entrada/salida básica e IntelliJ. |
+| Tema 2 / UD2 | La programación orientada a objetos | RA2 | Base inicial H1-H2 y preparación conceptual para H4. |
+| Tema 3 / UD3 | La programación estructurada | RA3 | Base de H2: decisiones, bucles, errores y depuración. |
+| Tema 4 / UD4 | Estructuras de datos | RA6 | Base de H3: memoria temporal, listas, mapas, recorridos y búsquedas. |
+| Tema 5 / UD5 | Programación básica de clases | RA4 | Base de H4: clases, atributos, métodos, constructores y visibilidad. |
+| Tema 6 / UD6 | Programación avanzada de clases | RA7 | Base de H5: herencia, interfaces, composición, extensibilidad y primeros patrones si procede. |
+| Tema 7 / UD7 | Introducción a la programación funcional | RA6/RA7 según alcance | Ampliación o consolidación: operaciones sobre colecciones y mejora expresiva del código. |
+| Tema 8 / UD8 | Interfaces gráficas de escritorio | RA5 | Ampliación dentro de H6 si el ritmo permite interfaz simple. |
+| Tema 9 / UD9 | Introducción a JDBC | RA9 | Ampliación de persistencia y gestión de datos si el grupo avanza. |
+| Tema 10 / UD10 | Introducción a JPA | RA8 | Ampliación de persistencia orientada a objetos si el grupo avanza. |
+
+Nota didáctica:
+
+- La correspondencia Tema N → RA N se toma como referencia principal.
+- En los temas 7-10 se ajusta el alcance porque RA7, RA8 y RA9 no son imprescindibles en la nueva programación.
+- El proyecto del agente IA no elimina la secuencia de contenidos anterior: la reorganiza como progresión de producto.
 
 ---
 
@@ -95,7 +126,7 @@ Hito principal:
 
 Producto asociado:
 
-- Programa Java inicial que recibe una entrada simple y responde mediante reglas básicas.
+- Programa Java inicial que recibe una entrada simple y muestra mensajes básicos por consola, sin menú ni estructuras de control avanzadas.
 
 ### 5.1. Criterios de evaluación y evidencias
 
@@ -487,9 +518,14 @@ RA7, RA8 y RA9:
 
 Las rúbricas por hito deberían valorar al menos:
 
-1. Funcionamiento técnico.
+1. Funcionamiento técnico ajustado al nivel del hito.
 2. Corrección respecto a CE.
-3. Calidad del código.
+3. Código limpio progresivo:
+   - nombres claros;
+   - simplicidad;
+   - una responsabilidad principal por bloque/clase/método;
+   - ausencia de código innecesariamente avanzado;
+   - legibilidad antes que artificio.
 4. Pruebas y depuración.
 5. Documentación.
 6. Uso de GitHub y trazabilidad.
@@ -497,6 +533,10 @@ Las rúbricas por hito deberían valorar al menos:
 8. Defensa oral individual.
 9. Comparación Java ↔ Python desde H2 hasta H7.
 10. Mejora tras feedback.
+11. Patrones de diseño cuando proceda, especialmente a partir de H5:
+   - reconocer el problema que resuelve el patrón;
+   - no aplicar patrones de forma decorativa;
+   - justificar alternativas simples antes de introducir complejidad.
 
 ---
 

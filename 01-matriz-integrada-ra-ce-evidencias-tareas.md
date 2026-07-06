@@ -31,6 +31,9 @@ Documentos anexos:
 6. En Entornos se intentan cubrir todos los RA de forma distribuida, porque el módulo tiene una carga menor pero muy conectada con el proyecto.
 7. La IA puede usarse, pero toda evidencia asistida por IA exige registro, comprensión y defensa.
 8. Cada hito debe producir evidencias técnicas, de proceso y de reflexión.
+9. La referencia principal de objetivos por módulos es `documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`; los temas del curso 2025/2026 se usan como referencia de secuencia y contenidos, no como eje principal del nuevo diseño.
+10. Aunque la propuesta de objetivos aparece como Programación + Entornos de Desarrollo, este trabajo mantendrá separación documental y evaluativa entre ambos módulos.
+11. El itinerario debe formar AI-Enhanced Developers capaces de resolver problemas: comprender qué construir, construirlo con apoyo crítico de IA y asegurar que funciona mediante Git, pruebas, Docker/CI y revisión.
 
 ---
 
@@ -39,7 +42,7 @@ Documentos anexos:
 | Hito | Periodo orientativo | Producto guía | Scrum/HEXA | Resultado esperado |
 |---|---|---|---|---|
 | H0 | Semana 1 | Torre de papel + tablero inicial | Fase 0 completa + sprint simulado | Comprender Scrum y crear normas de equipo. |
-| H1 | Sept-oct | Primer asistente por consola | Activar + Investigar + Ejecutar | Programa Java básico con entrada, salida y reglas simples. |
+| H1 | Sept-oct | Primer asistente por consola | Activar + Investigar + Ejecutar | Programa Java muy básico con entrada, salida, variables y constantes; sin menú ni estructuras de control avanzadas. |
 | H2 | Oct-nov | Agente con decisiones y depuración | Ejecutar + Comunicar | Comandos, menús, estructuras de control, pruebas manuales y depuración. |
 | H3 | Nov-dic | Agente con memoria en colecciones | Ejecutar + Comunicar | Memoria temporal con arrays/listas/mapas y búsquedas. |
 | H4 | Ene-feb | Agente orientado a objetos | Idear + Planificar + Ejecutar | Modelo de clases: Agent, Message, Memory, Tool, Command. |
@@ -68,12 +71,12 @@ Documentos anexos:
 
 | Elemento | Detalle |
 |---|---|
-| Producto | Programa Java de consola que recibe una entrada simple y responde mediante reglas básicas. |
+| Producto | Programa Java muy básico de consola que recibe una entrada simple y muestra varias respuestas. No incluye aún menú, bucles ni `switch`. |
 | Programación | PR RA1; PR RA2 inicial. |
 | Entornos | ED RA1; ED RA2: IntelliJ, proyecto, fuente, ejecutable, configuración básica. |
-| Evidencias | Repositorio inicial, código Java, capturas de ejecución, README básico, primer portfolio individual. |
-| Tareas | Crear proyecto en IntelliJ; escribir programa básico; usar variables, constantes, operadores; leer entrada; generar respuesta; comentar código; subir a GitHub. |
-| CE dominantes | PR RA1 a,b,c,d,e,f,g,h,i; PR RA2 b,i; ED RA1 a,b,c,e,f; ED RA2 a,g. |
+| Evidencias | Repositorio inicial, código Java sencillo, capturas de ejecución, README básico, primer portfolio individual. |
+| Tareas | Crear proyecto en IntelliJ; escribir programa básico; usar variables y constantes; leer entrada; mostrar mensajes; comentar solo si aporta claridad; subir a GitHub. |
+| CE dominantes | PR RA1 a,b,c,d,e,f,i; PR RA2 b,i; ED RA1 a,b,c,e,f; ED RA2 a,g. |
 | Defensa | Explicar estructura del programa, variables usadas, flujo de ejecución y cómo se ejecuta desde IntelliJ. |
 | IA | Verde: pedir explicación de sintaxis. Amarillo: pedir ejemplos, registrarlos y adaptarlos. Rojo: entregar programa completo sin entender. |
 
@@ -232,17 +235,17 @@ Preguntas de defensa:
 
 ### 7.1. Programación
 
-| RA Programación | Tipo | Hitos principales | Evidencias clave |
-|---|---|---|---|
-| RA1 | Imprescindible | H1 | Proyecto Java, estructura, variables, operadores, comentarios. |
-| RA2 | Imprescindible | H1-H2 | Programas simples, objetos predefinidos, métodos, constructores/librerías básicas. |
-| RA3 | Imprescindible | H2 | Control de flujo, excepciones, depuración, aserciones, documentación. |
-| RA4 | Imprescindible | H4 | Clases propias, métodos, visibilidad, constructores, objetos. |
-| RA5 | Imprescindible | H6 | Entrada/salida, ficheros, posible interfaz simple si procede. |
-| RA6 | Imprescindible | H3 | Arrays, listas, mapas, iteradores, búsquedas, JSON si procede. |
-| RA7 | No imprescindible | H5-H7 | Herencia, interfaces, composición, jerarquías, extensibilidad. |
-| RA8 | No imprescindible | H6-H7 | Persistencia orientada a objetos si el nivel lo permite. |
-| RA9 | No imprescindible | H6-H7 | Gestión de datos en BD si el nivel lo permite. |
+| RA Programación | Tema/UD 2025/2026 de referencia | Tipo | Hitos principales | Evidencias clave |
+|---|---|---|---|---|
+| RA1 | Tema 1 / UD1 — Aspectos básicos de la programación | Imprescindible | H1 | Proyecto Java muy básico: estructura, variables, constantes, entrada/salida y comentarios útiles. |
+| RA2 | Tema 2 / UD2 — Programación orientada a objetos | Imprescindible | H1-H2 | Programas simples, objetos predefinidos básicos, métodos/librerías introductorias. |
+| RA3 | Tema 3 / UD3 — Programación estructurada | Imprescindible | H2 | Control de flujo, excepciones, depuración, aserciones, documentación. |
+| RA4 | Tema 5 / UD5 — Programación básica de clases | Imprescindible | H4 | Clases propias, métodos, visibilidad, constructores, objetos. |
+| RA5 | Tema 8 / UD8 — Interfaces gráficas de escritorio | Imprescindible | H6 | Entrada/salida, ficheros, posible interfaz simple si procede. |
+| RA6 | Tema 4 / UD4 — Estructuras de datos; Tema 7 / UD7 — Programación funcional como apoyo | Imprescindible | H3 | Arrays, listas, mapas, iteradores, búsquedas, JSON si procede. |
+| RA7 | Tema 6 / UD6 — Programación avanzada de clases | No imprescindible | H5-H7 | Herencia, interfaces, composición, jerarquías, extensibilidad y patrones si procede. |
+| RA8 | Tema 10 / UD10 — Introducción a JPA | No imprescindible | H6-H7 | Persistencia orientada a objetos si el nivel lo permite. |
+| RA9 | Tema 9 / UD9 — Introducción a JDBC | No imprescindible | H6-H7 | Gestión de datos en BD si el nivel lo permite. |
 
 ### 7.2. Entornos
 

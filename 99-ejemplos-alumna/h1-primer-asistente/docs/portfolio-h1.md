@@ -7,43 +7,53 @@ Equipo: Equipo Ada
 
 ## Qué he hecho
 
-He creado un primer asistente por consola llamado MiniJarvis.
+He creado una primera versión muy sencilla de un asistente por consola llamado MiniJarvis.
 
-El programa pregunta mi nombre y después permite escribir comandos. Según el comando, responde con un mensaje distinto.
+El programa pregunta mi nombre y después muestra varios mensajes relacionados con el proyecto del curso.
 
 ---
 
 ## Partes importantes del código
 
 - `Scanner`: lo uso para leer lo que escribe la persona usuaria.
-- `String userName`: guarda el nombre.
-- `boolean running`: controla si el programa sigue funcionando.
-- `while`: repite el menú hasta que se escribe `salir`.
-- `switch`: decide qué respuesta dar según el comando.
+- `String userName`: guarda el nombre introducido.
 - `final String ASSISTANT_NAME`: constante con el nombre del asistente.
+- `final int COURSE_YEAR`: constante con el año de inicio del curso.
+- `System.out.println`: sirve para mostrar mensajes por pantalla.
 
 ---
 
 ## Problema que tuve
 
-Al principio escribí `Salir` con mayúscula y el programa no salía.
+Al principio quería añadir un menú con comandos, pero eso hacía que el programa fuera más difícil y usaba contenidos que todavía no hemos trabajado bien.
 
-Lo solucioné usando:
+Lo he dejado más simple para centrarme en:
 
-```java
-String command = scanner.nextLine().trim().toLowerCase();
-```
+- estructura del programa;
+- variables;
+- constantes;
+- entrada por teclado;
+- salida por pantalla.
 
-Así el comando se convierte a minúsculas y también se quitan espacios al principio o al final.
+---
+
+## Código limpio
+
+Creo que el código está más limpio porque:
+
+- es corto;
+- los nombres se entienden;
+- no tiene funcionalidades que todavía no hacen falta;
+- puedo explicar cada línea.
 
 ---
 
 ## Qué puedo mejorar
 
-- Separar algunas respuestas en métodos.
-- Añadir más comandos.
-- Guardar un historial de comandos en el siguiente hito.
-- Hacer pruebas más ordenadas en una tabla.
+- Añadir un menú en H2.
+- Separar mensajes en métodos cuando lo hayamos trabajado.
+- Añadir pruebas manuales más completas.
+- Comparar una versión similar en Python cuando empecemos H2.
 
 ---
 
@@ -52,11 +62,14 @@ Así el comando se convierte a minúsculas y también se quitan espacios al prin
 1. ¿Dónde empieza el programa?
    - En `public static void main(String[] args)`.
 
-2. ¿Para qué sirve el bucle `while`?
-   - Para que el asistente siga preguntando comandos hasta que el usuario escriba `salir`.
+2. ¿Qué es una variable?
+   - Un espacio donde guardo un valor que puede usarse en el programa.
 
-3. ¿Qué ocurre si escribo un comando desconocido?
-   - Entra en `default` y muestra un mensaje de ayuda.
+3. ¿Qué es una constante?
+   - Un valor que no debería cambiar durante la ejecución del programa.
 
-4. ¿Qué parte me ayudó a entender la IA?
-   - La diferencia entre `if` y `switch`, pero el código lo adapté y lo probé yo.
+4. ¿Para qué sirve `Scanner`?
+   - Para leer datos que escribe la persona usuaria.
+
+5. ¿Por qué no hay menú todavía?
+   - Porque el menú necesita bucles y estructuras de control, que se trabajarán en H2.

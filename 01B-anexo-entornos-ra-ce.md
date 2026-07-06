@@ -44,6 +44,22 @@ Criterio didáctico:
 
 ## 3. Relación general RA ↔ hitos
 
+Referencia principal de objetivos por módulos:
+
+```text
+documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf
+```
+
+Para Entornos de Desarrollo, esto implica que el módulo debe garantizar el flujo profesional del proyecto:
+
+- herramientas de desarrollo y criterio de stack;
+- Git profesional, ramas, PRs y revisión de código;
+- pruebas, depuración y lectura de errores/stack traces;
+- documentación técnica;
+- refactorización y detección de deuda técnica;
+- CI/Docker cuando el nivel lo permita;
+- validación crítica del código generado por IA.
+
 | RA Entornos | Hitos principales | Función dentro del proyecto |
 |---|---|---|
 | RA1 | H0-H1 | Comprender fases de desarrollo, herramientas, lenguajes y metodologías ágiles. |
