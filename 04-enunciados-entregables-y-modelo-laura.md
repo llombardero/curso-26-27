@@ -10,7 +10,7 @@ Documentos relacionados:
 - `01A-anexo-programacion-ra-ce.md`
 - `01B-anexo-entornos-ra-ce.md`
 - `02-calendario-hitos-sprints-2026-2027.md`
-- `03-primera-semana-scrum-torre-papel.md`
+- `hitos/h0-torre-papel-scrum/03-primera-semana-scrum-torre-papel.md`
 
 ---
 

@@ -10,8 +10,8 @@ Documentos relacionados:
 
 - `03-primera-semana-scrum-torre-papel.md`
 - `10-primera-sesion-presentacion-proyecto.md`
-- `09-presentacion-alumnado-proyecto-agente-ia.md`
-- `07-plantillas-entregables.md`
+- `../../09-presentacion-alumnado-proyecto-agente-ia.md`
+- `../../07-plantillas-entregables.md`
 
 ---
 

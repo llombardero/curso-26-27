@@ -1,0 +1,7 @@
+# Archivos temporales
+*.tmp
+*.bak
+
+# Sistema
+.DS_Store
+Thumbs.db

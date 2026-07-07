@@ -8,11 +8,11 @@ Documento para uso del profesorado.
 
 Documentos relacionados:
 
-- `00-mapa-maestro-curso-2026-2027.md`
+- `../../00-mapa-maestro-curso-2026-2027.md`
 - `03-primera-semana-scrum-torre-papel.md`
-- `08-guia-alumnado-proyecto-agente-ia.md`
-- `09-presentacion-alumnado-proyecto-agente-ia.md`
-- `05-politica-uso-ia-semaforo-registro-defensa.md`
+- `../../08-guia-alumnado-proyecto-agente-ia.md`
+- `../../09-presentacion-alumnado-proyecto-agente-ia.md`
+- `../../05-politica-uso-ia-semaforo-registro-defensa.md`
 
 ---
 

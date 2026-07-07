@@ -1,75 +1,157 @@
-# Portfolio individual — H1
+# Portfolio individual — H1 Primer asistente básico
 
-Alumna: Laura García Martín
-Equipo: Equipo Ada
-
----
-
-## Qué he hecho
-
-He creado una primera versión muy sencilla de un asistente por consola llamado MiniJarvis.
-
-El programa pregunta mi nombre y después muestra varios mensajes relacionados con el proyecto del curso.
+Alumno/a: Laura García Martín  
+Equipo: Equipo Ada  
+Fecha: ejemplo docente
 
 ---
 
-## Partes importantes del código
+## 1. Qué he hecho yo
 
-- `Scanner`: lo uso para leer lo que escribe la persona usuaria.
-- `String userName`: guarda el nombre introducido.
-- `final String ASSISTANT_NAME`: constante con el nombre del asistente.
-- `final int COURSE_YEAR`: constante con el año de inicio del curso.
-- `System.out.println`: sirve para mostrar mensajes por pantalla.
+Mi aportación:
 
----
-
-## Problema que tuve
-
-Al principio quería añadir un menú con comandos, pero eso hacía que el programa fuera más difícil y usaba contenidos que todavía no hemos trabajado bien.
-
-Lo he dejado más simple para centrarme en:
-
-- estructura del programa;
-- variables;
-- constantes;
-- entrada por teclado;
-- salida por pantalla.
+```text
+He creado una primera versión sencilla de MiniJarvis por consola. He escrito la clase Main, he usado Scanner para pedir el nombre, he creado constantes para el nombre del asistente y el año del curso, he probado la ejecución y he preparado la documentación básica del hito.
+```
 
 ---
 
-## Código limpio
+## 2. Qué hace nuestro programa
 
-Creo que el código está más limpio porque:
-
-- es corto;
-- los nombres se entienden;
-- no tiene funcionalidades que todavía no hacen falta;
-- puedo explicar cada línea.
+```text
+El programa saluda como MiniJarvis, pregunta el nombre de la persona usuaria, guarda ese nombre en una variable y después muestra varios mensajes relacionados con el proyecto del curso.
+```
 
 ---
 
-## Qué puedo mejorar
+## 3. Qué he aprendido
 
-- Añadir un menú en H2.
-- Separar mensajes en métodos cuando lo hayamos trabajado.
-- Añadir pruebas manuales más completas.
-- Comparar una versión similar en Python cuando empecemos H2.
+| Concepto | Qué he entendido |
+|---|---|
+| `main` | Es el punto donde empieza a ejecutarse el programa Java. |
+| Variable | Guarda un valor que puedo usar después, como el nombre del usuario. |
+| Constante | Guarda un valor que no debería cambiar, usando `final`. |
+| `Scanner` | Permite leer texto introducido por teclado. |
+| `System.out.println` | Muestra un mensaje por pantalla y salta de línea. |
+| Ejecutar en IntelliJ | Abrir `src/Main.java` y pulsar Run con el SDK configurado. |
 
 ---
 
-## Preguntas que sé responder
+## 4. Problemas encontrados
 
-1. ¿Dónde empieza el programa?
-   - En `public static void main(String[] args)`.
+| Problema | Cómo lo detecté | Cómo lo resolví |
+|---|---|---|
+| Quería añadir un menú | Vi que necesitaba bucles y decisiones que aún no tocaban | Lo dejé para H2 y mantuve H1 simple. |
+| Al principio no distinguía texto literal y variable | Imprimía el nombre de la constante dentro de comillas | Saqué la constante fuera de las comillas y usé concatenación. |
 
-2. ¿Qué es una variable?
-   - Un espacio donde guardo un valor que puede usarse en el programa.
+---
 
-3. ¿Qué es una constante?
-   - Un valor que no debería cambiar durante la ejecución del programa.
+## 5. Código que sé defender
 
-4. ¿Para qué sirve `Scanner`?
-   - Para leer datos que escribe la persona usuaria.
+### Fragmento 1
 
-5. ¿Por qué no hay menú todavía?
-   - Porque el menú necesita bucles y estructuras de control, que se trabajarán en H2.
+```java
+final String ASSISTANT_NAME = "MiniJarvis";
+final int COURSE_YEAR = 2026;
+```
+
+Explicación:
+
+```text
+Son constantes. Uso final porque el nombre del asistente y el año del curso no deberían cambiar durante la ejecución.
+```
+
+### Fragmento 2
+
+```java
+System.out.print("¿Cómo te llamas? ");
+String userName = scanner.nextLine();
+```
+
+Explicación:
+
+```text
+Primero muestro una pregunta sin saltar de línea. Después leo la respuesta de la persona usuaria y la guardo en la variable userName.
+```
+
+---
+
+## 6. Qué NO hemos añadido todavía
+
+```text
+[x] Menú.
+[x] Bucles.
+[x] switch.
+[x] Memoria.
+[x] IA real.
+```
+
+¿Por qué no pertenece todavía a H1?
+
+```text
+Porque H1 es solo la primera versión básica. El menú y los bucles pertenecen a H2; la memoria a H3; y la IA real o simulada se trabajará más adelante cuando sepamos validar y documentar mejor.
+```
+
+---
+
+## 7. Uso de IA
+
+He usado IA:
+
+```text
+Sí
+```
+
+Resumen:
+
+```text
+La he usado para entender qué significa final en Java. Acepté la idea de usar constantes para valores que no cambian, pero escribí mis propios mensajes y mantuve el código al nivel de H1.
+```
+
+Registro completo:
+
+```text
+docs/registro-ia.md
+```
+
+---
+
+## 8. Qué necesito mejorar
+
+```text
+Necesito mejorar la lectura de errores de compilación y practicar más la diferencia entre texto literal, variables y concatenación.
+```
+
+---
+
+## 9. Preguntas que puedo responder en defensa
+
+### ¿Dónde empieza el programa?
+
+```text
+En el método public static void main(String[] args).
+```
+
+### ¿Qué variable guarda el nombre?
+
+```text
+La variable String userName.
+```
+
+### ¿Qué constante has usado?
+
+```text
+ASSISTANT_NAME para el nombre del asistente y COURSE_YEAR para el año del curso.
+```
+
+### ¿Qué hace Scanner?
+
+```text
+Scanner permite leer datos que introduce la persona usuaria por teclado.
+```
+
+### ¿Cómo ejecutas el proyecto?
+
+```text
+Desde IntelliJ abro src/Main.java y pulso Run. También puedo compilar con javac src/Main.java y ejecutar con java -cp src Main.
+```

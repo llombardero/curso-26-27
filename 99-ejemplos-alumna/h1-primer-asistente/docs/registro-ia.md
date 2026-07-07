@@ -1,52 +1,120 @@
-# Registro de uso de IA — H1
+# Registro de uso de IA — H1 Primer asistente básico
 
-Alumna: Laura García Martín
-Equipo: Equipo Ada
-Fecha: ejemplo docente
+Alumno/a: Laura García Martín  
+Equipo: Equipo Ada  
+Fecha: ejemplo docente  
+Herramienta usada: Jarvis/Gemini simulado para el ejemplo
 
 ---
 
-## Uso 1
+## 1. Declaración inicial
 
-Herramienta usada: Jarvis/Gemini simulado para el ejemplo.
-
-Objetivo:
-
-Entender qué es una constante en Java y cuándo conviene usarla.
-
-Prompt/resumen:
+He usado IA en H1:
 
 ```text
-Explícame de forma sencilla qué significa final en Java para una alumna que está empezando.
+Sí
 ```
 
-Resultado útil:
+---
 
-La IA explicó que `final` permite indicar que una variable no debe cambiar después de asignarse.
+## 2. Uso 1
 
-Qué acepté:
+### Objetivo
 
-- Usar `final String ASSISTANT_NAME` para guardar el nombre del asistente.
-- Usar `final int COURSE_YEAR` para guardar el año de inicio.
+¿Qué querías conseguir?
 
-Qué modifiqué yo:
+```text
+Quería entender qué significa final en Java y cuándo conviene usar una constante.
+```
 
-- Escribí mis propios mensajes.
-- Quité el menú porque todavía era demasiado avanzado para este hito.
-- Dejé el programa centrado en entrada, salida, variables y constantes.
+### Prompt o resumen fiel del prompt
 
-Cómo lo verifiqué:
+```text
+Explícame de forma sencilla qué significa final en Java para una alumna que está empezando. Dame un ejemplo pequeño, no un programa completo.
+```
 
-- Ejecuté el programa.
-- Escribí mi nombre.
-- Comprobé que el programa mostraba los mensajes esperados.
+### Resultado obtenido
 
-Qué aprendí:
+¿Qué te respondió la IA?
 
-- Una constante ayuda a que el código sea más claro cuando un valor no debería cambiar.
-- No conviene añadir código avanzado si todavía no sé explicarlo.
+```text
+La IA explicó que final se usa para indicar que un valor no debería cambiar después de asignarse. También propuso ejemplos de constantes para nombres o valores fijos.
+```
 
-Riesgos detectados:
+### Qué acepté
 
-- La IA puede proponer soluciones demasiado completas para el nivel actual.
-- Si acepto todo lo que propone, puedo entregar código que no entiendo.
+¿Qué parte usaste?
+
+```text
+Acepté la idea de usar final String ASSISTANT_NAME para el nombre del asistente y final int COURSE_YEAR para el año del curso.
+```
+
+### Qué modifiqué yo
+
+¿Qué cambiaste, simplificaste o adaptaste?
+
+```text
+Escribí mis propios mensajes. No copié un programa completo. Quité ideas más avanzadas como menú o comandos porque no pertenecen a H1.
+```
+
+### Cómo lo verifiqué
+
+¿Cómo comprobaste que era correcto?
+
+```text
+Ejecuté el programa, escribí mi nombre y comprobé que mostraba los mensajes esperados. También revisé que las constantes se usaban fuera de las comillas para imprimir su valor.
+```
+
+### Qué aprendí
+
+```text
+Aprendí que una constante ayuda a que el código sea más claro cuando un valor no debería cambiar. También aprendí que no debo aceptar código que todavía no puedo explicar.
+```
+
+### Riesgos detectados
+
+¿Había código demasiado avanzado, errores, explicaciones confusas o algo que no entendías?
+
+```text
+El riesgo principal es que la IA proponga una solución demasiado completa para el nivel actual. Por eso limité el uso a una explicación de final y mantuve el programa simple.
+```
+
+---
+
+## 3. Uso 2, si procede
+
+No aplica.
+
+---
+
+## 4. Comprobación de límites de H1
+
+```text
+[x] No he usado IA para generar un programa completo sin entenderlo.
+[x] No he añadido menú, bucles, switch, memoria ni IA real.
+[x] No he incluido datos personales ni secretos.
+[x] Puedo explicar el código entregado.
+[x] He probado el programa antes de entregarlo.
+```
+
+---
+
+## 5. Qué parte puedo defender
+
+```text
+Puedo defender el uso de final en ASSISTANT_NAME y COURSE_YEAR, explicar qué hace Scanner, dónde empieza el programa y por qué H1 todavía no incluye menú ni bucles.
+```
+
+---
+
+## 6. Dudas pendientes
+
+```text
+Quiero practicar más cómo leer errores de compilación cuando faltan comillas, punto y coma o imports.
+```
+
+---
+
+## 7. Si no he usado IA
+
+No aplica, porque sí he usado IA de forma limitada y registrada.

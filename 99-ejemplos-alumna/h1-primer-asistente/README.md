@@ -1,48 +1,82 @@
 # H1 — Primer asistente por consola
 
-Alumna: Laura García Martín
-Equipo: Equipo Ada
-Módulo principal: Programación
-Módulo coordinado: Entornos de Desarrollo
+Equipo o alumno/a: Laura García Martín  
+Curso: 1.º DAW  
+Módulos: Programación + Entornos de Desarrollo  
+Fecha: ejemplo docente
 
 ---
 
-## 1. Qué entrega este hito
+## 1. Qué hace este programa
 
-Este entregable contiene una primera versión muy sencilla de un asistente por consola hecho en Java.
+Esta primera versión de MiniJarvis es un programa Java muy sencillo que se ejecuta por consola.
 
-El asistente:
+El programa:
 
-- muestra un mensaje de bienvenida;
+- muestra un saludo inicial;
 - pide el nombre de la persona usuaria;
-- guarda el nombre en una variable;
-- usa una constante para el nombre del asistente;
-- muestra varios mensajes por pantalla;
-- está preparado en un proyecto sencillo que puede abrirse en IntelliJ.
+- guarda ese nombre en una variable `String`;
+- usa constantes para el nombre del asistente y el año del curso;
+- muestra varios mensajes relacionados con el proyecto MiniJarvis.
 
-Todavía no incluye menú, bucles, `switch`, excepciones ni comandos. Eso se trabajará en H2, cuando el hito se centre en estructuras de control y depuración.
+Texto:
+
+```text
+MiniJarvis H1 sirve para comprobar que entiendo la estructura básica de un programa Java antes de añadir menú, bucles, memoria o IA real.
+```
 
 ---
 
-## 2. Cómo ejecutar
+## 2. Qué NO incluye todavía
 
-Desde terminal:
+```text
+[x] No tiene menú.
+[x] No tiene bucles.
+[x] No tiene switch.
+[x] No tiene memoria.
+[x] No tiene listas ni mapas.
+[x] No tiene clases propias adicionales.
+[x] No se conecta con una IA real.
+```
+
+Explicación:
+
+```text
+No incluye esas funciones porque H1 se centra en estructura básica, variables, constantes, entrada por teclado y salida por pantalla. El menú y los bucles se trabajarán en H2; la memoria en H3; las clases propias en H4; y la IA real o simulada más adelante.
+```
+
+---
+
+## 3. Cómo ejecutar desde IntelliJ
+
+1. Abrir el proyecto en IntelliJ.
+2. Comprobar que el SDK de Java está configurado.
+3. Abrir el archivo:
+
+```text
+src/Main.java
+```
+
+4. Pulsar Run.
+
+Indicación específica:
+
+```text
+La clase principal se llama Main y está en src/Main.java.
+```
+
+---
+
+## 4. Cómo ejecutar desde terminal, si procede
 
 ```bash
 javac src/Main.java
 java -cp src Main
 ```
 
-Desde IntelliJ:
-
-1. Abrir la carpeta del proyecto.
-2. Revisar que el SDK de Java está configurado.
-3. Abrir `src/Main.java`.
-4. Pulsar Run.
-
 ---
 
-## 3. Ejemplo de ejecución
+## 5. Ejemplo de ejecución
 
 ```text
 Hola, soy MiniJarvis.
@@ -55,36 +89,73 @@ Primer objetivo: aprender la estructura básica de un programa Java.
 
 ---
 
-## 4. Qué he aprendido
+## 6. Estructura del proyecto
 
-- Que un programa Java empieza a ejecutarse en el método `main`.
-- Que puedo guardar texto en variables de tipo `String`.
-- Que puedo guardar valores fijos en constantes con `final`.
-- Que `Scanner` sirve para leer datos introducidos por teclado.
-- Que `System.out.println` muestra información por pantalla.
-- Que el código debe ser sencillo y claro antes de añadir más funcionalidades.
-
----
-
-## 5. Código limpio aplicado
-
-He intentado aplicar una primera idea de código limpio:
-
-- nombres comprensibles: `ASSISTANT_NAME`, `COURSE_YEAR`, `userName`;
-- programa corto y fácil de leer;
-- sin añadir todavía funciones que no pertenecen a este hito;
-- sin copiar código que no pueda explicar.
+```text
+h1-primer-asistente/
+├── README.md
+├── src/
+│   └── Main.java
+└── docs/
+    ├── evidencia-ejecucion-h1.md
+    ├── portfolio-h1.md
+    ├── registro-ia.md
+    ├── defensa-h1.md
+    ├── incidencia-h1.md
+    └── vocabulario-h1.md
+```
 
 ---
 
-## 6. Uso de IA
+## 7. Conceptos usados
 
-He usado IA solo para pedir una explicación de qué es una constante en Java.
+| Concepto | Dónde aparece en mi código |
+|---|---|
+| Clase `Main` | `public class Main` |
+| Método `main` | `public static void main(String[] args)` |
+| Variable para el nombre | `String userName = scanner.nextLine();` |
+| Constante | `ASSISTANT_NAME` y `COURSE_YEAR` |
+| `Scanner` | `Scanner scanner = new Scanner(System.in);` |
+| `System.out.print` o `println` | En los mensajes de consola. |
 
-No he copiado el programa completo generado por IA. He escrito y probado el código paso a paso.
+---
+
+## 8. Uso de IA
+
+He usado IA:
+
+```text
+Sí
+```
 
 El registro está en:
 
 ```text
 docs/registro-ia.md
+```
+
+Resumen breve:
+
+```text
+He usado IA para entender qué significa final en Java y cuándo conviene usar una constante. No he usado IA para generar el programa completo.
+```
+
+---
+
+## 9. Qué sé defender
+
+```text
+[x] Dónde empieza el programa.
+[x] Qué variable guarda el nombre.
+[x] Qué constante he usado.
+[x] Qué hace Scanner.
+[x] Diferencia entre print y println.
+[x] Cómo ejecuto el programa.
+[x] Por qué todavía no hay menú.
+```
+
+Comentarios:
+
+```text
+Puedo explicar cada línea principal del programa y justificar por qué H1 debe mantenerse simple.
 ```
