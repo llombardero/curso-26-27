@@ -1,0 +1,13 @@
+# Java
+*.class
+out/
+build/
+
+# Seguridad
+.env
+*.key
+*.token
+
+# Sistema
+.DS_Store
+Thumbs.db

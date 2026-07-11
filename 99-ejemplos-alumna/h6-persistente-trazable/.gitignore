@@ -1,0 +1,17 @@
+# Java
+*.class
+out/
+build/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Seguridad
+.env
+*.key
+*.token
+
+# Sistema
+.DS_Store
+Thumbs.db
