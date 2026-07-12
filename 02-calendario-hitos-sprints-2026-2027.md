@@ -2,7 +2,7 @@
 
 ## Programación + Entornos de Desarrollo — 1.º DAW — Granada
 
-Versión: borrador 0.1
+Versión: cierre curricular 1.0 — julio 2026
 Documento base: `00-mapa-maestro-curso-2026-2027.md`
 Matriz: `01-matriz-integrada-ra-ce-evidencias-tareas.md`
 Anexos: `01A-anexo-programacion-ra-ce.md`, `01B-anexo-entornos-ra-ce.md`

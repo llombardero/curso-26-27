@@ -2,7 +2,7 @@
 
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
-Versión: borrador 0.1
+Versión: cierre curricular 1.0 — julio 2026
 Documentos relacionados:
 
 - `00-mapa-maestro-curso-2026-2027.md`

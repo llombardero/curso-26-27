@@ -82,3 +82,97 @@ Me quedo con la opción D.
 Hay que ir trabajando con el alumnado el "código limpio", como lo entiende Robert C. Martin y también los "Patrones de diseño" según Erich Gamma. Una vez revisado ésto, en la entrega anterior creo que la clase Main que me has entregado tiene un nivel muy superior al que tendrá el alumnado y muy superior a lo que pides en el punto 3 Relación general RA-hitos del anexo deprogramación-ra-ce.
 la ruta es "Propuesta Ciclos Superiores IESHLanz 2026-27.pdf". Ahora sabiendo los objetivos de programación + entornos de desarrollo y manteniendo RAs y criterios revisa a fondo todo lo hecho hasta ahora para realiz
 ar las actualizaciones pendientes. En el documento  aparece programación + entornos, yo quiero seguir manteniendo la separación como lo has hecho hasta ahora. luego, quiero aprobar explícitamente la ejecución cuando Hermes/terminal lo solicite en la interfaz, si aparece un diálogo de aprobación.
+
+ Estoy trabajando en la carpeta:
+
+    /mnt/compartido/Hlanz/Programacion/Curso 2026-2027
+
+    Contexto:
+    Estoy creando un curso 2026/2027 de 1.º DAW para Programación + Entornos de Desarrollo, basado en un proyecto anual llamado MiniJarvis: construcción progresiva de un pequeño agente IA.
+
+    Quiero seguir creando guías docentes autónomas sesión a sesión, sin depender de abrir otros documentos durante la clase.
+
+    Ya están creadas y verificadas estas guías autónomas:
+
+    22-guia-docente-primera-sesion-autonoma.md
+    - Primera sesión del proyecto MiniJarvis.
+    - Presentación del proyecto, hitos, IA responsable, actividad inicial y ticket de salida.
+
+    23-guia-docente-segunda-sesion-torre-papel-scrum-autonoma.md
+    - Segunda sesión.
+    - Torre de papel y Scrum de aula.
+    - Guía docente completa y autónoma.
+
+    24-guia-docente-h1-sesiones-autonomas.md
+    - H1 completo sesión a sesión.
+    - Primer asistente básico.
+    - Incluye H1-S1 a H1-S7.
+
+    25-guia-docente-h2-sesiones-autonomas.md
+    - H2 completo sesión a sesión.
+    - Agente con decisiones y depuración.
+    - Incluye H2-S1 a H2-S9.
+
+    26-guia-docente-h3-sesiones-autonomas.md
+    - H3 completo sesión a sesión.
+    - Agente con memoria en colecciones.
+    - Incluye H3-S1 a H3-S10.
+
+    También existen paquetes completos por hito en:
+
+    hitos/h0-torre-papel-scrum/
+    hitos/h1-primer-asistente/
+    hitos/h2-decisiones-depuracion/
+    hitos/h3-memoria-colecciones/
+    hitos/h4-agente-orientado-objetos/
+    hitos/h5-extensible-clean-code-patrones/
+    hitos/h6-persistente-trazable/
+    hitos/h7-integracion-ia-responsable/
+    hitos/hf-presentacion-final-recuperacion-mejora/
+
+    Y ejemplos completos de Laura en:
+
+    99-ejemplos-alumna/h0-torre-papel/
+    99-ejemplos-alumna/h1-primer-asistente/
+    99-ejemplos-alumna/h2-decisiones-depuracion/
+    99-ejemplos-alumna/h3-memoria-colecciones/
+    99-ejemplos-alumna/h4-agente-orientado-objetos/
+    99-ejemplos-alumna/h5-extensible-clean-code-patrones/
+    99-ejemplos-alumna/h6-persistente-trazable/
+    99-ejemplos-alumna/h7-integracion-ia-responsable/
+    99-ejemplos-alumna/hf-presentacion-final-recuperacion-mejora/
+
+    Índice global creado:
+
+    21-indice-cierre-itinerario-minijarvis.md
+
+    Objetivo actual:
+    Continuar creando las guías docentes autónomas que faltan, en el mismo estilo que las ya creadas.
+
+    Siguiente archivo que quiero crear:
+
+    27-guia-docente-h4-sesiones-autonomas.md
+
+    Debe ser una guía docente completa, autónoma, sesión a sesión, para H4: Agente orientado a objetos.
+
+    Debe incluir sesiones sobre:
+    - presentar el problema de Main demasiado grande;
+    - clase, objeto, atributo, método y constructor;
+    - extraer Memory;
+    - extraer Agent;
+    - encapsulación private/public;
+    - diagrama de clases;
+    - diagrama de comportamiento;
+    - relación diagrama-código;
+    - comparación Java ↔ Python;
+    - defensa H4.
+
+    Estilo requerido:
+    - Español.
+    - Documento docente completo.
+    - No depender de abrir otros materiales durante la clase.
+    - Incluir guion docente, duración, objetivo, resultado esperado, qué explica el profesor, qué investiga o construye el alumnado siguiendo HEXA, actividades, errores frecuentes, cierre y criterio de éxito.
+    - Crear el archivo real en la carpeta indicada.
+    - Después verificar con un script temporal en /tmp con prefijo hermes-verify- y resumirlo como verificación ad-hoc.
+
+“Continúa con H4”.
