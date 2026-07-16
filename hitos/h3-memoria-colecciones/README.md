@@ -65,9 +65,15 @@ Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias
 - Set para evitar repetidos
 - Map para preferencias por clave
 
+Refuerzo obligatorio de cobertura:
+
+```text
+La defensa H3 debe incluir una comparación array vs ArrayList y una decisión explícita sobre Set para recuerdos repetidos.
+Map puede trabajarse como preferencias por clave o como mini-reto separado.
+```
+
 Criterio docente de cierre:
 
 - El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
 - Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
 - La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
-

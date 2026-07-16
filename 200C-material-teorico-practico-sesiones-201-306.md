@@ -307,6 +307,16 @@ Práctica: Pedir nombre y responder con ese nombre.
 
 Comprobación: ¿Qué devuelve `nextLine()`?
 
+### Refuerzo H1 — Números, operadores y conversiones
+
+Explicación docente: `nextLine()` siempre lee texto. Para calcular, hay que convertir ese texto a número. Introduce `int`, `double`, operadores aritméticos, comparación y precedencia básica con ejemplos muy pequeños.
+
+Demostración: Leer `studyHoursText`, convertir con `Integer.parseInt(studyHoursText)` y mostrar una recomendación con `if` sencillo. Provoca una entrada inválida para ver `NumberFormatException`.
+
+Práctica: MiniJarvis pregunta horas de estudio, calcula una recomendación y registra una prueba válida y otra inválida.
+
+Comprobación: ¿Por qué Java no puede sumar directamente el texto que devuelve `nextLine()`?
+
 ### Sesión 213 — Limpieza, nombres claros y simplicidad
 
 Explicación docente: Código limpio en H1 significa que se entiende, no que sea avanzado.
@@ -421,6 +431,16 @@ Práctica: Comparar `if/else` y `switch` y elegir.
 
 Comprobación: ¿Qué versión puedes defender mejor?
 
+### Refuerzo H2 — Bucles alternativos y eficiencia inicial
+
+Explicación docente: `while` es natural para el menú, pero `do-while` y `for` resuelven otros patrones. Introduce también la idea de eficiencia sin formalismo: repetir trabajo innecesario empeora el programa.
+
+Demostración: Tres fragmentos: pedir una opción con `do-while`, imprimir 5 mensajes con `for`, y comparar un recorrido simple frente a un doble recorrido innecesario.
+
+Práctica: Crear `docs/refuerzo-bucles-h2.md` con los tres fragmentos y una explicación de cuándo usar cada bucle.
+
+Comprobación: ¿Qué bucle usarías si sabes exactamente cuántas repeticiones necesitas?
+
 ### Sesión 224 — Pruebas manuales
 
 Explicación docente: Probar es comparar resultado esperado con resultado obtenido.
@@ -514,6 +534,16 @@ Demostración: `nombre -> Laura`, `lenguaje -> Java`.
 Práctica: Crear mapa de preferencias.
 
 Comprobación: ¿Cuándo usarías mapa en vez de lista?
+
+### Refuerzo H3 — Array, Set, mutabilidad y envoltorios
+
+Explicación docente: Un array tiene tamaño fijo; `ArrayList` crece; `Set` evita repetidos; `HashMap` busca por clave. Explica genéricos y por qué una colección de números usa `Integer`, no `int`.
+
+Demostración: Array `String[] commands`, `ArrayList<String> memories`, `Set<String> uniqueMemories` y `HashMap<String, String> preferences`.
+
+Práctica: Ampliar `docs/justificacion-coleccion-h3.md` comparando array, lista, set y mapa. Decidir si `Set` entra en MiniJarvis o queda como criterio de mejora.
+
+Comprobación: ¿Qué estructura elegirías para no guardar dos veces el mismo recuerdo?
 
 ### Sesión 233 — Crear comando `recuerda`
 
@@ -648,6 +678,16 @@ Demostración: `public Memory() { this.memories = new ArrayList<>(); }`.
 Práctica: Crear constructor de `Memory`.
 
 Comprobación: ¿Qué pasaría si la lista no se inicializa?
+
+### Refuerzo H4 — Constructores sobrecargados y Javadoc mínimo
+
+Explicación docente: Una clase puede ofrecer más de una forma de crear objetos. La sobrecarga permite constructores con parámetros distintos. `this` distingue atributo y parámetro. Javadoc documenta el uso esperado de clases y métodos públicos.
+
+Demostración: `Memory()` inicializa lista vacía y `Memory(List<String> initialMemories)` carga recuerdos ficticios para pruebas. Añade Javadoc breve encima de la clase y de `remember`.
+
+Práctica: Añadir sobrecarga o, si el grupo va lento, escribir el diseño de los dos constructores y documentar una clase/método real.
+
+Comprobación: ¿Qué constructor usa `Main` y qué estado inicial deja?
 
 ### Sesión 246 — Encapsulación
 
@@ -873,6 +913,16 @@ Práctica: Decidir si se usa o se descarta el patrón.
 
 Comprobación: ¿Qué problema real resuelve en tu proyecto?
 
+### Refuerzo H5 — POO avanzada aplicada y descartes razonados
+
+Explicación docente: Tema 6 incluye más que interfaces: herencia, `super`, `protected`, clases abstractas, `@Override`, `toString`, ordenación y objetos comparables. No todo debe quedarse en el proyecto final; lo importante es trabajarlo y decidir con criterio.
+
+Demostración: Añadir `@Override` a una herramienta, crear `enum CommandType`, mostrar un `record CommandResult`, implementar `toString` y comparar `interface Tool` con `abstract class BaseTool`.
+
+Práctica: Crear `docs/refuerzo-poo-avanzada-h5.md` con código corto, decisión de mantener o descartar cada elemento y una comparación interfaz frente a clase abstracta.
+
+Comprobación: ¿Qué problema causa usar herencia cuando una interfaz sería suficiente?
+
 ### Sesión 268 — Git profesional I: commits y ramas
 
 Explicación docente: Git permite trazabilidad y recuperación. Un commit debe explicar un cambio coherente.
@@ -1050,6 +1100,16 @@ Demostración: Ejecutar sin carpeta `data` y corregir con `createDirectories`.
 Práctica: Documentar y controlar un error.
 
 Comprobación: ¿Qué mensaje recibe el usuario si falla?
+
+### Refuerzo H6 — Excepción propia e invariantes
+
+Explicación docente: Lanzar una excepción no es lo mismo que capturarla. Una excepción propia permite expresar un error del dominio del proyecto. Un invariante es una regla que siempre debe mantenerse en el estado interno.
+
+Demostración: `class MemoryStorageException extends Exception` o una alternativa con `RuntimeException`. Mostrar un método `load() throws MemoryStorageException`. Revisar que `Memory` no guarda nulos/vacíos ni devuelve su lista interna modificable.
+
+Práctica: Crear excepción propia o decisión técnica justificada; añadir una prueba de error de fichero y una prueba de invariante de memoria.
+
+Comprobación: ¿Qué regla de `Memory` no debe romperse nunca?
 
 ### Sesión 285 — Logs e historial
 

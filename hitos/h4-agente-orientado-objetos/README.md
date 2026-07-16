@@ -60,14 +60,23 @@ Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias
 - responsabilidad
 - private/public
 - this
+- constructor por defecto
+- constructor con parámetros
+- sobrecarga de constructores
 - diagrama de clases
 - diagrama de comportamiento
 - Javadoc como ampliación
 - excepción básica
+
+Refuerzo obligatorio de cobertura:
+
+```text
+Memory debe mostrar al menos un constructor claro y, si el ritmo lo permite, sobrecarga de constructores.
+Debe haber Javadoc mínimo en una clase y dos métodos públicos o una justificación si se deja como recuperación.
+```
 
 Criterio docente de cierre:
 
 - El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
 - Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
 - La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
-

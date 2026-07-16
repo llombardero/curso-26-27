@@ -67,10 +67,18 @@ Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias
 - operadores
 - expresiones
 - conversiones básicas
+- tipos numéricos (`int`, `double`)
+- conversión `String` -> número con `Integer.parseInt`
+- precedencia básica de operadores
+
+Refuerzo obligatorio de cobertura:
+
+```text
+MiniJarvis debe incluir o resolver como ejercicio corto una pregunta numérica sencilla, conversión de texto a número, cálculo y comparación.
+```
 
 Criterio docente de cierre:
 
 - El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
 - Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
 - La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
-

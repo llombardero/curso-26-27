@@ -53,6 +53,7 @@ Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias
 - clases responsables
 - excepciones checked y runtime
 - throws
+- excepción propia de persistencia
 - validación
 - invariantes
 - repositorio como idea inicial
@@ -63,9 +64,15 @@ Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias
 - pruebas de dos ejecuciones
 - trazabilidad
 
+Refuerzo obligatorio de cobertura:
+
+```text
+H6 debe incluir una decisión explícita sobre gestión de errores de persistencia: excepción propia o excepción estándar justificada.
+Memory debe mantener invariantes: no guardar recuerdos nulos/vacíos y no exponer su lista interna sin control.
+```
+
 Criterio docente de cierre:
 
 - El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
 - Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
 - La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
-

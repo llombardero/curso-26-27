@@ -53,6 +53,24 @@ Tema 8  → GUI, eventos, JavaFX, MVC, arquitectura hexagonal y persistencia con
 
 Para el curso MiniJarvis, la secuencia más natural no es seguir los temas de forma lineal exacta, sino reorganizar sus conceptos alrededor de los hitos del proyecto.
 
+Criterio de cobertura tras la revisión de julio de 2026:
+
+```text
+Los conceptos de los temas 1 a 6 deben quedar trabajados con evidencia explícita en H1-H6.
+Los temas 7 y 8 se mantienen como ampliación, mejora final o trabajo opcional si el calendario y el nivel del grupo lo permiten.
+```
+
+Para asegurar la cobertura real de los temas 1 a 6, el proyecto MiniJarvis incorpora microactividades de refuerzo dentro de los hitos existentes. Estas microactividades no cambian el eje del curso, pero evitan que conceptos importantes queden solo mencionados.
+
+| Hito | Refuerzo añadido | Conceptos que asegura |
+|---|---|---|
+| H1 | Pequeño cálculo con entrada numérica | `int`, `double`, operadores aritméticos, comparación, conversión `String` -> número, precedencia básica. |
+| H2 | Comparación `while` / `do-while` / `for` y eficiencia inicial | bucles alternativos, condición de salida, bucle infinito, `break`, `continue`, coste básico. |
+| H3 | Comparación array / `ArrayList`, uso de `Set` y justificación de mutabilidad | arrays, listas, genéricos, `Set`, repetidos, mutabilidad/inmutabilidad, clases envoltorio. |
+| H4 | Constructores sobrecargados, `this` y Javadoc mínimo | constructor por defecto, constructor con parámetros, sobrecarga, estado inicial válido, documentación de clases. |
+| H5 | `enum`, `record`, `@Override`, `toString`, ordenación sencilla y comparación con clase abstracta | enumeraciones, records, polimorfismo, `Comparable`, herencia, `super`, `protected`, clase abstracta. |
+| H6 | Excepción propia de persistencia e invariantes de memoria | checked/runtime exceptions, `throws`, excepción propia, invariantes, encapsulación avanzada. |
+
 ---
 
 # 2. Tema 1 — Aspectos básicos de la programación
@@ -1044,7 +1062,7 @@ Tema 7: Introduccion Programacion Funcional.pdf
 
 ## Relación con MiniJarvis
 
-Este tema es más avanzado y puede usarse como ampliación o mejora:
+Este tema es más avanzado y se trabajará solo si da tiempo o como ampliación/mejora:
 
 ```text
 H5 — búsqueda de herramientas
@@ -1053,7 +1071,7 @@ H7 — análisis de prompts registrados
 HF — mejora opcional del proyecto
 ```
 
-No es imprescindible para el núcleo mínimo de MiniJarvis, pero sí útil para alumnado avanzado.
+No es imprescindible para el núcleo mínimo de MiniJarvis ni para garantizar la cobertura de los conceptos principales de los temas 1 a 6. Sí es útil para alumnado avanzado o para mejoras finales.
 
 Conceptos clave que deben quedar dominados si se introduce:
 
@@ -1208,7 +1226,7 @@ Tema 8: Aplicaciones con interfaz gráfica de escritorio.pdf
 
 ## Relación con MiniJarvis
 
-Este tema es de ampliación avanzada para cierre o mejora:
+Este tema es de ampliación avanzada para cierre o mejora. No forma parte del mínimo obligatorio del proyecto MiniJarvis salvo decisión docente posterior por ritmo del grupo:
 
 ```text
 HF — mejora opcional del proyecto final

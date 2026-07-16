@@ -188,6 +188,19 @@ No avanzar a la siguiente sesión si la evidencia mínima de la sesión actual n
 | Evidencia | Ejecución donde el programa saluda usando el nombre introducido. |
 | Cierre | Microdefensa: explicar qué hace `scanner.nextLine()`. |
 
+### Refuerzo H1 — Números, operadores y conversiones
+
+Este refuerzo puede integrarse entre las sesiones 212 y 214 o usarse como recuperación H1.
+
+| Campo | Desarrollo |
+|---|---|
+| Hito | H1 |
+| Foco | Asegurar conceptos del Tema 1 que no aparecen de forma natural en el saludo inicial. |
+| Explicar | `int`, `double`, operadores aritméticos, comparación, precedencia básica y conversión `String` -> número con `Integer.parseInt`. |
+| Actividad | MiniJarvis pregunta cuántas horas se han estudiado esta semana, convierte la entrada a número y muestra una recomendación sencilla. |
+| Evidencia | Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido. |
+| Cierre | Pregunta: ¿por qué `scanner.nextLine()` devuelve texto aunque escribas un número? |
+
 ### Sesión 213 — Limpieza, nombres claros y simplicidad
 
 | Campo | Desarrollo |
@@ -313,6 +326,19 @@ No avanzar a la siguiente sesión si la evidencia mínima de la sesión actual n
 | Evidencia | Decisión documentada: mantener `if/else` o usar `switch`. |
 | Cierre | Pregunta: ¿cuál entiendes mejor y por qué? |
 
+### Refuerzo H2 — Bucles alternativos y eficiencia inicial
+
+Este refuerzo puede hacerse como laboratorio breve antes de cerrar H2.
+
+| Campo | Desarrollo |
+|---|---|
+| Hito | H2 |
+| Foco | Cubrir conceptos del Tema 3 que no siempre aparecen en el menú principal. |
+| Explicar | Diferencia entre `while`, `do-while` y `for`; condición de salida; riesgo de bucle infinito; uso razonado de `break` y `continue`; eficiencia básica. |
+| Actividad | Resolver tres mini-ejercicios: pedir una opción al menos una vez con `do-while`, repetir 5 mensajes con `for` y comparar una búsqueda simple con una búsqueda repetida dentro de otro bucle. |
+| Evidencia | Archivo breve `docs/refuerzo-bucles-h2.md` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia. |
+| Cierre | Pregunta: ¿cuándo elegirías `for` en vez de `while`? |
+
 ### Sesión 224 — Pruebas manuales
 
 | Campo | Desarrollo |
@@ -415,6 +441,19 @@ No avanzar a la siguiente sesión si la evidencia mínima de la sesión actual n
 | Actividad | Mini-reto: guardar preferencias por clave. |
 | Evidencia | Comparación `ArrayList` frente a `HashMap`. |
 | Cierre | Decidir qué colección usará el equipo y por qué. |
+
+### Refuerzo H3 — Array, Set, mutabilidad y envoltorios
+
+Este refuerzo debe realizarse antes de la defensa H3, aunque no obligue a cambiar la implementación principal.
+
+| Campo | Desarrollo |
+|---|---|
+| Hito | H3 |
+| Foco | Asegurar cobertura completa del Tema 4. |
+| Explicar | Diferencia entre array y `ArrayList`; genéricos; clases envoltorio como `Integer`; `Set` para evitar repetidos; lista mutable e inmutable. |
+| Actividad | Crear un array con tres comandos conocidos, comparar sus limitaciones con `ArrayList`, y usar `Set<String>` para detectar recuerdos repetidos o justificar por qué no se incorpora al diseño final. |
+| Evidencia | `docs/justificacion-coleccion-h3.md` ampliado con array vs lista, uso o descarte de `Set`, y decisión sobre mutabilidad. |
+| Cierre | Pregunta: ¿qué estructura usarías si no quieres repetidos? |
 
 ### Sesión 233 — Crear comando `recuerda`
 
@@ -562,6 +601,19 @@ No avanzar a la siguiente sesión si la evidencia mínima de la sesión actual n
 | Actividad | Crear clase `Memory` con constructor. |
 | Evidencia | `Memory` inicializada sin romper comandos existentes. |
 | Cierre | Microdefensa: ¿cuándo se ejecuta el constructor? |
+
+### Refuerzo H4 — Constructores sobrecargados y Javadoc mínimo
+
+Este refuerzo puede incorporarse durante las sesiones 245-256.
+
+| Campo | Desarrollo |
+|---|---|
+| Hito | H4 |
+| Foco | Asegurar conceptos del Tema 5 relacionados con programación básica de clases. |
+| Explicar | Constructor por defecto, constructor con parámetros, sobrecarga, uso de `this`, estado inicial válido y documentación Javadoc mínima. |
+| Actividad | Añadir a `Memory` un constructor por defecto y otro que reciba recuerdos iniciales ficticios; documentar con Javadoc una clase y dos métodos públicos. |
+| Evidencia | Código con constructores sobrecargados y apartado en README/portfolio explicando cuándo se usa cada uno. |
+| Cierre | Pregunta: ¿qué constructor se ejecuta en tu `Main`? |
 
 ### Sesión 246 — Encapsulación
 
@@ -809,6 +861,19 @@ No avanzar a la siguiente sesión si la evidencia mínima de la sesión actual n
 | Evidencia | `docs/registro-patron-h5.md`: usar o descartar patrón. |
 | Cierre | Pregunta: ¿qué problema resuelve aquí? |
 
+### Refuerzo H5 — Conceptos avanzados de clases sin sobrecargar el diseño
+
+Este refuerzo se realiza como laboratorio técnico. Solo se incorpora al proyecto principal lo que siga siendo simple y defendible.
+
+| Campo | Desarrollo |
+|---|---|
+| Hito | H5 |
+| Foco | Trabajar conceptos importantes de los temas 5 y 6 que no siempre aparecen en MiniJarvis mínimo. |
+| Explicar | `enum`, `record`, `@Override`, `toString`, ordenación con `Comparable` o `Comparator`, clase abstracta, herencia, `super` y `protected`. |
+| Actividad | Crear `enum CommandType`, valorar un `record CommandResult`, añadir `@Override` en herramientas, implementar `toString` en una clase de dominio y comparar `interface Tool` con una clase abstracta `BaseTool`. |
+| Evidencia | `docs/refuerzo-poo-avanzada-h5.md` con código, decisión de qué se mantiene y qué se descarta, y justificación de composición/interfaz frente a herencia. |
+| Cierre | Pregunta: ¿por qué no siempre conviene usar herencia aunque sepamos programarla? |
+
 ### Sesión 268 — Git profesional I: commits y ramas
 
 | Campo | Desarrollo |
@@ -1003,6 +1068,19 @@ No avanzar a la siguiente sesión si la evidencia mínima de la sesión actual n
 | Actividad | Probar fallo controlado y documentar respuesta. |
 | Evidencia | Incidencia H6 o prueba de error. |
 | Cierre | Pregunta: ¿qué verá el usuario si falla la carga? |
+
+### Refuerzo H6 — Excepción propia e invariantes
+
+Este refuerzo debe conectarse con la persistencia real del hito.
+
+| Campo | Desarrollo |
+|---|---|
+| Hito | H6 |
+| Foco | Asegurar excepciones propias, `throws` e invariantes de estado. |
+| Explicar | Diferencia entre lanzar y capturar; excepción propia `MemoryStorageException` o `PersistenceException`; checked/runtime según nivel; invariante de memoria válida. |
+| Actividad | Crear una excepción propia para errores de carga/guardado o documentar por qué se usa una excepción estándar; asegurar que `Memory` no guarda recuerdos nulos/vacíos ni expone su lista interna modificable. |
+| Evidencia | Código o decisión técnica en `docs/incidencia-h6.md`/`docs/seguridad-h6.md` con prueba de error controlado. |
+| Cierre | Pregunta: ¿qué invariante debe mantener siempre `Memory`? |
 
 ### Sesión 285 — Logs e historial
 

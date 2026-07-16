@@ -63,12 +63,22 @@ Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias
 - enum
 - polimorfismo por interfaz
 - Command simplificado
+- @Override
+- toString
+- Comparable o Comparator como ampliación guiada
+- herencia, super, protected y clase abstracta como comparación técnica
 - clean code
 - refactorización segura
+
+Refuerzo obligatorio de cobertura:
+
+```text
+H5 debe incluir un laboratorio de POO avanzada: enum, record opcional, @Override, toString y comparación entre interface Tool y una posible clase abstracta BaseTool.
+No es obligatorio mantener herencia en el diseño final si la defensa justifica que interfaz/composición es más simple.
+```
 
 Criterio docente de cierre:
 
 - El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
 - Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
 - La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
-

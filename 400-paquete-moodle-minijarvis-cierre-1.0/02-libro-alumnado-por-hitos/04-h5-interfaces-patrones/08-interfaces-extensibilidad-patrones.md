@@ -15,6 +15,9 @@ H5
 - clean code
 - patrón Command simplificado
 - cuándo introducir patrones
+- enum y record como refuerzo
+- @Override, toString y ordenación sencilla
+- herencia y clase abstracta como comparación
 
 ## 1. Punto de partida
 
@@ -33,6 +36,8 @@ La extensibilidad mide lo fácil que es añadir funcionalidades sin romper lo ex
 Una interfaz define un contrato. `Tool` puede exigir nombre, descripción y ejecución. Así cada comando se convierte en una herramienta separada.
 
 Los patrones de diseño se introducen aquí porque ya existe base de POO: clases, objetos, responsabilidades, encapsulación e interfaces. Antes de H5 serían decoración. En H5 el patrón Command simplificado tiene sentido porque resuelve un problema real: encapsular acciones en objetos.
+
+Aunque MiniJarvis se apoye principalmente en interfaces y composición, el Tema 6 también trabaja herencia, clases abstractas, `super`, `protected`, `@Override`, métodos de `Object` y comparación de objetos. En H5 se estudiarán como laboratorio técnico: solo se incorpora al proyecto principal lo que siga siendo simple y defendible.
 
 ## 3. Ejemplo guiado en Java
 
@@ -59,6 +64,15 @@ Refactoriza un comando de `Agent` a una clase `Tool`. Después añade `CourseToo
 
 Defensa: explica si tu solución se parece al patrón Command y por qué no has añadido patrones más complejos.
 
+Refuerzo de cobertura de los temas 5 y 6:
+
+- Crea `enum CommandType` para comandos conocidos o explica por qué prefieres `String` en esta fase.
+- Valora un `record CommandResult` o `record AiResponse` para transportar una respuesta simple.
+- Añade `@Override` en las clases que implementan `Tool`.
+- Implementa `toString` en una clase de dominio y explica cuándo ayuda.
+- Ordena herramientas por nombre usando `Comparable` o `Comparator`, si el grupo está preparado.
+- Compara `interface Tool` con una clase abstracta `BaseTool` que tenga `name` y `description`; decide cuál se mantiene.
+
 ## 5. Evidencia de Entornos de Desarrollo
 
 Crea `docs/informe-refactorizacion.md`, `docs/revision-codigo.md` y `docs/registro-patron.md`. Incluye antes/después, prueba, revisión y decisión razonada sobre patrón.
@@ -70,6 +84,8 @@ Crea `docs/informe-refactorizacion.md`, `docs/revision-codigo.md` y `docs/regist
 | Usar patrón porque sí | No sabe explicar problema | Conectar patrón con if/else creciente |
 | Demasiadas clases | Arquitectura no defendible | Mantener Tool simple |
 | No probar tras refactorizar | Comandos rotos | Prueba mínima ayuda/estado/salir |
+| Forzar herencia | Jerarquía artificial | Comparar con interfaz/composición y elegir lo más simple |
+| No usar @Override | Errores pasan desapercibidos | Marcar métodos implementados o sobrescritos |
 
 ## 7. Preguntas de repaso
 
@@ -77,6 +93,9 @@ Crea `docs/informe-refactorizacion.md`, `docs/revision-codigo.md` y `docs/regist
 2. ¿Qué problema resuelve Command simplificado?
 3. ¿Qué es una interfaz?
 4. ¿Qué prueba demuestra extensibilidad?
+5. ¿Qué diferencia hay entre interfaz y clase abstracta?
+6. ¿Qué aporta `@Override`?
+7. ¿Cuándo usarías un `enum`?
 
 ## 8. Para tu portfolio
 
@@ -97,3 +116,5 @@ Uso de IA, si lo hubo, y cómo lo validé:
 Los patrones de diseño no aparecen al principio del curso porque antes serían una receta sin contexto. En H5 ya has visto el problema: cada comando nuevo puede hacer crecer `Agent`. Ahí tiene sentido hablar de una idea parecida a Command: convertir acciones en objetos con una forma común.
 
 Caso de estudio: añade `CourseTool`. Si solo creas una clase y la registras en una lista, has reducido el impacto del cambio. Si tienes que modificar muchas condiciones en muchos sitios, tu diseño aún no es tan extensible. Defiende el patrón con una frase sencilla: “cada herramienta encapsula una acción ejecutable”.
+
+Caso de estudio de refuerzo: crea `docs/refuerzo-poo-avanzada-h5.md`. Incluye una pequeña comparación entre `interface Tool` y `BaseTool abstracta`. Si descartas la clase abstracta, la evidencia sigue siendo válida si explicas técnicamente el motivo.

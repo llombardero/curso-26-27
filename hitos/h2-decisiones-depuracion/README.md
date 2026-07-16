@@ -59,14 +59,21 @@ Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias
 - for
 - condición de salida
 - bucle infinito
+- break/continue si procede
 - pruebas manuales
 - error de compilación
 - error lógico
 - eficiencia básica
+
+Refuerzo obligatorio de cobertura:
+
+```text
+Antes de cerrar H2 debe existir una comparación breve entre while, do-while y for, aunque el menú principal se mantenga con while.
+También debe aparecer una explicación inicial de eficiencia en bucles.
+```
 
 Criterio docente de cierre:
 
 - El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
 - Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
 - La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
-
