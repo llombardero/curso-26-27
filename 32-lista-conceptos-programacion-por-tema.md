@@ -1606,8 +1606,8 @@ Distribución final:
 | H1-H2 | Fundamentos, variables, tipos, entrada/salida, condiciones, bucles, switch, depuración y eficiencia básica. |
 | H3 | Colecciones, listas, recorridos, mutabilidad, arrays, Set y Map como ampliaciones. |
 | H4 | Clases, objetos, métodos, constructores, referencias, diagramas y responsabilidades. |
-| H5 | Tests, TDD, interfaces, polimorfismo, clean code y Command simplificado. |
-| H6 | Excepciones, invariantes, persistencia, logs y repositorio como idea inicial. |
+| H5 | Tests, TDD, interfaces, polimorfismo, clean code, Command simplificado y laboratorio técnico de Tema 6: herencia, `super`, `protected`, package-private, `Object`, `equals`/`hashCode`, `Comparable`, `instanceof`, clases abstractas y reconocimiento de clases anónimas/finales/selladas. |
+| H6 | Excepciones propias/checked/runtime, `throws`, invariantes, persistencia, logs y repositorio como idea inicial. |
 | H7 | Records/enums, abstracción, Strategy opcional, Optional, streams, funciones puras e IA responsable. |
 | HF | Cierre y mejora: JavaFX, eventos, MVC, arquitectura hexagonal, repositorios, CRUD, transacciones y defensa global. |
 

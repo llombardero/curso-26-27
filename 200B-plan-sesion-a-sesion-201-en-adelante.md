@@ -869,9 +869,9 @@ Este refuerzo se realiza como laboratorio técnico. Solo se incorpora al proyect
 |---|---|
 | Hito | H5 |
 | Foco | Trabajar conceptos importantes de los temas 5 y 6 que no siempre aparecen en MiniJarvis mínimo. |
-| Explicar | `enum`, `record`, `@Override`, `toString`, ordenación con `Comparable` o `Comparator`, clase abstracta, herencia, `super` y `protected`. |
-| Actividad | Crear `enum CommandType`, valorar un `record CommandResult`, añadir `@Override` en herramientas, implementar `toString` en una clase de dominio y comparar `interface Tool` con una clase abstracta `BaseTool`. |
-| Evidencia | `docs/refuerzo-poo-avanzada-h5.md` con código, decisión de qué se mantiene y qué se descarta, y justificación de composición/interfaz frente a herencia. |
+| Explicar | `enum`, `record`, `@Override`, `toString`, `equals`, `hashCode`, `instanceof`, ordenación con `Comparable` o `Comparator`, clase abstracta, herencia, `super`, `protected`, package-private, métodos `default`/privados en interfaces y reconocimiento de clases anónimas/finales/selladas como ampliación. |
+| Actividad | Crear `enum CommandType`, valorar un `record CommandResult`, añadir `@Override` en herramientas, implementar `toString` y una comparación `equals`/`hashCode` en una clase de dominio, ordenar herramientas por nombre y comparar `interface Tool` con una clase abstracta `BaseTool`. Analizar un microejemplo de `instanceof` y justificar por qué se prefiere polimorfismo cuando sea posible. |
+| Evidencia | `docs/refuerzo-poo-avanzada-h5.md` con código, pruebas o salidas, decisión de qué se mantiene y qué se descarta, y justificación de composición/interfaz frente a herencia. Debe nombrar explícitamente los conceptos del Tema 6 trabajados y cuáles quedan como ampliación reconocida. |
 | Cierre | Pregunta: ¿por qué no siempre conviene usar herencia aunque sepamos programarla? |
 
 ### Sesión 268 — Git profesional I: commits y ramas

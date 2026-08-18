@@ -275,8 +275,8 @@ Después de revisar `32-lista-conceptos-programacion-por-tema.md`, los hitos Min
 | H2 | Temas 1 y 3: condiciones, switch, bucles, depuración y eficiencia básica. |
 | H3 | Tema 4: colecciones, listas, recorridos, arrays, Set y Map como ampliación. |
 | H4 | Temas 2 y 5: clases, objetos, constructores, métodos, referencias y diagramas. |
-| H5 | Temas 5 y 6: tests, TDD, interfaces, polimorfismo y Command simplificado. |
-| H6 | Temas 5, 6 y puente a 8: excepciones, invariantes, persistencia, logs y repositorio como idea. |
+| H5 | Temas 5 y 6: tests, TDD, interfaces, polimorfismo, Command simplificado y laboratorio técnico de herencia, Object, Comparable, `instanceof`, clases abstractas y visibilidad. |
+| H6 | Temas 5, 6 y puente a 8: excepciones propias/checked/runtime, `throws`, invariantes, persistencia, logs y repositorio como idea. |
 | H7 | Temas 5, 6 y 7: records/enums, abstracción, Strategy opcional, Optional, streams y funciones puras. |
 | HF | Repaso Temas 1-8: defensa, recuperación y mejora opcional con JavaFX, MVC, arquitectura hexagonal, repositorios, CRUD y transacciones. |
 

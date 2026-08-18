@@ -135,6 +135,20 @@ Importante:
 Si el grupo no está preparado, se puede hablar de “herramientas/comandos separables” sin exigir terminología formal de patrón.
 ```
 
+### Laboratorio técnico de cobertura Tema 6
+
+Para que el Tema 6 no quede reducido solo a interfaces y Command, H5 incluye un laboratorio breve, evaluable por evidencia pero no necesariamente incorporado completo al producto final. Debe trabajar:
+
+- comparación entre interfaz, clase abstracta, herencia y composición;
+- `@Override`, `toString`, `equals` y `hashCode` en ejemplos pequeños;
+- `Comparable`/`compareTo` o `Comparator` para ordenar herramientas o comandos;
+- `instanceof` como contraste frente a una solución polimórfica;
+- `protected`, `super` y package-private dentro de un ejemplo controlado;
+- métodos `default` y métodos privados en interfaces como lectura o microejemplo;
+- clases anónimas, clases finales y clases selladas solo como reconocimiento/ampliación si no aportan al diseño.
+
+La decisión docente clave es esta: se trabajan los conceptos para poder reconocerlos y defenderlos, pero solo se integran en MiniJarvis si simplifican el diseño.
+
 ---
 
 ## 7. Entregables H5

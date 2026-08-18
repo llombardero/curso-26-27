@@ -2121,11 +2121,17 @@ Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias
 - interfaz
 - implementación
 - método default como ampliación
+- métodos privados en interfaces como lectura guiada
 - excepciones
 - recursividad como comparación
 - métodos estáticos
 - records como ampliación
 - enum
+- `equals`, `hashCode`, `toString` y `@Override`
+- `instanceof` como contraste frente a polimorfismo
+- `Comparable` / `compareTo` o `Comparator` para ordenación sencilla
+- herencia, clase abstracta, `super`, `protected` y package-private como laboratorio comparativo
+- clases anónimas, clases finales y clases selladas como reconocimiento/ampliación
 - polimorfismo por interfaz
 - Command simplificado
 - clean code

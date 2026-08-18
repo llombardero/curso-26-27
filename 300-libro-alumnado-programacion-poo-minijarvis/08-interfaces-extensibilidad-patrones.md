@@ -73,6 +73,17 @@ Refuerzo de cobertura de los temas 5 y 6:
 - Ordena herramientas por nombre usando `Comparable` o `Comparator`, si el grupo está preparado.
 - Compara `interface Tool` con una clase abstracta `BaseTool` que tenga `name` y `description`; decide cuál se mantiene.
 
+Laboratorio obligatorio de cobertura del Tema 6, sin convertirlo todo en arquitectura del proyecto:
+
+| Concepto Tema 6 | Tratamiento recomendado en H5 | Evidencia mínima |
+|---|---|---|
+| `equals` y `hashCode` | Demostración con un objeto sencillo de dominio o con duplicados en una colección. | Explicar por qué dos objetos aparentemente iguales pueden no compararse bien. |
+| `instanceof` | Caso de lectura y comparación con polimorfismo. | Justificar por qué se evita abusar de comprobaciones de tipo. |
+| `Comparable` / `compareTo` | Ordenar herramientas por nombre o comparar comandos. | Prueba o captura de ordenación. |
+| `protected`, `super` y package-private | Comparar una `BaseTool` abstracta con `interface Tool`. | Decisión escrita: herencia, interfaz o composición. |
+| Métodos `default` y métodos privados en interfaces | Lectura guiada o microejemplo si el grupo está preparado. | Explicar cuándo ayudan y cuándo complican. |
+| Clases anónimas, clases finales y clases selladas | Reconocimiento como ampliación, no exigencia de producto. | Saber identificarlas y decidir no usarlas si no aportan claridad. |
+
 ## 5. Evidencia de Entornos de Desarrollo
 
 Crea `docs/informe-refactorizacion.md`, `docs/revision-codigo.md` y `docs/registro-patron.md`. Incluye antes/después, prueba, revisión y decisión razonada sobre patrón.
