@@ -1,5 +1,38 @@
 # Guía docente completa — Segunda sesión: Torre de papel y Scrum de aula
 
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
+
+## Ciclo HEXA obligatorio del reto H0
+
+**Reto del hito:** Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis.
+
+La secuencia de sesiones constituye un único reto de hito. Las actividades HEXA breves de cada sesión son microciclos, pero no sustituyen este ciclo completo del hito.
+
+| Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
+|---|---|---|---|
+| **H — Hecho / reto** | ¿Qué problema real debemos resolver y con qué límites? | Presenta contexto, producto, restricciones, criterios y diagnóstico; no da todavía la solución completa. | Reformula el reto, identifica lo que sabe/no sabe y deja una ficha inicial con criterios de éxito. |
+| **E — Exploración** | ¿Qué alternativas, hipótesis o pruebas iniciales ayudan a entenderlo? | Propone preguntas, ejemplos mínimos, casos y límites seguros. | Observa, compara, predice, prueba alternativas y registra decisiones o bloqueos. |
+| **X — eXplicación** | ¿Qué conceptos permiten explicar lo observado y decidir con criterio? | Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes, seguridad y criterios de calidad. | Explica con palabras propias, conecta teoría y exploración y corrige sus hipótesis. |
+| **A — Aplicación** | ¿Cómo construimos, comprobamos, documentamos y defendemos la solución? | Desbloquea, exige pruebas y comprueba autoría y transferencia. | Implementa el producto, lo prueba, documenta evidencias, realiza review/defensa y propone mejora. |
+
+### Temporalización mínima explícita
+
+Primera sesión de 135 min para presentar el curso, introducir Scrum y realizar el diagnóstico; sesión siguiente de 90 min para aplicar Scrum en la torre. El resto de H0 se dedica a review, retrospectiva, contrato y transferencia a MiniJarvis. Los tiempos de fases se reservan dentro de las sesiones indicadas; los rangos pueden solaparse cuando una sesión cierra una fase y abre la siguiente.
+
+| Fase | Reserva y momento recomendado | Puerta de salida |
+|---|---|---|
+| H | Presentación del curso y reto H0; 35 min de la primera sesión | Reto reformulado, límites y criterio de éxito visibles. |
+| E | Scrum mínimo, autoevaluación y microprueba diagnóstica; 50 min de la primera sesión | Hipótesis, comparación, prueba inicial o decisiones justificadas. |
+| X | Explicación de sprint, backlog, roles, prueba, review y retrospectiva; 30 min integrados | Explicación individual breve y conexión con el producto. |
+| A | Equipos provisionales, torre, prueba, review, retrospectiva y transferencia; 90 min más cierre de H0 | Producto comprobado, documentación, defensa y mejora. |
+
+**Expediente HEXA mínimo del hito:** ficha inicial, autoevaluación privada, microprueba, criterio de formación de equipos, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual.
+
+Regla de avance: puede haber prototipos durante E, pero no se considera completada A si faltan evidencias de H, E o X. Si una fase falta, se recupera esa fase y su evidencia; no se repite automáticamente todo el hito.
+
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
+
+
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
 Versión: cierre curricular 1.0 — julio 2026
@@ -12,7 +45,7 @@ Este documento está diseñado para poder impartir la segunda sesión sin abrir 
 
 ## 1. Propósito de la sesión
 
-Esta sesión inicia el hito H0 mediante una simulación práctica de trabajo ágil.
+Esta sesión continúa H0: aplica Scrum con los equipos provisionales formados mediante el diagnóstico de la sesión anterior.
 
 El alumnado construirá una torre de papel siguiendo una dinámica simplificada de Scrum.
 
@@ -116,27 +149,21 @@ Se puede hacer solo con papel, pero la actividad será más difícil. En ese cas
 
 ## 5. Preparación docente antes de clase
 
-Antes de empezar, decide:
+Antes de empezar:
 
 ```text
-1. Tamaño de equipos: 3 o 4 personas.
-2. Material exacto permitido.
-3. Duración del sprint de construcción.
-4. Si se medirá altura o solo estabilidad.
-5. Cómo recogerás evidencias: papel, foto, cuaderno o pizarra.
+[ ] Revisar los equipos provisionales creados con autoevaluación, microprueba y observación.
+[ ] Confirmar asistencia real y resolver ausencias manteniendo equipos de 3 o 4.
+[ ] Evitar crear un equipo de 5 o dejar a una persona sola por comodidad.
+[ ] Preparar la responsabilidad inicial de cada integrante; los roles rotarán.
+[ ] No mostrar puntuaciones ni perfiles individuales.
+[ ] Entregar exactamente los mismos materiales a todos los equipos.
+[ ] Preparar cronómetro, regla y matriz de observación.
 ```
 
-Recomendación para primera vez:
+Si falta una persona: un equipo de cuatro puede quedar en tres. Si el reparto genera un equipo de dos, redistribuir una persona de un equipo de cuatro para obtener dos equipos de tres. No repetir el diagnóstico completo.
 
-```text
-Equipos de 4.
-10 hojas + cinta limitada.
-Sprint de construcción de 20 minutos.
-Altura + estabilidad de 10 segundos.
-Review breve y retrospectiva obligatoria.
-```
-
----
+La torre funciona también como validación: la retrospectiva puede confirmar el equipo o justificar un ajuste pedagógico posterior.
 
 ## 6. Vocabulario mínimo que debes explicar tú
 
@@ -219,7 +246,7 @@ La teoría vendrá después, conectada a lo que hayan vivido.
 |---|---:|---|
 | 1. Entrada y conexión con sesión anterior | 5 min | Sentido de continuidad. |
 | 2. Presentación del reto | 10 min | Reglas entendidas. |
-| 3. Formación de equipos y roles | 10 min | Equipo y roles asignados. |
+| 3. Activación de equipos y responsabilidades | 10 min | Equipo confirmado y aportaciones declaradas. |
 | 4. Backlog y planificación | 15 min | Lista inicial de tareas. |
 | 5. Sprint de construcción | 20 min | Torre/prototipo. |
 | 6. Review y medición | 10 min | Resultado visible. |
@@ -316,57 +343,27 @@ También cómo trabajamos.
 
 ---
 
-## 11. Fase 3 — Formación de equipos y roles
+## 11. Fase 3 — Activación de equipos y responsabilidades
 
-Tiempo:
+Tiempo: 10 minutos. Los equipos ya llegan preparados; no se forman por amistad en este momento.
 
-```text
-10 minutos
-```
+1. Anunciar la composición sin puntuaciones.
+2. Recordar que es provisional hasta la retrospectiva.
+3. Asignar responsabilidades iniciales:
+   - facilitación y tiempo;
+   - backlog y organización;
+   - prototipo y construcción;
+   - calidad, evidencias y defensa.
+4. En equipos de tres, combinar backlog con evidencias o facilitación con tiempo.
+5. Cada integrante completa oralmente: “Hoy aportaré...” y “Hoy practicaré...”.
 
-### Organización
-
-Equipos recomendados:
-
-```text
-3-4 personas
-```
-
-### Roles
-
-| Rol | Responsabilidad |
-|---|---|
-| Facilitador/a | Cuida tiempos, turnos de palabra y bloqueos. |
-| Responsable de backlog | Escribe tareas y actualiza estados. |
-| Responsable técnico/a | Coordina decisiones de construcción y pruebas de estabilidad. |
-| Responsable de documentación y defensa | Recoge evidencias y prepara explicación final. |
-
-En equipos de 3, una persona puede asumir dos responsabilidades.
-
-### Guion docente literal
+Guion:
 
 ```text
-Asignar un rol no significa mandar. Significa cuidar una responsabilidad.
-
-Si sois responsables de backlog, no mandáis: cuidáis que las tareas estén claras.
-
-Si sois facilitadores, no mandáis: cuidáis que el equipo avance y que todos participen.
+Los equipos se han preparado para combinar habilidades y apoyos. Ningún resultado os encasilla. Todas las personas diseñan, construyen, prueban y explican; la responsabilidad indica qué debéis vigilar especialmente.
 ```
 
-### Producto de esta fase
-
-Cada equipo completa:
-
-```text
-Nombre del equipo:
-Integrantes:
-Facilitador/a:
-Responsable de backlog:
-Responsable técnico/a:
-Responsable de documentación y defensa:
-```
-
----
+Producto: nombres, responsabilidad inicial, fortaleza aportada y habilidad que se practicará. No adjuntar las puntuaciones del cuestionario.
 
 ## 12. Fase 4 — Backlog y planificación
 

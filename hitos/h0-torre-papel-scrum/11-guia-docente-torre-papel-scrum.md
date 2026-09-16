@@ -1,5 +1,38 @@
 # Guía docente — Torre de papel y Scrum de aula
 
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
+
+## Ciclo HEXA obligatorio del reto H0
+
+**Reto del hito:** Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis.
+
+El profesorado debe hacer visible el avance de fase, proporcionar instrucción directa en X y no reducir HEXA a una etiqueta.
+
+| Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
+|---|---|---|---|
+| **H — Hecho / reto** | ¿Qué problema real debemos resolver y con qué límites? | Presenta contexto, producto, restricciones, criterios y diagnóstico; no da todavía la solución completa. | Reformula el reto, identifica lo que sabe/no sabe y deja una ficha inicial con criterios de éxito. |
+| **E — Exploración** | ¿Qué alternativas, hipótesis o pruebas iniciales ayudan a entenderlo? | Propone preguntas, ejemplos mínimos, casos y límites seguros. | Observa, compara, predice, prueba alternativas y registra decisiones o bloqueos. |
+| **X — eXplicación** | ¿Qué conceptos permiten explicar lo observado y decidir con criterio? | Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes, seguridad y criterios de calidad. | Explica con palabras propias, conecta teoría y exploración y corrige sus hipótesis. |
+| **A — Aplicación** | ¿Cómo construimos, comprobamos, documentamos y defendemos la solución? | Desbloquea, exige pruebas y comprueba autoría y transferencia. | Implementa el producto, lo prueba, documenta evidencias, realiza review/defensa y propone mejora. |
+
+### Temporalización mínima explícita
+
+Primera sesión de 135 min para presentar el curso, introducir Scrum y realizar el diagnóstico; sesión siguiente de 90 min para aplicar Scrum en la torre. El resto de H0 se dedica a review, retrospectiva, contrato y transferencia a MiniJarvis. Los tiempos de fases se reservan dentro de las sesiones indicadas; los rangos pueden solaparse cuando una sesión cierra una fase y abre la siguiente.
+
+| Fase | Reserva y momento recomendado | Puerta de salida |
+|---|---|---|
+| H | Presentación del curso y reto H0; 35 min de la primera sesión | Reto reformulado, límites y criterio de éxito visibles. |
+| E | Scrum mínimo, autoevaluación y microprueba diagnóstica; 50 min de la primera sesión | Hipótesis, comparación, prueba inicial o decisiones justificadas. |
+| X | Explicación de sprint, backlog, roles, prueba, review y retrospectiva; 30 min integrados | Explicación individual breve y conexión con el producto. |
+| A | Equipos provisionales, torre, prueba, review, retrospectiva y transferencia; 90 min más cierre de H0 | Producto comprobado, documentación, defensa y mejora. |
+
+**Expediente HEXA mínimo del hito:** ficha inicial, autoevaluación privada, microprueba, criterio de formación de equipos, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual.
+
+Regla de avance: puede haber prototipos durante E, pero no se considera completada A si faltan evidencias de H, E o X. Si una fase falta, se recupera esa fase y su evidencia; no se repite automáticamente todo el hito.
+
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
+
+
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
 Versión: cierre curricular 1.0 — julio 2026
@@ -10,10 +43,23 @@ Documentos relacionados:
 
 - `03-primera-semana-scrum-torre-papel.md`
 - `10-primera-sesion-presentacion-proyecto.md`
+- `10A-cuestionario-diagnostico-habilidades-equipos-scrum.md`
 - `../../09-presentacion-alumnado-proyecto-agente-ia.md`
 - `../../07-plantillas-entregables.md`
 
 ---
+
+<!-- EQUIPOS-DIAGNOSTICO-PREVIO:START -->
+
+## Equipos preparados en la sesión anterior
+
+La torre se realiza con equipos provisionales de tres o cuatro formados mediante autoevaluación, microprueba, observación y necesidades de apoyo. No se forman por amistad al comenzar la construcción y no se publican puntuaciones.
+
+Antes de repartir materiales, confirmar asistencia. Un equipo de cuatro puede quedar en tres; si aparece un equipo de dos, mover una persona de un equipo de cuatro para crear dos equipos de tres. Los roles son responsabilidades iniciales, no jerarquías, y deben rotar.
+
+La retrospectiva de la torre incluye una decisión: mantener el equipo, ajustar roles o proponer un cambio pedagógico concreto y respetuoso.
+
+<!-- EQUIPOS-DIAGNOSTICO-PREVIO:END -->
 
 ## 1. Propósito de la actividad
 
@@ -92,7 +138,7 @@ Puede realizarse en:
 | Fase | Tiempo | Producto |
 |---|---:|---|
 | 1. Presentación del reto | 10 min | Reglas entendidas. |
-| 2. Formación de equipos y roles | 10 min | Equipo y roles asignados. |
+| 2. Activación de equipos y responsabilidades | 10 min | Equipo provisional confirmado, aportaciones declaradas y responsabilidades iniciales. |
 | 3. Backlog y planificación | 15 min | Tablero inicial. |
 | 4. Sprint de construcción | 20 min | Torre/prototipo. |
 | 5. Review y medición | 10 min | Resultado visible. |
@@ -228,7 +274,7 @@ No explicar Scrum en exceso todavía. Basta con vocabulario mínimo.
 
 ---
 
-### Fase 2 — Formación de equipos y roles
+### Fase 2 — Activación de equipos y responsabilidades
 
 Tiempo:
 
@@ -239,32 +285,36 @@ Tiempo:
 Instrucciones:
 
 ```text
-Formad equipos de 3 o 4 personas.
-Asignad estos roles:
-- facilitador/a;
-- responsable de backlog;
-- responsable técnico/a;
-- responsable de documentación y defensa.
+Reuníos con el equipo provisional anunciado por el profesorado.
+No comparéis puntuaciones del diagnóstico.
+Confirmad una responsabilidad inicial:
+- facilitación y tiempo;
+- backlog y organización;
+- prototipo y construcción;
+- calidad, documentación y defensa.
 
-Si sois 3, una persona puede asumir dos responsabilidades.
+Si sois 3, una persona puede combinar dos responsabilidades.
+Todas las personas pueden diseñar, construir, probar y explicar.
 ```
 
 Evidencia mínima:
 
-Cada equipo anota:
-
 ```text
 Nombre del equipo:
-Integrantes:
-Roles:
+Integrantes presentes:
+Responsabilidad inicial de cada persona:
+Hoy cada persona aportará:
+Hoy cada persona practicará:
+Ajuste realizado por ausencia, si existe:
 ```
 
 Observación docente:
 
-- quién asume liderazgo;
-- quién queda al margen;
-- si hay reparto equilibrado;
-- si aparecen conflictos iniciales.
+- si el comportamiento confirma o corrige la observación diagnóstica;
+- si alguien queda al margen y qué apoyo concreto lo evita;
+- si las responsabilidades se convierten indebidamente en jerarquía;
+- si el reparto permite participación real;
+- si aparece un motivo pedagógico para revisar el equipo en la retrospectiva.
 
 ---
 

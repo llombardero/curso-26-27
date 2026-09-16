@@ -42,6 +42,10 @@ Criterio del modelo:
 
 ## 3. H0 — Bootcamp Scrum: torre de papel
 
+### Restricción sobre el diagnóstico inicial
+
+No se publica un cuestionario de Laura cumplimentado ni una “combinación correcta” de equipos antes del intento propio. Las autoevaluaciones y la matriz docente son privadas y no calificables. El ejemplo de Laura se muestra solo después de que el alumnado haya realizado el diagnóstico y la torre, y modela reflexión sobre proceso, no una personalidad ni una puntuación ideal.
+
 Laura entregaría, como parte del Equipo Ada:
 
 ```text

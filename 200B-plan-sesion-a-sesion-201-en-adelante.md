@@ -52,60 +52,62 @@ No avanzar a la siguiente sesión si la evidencia mínima de la sesión actual n
 
 ## 3. Sesiones H0 — Bootcamp Scrum y torre de papel
 
-### Sesión 201 — Presentación del curso y narrativa MiniJarvis
+### Sesión 201 — Curso, narrativa MiniJarvis y reto H0
 
 | Campo | Desarrollo |
 |---|---|
 | Hito | H0 |
-| Foco | Entender que el curso se trabajará por proyecto, hitos, evidencias y defensa. |
-| Explicar | MiniJarvis no será una IA completa desde el primer día; será un programa que crecerá por versiones. |
-| Actividad | Ideas previas: qué creen que es un agente, qué debería hacer y qué riesgos tiene usar IA. |
-| Evidencia | Ticket inicial individual con expectativas, miedos y conocimientos previos. |
-| Cierre | Pregunta: ¿qué significa que una entrega sea defendible? |
+| Foco | Comprender MiniJarvis y que H0 diseñará, probará y revisará un equipo mediante la torre de papel. |
+| Explicar | Proyecto por hitos, evidencias, defensa, IA responsable y secuencia HADA → equipo → funciones → torre → transferencia. |
+| Actividad | Reformular el proyecto, explicar el propósito de la torre y clasificar usos de IA. |
+| Evidencia | Ticket, mapa de H0 y criterio de evidencia defendible. |
+| Cierre | ¿Qué debe acompañar al producto para demostrar aprendizaje? |
 
-### Sesión 202 — Reglas de trabajo, IA responsable y evidencias
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H0 |
-| Foco | Fijar normas del curso desde el inicio. |
-| Explicar | Semáforo IA: verde, amarillo y rojo. Diferencia entre ayuda, copia y autoría oculta. |
-| Actividad | Clasificar ejemplos de uso de IA en verde, amarillo o rojo. |
-| Evidencia | Mini registro de IA simulado con objetivo, prompt, resultado, verificación y aprendizaje. |
-| Cierre | Pregunta: ¿qué uso de IA invalidaría una evidencia? |
-
-### Sesión 203 — Scrum vivido: preparación de la torre de papel
+### Sesión 202 — Scrum mínimo y perfil HADA
 
 | Campo | Desarrollo |
 |---|---|
 | Hito | H0 |
-| Foco | Formar equipos, roles y backlog inicial. |
-| Explicar | Producto, sprint, backlog, rol, tarea, criterio de terminado y bloqueo. |
-| Actividad | Crear equipos de 3-4, asignar roles y redactar al menos 5 tareas para construir la torre. |
-| Evidencia | Tablero inicial del equipo y contrato breve de trabajo. |
-| Cierre | Revisión rápida del tablero: ninguna tarea debe ser ambigua. |
+| Foco | Comprender Scrum mínimo y formular una hipótesis individual de contribución. |
+| Explicar | Sprint, backlog, bloqueo, prueba, review, retrospectiva; perfiles Gestor, Colaborador, Desarrollador y Analista. |
+| Actividad | Completar HADA usando 4–3–2–1 por fila, sumar columnas y representar el perfil. |
+| Evidencia | Glosario, cuatro sumas comprobadas, diagrama y ticket privado. |
+| Cierre | ¿Por qué HADA no asigna una función permanente? |
 
-### Sesión 204 — Sprint de torre de papel, review y retrospectiva
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H0 |
-| Foco | Experimentar Scrum en un reto físico. |
-| Explicar | Review frente a retrospectiva: revisar producto no es lo mismo que revisar proceso. |
-| Actividad | Construcción de torre, medición, review y retrospectiva. |
-| Evidencia | Foto o descripción de torre, tablero final y retrospectiva. |
-| Cierre | Cada equipo formula una mejora concreta para el siguiente sprint. |
-
-### Sesión 205 — Transferencia de Scrum a MiniJarvis
+### Sesión 203 — Composición HADA y funciones provisionales
 
 | Campo | Desarrollo |
 |---|---|
 | Hito | H0 |
-| Foco | Traducir la experiencia de la torre al proyecto software. |
-| Explicar | Incremento funcional, demo, prueba, documentación y defensa. |
-| Actividad | Crear primer tablero general de MiniJarvis y acordar normas de equipo. |
-| Evidencia | Contrato de equipo definitivo y tablero base. |
-| Cierre | Pregunta: ¿qué aprendimos de la torre que servirá al programar? |
+| Foco | Combinar preferencias, compensar capacidades menos representadas y preparar el sprint. |
+| Explicar | Diferencia entre perfil, responsabilidad Scrum y función operativa; privacidad y rotación. |
+| Actividad | Formar equipos provisionales, analizar composición, acordar funciones, regla de participación, backlog y definición de terminado. |
+| Evidencia | Mapa HADA sin puntuaciones, funciones justificadas, backlog y cierre individual. |
+| Cierre | ¿Qué función compensa qué necesidad y qué conducta permitirá comprobarla? |
+
+Los resultados individuales no tienen nota, no son psicométricos y no se publican. Los equipos se preparan entre S202 y S203 combinando HADA, accesibilidad, asistencia y criterio docente. La torre contrastará la hipótesis antes de consolidar acuerdos.
+
+### Sesión 204 — Dos ciclos de torre, prueba, review y retrospectiva
+
+| Campo | Desarrollo |
+|---|---|
+| Hito | H0 |
+| Foco | Aplicar Scrum y contrastar composición y funciones mediante conductas observables. |
+| Explicar | Producto frente a proceso; definición de terminado; review frente a retrospectiva; adaptación. |
+| Actividad | Ejecutar dos ciclos: backlog, construcción, prueba, inspección, mejora, nueva prueba y retrospectiva HADA. |
+| Evidencia | Torre, tablero inicial/adaptado, dos pruebas, mejora aplicada, aportación individual y revisión de funciones. |
+| Cierre | ¿Qué evidencia justifica mantener o revisar una función? |
+
+### Sesión 205 — Transferencia a MiniJarvis y contrato de equipo
+
+| Campo | Desarrollo |
+|---|---|
+| Hito | H0 |
+| Foco | Convertir evidencias de la torre en decisiones y reglas para el proyecto software. |
+| Explicar | Contraste HADA-conducta, funciones educativas, rotación, contrato observable y criterios de aceptación. |
+| Actividad | Revisar composición y funciones, crear contrato, plan de rotación y primer backlog de MiniJarvis. |
+| Evidencia | Decisión razonada, contrato, funciones, rotación, backlog y cierre individual. |
+| Cierre | ¿Qué conducta mantendrás y qué función diferente practicarás en MiniJarvis? |
 
 ---
 

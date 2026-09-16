@@ -1,5 +1,57 @@
 # H0 — Torre de papel y Scrum
 
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
+
+## Ciclo HEXA obligatorio del reto H0
+
+**Reto del hito:** Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis.
+
+Debes conservar evidencias de las cuatro fases. Entregar solo el producto final no demuestra el ciclo completo.
+
+| Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
+|---|---|---|---|
+| **H — Hecho / reto** | ¿Qué problema real debemos resolver y con qué límites? | Presenta contexto, producto, restricciones, criterios y diagnóstico; no da todavía la solución completa. | Reformula el reto, identifica lo que sabe/no sabe y deja una ficha inicial con criterios de éxito. |
+| **E — Exploración** | ¿Qué alternativas, hipótesis o pruebas iniciales ayudan a entenderlo? | Propone preguntas, ejemplos mínimos, casos y límites seguros. | Observa, compara, predice, prueba alternativas y registra decisiones o bloqueos. |
+| **X — eXplicación** | ¿Qué conceptos permiten explicar lo observado y decidir con criterio? | Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes, seguridad y criterios de calidad. | Explica con palabras propias, conecta teoría y exploración y corrige sus hipótesis. |
+| **A — Aplicación** | ¿Cómo construimos, comprobamos, documentamos y defendemos la solución? | Desbloquea, exige pruebas y comprueba autoría y transferencia. | Implementa el producto, lo prueba, documenta evidencias, realiza review/defensa y propone mejora. |
+
+### Temporalización mínima explícita
+
+Primera sesión de 135 min para presentar el curso, introducir Scrum y realizar el diagnóstico; sesión siguiente de 90 min para aplicar Scrum en la torre. El resto de H0 se dedica a review, retrospectiva, contrato y transferencia a MiniJarvis. Los tiempos de fases se reservan dentro de las sesiones indicadas; los rangos pueden solaparse cuando una sesión cierra una fase y abre la siguiente.
+
+| Fase | Reserva y momento recomendado | Puerta de salida |
+|---|---|---|
+| H | Presentación del curso y reto H0; 35 min de la primera sesión | Reto reformulado, límites y criterio de éxito visibles. |
+| E | Scrum mínimo, autoevaluación y microprueba diagnóstica; 50 min de la primera sesión | Hipótesis, comparación, prueba inicial o decisiones justificadas. |
+| X | Explicación de sprint, backlog, roles, prueba, review y retrospectiva; 30 min integrados | Explicación individual breve y conexión con el producto. |
+| A | Equipos provisionales, torre, prueba, review, retrospectiva y transferencia; 90 min más cierre de H0 | Producto comprobado, documentación, defensa y mejora. |
+
+**Expediente HEXA mínimo del hito:** ficha inicial, autoevaluación privada, microprueba, criterio de formación de equipos, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual.
+
+Regla de avance: puede haber prototipos durante E, pero no se considera completada A si faltan evidencias de H, E o X. Si una fase falta, se recupera esa fase y su evidencia; no se repite automáticamente todo el hito.
+
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
+
+
+<!-- EQUIPOS-PROVISIONALES-ALUMNADO:START -->
+
+## Antes de construir: tu equipo es provisional
+
+El profesorado ha preparado equipos de tres o cuatro usando varias evidencias del diagnóstico. No existe una puntuación que determine quién eres ni un rol permanente.
+
+Antes de empezar completa:
+
+```text
+Hoy puedo aportar...
+Hoy quiero practicar...
+Mi responsabilidad inicial es...
+Si tengo un bloqueo, lo comunicaré diciendo...
+```
+
+Todas las personas pueden diseñar, construir, comprobar y explicar. La responsabilidad indica qué debe vigilar especialmente cada integrante. Al final, la retrospectiva permitirá revisar roles y funcionamiento del equipo sin culpar ni comparar puntuaciones.
+
+<!-- EQUIPOS-PROVISIONALES-ALUMNADO:END -->
+
 ## Ficha para el alumnado
 
 Curso: 1.º DAW — Programación + Entornos de Desarrollo

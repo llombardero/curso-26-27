@@ -1,5 +1,39 @@
 # Libro del alumnado — Programación y Entornos con MiniJarvis
 
+<!-- HEXA-POLITICA-TODOS-HITOS:START -->
+
+## Política obligatoria: un ciclo HEXA completo en cada hito
+
+Cada hito de MiniJarvis se considera un reto didáctico completo. Por tanto, **H0, H1, H2, H3, H4, H5, H6, H7 y HF deben recorrer y evidenciar las cuatro fases H–E–X–A**. No se aplica HEXA una sola vez al proyecto anual ni se da por cumplido mediante actividades aisladas.
+
+| Fase | Función obligatoria en cada hito | Evidencia mínima |
+|---|---|---|
+| H — Hecho / reto | Situar el problema, producto, límites y criterios de éxito. | Reformulación del reto y diagnóstico inicial. |
+| E — Exploración | Comparar, predecir, formular hipótesis y realizar pruebas iniciales guiadas. | Registro de alternativas, hipótesis, prueba o decisión. |
+| X — eXplicación | Formalizar conceptos después de la exploración, con instrucción docente explícita. | Explicación individual conectada con el producto. |
+| A — Aplicación | Construir, probar, documentar, defender y mejorar. | Producto funcional o evidencia equivalente, pruebas, documentación y defensa/review. |
+
+La temporalización de cada hito debe reservar, como orientación, un 10–15 % para H, un 20–25 % para E, un 25–30 % para X y un 35–45 % para A. No son cuatro bloques rígidos: una sesión puede cerrar una fase y abrir la siguiente, pero ninguna puede quedar sin tiempo ni evidencia. Los cierres C1/C2 consolidan o recuperan fases; no sustituyen el ciclo del hito.
+
+### Trazabilidad por retos
+
+| Hito | Reto | Expediente HEXA mínimo |
+|---|---|---|
+| H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
+| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
+| H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
+| H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
+| H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
+| H5 | Resolver el crecimiento de comandos mediante refactorización segura, contratos simples y código extensible. | diagnóstico del problema, comparación de diseños, explicación de interfaz/Command, refactorización, herramienta nueva, revisión Git y defensa |
+| H6 | Conservar memoria e historial entre ejecuciones con ficheros, trazabilidad y tratamiento seguro de errores y datos. | problema reproducido, decisiones de ruta/formato, explicación de persistencia/excepciones/logs, código, prueba en dos ejecuciones, seguridad y defensa |
+| H7 | Integrar o simular una ayuda de IA con límites, seguridad, registro y validación humana. | caso de uso y riesgos, clasificación de prompts, explicación de seguridad/validación, simulación o integración segura, registros y defensa |
+| HF | Demostrar el aprendizaje del itinerario, localizar carencias y aplicar una mejora o recuperación basada en evidencias. | mapa de evidencias, selección razonada, explicación del progreso, portfolio, demo, defensa, recuperación y plan de mejora |
+
+Regla de evaluación: el producto final por sí solo no acredita el proceso. Si falta una fase, se identifica y recupera su evidencia específica.
+
+<!-- HEXA-POLITICA-TODOS-HITOS:END -->
+
+
 ## 1.º DAW — Curso 2026/2027
 
 Versión: cierre curricular 1.0 — julio 2026

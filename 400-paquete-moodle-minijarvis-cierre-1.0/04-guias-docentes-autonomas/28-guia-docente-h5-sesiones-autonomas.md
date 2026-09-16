@@ -1,5 +1,38 @@
 # Guía docente completa — H5 sesión a sesión
 
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
+
+## Ciclo HEXA obligatorio del reto H5
+
+**Reto del hito:** Resolver el crecimiento de comandos mediante refactorización segura, contratos simples y código extensible.
+
+La secuencia de sesiones constituye un único reto de hito. Las actividades HEXA breves de cada sesión son microciclos, pero no sustituyen este ciclo completo del hito.
+
+| Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
+|---|---|---|---|
+| **H — Hecho / reto** | ¿Qué problema real debemos resolver y con qué límites? | Presenta contexto, producto, restricciones, criterios y diagnóstico; no da todavía la solución completa. | Reformula el reto, identifica lo que sabe/no sabe y deja una ficha inicial con criterios de éxito. |
+| **E — Exploración** | ¿Qué alternativas, hipótesis o pruebas iniciales ayudan a entenderlo? | Propone preguntas, ejemplos mínimos, casos y límites seguros. | Observa, compara, predice, prueba alternativas y registra decisiones o bloqueos. |
+| **X — eXplicación** | ¿Qué conceptos permiten explicar lo observado y decidir con criterio? | Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes, seguridad y criterios de calidad. | Explica con palabras propias, conecta teoría y exploración y corrige sus hipótesis. |
+| **A — Aplicación** | ¿Cómo construimos, comprobamos, documentamos y defendemos la solución? | Desbloquea, exige pruebas y comprueba autoría y transferencia. | Implementa el producto, lo prueba, documenta evidencias, realiza review/defensa y propone mejora. |
+
+### Temporalización mínima explícita
+
+H5-S1–S10; 450 min mínimos en la guía autónoma. Los tiempos de fases se reservan dentro de las sesiones indicadas; los rangos pueden solaparse cuando una sesión cierra una fase y abre la siguiente.
+
+| Fase | Reserva y momento recomendado | Puerta de salida |
+|---|---|---|
+| H | H5-S1; 45 min | Reto reformulado, límites y criterio de éxito visibles. |
+| E | H5-S1–S3; 90 min integrados | Hipótesis, comparación, prueba inicial o decisiones justificadas. |
+| X | H5-S2–S4; 135 min integrados | Explicación individual breve y conexión con el producto. |
+| A | H5-S3–S10; 180 min integrados | Producto comprobado, documentación, defensa y mejora. |
+
+**Expediente HEXA mínimo del hito:** diagnóstico del problema, comparación de diseños, explicación de interfaz/Command, refactorización, herramienta nueva, revisión Git y defensa.
+
+Regla de avance: puede haber prototipos durante E, pero no se considera completada A si faltan evidencias de H, E o X. Si una fase falta, se recupera esa fase y su evidencia; no se repite automáticamente todo el hito.
+
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
+
+
 ## Agente extensible, clean code y patrones iniciales — MiniJarvis H5
 
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027

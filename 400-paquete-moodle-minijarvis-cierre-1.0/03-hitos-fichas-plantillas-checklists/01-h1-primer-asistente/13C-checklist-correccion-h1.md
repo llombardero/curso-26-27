@@ -1,5 +1,47 @@
 # Checklist de corrección — H1 Primer asistente básico
 
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
+
+## Ciclo HEXA obligatorio del reto H1
+
+**Reto del hito:** Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible.
+
+La corrección debe comprobar las cuatro fases por separado. La ausencia de una fase genera una evidencia incompleta que debe recuperarse.
+
+| Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
+|---|---|---|---|
+| **H — Hecho / reto** | ¿Qué problema real debemos resolver y con qué límites? | Presenta contexto, producto, restricciones, criterios y diagnóstico; no da todavía la solución completa. | Reformula el reto, identifica lo que sabe/no sabe y deja una ficha inicial con criterios de éxito. |
+| **E — Exploración** | ¿Qué alternativas, hipótesis o pruebas iniciales ayudan a entenderlo? | Propone preguntas, ejemplos mínimos, casos y límites seguros. | Observa, compara, predice, prueba alternativas y registra decisiones o bloqueos. |
+| **X — eXplicación** | ¿Qué conceptos permiten explicar lo observado y decidir con criterio? | Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes, seguridad y criterios de calidad. | Explica con palabras propias, conecta teoría y exploración y corrige sus hipótesis. |
+| **A — Aplicación** | ¿Cómo construimos, comprobamos, documentamos y defendemos la solución? | Desbloquea, exige pruebas y comprueba autoría y transferencia. | Implementa el producto, lo prueba, documenta evidencias, realiza review/defensa y propone mejora. |
+
+### Temporalización mínima explícita
+
+H1-S1–S7; 315 min mínimos en la guía autónoma. Los tiempos de fases se reservan dentro de las sesiones indicadas; los rangos pueden solaparse cuando una sesión cierra una fase y abre la siguiente.
+
+| Fase | Reserva y momento recomendado | Puerta de salida |
+|---|---|---|
+| H | H1-S1; 45 min | Reto reformulado, límites y criterio de éxito visibles. |
+| E | H1-S1–S2; 60 min integrados | Hipótesis, comparación, prueba inicial o decisiones justificadas. |
+| X | H1-S2–S4; 75 min integrados | Explicación individual breve y conexión con el producto. |
+| A | H1-S4–S7; 135 min integrados | Producto comprobado, documentación, defensa y mejora. |
+
+**Expediente HEXA mínimo del hito:** ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa.
+
+Regla de avance: puede haber prototipos durante E, pero no se considera completada A si faltan evidencias de H, E o X. Si una fase falta, se recupera esa fase y su evidencia; no se repite automáticamente todo el hito.
+
+### Lista de comprobación del ciclo
+
+| Fase | Sí | Parcial | No | Evidencia observada / recuperación |
+|---|---|---|---|---|
+| H — Está formulado el reto, producto, límites y criterio de éxito | | | | |
+| E — Hay preguntas, hipótesis, comparación o pruebas iniciales | | | | |
+| X — El alumnado explica conceptos y decisiones con vocabulario preciso | | | | |
+| A — El producto se construye, prueba, documenta y defiende | | | | |
+
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
+
+
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
 Documento para uso docente.

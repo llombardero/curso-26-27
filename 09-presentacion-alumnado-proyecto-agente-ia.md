@@ -53,7 +53,7 @@ Después irá creciendo:
 
 | Momento | Qué aprenderemos |
 |---|---|
-| Inicio | Scrum, roles, trabajo en equipo y organización del proyecto. |
+| Inicio | Curso y MiniJarvis, Scrum, diagnóstico no calificable, equipos provisionales de 3 o 4 y torre de papel. |
 | H1 | Primer programa Java básico por consola. |
 | H2 | Menú, comandos, decisiones, bucles y depuración. |
 | H3 | Memoria temporal usando colecciones. |
@@ -82,6 +82,8 @@ En cada hito habrá:
 5. documentación;
 6. uso controlado de IA, si procede;
 7. defensa o revisión.
+
+Antes de la torre completarás una autoevaluación y una microprueba para reconocer habilidades. No tienen nota ni fijan tu rol. El profesorado formará equipos provisionales de tres o cuatro buscando habilidades y apoyos complementarios; se revisarán después de la retrospectiva.
 
 También usaremos Scrum adaptado al aula.
 

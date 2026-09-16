@@ -1,5 +1,39 @@
 # Guía docente integral — Plan de clases, Scrum y HEXA
 
+<!-- HEXA-POLITICA-TODOS-HITOS:START -->
+
+## Política obligatoria: un ciclo HEXA completo en cada hito
+
+Cada hito de MiniJarvis se considera un reto didáctico completo. Por tanto, **H0, H1, H2, H3, H4, H5, H6, H7 y HF deben recorrer y evidenciar las cuatro fases H–E–X–A**. No se aplica HEXA una sola vez al proyecto anual ni se da por cumplido mediante actividades aisladas.
+
+| Fase | Función obligatoria en cada hito | Evidencia mínima |
+|---|---|---|
+| H — Hecho / reto | Situar el problema, producto, límites y criterios de éxito. | Reformulación del reto y diagnóstico inicial. |
+| E — Exploración | Comparar, predecir, formular hipótesis y realizar pruebas iniciales guiadas. | Registro de alternativas, hipótesis, prueba o decisión. |
+| X — eXplicación | Formalizar conceptos después de la exploración, con instrucción docente explícita. | Explicación individual conectada con el producto. |
+| A — Aplicación | Construir, probar, documentar, defender y mejorar. | Producto funcional o evidencia equivalente, pruebas, documentación y defensa/review. |
+
+La temporalización de cada hito debe reservar, como orientación, un 10–15 % para H, un 20–25 % para E, un 25–30 % para X y un 35–45 % para A. No son cuatro bloques rígidos: una sesión puede cerrar una fase y abrir la siguiente, pero ninguna puede quedar sin tiempo ni evidencia. Los cierres C1/C2 consolidan o recuperan fases; no sustituyen el ciclo del hito.
+
+### Trazabilidad por retos
+
+| Hito | Reto | Expediente HEXA mínimo |
+|---|---|---|
+| H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
+| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
+| H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
+| H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
+| H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
+| H5 | Resolver el crecimiento de comandos mediante refactorización segura, contratos simples y código extensible. | diagnóstico del problema, comparación de diseños, explicación de interfaz/Command, refactorización, herramienta nueva, revisión Git y defensa |
+| H6 | Conservar memoria e historial entre ejecuciones con ficheros, trazabilidad y tratamiento seguro de errores y datos. | problema reproducido, decisiones de ruta/formato, explicación de persistencia/excepciones/logs, código, prueba en dos ejecuciones, seguridad y defensa |
+| H7 | Integrar o simular una ayuda de IA con límites, seguridad, registro y validación humana. | caso de uso y riesgos, clasificación de prompts, explicación de seguridad/validación, simulación o integración segura, registros y defensa |
+| HF | Demostrar el aprendizaje del itinerario, localizar carencias y aplicar una mejora o recuperación basada en evidencias. | mapa de evidencias, selección razonada, explicación del progreso, portfolio, demo, defensa, recuperación y plan de mejora |
+
+Regla de evaluación: el producto final por sí solo no acredita el proceso. Si falta una fase, se identifica y recupera su evidencia específica.
+
+<!-- HEXA-POLITICA-TODOS-HITOS:END -->
+
+
 ## Programación orientada a objetos — Proyecto MiniJarvis — Curso 2026/2027
 
 Documento creado a partir del análisis de los materiales existentes en esta carpeta del curso.
@@ -192,48 +226,40 @@ Uso principal:
 
 ## 7. Plan detallado por hitos
 
-### H0. Bootcamp Scrum y torre de papel
+### H0. Bootcamp Scrum, diagnóstico y torre de papel
 
 Fechas: 15-18 septiembre.
 
 Objetivo docente:
 
 ```text
-Que el alumnado viva Scrum antes de aplicarlo al software.
+Presentar el curso y la forma de trabajo, comprender Scrum, reconocer habilidades sin calificarlas, preparar equipos provisionales y validar el proceso con la torre.
 ```
 
-Conceptos clave a explicar:
+Secuencia:
 
-| Momento | Concepto |
-|---|---|
-| Antes de construir | Producto, restricción, equipo, rol y backlog. |
-| Durante la actividad | Sprint, tarea, bloqueo y responsabilidad. |
-| Después de construir | Review, retrospectiva, mejora continua y transferencia al software. |
+| Momento | Minutos | Acción y evidencia |
+|---|---:|---|
+| Curso, MiniJarvis, hitos, HEXA y evidencias | 35 | Mapa y reformulación del reto. |
+| IA responsable | 15 | Semáforo y reglas de defensa. |
+| Scrum mínimo | 20 | Sprint, backlog, bloqueo, prueba, review y retrospectiva. |
+| Autoevaluación | 10 | Dos aportaciones y dos habilidades por desarrollar; privada y no calificable. |
+| Microprueba | 20 | Backlog, prioridad, terminado, bloqueo y aportación individual. |
+| Equipos provisionales | 25 | Grupos de 3 o 4 equilibrados, accesibles y con responsabilidades rotatorias. |
+| Cierre | 10 | Ticket y preparación de la torre. |
+| Sesión siguiente | 90 | Backlog de torre, sprint, prueba, review y retrospectiva. |
+| Cierre H0 | 45 + apoyo ED | Revisión de equipos, contrato y transferencia a MiniJarvis. |
 
-Secuencia de clases:
+Regla de tamaño: resto N÷4 = 0, todos de cuatro; 1, tres equipos de tres; 2, dos de tres; 3, uno de tres; el resto de cuatro. Evitar equipos de cinco y alumnado solo. Revisar asistencia y accesibilidad.
 
-| Bloque | Qué hacer |
-|---|---|
-| Presentación | Explicar que el producto visible es la torre, pero el aprendizaje real es el proceso. |
-| Equipos | Formar grupos de 3-4 y asignar roles. |
-| Backlog | Pedir al menos 5 tareas antes de construir. |
-| Sprint | Construir con tiempo limitado. |
-| Review | Medir estabilidad, altura y cumplimiento de restricciones. |
-| Retrospectiva | Identificar qué funcionó, qué no y qué cambiarán. |
-| Transferencia | Relacionar torre con MiniJarvis: backlog, incrementos, pruebas y demo. |
+El diagnóstico combina autoevaluación, microprueba y observación. No es psicométrico, no tiene nota, no publica puntuaciones y no fija roles. Equilibrar comunicación, organización, experimentación/construcción y calidad/documentación.
 
-Evidencias:
-
-- foto o evidencia de torre;
-- tablero inicial;
-- contrato de equipo;
-- retrospectiva;
-- traducción a MiniJarvis.
+Evidencias: perfil privado, microprueba, matriz docente privada, tablero, torre probada, review, retrospectiva, revisión de equipo, contrato y transferencia.
 
 Decisión docente importante:
 
 ```text
-No calificar fuerte Programación en H0; usarlo como diagnóstico y como evidencia de Entornos.
+No calificar las puntuaciones del diagnóstico ni una habilidad previa. Evaluar comprensión, proceso, evidencia y mejora. Los equipos y responsabilidades son provisionales hasta la retrospectiva.
 ```
 
 ---

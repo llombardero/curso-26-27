@@ -1,5 +1,38 @@
 # Primera semana — Scrum, equipos y torre de papel
 
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
+
+## Ciclo HEXA obligatorio del reto H0
+
+**Reto del hito:** Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis.
+
+El profesorado debe hacer visible el avance de fase, proporcionar instrucción directa en X y no reducir HEXA a una etiqueta.
+
+| Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
+|---|---|---|---|
+| **H — Hecho / reto** | ¿Qué problema real debemos resolver y con qué límites? | Presenta contexto, producto, restricciones, criterios y diagnóstico; no da todavía la solución completa. | Reformula el reto, identifica lo que sabe/no sabe y deja una ficha inicial con criterios de éxito. |
+| **E — Exploración** | ¿Qué alternativas, hipótesis o pruebas iniciales ayudan a entenderlo? | Propone preguntas, ejemplos mínimos, casos y límites seguros. | Observa, compara, predice, prueba alternativas y registra decisiones o bloqueos. |
+| **X — eXplicación** | ¿Qué conceptos permiten explicar lo observado y decidir con criterio? | Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes, seguridad y criterios de calidad. | Explica con palabras propias, conecta teoría y exploración y corrige sus hipótesis. |
+| **A — Aplicación** | ¿Cómo construimos, comprobamos, documentamos y defendemos la solución? | Desbloquea, exige pruebas y comprueba autoría y transferencia. | Implementa el producto, lo prueba, documenta evidencias, realiza review/defensa y propone mejora. |
+
+### Temporalización mínima explícita
+
+Primera sesión de 135 min para presentar el curso, introducir Scrum y realizar el diagnóstico; sesión siguiente de 90 min para aplicar Scrum en la torre. El resto de H0 se dedica a review, retrospectiva, contrato y transferencia a MiniJarvis. Los tiempos de fases se reservan dentro de las sesiones indicadas; los rangos pueden solaparse cuando una sesión cierra una fase y abre la siguiente.
+
+| Fase | Reserva y momento recomendado | Puerta de salida |
+|---|---|---|
+| H | Presentación del curso y reto H0; 35 min de la primera sesión | Reto reformulado, límites y criterio de éxito visibles. |
+| E | Scrum mínimo, autoevaluación y microprueba diagnóstica; 50 min de la primera sesión | Hipótesis, comparación, prueba inicial o decisiones justificadas. |
+| X | Explicación de sprint, backlog, roles, prueba, review y retrospectiva; 30 min integrados | Explicación individual breve y conexión con el producto. |
+| A | Equipos provisionales, torre, prueba, review, retrospectiva y transferencia; 90 min más cierre de H0 | Producto comprobado, documentación, defensa y mejora. |
+
+**Expediente HEXA mínimo del hito:** ficha inicial, autoevaluación privada, microprueba, criterio de formación de equipos, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual.
+
+Regla de avance: puede haber prototipos durante E, pero no se considera completada A si faltan evidencias de H, E o X. Si una fase falta, se recupera esa fase y su evidencia; no se repite automáticamente todo el hito.
+
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
+
+
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
 Versión: cierre curricular 1.0 — julio 2026
@@ -82,8 +115,8 @@ Distribución orientativa:
 
 | Día | Módulo | Periodos | Uso principal |
 |---|---|---:|---|
-| Martes 15 septiembre | Programación | 3 | Presentación del curso, reto global y simulación Scrum. |
-| Jueves 17 septiembre | Programación | 3 | Review, retrospectiva y conexión con el proyecto agente IA. |
+| Martes 15 septiembre | Programación | 3 | Presentación del curso, MiniJarvis, forma de trabajo, Scrum mínimo, diagnóstico de habilidades y equipos provisionales. |
+| Jueves 17 septiembre | Programación | 3 | Torre de papel con los equipos provisionales, review, retrospectiva, revisión de equipos y conexión con MiniJarvis. |
 | Martes 15 septiembre | Entornos | 1 | Vocabulario Scrum, fases de desarrollo y evidencia inicial. |
 
 Nota:
@@ -96,18 +129,24 @@ Nota:
 
 | Fase HEXA | Actividad | Evidencia |
 |---|---|---|
-| Fase 0. Equipos | Crear equipos de 3-4, asignar roles adaptados y acordar normas. | Contrato de equipo. |
-| Activar | Presentar el reto: construir una torre de papel con restricciones. | Preguntas iniciales y expectativas. |
-| Investigar | Explicar Scrum mínimo: sprint, backlog, tarea, daily, review, retrospectiva. | Glosario breve. |
-| Idear | Diseñar estrategia de torre y posibles tareas. | Boceto o estrategia. |
-| Planificar | Crear backlog y distribuir tareas. | Tablero Scrum. |
-| Ejecutar | Construir la torre en tiempo limitado. | Torre/prototipo. |
-| Comunicar | Medir, presentar y explicar la torre. | Review. |
-| Reflexionar | Retrospectiva y transferencia al proyecto del agente IA. | Retrospectiva individual/equipo. |
+| H — Hecho/reto | Presentar curso, MiniJarvis, H0, restricciones y criterios de éxito de la torre. | Reformulación del reto y dudas iniciales. |
+| E — Exploración | Introducir Scrum mínimo, realizar autoevaluación y microprueba, comparar formas de organizar tareas y formar equipos provisionales. | Perfil privado, backlog de microprueba, criterio de aceptación, bloqueo y matriz docente. |
+| X — eXplicación | Formalizar sprint, backlog, rol, bloqueo, prueba, review y retrospectiva; explicar por qué los equipos son de 3 o 4 y los roles rotan. | Glosario y explicación individual breve. |
+| A — Aplicación | Planificar, construir y probar la torre; hacer review, retrospectiva, revisión de equipos y transferencia a MiniJarvis. | Torre, tablero, review, retrospectiva, contrato y mejora. |
 
 ---
 
-## 5. Roles adaptados al aula
+## 5. Diagnóstico y formación de equipos antes de la torre
+
+El diagnóstico se realiza antes de entregar materiales de construcción. Incluye autoevaluación, microprueba y observación; no tiene nota ni publica perfiles. La ficha es `10A-cuestionario-diagnostico-habilidades-equipos-scrum.md`.
+
+Se priorizan equipos de cuatro. Para resolver restos: resto 1 → tres equipos de tres; resto 2 → dos de tres; resto 3 → uno de tres; resto 0 → todos de cuatro. El resto de equipos son de cuatro. Se consideran ausencias y accesibilidad; se evitan equipos de cinco.
+
+Cada equipo debe combinar comunicación, planificación, experimentación/construcción y calidad/documentación. La composición y los roles son provisionales y se revisan tras la retrospectiva.
+
+---
+
+## 6. Roles adaptados al aula
 
 | Rol | Responsabilidad |
 |---|---|
@@ -123,9 +162,9 @@ En equipos de 3:
 
 ---
 
-## 6. Actividad central: torre de papel
+## 7. Actividad central: torre de papel
 
-### 6.1. Materiales
+### 7.1. Materiales
 
 Por equipo:
 
@@ -136,7 +175,7 @@ Por equipo:
 - cronómetro;
 - plantilla de backlog.
 
-### 6.2. Restricciones sugeridas
+### 7.2. Restricciones sugeridas
 
 El docente puede ajustar las restricciones. Propuesta inicial:
 
@@ -146,7 +185,7 @@ El docente puede ajustar las restricciones. Propuesta inicial:
 - el equipo debe documentar al menos 5 tareas del backlog;
 - debe haber review y retrospectiva final.
 
-### 6.3. Criterios de éxito
+### 7.3. Criterios de éxito
 
 No se valora solo la altura.
 
@@ -160,7 +199,7 @@ No se valora solo la altura.
 
 ---
 
-## 7. Entregables de la semana
+## 8. Entregables de la semana
 
 ### Entregable H0-E1 — Contrato de equipo
 

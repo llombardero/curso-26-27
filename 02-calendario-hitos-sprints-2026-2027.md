@@ -1,5 +1,39 @@
 # Calendario de hitos y sprints 2026/2027
 
+<!-- HEXA-POLITICA-TODOS-HITOS:START -->
+
+## Política obligatoria: un ciclo HEXA completo en cada hito
+
+Cada hito de MiniJarvis se considera un reto didáctico completo. Por tanto, **H0, H1, H2, H3, H4, H5, H6, H7 y HF deben recorrer y evidenciar las cuatro fases H–E–X–A**. No se aplica HEXA una sola vez al proyecto anual ni se da por cumplido mediante actividades aisladas.
+
+| Fase | Función obligatoria en cada hito | Evidencia mínima |
+|---|---|---|
+| H — Hecho / reto | Situar el problema, producto, límites y criterios de éxito. | Reformulación del reto y diagnóstico inicial. |
+| E — Exploración | Comparar, predecir, formular hipótesis y realizar pruebas iniciales guiadas. | Registro de alternativas, hipótesis, prueba o decisión. |
+| X — eXplicación | Formalizar conceptos después de la exploración, con instrucción docente explícita. | Explicación individual conectada con el producto. |
+| A — Aplicación | Construir, probar, documentar, defender y mejorar. | Producto funcional o evidencia equivalente, pruebas, documentación y defensa/review. |
+
+La temporalización de cada hito debe reservar, como orientación, un 10–15 % para H, un 20–25 % para E, un 25–30 % para X y un 35–45 % para A. No son cuatro bloques rígidos: una sesión puede cerrar una fase y abrir la siguiente, pero ninguna puede quedar sin tiempo ni evidencia. Los cierres C1/C2 consolidan o recuperan fases; no sustituyen el ciclo del hito.
+
+### Trazabilidad por retos
+
+| Hito | Reto | Expediente HEXA mínimo |
+|---|---|---|
+| H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
+| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
+| H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
+| H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
+| H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
+| H5 | Resolver el crecimiento de comandos mediante refactorización segura, contratos simples y código extensible. | diagnóstico del problema, comparación de diseños, explicación de interfaz/Command, refactorización, herramienta nueva, revisión Git y defensa |
+| H6 | Conservar memoria e historial entre ejecuciones con ficheros, trazabilidad y tratamiento seguro de errores y datos. | problema reproducido, decisiones de ruta/formato, explicación de persistencia/excepciones/logs, código, prueba en dos ejecuciones, seguridad y defensa |
+| H7 | Integrar o simular una ayuda de IA con límites, seguridad, registro y validación humana. | caso de uso y riesgos, clasificación de prompts, explicación de seguridad/validación, simulación o integración segura, registros y defensa |
+| HF | Demostrar el aprendizaje del itinerario, localizar carencias y aplicar una mejora o recuperación basada en evidencias. | mapa de evidencias, selección razonada, explicación del progreso, portfolio, demo, defensa, recuperación y plan de mejora |
+
+Regla de evaluación: el producto final por sí solo no acredita el proceso. Si falta una fase, se identifica y recupera su evidencia específica.
+
+<!-- HEXA-POLITICA-TODOS-HITOS:END -->
+
+
 ## Programación + Entornos de Desarrollo — 1.º DAW — Granada
 
 Versión: cierre curricular 1.0 — julio 2026
@@ -139,7 +173,7 @@ Cada periodo lectivo dura 45 minutos.
 
 | Bloque | Fechas | Programación: periodos de 45 min | Entornos: periodos de 45 min | Producto principal |
 |---|---|---:|---:|---|
-| H0. Bootcamp Scrum | 15-18 septiembre | 6 | 1 | Torre de papel, tablero, roles y contrato de equipo. |
+| H0. Bootcamp Scrum | 15-18 septiembre | 6 | 1 | Presentación, diagnóstico de habilidades, equipos provisionales, torre, tablero, review, retrospectiva y contrato. |
 | H1. Primer asistente básico | 21 septiembre - 9 octubre | 24 | 9 | Programa Java muy básico + proyecto IntelliJ/GitHub. |
 | H2. Decisiones y depuración | 13 octubre - 6 noviembre | 28 | 8 | Agente con menú, comandos, control de flujo y depuración. |
 | H3. Memoria en colecciones | 9 noviembre - 4 diciembre | 32 | 12 | Agente con memoria temporal y pruebas de comportamiento. |
@@ -158,7 +192,7 @@ Esta tabla se añade para que el calendario sea útil tanto para Programación c
 
 | Bloque | RA Programación | RA Entornos | Entregables especialmente útiles para Entornos |
 |---|---|---|---|
-| H0. Bootcamp Scrum | Diagnóstico inicial, sin calificación fuerte de RA técnicos | ED RA1.g | Tablero Scrum, contrato de equipo, retrospectiva de torre de papel. |
+| H0. Bootcamp Scrum | Diagnóstico inicial no calificable y resolución de microproblemas | ED RA1.g | Autoevaluación privada, microprueba, criterio de equipos, tablero, contrato y retrospectiva. |
 | H1. Primer asistente básico | PR RA1, PR RA2 inicial | ED RA1, ED RA2 | Proyecto IntelliJ, repositorio GitHub inicial, README de ejecución, evidencia de fuente/ejecutable. |
 | H2. Decisiones y depuración | PR RA3, refuerzo PR RA1/RA2 | ED RA3 | Plan de pruebas manuales, informe de depuración, incidencias, capturas de breakpoints. |
 | H3. Memoria en colecciones | PR RA6, refuerzo PR RA3 | ED RA3 | Pruebas de memoria, casos límite, documentación de incidencias, checklist de comportamiento. |
@@ -174,7 +208,7 @@ Esta tabla se añade para que el calendario sea útil tanto para Programación c
 
 ## 6. Secuencia detallada por bloques
 
-### H0. Bootcamp Scrum y acuerdos
+### H0. Bootcamp Scrum, diagnóstico y torre
 
 Fechas:
 
@@ -182,53 +216,60 @@ Fechas:
 15-18 septiembre 2026
 ```
 
-Objetivo:
+Objetivos:
 
-- Comprender Scrum viviéndolo en una simulación breve.
-- Crear equipos de 3-4.
-- Definir roles adaptados.
-- Crear primer tablero.
-- Preparar el modo de trabajo del curso.
+- Presentar el contenido del curso, MiniJarvis, hitos, HEXA, evidencias, defensa e IA responsable.
+- Comprender Scrum antes de aplicarlo.
+- Reconocer habilidades de comunicación, organización, experimentación, calidad y documentación.
+- Formar equipos provisionales y equilibrados de tres o cuatro.
+- Aplicar el ciclo en la torre, hacer review y retrospectiva y revisar los equipos.
 
-Actividad central:
+Distribución de los siete periodos:
 
-```text
-Construcción de torre de papel
-```
+| Momento | Módulo | Periodos | Minutos | Uso |
+|---|---|---:|---:|---|
+| Primera sesión larga | Programación | 3 | 135 | Curso, MiniJarvis, HEXA, IA, Scrum mínimo, autoevaluación, microprueba y equipos provisionales. |
+| Sesión siguiente | Programación | 2 | 90 | Backlog, torre, prueba, review y retrospectiva. |
+| Cierre H0 | Programación | 1 | 45 | Revisión de equipos, contrato, transferencia a MiniJarvis y preparación de H1. |
+| Apoyo metodológico | Entornos | 1 | 45 | Vocabulario Scrum, fases, tablero y evidencia del proceso. |
 
-Entregables:
+La primera sesión puede dividirse en 90 + 45 minutos. En ese caso, la torre se realiza después de completar el diagnóstico y no antes.
 
-| Entregable | Responsable | Formato |
+Equipos:
+
+- Se priorizan equipos de cuatro.
+- Resto 1 al dividir entre cuatro: tres equipos de tres; resto 2: dos de tres; resto 3: uno de tres; resto 0: todos de cuatro.
+- El resto de equipos es de cuatro.
+- Se consideran asistencia, accesibilidad y habilidades complementarias.
+- Los equipos y roles son provisionales hasta la retrospectiva.
+- No se publican puntuaciones ni se usa el diagnóstico como nota.
+
+Entregables y evidencias:
+
+| Evidencia | Responsable | Uso |
 |---|---|---|
-| Foto o evidencia de la torre | Equipo | Imagen o documento breve. |
-| Tablero inicial | Equipo | Moodle/GitHub/captura. |
-| Contrato de equipo | Equipo | Markdown o PDF. |
-| Retrospectiva inicial | Individual + equipo | Markdown breve. |
+| Autoevaluación de habilidades | Individual, privada | Reconocer aportaciones y desarrollo; no calificable. |
+| Microprueba de backlog | Individual + pareja/trío aleatorio | Observar planificación, escucha, prueba y explicación. |
+| Matriz de equipos | Docente, privada | Justificar agrupamientos y apoyos. |
+| Torre y prueba de estabilidad | Equipo | Aplicar el sprint y comprobar producto. |
+| Tablero inicial | Equipo | Hacer visible backlog, progreso y bloqueo. |
+| Contrato de equipo | Equipo | Acordar comunicación y respuesta a problemas. |
+| Retrospectiva | Individual + equipo | Revisar proceso, roles y composición. |
 
 RA/CE principales:
 
-Programación:
-
-- Diagnóstico inicial, sin calificación fuerte de RA técnicos.
-
-Entornos de Desarrollo:
-
-- ED RA1.g: metodologías ágiles.
-- ED RA1.b: fases de desarrollo de una aplicación informática.
-
-Entregables clave para Entornos:
-
-- Tablero Scrum inicial.
-- Contrato de equipo.
-- Retrospectiva de la torre de papel.
-- Traducción de la dinámica Scrum al proyecto del agente IA.
+- Programación: diagnóstico inicial sin calificación fuerte de RA técnicos y resolución de problemas acotados.
+- Entornos ED RA1.g: metodologías ágiles.
+- Entornos ED RA1.b: fases de desarrollo de una aplicación informática.
 
 HEXA:
 
-- Fase 0: Equipos.
-- Activar.
-- Ejecutar.
-- Comunicar.
+| Fase | Tiempo/actividad | Puerta de salida |
+|---|---|---|
+| H | Presentación del curso y reto; 35 min integrados. | Reto y criterios comprendidos. |
+| E | Scrum, autoevaluación y microprueba; 50 min integrados. | Hipótesis, backlog, bloqueo y equipos razonados. |
+| X | Explicación formal de sprint, backlog, rol, prueba, review y retrospectiva; 30 min integrados. | Explicación individual y glosario. |
+| A | Torre, prueba, review, retrospectiva, contrato y transferencia; resto de H0. | Producto y proceso comprobados; equipo revisado. |
 
 ---
 

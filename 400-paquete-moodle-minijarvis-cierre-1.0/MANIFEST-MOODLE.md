@@ -1,6 +1,6 @@
 # Manifest del paquete Moodle
 
-Total de archivos copiados/generados: 222
+Total de archivos copiados/generados: 223
 
 | Origen | Destino |
 |---|---|
@@ -27,6 +27,7 @@ Total de archivos copiados/generados: 222
 | `300-libro-alumnado-programacion-poo-minijarvis/12-revision-editorial.md` | `02-libro-alumnado-por-hitos/99-docente-revision-editorial/12-revision-editorial.md` |
 | `hitos/h0-torre-papel-scrum/03-primera-semana-scrum-torre-papel.md` | `03-hitos-fichas-plantillas-checklists/00-h0-torre-papel-scrum/03-primera-semana-scrum-torre-papel.md` |
 | `hitos/h0-torre-papel-scrum/10-primera-sesion-presentacion-proyecto.md` | `03-hitos-fichas-plantillas-checklists/00-h0-torre-papel-scrum/10-primera-sesion-presentacion-proyecto.md` |
+| `hitos/h0-torre-papel-scrum/10A-cuestionario-diagnostico-habilidades-equipos-scrum.md` | `03-hitos-fichas-plantillas-checklists/00-h0-torre-papel-scrum/10A-cuestionario-diagnostico-habilidades-equipos-scrum.md` |
 | `hitos/h0-torre-papel-scrum/11-guia-docente-torre-papel-scrum.md` | `03-hitos-fichas-plantillas-checklists/00-h0-torre-papel-scrum/11-guia-docente-torre-papel-scrum.md` |
 | `hitos/h0-torre-papel-scrum/12-ficha-alumnado-torre-papel-scrum.md` | `03-hitos-fichas-plantillas-checklists/00-h0-torre-papel-scrum/12-ficha-alumnado-torre-papel-scrum.md` |
 | `hitos/h1-primer-asistente/13-guia-docente-h1-primer-asistente.md` | `03-hitos-fichas-plantillas-checklists/01-h1-primer-asistente/13-guia-docente-h1-primer-asistente.md` |

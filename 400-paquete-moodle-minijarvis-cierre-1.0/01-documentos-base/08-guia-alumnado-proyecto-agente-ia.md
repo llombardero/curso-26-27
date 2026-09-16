@@ -63,7 +63,7 @@ No se espera que el proyecto final aparezca de golpe. Se irá construyendo por v
 
 | Hito | Fechas orientativas | Qué construiremos |
 |---|---|---|
-| H0. Bootcamp Scrum | 15-18 septiembre | Aprenderemos Scrum con la torre de papel y prepararemos equipos, roles y tablero. |
+| H0. Bootcamp Scrum | 15-18 septiembre | Conoceremos el curso y Scrum, reconoceremos habilidades, prepararemos equipos provisionales de 3 o 4 y aplicaremos el sprint en la torre. |
 | H1. Primer asistente básico | 21 septiembre - 9 octubre | Programa Java básico por consola: saludo, nombre, variables, constantes y README. |
 | H2. Decisiones y depuración | 13 octubre - 6 noviembre | Agente con menú, comandos, bucles, gestión de errores, pruebas y depuración. |
 | H3. Memoria en colecciones | 9 noviembre - 4 diciembre | Agente que recuerda información durante la ejecución usando colecciones. |
@@ -75,6 +75,20 @@ No se espera que el proyecto final aparezca de golpe. Se irá construyendo por v
 | H7. IA responsable opcional | 26-29 abril | Integración con Gemini/Jarvis o simulación robusta y defendible. |
 | FFEOE | 30 abril - 28 mayo | No hay clases ni entregas. El proyecto base debe quedar cerrado antes. |
 | HF. Presentación final | 31 mayo - 22 junio | Defensa final, portfolio final, demo, recuperación y mejora. |
+
+<!-- H0-INICIO-SCRUM-DIAGNOSTICO:START -->
+
+### H0 comienza antes de la torre
+
+1. Presentación de curso, hitos, HEXA, evidencias, defensa e IA responsable.
+2. Scrum mínimo: sprint, backlog, bloqueo, prueba, review y retrospectiva.
+3. Diagnóstico sin nota: autoevaluación + microprueba + observación.
+4. Equipos provisionales de tres o cuatro, con habilidades y apoyos variados.
+5. Sesión siguiente: torre, review, retrospectiva y revisión de equipos.
+
+El diagnóstico no es una prueba psicológica. No se publican puntuaciones, no fija roles y no se utiliza para decidir quién “vale”. Los roles rotan y todas las habilidades se desarrollan.
+
+<!-- H0-INICIO-SCRUM-DIAGNOSTICO:END -->
 
 Cada hito tendrá:
 

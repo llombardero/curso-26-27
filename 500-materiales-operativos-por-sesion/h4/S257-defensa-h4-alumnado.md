@@ -1,0 +1,62 @@
+# Sesión 257 — Ficha de trabajo del alumnado
+
+## Defensa H4
+
+| Hoy vas a… | Debe quedar… |
+|---|---|
+| Validar comprensión de POO. | Defensa H4. |
+
+**Tiempo previsto:** 45 minutos.  
+**Hito:** H4. **Momento HEXA:** A.
+
+## Material que necesitas
+
+- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
+- Pizarra o una hoja reutilizable para bosquejar antes de modificar el proyecto.
+- Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+
+## Trabajo de hoy
+
+1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
+2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
+3. Realiza esta tarea: **Defensa individual sobre clase, objeto, atributo, método, constructor, encapsulación y relaciones.**
+4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
+5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+
+## Registro breve
+
+**Qué intento conseguir:**  
+................................................................................
+
+**Decisión o hipótesis que probaré:**  
+................................................................................
+
+**Prueba que he realizado y resultado:**  
+................................................................................
+
+**Bloqueo encontrado y siguiente paso:**  
+................................................................................
+
+## Evidencia mínima antes de salir
+
+- [ ] He producido o actualizado: **Defensa H4.**
+- [ ] Puedo señalar dónde está.
+- [ ] Puedo explicar una decisión tomada.
+- [ ] Puedo mostrar una prueba o comprobación.
+- [ ] He registrado mi aportación individual si el trabajo era de equipo.
+
+## Si te bloqueas
+
+1. Copia el mensaje exacto o describe qué observas.
+2. Indica qué esperabas que ocurriera.
+3. Reduce el problema a una prueba pequeña.
+4. Pide ayuda mostrando esos tres datos; no pidas directamente la solución completa.
+
+## Cierre
+
+Responde sin copiar: **Decidir si el equipo está preparado para extensibilidad H5.**
+
+Respuesta:  
+................................................................................
+
+La sesión está completada cuando la evidencia existe, se ha comprobado y puedes defenderla brevemente.

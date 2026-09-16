@@ -1,5 +1,40 @@
 # Guía docente — Primera sesión de presentación del proyecto
 
+> **Aviso de vigencia (septiembre de 2026):** los apartados históricos de este documento que aún mencionan autoevaluación de 16 ítems o microprueba ya no son operativos. La secuencia vigente distribuye H0 entre S201–S205 y utiliza HADA según `10A-cuestionario-diagnostico-habilidades-equipos-scrum.md` y `../../500-materiales-operativos-por-sesion/h0/`. No deben aplicarse ambos cuestionarios.
+
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
+
+## Ciclo HEXA obligatorio del reto H0
+
+**Reto del hito:** Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis.
+
+El profesorado debe hacer visible el avance de fase, proporcionar instrucción directa en X y no reducir HEXA a una etiqueta.
+
+| Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
+|---|---|---|---|
+| **H — Hecho / reto** | ¿Qué problema real debemos resolver y con qué límites? | Presenta contexto, producto, restricciones, criterios y diagnóstico; no da todavía la solución completa. | Reformula el reto, identifica lo que sabe/no sabe y deja una ficha inicial con criterios de éxito. |
+| **E — Exploración** | ¿Qué alternativas, hipótesis o pruebas iniciales ayudan a entenderlo? | Propone preguntas, ejemplos mínimos, casos y límites seguros. | Observa, compara, predice, prueba alternativas y registra decisiones o bloqueos. |
+| **X — eXplicación** | ¿Qué conceptos permiten explicar lo observado y decidir con criterio? | Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes, seguridad y criterios de calidad. | Explica con palabras propias, conecta teoría y exploración y corrige sus hipótesis. |
+| **A — Aplicación** | ¿Cómo construimos, comprobamos, documentamos y defendemos la solución? | Desbloquea, exige pruebas y comprueba autoría y transferencia. | Implementa el producto, lo prueba, documenta evidencias, realiza review/defensa y propone mejora. |
+
+### Temporalización mínima explícita
+
+Primera sesión de 135 min para presentar el curso, introducir Scrum y realizar el diagnóstico; sesión siguiente de 90 min para aplicar Scrum en la torre. El resto de H0 se dedica a review, retrospectiva, contrato y transferencia a MiniJarvis. Los tiempos de fases se reservan dentro de las sesiones indicadas; los rangos pueden solaparse cuando una sesión cierra una fase y abre la siguiente.
+
+| Fase | Reserva y momento recomendado | Puerta de salida |
+|---|---|---|
+| H | Presentación del curso y reto H0; 35 min de la primera sesión | Reto reformulado, límites y criterio de éxito visibles. |
+| E | Scrum mínimo, autoevaluación y microprueba diagnóstica; 50 min de la primera sesión | Hipótesis, comparación, prueba inicial o decisiones justificadas. |
+| X | Explicación de sprint, backlog, roles, prueba, review y retrospectiva; 30 min integrados | Explicación individual breve y conexión con el producto. |
+| A | Equipos provisionales, torre, prueba, review, retrospectiva y transferencia; 90 min más cierre de H0 | Producto comprobado, documentación, defensa y mejora. |
+
+**Expediente HEXA mínimo del hito:** ficha inicial, autoevaluación privada, microprueba, criterio de formación de equipos, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual.
+
+Regla de avance: puede haber prototipos durante E, pero no se considera completada A si faltan evidencias de H, E o X. Si una fase falta, se recupera esa fase y su evidencia; no se repite automáticamente todo el hito.
+
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
+
+
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
 Versión: cierre curricular 1.0 — julio 2026
@@ -15,6 +50,29 @@ Documentos relacionados:
 - `../../05-politica-uso-ia-semaforo-registro-defensa.md`
 
 ---
+
+<!-- PRIMERA-SESION-SCRUM-DIAGNOSTICO:START -->
+
+## Enfoque actualizado de H0: curso, HADA, equipos y torre
+
+H0 se desarrolla en S201–S205. La torre no comienza hasta que el alumnado ha entendido el marco, completado HADA y acordado una organización provisional.
+
+| Sesión | Bloque | Producto |
+|---|---|---|
+| S201 | Curso, MiniJarvis, reto H0, evidencias e IA responsable | Mapa del reto y ticket defendible. |
+| S202 | Scrum mínimo y HADA individual | Cuatro sumas comprobadas, diagrama y reflexión privada. |
+| Entre sesiones | Preparación docente de equipos | Propuesta privada que combina HADA, accesibilidad y asistencia. |
+| S203 | Composición, funciones y preparación de la torre | Mapa de equipo, funciones justificadas, backlog y definición de terminado. |
+| S204 | Dos ciclos de torre, pruebas, review y retrospectiva | Torre, dos pruebas, adaptación y contraste HADA-conducta. |
+| S205 | Revisión y transferencia a MiniJarvis | Decisión, contrato, rotación y primer backlog. |
+
+El instrumento completo está en `10A-cuestionario-diagnostico-habilidades-equipos-scrum.md`. No es calificable ni psicométrico. Las puntuaciones son privadas, los perfiles son hipótesis y las funciones rotan.
+
+Regla 3–4: resto 0 al dividir entre 4, todos de cuatro; resto 1, tres equipos de tres; resto 2, dos de tres; resto 3, uno de tres; los demás equipos son de cuatro. Revisar ausencias y accesibilidad. Evitar equipos de cinco y no dejar alumnado solo.
+
+Cada equipo cubre cuatro focos: valor/backlog, facilitación/tiempo, calidad/pruebas y evidencias/comunicación. Son funciones educativas, no cuatro roles oficiales de Scrum. Los equipos son provisionales hasta revisar las evidencias de la torre.
+
+<!-- PRIMERA-SESION-SCRUM-DIAGNOSTICO:END -->
 
 ## 1. Propósito de la sesión
 
@@ -64,7 +122,9 @@ Al terminar la sesión, el alumnado debería poder explicar con sus palabras:
 5. Que habrá entregas de equipo e individuales.
 6. Que la IA se puede usar, pero con registro, verificación y defensa.
 7. Que una entrega debe poder ejecutarse, documentarse y defenderse.
-8. Que la primera semana se dedicará a aprender Scrum mediante una simulación práctica.
+8. Que Scrum organiza trabajo mediante sprint, backlog, bloqueo, review y retrospectiva.
+9. Qué habilidades puede aportar y desarrollar.
+10. Que los equipos serán provisionales, de 3 o 4, y los roles rotarán.
 
 ---
 
@@ -88,12 +148,17 @@ Al terminar la sesión, el alumnado debería poder explicar con sus palabras:
 - Pizarra física o digital.
 - Cronómetro.
 - Lista de clase para observación inicial.
-- Notas adhesivas físicas o tablero digital, si se quiere iniciar ya la dinámica Scrum.
+- 8 notas adhesivas o tarjetas por pareja/trío para la microprueba.
+- Copia del cuestionario o espacio para responderlo en cuaderno.
+- Matriz privada para formar equipos.
+- Cronómetro visible.
 
 ### Para el alumnado
 
 - Cuaderno o documento de notas.
 - Acceso a Moodle si ya está disponible.
+- Bolígrafo o lápiz.
+- Dos hojas o cuaderno para autoevaluación y microprueba.
 - No es imprescindible ordenador en esta sesión, aunque puede usarse si el grupo ya dispone de equipo.
 
 ---
@@ -108,9 +173,9 @@ Sí conviene recoger evidencias diagnósticas:
 |---|---|---|
 | Respuesta inicial: “¿Qué creo que es un agente IA?” | Individual | Detectar ideas previas. |
 | Preguntas o expectativas del alumnado | Individual / grupo | Ajustar ejemplos y ritmo. |
-| Miniactividad de visión de producto | Parejas o grupos pequeños | Observar comunicación y comprensión del reto. |
+| Autoevaluación y microprueba Scrum | Individual + parejas/tríos aleatorios | Reconocer habilidades y observar planificación, escucha, prueba y explicación. |
 | Ticket de salida | Individual | Comprobar comprensión mínima. |
-| Observación docente | Docente | Detectar liderazgo, bloqueo, inseguridad, nivel técnico inicial. |
+| Observación docente privada | Docente | Equilibrar apoyos y formar equipos provisionales sin etiquetar. |
 
 Estas evidencias pueden alimentar el diagnóstico inicial de Programación y la preparación de H0 en Entornos.
 
@@ -122,14 +187,13 @@ Estas evidencias pueden alimentar el diagnóstico inicial de Programación y la 
 
 | Bloque | Tiempo | Finalidad |
 |---|---:|---|
-| 1. Apertura y encuadre | 10 min | Situar el curso y reducir incertidumbre. |
-| 2. Activación de ideas previas | 15 min | Saber qué entiende el alumnado por IA, agente y programación. |
-| 3. Presentación del proyecto MiniJarvis | 25 min | Explicar producto final y progresión por hitos. |
-| 4. Cómo trabajaremos | 20 min | Introducir hitos, equipos, Scrum y evidencias. |
-| 5. IA responsable | 15 min | Establecer reglas iniciales claras. |
-| 6. Miniactividad: imaginar la primera versión | 25 min | Transformar la idea general en un producto mínimo. |
-| 7. Puesta en común | 15 min | Compartir ideas y conectar con H0/H1. |
-| 8. Cierre y ticket de salida | 10 min | Verificar comprensión y anunciar siguiente sesión. |
+| 1. Apertura, MiniJarvis, hitos y HEXA | 35 min | Situar el curso, evidencias y defensa. |
+| 2. IA responsable | 15 min | Fijar seguridad y autoría. |
+| 3. Scrum mínimo | 20 min | Comprender el ciclo antes de aplicarlo. |
+| 4. Autoevaluación | 10 min | Reconocer fortalezas y desarrollo. |
+| 5. Microprueba | 20 min | Observar habilidades en una tarea acotada. |
+| 6. Equipos provisionales de 3 o 4 | 25 min | Equilibrar habilidades y apoyos. |
+| 7. Cierre y torre siguiente | 10 min | Verificar comprensión y preparar materiales/roles. |
 
 Total aproximado:
 
@@ -141,386 +205,48 @@ Total aproximado:
 
 ## 7. Desarrollo docente paso a paso
 
-### Bloque 1 — Apertura y encuadre
+### Bloque 1 — Curso, MiniJarvis, hitos y HEXA, 35 minutos
 
-Tiempo:
+Presentar el proyecto anual, su progresión H0–HF, la coordinación Programación/Entornos y la exigencia de evidencias defendibles. Evitar explicar todos los RA/CE o prometer una IA completa.
+
+Guion:
 
 ```text
-10 minutos
+Construiremos MiniJarvis por retos pequeños. En cada hito comprenderemos el problema, exploraremos, explicaremos conceptos y aplicaremos lo aprendido. Cada versión tendrá evidencias y cualquier integrante deberá poder defenderla.
 ```
 
-Objetivo:
+### Bloque 2 — IA responsable, 15 minutos
 
-- Dar seguridad.
-- Presentar una narrativa clara del curso.
-- Evitar que el alumnado piense que va a “programar una IA completa” desde el primer día.
+Explicar semáforo verde/ámbar/rojo, registro, verificación, defensa y prohibición de secretos o datos personales.
 
-Mensaje docente sugerido:
+### Bloque 3 — Scrum mínimo, 20 minutos
 
-```text
-Este curso vamos a aprender Programación y Entornos de Desarrollo construyendo un proyecto común: un pequeño agente IA propio.
+Explicar sprint, backlog, tarea, bloqueo, review y retrospectiva. Mostrar `Objetivo → backlog → trabajo visible → prueba → review → retrospectiva`. Aclarar que responsabilidad no significa mandar.
 
-No vamos a empezar usando IA real desde el primer día. Primero aprenderemos a programar, probar, depurar, documentar y trabajar en equipo.
+### Bloque 4 — Autoevaluación, 10 minutos
 
-La IA será una herramienta, no un sustituto de vuestro aprendizaje.
-```
+El alumnado responde 16 ítems en escala 1–4 y escribe dos fortalezas y dos habilidades por desarrollar. No tiene nota, no es psicométrico y sus puntuaciones no se publican.
 
-Errores a evitar:
+### Bloque 5 — Microprueba, 20 minutos
 
-- Prometer un producto final demasiado ambicioso.
-- Presentar el proyecto como si ya tuvieran que saber IA.
-- Empezar con RA/CE y porcentajes antes de explicar el sentido del curso.
+Individualmente organiza seis tareas para una demostración, marca prioridad, terminado y bloqueo. Después contrasta en pareja/trío aleatorio y cierra explicando su aportación y una idea que cambió.
 
----
+El docente observa 0–2: escucha, planificación, experimentación, calidad, documentación, facilitación y explicación. No califica.
 
-### Bloque 2 — Activación de ideas previas
+### Bloque 6 — Equipos provisionales, 25 minutos
 
-Tiempo:
+Aplicar regla 3–4, considerar asistencia y accesibilidad y equilibrar cuatro familias: comunicación, organización, experimentación/construcción y calidad/documentación. Evitar equipos de cinco, alumnado solo y agrupamiento basado únicamente en amistades.
 
-```text
-15 minutos
-```
+Responsabilidades iniciales: facilitación/tiempo, backlog/organización, prototipo/construcción y calidad/evidencias. En equipos de tres se combinan dos responsabilidades. Todas rotarán.
 
-Dinámica:
+### Bloque 7 — Ticket y siguiente sesión, 10 minutos
 
-1. Pregunta individual en papel, Moodle o cuaderno:
+Comprobar curso/hitos, review frente a retrospectiva, habilidades aportadas/desarrolladas, IA permitida/prohibida y necesidades antes de la torre.
+
+Cierre:
 
 ```text
-¿Qué crees que es un agente IA?
-```
-
-2. Segunda pregunta:
-
-```text
-¿Qué tendría que hacer un asistente para que te pareciera útil en clase?
-```
-
-3. Tercera pregunta:
-
-```text
-¿Qué riesgos ves en usar IA para aprender programación?
-```
-
-Después, recoger 4-6 respuestas en voz alta.
-
-Qué observar:
-
-- Si confunden IA con buscador.
-- Si creen que la IA debe hacerlo todo.
-- Si aparecen miedos: “yo no sé programar”, “esto es muy difícil”.
-- Si aparecen ideas útiles para futuros ejemplos del agente.
-
-Intervención docente clave:
-
-```text
-Todas estas ideas nos sirven, pero durante el curso vamos a trabajar con una regla: todo lo que entreguemos debe poder entenderse, comprobarse y defenderse.
-```
-
----
-
-### Bloque 3 — Presentación del proyecto MiniJarvis
-
-Tiempo:
-
-```text
-25 minutos
-```
-
-Usar como apoyo:
-
-```text
-09-presentacion-alumnado-proyecto-agente-ia.md
-```
-
-Explicar de forma breve:
-
-- el proyecto será un asistente por consola en Java;
-- empezará con mensajes simples;
-- luego tendrá menú;
-- luego memoria;
-- luego clases;
-- luego herramientas;
-- luego persistencia;
-- al final podrá tener IA real o simulada.
-
-Pizarra recomendada:
-
-```text
-H1: saluda y responde algo simple
-H2: menú y comandos
-H3: memoria temporal
-H4: clases y objetos
-H5: herramientas internas
-H6: ficheros y trazabilidad
-H7: IA real o simulada, si procede
-```
-
-Mensaje docente sugerido:
-
-```text
-El proyecto final no es el punto de partida. El punto de partida será una versión muy pequeña que podamos entender completamente.
-
-Cada hito añade una capacidad nueva. Si una versión pequeña está bien entendida, podremos hacer crecer el proyecto con seguridad.
-```
-
-Comprobación rápida:
-
-Preguntar:
-
-```text
-¿Por qué creéis que no empezamos directamente conectando Gemini o Jarvis?
-```
-
-Respuestas esperables:
-
-- porque primero hay que aprender Java;
-- porque hay que saber validar;
-- porque puede haber errores;
-- porque no se deben usar datos sensibles;
-- porque hay que entender el código.
-
----
-
-### Bloque 4 — Cómo trabajaremos
-
-Tiempo:
-
-```text
-20 minutos
-```
-
-Explicar tres ideas:
-
-### 4.1. Hitos
-
-Un hito es una versión parcial del producto.
-
-Frase útil:
-
-```text
-No entregamos “todo el proyecto”. Entregamos versiones que demuestran aprendizaje concreto.
-```
-
-### 4.2. Equipos y Scrum
-
-Explicar que durante la primera semana se vivirá Scrum con una actividad práctica: la torre de papel.
-
-No explicar Scrum completo todavía. Solo vocabulario mínimo:
-
-| Concepto | Explicación inicial |
-|---|---|
-| Sprint | Periodo corto de trabajo con un objetivo. |
-| Backlog | Lista ordenada de tareas. |
-| Tarea | Acción concreta que alguien puede realizar. |
-| Review | Mostrar lo conseguido. |
-| Retrospectiva | Pensar cómo mejorar el trabajo del equipo. |
-| Bloqueo | Algo que impide avanzar. |
-
-### 4.3. Evidencias
-
-Explicar que se evaluará con evidencias:
-
-- código;
-- README;
-- pruebas;
-- portfolio;
-- registro IA;
-- diagramas;
-- defensa;
-- GitHub;
-- observación y trabajo diario.
-
-Mensaje docente sugerido:
-
-```text
-No basta con que exista un archivo. Debemos poder saber quién ha hecho qué, cómo se ha probado y si cada persona puede explicarlo.
-```
-
----
-
-### Bloque 5 — IA responsable
-
-Tiempo:
-
-```text
-15 minutos
-```
-
-Objetivo:
-
-- Establecer límites desde el primer día.
-- Evitar tanto la prohibición total como el uso acrítico.
-
-Explicar el semáforo de forma resumida:
-
-| Color | Mensaje para alumnado |
-|---|---|
-| Verde | Puedes usar IA para entender, repasar, pedir ejemplos pequeños o revisar claridad. |
-| Amarillo | Puedes usar IA para fragmentos, pruebas, refactorización o comparación, pero debes registrarlo y defenderlo. |
-| Rojo | No puedes copiar soluciones completas, ocultar uso de IA, usar datos personales o entregar código que no entiendes. |
-
-Frase clave:
-
-```text
-La IA puede ayudarte a aprender, pero no puede aprender por ti.
-```
-
-Mini-caso para comentar:
-
-```text
-Un alumno pide a una IA: “Hazme entero el H1 con menú, comandos, memoria y diseño avanzado”. Copia el código y lo entrega.
-
-¿Está bien? ¿Qué problemas hay?
-```
-
-Respuestas esperables:
-
-- no corresponde al nivel del hito;
-- no demuestra aprendizaje;
-- quizá no lo entiende;
-- no está registrado;
-- puede contener errores;
-- puede impedir la defensa.
-
-Cierre del bloque:
-
-```text
-Usaremos IA, pero con trazabilidad, seguridad y defensa.
-```
-
----
-
-### Bloque 6 — Miniactividad: imaginar la primera versión
-
-Tiempo:
-
-```text
-25 minutos
-```
-
-Agrupamiento:
-
-- parejas o grupos de 3.
-
-Producto de la miniactividad:
-
-```text
-Boceto de MiniJarvis H1 sin código.
-```
-
-Instrucciones para alumnado:
-
-```text
-Imaginad la primera versión mínima de vuestro asistente.
-Todavía no programamos.
-Solo definimos qué podría hacer en una versión muy básica.
-```
-
-Preguntas guía:
-
-1. ¿Cómo se llamaría vuestro asistente?
-2. ¿Qué saludo inicial mostraría?
-3. ¿Qué dato pediría al usuario?
-4. ¿Qué respuesta sencilla daría?
-5. ¿Qué NO debería hacer todavía en H1?
-6. ¿Qué tendría que poder explicar cualquier persona del equipo?
-
-Restricción importante:
-
-```text
-H1 no tendrá menú, bucles, switch, memoria ni IA real.
-```
-
-Ejemplo de respuesta aceptable:
-
-```text
-Nombre: MiniJarvis Granada
-Pide: nombre del usuario
-Responde: saludo personalizado y mensaje de bienvenida al curso
-No hace todavía: menú, memoria, conexión con IA ni comandos avanzados
-```
-
-Qué observar:
-
-- si proponen soluciones demasiado avanzadas;
-- si entienden la idea de versión mínima;
-- si aparecen nombres o contextos motivadores;
-- si hay alumnado que no participa;
-- si surgen miedos o bloqueos.
-
----
-
-### Bloque 7 — Puesta en común
-
-Tiempo:
-
-```text
-15 minutos
-```
-
-Dinámica:
-
-- 3 o 4 parejas/grupos comparten su boceto.
-- El docente anota en pizarra ideas repetidas.
-- Se clasifican en:
-
-```text
-Sirve para H1
-Mejor para hitos posteriores
-No es adecuado o necesita seguridad
-```
-
-Ejemplos:
-
-| Idea del alumnado | Clasificación docente |
-|---|---|
-| Pedir nombre y saludar | H1. |
-| Menú con varios comandos | H2. |
-| Recordar preferencias | H3. |
-| Crear clases Agente y Memoria | H4. |
-| Conectar Gemini | H7 o simulación. |
-| Guardar contraseñas | No adecuado / riesgo de seguridad. |
-
-Mensaje docente clave:
-
-```text
-Una buena idea no tiene por qué hacerse en el primer hito. Muchas ideas se guardan para después.
-```
-
----
-
-### Bloque 8 — Cierre y ticket de salida
-
-Tiempo:
-
-```text
-10 minutos
-```
-
-Ticket de salida individual:
-
-Pedir que respondan en papel, Moodle o formulario breve:
-
-```text
-1. ¿Qué vamos a construir durante el curso?
-2. ¿Por qué el proyecto se hará por hitos?
-3. Escribe un uso permitido de IA.
-4. Escribe un uso no permitido de IA.
-5. ¿Qué significa que una entrega sea defendible?
-6. ¿Qué duda te queda para la próxima sesión?
-```
-
-Uso docente:
-
-- revisar rápidamente antes de la siguiente sesión;
-- detectar malentendidos;
-- ajustar la explicación de Scrum y H0;
-- identificar alumnado que necesita apoyo inicial.
-
-Cierre oral sugerido:
-
-```text
-En la próxima sesión vamos a vivir Scrum de forma práctica. No empezaremos programando todavía: primero aprenderemos cómo organizarnos como equipo.
+En la siguiente sesión aplicaremos Scrum en la torre con estos equipos provisionales. La retrospectiva servirá también para revisar la composición y los roles.
 ```
 
 ---
@@ -614,7 +340,10 @@ No necesito que hoy sepáis programar el agente. Necesito que entendáis cómo v
 | Exceso de información | Caras de bloqueo o silencio | Volver a tres ideas: proyecto, hitos, defensa. |
 | Miedo a no saber programar | “Yo no sé nada” | Recordar que H1 empieza desde estructura básica. |
 | Ideas demasiado avanzadas | APIs, bases de datos, web, móvil | Aparcarlas para hitos futuros. |
-| Falta de participación | Solo habla una parte del grupo | Usar respuestas individuales y parejas antes de puesta en común. |
+| Falta de participación | Solo habla una parte del grupo | Usar respuesta individual antes de contraste y permitir evidencia oral, escrita o gráfica. |
+| El diagnóstico se percibe como examen | Comparan puntuaciones o intentan “ganar” | Repetir que no tiene nota, ocultar perfiles y valorar honestidad. |
+| Se fijan etiquetas o roles | “Yo soy malo para...” o siempre construye la misma persona | Hablar de habilidades desarrollables y anunciar rotación. |
+| Equipos improvisados por amistad | Desequilibrio o personas aisladas | Aplicar varias evidencias, regla 3–4 y accesibilidad.
 
 ---
 
@@ -622,88 +351,57 @@ No necesito que hoy sepáis programar el agente. Necesito que entendáis cómo v
 
 ### Si solo hay 45 minutos
 
-Priorizar:
-
-1. Apertura y narrativa del proyecto.
-2. Tabla de hitos muy resumida.
-3. Semáforo básico de IA.
-4. Ticket de salida.
-
-Posponer:
-
-- miniactividad de boceto;
-- explicación más amplia de Scrum;
-- puesta en común.
+Presentar curso/hitos 15, Scrum mínimo 10, autoevaluación 10 y ticket 10. Posponer microprueba y equipos; la torre no empieza hasta completarlos.
 
 ### Si hay 90 minutos
 
-Mantener:
-
-1. Apertura.
-2. Ideas previas.
-3. Presentación de hitos.
-4. IA responsable.
-5. Miniactividad reducida.
-6. Ticket de salida.
-
-Reducir:
-
-- puesta en común;
-- detalles de entregables.
+Realizar presentación, IA, Scrum y autoevaluación. Reservar otra sesión de 45 minutos para microprueba, composición y cierre. La torre se realiza en la sesión posterior.
 
 ### Si hay 135 minutos
 
-Realizar la secuencia completa propuesta.
+Aplicar la secuencia completa. Es la opción recomendada.
+
+No eliminar privacidad, finalidad del diagnóstico ni revisión futura de equipos para ahorrar tiempo.
 
 ---
 
 ## 13. Producto docente esperado tras la sesión
 
-Al terminar la sesión, el docente debería tener:
-
-- impresión inicial del grupo;
-- dudas frecuentes del alumnado;
-- primeras ideas de agente propuestas por el alumnado;
-- tickets de salida;
-- señales de posibles agrupamientos;
-- aspectos que conviene reforzar antes de la torre de papel.
+```text
+[ ] Dudas iniciales y ticket revisados.
+[ ] Autoevaluaciones privadas recogidas.
+[ ] Microprueba y aportación individual observadas.
+[ ] Matriz docente completada sin convertirla en nota.
+[ ] Combinación matemática de equipos de 3 o 4 comprobada.
+[ ] Equipos equilibrados por habilidades y apoyos.
+[ ] Responsabilidades iniciales preparadas y rotación anunciada.
+[ ] Torre preparada para la siguiente sesión.
+```
 
 ---
 
 ## 14. Preparación de la siguiente sesión
 
-Antes de la siguiente sesión, revisar:
-
-1. Tickets de salida.
-2. Dudas sobre IA responsable.
-3. Ideas equivocadas sobre el alcance del proyecto.
-4. Posibles agrupamientos para la torre de papel.
-5. Materiales necesarios para H0.
-
-La siguiente sesión debería conectar con:
-
-```text
-03-primera-semana-scrum-torre-papel.md
-```
-
-Objetivo de la siguiente sesión:
-
-```text
-Vivir un sprint corto mediante la torre de papel y traducirlo al modo de trabajo del proyecto MiniJarvis.
-```
+1. Confirmar asistencia y equipos provisionales.
+2. Resolver ausencias sin generar equipos de cinco ni parejas aisladas.
+3. Preparar responsabilidades iniciales; no publicar puntuaciones.
+4. Preparar materiales iguales, tablero y cronómetro.
+5. Conectar con `03-primera-semana-scrum-torre-papel.md` y `11-guia-docente-torre-papel-scrum.md`.
+6. Usar la retrospectiva para revisar roles y composición.
 
 ---
 
 ## 15. Criterio de éxito de esta primera sesión
 
-La sesión habrá funcionado si la mayoría del alumnado puede decir:
-
 ```text
-Este curso construiremos un agente paso a paso.
-No tengo que saber IA avanzada desde el primer día.
-La IA se puede usar, pero con responsabilidad.
-Las entregas deben poder ejecutarse, documentarse y defenderse.
-Empezaremos aprendiendo a trabajar por hitos y con Scrum.
+[ ] El alumnado comprende curso, MiniJarvis, hitos, evidencias y defensa.
+[ ] Puede explicar sprint, backlog, bloqueo, review y retrospectiva.
+[ ] Reconoce dos habilidades que aporta y dos que desarrollará.
+[ ] Sabe que el diagnóstico no tiene nota ni fija roles.
+[ ] Se ha realizado una microprueba observable.
+[ ] Existen equipos provisionales equilibrados de tres o cuatro.
+[ ] Se han considerado accesibilidad y ausencias.
+[ ] La torre puede comenzar en la siguiente sesión.
 ```
 
 <!-- AJUSTE-COBERTURA-CONCEPTOS-32 -->

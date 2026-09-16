@@ -1,5 +1,39 @@
 # Mapa maestro del curso 2026/2027
 
+<!-- HEXA-POLITICA-TODOS-HITOS:START -->
+
+## Política obligatoria: un ciclo HEXA completo en cada hito
+
+Cada hito de MiniJarvis se considera un reto didáctico completo. Por tanto, **H0, H1, H2, H3, H4, H5, H6, H7 y HF deben recorrer y evidenciar las cuatro fases H–E–X–A**. No se aplica HEXA una sola vez al proyecto anual ni se da por cumplido mediante actividades aisladas.
+
+| Fase | Función obligatoria en cada hito | Evidencia mínima |
+|---|---|---|
+| H — Hecho / reto | Situar el problema, producto, límites y criterios de éxito. | Reformulación del reto y diagnóstico inicial. |
+| E — Exploración | Comparar, predecir, formular hipótesis y realizar pruebas iniciales guiadas. | Registro de alternativas, hipótesis, prueba o decisión. |
+| X — eXplicación | Formalizar conceptos después de la exploración, con instrucción docente explícita. | Explicación individual conectada con el producto. |
+| A — Aplicación | Construir, probar, documentar, defender y mejorar. | Producto funcional o evidencia equivalente, pruebas, documentación y defensa/review. |
+
+La temporalización de cada hito debe reservar, como orientación, un 10–15 % para H, un 20–25 % para E, un 25–30 % para X y un 35–45 % para A. No son cuatro bloques rígidos: una sesión puede cerrar una fase y abrir la siguiente, pero ninguna puede quedar sin tiempo ni evidencia. Los cierres C1/C2 consolidan o recuperan fases; no sustituyen el ciclo del hito.
+
+### Trazabilidad por retos
+
+| Hito | Reto | Expediente HEXA mínimo |
+|---|---|---|
+| H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
+| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
+| H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
+| H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
+| H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
+| H5 | Resolver el crecimiento de comandos mediante refactorización segura, contratos simples y código extensible. | diagnóstico del problema, comparación de diseños, explicación de interfaz/Command, refactorización, herramienta nueva, revisión Git y defensa |
+| H6 | Conservar memoria e historial entre ejecuciones con ficheros, trazabilidad y tratamiento seguro de errores y datos. | problema reproducido, decisiones de ruta/formato, explicación de persistencia/excepciones/logs, código, prueba en dos ejecuciones, seguridad y defensa |
+| H7 | Integrar o simular una ayuda de IA con límites, seguridad, registro y validación humana. | caso de uso y riesgos, clasificación de prompts, explicación de seguridad/validación, simulación o integración segura, registros y defensa |
+| HF | Demostrar el aprendizaje del itinerario, localizar carencias y aplicar una mejora o recuperación basada en evidencias. | mapa de evidencias, selección razonada, explicación del progreso, portfolio, demo, defensa, recuperación y plan de mejora |
+
+Regla de evaluación: el producto final por sí solo no acredita el proceso. Si falta una fase, se identifica y recupera su evidencia específica.
+
+<!-- HEXA-POLITICA-TODOS-HITOS:END -->
+
+
 ## Programación y Entornos de Desarrollo — 1.º DAW — Granada
 
 Versión: cierre curricular 1.0 — julio 2026
@@ -393,7 +427,7 @@ Esta propuesta debe revisarse después con la matriz RA/CE detallada.
 
 | Hito | Periodo orientativo | Producto del alumnado | Programación | Entornos |
 |---|---|---|---|---|
-| 0. Bootcamp Scrum y acuerdos | Semana 1 | Torre de papel, mini-sprint, tablero, roles, contrato de equipo | Primer contacto con resolución de problemas | Metodologías ágiles, fases de desarrollo, tablero |
+| 0. Bootcamp Scrum, diagnóstico y acuerdos | Semana 1 | Presentación, autoevaluación privada, microprueba, equipos provisionales 3–4, torre, tablero, review, retrospectiva y contrato | Diagnóstico no calificable de resolución, prueba y explicación | Metodologías ágiles, fases, tablero y revisión de equipos |
 | 1. Primer asistente por consola | Sept-oct | Programa Java que recibe órdenes simples y responde con reglas | RA1, RA2 inicial | RA1, RA2: IDE, ciclo fuente-ejecutable, IntelliJ |
 | 2. Agente con decisiones y depuración | Oct-nov | Agente con comandos, menús, control de flujo y manejo básico de errores | RA3 | RA3: depuración, puntos de ruptura, casos de prueba |
 | 3. Agente con memoria en colecciones | Nov-dic | Memoria temporal usando arrays/listas/mapas y búsqueda simple | RA6 inicial | RA3: pruebas unitarias básicas, documentación de incidencias |
@@ -532,30 +566,32 @@ Instrumentos previstos:
 
 ---
 
-## 11. Primera semana: Scrum mediante torre de papel
+## 11. Primera semana: curso, Scrum, diagnóstico y torre de papel
 
-Borrador inicial de secuencia:
+La torre no abre la semana sin preparación. Antes se presenta el curso, se explica Scrum y se recogen evidencias para formar equipos provisionales.
 
-| Momento | Actividad | Evidencia |
-|---|---|---|
-| Activar | Presentar reto: construir la torre de papel más alta/estable con restricciones. | Preguntas iniciales y expectativas. |
-| Equipos | Crear equipos de 3-4 y roles adaptados. | Contrato rápido de equipo. |
-| Investigar | Qué es Scrum, sprint, backlog, tarea, daily, review y retro. | Glosario mínimo. |
-| Idear | Diseñar estrategia de torre y criterios de éxito. | Boceto/propuesta. |
-| Planificar | Backlog de tareas de construcción. | Tablero simple. |
-| Ejecutar | Sprint corto de construcción. | Torre/prototipo. |
-| Comunicar | Review y retrospectiva. | Demo, métricas y mejora propuesta. |
-| Transferir | Relacionar la experiencia con el proyecto del agente IA. | Primer backlog del agente. |
+| Momento | Tiempo orientativo | Actividad | Evidencia |
+|---|---:|---|---|
+| H — Curso y reto | 35 min | MiniJarvis, hitos, HEXA, evidencias y criterios de H0. | Reformulación y preguntas. |
+| Seguridad | 15 min | IA responsable, autoría y defensa. | Semáforo/ticket. |
+| E/X — Scrum mínimo | 20 min | Sprint, backlog, bloqueo, prueba, review y retrospectiva. | Glosario y microcasos. |
+| E — Autoevaluación | 10 min | 16 ítems; dos aportaciones y dos habilidades por desarrollar. | Perfil privado, no calificable. |
+| E — Microprueba | 20 min | Organizar seis tareas, terminado, bloqueo y contraste. | Backlog y aportación individual. |
+| Equipos provisionales | 25 min | Regla 3–4, accesibilidad y habilidades complementarias. | Matriz docente privada y responsabilidades iniciales. |
+| Cierre | 10 min | Comprobar comprensión y preparar la torre. | Ticket. |
+| A — Sesión siguiente | 90 min | Backlog, sprint de torre, prueba, review y retrospectiva. | Torre, tablero, review y revisión del equipo. |
+| Transferencia | Resto H0 | Contrato, roles rotatorios y primer backlog de MiniJarvis. | Acuerdos y mejora. |
 
-Resultado esperado de la semana:
+Regla: los equipos no se forman únicamente por amistad ni por una puntuación. Se priorizan cuatro personas y se introducen equipos de tres según el resto al dividir la asistencia entre cuatro. Son provisionales hasta la retrospectiva. El diagnóstico no tiene nota, no publica puntuaciones y no fija roles.
 
-- El alumnado entiende Scrum porque lo ha vivido.
-- Cada equipo tiene roles iniciales.
-- Cada equipo sabe usar un tablero básico.
-- Se inicia el backlog del proyecto del agente.
-- Se introduce la idea de demo, retrospectiva y mejora continua.
+Resultado esperado:
 
----
+- El alumnado comprende el contenido y la forma de trabajo del curso.
+- Puede explicar el ciclo Scrum mínimo.
+- Reconoce aportaciones y habilidades que quiere desarrollar.
+- El profesorado dispone de equipos equilibrados de tres o cuatro.
+- La torre valida producto, proceso, roles y composición.
+- Cada equipo inicia contrato, tablero y transferencia a MiniJarvis.
 
 ## 12. Riesgos detectados
 

@@ -1,4 +1,4 @@
-# Matriz integrada RA/CE → evidencias → tareas
+1# Matriz integrada RA/CE → evidencias → tareas
 
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
@@ -41,15 +41,15 @@ Documentos anexos:
 
 | Hito | Periodo orientativo | Producto guía | Scrum/HEXA | Resultado esperado |
 |---|---|---|---|---|
-| H0 | Semana 1 | Torre de papel + tablero inicial | Fase 0 completa + sprint simulado | Comprender Scrum y crear normas de equipo. |
-| H1 | Sept-oct | Primer asistente por consola | Activar + Investigar + Ejecutar | Programa Java muy básico con entrada, salida, variables y constantes; sin menú ni estructuras de control avanzadas. |
-| H2 | Oct-nov | Agente con decisiones y depuración | Ejecutar + Comunicar | Comandos, menús, estructuras de control, pruebas manuales y depuración. |
-| H3 | Nov-dic | Agente con memoria en colecciones | Ejecutar + Comunicar | Memoria temporal con arrays/listas/mapas y búsquedas. |
-| H4 | Ene-feb | Agente orientado a objetos | Idear + Planificar + Ejecutar | Modelo de clases: Agent, Message, Memory, Tool, Command. |
-| H5 | Feb-mar | Agente extensible con herramientas | Planificar + Ejecutar | Interfaces, composición/herencia, refactorización y GitHub colaborativo. |
-| H6 | Abr-inicio mayo | Agente persistente y trazable | Ejecutar + Comunicar | Ficheros, logs, base de conocimiento, registro de IA, Docker guiado. |
-| H7 | Antes de FFEOE si procede | Integración IA responsable | Ejecutar + Comunicar | Conexión opcional con Gemini/Jarvis o simulación robusta. |
-| HF | Después FFEOE | Presentación/recuperación | Comunicar | Defensa, portfolio final, recuperación o mejora. |
+| H0 | Semana 1 | Diagnóstico + equipos provisionales + torre + tablero | H–E–X–A completo | Comprender Scrum, reconocer aportaciones y validar equipos de 3 o 4. |
+| H1 | Sept-oct | Primer asistente por consola | H–E–X–A completo | Programa Java muy básico con entrada, salida, variables y constantes; sin menú ni estructuras de control avanzadas. |
+| H2 | Oct-nov | Agente con decisiones y depuración | H–E–X–A completo | Comandos, menús, estructuras de control, pruebas manuales y depuración. |
+| H3 | Nov-dic | Agente con memoria en colecciones | H–E–X–A completo | Memoria temporal con arrays/listas/mapas y búsquedas. |
+| H4 | Ene-feb | Agente orientado a objetos | H–E–X–A completo | Modelo de clases: Agent, Message, Memory, Tool, Command. |
+| H5 | Feb-mar | Agente extensible con herramientas | H–E–X–A completo | Interfaces, composición/herencia, refactorización y GitHub colaborativo. |
+| H6 | Abr-inicio mayo | Agente persistente y trazable | H–E–X–A completo | Ficheros, logs, base de conocimiento, registro de IA, Docker guiado. |
+| H7 | Antes de FFEOE si procede | Integración IA responsable | H–E–X–A completo | Conexión opcional con Gemini/Jarvis o simulación robusta. |
+| HF | Después FFEOE | Presentación/recuperación | H–E–X–A completo | Defensa, portfolio final, recuperación o mejora. |
 
 ---
 
@@ -59,11 +59,11 @@ Documentos anexos:
 
 | Elemento | Detalle |
 |---|---|
-| Producto | Torre de papel, tablero Scrum inicial, roles adaptados, contrato de equipo. |
+| Producto | Diagnóstico no calificable, equipos provisionales de 3 o 4, torre, tablero, review, retrospectiva y contrato. |
 | Programación | No evalúa aún RA técnicos de forma fuerte; sirve como activación y diagnóstico. |
 | Entornos | ED RA1.g: metodologías ágiles y fases de desarrollo. |
-| Evidencias | Foto/medición de torre, tablero, backlog, reflexión de retrospectiva, contrato de equipo. |
-| Tareas | Crear equipo; definir roles; construir backlog; ejecutar sprint corto; hacer review; hacer retrospectiva; trasladar aprendizajes al proyecto del agente. |
+| Evidencias | Autoevaluación privada, microprueba, matriz docente privada, foto/medición, tablero, backlog, review, retrospectiva, revisión de equipo y contrato. |
+| Tareas | Presentar Scrum; realizar diagnóstico; formar equipos provisionales equilibrados; definir responsabilidades rotatorias; construir backlog; ejecutar sprint; probar; hacer review y retrospectiva; revisar el equipo; transferir a MiniJarvis. |
 | Defensa | Explicar qué es un sprint, qué salió mal, qué cambiarían y cómo se aplicará al agente IA. |
 | IA | Sin IA o solo para contraste posterior sobre Scrum, registrada si se usa. |
 
