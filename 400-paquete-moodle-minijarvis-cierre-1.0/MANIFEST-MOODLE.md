@@ -1,6 +1,6 @@
 # Manifest del paquete Moodle
 
-Total de archivos copiados/generados: 223
+Total de archivos copiados/generados: 224
 
 | Origen | Destino |
 |---|---|
@@ -227,3 +227,4 @@ Total de archivos copiados/generados: 223
 | `plantillas/retrospectiva-template.md` | `06-plantillas-globales/retrospectiva-template.md` |
 | `plantillas/seguridad-datos-template.md` | `06-plantillas-globales/seguridad-datos-template.md` |
 | `GENERATED` | `README-MOODLE.md` |
+| `GENERATED` | `GUIA-MOODLE-CENTROS-ANDALUCIA.md` |

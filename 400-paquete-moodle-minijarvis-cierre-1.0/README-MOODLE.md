@@ -2,7 +2,15 @@
 
 Versión: cierre curricular 1.0 — julio 2026
 
-Este paquete está preparado para subir a Moodle por secciones o temas. No sustituye al repositorio completo: es una maqueta limpia para publicación docente.
+Este paquete está preparado para publicar el curso por secciones o temas en **Moodle Centros Andalucía**. No sustituye al repositorio completo: es una maqueta limpia para publicación docente.
+
+Antes de configurar el aula, consulta:
+
+`GUIA-MOODLE-CENTROS-ANDALUCIA.md`
+
+La guía explica el acceso con IdEA, la creación del aula mediante Gestión de aulas, la sincronización con Séneca, la configuración de grupos y tareas, la publicación progresiva H0–HF, la protección de HADA y el procedimiento de copia de seguridad.
+
+> El ZIP de este paquete no es una copia restaurable `.mbz`. La copia `.mbz` debe generarse desde Moodle Centros después de construir y comprobar el aula.
 
 ## Política de publicación
 
@@ -21,6 +29,23 @@ Los ejemplos de Laura se publican después del intento propio del alumnado o tra
 | 03. Guías docentes | `04-guias-docentes-autonomas/` | Uso del profesorado; no publicar íntegramente al alumnado salvo decisión expresa. |
 | 04. Ejemplos modelo Laura | `05-ejemplos-laura-mostrar-despues/` | Ocultar inicialmente; mostrar después del intento propio. |
 | 05. Plantillas globales | `06-plantillas-globales/` | Plantillas transversales de portfolio, defensa, IA, pruebas, etc. |
+
+## Particularización para Moodle Centros Andalucía
+
+Configuración recomendada:
+
+```text
+Acceso del profesorado: IdEA
+Creación del aula: bloque Gestión de aulas
+Origen de grupos oficiales: Séneca
+Formato del curso: temas organizados por hitos H0–HF
+Ejemplos de Laura: ocultos hasta el intento propio
+Guías docentes: fuera de la vista del alumnado
+Copia reutilizable: .mbz generada desde la plataforma
+Soporte corporativo: CAUCE
+```
+
+Al comenzar 2026/2027 deben comprobarse en la instancia real la versión de Moodle, los complementos disponibles, los límites de subida y el comportamiento vigente de la sincronización.
 
 ## Orden sugerido de publicación del libro
 
