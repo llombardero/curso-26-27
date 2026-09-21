@@ -19,14 +19,14 @@ Documentos principales:
 Plantillas locales:
 
 ```text
-plantillas/README-h4-template.md
-plantillas/diagrama-clases-h4-template.md
-plantillas/diagrama-comportamiento-h4-template.md
-plantillas/relacion-diagrama-codigo-h4-template.md
-plantillas/comparacion-java-python-h4-template.md
-plantillas/portfolio-h4-template.md
-plantillas/registro-ia-h4-template.md
-plantillas/defensa-h4-template.md
+plantillas/README-h4-plantilla.md
+plantillas/diagrama-clases-h4-plantilla.md
+plantillas/diagrama-comportamiento-h4-plantilla.md
+plantillas/relacion-diagrama-codigo-h4-plantilla.md
+plantillas/comparacion-java-python-h4-plantilla.md
+plantillas/portfolio-h4-plantilla.md
+plantillas/registro-ia-h4-plantilla.md
+plantillas/defensa-h4-plantilla.md
 ```
 
 Restricción didáctica clave:

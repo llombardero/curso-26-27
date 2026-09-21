@@ -7,7 +7,7 @@
 | Orquestar herramientas sin condicional gigante. | Añadir herramienta requiere bajo impacto. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** X.
+**Hito:** H5.
 
 ## Material que necesitas
 

@@ -7,7 +7,7 @@
 | Completar herramientas principales. | Agente funciona con varias herramientas. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** X.
+**Hito:** H5.
 
 ## Material que necesitas
 

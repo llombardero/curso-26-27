@@ -7,7 +7,7 @@
 | Elegir integración real o simulación robusta. | Decisión H7 documentada. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H7. **Momento HEXA:** H.
+**Hito:** H7.
 
 ## Material que necesitas
 

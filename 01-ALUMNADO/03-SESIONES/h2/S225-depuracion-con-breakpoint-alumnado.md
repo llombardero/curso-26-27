@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Observar el programa mientras se ejecuta. | `docs/depuracion-h2.md` con captura o descripción. |
+| Observar el programa mientras se ejecuta. | `docs/depuracion-h2` con captura o descripción. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** X.
+**Hito:** H2.
 
 ## Material que necesitas
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/depuracion-h2.md` con captura o descripción.**
+- [ ] He producido o actualizado: **`docs/depuracion-h2` con captura o descripción.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

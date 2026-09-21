@@ -1,52 +1,6 @@
 # Rúbricas por hitos
 
-<!-- HEXA-POLITICA-TODOS-HITOS:START -->
-
-## Política obligatoria: un ciclo HEXA completo en cada hito
-
-Cada hito de MiniJarvis se considera un reto didáctico completo. Por tanto, **H0, H1, H2, H3, H4, H5, H6, H7 y HF deben recorrer y evidenciar las cuatro fases H–E–X–A**. No se aplica HEXA una sola vez al proyecto anual ni se da por cumplido mediante actividades aisladas.
-
-| Fase | Función obligatoria en cada hito | Evidencia mínima |
-|---|---|---|
-| H — Hecho / reto | Situar el problema, producto, límites y criterios de éxito. | Reformulación del reto y diagnóstico inicial. |
-| E — Exploración | Comparar, predecir, formular hipótesis y realizar pruebas iniciales guiadas. | Registro de alternativas, hipótesis, prueba o decisión. |
-| X — eXplicación | Formalizar conceptos después de la exploración, con instrucción docente explícita. | Explicación individual conectada con el producto. |
-| A — Aplicación | Construir, probar, documentar, defender y mejorar. | Producto funcional o evidencia equivalente, pruebas, documentación y defensa/review. |
-
-La temporalización de cada hito debe reservar, como orientación, un 10–15 % para H, un 20–25 % para E, un 25–30 % para X y un 35–45 % para A. No son cuatro bloques rígidos: una sesión puede cerrar una fase y abrir la siguiente, pero ninguna puede quedar sin tiempo ni evidencia. Los cierres C1/C2 consolidan o recuperan fases; no sustituyen el ciclo del hito.
-
-### Trazabilidad por retos
-
-| Hito | Reto | Expediente HEXA mínimo |
-|---|---|---|
-| H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
-| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
-| H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
-| H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
-| H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
-| H5 | Resolver el crecimiento de comandos mediante refactorización segura, contratos simples y código extensible. | diagnóstico del problema, comparación de diseños, explicación de interfaz/Command, refactorización, herramienta nueva, revisión Git y defensa |
-| H6 | Conservar memoria e historial entre ejecuciones con ficheros, trazabilidad y tratamiento seguro de errores y datos. | problema reproducido, decisiones de ruta/formato, explicación de persistencia/excepciones/logs, código, prueba en dos ejecuciones, seguridad y defensa |
-| H7 | Integrar o simular una ayuda de IA con límites, seguridad, registro y validación humana. | caso de uso y riesgos, clasificación de prompts, explicación de seguridad/validación, simulación o integración segura, registros y defensa |
-| HF | Demostrar el aprendizaje del itinerario, localizar carencias y aplicar una mejora o recuperación basada en evidencias. | mapa de evidencias, selección razonada, explicación del progreso, portfolio, demo, defensa, recuperación y plan de mejora |
-
-Regla de evaluación: el producto final por sí solo no acredita el proceso. Si falta una fase, se identifica y recupera su evidencia específica.
-
-<!-- HEXA-POLITICA-TODOS-HITOS:END -->
-
-
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
-
-Edición final para Moodle — septiembre de 2026
-Documentos relacionados:
-
-- `00-mapa-maestro-curso-2026-2027.md`
-- `01-matriz-integrada-ra-ce-evidencias-tareas.md`
-- `01A-anexo-programacion-ra-ce.md`
-- `01B-anexo-entornos-ra-ce.md`
-- `02-calendario-hitos-sprints-2026-2027.md`
-- `04A-enunciados-y-entregables-alumnado.md`
-- `04B-modelo-entregables-laura.md`
-- `05-politica-uso-ia-semaforo-registro-defensa.md`
 
 ---
 
@@ -71,8 +25,8 @@ Las rúbricas están pensadas para evaluar evidencias de Programación y Entorno
 
 Uso recomendado:
 
-- La rúbrica no sustituye a la calificación por RA/CE.
-- Sirve para valorar la calidad de evidencias asociadas a RA/CE.
+- La rúbrica explica la calidad esperada en las evidencias.
+- Programación y Entornos se califican por separado aunque compartan evidencias.
 - La defensa individual puede ajustar la validez de una evidencia grupal.
 - Si hay uso de IA no trazado, la evidencia puede quedar condicionada o invalidada.
 
@@ -97,10 +51,6 @@ Estas dimensiones pueden aparecer en todos los hitos, ajustadas al nivel.
 
 ## 4. H0 — Bootcamp Scrum, diagnóstico y torre de papel
 
-RA/CE principales: Entornos ED RA1.b y ED RA1.g; diagnóstico inicial de Programación.
-
-La autoevaluación, sus puntuaciones y la habilidad previa no se califican. Se evalúa la comprensión y el proceso observable, no “tener un perfil alto”.
-
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
 | Comprensión Scrum | Distingue sprint, backlog, bloqueo, prueba, review y retrospectiva y los conecta con ejemplos. | Comprende los conceptos básicos con ayuda puntual. | Confunde varios conceptos o los aplica solo de forma mecánica. | No comprende la dinámica ni puede explicarla. |
@@ -117,13 +67,6 @@ No penalizar una necesidad de apoyo ni premiar saber programar de antemano. Si f
 
 ## 5. H1 — Primer asistente básico
 
-RA/CE principales:
-
-- Programación PR RA1.
-- Programación PR RA2 inicial.
-- Entornos ED RA1.
-- Entornos ED RA2.
-
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
 | Programa Java básico | Clase `Main` clara, entrada/salida correcta, variables y constantes bien usadas. | Programa ejecutable con entrada/salida y variables. | Programa muy incompleto o con errores menores. | No compila o no responde al hito. |
@@ -135,11 +78,6 @@ RA/CE principales:
 ---
 
 ## 6. H2 — Agente con decisiones y depuración
-
-RA/CE principales:
-
-- Programación PR RA3.
-- Entornos ED RA3.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -154,11 +92,6 @@ RA/CE principales:
 
 ## 7. H3 — Agente con memoria en colecciones
 
-RA/CE principales:
-
-- Programación PR RA6.
-- Entornos ED RA3.
-
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
 | Memoria temporal | Guarda, consulta y gestiona información correctamente. | Memoria funcional en casos básicos. | Memoria parcial o frágil. | No hay memoria funcional. |
@@ -170,12 +103,6 @@ RA/CE principales:
 ---
 
 ## 8. H4 — Agente orientado a objetos
-
-RA/CE principales:
-
-- Programación PR RA4.
-- Entornos ED RA5.
-- Entornos ED RA6.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -190,12 +117,6 @@ RA/CE principales:
 
 ## 9. H5 — Agente extensible, código limpio y patrones iniciales
 
-RA/CE principales:
-
-- Programación PR RA7 no imprescindible/evaluable.
-- Entornos ED RA4.
-- Entornos ED RA6 si procede.
-
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
 | Extensibilidad | Permite añadir herramientas/comandos con bajo impacto. | Extensible en casos básicos. | Extensibilidad limitada. | Diseño rígido o roto. |
@@ -209,13 +130,6 @@ RA/CE principales:
 
 ## 10. H6 — Agente persistente y trazable
 
-RA/CE principales:
-
-- Programación PR RA5.
-- Programación PR RA8/RA9 como ampliación.
-- Entornos ED RA3.
-- Entornos ED RA4.
-
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
 | Persistencia | Guarda y recupera información con control de errores. | Persistencia funcional básica. | Persistencia parcial o frágil. | No hay persistencia funcional. |
@@ -228,12 +142,6 @@ RA/CE principales:
 ---
 
 ## 11. H7 — Integración IA responsable o simulación robusta
-
-RA/CE principales:
-
-- Consolidación Programación PR RA1-RA6.
-- Programación PR RA7/RA8/RA9 si procede.
-- Entornos ED RA3/RA4 aplicados a validación, seguridad y documentación.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -253,23 +161,12 @@ RA/CE principales:
 | Portfolio final | Evidencias completas, ordenadas y reflexivas. | Portfolio suficiente. | Portfolio incompleto. | No permite valorar aprendizaje. |
 | Demo final | Presenta evolución y producto de forma clara. | Demo funcional. | Demo parcial. | No hay demo válida. |
 | Defensa individual | Explica aportación, decisiones, errores y aprendizajes. | Defiende lo principal. | Defensa insegura o parcial. | No puede defender su trabajo. |
-| Recuperación | Evidencias específicas cubren RA pendientes. | Recupera lo esencial. | Recuperación parcial. | No recupera RA pendientes. |
+| Recuperación | Evidencias específicas cubren aprendizajes pendientes. | Recupera lo esencial. | Recuperación parcial. | No recupera aprendizajes pendientes. |
 | Uso IA final | Registro completo y reflexión crítica. | Registro suficiente. | Registro incompleto. | Uso no declarado/no defendible. |
 
 ---
 
-## 13. Uso de la rúbrica con RA/CE
-
-Para cada hito, el profesorado debe vincular la puntuación de estas dimensiones con los RA/CE correspondientes:
-
-- Programación se calificará según PR RA/CE del anexo `01A`.
-- Entornos se calificará según ED RA/CE del anexo `01B`.
-- Una misma evidencia puede servir para ambos módulos, pero la calificación se separa.
-- La defensa individual puede confirmar, matizar o invalidar una evidencia grupal.
-
----
-
-## 14. Regla sobre IA y defensa
+## 13. Regla sobre IA y defensa
 
 Si una entrega tiene buena apariencia técnica pero el alumnado no puede explicarla, modificarla o defenderla, la evidencia no debe considerarse plenamente válida.
 
@@ -280,49 +177,3 @@ Sin comprensión defendible, no hay evidencia completa de aprendizaje.
 ```
 
 ---
-
-## 15. Próximo paso
-
-Crear plantillas reutilizables para entregables:
-
-```text
-07-plantillas-entregables.md
-```
-
-Plantillas recomendadas:
-
-- README.
-- Portfolio individual.
-- Registro IA.
-- Plan de pruebas.
-- Informe de depuración.
-- Retrospectiva.
-- Comparación Java ↔ Python.
-- Registro de patrón de diseño.
-
-# 16. Ajuste aplicado a los hitos MiniJarvis
-
-Este documento ya no queda solo como análisis: se ha usado para modificar los hitos, guías docentes autónomas, paquetes de hito, libro del alumnado, índice global y respuestas modelo de Laura.
-
-Criterio aplicado:
-
-```text
-Todo concepto de Programación recopilado aquí debe aparecer al final del itinerario como núcleo, ampliación, recuperación o mejora defendible.
-```
-
-Distribución final:
-
-| Bloque | Función curricular |
-|---|---|
-| H1-H2 | Fundamentos, variables, tipos, entrada/salida, condiciones, bucles, switch, depuración y eficiencia básica. |
-| H3 | Colecciones, listas, recorridos, mutabilidad, arrays, Set y Map como ampliaciones. |
-| H4 | Clases, objetos, métodos, constructores, referencias, diagramas y responsabilidades. |
-| H5 | Tests, TDD, interfaces, polimorfismo, clean code y Command simplificado. |
-| H6 | Excepciones, invariantes, persistencia, logs y repositorio como idea inicial. |
-| H7 | Records/enums, abstracción, Strategy opcional, Optional, streams, funciones puras e IA responsable. |
-| HF | Cierre y mejora: JavaFX, eventos, MVC, arquitectura hexagonal, repositorios, CRUD, transacciones y defensa global. |
-
-Respuesta de Laura esperada al final:
-
-> Puedo explicar dónde aparece cada concepto importante en mi proyecto MiniJarvis o, si es una ampliación, dónde lo he estudiado y cómo lo aplicaría de forma segura sin romper el diseño.
-

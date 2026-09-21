@@ -7,7 +7,7 @@
 | Herramienta que colabora con `Memory`. | Comando recordar funciona como herramienta. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** X.
+**Hito:** H5.
 
 ## Material que necesitas
 

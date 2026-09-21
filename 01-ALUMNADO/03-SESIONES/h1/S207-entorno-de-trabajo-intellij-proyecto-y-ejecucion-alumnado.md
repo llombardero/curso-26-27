@@ -7,7 +7,7 @@
 | Crear y ejecutar un proyecto Java mínimo. | Captura o documento de primera ejecución. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H1. **Momento HEXA:** E.
+**Hito:** H1.
 
 ## Material que necesitas
 

@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Verificar guardar y cargar. | `docs/pruebas-persistencia-h6.md`. |
+| Verificar guardar y cargar. | `docs/pruebas-persistencia-h6`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** X.
+**Hito:** H6.
 
 ## Material que necesitas
 
@@ -38,7 +38,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/pruebas-persistencia-h6.md`.**
+- [ ] He producido o actualizado: **`docs/pruebas-persistencia-h6`.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

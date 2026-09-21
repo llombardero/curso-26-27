@@ -2,19 +2,6 @@
 
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
-Edición final para Moodle — septiembre de 2026
-Documentos relacionados:
-
-- `00-mapa-maestro-curso-2026-2027.md`
-- `01-matriz-integrada-ra-ce-evidencias-tareas.md`
-- `01A-anexo-programacion-ra-ce.md`
-- `01B-anexo-entornos-ra-ce.md`
-- `02-calendario-hitos-sprints-2026-2027.md`
-- `04A-enunciados-y-entregables-alumnado.md`
-- `04B-modelo-entregables-laura.md`
-- `05-politica-uso-ia-semaforo-registro-defensa.md`
-- `06-rubricas-hitos.md`
-
 ---
 
 ## 1. Propósito
@@ -37,17 +24,17 @@ Uso recomendado:
 
 ```text
 hN-nombre-del-hito/
-├── README.md
+├── README
 ├── src/
 │   └── ...
 ├── docs/
-│   ├── portfolio.md
-│   ├── registro-ia.md
-│   ├── pruebas.md
-│   ├── depuracion.md
-│   ├── retrospectiva.md
-│   ├── comparacion-java-python.md
-│   └── decisiones-tecnicas.md
+│   ├── portfolio
+│   ├── registro-ia
+│   ├── pruebas
+│   ├── depuracion
+│   ├── retrospectiva
+│   ├── comparacion-java-python
+│   └── decisiones-tecnicas
 └── .gitignore
 ```
 
@@ -67,7 +54,7 @@ No todos los hitos necesitan todos los archivos.
 
 ---
 
-## 3. Plantilla README.md
+## 3. Plantilla README
 
 ```markdown
 # HITO — Título del hito
@@ -131,7 +118,7 @@ Explica brevemente qué hay en cada carpeta.
 
 ## 6. Relación con Programación
 
-RA/CE trabajados:
+Aprendizajes trabajados:
 
 - 
 
@@ -143,7 +130,7 @@ Evidencias:
 
 ## 7. Relación con Entornos de Desarrollo
 
-RA/CE trabajados:
+Aprendizajes trabajados:
 
 - 
 
@@ -162,7 +149,7 @@ Resumen:
 Archivo de pruebas:
 
 ```text
-docs/pruebas.md
+docs/pruebas
 ```
 
 ---
@@ -174,7 +161,7 @@ He usado IA: sí / no.
 Si se ha usado, consultar:
 
 ```text
-docs/registro-ia.md
+docs/registro-ia
 ```
 
 ---
@@ -247,7 +234,7 @@ Indica fragmentos, clases, diagramas, pruebas o decisiones que puedes explicar.
 
 ## 5. Relación con Programación
 
-RA/CE que creo haber trabajado:
+Aprendizajes que creo haber trabajado:
 
 - 
 
@@ -259,7 +246,7 @@ Explicación:
 
 ## 6. Relación con Entornos de Desarrollo
 
-RA/CE que creo haber trabajado:
+Aprendizajes que creo haber trabajado:
 
 - 
 
@@ -280,7 +267,7 @@ Resumen del uso:
 Registro completo:
 
 ```text
-docs/registro-ia.md
+docs/registro-ia
 ```
 
 ---
@@ -713,7 +700,7 @@ Decisión:
 
 ¿Se usó IA para tomar o revisar esta decisión? sí / no
 
-Si sí, enlazar `registro-ia.md`.
+Si sí, enlazar `registro-ia`.
 ```
 
 ---
@@ -897,13 +884,3 @@ Por qué es importante:
 ```
 
 ---
-
-## 15. Próximo paso
-
-Estas plantillas pueden copiarse después en archivos separados dentro de una carpeta:
-
-```text
-plantillas/
-```
-
-si se quiere entregar al alumnado como documentos independientes.

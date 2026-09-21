@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Evitar secretos y datos personales. | `docs/seguridad-h6.md`. |
+| Evitar secretos y datos personales. | `docs/seguridad-h6`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** X.
+**Hito:** H6.
 
 ## Material que necesitas
 
@@ -38,7 +38,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/seguridad-h6.md`.**
+- [ ] He producido o actualizado: **`docs/seguridad-h6`.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

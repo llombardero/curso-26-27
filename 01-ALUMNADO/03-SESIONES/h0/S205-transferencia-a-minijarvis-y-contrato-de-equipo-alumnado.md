@@ -7,7 +7,7 @@
 | Utilizar las evidencias de la torre para revisar el equipo y convertir lo aprendido en acuerdos de trabajo para MiniJarvis. | Decisión razonada, contrato observable, funciones de H1, rotación y primer backlog verificable. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H0. **Momento HEXA:** A.
+**Hito:** H0.
 
 ---
 

@@ -7,7 +7,7 @@
 | Documentar aprendizaje y uso de IA. | Portfolio H5 y registro IA. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** A.
+**Hito:** H5.
 
 ## Material que necesitas
 

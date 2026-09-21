@@ -7,7 +7,7 @@
 | Documentar cómo ejecutar H1. | README H1 y documento/captura de ejecución. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H1. **Momento HEXA:** A.
+**Hito:** H1.
 
 ## Material que necesitas
 
@@ -17,7 +17,7 @@
 
 1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
 2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Crear `README.md` y evidencia de ejecución.**
+3. Realiza esta tarea: **Crear `README` y evidencia de ejecución.**
 4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
 5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
 

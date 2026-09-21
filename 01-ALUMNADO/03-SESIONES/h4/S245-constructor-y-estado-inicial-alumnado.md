@@ -7,7 +7,7 @@
 | Asegurar conceptos del Tema 5 relacionados con programación básica de clases. | Código con constructores sobrecargados y apartado en README/portfolio explicando cuándo se usa cada uno. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** E.
+**Hito:** H4.
 
 ## Material que necesitas
 

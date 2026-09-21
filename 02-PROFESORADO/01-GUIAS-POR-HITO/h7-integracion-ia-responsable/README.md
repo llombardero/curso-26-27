@@ -19,14 +19,14 @@ Documentos principales:
 Plantillas locales:
 
 ```text
-plantillas/README-h7-template.md
-plantillas/registro-prompts-h7-template.md
-plantillas/riesgos-ia-h7-template.md
-plantillas/configuracion-segura-h7-template.md
-plantillas/validacion-humana-h7-template.md
-plantillas/comparacion-java-python-h7-template.md
-plantillas/portfolio-h7-template.md
-plantillas/defensa-h7-template.md
+plantillas/README-h7-plantilla.md
+plantillas/registro-prompts-h7-plantilla.md
+plantillas/riesgos-ia-h7-plantilla.md
+plantillas/configuracion-segura-h7-plantilla.md
+plantillas/validacion-humana-h7-plantilla.md
+plantillas/comparacion-java-python-h7-plantilla.md
+plantillas/portfolio-h7-plantilla.md
+plantillas/defensa-h7-plantilla.md
 ```
 
 Restricción didáctica clave:

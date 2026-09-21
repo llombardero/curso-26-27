@@ -7,7 +7,7 @@
 | Entender la diferencia entre programa lineal e interactivo. | Tabla H1 frente a H2. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** H.
+**Hito:** H2.
 
 ## Material que necesitas
 

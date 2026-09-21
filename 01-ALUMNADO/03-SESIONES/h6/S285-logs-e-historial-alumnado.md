@@ -7,7 +7,7 @@
 | Registrar eventos simples. | Log generado sin datos sensibles. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** X.
+**Hito:** H6.
 
 ## Material que necesitas
 

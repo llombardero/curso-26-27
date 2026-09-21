@@ -19,13 +19,13 @@ Documentos principales:
 Plantillas locales:
 
 ```text
-plantillas/README-h1-template.md
-plantillas/evidencia-ejecucion-h1-template.md
-plantillas/portfolio-h1-template.md
-plantillas/registro-ia-h1-template.md
-plantillas/defensa-h1-template.md
-plantillas/incidencia-h1-template.md
-plantillas/vocabulario-h1-template.md
+plantillas/README-h1-plantilla.md
+plantillas/evidencia-ejecucion-h1-plantilla.md
+plantillas/portfolio-h1-plantilla.md
+plantillas/registro-ia-h1-plantilla.md
+plantillas/defensa-h1-plantilla.md
+plantillas/incidencia-h1-plantilla.md
+plantillas/vocabulario-h1-plantilla.md
 ```
 
 Ejemplo de alumna relacionado:

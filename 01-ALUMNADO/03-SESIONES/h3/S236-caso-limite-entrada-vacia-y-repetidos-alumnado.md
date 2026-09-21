@@ -7,7 +7,7 @@
 | Validar datos antes de guardarlos. | Pruebas de entrada vacía y repetida. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** X.
+**Hito:** H3.
 
 ## Material que necesitas
 

@@ -7,7 +7,7 @@
 | Retomar proyecto y detectar estado real. | Diagnóstico final por alumno/a y equipo. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** HF. **Momento HEXA:** H.
+**Hito:** HF.
 
 ## Material que necesitas
 
@@ -17,7 +17,7 @@
 
 1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
 2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Revisar repositorio, evidencias y RA pendientes.**
+3. Realiza esta tarea: **Revisar repositorio, evidencias y aprendizajes pendientes.**
 4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
 5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
 

@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Mejorar trazabilidad. | `docs/evidencia-git-h5.md`. |
+| Mejorar trazabilidad. | `docs/evidencia-git-h5`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** X.
+**Hito:** H5.
 
 ## Material que necesitas
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/evidencia-git-h5.md`.**
+- [ ] He producido o actualizado: **`docs/evidencia-git-h5`.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

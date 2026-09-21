@@ -7,7 +7,7 @@
 | Comprender persistencia. | Necesidad documentada de persistencia. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** H.
+**Hito:** H6.
 
 ## Material que necesitas
 

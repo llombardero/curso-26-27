@@ -1,43 +1,8 @@
 # Enunciados y entregables para el alumnado
 
-<!-- HEXA-POLITICA-TODOS-HITOS:START -->
-
-## Política obligatoria: un ciclo HEXA completo en cada hito
-
-Cada hito de MiniJarvis se considera un reto didáctico completo. Por tanto, **H0, H1, H2, H3, H4, H5, H6, H7 y HF deben recorrer y evidenciar las cuatro fases H–E–X–A**. No se aplica HEXA una sola vez al proyecto anual ni se da por cumplido mediante actividades aisladas.
-
-| Fase | Función obligatoria en cada hito | Evidencia mínima |
-|---|---|---|
-| H — Hecho / reto | Situar el problema, producto, límites y criterios de éxito. | Reformulación del reto y diagnóstico inicial. |
-| E — Exploración | Comparar, predecir, formular hipótesis y realizar pruebas iniciales guiadas. | Registro de alternativas, hipótesis, prueba o decisión. |
-| X — eXplicación | Formalizar conceptos después de la exploración, con instrucción docente explícita. | Explicación individual conectada con el producto. |
-| A — Aplicación | Construir, probar, documentar, defender y mejorar. | Producto funcional o evidencia equivalente, pruebas, documentación y defensa/review. |
-
-La temporalización de cada hito debe reservar, como orientación, un 10–15 % para H, un 20–25 % para E, un 25–30 % para X y un 35–45 % para A. No son cuatro bloques rígidos: una sesión puede cerrar una fase y abrir la siguiente, pero ninguna puede quedar sin tiempo ni evidencia. Los cierres C1/C2 consolidan o recuperan fases; no sustituyen el ciclo del hito.
-
-### Trazabilidad por retos
-
-| Hito | Reto | Expediente HEXA mínimo |
-|---|---|---|
-| H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
-| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
-| H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
-| H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
-| H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
-| H5 | Resolver el crecimiento de comandos mediante refactorización segura, contratos simples y código extensible. | diagnóstico del problema, comparación de diseños, explicación de interfaz/Command, refactorización, herramienta nueva, revisión Git y defensa |
-| H6 | Conservar memoria e historial entre ejecuciones con ficheros, trazabilidad y tratamiento seguro de errores y datos. | problema reproducido, decisiones de ruta/formato, explicación de persistencia/excepciones/logs, código, prueba en dos ejecuciones, seguridad y defensa |
-| H7 | Integrar o simular una ayuda de IA con límites, seguridad, registro y validación humana. | caso de uso y riesgos, clasificación de prompts, explicación de seguridad/validación, simulación o integración segura, registros y defensa |
-| HF | Demostrar el aprendizaje del itinerario, localizar carencias y aplicar una mejora o recuperación basada en evidencias. | mapa de evidencias, selección razonada, explicación del progreso, portfolio, demo, defensa, recuperación y plan de mejora |
-
-Regla de evaluación: el producto final por sí solo no acredita el proceso. Si falta una fase, se identifica y recupera su evidencia específica.
-
-<!-- HEXA-POLITICA-TODOS-HITOS:END -->
-
-
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
-Edición final para Moodle — septiembre de 2026
-Documento complementario: `04B-modelo-entregables-laura.md`
+Documento complementario: `04B-modelo-entregables-laura`
 
 ---
 
@@ -79,14 +44,14 @@ Estructura mínima recomendada de repositorio:
 
 ```text
 nombre-hito/
-├── README.md
+├── README
 ├── src/
 │   └── ...
 ├── docs/
-│   ├── portfolio.md
-│   ├── registro-ia.md
-│   ├── pruebas.md
-│   └── retrospectiva.md
+│   ├── portfolio
+│   ├── registro-ia
+│   ├── pruebas
+│   └── retrospectiva
 └── .gitignore
 ```
 
@@ -144,12 +109,6 @@ La composición es provisional hasta la retrospectiva de la torre.
 
 La autoevaluación completa y la matriz docente son privadas; no forman parte de una entrega pública.
 
-### Relación con módulos
-
-- Programación: diagnóstico inicial no calificable de resolución de problemas, organización, prueba y explicación.
-- Entornos ED RA1.b: fases de desarrollo.
-- Entornos ED RA1.g: metodologías ágiles.
-
 ### Uso de IA
 
 No es necesaria. No se introducen datos personales, perfiles ni puntuaciones en una herramienta de IA. Si se consulta vocabulario Scrum, se registra y verifica.
@@ -187,22 +146,10 @@ El objetivo es demostrar que comprendéis la estructura básica de un programa J
 | Entregable | Responsable | Formato |
 |---|---|---|
 | Código Java básico | Equipo o individual, según organización | `src/Main.java` |
-| README de ejecución | Equipo | `README.md` |
+| README de ejecución | Equipo | `README` |
 | Evidencia de ejecución | Equipo | Captura o bloque de salida |
-| Portfolio H1 | Individual | `docs/portfolio-h1.md` |
-| Registro de IA, si se usa | Individual | `docs/registro-ia.md` |
-
-### Relación con módulos
-
-Programación:
-
-- PR RA1;
-- PR RA2 inicial.
-
-Entornos:
-
-- ED RA1: relación entre programa, sistema, fuente y ejecutable;
-- ED RA2: uso de IntelliJ y proyecto inicial.
+| Portfolio H1 | Individual | `docs/portfolio-h1` |
+| Registro de IA, si se usa | Individual | `docs/registro-ia` |
 
 ### Uso de IA
 
@@ -260,22 +207,11 @@ También aprenderéis a probar y depurar el programa usando IntelliJ.
 | Entregable | Responsable | Formato |
 |---|---|---|
 | Código Java con menú | Equipo | GitHub |
-| Plan de pruebas | Equipo | `docs/pruebas-h2.md` |
-| Informe de depuración | Individual/equipo | `docs/depuracion-h2.md` |
+| Plan de pruebas | Equipo | `docs/pruebas-h2` |
+| Informe de depuración | Individual/equipo | `docs/depuracion-h2` |
 | Registro de incidencia | Equipo | GitHub issue o Markdown |
-| Comparación Java ↔ Python | Individual, casa | `docs/comparacion-java-python-h2.md` |
-| Registro de IA | Individual | `docs/registro-ia.md` |
-
-### Relación con módulos
-
-Programación:
-
-- PR RA3;
-- refuerzo PR RA1/RA2.
-
-Entornos:
-
-- ED RA3: pruebas, depuración e incidencias.
+| Comparación Java ↔ Python | Individual, casa | `docs/comparacion-java-python-h2` |
+| Registro de IA | Individual | `docs/registro-ia` |
 
 ### Uso de IA
 
@@ -329,22 +265,11 @@ El objetivo es aprender a elegir y usar estructuras de datos adecuadas.
 |---|---|---|
 | Código con memoria temporal | Equipo | GitHub |
 | README actualizado | Equipo | Markdown |
-| Pruebas de memoria | Equipo | `docs/pruebas-memoria-h3.md` |
+| Pruebas de memoria | Equipo | `docs/pruebas-memoria-h3` |
 | Justificación de colección | Individual/equipo | Markdown |
 | Comparación Java ↔ Python | Individual, casa | Markdown + código si procede |
 | Portfolio H3 | Individual | Markdown |
 | Registro IA | Individual/equipo | Markdown |
-
-### Relación con módulos
-
-Programación:
-
-- PR RA6;
-- refuerzo PR RA3.
-
-Entornos:
-
-- ED RA3: casos de prueba, incidencias y pruebas iniciales.
 
 ### Defensa
 
@@ -390,18 +315,6 @@ También crearéis diagramas que expliquen el diseño.
 | Defensa de diseño | Individual | Oral |
 | Registro IA | Individual/equipo | Markdown |
 
-### Relación con módulos
-
-Programación:
-
-- PR RA4;
-- refuerzo PR RA2.
-
-Entornos:
-
-- ED RA5: diagramas de clases;
-- ED RA6: diagramas de comportamiento.
-
 ### Defensa
 
 Preguntas posibles:
@@ -443,18 +356,6 @@ Trabajaréis refactorización, revisión de código, Git profesional y, si proce
 | Comparación Java ↔ Python | Individual, casa | Markdown |
 | Portfolio H5 | Individual | Markdown |
 | Registro IA | Individual/equipo | Markdown |
-
-### Relación con módulos
-
-Programación:
-
-- PR RA7 no imprescindible/evaluable;
-- refuerzo PR RA4/RA6.
-
-Entornos:
-
-- ED RA4;
-- ED RA6 si se usan diagramas de estados o comportamiento.
 
 ### Defensa
 
@@ -500,18 +401,6 @@ También debéis preparar una ejecución reproducible y cuidar la seguridad: nad
 | Comparación Java ↔ Python | Individual, casa | Markdown |
 | Registro IA | Individual/equipo | Markdown |
 
-### Relación con módulos
-
-Programación:
-
-- PR RA5;
-- PR RA8/RA9 si procede como ampliación.
-
-Entornos:
-
-- ED RA3;
-- ED RA4.
-
 ### Defensa
 
 Preguntas posibles:
@@ -551,19 +440,6 @@ El objetivo no es que la IA haga el proyecto, sino aprender a controlar, validar
 | Comparación Java ↔ Python | Individual, casa | Markdown |
 | Defensa IA responsable | Individual | Oral |
 
-### Relación con módulos
-
-Programación:
-
-- consolidación PR RA1-RA6;
-- PR RA7/RA8/RA9 si procede.
-
-Entornos:
-
-- ED RA3;
-- ED RA4;
-- seguridad, documentación, configuración y validación.
-
 ### Defensa
 
 Preguntas posibles:
@@ -591,35 +467,5 @@ Cada persona debe poder explicar qué ha aprendido, qué ha aportado y qué part
 | Portfolio final | Individual | Markdown/GitHub o mixto |
 | Demo final | Equipo | Ejecución + presentación |
 | Defensa individual | Individual | Oral |
-| Recuperación específica | Individual | Según RA pendiente |
+| Recuperación específica | Individual | Según aprendizaje pendiente |
 | Registro IA final | Individual | Markdown |
-
-# 16. Ajuste aplicado a los hitos MiniJarvis
-
-Este documento ya no queda solo como análisis: se ha usado para modificar los hitos, guías docentes autónomas, paquetes de hito, libro del alumnado, índice global y respuestas modelo de Laura.
-
-Criterio aplicado:
-
-```text
-Todo concepto de Programación recopilado aquí debe aparecer al final del itinerario como núcleo, ampliación, recuperación o mejora defendible.
-```
-
-Distribución final:
-
-| Bloque | Función curricular |
-|---|---|
-| H1-H2 | Fundamentos, variables, tipos, entrada/salida, condiciones, bucles, switch, depuración y eficiencia básica. |
-| H3 | Colecciones, listas, recorridos, mutabilidad, arrays, Set y Map como ampliaciones. |
-| H4 | Clases, objetos, métodos, constructores, referencias, diagramas y responsabilidades. |
-| H5 | Tests, TDD, interfaces, polimorfismo, clean code y Command simplificado. |
-| H6 | Excepciones, invariantes, persistencia, logs y repositorio como idea inicial. |
-| H7 | Records/enums, abstracción, Strategy opcional, Optional, streams, funciones puras e IA responsable. |
-| HF | Cierre y mejora: JavaFX, eventos, MVC, arquitectura hexagonal, repositorios, CRUD, transacciones y defensa global. |
-
-Respuesta de Laura esperada al final:
-
-> Puedo explicar dónde aparece cada concepto importante en mi proyecto MiniJarvis o, si es una ampliación, dónde lo he estudiado y cómo lo aplicaría de forma segura sin romper el diseño.
-
-## Ubicación y entrega digital
-
-Los productos y evidencias de este documento se mantienen, pero su ubicación y cierre se concretan en `10-ecosistema-digital-y-entregas.md` y en `ENTREGA-DIGITAL.md` de cada hito.

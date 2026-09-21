@@ -7,7 +7,7 @@
 | Motivar POO desde un problema real. | Lista de problemas del código H3. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** H.
+**Hito:** H4.
 
 ## Material que necesitas
 

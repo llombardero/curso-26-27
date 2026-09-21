@@ -7,7 +7,7 @@
 | Defender límites, seguridad y funcionamiento. | Defensa H7 y configuración segura. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H7. **Momento HEXA:** A.
+**Hito:** H7.
 
 ## Material que necesitas
 

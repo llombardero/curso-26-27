@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Comparar colecciones Java con `list` y `dict`. | `docs/comparacion-java-python-h3.md`. |
+| Comparar colecciones Java con `list` y `dict`. | `docs/comparacion-java-python-h3`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** A.
+**Hito:** H3.
 
 ## Material que necesitas
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/comparacion-java-python-h3.md`.**
+- [ ] He producido o actualizado: **`docs/comparacion-java-python-h3`.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

@@ -7,7 +7,7 @@
 | Preparar defensa final sin memorizar. | Plantilla de defensa final. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** HF. **Momento HEXA:** A.
+**Hito:** HF.
 
 ## Material que necesitas
 

@@ -1,38 +1,5 @@
 # H1 — Primer asistente básico
 
-<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
-
-## Ciclo HEXA obligatorio del reto H1
-
-**Reto del hito:** Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible.
-
-Debes conservar evidencias de las cuatro fases. Entregar solo el producto final no demuestra el ciclo completo.
-
-| Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
-|---|---|---|---|
-| **H — Hecho / reto** | ¿Qué problema real debemos resolver y con qué límites? | Presenta contexto, producto, restricciones, criterios y diagnóstico; no da todavía la solución completa. | Reformula el reto, identifica lo que sabe/no sabe y deja una ficha inicial con criterios de éxito. |
-| **E — Exploración** | ¿Qué alternativas, hipótesis o pruebas iniciales ayudan a entenderlo? | Propone preguntas, ejemplos mínimos, casos y límites seguros. | Observa, compara, predice, prueba alternativas y registra decisiones o bloqueos. |
-| **X — eXplicación** | ¿Qué conceptos permiten explicar lo observado y decidir con criterio? | Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes, seguridad y criterios de calidad. | Explica con palabras propias, conecta teoría y exploración y corrige sus hipótesis. |
-| **A — Aplicación** | ¿Cómo construimos, comprobamos, documentamos y defendemos la solución? | Desbloquea, exige pruebas y comprueba autoría y transferencia. | Implementa el producto, lo prueba, documenta evidencias, realiza review/defensa y propone mejora. |
-
-### Temporalización mínima explícita
-
-H1-S1–S7; 315 min mínimos en la guía autónoma. Los tiempos de fases se reservan dentro de las sesiones indicadas; los rangos pueden solaparse cuando una sesión cierra una fase y abre la siguiente.
-
-| Fase | Reserva y momento recomendado | Puerta de salida |
-|---|---|---|
-| H | H1-S1; 45 min | Reto reformulado, límites y criterio de éxito visibles. |
-| E | H1-S1–S2; 60 min integrados | Hipótesis, comparación, prueba inicial o decisiones justificadas. |
-| X | H1-S2–S4; 75 min integrados | Explicación individual breve y conexión con el producto. |
-| A | H1-S4–S7; 135 min integrados | Producto comprobado, documentación, defensa y mejora. |
-
-**Expediente HEXA mínimo del hito:** ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa.
-
-Regla de avance: puede haber prototipos durante E, pero no se considera completada A si faltan evidencias de H, E o X. Si una fase falta, se recupera esa fase y su evidencia; no se repite automáticamente todo el hito.
-
-<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
-
-
 ## Ficha para el alumnado
 
 Curso: 1.º DAW — Programación + Entornos de Desarrollo
@@ -166,16 +133,16 @@ userName
 
 ```text
 h1-primer-asistente/
-├── README.md
+├── README
 ├── src/
 │   └── Main.java
 └── docs/
-    ├── evidencia-ejecucion-h1.md
-    ├── portfolio-h1.md
-    ├── registro-ia.md      # solo si has usado IA
-    ├── defensa-h1.md
-    ├── incidencia-h1.md    # si aparece una incidencia importante
-    └── vocabulario-h1.md   # si lo pide el profesor/a
+    ├── evidencia-ejecucion-h1
+    ├── portfolio-h1
+    ├── registro-ia      # solo si has usado IA
+    ├── defensa-h1
+    ├── incidencia-h1    # si aparece una incidencia importante
+    └── vocabulario-h1   # si lo pide el profesor/a
 ```
 
 Si todavía no se usa carpeta `docs/`, el profesor/a indicará el formato alternativo.
@@ -183,13 +150,13 @@ Si todavía no se usa carpeta `docs/`, el profesor/a indicará el formato altern
 Plantillas específicas disponibles en este paquete H1:
 
 ```text
-plantillas/README-h1-template.md
-plantillas/evidencia-ejecucion-h1-template.md
-plantillas/portfolio-h1-template.md
-plantillas/registro-ia-h1-template.md
-plantillas/defensa-h1-template.md
-plantillas/incidencia-h1-template.md
-plantillas/vocabulario-h1-template.md
+plantillas/README-h1-plantilla
+plantillas/evidencia-ejecucion-h1-plantilla
+plantillas/portfolio-h1-plantilla
+plantillas/registro-ia-h1-plantilla
+plantillas/defensa-h1-plantilla
+plantillas/incidencia-h1-plantilla
+plantillas/vocabulario-h1-plantilla
 ```
 
 ---
@@ -248,7 +215,7 @@ No puedes usar IA para:
 Si usas IA para la entrega, regístralo en:
 
 ```text
-docs/registro-ia.md
+docs/registro-ia
 ```
 
 Debes poder explicar:
@@ -312,36 +279,3 @@ Frase clave:
 ```text
 Si puedo ejecutarlo, explicarlo y defenderlo, voy por buen camino.
 ```
-
-## Cobertura curricular de Programación
-
-Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.md`.
-
-```text
-Hito: H1
-Temas de referencia: Tema 1
-Foco: primer programa Java por consola y asistente mínimo
-```
-
-Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias del alumnado:
-
-- programa
-- instrucción
-- sintaxis
-- comentarios
-- variable
-- tipo de dato
-- literal
-- String
-- Scanner
-- entrada/salida
-- operadores
-- expresiones
-- conversiones básicas
-
-Criterio docente de cierre:
-
-- El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
-- Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
-- La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
-

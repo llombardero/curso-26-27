@@ -19,13 +19,13 @@ Documentos principales:
 Plantillas locales:
 
 ```text
-plantillas/portfolio-final-template.md
-plantillas/demo-final-template.md
-plantillas/defensa-final-template.md
-plantillas/recuperacion-especifica-template.md
-plantillas/registro-ia-final-template.md
-plantillas/autoevaluacion-final-template.md
-plantillas/plan-mejora-final-template.md
+plantillas/portfolio-final-plantilla.md
+plantillas/demo-final-plantilla.md
+plantillas/defensa-final-plantilla.md
+plantillas/recuperacion-especifica-plantilla.md
+plantillas/registro-ia-final-plantilla.md
+plantillas/autoevaluacion-final-plantilla.md
+plantillas/plan-mejora-final-plantilla.md
 ```
 
 Idea clave:

@@ -7,7 +7,7 @@
 | Añadir modo IA controlado. | Modo IA funcional o simulación robusta. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H7. **Momento HEXA:** X.
+**Hito:** H7.
 
 ## Material que necesitas
 

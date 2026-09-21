@@ -7,7 +7,7 @@
 | Definir comportamiento comprobable. | Tabla de comandos con respuesta esperada. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** E.
+**Hito:** H2.
 
 ## Material que necesitas
 

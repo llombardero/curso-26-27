@@ -7,7 +7,7 @@
 | Comprender el producto mínimo H1. | Lista de requisitos H1 y lista de restricciones. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H1. **Momento HEXA:** H.
+**Hito:** H1.
 
 ## Material que necesitas
 

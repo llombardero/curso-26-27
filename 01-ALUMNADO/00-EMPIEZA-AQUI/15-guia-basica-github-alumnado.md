@@ -10,7 +10,7 @@ Lo usaremos para:
 
 - guardar el código del proyecto;
 - conservar el historial de cambios;
-- escribir el `README.md`;
+- escribir el `README`;
 - identificar qué versión se entrega;
 - revisar trabajo del equipo;
 - demostrar evolución y trazabilidad.
@@ -98,20 +98,20 @@ Al principio la estructura será pequeña. Puede crecer así:
 
 ```text
 minijarvis-equipo-03/
-├── README.md
+├── README
 ├── src/
 │   └── Main.java
 └── docs/
-    ├── pruebas.md
-    ├── registro-ia.md
-    └── portfolio.md
+    ├── pruebas
+    ├── registro-ia
+    └── portfolio
 ```
 
 No hace falta crear todas las carpetas el primer día. Cada hito indicará qué hace falta.
 
 ## 6. Qué debe explicar el README
 
-El `README.md` debe permitir que otra persona entienda el proyecto.
+El `README` debe permitir que otra persona entienda el proyecto.
 
 Contenido mínimo:
 
@@ -239,7 +239,7 @@ En Moodle normalmente entregarás enlaces, no todo el contenido copiado.
 
 - [ ] El repositorio correcto está enlazado.
 - [ ] El código está actualizado.
-- [ ] El `README.md` explica cómo ejecutar el proyecto.
+- [ ] El `README` explica cómo ejecutar el proyecto.
 - [ ] La versión entregada está identificada con commit o tag.
 - [ ] No hay contraseñas, tokens ni `.env` reales.
 - [ ] El equipo sabe qué ha cambiado.

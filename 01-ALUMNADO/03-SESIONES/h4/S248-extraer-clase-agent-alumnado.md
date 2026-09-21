@@ -7,7 +7,7 @@
 | Sacar flujo principal de `Main`. | `Main` queda reducido a crear y lanzar el agente. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** X.
+**Hito:** H4.
 
 ## Material que necesitas
 

@@ -189,15 +189,15 @@ La decisión docente clave es esta: se trabajan los conceptos para poder reconoc
 | Entregable | Responsable | Formato | Plantilla local |
 |---|---|---|---|
 | Código extensible | Equipo/individual | `src/*.java` | No aplica. |
-| README H5 | Equipo/individual | `README.md` | `plantillas/README-h5-template.md` |
-| Informe de refactorización | Equipo | `docs/informe-refactorizacion-h5.md` | `plantillas/informe-refactorizacion-h5-template.md` |
-| Evidencia Git/revisión | Equipo | `docs/evidencia-git-h5.md` | `plantillas/evidencia-git-h5-template.md` |
-| Revisión de código | Equipo | `docs/revision-codigo-h5.md` | `plantillas/revision-codigo-h5-template.md` |
-| Registro de patrón | Equipo | `docs/registro-patron-h5.md` | `plantillas/registro-patron-h5-template.md` |
-| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h5.md` | `plantillas/comparacion-java-python-h5-template.md` |
-| Portfolio H5 | Individual | `docs/portfolio-h5.md` | `plantillas/portfolio-h5-template.md` |
-| Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h5-template.md` |
-| Defensa H5 | Individual | `docs/defensa-h5.md` | `plantillas/defensa-h5-template.md` |
+| README H5 | Equipo/individual | `README.md` | `plantillas/README-h5-plantilla.md` |
+| Informe de refactorización | Equipo | `docs/informe-refactorizacion-h5.md` | `plantillas/informe-refactorizacion-h5-plantilla.md` |
+| Evidencia Git/revisión | Equipo | `docs/evidencia-git-h5.md` | `plantillas/evidencia-git-h5-plantilla.md` |
+| Revisión de código | Equipo | `docs/revision-codigo-h5.md` | `plantillas/revision-codigo-h5-plantilla.md` |
+| Registro de patrón | Equipo | `docs/registro-patron-h5.md` | `plantillas/registro-patron-h5-plantilla.md` |
+| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h5.md` | `plantillas/comparacion-java-python-h5-plantilla.md` |
+| Portfolio H5 | Individual | `docs/portfolio-h5.md` | `plantillas/portfolio-h5-plantilla.md` |
+| Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h5-plantilla.md` |
+| Defensa H5 | Individual | `docs/defensa-h5.md` | `plantillas/defensa-h5-plantilla.md` |
 
 ---
 

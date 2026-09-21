@@ -54,7 +54,7 @@ Relaciona al menos cinco elementos del diagrama con código real.
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Crea `docs/diagrama-clases.md`, `docs/diagrama-comportamiento.md` y `docs/relacion-diagrama-codigo.md`. Entornos exige que el diagrama no sea inventado: debe coincidir con el código.
+Crea `docs/diagrama-clases`, `docs/diagrama-comportamiento` y `docs/relacion-diagrama-codigo`. Entornos exige que el diagrama no sea inventado: debe coincidir con el código.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

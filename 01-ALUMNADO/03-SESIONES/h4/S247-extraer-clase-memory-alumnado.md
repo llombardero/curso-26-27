@@ -7,7 +7,7 @@
 | Pasar de colección suelta a objeto con responsabilidad. | Comandos `recuerda`, `memoria` y `estado` siguen funcionando. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** X.
+**Hito:** H4.
 
 ## Material que necesitas
 

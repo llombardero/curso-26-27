@@ -154,14 +154,14 @@ Pedir a MiniJarvis una sugerencia breve de estudio o explicación conceptual, si
 | Entregable | Responsable | Formato | Plantilla local |
 |---|---|---|---|
 | Integración/simulación IA | Equipo/individual | `src/*.java` | No aplica. |
-| README H7 | Equipo | `README.md` | `plantillas/README-h7-template.md` |
-| Registro de prompts | Individual/equipo | `docs/registro-prompts-h7.md` | `plantillas/registro-prompts-h7-template.md` |
-| Riesgos IA | Equipo | `docs/riesgos-ia-h7.md` | `plantillas/riesgos-ia-h7-template.md` |
-| Configuración segura | Equipo | `docs/configuracion-segura-h7.md` | `plantillas/configuracion-segura-h7-template.md` |
-| Validación humana | Individual/equipo | `docs/validacion-humana-h7.md` | `plantillas/validacion-humana-h7-template.md` |
-| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h7.md` | `plantillas/comparacion-java-python-h7-template.md` |
-| Portfolio H7 | Individual | `docs/portfolio-h7.md` | `plantillas/portfolio-h7-template.md` |
-| Defensa H7 | Individual | `docs/defensa-h7.md` | `plantillas/defensa-h7-template.md` |
+| README H7 | Equipo | `README.md` | `plantillas/README-h7-plantilla.md` |
+| Registro de prompts | Individual/equipo | `docs/registro-prompts-h7.md` | `plantillas/registro-prompts-h7-plantilla.md` |
+| Riesgos IA | Equipo | `docs/riesgos-ia-h7.md` | `plantillas/riesgos-ia-h7-plantilla.md` |
+| Configuración segura | Equipo | `docs/configuracion-segura-h7.md` | `plantillas/configuracion-segura-h7-plantilla.md` |
+| Validación humana | Individual/equipo | `docs/validacion-humana-h7.md` | `plantillas/validacion-humana-h7-plantilla.md` |
+| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h7.md` | `plantillas/comparacion-java-python-h7-plantilla.md` |
+| Portfolio H7 | Individual | `docs/portfolio-h7.md` | `plantillas/portfolio-h7-plantilla.md` |
+| Defensa H7 | Individual | `docs/defensa-h7.md` | `plantillas/defensa-h7-plantilla.md` |
 
 ---
 

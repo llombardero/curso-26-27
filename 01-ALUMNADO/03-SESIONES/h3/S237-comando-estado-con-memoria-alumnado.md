@@ -7,7 +7,7 @@
 | Usar información interna para responder. | `estado` muestra información coherente. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** X.
+**Hito:** H3.
 
 ## Material que necesitas
 

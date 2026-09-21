@@ -7,7 +7,7 @@
 | Asegurar conceptos del Tema 1 que no aparecen de forma natural en el saludo inicial. | Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H1. **Momento HEXA:** X.
+**Hito:** H1.
 
 ## Material que necesitas
 

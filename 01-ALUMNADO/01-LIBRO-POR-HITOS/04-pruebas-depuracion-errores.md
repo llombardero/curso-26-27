@@ -51,7 +51,7 @@ Después vuelve a ejecutar la prueba.
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Crea `docs/informe-depuracion.md`. Debe incluir mensaje de error si existe, pasos para reproducir y evidencia de corrección. No borres el aprendizaje: un error bien explicado vale como evidencia.
+Crea `docs/informe-depuracion`. Debe incluir mensaje de error si existe, pasos para reproducir y evidencia de corrección. No borres el aprendizaje: un error bien explicado vale como evidencia.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

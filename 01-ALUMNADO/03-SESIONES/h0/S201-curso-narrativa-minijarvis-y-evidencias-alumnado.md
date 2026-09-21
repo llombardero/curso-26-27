@@ -7,7 +7,7 @@
 | Comprender qué se aprenderá y cómo se trabajará por retos HEXA. | Ticket con idea comprendida, duda, uso permitido/prohibido y criterio de evidencia defendible. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H0. **Momento HEXA:** H.
+**Hito:** H0.
 
 ## Material que necesitas
 

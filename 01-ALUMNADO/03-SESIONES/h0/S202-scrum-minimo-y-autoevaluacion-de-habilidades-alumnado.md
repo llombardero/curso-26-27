@@ -7,7 +7,7 @@
 | Entender el Scrum mínimo que utilizaremos en la torre y formular una primera hipótesis sobre cómo contribuyes en un equipo. | Glosario, ficha HADA completa, cuatro sumas comprobadas, diagrama o registro equivalente y ticket individual. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H0. **Momento HEXA:** E/X.
+**Hito:** H0.
 
 ---
 

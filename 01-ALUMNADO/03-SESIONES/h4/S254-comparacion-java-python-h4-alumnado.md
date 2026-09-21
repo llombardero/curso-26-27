@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Comparar clases Java con clases Python. | `docs/comparacion-java-python-h4.md`. |
+| Comparar clases Java con clases Python. | `docs/comparacion-java-python-h4`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** A.
+**Hito:** H4.
 
 ## Material que necesitas
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/comparacion-java-python-h4.md`.**
+- [ ] He producido o actualizado: **`docs/comparacion-java-python-h4`.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

@@ -11,107 +11,6 @@
     <nav class="topbar">Inicio alumnado</nav>
 <h1 id="h6--agente-persistente-y-trazable">H6 — Agente persistente y
 trazable</h1>
-<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
-
-<h2 id="ciclo-hexa-obligatorio-del-reto-h6">Ciclo HEXA obligatorio del
-reto H6</h2>
-<p><strong>Reto del hito:</strong> Conservar memoria e historial entre
-ejecuciones con ficheros, trazabilidad y tratamiento seguro de errores y
-datos.</p>
-<p>Debes conservar evidencias de las cuatro fases. Entregar solo el
-producto final no demuestra el ciclo completo.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Fase</th>
-<th>Pregunta que guía la fase</th>
-<th>Acción del profesorado</th>
-<th>Acción y evidencia del alumnado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>H — Hecho / reto</strong></td>
-<td>¿Qué problema real debemos resolver y con qué límites?</td>
-<td>Presenta contexto, producto, restricciones, criterios y diagnóstico;
-no da todavía la solución completa.</td>
-<td>Reformula el reto, identifica lo que sabe/no sabe y deja una ficha
-inicial con criterios de éxito.</td>
-</tr>
-<tr class="even">
-<td><strong>E — Exploración</strong></td>
-<td>¿Qué alternativas, hipótesis o pruebas iniciales ayudan a
-entenderlo?</td>
-<td>Propone preguntas, ejemplos mínimos, casos y límites seguros.</td>
-<td>Observa, compara, predice, prueba alternativas y registra decisiones
-o bloqueos.</td>
-</tr>
-<tr class="odd">
-<td><strong>X — eXplicación</strong></td>
-<td>¿Qué conceptos permiten explicar lo observado y decidir con
-criterio?</td>
-<td>Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes,
-seguridad y criterios de calidad.</td>
-<td>Explica con palabras propias, conecta teoría y exploración y corrige
-sus hipótesis.</td>
-</tr>
-<tr class="even">
-<td><strong>A — Aplicación</strong></td>
-<td>¿Cómo construimos, comprobamos, documentamos y defendemos la
-solución?</td>
-<td>Desbloquea, exige pruebas y comprueba autoría y transferencia.</td>
-<td>Implementa el producto, lo prueba, documenta evidencias, realiza
-review/defensa y propone mejora.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="temporalización-mínima-explícita">Temporalización mínima
-explícita</h3>
-<p>H6-S1–S10; 450 min mínimos en la guía autónoma. Los tiempos de fases
-se reservan dentro de las sesiones indicadas; los rangos pueden
-solaparse cuando una sesión cierra una fase y abre la siguiente.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Fase</th>
-<th>Reserva y momento recomendado</th>
-<th>Puerta de salida</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>H</td>
-<td>H6-S1; 45 min</td>
-<td>Reto reformulado, límites y criterio de éxito visibles.</td>
-</tr>
-<tr class="even">
-<td>E</td>
-<td>H6-S1–S2; 90 min integrados</td>
-<td>Hipótesis, comparación, prueba inicial o decisiones
-justificadas.</td>
-</tr>
-<tr class="odd">
-<td>X</td>
-<td>H6-S2–S3; 135 min integrados</td>
-<td>Explicación individual breve y conexión con el producto.</td>
-</tr>
-<tr class="even">
-<td>A</td>
-<td>H6-S3–S10; 180 min integrados</td>
-<td>Producto comprobado, documentación, defensa y mejora.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Expediente HEXA mínimo del hito:</strong> problema
-reproducido, decisiones de ruta/formato, explicación de
-persistencia/excepciones/logs, código, prueba en dos ejecuciones,
-seguridad y defensa.</p>
-<p>Regla de avance: puede haber prototipos durante E, pero no se
-considera completada A si faltan evidencias de H, E o X. Si una fase
-falta, se recupera esa fase y su evidencia; no se repite automáticamente
-todo el hito.</p>
-<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
-
 <h2 id="ficha-para-el-alumnado">Ficha para el alumnado</h2>
 <hr />
 <h2 id="1-reto">1. Reto</h2>
@@ -138,21 +37,21 @@ secretos ni datos personales reales.</p>
 <hr />
 <h2 id="4-entregables">4. Entregables</h2>
 <pre class="text"><code>h6-persistente-trazable/
-├── README.md
+├── README
 ├── src/
 ├── data/
 │   └── recuerdos.txt
 ├── logs/
 │   └── historial.log
 └── docs/
-    ├── pruebas-persistencia-h6.md
-    ├── seguridad-h6.md
-    ├── logs-historial-h6.md
-    ├── incidencia-h6.md
-    ├── comparacion-java-python-h6.md
-    ├── portfolio-h6.md
-    ├── registro-ia.md
-    └── defensa-h6.md</code></pre>
+    ├── pruebas-persistencia-h6
+    ├── seguridad-h6
+    ├── logs-historial-h6
+    ├── incidencia-h6
+    ├── comparacion-java-python-h6
+    ├── portfolio-h6
+    ├── registro-ia
+    └── defensa-h6</code></pre>
 <hr />
 <h2 id="5-preguntas-de-defensa">5. Preguntas de defensa</h2>
 <pre class="text"><code>¿Dónde se guarda la información?
@@ -161,39 +60,6 @@ secretos ni datos personales reales.</p>
 ¿Qué datos no deberías guardar?
 ¿Cómo sabes que persiste entre ejecuciones?
 ¿Qué diferencia hay entre ficheros en Java y Python?</code></pre>
-<h2 id="cobertura-curricular-de-programación">Cobertura curricular de
-Programación</h2>
-<p>Este hito queda alineado con el mapa
-<code>32-lista-conceptos-programacion-por-tema.md</code>.</p>
-<pre class="text"><code>Hito: H6
-Temas de referencia: Temas 5, 6 y puente hacia Tema 8
-Foco: persistencia, logs, errores y trazabilidad</code></pre>
-<p>Conceptos que deben trabajarse o, como mínimo, quedar conectados con
-evidencias del alumnado:</p>
-<ul>
-<li>clases responsables</li>
-<li>excepciones checked y runtime</li>
-<li>throws</li>
-<li>validación</li>
-<li>invariantes</li>
-<li>repositorio como idea inicial</li>
-<li>ficheros</li>
-<li>logs</li>
-<li>seguridad</li>
-<li>Repository como patrón opcional</li>
-<li>pruebas de dos ejecuciones</li>
-<li>trazabilidad</li>
-</ul>
-<p>Criterio docente de cierre:</p>
-<ul>
-<li>El alumnado no solo entrega el producto; debe poder señalar dónde
-aparece cada concepto en su código, README, pruebas o defensa.</li>
-<li>Si un concepto se marca como ampliación, no penaliza al alumnado que
-alcance el mínimo, pero sí orienta mejora, recuperación o
-enriquecimiento.</li>
-<li>La defensa debe incluir al menos una pregunta de comprensión sobre
-los conceptos nuevos del hito.</li>
-</ul>
 
   </main>
 </body>

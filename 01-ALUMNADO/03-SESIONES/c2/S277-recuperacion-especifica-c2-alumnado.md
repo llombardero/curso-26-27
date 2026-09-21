@@ -7,7 +7,7 @@
 | Recuperar evidencias incompletas. | Evidencia de recuperación. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** C2. **Momento HEXA:** A/cierre.
+**Hito:** C2.
 
 ## Material que necesitas
 

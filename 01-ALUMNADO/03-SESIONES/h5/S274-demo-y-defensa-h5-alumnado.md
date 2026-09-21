@@ -7,7 +7,7 @@
 | Defender extensibilidad, refactorización, Git y patrón. | Defensa H5 completa. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** A.
+**Hito:** H5.
 
 ## Material que necesitas
 

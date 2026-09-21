@@ -14,8 +14,8 @@
 
 Si partes desde cero, lee primero estas guías básicas:
 
-- `14-guia-basica-drive-alumnado.md`.
-- `15-guia-basica-github-alumnado.md`.
+- `14-guia-basica-drive-alumnado`.
+- `15-guia-basica-github-alumnado`.
 
 ## Regla principal
 
@@ -41,4 +41,4 @@ No guardes dos copias editables del mismo contenido. El código vive en GitHub; 
 - No subas contraseñas, tokens, claves API, `.env` reales ni datos personales.
 - En H6 usa datos y logs ficticios o anonimizados.
 
-Consulta la ficha `ENTREGA-DIGITAL.md` dentro de cada hito antes de entregar.
+Consulta la ficha `ENTREGA-DIGITAL` dentro de cada hito antes de entregar.

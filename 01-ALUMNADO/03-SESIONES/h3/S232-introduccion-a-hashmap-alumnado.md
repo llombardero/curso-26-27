@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Asegurar cobertura completa del Tema 4. | `docs/justificacion-coleccion-h3.md` ampliado con array vs lista, uso o descarte de `Set`, y decisión sobre mutabilidad. |
+| Asegurar cobertura completa del Tema 4. | `docs/justificacion-coleccion-h3` ampliado con array vs lista, uso o descarte de `Set`, y decisión sobre mutabilidad. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** E.
+**Hito:** H3.
 
 ## Material que necesitas
 
@@ -38,7 +38,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/justificacion-coleccion-h3.md` ampliado con array vs lista, uso o descarte de `Set`, y decisión sobre mutabilidad.**
+- [ ] He producido o actualizado: **`docs/justificacion-coleccion-h3` ampliado con array vs lista, uso o descarte de `Set`, y decisión sobre mutabilidad.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

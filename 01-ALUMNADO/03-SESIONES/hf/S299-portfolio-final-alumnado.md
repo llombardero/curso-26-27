@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Organizar evidencias de aprendizaje. | `portfolio-final.md`. |
+| Organizar evidencias de aprendizaje. | `portfolio-final`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** HF. **Momento HEXA:** E/X.
+**Hito:** HF.
 
 ## Material que necesitas
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`portfolio-final.md`.**
+- [ ] He producido o actualizado: **`portfolio-final`.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

@@ -7,7 +7,7 @@
 | Evitar clases decorativas o mezcladas. | Lista de ajustes de diseño. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** X.
+**Hito:** H4.
 
 ## Material que necesitas
 

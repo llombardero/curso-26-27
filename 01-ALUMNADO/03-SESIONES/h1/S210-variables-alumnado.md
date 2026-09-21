@@ -7,7 +7,7 @@
 | Guardar datos en variables. | Código con variable usada correctamente. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H1. **Momento HEXA:** X.
+**Hito:** H1.
 
 ## Material que necesitas
 

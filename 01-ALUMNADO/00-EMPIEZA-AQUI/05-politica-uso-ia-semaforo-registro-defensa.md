@@ -2,15 +2,6 @@
 
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
-Edición final para Moodle — septiembre de 2026
-Documentos relacionados:
-
-- `00-mapa-maestro-curso-2026-2027.md`
-- `01-matriz-integrada-ra-ce-evidencias-tareas.md`
-- `02-calendario-hitos-sprints-2026-2027.md`
-- `04A-enunciados-y-entregables-alumnado.md`
-- `04B-modelo-entregables-laura.md`
-
 ---
 
 ## 1. Propósito
@@ -161,7 +152,7 @@ Todo entregable evaluable que use IA debe incluir un registro.
 Nombre recomendado:
 
 ```text
-docs/registro-ia.md
+docs/registro-ia
 ```
 
 ### Plantilla
@@ -380,7 +371,7 @@ Confirmo que:
 - he revisado el resultado;
 - puedo explicar el código o documento entregado;
 - no he incluido datos personales ni secretos;
-- he registrado los usos relevantes en `docs/registro-ia.md`.
+- he registrado los usos relevantes en `docs/registro-ia`.
 ```
 
 ---
@@ -394,13 +385,3 @@ En este curso se permite usar IA porque forma parte del trabajo profesional actu
 Si una IA te da una solución que no entiendes, todavía no tienes una solución: tienes una tarea pendiente.
 
 ---
-
-## 14. Próximo paso
-
-Crear las rúbricas de hitos:
-
-```text
-06-rubricas-hitos.md
-```
-
-Las rúbricas deberán incluir una dimensión específica de uso responsable de IA.

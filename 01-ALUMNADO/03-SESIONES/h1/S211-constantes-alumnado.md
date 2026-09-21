@@ -7,7 +7,7 @@
 | Diferenciar variable y constante. | Código con al menos una constante bien usada. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H1. **Momento HEXA:** X.
+**Hito:** H1.
 
 ## Material que necesitas
 

@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Cubrir conceptos del Tema 3 que no siempre aparecen en el menú principal. | Archivo breve `docs/refuerzo-bucles-h2.md` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia. |
+| Cubrir conceptos del Tema 3 que no siempre aparecen en el menú principal. | Archivo breve `docs/refuerzo-bucles-h2` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** X.
+**Hito:** H2.
 
 ## Material que necesitas
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **Archivo breve `docs/refuerzo-bucles-h2.md` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia.**
+- [ ] He producido o actualizado: **Archivo breve `docs/refuerzo-bucles-h2` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

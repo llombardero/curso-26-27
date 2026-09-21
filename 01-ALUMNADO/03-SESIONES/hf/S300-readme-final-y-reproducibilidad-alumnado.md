@@ -7,7 +7,7 @@
 | Dejar el proyecto ejecutable por otra persona. | README final validado. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** HF. **Momento HEXA:** E/X.
+**Hito:** HF.
 
 ## Material que necesitas
 

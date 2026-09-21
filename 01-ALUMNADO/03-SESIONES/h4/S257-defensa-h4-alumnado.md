@@ -7,7 +7,7 @@
 | Validar comprensión de POO. | Defensa H4. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** A.
+**Hito:** H4.
 
 ## Material que necesitas
 

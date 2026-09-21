@@ -7,7 +7,7 @@
 | Terminar el programa correctamente. | El programa termina solo cuando se escribe `salir`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** X.
+**Hito:** H2.
 
 ## Material que necesitas
 

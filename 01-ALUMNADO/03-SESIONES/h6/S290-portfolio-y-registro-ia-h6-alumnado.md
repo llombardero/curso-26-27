@@ -7,7 +7,7 @@
 | Documentar decisiones, seguridad y uso de IA. | Portfolio H6 y registro IA. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** A.
+**Hito:** H6.
 
 ## Material que necesitas
 

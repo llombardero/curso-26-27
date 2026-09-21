@@ -7,7 +7,7 @@
 | Validar comprensión individual. | Plantilla de defensa H1 y portfolio individual. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H1. **Momento HEXA:** A.
+**Hito:** H1.
 
 ## Material que necesitas
 

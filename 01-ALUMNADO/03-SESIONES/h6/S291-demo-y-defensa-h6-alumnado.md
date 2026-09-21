@@ -7,7 +7,7 @@
 | Defender persistencia, logs y reproducibilidad. | Defensa H6. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** A.
+**Hito:** H6.
 
 ## Material que necesitas
 

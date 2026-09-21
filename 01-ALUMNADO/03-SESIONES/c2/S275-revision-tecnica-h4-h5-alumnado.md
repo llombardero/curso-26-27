@@ -7,7 +7,7 @@
 | Consolidar POO y extensibilidad. | Checklist C2. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** C2. **Momento HEXA:** A/cierre.
+**Hito:** C2.
 
 ## Material que necesitas
 
@@ -60,7 +60,7 @@
 
 ## Cierre
 
-Responde sin copiar: **Identificar RA pendientes por alumno/a.**
+Responde sin copiar: **Identificar aprendizajes pendientes por alumno/a.**
 
 Respuesta:  
 ................................................................................

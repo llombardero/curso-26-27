@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Definir uso limitado y seguro de IA. | `docs/riesgos-ia-h7.md` inicial. |
+| Definir uso limitado y seguro de IA. | `docs/riesgos-ia-h7` inicial. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H7. **Momento HEXA:** E.
+**Hito:** H7.
 
 ## Material que necesitas
 
@@ -39,7 +39,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/riesgos-ia-h7.md` inicial.**
+- [ ] He producido o actualizado: **`docs/riesgos-ia-h7` inicial.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Consolidar H1-H3 antes de POO. | Checklist C1 con RA pendientes y plan de mejora. |
+| Consolidar H1-H3 antes de POO. | Checklist C1 con aprendizajes pendientes y plan de mejora. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** C1. **Momento HEXA:** A.
+**Hito:** C1.
 
 ## Material que necesitas
 
@@ -39,7 +39,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **Checklist C1 con RA pendientes y plan de mejora.**
+- [ ] He producido o actualizado: **Checklist C1 con aprendizajes pendientes y plan de mejora.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

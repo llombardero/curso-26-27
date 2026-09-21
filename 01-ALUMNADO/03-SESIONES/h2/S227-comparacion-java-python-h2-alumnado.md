@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Comparar control de flujo entre Java y Python. | `docs/comparacion-java-python-h2.md`. |
+| Comparar control de flujo entre Java y Python. | `docs/comparacion-java-python-h2`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** A.
+**Hito:** H2.
 
 ## Material que necesitas
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/comparacion-java-python-h2.md`.**
+- [ ] He producido o actualizado: **`docs/comparacion-java-python-h2`.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

@@ -65,7 +65,7 @@ Refuerzo de cobertura de los temas 5 y 6:
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Crea `docs/pruebas-persistencia.md`, `docs/seguridad.md` y `docs/logs-historial.md`. Incluye `.gitignore` con `.env`, `*.key`, `*.token`.
+Crea `docs/pruebas-persistencia`, `docs/seguridad` y `docs/logs-historial`. Incluye `.gitignore` con `.env`, `*.key`, `*.token`.
 
 ## 6. Errores frecuentes y cómo corregirlos
 
@@ -106,4 +106,4 @@ La persistencia se demuestra cerrando y abriendo. Si solo guardas en una lista, 
 
 Caso de estudio: borra temporalmente `data/recuerdos.txt`, ejecuta MiniJarvis, guarda un recuerdo ficticio, sal, abre el fichero y comprueba el contenido. Después ejecuta de nuevo y consulta memoria. Documenta también qué aparece en el log. Si el log contiene un secreto o dato personal, corrígelo.
 
-Caso de estudio de refuerzo: provoca un error controlado de fichero y documenta qué excepción aparece, dónde se gestiona y qué ve el usuario. Añade esta evidencia a `docs/incidencia-h6.md` o `docs/pruebas-persistencia.md`.
+Caso de estudio de refuerzo: provoca un error controlado de fichero y documenta qué excepción aparece, dónde se gestiona y qué ve el usuario. Añade esta evidencia a `docs/incidencia-h6` o `docs/pruebas-persistencia`.

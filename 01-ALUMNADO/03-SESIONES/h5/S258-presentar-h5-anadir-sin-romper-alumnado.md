@@ -7,7 +7,7 @@
 | Entender extensibilidad. | Diagnóstico de rigidez del diseño H4. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** H.
+**Hito:** H5.
 
 ## Material que necesitas
 

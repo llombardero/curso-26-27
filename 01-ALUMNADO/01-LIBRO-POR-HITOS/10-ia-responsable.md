@@ -54,7 +54,7 @@ Documenta ambos sin copiar secretos completos.
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Crea `docs/registro-prompts.md`, `docs/riesgos-ia.md`, `docs/configuracion-segura.md` y `docs/validacion-humana.md`. `.env.example` puede existir; `.env` real no.
+Crea `docs/registro-prompts`, `docs/riesgos-ia`, `docs/configuracion-segura` y `docs/validacion-humana`. `.env.example` puede existir; `.env` real no.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

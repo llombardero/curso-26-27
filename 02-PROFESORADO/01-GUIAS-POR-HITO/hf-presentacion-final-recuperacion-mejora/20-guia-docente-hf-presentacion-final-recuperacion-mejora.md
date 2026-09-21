@@ -77,13 +77,13 @@ Fechas orientativas:
 
 | Entregable | Responsable | Formato | Plantilla local |
 |---|---|---|---|
-| Portfolio final | Individual | Markdown/GitHub/mixto | `plantillas/portfolio-final-template.md` |
-| Demo final | Equipo | Ejecución + presentación | `plantillas/demo-final-template.md` |
-| Defensa final | Individual | Oral + preparación | `plantillas/defensa-final-template.md` |
-| Recuperación específica | Individual si procede | Según RA pendiente | `plantillas/recuperacion-especifica-template.md` |
-| Registro IA final | Individual | Markdown | `plantillas/registro-ia-final-template.md` |
-| Autoevaluación final | Individual | Markdown | `plantillas/autoevaluacion-final-template.md` |
-| Plan de mejora final | Individual si procede | Markdown | `plantillas/plan-mejora-final-template.md` |
+| Portfolio final | Individual | Markdown/GitHub/mixto | `plantillas/portfolio-final-plantilla.md` |
+| Demo final | Equipo | Ejecución + presentación | `plantillas/demo-final-plantilla.md` |
+| Defensa final | Individual | Oral + preparación | `plantillas/defensa-final-plantilla.md` |
+| Recuperación específica | Individual si procede | Según RA pendiente | `plantillas/recuperacion-especifica-plantilla.md` |
+| Registro IA final | Individual | Markdown | `plantillas/registro-ia-final-plantilla.md` |
+| Autoevaluación final | Individual | Markdown | `plantillas/autoevaluacion-final-plantilla.md` |
+| Plan de mejora final | Individual si procede | Markdown | `plantillas/plan-mejora-final-plantilla.md` |
 
 ---
 

@@ -7,7 +7,7 @@
 | Guardar recuerdos en disco. | `data/recuerdos.txt` generado con datos ficticios. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** E.
+**Hito:** H6.
 
 ## Material que necesitas
 

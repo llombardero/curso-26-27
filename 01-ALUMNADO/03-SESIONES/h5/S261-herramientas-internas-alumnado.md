@@ -7,7 +7,7 @@
 | Separar comandos como herramientas. | Tabla de herramientas y responsabilidad. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** E.
+**Hito:** H5.
 
 ## Material que necesitas
 

@@ -7,7 +7,7 @@
 | Recuperar RA técnicos pendientes. | Evidencia de recuperación específica. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** HF. **Momento HEXA:** A.
+**Hito:** HF.
 
 ## Material que necesitas
 

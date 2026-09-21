@@ -7,7 +7,7 @@
 | Separar ayuda del flujo principal. | Comando ayuda funciona mediante herramienta. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** E.
+**Hito:** H5.
 
 ## Material que necesitas
 

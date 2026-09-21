@@ -7,7 +7,7 @@
 | Separar persistencia de memoria de negocio. | Persistencia encapsulada en clase propia. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** E.
+**Hito:** H6.
 
 ## Material que necesitas
 

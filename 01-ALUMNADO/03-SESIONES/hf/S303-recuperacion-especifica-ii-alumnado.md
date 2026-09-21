@@ -7,7 +7,7 @@
 | Recuperar evidencias de Entornos. | Evidencia de recuperación Entornos. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** HF. **Momento HEXA:** A.
+**Hito:** HF.
 
 ## Material que necesitas
 

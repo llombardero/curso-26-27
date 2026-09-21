@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Trazar y validar respuestas. | `docs/registro-prompts-h7.md` y validación humana. |
+| Trazar y validar respuestas. | `docs/registro-prompts-h7` y validación humana. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H7. **Momento HEXA:** A.
+**Hito:** H7.
 
 ## Material que necesitas
 
@@ -38,7 +38,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/registro-prompts-h7.md` y validación humana.**
+- [ ] He producido o actualizado: **`docs/registro-prompts-h7` y validación humana.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

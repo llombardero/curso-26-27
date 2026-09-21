@@ -7,7 +7,7 @@
 | Controlar si el programa sigue o termina. | Código preparado para repetir ejecución. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** E.
+**Hito:** H2.
 
 ## Material que necesitas
 

@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Documentar un fallo real y su solución. | `docs/incidencia-h2.md`. |
+| Documentar un fallo real y su solución. | `docs/incidencia-h2`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** A.
+**Hito:** H2.
 
 ## Material que necesitas
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/incidencia-h2.md`.**
+- [ ] He producido o actualizado: **`docs/incidencia-h2`.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

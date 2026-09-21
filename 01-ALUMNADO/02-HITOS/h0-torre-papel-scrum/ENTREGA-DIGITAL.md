@@ -42,4 +42,4 @@ No se usa GitHub.
 - [ ] La versión evaluada queda identificada.
 - [ ] Puedo explicar y defender lo entregado.
 
-Consulta `../../00-EMPIEZA-AQUI/10-ecosistema-digital-y-entregas.md`.
+Consulta `../../00-EMPIEZA-AQUI/10-ecosistema-digital-y-entregas`.

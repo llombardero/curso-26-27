@@ -7,7 +7,7 @@
 | Entender colaboración entre objetos. | Descripción textual de relaciones del diseño. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** X.
+**Hito:** H4.
 
 ## Material que necesitas
 

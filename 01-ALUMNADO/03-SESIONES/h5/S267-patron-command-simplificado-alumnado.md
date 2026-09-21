@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Trabajar conceptos importantes de los temas 5 y 6 que no siempre aparecen en MiniJarvis mínimo. | `docs/refuerzo-poo-avanzada-h5.md` con código, pruebas o salidas, decisión de qué se mantiene y qué se descarta, y justificación de composición/interfaz frente a herencia. Debe nombrar explícitamente los conceptos del Tema 6 trabajados y cuáles quedan como ampliación reconocida. |
+| Trabajar conceptos importantes de los temas 5 y 6 que no siempre aparecen en MiniJarvis mínimo. | `docs/refuerzo-poo-avanzada-h5` con código, pruebas o salidas, decisión de qué se mantiene y qué se descarta, y justificación de composición/interfaz frente a herencia. Debe nombrar explícitamente los conceptos del Tema 6 trabajados y cuáles quedan como ampliación reconocida. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** X.
+**Hito:** H5.
 
 ## Material que necesitas
 
@@ -38,7 +38,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/refuerzo-poo-avanzada-h5.md` con código, pruebas o salidas, decisión de qué se mantiene y qué se descarta, y justificación de composición/interfaz frente a herencia. Debe nombrar explícitamente los conceptos del Tema 6 trabajados y cuáles quedan como ampliación reconocida.**
+- [ ] He producido o actualizado: **`docs/refuerzo-poo-avanzada-h5` con código, pruebas o salidas, decisión de qué se mantiene y qué se descarta, y justificación de composición/interfaz frente a herencia. Debe nombrar explícitamente los conceptos del Tema 6 trabajados y cuáles quedan como ampliación reconocida.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

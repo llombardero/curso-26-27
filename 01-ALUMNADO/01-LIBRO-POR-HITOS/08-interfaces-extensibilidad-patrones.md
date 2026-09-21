@@ -86,7 +86,7 @@ Laboratorio obligatorio de cobertura del Tema 6, sin convertirlo todo en arquite
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Crea `docs/informe-refactorizacion.md`, `docs/revision-codigo.md` y `docs/registro-patron.md`. Incluye antes/después, prueba, revisión y decisión razonada sobre patrón.
+Crea `docs/informe-refactorizacion`, `docs/revision-codigo` y `docs/registro-patron`. Incluye antes/después, prueba, revisión y decisión razonada sobre patrón.
 
 ## 6. Errores frecuentes y cómo corregirlos
 
@@ -128,4 +128,4 @@ Los patrones de diseño no aparecen al principio del curso porque antes serían 
 
 Caso de estudio: añade `CourseTool`. Si solo creas una clase y la registras en una lista, has reducido el impacto del cambio. Si tienes que modificar muchas condiciones en muchos sitios, tu diseño aún no es tan extensible. Defiende el patrón con una frase sencilla: “cada herramienta encapsula una acción ejecutable”.
 
-Caso de estudio de refuerzo: crea `docs/refuerzo-poo-avanzada-h5.md`. Incluye una pequeña comparación entre `interface Tool` y `BaseTool abstracta`. Si descartas la clase abstracta, la evidencia sigue siendo válida si explicas técnicamente el motivo.
+Caso de estudio de refuerzo: crea `docs/refuerzo-poo-avanzada-h5`. Incluye una pequeña comparación entre `interface Tool` y `BaseTool abstracta`. Si descartas la clase abstracta, la evidencia sigue siendo válida si explicas técnicamente el motivo.

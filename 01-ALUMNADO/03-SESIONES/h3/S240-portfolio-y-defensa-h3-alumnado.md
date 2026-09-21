@@ -7,7 +7,7 @@
 | Defender memoria temporal y elección de colección. | Portfolio H3 y defensa individual. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** A.
+**Hito:** H3.
 
 ## Material que necesitas
 

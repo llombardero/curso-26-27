@@ -7,7 +7,7 @@
 | Detectar problemas de legibilidad. | Lista de mejoras priorizadas. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** E.
+**Hito:** H5.
 
 ## Material que necesitas
 

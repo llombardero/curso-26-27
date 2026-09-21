@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Mejorar estructura sin cambiar comportamiento. | `docs/informe-refactorizacion-h5.md` inicial. |
+| Mejorar estructura sin cambiar comportamiento. | `docs/informe-refactorizacion-h5` inicial. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** E.
+**Hito:** H5.
 
 ## Material que necesitas
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/informe-refactorizacion-h5.md` inicial.**
+- [ ] He producido o actualizado: **`docs/informe-refactorizacion-h5` inicial.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

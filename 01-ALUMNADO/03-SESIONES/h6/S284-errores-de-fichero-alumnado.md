@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Asegurar excepciones propias, `throws` e invariantes de estado. | Código o decisión técnica en `docs/incidencia-h6.md`/`docs/seguridad-h6.md` con prueba de error controlado. |
+| Asegurar excepciones propias, `throws` e invariantes de estado. | Código o decisión técnica en `docs/incidencia-h6`/`docs/seguridad-h6` con prueba de error controlado. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** X.
+**Hito:** H6.
 
 ## Material que necesitas
 
@@ -38,7 +38,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **Código o decisión técnica en `docs/incidencia-h6.md`/`docs/seguridad-h6.md` con prueba de error controlado.**
+- [ ] He producido o actualizado: **Código o decisión técnica en `docs/incidencia-h6`/`docs/seguridad-h6` con prueba de error controlado.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

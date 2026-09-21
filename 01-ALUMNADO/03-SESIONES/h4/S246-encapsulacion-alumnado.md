@@ -7,7 +7,7 @@
 | Proteger datos internos. | Código sin acceso directo innecesario a atributos. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** E.
+**Hito:** H4.
 
 ## Material que necesitas
 

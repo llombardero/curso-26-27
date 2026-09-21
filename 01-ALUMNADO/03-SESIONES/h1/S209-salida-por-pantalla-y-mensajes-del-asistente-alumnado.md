@@ -7,7 +7,7 @@
 | Usar `System.out.println` y construir salida legible. | Programa que muestra saludo, propósito y curso. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H1. **Momento HEXA:** X.
+**Hito:** H1.
 
 ## Material que necesitas
 

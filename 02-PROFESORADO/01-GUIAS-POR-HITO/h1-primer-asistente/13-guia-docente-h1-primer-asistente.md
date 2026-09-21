@@ -502,13 +502,13 @@ Preguntas esenciales:
 | Entregable | Responsable | Formato | Plantilla local |
 |---|---|---|---|
 | Código Java básico | Individual o equipo, según decisión docente | `src/Main.java` | No aplica. |
-| README de ejecución | Equipo o individual | `README.md` | `plantillas/README-h1-template.md` |
-| Evidencia de ejecución | Equipo o individual | `docs/evidencia-ejecucion-h1.md` | `plantillas/evidencia-ejecucion-h1-template.md` |
-| Portfolio H1 | Individual | `docs/portfolio-h1.md` | `plantillas/portfolio-h1-template.md` |
-| Registro de IA, si se usa | Individual | `docs/registro-ia.md` | `plantillas/registro-ia-h1-template.md` |
-| Defensa H1 | Individual | `docs/defensa-h1.md` | `plantillas/defensa-h1-template.md` |
-| Incidencia, si aparece | Individual/equipo | `docs/incidencia-h1.md` | `plantillas/incidencia-h1-template.md` |
-| Vocabulario H1, si se pide | Individual | `docs/vocabulario-h1.md` | `plantillas/vocabulario-h1-template.md` |
+| README de ejecución | Equipo o individual | `README.md` | `plantillas/README-h1-plantilla.md` |
+| Evidencia de ejecución | Equipo o individual | `docs/evidencia-ejecucion-h1.md` | `plantillas/evidencia-ejecucion-h1-plantilla.md` |
+| Portfolio H1 | Individual | `docs/portfolio-h1.md` | `plantillas/portfolio-h1-plantilla.md` |
+| Registro de IA, si se usa | Individual | `docs/registro-ia.md` | `plantillas/registro-ia-h1-plantilla.md` |
+| Defensa H1 | Individual | `docs/defensa-h1.md` | `plantillas/defensa-h1-plantilla.md` |
+| Incidencia, si aparece | Individual/equipo | `docs/incidencia-h1.md` | `plantillas/incidencia-h1-plantilla.md` |
+| Vocabulario H1, si se pide | Individual | `docs/vocabulario-h1.md` | `plantillas/vocabulario-h1-plantilla.md` |
 
 Recomendación:
 

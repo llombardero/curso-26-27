@@ -7,7 +7,7 @@
 | Validar comportamiento de colecciones. | Plan de pruebas H3 ejecutado. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** X.
+**Hito:** H3.
 
 ## Material que necesitas
 
@@ -17,7 +17,7 @@
 
 1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
 2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Completar `docs/pruebas-memoria-h3.md`.**
+3. Realiza esta tarea: **Completar `docs/pruebas-memoria-h3`.**
 4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
 5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
 

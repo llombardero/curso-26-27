@@ -7,7 +7,7 @@
 | Documentar diseño OO. | README H4, portfolio y registro IA. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** A.
+**Hito:** H4.
 
 ## Material que necesitas
 

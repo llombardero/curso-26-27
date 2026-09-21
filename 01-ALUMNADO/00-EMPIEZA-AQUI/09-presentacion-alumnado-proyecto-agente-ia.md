@@ -2,14 +2,12 @@
 
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
-Edición final para Moodle — septiembre de 2026
-
 Documento breve para presentar el proyecto al inicio del curso.
 
 Guía completa relacionada:
 
 ```text
-08-guia-alumnado-proyecto-agente-ia.md
+08-guia-alumnado-proyecto-agente-ia
 ```
 
 ---
@@ -180,7 +178,7 @@ La IA no puede aprender por ti.
 Si usas IA en una entrega evaluable, tendrás que registrarlo en:
 
 ```text
-docs/registro-ia.md
+docs/registro-ia
 ```
 
 Y tendrás que poder explicar:
@@ -236,21 +234,21 @@ plantillas/
 Y también explicadas en:
 
 ```text
-07-plantillas-entregables.md
+07-plantillas-entregables
 ```
 
 Algunas plantillas importantes serán:
 
 | Plantilla | Para qué sirve |
 |---|---|
-| `README-template.md` | Explicar qué hace el proyecto y cómo se ejecuta. |
-| `portfolio-template.md` | Explicar qué has hecho y qué has aprendido. |
-| `registro-ia-template.md` | Registrar el uso de IA. |
-| `pruebas-template.md` | Documentar pruebas. |
-| `depuracion-template.md` | Explicar cómo se ha investigado un error. |
-| `incidencia-template.md` | Registrar un problema detectado. |
-| `retrospectiva-template.md` | Revisar el trabajo del equipo. |
-| `defensa-individual-template.md` | Preparar la defensa. |
+| `README-plantilla` | Explicar qué hace el proyecto y cómo se ejecuta. |
+| `portfolio-plantilla` | Explicar qué has hecho y qué has aprendido. |
+| `registro-ia-plantilla` | Registrar el uso de IA. |
+| `pruebas-plantilla` | Documentar pruebas. |
+| `depuracion-plantilla` | Explicar cómo se ha investigado un error. |
+| `incidencia-plantilla` | Registrar un problema detectado. |
+| `retrospectiva-plantilla` | Revisar el trabajo del equipo. |
+| `defensa-individual-plantilla` | Preparar la defensa. |
 
 No todos los hitos usarán todas las plantillas.
 

@@ -44,13 +44,13 @@ La recuperación específica se centra en evidencias pendientes: no es repetir t
 
 ## 4. Caso práctico MiniJarvis
 
-Prepara `portfolio-final.md` con evidencias H0-H7. Después prepara `demo-final.md` con una secuencia de 5 a 8 minutos y un plan B.
+Prepara `portfolio-final` con evidencias H0-H7. Después prepara `demo-final` con una secuencia de 5 a 8 minutos y un plan B.
 
 Ensaya tres preguntas de defensa: qué hice, qué evidencia lo demuestra y qué mejoraría.
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Crea `registro-ia-final.md`, `autoevaluacion-final.md` y, si procede, `recuperacion-especifica.md`. Revisa que no haya secretos ni datos personales antes de compartir.
+Crea `registro-ia-final`, `autoevaluacion-final` y, si procede, `recuperacion-especifica`. Revisa que no haya secretos ni datos personales antes de compartir.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

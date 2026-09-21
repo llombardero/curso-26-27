@@ -19,15 +19,15 @@ Documentos principales:
 Plantillas locales:
 
 ```text
-plantillas/README-h3-template.md
-plantillas/evidencia-ejecucion-h3-template.md
-plantillas/pruebas-memoria-h3-template.md
-plantillas/justificacion-coleccion-h3-template.md
-plantillas/incidencia-h3-template.md
-plantillas/comparacion-java-python-h3-template.md
-plantillas/portfolio-h3-template.md
-plantillas/registro-ia-h3-template.md
-plantillas/defensa-h3-template.md
+plantillas/README-h3-plantilla.md
+plantillas/evidencia-ejecucion-h3-plantilla.md
+plantillas/pruebas-memoria-h3-plantilla.md
+plantillas/justificacion-coleccion-h3-plantilla.md
+plantillas/incidencia-h3-plantilla.md
+plantillas/comparacion-java-python-h3-plantilla.md
+plantillas/portfolio-h3-plantilla.md
+plantillas/registro-ia-h3-plantilla.md
+plantillas/defensa-h3-plantilla.md
 ```
 
 Restricción didáctica clave:

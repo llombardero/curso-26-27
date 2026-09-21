@@ -7,7 +7,7 @@
 | Cargar recuerdos al iniciar. | Recuerdos recuperados tras reiniciar. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** E.
+**Hito:** H6.
 
 ## Material que necesitas
 

@@ -7,7 +7,7 @@
 | Analizar cómo se combinan las preferencias del equipo, compensar capacidades menos representadas y preparar el sprint de la torre. | Mapa de composición, funciones justificadas, regla de participación, backlog y definición de terminado. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H0. **Momento HEXA:** E/X.
+**Hito:** H0.
 
 ---
 

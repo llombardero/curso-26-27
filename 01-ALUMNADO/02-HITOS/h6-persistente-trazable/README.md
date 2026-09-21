@@ -1,79 +1,13 @@
-# H6 — Agente persistente y trazable
+# H6 - Persistencia y trazabilidad
 
-Paquete específico del hito H6.
+## Objetivo
 
-Objetivo:
+Conservar memoria e historial entre ejecuciones mediante ficheros y tratamiento seguro de errores.
 
-```text
-Añadir persistencia simple, logs/historial, pruebas de persistencia, README reproducible y decisiones básicas de seguridad.
-```
+## Para completar el hito
 
-Documentos principales:
+Debes demostrar el funcionamiento en dos ejecuciones, documentar pruebas y evitar secretos o datos personales.
 
-```text
-18-guia-docente-h6-persistente-trazable.md
-18B-ficha-alumnado-h6-persistente-trazable.md
-```
+## Entrega
 
-Plantillas locales:
-
-```text
-plantillas/README-h6-template.md
-plantillas/pruebas-persistencia-h6-template.md
-plantillas/seguridad-h6-template.md
-plantillas/logs-historial-h6-template.md
-plantillas/incidencia-h6-template.md
-plantillas/comparacion-java-python-h6-template.md
-plantillas/portfolio-h6-template.md
-plantillas/registro-ia-h6-template.md
-plantillas/defensa-h6-template.md
-```
-
-Restricción didáctica clave:
-
-```text
-H6 introduce ficheros, logs y reproducibilidad. No debe incluir secretos reales, datos personales reales, .env real subido al repositorio, bases de datos complejas ni integración IA real obligatoria.
-```
-
-## Cobertura curricular de Programación
-
-Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.md`.
-
-```text
-Hito: H6
-Temas de referencia: Temas 5, 6 y puente hacia Tema 8
-Foco: persistencia, logs, errores y trazabilidad
-```
-
-Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias del alumnado:
-
-- clases responsables
-- excepciones checked y runtime
-- throws
-- excepción propia de persistencia
-- validación
-- invariantes
-- repositorio como idea inicial
-- ficheros
-- logs
-- seguridad
-- Repository como patrón opcional
-- pruebas de dos ejecuciones
-- trazabilidad
-
-Refuerzo obligatorio de cobertura:
-
-```text
-H6 debe incluir una decisión explícita sobre gestión de errores de persistencia: excepción propia o excepción estándar justificada.
-Memory debe mantener invariantes: no guardar recuerdos nulos/vacíos y no exponer su lista interna sin control.
-```
-
-Criterio docente de cierre:
-
-- El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
-- Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
-- La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
-
-## Entrega digital
-
-Consulta `ENTREGA-DIGITAL.md` antes de cerrar H6. Moodle debe recibir enlaces profundos, una versión identificable y las exportaciones solicitadas.
+Consulta en Moodle la tarea del hito, los criterios visibles y las instrucciones de entrega digital. Comprueba los permisos y asegúrate de que puedes explicar lo entregado.

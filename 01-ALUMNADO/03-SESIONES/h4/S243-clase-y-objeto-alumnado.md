@@ -7,7 +7,7 @@
 | Entender la diferencia entre clase y objeto. | Definición propia de clase y objeto con ejemplo. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** E.
+**Hito:** H4.
 
 ## Material que necesitas
 

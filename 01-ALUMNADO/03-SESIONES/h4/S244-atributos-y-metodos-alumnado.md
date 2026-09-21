@@ -7,7 +7,7 @@
 | Separar qué sabe y qué hace una clase. | Tabla: clase, atributos, métodos y responsabilidad. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** E.
+**Hito:** H4.
 
 ## Material que necesitas
 

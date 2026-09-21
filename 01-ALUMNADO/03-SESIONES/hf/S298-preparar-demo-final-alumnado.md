@@ -7,7 +7,7 @@
 | Diseñar una demo clara y realista. | Guion de demo final. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** HF. **Momento HEXA:** E/X.
+**Hito:** HF.
 
 ## Material que necesitas
 

@@ -7,7 +7,7 @@
 | Ejecutar una respuesta según comando. | Menú parcial funcional. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** X.
+**Hito:** H2.
 
 ## Material que necesitas
 

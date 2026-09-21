@@ -19,15 +19,15 @@ Documentos principales:
 Plantillas locales:
 
 ```text
-plantillas/README-h6-template.md
-plantillas/pruebas-persistencia-h6-template.md
-plantillas/seguridad-h6-template.md
-plantillas/logs-historial-h6-template.md
-plantillas/incidencia-h6-template.md
-plantillas/comparacion-java-python-h6-template.md
-plantillas/portfolio-h6-template.md
-plantillas/registro-ia-h6-template.md
-plantillas/defensa-h6-template.md
+plantillas/README-h6-plantilla.md
+plantillas/pruebas-persistencia-h6-plantilla.md
+plantillas/seguridad-h6-plantilla.md
+plantillas/logs-historial-h6-plantilla.md
+plantillas/incidencia-h6-plantilla.md
+plantillas/comparacion-java-python-h6-plantilla.md
+plantillas/portfolio-h6-plantilla.md
+plantillas/registro-ia-h6-plantilla.md
+plantillas/defensa-h6-plantilla.md
 ```
 
 Restricción didáctica clave:

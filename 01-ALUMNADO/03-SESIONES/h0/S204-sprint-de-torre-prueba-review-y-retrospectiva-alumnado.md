@@ -7,7 +7,7 @@
 | Poner a prueba la organización del equipo mediante dos ciclos Scrum de construcción. | Torre, tablero actualizado, dos pruebas comparables, adaptación aplicada, review, retrospectiva y aportaciones individuales. |
 
 **Tiempo previsto:** 90 minutos.  
-**Hito:** H0. **Momento HEXA:** A.
+**Hito:** H0.
 
 ---
 

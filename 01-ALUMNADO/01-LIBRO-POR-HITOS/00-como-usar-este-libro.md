@@ -44,7 +44,7 @@ public class Main {
 
 ## 4. Caso práctico MiniJarvis
 
-Crea una carpeta de portfolio personal. Dentro, crea un archivo `indice-portfolio.md` con una tabla H0-H7-HF. Para cada hito deja preparado un hueco: evidencia, prueba, documento y defensa.
+Crea una carpeta de portfolio personal. Dentro, crea un archivo `indice-portfolio` con una tabla H0-H7-HF. Para cada hito deja preparado un hueco: evidencia, prueba, documento y defensa.
 
 Caso práctico: escribe una primera entrada titulada “Qué espero aprender construyendo MiniJarvis”. Incluye una fortaleza, una dificultad prevista y una norma personal de uso de IA.
 
@@ -85,8 +85,6 @@ Uso de IA, si lo hubo, y cómo lo validé:
 
 Los capítulos se relacionan con los contenidos de Programación de la siguiente forma:
 
-
-
 | Bloque del libro | Temas cubiertos |
 |---|---|
 | Capítulos 01-04 | Temas 1 y 3: fundamentos, variables, entrada/salida, condiciones, bucles, pruebas y depuración. |
@@ -95,4 +93,3 @@ Los capítulos se relacionan con los contenidos de Programación de la siguiente
 | Capítulos 10-11 | Temas 6, 7 y 8 como cierre/ampliación: IA responsable, Optional/streams, JavaFX, MVC, arquitectura hexagonal y repositorios. |
 
 Los conceptos de Tema 7 y Tema 8 se tratan como ampliación o mejora final, salvo que el grupo avance lo suficiente para integrarlos en HF.
-

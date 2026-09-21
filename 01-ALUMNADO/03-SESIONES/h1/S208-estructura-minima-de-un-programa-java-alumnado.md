@@ -7,7 +7,7 @@
 | Entender clase `Main` y método `main`. | Código que compila con varios mensajes por pantalla. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H1. **Momento HEXA:** E.
+**Hito:** H1.
 
 ## Material que necesitas
 

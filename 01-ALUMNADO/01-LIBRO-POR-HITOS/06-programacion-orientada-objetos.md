@@ -75,7 +75,7 @@ Refuerzo de cobertura del Tema 5:
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Crea `docs/relacion-clases.md` con una tabla: clase, responsabilidad, atributos, métodos y qué otra clase la usa. Esto prepara los diagramas de Entornos.
+Crea `docs/relacion-clases` con una tabla: clase, responsabilidad, atributos, métodos y qué otra clase la usa. Esto prepara los diagramas de Entornos.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

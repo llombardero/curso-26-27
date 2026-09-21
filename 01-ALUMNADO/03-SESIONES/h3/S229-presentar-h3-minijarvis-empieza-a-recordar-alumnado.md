@@ -7,7 +7,7 @@
 | Comprender memoria temporal. | Lista de necesidades de memoria. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** H.
+**Hito:** H3.
 
 ## Material que necesitas
 

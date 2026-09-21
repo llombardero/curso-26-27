@@ -7,7 +7,7 @@
 | Anticipar H6. | Boceto de persistencia H6. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** C2. **Momento HEXA:** A/cierre.
+**Hito:** C2.
 
 ## Material que necesitas
 

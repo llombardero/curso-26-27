@@ -19,14 +19,14 @@ Documentos principales:
 Plantillas locales:
 
 ```text
-plantillas/README-h2-template.md
-plantillas/pruebas-h2-template.md
-plantillas/depuracion-h2-template.md
-plantillas/incidencia-h2-template.md
-plantillas/comparacion-java-python-h2-template.md
-plantillas/registro-ia-h2-template.md
-plantillas/defensa-h2-template.md
-plantillas/evidencia-ejecucion-h2-template.md
+plantillas/README-h2-plantilla.md
+plantillas/pruebas-h2-plantilla.md
+plantillas/depuracion-h2-plantilla.md
+plantillas/incidencia-h2-plantilla.md
+plantillas/comparacion-java-python-h2-plantilla.md
+plantillas/registro-ia-h2-plantilla.md
+plantillas/defensa-h2-plantilla.md
+plantillas/evidencia-ejecucion-h2-plantilla.md
 ```
 
 Restricción didáctica clave:

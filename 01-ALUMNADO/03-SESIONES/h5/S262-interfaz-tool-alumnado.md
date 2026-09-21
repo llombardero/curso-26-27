@@ -7,7 +7,7 @@
 | Introducir contrato común si el grupo está preparado. | Primera herramienta implementa `Tool`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H5. **Momento HEXA:** E.
+**Hito:** H5.
 
 ## Material que necesitas
 

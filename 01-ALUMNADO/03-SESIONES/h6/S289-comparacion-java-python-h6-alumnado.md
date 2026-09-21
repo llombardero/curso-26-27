@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Comparar ficheros, JSON/logs o lectura simple. | `docs/comparacion-java-python-h6.md`. |
+| Comparar ficheros, JSON/logs o lectura simple. | `docs/comparacion-java-python-h6`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** A.
+**Hito:** H6.
 
 ## Material que necesitas
 
@@ -38,7 +38,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/comparacion-java-python-h6.md`.**
+- [ ] He producido o actualizado: **`docs/comparacion-java-python-h6`.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

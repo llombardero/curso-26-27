@@ -7,7 +7,7 @@
 | Definir memoria antes de codificar. | Documento breve de decisión de memoria. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** E.
+**Hito:** H3.
 
 ## Material que necesitas
 

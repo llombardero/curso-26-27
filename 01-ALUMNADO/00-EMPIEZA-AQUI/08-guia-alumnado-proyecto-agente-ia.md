@@ -2,18 +2,6 @@
 
 ## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
 
-Edición final para Moodle — septiembre de 2026
-
-Documentos relacionados:
-
-- `00-mapa-maestro-curso-2026-2027.md`
-- `02-calendario-hitos-sprints-2026-2027.md`
-- `04A-enunciados-y-entregables-alumnado.md`
-- `05-politica-uso-ia-semaforo-registro-defensa.md`
-- `06-rubricas-hitos.md`
-- `07-plantillas-entregables.md`
-- carpeta `plantillas/`
-
 ---
 
 ## 1. Qué vamos a hacer durante el curso
@@ -76,8 +64,6 @@ No se espera que el proyecto final aparezca de golpe. Se irá construyendo por v
 | FFEOE | 30 abril - 28 mayo | No hay clases ni entregas. El proyecto base debe quedar cerrado antes. |
 | HF. Presentación final | 31 mayo - 22 junio | Defensa final, portfolio final, demo, recuperación y mejora. |
 
-<!-- H0-INICIO-SCRUM-DIAGNOSTICO:START -->
-
 ### H0 comienza antes de la torre
 
 1. Presentación de curso, hitos, HEXA, evidencias, defensa e IA responsable.
@@ -87,8 +73,6 @@ No se espera que el proyecto final aparezca de golpe. Se irá construyendo por v
 5. Sesión siguiente: torre, review, retrospectiva y revisión de equipos.
 
 El diagnóstico no es una prueba psicológica. No se publican puntuaciones, no fija roles y no se utiliza para decidir quién “vale”. Los roles rotan y todas las habilidades se desarrollan.
-
-<!-- H0-INICIO-SCRUM-DIAGNOSTICO:END -->
 
 Cada hito tendrá:
 
@@ -153,17 +137,17 @@ La estructura crecerá poco a poco. Una estructura orientativa será:
 
 ```text
 hN-nombre-del-hito/
-├── README.md
+├── README
 ├── src/
 │   └── ...
 ├── docs/
-│   ├── portfolio.md
-│   ├── registro-ia.md
-│   ├── pruebas.md
-│   ├── depuracion.md
-│   ├── retrospectiva.md
-│   ├── comparacion-java-python.md
-│   └── decisiones-tecnicas.md
+│   ├── portfolio
+│   ├── registro-ia
+│   ├── pruebas
+│   ├── depuracion
+│   ├── retrospectiva
+│   ├── comparacion-java-python
+│   └── decisiones-tecnicas
 └── .gitignore
 ```
 
@@ -241,7 +225,7 @@ Si usas IA en una entrega evaluable, debes registrarlo.
 Archivo recomendado:
 
 ```text
-docs/registro-ia.md
+docs/registro-ia
 ```
 
 El registro debe explicar:
@@ -336,7 +320,7 @@ Las plantillas están en dos lugares:
 1. Documento general:
 
 ```text
-07-plantillas-entregables.md
+07-plantillas-entregables
 ```
 
 2. Carpeta de plantillas individuales:
@@ -349,18 +333,18 @@ Plantillas disponibles:
 
 | Plantilla | Para qué sirve |
 |---|---|
-| `README-template.md` | Explicar qué hace el proyecto y cómo se ejecuta. |
-| `portfolio-template.md` | Reflexionar individualmente sobre aportaciones y aprendizaje. |
-| `registro-ia-template.md` | Declarar y analizar el uso de IA. |
-| `pruebas-template.md` | Diseñar y registrar pruebas. |
-| `depuracion-template.md` | Documentar un proceso de depuración. |
-| `incidencia-template.md` | Registrar errores o problemas detectados. |
-| `retrospectiva-template.md` | Revisar cómo ha trabajado el equipo. |
-| `comparacion-java-python-template.md` | Comparar una solución Java con Python. |
-| `decision-tecnica-template.md` | Justificar una decisión técnica. |
-| `patron-diseno-template.md` | Registrar un patrón usado o descartado. |
-| `seguridad-datos-template.md` | Revisar riesgos de datos, secretos y configuración. |
-| `defensa-individual-template.md` | Preparar la defensa técnica individual. |
+| `README-plantilla` | Explicar qué hace el proyecto y cómo se ejecuta. |
+| `portfolio-plantilla` | Reflexionar individualmente sobre aportaciones y aprendizaje. |
+| `registro-ia-plantilla` | Declarar y analizar el uso de IA. |
+| `pruebas-plantilla` | Diseñar y registrar pruebas. |
+| `depuracion-plantilla` | Documentar un proceso de depuración. |
+| `incidencia-plantilla` | Registrar errores o problemas detectados. |
+| `retrospectiva-plantilla` | Revisar cómo ha trabajado el equipo. |
+| `comparacion-java-python-plantilla` | Comparar una solución Java con Python. |
+| `decision-tecnica-plantilla` | Justificar una decisión técnica. |
+| `patron-diseno-plantilla` | Registrar un patrón usado o descartado. |
+| `seguridad-datos-plantilla` | Revisar riesgos de datos, secretos y configuración. |
+| `defensa-individual-plantilla` | Preparar la defensa técnica individual. |
 
 ### 7.1. Cómo copiar una plantilla
 
@@ -369,10 +353,10 @@ Para cada hito, copia solo las plantillas necesarias dentro de `docs/` y cambia 
 Ejemplo para H2:
 
 ```text
-docs/pruebas-h2.md
-docs/depuracion-h2.md
-docs/registro-ia.md
-docs/comparacion-java-python-h2.md
+docs/pruebas-h2
+docs/depuracion-h2
+docs/registro-ia
+docs/comparacion-java-python-h2
 ```
 
 ### 7.2. Qué hacer si un apartado no aplica
@@ -499,33 +483,3 @@ La meta es que puedas decir:
 ```text
 Sé qué he construido, sé cómo funciona, sé cómo lo he comprobado y puedo mejorarlo.
 ```
-
-# 16. Ajuste aplicado a los hitos MiniJarvis
-
-Este documento ya no queda solo como análisis: se ha usado para modificar los hitos, guías docentes autónomas, paquetes de hito, libro del alumnado, índice global y respuestas modelo de Laura.
-
-Criterio aplicado:
-
-```text
-Todo concepto de Programación recopilado aquí debe aparecer al final del itinerario como núcleo, ampliación, recuperación o mejora defendible.
-```
-
-Distribución final:
-
-| Bloque | Función curricular |
-|---|---|
-| H1-H2 | Fundamentos, variables, tipos, entrada/salida, condiciones, bucles, switch, depuración y eficiencia básica. |
-| H3 | Colecciones, listas, recorridos, mutabilidad, arrays, Set y Map como ampliaciones. |
-| H4 | Clases, objetos, métodos, constructores, referencias, diagramas y responsabilidades. |
-| H5 | Tests, TDD, interfaces, polimorfismo, clean code y Command simplificado. |
-| H6 | Excepciones, invariantes, persistencia, logs y repositorio como idea inicial. |
-| H7 | Records/enums, abstracción, Strategy opcional, Optional, streams, funciones puras e IA responsable. |
-| HF | Cierre y mejora: JavaFX, eventos, MVC, arquitectura hexagonal, repositorios, CRUD, transacciones y defensa global. |
-
-Respuesta de Laura esperada al final:
-
-> Puedo explicar dónde aparece cada concepto importante en mi proyecto MiniJarvis o, si es una ampliación, dónde lo he estudiado y cómo lo aplicaría de forma segura sin romper el diseño.
-
-## Ecosistema digital definitivo
-
-Antes de empezar H0, lee `10-ecosistema-digital-y-entregas.md`. Cada carpeta de hito contiene `ENTREGA-DIGITAL.md` con los enlaces, exportaciones y versión de GitHub que debes presentar.

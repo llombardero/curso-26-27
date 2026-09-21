@@ -80,7 +80,7 @@ Refuerzo de cobertura del Tema 3:
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Crea `docs/pruebas-menu.md` con tabla: comando, resultado esperado, resultado observado, estado. Esto conecta Programación con Entornos mediante pruebas manuales.
+Crea `docs/pruebas-menu` con tabla: comando, resultado esperado, resultado observado, estado. Esto conecta Programación con Entornos mediante pruebas manuales.
 
 ## 6. Errores frecuentes y cómo corregirlos
 
@@ -122,4 +122,4 @@ Un menú por consola debe ser predecible. Cada comando tiene una condición, una
 
 Caso de estudio: añade el comando `version`. Debe mostrar `MiniJarvis H2`. Después prueba mayúsculas, espacios antes/después y comando desconocido. Escribe una tabla de pruebas. No des por bueno el menú hasta comprobar al menos cuatro entradas distintas.
 
-Caso de estudio de refuerzo: crea `docs/refuerzo-bucles-h2.md` con tres fragmentos pequeños: uno con `while`, uno con `do-while` y uno con `for`. No tienen que estar todos dentro de MiniJarvis, pero debes poder explicar para qué sirve cada uno.
+Caso de estudio de refuerzo: crea `docs/refuerzo-bucles-h2` con tres fragmentos pequeños: uno con `while`, uno con `do-while` y uno con `for`. No tienen que estar todos dentro de MiniJarvis, pero debes poder explicar para qué sirve cada uno.

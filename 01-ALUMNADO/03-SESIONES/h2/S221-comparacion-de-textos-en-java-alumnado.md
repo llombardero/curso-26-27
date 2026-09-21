@@ -7,7 +7,7 @@
 | Evitar el error de usar `==` con cadenas. | Comandos funcionan con espacios o mayúsculas si se decide soportarlo. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** X.
+**Hito:** H2.
 
 ## Material que necesitas
 

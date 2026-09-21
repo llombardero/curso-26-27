@@ -19,15 +19,15 @@ Documentos principales:
 Plantillas locales:
 
 ```text
-plantillas/README-h5-template.md
-plantillas/informe-refactorizacion-h5-template.md
-plantillas/evidencia-git-h5-template.md
-plantillas/revision-codigo-h5-template.md
-plantillas/registro-patron-h5-template.md
-plantillas/comparacion-java-python-h5-template.md
-plantillas/portfolio-h5-template.md
-plantillas/registro-ia-h5-template.md
-plantillas/defensa-h5-template.md
+plantillas/README-h5-plantilla.md
+plantillas/informe-refactorizacion-h5-plantilla.md
+plantillas/evidencia-git-h5-plantilla.md
+plantillas/revision-codigo-h5-plantilla.md
+plantillas/registro-patron-h5-plantilla.md
+plantillas/comparacion-java-python-h5-plantilla.md
+plantillas/portfolio-h5-plantilla.md
+plantillas/registro-ia-h5-plantilla.md
+plantillas/defensa-h5-plantilla.md
 ```
 
 Restricción didáctica clave:

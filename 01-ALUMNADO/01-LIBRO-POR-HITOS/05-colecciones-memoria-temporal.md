@@ -76,7 +76,7 @@ Refuerzo de cobertura del Tema 4:
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Crea `docs/pruebas-memoria.md` y `docs/justificacion-coleccion.md`. Explica por qué `ArrayList` es suficiente en este hito y por qué todavía no se guarda en fichero.
+Crea `docs/pruebas-memoria` y `docs/justificacion-coleccion`. Explica por qué `ArrayList` es suficiente en este hito y por qué todavía no se guarda en fichero.
 
 ## 6. Errores frecuentes y cómo corregirlos
 
@@ -118,4 +118,4 @@ Una colección no es solo una variable grande. Es una estructura que permite gua
 
 Caso de estudio: guarda tres recuerdos ficticios y muéstralos numerados. Después prueba memoria vacía al iniciar el programa. Finalmente intenta guardar un recuerdo vacío. Si tu programa lo guarda, tienes una mejora pendiente: validar antes de añadir. Explica por qué guardar datos vacíos empeora la calidad del agente.
 
-Caso de estudio de refuerzo: amplía `docs/justificacion-coleccion.md` con una tabla que compare array, `ArrayList`, `Set` y `HashMap`. Debes indicar cuál usas en MiniJarvis, cuál descartas y por qué.
+Caso de estudio de refuerzo: amplía `docs/justificacion-coleccion` con una tabla que compare array, `ArrayList`, `Set` y `HashMap`. Debes indicar cuál usas en MiniJarvis, cuál descartas y por qué.

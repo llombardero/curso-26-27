@@ -7,7 +7,7 @@
 | Validar menú, pruebas y depuración. | Defensa H2, README actualizado y registro IA si procede. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** A.
+**Hito:** H2.
 
 ## Material que necesitas
 

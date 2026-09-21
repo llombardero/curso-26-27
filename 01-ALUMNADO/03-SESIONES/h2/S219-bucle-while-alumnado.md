@@ -7,7 +7,7 @@
 | Repetir lectura de comandos. | Programa que repite prompt `>`. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H2. **Momento HEXA:** E.
+**Hito:** H2.
 
 ## Material que necesitas
 

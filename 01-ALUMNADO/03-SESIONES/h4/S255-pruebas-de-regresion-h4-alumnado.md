@@ -7,7 +7,7 @@
 | Asegurar que refactorizar a clases no rompió comportamiento. | Checklist de pruebas H4. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** A.
+**Hito:** H4.
 
 ## Material que necesitas
 

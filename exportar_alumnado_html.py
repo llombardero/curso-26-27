@@ -113,7 +113,7 @@ def relative_css_path(html_path: Path) -> str:
 
 def remove_internal_document_links(text: str) -> str:
     pattern = re.compile(
-        r'<a\s+href="(?!https?://|mailto:|#)[^"]+\.(?:md|html)(?:#[^"]*)?"[^>]*>(.*?)</a>',
+        r'<a\s+href="(?!https?://|mailto:|#)[^"]+"[^>]*>(.*?)</a>',
         re.IGNORECASE | re.DOTALL,
     )
     return pattern.sub(r"\1", text)
@@ -192,14 +192,14 @@ def main() -> None:
             "Cómo usar estos materiales",
             """
 <h1>Cómo usar estos materiales</h1>
-<p>Esta carpeta contiene una copia en HTML de los materiales de alumnado de MiniJarvis.</p>
+<p>Estos son los materiales de alumnado de MiniJarvis.</p>
 <ol>
-  <li>Empieza por el documento README.</li>
-  <li>Abre los archivos con el navegador.</li>
+  <li>Consulta primero el documento de inicio que indique Moodle.</li>
+  <li>Trabaja únicamente con el reto, sesión o plantilla que esté activa.</li>
   <li>Consulta en Moodle el documento que corresponda a cada sesión, hito o plantilla.</li>
   <li>Entrega en Moodle solo lo que indique cada hito.</li>
 </ol>
-<p>Los archivos Markdown originales se conservan en <code>01-ALUMNADO/</code>. Esta carpeta es solo la versión publicable para alumnado.</p>
+<p>Si tienes dudas sobre Drive o GitHub, consulta sus guías básicas antes de realizar la entrega.</p>
 """.strip(),
             guia,
         ),

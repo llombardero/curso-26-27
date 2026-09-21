@@ -7,7 +7,7 @@
 | Guardar varios elementos en orden. | Ejemplo pequeño de `ArrayList` que compila. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** E.
+**Hito:** H3.
 
 ## Material que necesitas
 

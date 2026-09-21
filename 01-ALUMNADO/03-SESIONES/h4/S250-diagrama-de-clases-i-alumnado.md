@@ -4,10 +4,10 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Representar diseño en UML básico. | `docs/diagrama-clases-h4.md` versión inicial. |
+| Representar diseño en UML básico. | `docs/diagrama-clases-h4` versión inicial. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H4. **Momento HEXA:** X.
+**Hito:** H4.
 
 ## Material que necesitas
 
@@ -38,7 +38,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/diagrama-clases-h4.md` versión inicial.**
+- [ ] He producido o actualizado: **`docs/diagrama-clases-h4` versión inicial.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

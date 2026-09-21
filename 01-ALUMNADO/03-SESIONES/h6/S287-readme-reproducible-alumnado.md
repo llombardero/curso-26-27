@@ -7,7 +7,7 @@
 | Que otra persona pueda ejecutar desde cero. | README H6 probado por otro equipo. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H6. **Momento HEXA:** X.
+**Hito:** H6.
 
 ## Material que necesitas
 

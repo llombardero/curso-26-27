@@ -7,7 +7,7 @@
 | Gestionar ausencia de datos. | Prueba de `memoria` antes de guardar nada. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** X.
+**Hito:** H3.
 
 ## Material que necesitas
 

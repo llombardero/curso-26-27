@@ -7,7 +7,7 @@
 | Verificar comprensión individual. | Registro de defensa individual. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** C2. **Momento HEXA:** A/cierre.
+**Hito:** C2.
 
 ## Material que necesitas
 

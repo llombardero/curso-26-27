@@ -7,7 +7,7 @@
 | Guardar información introducida por usuario. | MiniJarvis guarda al menos un recuerdo. |
 
 **Tiempo previsto:** 45 minutos.  
-**Hito:** H3. **Momento HEXA:** E.
+**Hito:** H3.
 
 ## Material que necesitas
 

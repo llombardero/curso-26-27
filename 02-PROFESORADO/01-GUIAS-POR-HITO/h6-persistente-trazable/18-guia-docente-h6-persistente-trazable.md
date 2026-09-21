@@ -151,16 +151,16 @@ logs/historial.log
 | Entregable | Responsable | Formato | Plantilla local |
 |---|---|---|---|
 | Código persistente | Equipo/individual | `src/*.java` | No aplica. |
-| README reproducible | Equipo | `README.md` | `plantillas/README-h6-template.md` |
+| README reproducible | Equipo | `README.md` | `plantillas/README-h6-plantilla.md` |
 | Ficheros de ejemplo | Equipo | `data/`, `logs/` | No aplica. |
-| Pruebas de persistencia | Equipo | `docs/pruebas-persistencia-h6.md` | `plantillas/pruebas-persistencia-h6-template.md` |
-| Seguridad | Equipo | `docs/seguridad-h6.md` | `plantillas/seguridad-h6-template.md` |
-| Logs/historial | Equipo | `docs/logs-historial-h6.md` | `plantillas/logs-historial-h6-template.md` |
-| Incidencia | Si procede | `docs/incidencia-h6.md` | `plantillas/incidencia-h6-template.md` |
-| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h6.md` | `plantillas/comparacion-java-python-h6-template.md` |
-| Portfolio H6 | Individual | `docs/portfolio-h6.md` | `plantillas/portfolio-h6-template.md` |
-| Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h6-template.md` |
-| Defensa H6 | Individual | `docs/defensa-h6.md` | `plantillas/defensa-h6-template.md` |
+| Pruebas de persistencia | Equipo | `docs/pruebas-persistencia-h6.md` | `plantillas/pruebas-persistencia-h6-plantilla.md` |
+| Seguridad | Equipo | `docs/seguridad-h6.md` | `plantillas/seguridad-h6-plantilla.md` |
+| Logs/historial | Equipo | `docs/logs-historial-h6.md` | `plantillas/logs-historial-h6-plantilla.md` |
+| Incidencia | Si procede | `docs/incidencia-h6.md` | `plantillas/incidencia-h6-plantilla.md` |
+| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h6.md` | `plantillas/comparacion-java-python-h6-plantilla.md` |
+| Portfolio H6 | Individual | `docs/portfolio-h6.md` | `plantillas/portfolio-h6-plantilla.md` |
+| Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h6-plantilla.md` |
+| Defensa H6 | Individual | `docs/defensa-h6.md` | `plantillas/defensa-h6-plantilla.md` |
 
 ---
 

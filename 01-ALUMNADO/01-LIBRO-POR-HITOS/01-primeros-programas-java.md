@@ -58,7 +58,7 @@ Guarda en tu portfolio qué comando has usado y qué salida esperabas.
 
 ## 5. Evidencia de Entornos de Desarrollo
 
-Documento mínimo: `README.md` con dos apartados: “Cómo compilar” y “Cómo ejecutar”. Añade una captura o copia de salida de consola. Si hay error, anota el mensaje exacto.
+Documento mínimo: `README` con dos apartados: “Cómo compilar” y “Cómo ejecutar”. Añade una captura o copia de salida de consola. Si hay error, anota el mensaje exacto.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

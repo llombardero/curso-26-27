@@ -214,15 +214,15 @@ Tengo 1 recuerdo en memoria temporal.
 | Entregable | Responsable | Formato | Plantilla local |
 |---|---|---|---|
 | Código con memoria temporal | Equipo/individual | `src/Main.java` | No aplica. |
-| README H3 | Equipo/individual | `README.md` | `plantillas/README-h3-template.md` |
-| Evidencia de ejecución | Equipo/individual | `docs/evidencia-ejecucion-h3.md` | `plantillas/evidencia-ejecucion-h3-template.md` |
-| Pruebas de memoria | Equipo | `docs/pruebas-memoria-h3.md` | `plantillas/pruebas-memoria-h3-template.md` |
-| Justificación de colección | Individual/equipo | `docs/justificacion-coleccion-h3.md` | `plantillas/justificacion-coleccion-h3-template.md` |
-| Incidencia | Si procede | `docs/incidencia-h3.md` | `plantillas/incidencia-h3-template.md` |
-| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h3.md` | `plantillas/comparacion-java-python-h3-template.md` |
-| Portfolio H3 | Individual | `docs/portfolio-h3.md` | `plantillas/portfolio-h3-template.md` |
-| Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h3-template.md` |
-| Defensa H3 | Individual | `docs/defensa-h3.md` | `plantillas/defensa-h3-template.md` |
+| README H3 | Equipo/individual | `README.md` | `plantillas/README-h3-plantilla.md` |
+| Evidencia de ejecución | Equipo/individual | `docs/evidencia-ejecucion-h3.md` | `plantillas/evidencia-ejecucion-h3-plantilla.md` |
+| Pruebas de memoria | Equipo | `docs/pruebas-memoria-h3.md` | `plantillas/pruebas-memoria-h3-plantilla.md` |
+| Justificación de colección | Individual/equipo | `docs/justificacion-coleccion-h3.md` | `plantillas/justificacion-coleccion-h3-plantilla.md` |
+| Incidencia | Si procede | `docs/incidencia-h3.md` | `plantillas/incidencia-h3-plantilla.md` |
+| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h3.md` | `plantillas/comparacion-java-python-h3-plantilla.md` |
+| Portfolio H3 | Individual | `docs/portfolio-h3.md` | `plantillas/portfolio-h3-plantilla.md` |
+| Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h3-plantilla.md` |
+| Defensa H3 | Individual | `docs/defensa-h3.md` | `plantillas/defensa-h3-plantilla.md` |
 
 ---
 
