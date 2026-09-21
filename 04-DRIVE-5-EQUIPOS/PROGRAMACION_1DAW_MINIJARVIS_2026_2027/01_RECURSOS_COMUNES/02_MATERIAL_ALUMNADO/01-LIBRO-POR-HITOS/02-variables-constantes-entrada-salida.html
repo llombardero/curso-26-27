@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capítulo 02 — Variables, constantes y entrada/salida</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="capítulo-02--variables-constantes-y-entradasalida">Capítulo 02 —
+Variables, constantes y entrada/salida</h1>
+<h2 id="hitos-relacionados">Hitos relacionados</h2>
+<pre class="text"><code>H1</code></pre>
+<h2 id="qué-aprenderás">Qué aprenderás</h2>
+<ul>
+<li>variables</li>
+<li>tipos básicos</li>
+<li>constantes</li>
+<li>Scanner</li>
+<li>entrada por teclado</li>
+<li>salida por consola</li>
+<li>conversiones de texto a número</li>
+<li>operadores aritméticos y comparación</li>
+</ul>
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>MiniJarvis se construye por capas. Este capítulo trabaja una pieza
+concreta del proyecto y la conecta con evidencias reales: código,
+pruebas, documentación, defensa y uso responsable de IA si procede.</p>
+<p>La regla de estudio es siempre la misma:</p>
+<pre class="text"><code>Lee el concepto, ejecuta un ejemplo pequeño, aplícalo a MiniJarvis, documenta la evidencia y prepárate para defenderlo.</code></pre>
+<h2 id="2-conceptos-básicos-explicados">2. Conceptos básicos
+explicados</h2>
+<p>Una variable guarda un dato que puede cambiar. Una constante guarda
+un dato que no debería cambiar durante la ejecución. Java exige indicar
+el tipo: <code>String</code> para texto, <code>int</code> para enteros,
+<code>boolean</code> para verdadero/falso.</p>
+<p>La entrada permite que el usuario participe. Usaremos
+<code>Scanner</code> para leer texto desde teclado. La salida se realiza
+con <code>System.out.println</code> o <code>System.out.print</code>.
+Entrada y salida son la base de un asistente por consola.</p>
+<p>Cuando leemos con <code>scanner.nextLine()</code>, Java obtiene texto
+aunque el usuario escriba un número. Si necesitamos calcular, tendremos
+que convertir ese texto a número con métodos como
+<code>Integer.parseInt</code>. Esta conversión puede fallar si el texto
+no tiene forma de número.</p>
+<p>Los operadores permiten calcular y comparar: <code>+</code>,
+<code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>,
+<code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>,
+<code>&lt;=</code>, <code>==</code> y <code>!=</code>. En expresiones
+con varios operadores hay precedencia: por ejemplo, la multiplicación se
+calcula antes que la suma.</p>
+<h2 id="3-ejemplo-guiado-en-java">3. Ejemplo guiado en Java</h2>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;¿Cómo te llamas? &quot;</span><span class="op">);</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;. Soy &quot;</span> <span class="op">+</span> AGENT_NAME <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="4-caso-práctico-minijarvis">4. Caso práctico MiniJarvis</h2>
+<p>MiniJarvis debe pedir el nombre del usuario y responder con un saludo
+personalizado. Después añade una variable <code>courseYear</code> y
+muestra el curso ficticio.</p>
+<p>Amplía el caso: si el usuario deja el nombre vacío, de momento solo
+observa qué ocurre. La validación llegará después.</p>
+<p>Refuerzo de cobertura del Tema 1: añade una pregunta numérica.</p>
+<pre class="text"><code>¿Cuántas horas has estudiado Programación esta semana?</code></pre>
+<p>Lee la respuesta como texto, conviértela a <code>int</code>, calcula
+una recomendación sencilla y muestra un mensaje. Por ejemplo, si el
+número es menor que 3, MiniJarvis recomienda practicar más; si es mayor
+o igual que 3, felicita al usuario.</p>
+<h2 id="5-evidencia-de-entornos-de-desarrollo">5. Evidencia de Entornos
+de Desarrollo</h2>
+<p>Actualiza el README indicando que el programa requiere interacción
+por teclado. Añade una prueba manual: entrada usada y salida
+observada.</p>
+<h2 id="6-errores-frecuentes-y-cómo-corregirlos">6. Errores frecuentes y
+cómo corregirlos</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Error</th>
+<th>Síntoma</th>
+<th>Corrección</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No importar Scanner</td>
+<td>cannot find symbol Scanner</td>
+<td>Añadir <code>import java.util.Scanner;</code></td>
+</tr>
+<tr class="even">
+<td>Confundir int y String</td>
+<td>Error de tipos</td>
+<td>Elegir tipo según dato</td>
+</tr>
+<tr class="odd">
+<td>No probar entrada vacía</td>
+<td>Caso límite no detectado</td>
+<td>Registrar qué ocurre</td>
+</tr>
+<tr class="even">
+<td>Convertir texto no numérico</td>
+<td><code>NumberFormatException</code></td>
+<td>Probar entradas válidas e inválidas</td>
+</tr>
+<tr class="odd">
+<td>Operación mal agrupada</td>
+<td>Resultado inesperado</td>
+<td>Usar paréntesis y explicar precedencia</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-preguntas-de-repaso">7. Preguntas de repaso</h2>
+<ol type="1">
+<li>¿Qué es una variable?</li>
+<li>¿Qué aporta una constante?</li>
+<li>¿Para qué sirve Scanner?</li>
+<li>¿Qué prueba manual puedes escribir para entrada/salida?</li>
+<li>¿Por qué <code>scanner.nextLine()</code> devuelve texto aunque
+escribas un número?</li>
+<li>¿Qué puede ocurrir al usar <code>Integer.parseInt</code>?</li>
+</ol>
+<h2 id="8-para-tu-portfolio">8. Para tu portfolio</h2>
+<p>Copia y completa este bloque en tu portfolio:</p>
+<pre class="text"><code>Capítulo 02: Variables, constantes y entrada/salida
+Qué he aprendido:
+Código o documento que lo demuestra:
+Prueba realizada:
+Error que he corregido:
+Qué puedo defender oralmente:
+Uso de IA, si lo hubo, y cómo lo validé:</code></pre>
+<h2 id="9-estudio-paso-a-paso">9. Estudio paso a paso</h2>
+<p>Cuando uses variables, pregúntate tres cosas: qué dato quiero
+guardar, qué tipo tiene y si cambiará durante la ejecución. El nombre de
+la variable debe explicar su intención. <code>n</code> dice poco;
+<code>userName</code> ayuda más. Una constante como
+<code>AGENT_NAME</code> evita escribir el mismo texto en varios lugares
+y comunica que ese valor no debe cambiar.</p>
+<p>Caso de estudio: añade <code>String favoriteTopic</code> y pregunta
+al usuario qué parte de programación quiere practicar. MiniJarvis debe
+responder con una frase personalizada. Registra dos pruebas: una con
+texto normal y otra con entrada vacía. Todavía no tienes que resolver la
+entrada vacía, pero sí observarla.</p>
+<p>Caso de estudio de refuerzo: añade <code>int studyHours</code>. Debes
+demostrar en el portfolio una prueba con número válido y otra con texto
+no numérico. Si todavía no sabes controlar la excepción, al menos
+explica qué error aparece y por qué.</p>
+
+  </main>
+</body>
+</html>

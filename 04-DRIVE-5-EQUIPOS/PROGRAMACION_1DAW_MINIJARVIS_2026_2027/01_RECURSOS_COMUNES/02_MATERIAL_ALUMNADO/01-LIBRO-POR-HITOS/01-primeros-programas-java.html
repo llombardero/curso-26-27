@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capítulo 01 — Primeros programas en Java</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="capítulo-01--primeros-programas-en-java">Capítulo 01 — Primeros
+programas en Java</h1>
+<h2 id="hitos-relacionados">Hitos relacionados</h2>
+<pre class="text"><code>H1</code></pre>
+<h2 id="qué-aprenderás">Qué aprenderás</h2>
+<ul>
+<li>estructura mínima de un programa Java</li>
+<li>clase Main</li>
+<li>método main</li>
+<li>compilación y ejecución</li>
+<li>primeros mensajes por consola</li>
+</ul>
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>MiniJarvis se construye por capas. Este capítulo trabaja una pieza
+concreta del proyecto y la conecta con evidencias reales: código,
+pruebas, documentación, defensa y uso responsable de IA si procede.</p>
+<p>La regla de estudio es siempre la misma:</p>
+<pre class="text"><code>Lee el concepto, ejecuta un ejemplo pequeño, aplícalo a MiniJarvis, documenta la evidencia y prepárate para defenderlo.</code></pre>
+<h2 id="2-conceptos-básicos-explicados">2. Conceptos básicos
+explicados</h2>
+<p>Un programa Java básico necesita una clase. Para empezar usaremos una
+clase llamada <code>Main</code>. Dentro aparece el método
+<code>main</code>, que es el punto de entrada: por ahí comienza la
+ejecución.</p>
+<p>Compilar significa convertir el código fuente <code>.java</code> en
+bytecode <code>.class</code>. Ejecutar significa pedir a Java que
+arranque el programa. En este nivel debes entender el ciclo mínimo:
+escribir, compilar, ejecutar, observar, corregir.</p>
+<p>La consola será nuestra primera interfaz. MiniJarvis todavía no será
+inteligente: primero debe hablar de forma simple y predecible.</p>
+<h2 id="3-ejemplo-guiado-en-java">3. Ejemplo guiado en Java</h2>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Estoy aprendiendo a funcionar por consola.&quot;</span><span class="op">);</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="4-caso-práctico-minijarvis">4. Caso práctico MiniJarvis</h2>
+<p>Crea <code>src/Main.java</code>. Haz que MiniJarvis muestre tres
+mensajes: saludo, nombre del proyecto y una frase sobre qué podrá hacer
+más adelante.</p>
+<p>Después compila y ejecuta:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">javac</span> src/Main.java</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-cp</span> src Main</span></code></pre></div>
+<p>Guarda en tu portfolio qué comando has usado y qué salida
+esperabas.</p>
+<h2 id="5-evidencia-de-entornos-de-desarrollo">5. Evidencia de Entornos
+de Desarrollo</h2>
+<p>Documento mínimo: <code>README.md</code> con dos apartados: “Cómo
+compilar” y “Cómo ejecutar”. Añade una captura o copia de salida de
+consola. Si hay error, anota el mensaje exacto.</p>
+<h2 id="6-errores-frecuentes-y-cómo-corregirlos">6. Errores frecuentes y
+cómo corregirlos</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Error</th>
+<th>Síntoma</th>
+<th>Corrección</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nombre de archivo incorrecto</td>
+<td>Main.java no coincide con public class Main</td>
+<td>Alinear nombre de archivo y clase</td>
+</tr>
+<tr class="even">
+<td>Falta punto y coma</td>
+<td>Error de compilación</td>
+<td>Revisar final de cada instrucción</td>
+</tr>
+<tr class="odd">
+<td>Ejecutar desde carpeta equivocada</td>
+<td>No encuentra la clase</td>
+<td>Usar <code>java -cp src Main</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-preguntas-de-repaso">7. Preguntas de repaso</h2>
+<ol type="1">
+<li>¿Qué hace el método main?</li>
+<li>¿Qué diferencia hay entre compilar y ejecutar?</li>
+<li>¿Por qué usamos consola al principio?</li>
+<li>¿Qué evidencia demuestra que tu programa funciona?</li>
+</ol>
+<h2 id="8-para-tu-portfolio">8. Para tu portfolio</h2>
+<p>Copia y completa este bloque en tu portfolio:</p>
+<pre class="text"><code>Capítulo 01: Primeros programas en Java
+Qué he aprendido:
+Código o documento que lo demuestra:
+Prueba realizada:
+Error que he corregido:
+Qué puedo defender oralmente:
+Uso de IA, si lo hubo, y cómo lo validé:</code></pre>
+<h2 id="9-estudio-paso-a-paso">9. Estudio paso a paso</h2>
+<p>Antes de avanzar, asegúrate de que puedes explicar el recorrido
+completo de un programa sencillo. Primero escribes el archivo
+<code>Main.java</code>. Después compilas con <code>javac</code>. Si hay
+errores, Java te indica una línea aproximada y un mensaje. No copies el
+mensaje sin leerlo: busca si falta una llave, un punto y coma o si el
+nombre de la clase no coincide. Cuando compila, ejecutas con
+<code>java -cp src Main</code>.</p>
+<p>Caso de estudio: cambia el mensaje de bienvenida tres veces y
+recompila cada vez. Comprueba que la salida cambia solo cuando vuelves a
+compilar. Esto te ayuda a entender la diferencia entre código fuente y
+programa compilado.</p>
+
+  </main>
+</body>
+</html>

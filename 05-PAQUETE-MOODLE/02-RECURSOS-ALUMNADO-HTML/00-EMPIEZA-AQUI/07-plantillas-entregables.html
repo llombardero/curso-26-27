@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plantillas de entregables</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="plantillas-de-entregables">Plantillas de entregables</h1>
+<h2
+id="programación--entornos-de-desarrollo--1º-daw--curso-20262027">Programación
++ Entornos de Desarrollo — 1.º DAW — Curso 2026/2027</h2>
+<p>Edición final para Moodle — septiembre de 2026 Documentos
+relacionados:</p>
+<ul>
+<li><code>00-mapa-maestro-curso-2026-2027.md</code></li>
+<li><code>01-matriz-integrada-ra-ce-evidencias-tareas.md</code></li>
+<li><code>01A-anexo-programacion-ra-ce.md</code></li>
+<li><code>01B-anexo-entornos-ra-ce.md</code></li>
+<li><code>02-calendario-hitos-sprints-2026-2027.md</code></li>
+<li><code>04A-enunciados-y-entregables-alumnado.md</code></li>
+<li><code>04B-modelo-entregables-laura.md</code></li>
+<li><code>05-politica-uso-ia-semaforo-registro-defensa.md</code></li>
+<li><code>06-rubricas-hitos.md</code></li>
+</ul>
+<hr />
+<h2 id="1-propósito">1. Propósito</h2>
+<p>Este documento recoge plantillas reutilizables para los entregables
+del proyecto anual:</p>
+<blockquote>
+<p>Construcción progresiva de un pequeño agente IA propio.</p>
+</blockquote>
+<p>Las plantillas sirven para que el alumnado entregue evidencias
+homogéneas, revisables y defendibles, y para facilitar la coordinación
+entre Programación y Entornos de Desarrollo.</p>
+<p>Uso recomendado:</p>
+<ul>
+<li>Copiar la plantilla necesaria en la carpeta <code>docs/</code> del
+hito correspondiente.</li>
+<li>Completar solo los apartados aplicables al hito.</li>
+<li>No borrar apartados importantes: si algo no aplica, escribir “No
+aplica en este hito” y justificar brevemente.</li>
+</ul>
+<hr />
+<h2 id="2-estructura-recomendada-por-hito">2. Estructura recomendada por
+hito</h2>
+<pre class="text"><code>hN-nombre-del-hito/
+├── README.md
+├── src/
+│   └── ...
+├── docs/
+│   ├── portfolio.md
+│   ├── registro-ia.md
+│   ├── pruebas.md
+│   ├── depuracion.md
+│   ├── retrospectiva.md
+│   ├── comparacion-java-python.md
+│   └── decisiones-tecnicas.md
+└── .gitignore</code></pre>
+<p>No todos los hitos necesitan todos los archivos.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Hito</th>
+<th>Plantillas mínimas recomendadas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H0</td>
+<td>retrospectiva, contrato de equipo, backlog inicial</td>
+</tr>
+<tr class="even">
+<td>H1</td>
+<td>README, portfolio, registro IA si procede</td>
+</tr>
+<tr class="odd">
+<td>H2</td>
+<td>README, pruebas, depuración, incidencia, comparación Java ↔︎ Python,
+registro IA</td>
+</tr>
+<tr class="even">
+<td>H3</td>
+<td>README, pruebas, decisión de colección, comparación Java ↔︎ Python,
+portfolio</td>
+</tr>
+<tr class="odd">
+<td>H4</td>
+<td>README, diagrama-código, comparación Java ↔︎ Python, portfolio</td>
+</tr>
+<tr class="even">
+<td>H5</td>
+<td>README, refactorización, revisión de código, patrón si procede,
+comparación Java ↔︎ Python</td>
+</tr>
+<tr class="odd">
+<td>H6</td>
+<td>README, pruebas de persistencia, seguridad/datos, comparación Java ↔︎
+Python</td>
+</tr>
+<tr class="even">
+<td>H7</td>
+<td>README, registro prompts, riesgos, configuración segura, defensa
+IA</td>
+</tr>
+<tr class="odd">
+<td>HF</td>
+<td>portfolio final, defensa final, registro IA final, recuperación si
+procede</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-plantilla-readmemd">3. Plantilla README.md</h2>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># HITO — Título del hito</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Equipo:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Integrantes:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Curso:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Módulos: Programación + Entornos de Desarrollo</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Fecha:</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Descripción</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Explica brevemente qué hace esta versión del agente.</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Qué incluye esta entrega</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Cómo ejecutar</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### Desde IntelliJ</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">### Desde terminal, si procede</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="co"># comandos necesarios</span></span></code></pre></div>
+<hr />
+<h2 id="4-estructura-del-proyecto">4. Estructura del proyecto</h2>
+<pre class="text"><code>src/
+docs/</code></pre>
+<p>Explica brevemente qué hay en cada carpeta.</p>
+<hr />
+<h2 id="5-funcionalidades-implementadas">5. Funcionalidades
+implementadas</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Funcionalidad</th>
+<th>Estado</th>
+<th>Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Hecho / Parcial / Pendiente</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-relación-con-programación">6. Relación con Programación</h2>
+<p>RA/CE trabajados:</p>
+<ul>
+<li></li>
+</ul>
+<p>Evidencias:</p>
+<ul>
+<li></li>
+</ul>
+<hr />
+<h2 id="7-relación-con-entornos-de-desarrollo">7. Relación con Entornos
+de Desarrollo</h2>
+<p>RA/CE trabajados:</p>
+<ul>
+<li></li>
+</ul>
+<p>Evidencias:</p>
+<ul>
+<li></li>
+</ul>
+<hr />
+<h2 id="8-pruebas-realizadas">8. Pruebas realizadas</h2>
+<p>Resumen:</p>
+<ul>
+<li></li>
+</ul>
+<p>Archivo de pruebas:</p>
+<pre class="text"><code>docs/pruebas.md</code></pre>
+<hr />
+<h2 id="9-uso-de-ia">9. Uso de IA</h2>
+<p>He usado IA: sí / no.</p>
+<p>Si se ha usado, consultar:</p>
+<pre class="text"><code>docs/registro-ia.md</code></pre>
+<hr />
+<h2 id="10-limitaciones-conocidas">10. Limitaciones conocidas</h2>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<hr />
+<h2 id="11-qué-sabemos-defender">11. Qué sabemos defender</h2>
+<p>Cada integrante debe poder explicar:</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre><code>
+---
+
+## 4. Plantilla portfolio individual
+
+```markdown
+# Portfolio individual — HITO
+
+Alumno/a:
+Equipo:
+Fecha:
+
+---
+
+## 1. Qué he hecho yo
+
+Describe tus aportaciones concretas.
+
+- 
+- 
+- 
+
+---
+
+## 2. Qué he aprendido
+
+Explica aprendizajes técnicos y de trabajo en equipo.
+
+- 
+- 
+- 
+
+---
+
+## 3. Problemas encontrados
+
+| Problema | Cómo lo detecté | Cómo lo resolví |
+|---|---|---|
+| | | |
+
+---
+
+## 4. Código o evidencia que sé defender
+
+Indica fragmentos, clases, diagramas, pruebas o decisiones que puedes explicar.
+
+- 
+- 
+
+---
+
+## 5. Relación con Programación
+
+RA/CE que creo haber trabajado:
+
+- 
+
+Explicación:
+
+- 
+
+---
+
+## 6. Relación con Entornos de Desarrollo
+
+RA/CE que creo haber trabajado:
+
+- 
+
+Explicación:
+
+- 
+
+---
+
+## 7. Uso de IA
+
+He usado IA: sí / no.
+
+Resumen del uso:
+
+- 
+
+Registro completo:
+
+```text
+docs/registro-ia.md</code></pre>
+<hr />
+<h2 id="8-qué-necesito-mejorar">8. Qué necesito mejorar</h2>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<hr />
+<h2 id="9-preguntas-que-puedo-responder-en-defensa">9. Preguntas que
+puedo responder en defensa</h2>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<pre><code>
+---
+
+## 5. Plantilla registro de IA
+
+```markdown
+# Registro de uso de IA
+
+Alumno/a:
+Equipo:
+Hito:
+Fecha:
+Herramienta usada: Gemini / Jarvis / otra autorizada
+
+---
+
+## Uso 1
+
+### Objetivo
+
+¿Qué querías conseguir?
+
+### Prompt o resumen del prompt
+
+```text
+Escribe aquí el prompt o un resumen fiel.</code></pre>
+<h3 id="resultado-obtenido">Resultado obtenido</h3>
+<p>¿Qué te devolvió la IA?</p>
+<h3 id="qué-acepté">Qué acepté</h3>
+<p>¿Qué parte usaste?</p>
+<h3 id="qué-modifiqué-yo">Qué modifiqué yo</h3>
+<p>¿Qué cambiaste, corregiste o adaptaste?</p>
+<h3 id="cómo-lo-verifiqué">Cómo lo verifiqué</h3>
+<p>¿Cómo comprobaste que era correcto?</p>
+<h3 id="qué-aprendí">Qué aprendí</h3>
+<p>¿Qué entiendes ahora que antes no entendías?</p>
+<h3 id="riesgos-detectados">Riesgos detectados</h3>
+<p>¿Había errores, inseguridad, código raro, datos sensibles o algo que
+no comprendías?</p>
+<hr />
+<h2 id="declaración-final">Declaración final</h2>
+<p>Confirmo que:</p>
+<ul>
+<li>he revisado el resultado generado o sugerido por la IA;</li>
+<li>puedo explicar lo que he entregado;</li>
+<li>no he introducido datos personales ni secretos;</li>
+<li>no he copiado una solución completa sin entenderla.</li>
+</ul>
+<pre><code>
+---
+
+## 6. Plantilla plan de pruebas
+
+```markdown
+# Plan de pruebas — HITO
+
+Equipo:
+Fecha:
+Producto probado:
+
+---
+
+## 1. Objetivo de las pruebas
+
+¿Qué queremos comprobar?
+
+- 
+- 
+
+---
+
+## 2. Casos de prueba
+
+| ID | Caso | Entrada / acción | Resultado esperado | Resultado obtenido | Estado |
+|---|---|---|---|---|---|
+| P01 | | | | | Correcto / Error |
+| P02 | | | | | Correcto / Error |
+
+---
+
+## 3. Casos límite
+
+| Caso límite | Qué puede pasar | Cómo lo comprobamos |
+|---|---|---|
+| | | |
+
+---
+
+## 4. Incidencias detectadas
+
+| Incidencia | Caso relacionado | Estado |
+|---|---|---|
+| | | Abierta / Resuelta |
+
+---
+
+## 5. Conclusión
+
+¿El producto está listo para demo? ¿Qué falta?
+
+- </code></pre>
+<hr />
+<h2 id="7-plantilla-informe-de-depuración">7. Plantilla informe de
+depuración</h2>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Informe de depuración — HITO</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Alumno/a o equipo:</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>Fecha:</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Problema detectado</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>Describe el error o comportamiento inesperado.</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Cómo se reproduce</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>Pasos:</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Herramienta usada</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>IntelliJ Debugger</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Breakpoint en:</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Variables observadas:</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Qué observé</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>¿Qué valor tenía cada variable? ¿Qué línea causaba el problema?</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Causa probable</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>Explica la causa con tus palabras.</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Solución aplicada</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>¿Qué cambiaste?</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7. Verificación</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>¿Cómo comprobaste que ya funciona?</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8. Qué aprendí</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span></code></pre></div>
+<hr />
+<h2 id="8-plantilla-incidencia">8. Plantilla incidencia</h2>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Incidencia</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ID:</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>Fecha:</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>Detectada por:</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>Estado: Abierta / En curso / Resuelta</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Descripción</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>¿Qué ocurre?</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Pasos para reproducir</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Resultado esperado</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>¿Qué debería pasar?</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Resultado obtenido</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>¿Qué pasa realmente?</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Causa</span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>¿Cuál era el problema?</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Solución</span></span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>¿Qué se ha cambiado?</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7. Prueba de verificación</span></span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>¿Cómo se ha comprobado?</span></code></pre></div>
+<hr />
+<h2 id="9-plantilla-retrospectiva">9. Plantilla retrospectiva</h2>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Retrospectiva — HITO</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>Equipo:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>Fecha:</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Qué salió bien</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Qué no salió bien</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Bloqueos</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Bloqueo <span class="pp">|</span> Cómo apareció <span class="pp">|</span> Qué hicimos <span class="pp">|</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Qué cambiaremos en el siguiente sprint</span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Acuerdos de mejora</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Acuerdo <span class="pp">|</span> Responsable <span class="pp">|</span> Fecha de revisión <span class="pp">|</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span></code></pre></div>
+<hr />
+<h2 id="10-plantilla-comparación-java--python">10. Plantilla comparación
+Java ↔︎ Python</h2>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Comparación Java ↔ Python — HITO</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>Alumno/a:</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>Hito:</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>Fecha:</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Qué hace la versión Java</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>Explica con tus palabras qué hace el programa o fragmento en Java.</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Versión o fragmento en Java</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="in">```java</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co">// fragmento relevante</span></span></code></pre></div>
+<hr />
+<h2 id="3-versión-o-fragmento-en-python">3. Versión o fragmento en
+Python</h2>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fragmento equivalente</span></span></code></pre></div>
+<hr />
+<h2 id="4-diferencias-encontradas">4. Diferencias encontradas</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Aspecto</th>
+<th>Java</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tipos</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Entrada/salida</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Estructuras de control</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Colecciones</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Clases/objetos</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Errores</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Completa solo las filas que correspondan al hito.</p>
+<hr />
+<h2 id="5-uso-de-ia">5. Uso de IA</h2>
+<p>¿He usado IA para esta comparación? sí / no</p>
+<p>Si sí:</p>
+<ul>
+<li>herramienta:</li>
+<li>qué pedí:</li>
+<li>qué acepté:</li>
+<li>qué cambié:</li>
+<li>cómo lo verifiqué:</li>
+</ul>
+<hr />
+<h2 id="6-qué-he-aprendido">6. Qué he aprendido</h2>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<hr />
+<h2 id="7-preguntas-que-puedo-responder">7. Preguntas que puedo
+responder</h2>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<pre><code>
+---
+
+## 11. Plantilla decisión técnica
+
+```markdown
+# Decisión técnica — HITO
+
+Equipo:
+Fecha:
+Decisión:
+
+---
+
+## 1. Problema
+
+¿Qué problema queríamos resolver?
+
+---
+
+## 2. Opciones consideradas
+
+| Opción | Ventajas | Inconvenientes |
+|---|---|---|
+| | | |
+
+---
+
+## 3. Decisión tomada
+
+¿Qué opción elegimos?
+
+---
+
+## 4. Justificación
+
+¿Por qué?
+
+---
+
+## 5. Consecuencias
+
+¿Qué mejora? ¿Qué limita? ¿Qué tendremos que revisar más adelante?
+
+---
+
+## 6. IA utilizada
+
+¿Se usó IA para tomar o revisar esta decisión? sí / no
+
+Si sí, enlazar `registro-ia.md`.</code></pre>
+<hr />
+<h2 id="12-plantilla-registro-de-patrón-de-diseño">12. Plantilla
+registro de patrón de diseño</h2>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Registro de patrón de diseño — HITO</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>Equipo:</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>Fecha:</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>Patrón considerado:</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Problema real detectado</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>¿Qué problema del código nos llevó a pensar en un patrón?</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Solución simple considerada</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>Antes de aplicar un patrón, ¿qué solución más sencilla probamos o pensamos?</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Patrón considerado</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>Nombre del patrón:</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>Qué propone:</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Decisión</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>Aplicamos el patrón: sí / no</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Justificación</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>¿Por qué tiene o no tiene sentido en este momento?</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Evidencia en el código</span></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>Clases o métodos relacionados:</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span></code></pre></div>
+<hr />
+<h2 id="7-riesgos">7. Riesgos</h2>
+<p>¿El patrón añade complejidad? ¿Compensa?</p>
+<hr />
+<h2 id="8-defensa">8. Defensa</h2>
+<p>Preguntas que debemos poder responder:</p>
+<ul>
+<li>¿Qué problema resuelve?</li>
+<li>¿Qué alternativa había?</li>
+<li>¿Qué pasa si mañana añadimos otra herramienta/comando?</li>
+</ul>
+<pre><code>
+---
+
+## 13. Plantilla seguridad y datos
+
+```markdown
+# Seguridad y datos — HITO
+
+Equipo:
+Fecha:
+
+---
+
+## 1. Datos usados
+
+¿Qué datos usa el proyecto?
+
+| Dato | Real/ficticio | Dónde aparece |
+|---|---|---|
+| | | |
+
+---
+
+## 2. Secretos
+
+¿El proyecto necesita claves, tokens o contraseñas? sí / no
+
+Si sí:
+
+- no se suben al repositorio;
+- se documentan en `.env.example` sin valores reales;
+- se explica cómo configurarlas.
+
+---
+
+## 3. Riesgos detectados
+
+| Riesgo | Medida aplicada |
+|---|---|
+| | |
+
+---
+
+## 4. Revisión final
+
+Confirmamos que:
+
+- no hay contraseñas en el repositorio;
+- no hay claves API reales;
+- no hay datos personales reales;
+- no hemos pegado secretos en herramientas de IA.</code></pre>
+<hr />
+<h2 id="14-plantilla-defensa-individual">14. Plantilla defensa
+individual</h2>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preparación de defensa individual — HITO</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>Alumno/a:</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>Hito:</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>Fecha:</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Qué puedo explicar</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Qué parte he hecho yo</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Código o evidencia que puedo defender</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>Archivo / clase / documento:</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>Qué hace:</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>Por qué es importante:</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Preguntas posibles</span></span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Pregunta <span class="pp">|</span> Respuesta preparada <span class="pp">|</span></span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Si el profesor cambia algo...</span></span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>¿Qué parte sabría modificar?</span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span></span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-49"><a href="#cb17-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Uso de IA</span></span>
+<span id="cb17-50"><a href="#cb17-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a>¿Qué parte fue asistida por IA y cómo la verifiqué?</span></code></pre></div>
+<hr />
+<h2 id="15-próximo-paso">15. Próximo paso</h2>
+<p>Estas plantillas pueden copiarse después en archivos separados dentro
+de una carpeta:</p>
+<pre class="text"><code>plantillas/</code></pre>
+<p>si se quiere entregar al alumnado como documentos independientes.</p>
+
+  </main>
+</body>
+</html>

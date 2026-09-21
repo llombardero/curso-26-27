@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capítulo 09 — Ficheros, persistencia y logs</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="capítulo-09--ficheros-persistencia-y-logs">Capítulo 09 —
+Ficheros, persistencia y logs</h1>
+<h2 id="hitos-relacionados">Hitos relacionados</h2>
+<pre class="text"><code>H6</code></pre>
+<h2 id="qué-aprenderás">Qué aprenderás</h2>
+<ul>
+<li>persistencia</li>
+<li>Path</li>
+<li>Files</li>
+<li>createDirectories</li>
+<li>lectura/escritura</li>
+<li>logs</li>
+<li>seguridad básica</li>
+<li>excepciones propias</li>
+<li>throws e invariantes</li>
+</ul>
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>MiniJarvis se construye por capas. Este capítulo trabaja una pieza
+concreta del proyecto y la conecta con evidencias reales: código,
+pruebas, documentación, defensa y uso responsable de IA si procede.</p>
+<p>La regla de estudio es siempre la misma:</p>
+<pre class="text"><code>Lee el concepto, ejecuta un ejemplo pequeño, aplícalo a MiniJarvis, documenta la evidencia y prepárate para defenderlo.</code></pre>
+<h2 id="2-conceptos-básicos-explicados">2. Conceptos básicos
+explicados</h2>
+<p>La memoria temporal desaparece al cerrar. La persistencia guarda
+información fuera del programa, normalmente en ficheros o bases de
+datos. En H6 usamos ficheros de texto para entender el proceso.</p>
+<p><code>data/recuerdos.txt</code> guarda recuerdos ficticios.
+<code>logs/historial.log</code> registra eventos técnicos. Antes de
+escribir hay que crear carpetas con
+<code>Files.createDirectories</code>. Los logs no deben guardar
+secretos.</p>
+<p>La persistencia puede fallar: no hay permisos, falta una carpeta, el
+fichero está corrupto o no se puede leer. En H6 debes saber diferenciar
+entre lanzar una excepción y capturarla. Si el grupo está preparado,
+crearás una excepción propia como <code>MemoryStorageException</code> o
+<code>PersistenceException</code> para representar errores de
+persistencia del dominio de MiniJarvis.</p>
+<p>Un invariante es una regla que siempre debe mantenerse. Por ejemplo:
+<code>Memory</code> no debe guardar recuerdos nulos o vacíos, y no debe
+dejar que otra clase modifique su lista interna sin pasar por sus
+métodos.</p>
+<h2 id="3-ejemplo-guiado-en-java">3. Ejemplo guiado en Java</h2>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Path path <span class="op">=</span> Path<span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="st">&quot;data/recuerdos.txt&quot;</span><span class="op">);</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Files<span class="op">.</span><span class="fu">createDirectories</span><span class="op">(</span>path<span class="op">.</span><span class="fu">getParent</span><span class="op">());</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Files<span class="op">.</span><span class="fu">write</span><span class="op">(</span>path<span class="op">,</span> memories<span class="op">);</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Path log <span class="op">=</span> Path<span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="st">&quot;logs/historial.log&quot;</span><span class="op">);</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Files<span class="op">.</span><span class="fu">createDirectories</span><span class="op">(</span>log<span class="op">.</span><span class="fu">getParent</span><span class="op">());</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Files<span class="op">.</span><span class="fu">writeString</span><span class="op">(</span>log<span class="op">,</span> <span class="st">&quot;Memory added</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;, StandardOpenOption.CREATE, StandardOpenOption.APPEND);</span></span></code></pre></div>
+<h2 id="4-caso-práctico-minijarvis">4. Caso práctico MiniJarvis</h2>
+<p>Crea <code>PersistentMemory</code> para cargar y guardar recuerdos.
+Prueba en dos ejecuciones: en la primera guardas, cierras; en la segunda
+abres y consultas.</p>
+<p>Añade <code>HistoryLog</code> con eventos: Agent started, Memory
+added, Agent stopped.</p>
+<p>Refuerzo de cobertura de los temas 5 y 6:</p>
+<ul>
+<li>Crea una excepción propia para errores de carga o guardado, o
+documenta por qué usas una excepción estándar.</li>
+<li>Usa <code>throws</code> cuando un método delegue el manejo del
+error.</li>
+<li>Comprueba que <code>Memory</code> mantiene sus invariantes: no
+guarda recuerdos vacíos y no expone una lista interna modificable.</li>
+</ul>
+<h2 id="5-evidencia-de-entornos-de-desarrollo">5. Evidencia de Entornos
+de Desarrollo</h2>
+<p>Crea <code>docs/pruebas-persistencia.md</code>,
+<code>docs/seguridad.md</code> y <code>docs/logs-historial.md</code>.
+Incluye <code>.gitignore</code> con <code>.env</code>,
+<code>*.key</code>, <code>*.token</code>.</p>
+<h2 id="6-errores-frecuentes-y-cómo-corregirlos">6. Errores frecuentes y
+cómo corregirlos</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Error</th>
+<th>Síntoma</th>
+<th>Corrección</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Probar solo una ejecución</td>
+<td>No demuestra persistencia</td>
+<td>Cerrar y abrir de nuevo</td>
+</tr>
+<tr class="even">
+<td>No crear carpetas</td>
+<td>Error al escribir</td>
+<td>Usar createDirectories</td>
+</tr>
+<tr class="odd">
+<td>Logs con datos sensibles</td>
+<td>Se guardan secretos</td>
+<td>Registrar eventos técnicos</td>
+</tr>
+<tr class="even">
+<td>Capturar errores sin actuar</td>
+<td>Fallos invisibles</td>
+<td>Mostrar mensaje útil y registrar incidencia</td>
+</tr>
+<tr class="odd">
+<td>Exponer memoria interna</td>
+<td>Estado inconsistente</td>
+<td>Devolver copia o colección no modificable</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-preguntas-de-repaso">7. Preguntas de repaso</h2>
+<ol type="1">
+<li>¿Qué diferencia hay entre memoria temporal y persistencia?</li>
+<li>¿Qué demuestra una prueba en dos ejecuciones?</li>
+<li>¿Por qué un log puede ser peligroso?</li>
+<li>¿Qué debe incluir .gitignore?</li>
+<li>¿Qué diferencia hay entre lanzar y capturar una excepción?</li>
+<li>¿Qué invariante debe mantener <code>Memory</code>?</li>
+</ol>
+<h2 id="8-para-tu-portfolio">8. Para tu portfolio</h2>
+<p>Copia y completa este bloque en tu portfolio:</p>
+<pre class="text"><code>Capítulo 09: Ficheros, persistencia y logs
+Qué he aprendido:
+Código o documento que lo demuestra:
+Prueba realizada:
+Error que he corregido:
+Qué puedo defender oralmente:
+Uso de IA, si lo hubo, y cómo lo validé:</code></pre>
+<h2 id="9-estudio-paso-a-paso">9. Estudio paso a paso</h2>
+<p>La persistencia se demuestra cerrando y abriendo. Si solo guardas en
+una lista, no has superado H6. El fichero debe poder inspeccionarse. La
+ruta debe ser relativa para que otra persona pueda ejecutar el proyecto
+sin depender de tu ordenador.</p>
+<p>Caso de estudio: borra temporalmente <code>data/recuerdos.txt</code>,
+ejecuta MiniJarvis, guarda un recuerdo ficticio, sal, abre el fichero y
+comprueba el contenido. Después ejecuta de nuevo y consulta memoria.
+Documenta también qué aparece en el log. Si el log contiene un secreto o
+dato personal, corrígelo.</p>
+<p>Caso de estudio de refuerzo: provoca un error controlado de fichero y
+documenta qué excepción aparece, dónde se gestiona y qué ve el usuario.
+Añade esta evidencia a <code>docs/incidencia-h6.md</code> o
+<code>docs/pruebas-persistencia.md</code>.</p>
+
+  </main>
+</body>
+</html>

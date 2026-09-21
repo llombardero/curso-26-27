@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capítulo 06 — Programación orientada a objetos</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="capítulo-06--programación-orientada-a-objetos">Capítulo 06 —
+Programación orientada a objetos</h1>
+<h2 id="hitos-relacionados">Hitos relacionados</h2>
+<pre class="text"><code>H4</code></pre>
+<h2 id="qué-aprenderás">Qué aprenderás</h2>
+<ul>
+<li>clase</li>
+<li>objeto</li>
+<li>atributo</li>
+<li>método</li>
+<li>constructor</li>
+<li>sobrecarga de constructores</li>
+<li>this</li>
+<li>responsabilidad</li>
+<li>Main pequeño</li>
+<li>Javadoc mínimo</li>
+</ul>
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>MiniJarvis se construye por capas. Este capítulo trabaja una pieza
+concreta del proyecto y la conecta con evidencias reales: código,
+pruebas, documentación, defensa y uso responsable de IA si procede.</p>
+<p>La regla de estudio es siempre la misma:</p>
+<pre class="text"><code>Lee el concepto, ejecuta un ejemplo pequeño, aplícalo a MiniJarvis, documenta la evidencia y prepárate para defenderlo.</code></pre>
+<h2 id="2-conceptos-básicos-explicados">2. Conceptos básicos
+explicados</h2>
+<p>La programación orientada a objetos organiza el código en clases con
+responsabilidades. Una clase es un molde. Un objeto es una instancia
+creada a partir de ese molde. Un atributo guarda estado. Un método
+representa comportamiento. Un constructor prepara el objeto al
+nacer.</p>
+<p>H4 aparece cuando <code>Main</code> empieza a hacerlo todo. La
+solución no es crear clases decorativas, sino separar responsabilidades
+reales.</p>
+<p>Una clase puede tener varios constructores si hay varias formas
+razonables de crear objetos. Esto se llama sobrecarga de constructores.
+<code>this</code> permite referirse al objeto actual y distinguir
+atributos de parámetros. Además, las clases públicas deben poder
+documentarse: Javadoc ayuda a explicar qué hace una clase o método sin
+leer toda su implementación.</p>
+<h2 id="3-ejemplo-guiado-en-java">3. Ejemplo guiado en Java</h2>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Agent <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> name<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Agent</span><span class="op">(</span><span class="bu">String</span> name<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">name</span> <span class="op">=</span> name<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">start</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy &quot;</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        Agent agent <span class="op">=</span> <span class="kw">new</span> <span class="fu">Agent</span><span class="op">(</span><span class="st">&quot;MiniJarvis&quot;</span><span class="op">);</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        agent<span class="op">.</span><span class="fu">start</span><span class="op">();</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="4-caso-práctico-minijarvis">4. Caso práctico MiniJarvis</h2>
+<p>Extrae de tu H3 al menos dos clases: <code>Agent</code> y
+<code>Memory</code>. <code>Main</code> debe quedar reducido a crear el
+agente y arrancarlo. <code>Agent</code> coordina comandos.
+<code>Memory</code> guarda recuerdos.</p>
+<p>Escribe una frase de responsabilidad para cada clase.</p>
+<p>Refuerzo de cobertura del Tema 5:</p>
+<ul>
+<li><code>Memory</code> debe tener un constructor por defecto.</li>
+<li>Si el grupo está preparado, añade otro constructor que reciba
+recuerdos iniciales ficticios.</li>
+<li>Usa <code>this</code> cuando inicialices atributos.</li>
+<li>Añade Javadoc mínimo a una clase y a dos métodos públicos.</li>
+</ul>
+<h2 id="5-evidencia-de-entornos-de-desarrollo">5. Evidencia de Entornos
+de Desarrollo</h2>
+<p>Crea <code>docs/relacion-clases.md</code> con una tabla: clase,
+responsabilidad, atributos, métodos y qué otra clase la usa. Esto
+prepara los diagramas de Entornos.</p>
+<h2 id="6-errores-frecuentes-y-cómo-corregirlos">6. Errores frecuentes y
+cómo corregirlos</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Error</th>
+<th>Síntoma</th>
+<th>Corrección</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Clases sin responsabilidad</td>
+<td>No se sabe para qué existen</td>
+<td>Escribir una frase por clase</td>
+</tr>
+<tr class="even">
+<td>Main sigue enorme</td>
+<td>No hay mejora real</td>
+<td>Mover coordinación a Agent</td>
+</tr>
+<tr class="odd">
+<td>Constructor mal definido</td>
+<td>Usa void o no inicializa</td>
+<td>Nombre igual que clase y sin tipo de retorno</td>
+</tr>
+<tr class="even">
+<td>Constructor que deja estado inválido</td>
+<td>Fallos posteriores</td>
+<td>Inicializar todos los atributos necesarios</td>
+</tr>
+<tr class="odd">
+<td>Documentación inventada</td>
+<td>README/Javadoc no coincide con código</td>
+<td>Revisar documentación contra implementación real</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-preguntas-de-repaso">7. Preguntas de repaso</h2>
+<ol type="1">
+<li>¿Qué es un objeto?</li>
+<li>¿Para qué sirve un constructor?</li>
+<li>¿Por qué Main debe quedar pequeño?</li>
+<li>¿Qué responsabilidad tiene Agent?</li>
+<li>¿Qué diferencia hay entre dos constructores sobrecargados?</li>
+<li>¿Para qué sirve <code>this</code>?</li>
+</ol>
+<h2 id="8-para-tu-portfolio">8. Para tu portfolio</h2>
+<p>Copia y completa este bloque en tu portfolio:</p>
+<pre class="text"><code>Capítulo 06: Programación orientada a objetos
+Qué he aprendido:
+Código o documento que lo demuestra:
+Prueba realizada:
+Error que he corregido:
+Qué puedo defender oralmente:
+Uso de IA, si lo hubo, y cómo lo validé:</code></pre>
+<h2 id="9-estudio-paso-a-paso">9. Estudio paso a paso</h2>
+<p>La POO se entiende mejor si preguntas “qué sabe” y “qué hace” cada
+clase. <code>Agent</code> sabe su nombre y coordina comandos.
+<code>Memory</code> sabe qué recuerdos hay y cómo añadirlos o
+mostrarlos. <code>Main</code> no debería saber los detalles del menú ni
+de la lista.</p>
+<p>Caso de estudio: mira tu <code>Main</code> de H3 y subraya
+responsabilidades distintas. Si una línea trata de recuerdos,
+probablemente pertenece a <code>Memory</code>. Si una línea trata de
+comandos o conversación, probablemente pertenece a <code>Agent</code>.
+Escribe antes de tocar código qué moverás y por qué.</p>
+<p>Caso de estudio de refuerzo: documenta en tu portfolio qué
+constructor usa <code>Main</code>, qué constructor quedaría para pruebas
+o datos iniciales y dónde aparece <code>this</code> en tu código.</p>
+
+  </main>
+</body>
+</html>

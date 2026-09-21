@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>H2 — Agente con decisiones y depuración</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="h2--agente-con-decisiones-y-depuración">H2 — Agente con
+decisiones y depuración</h1>
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
+
+<h2 id="ciclo-hexa-obligatorio-del-reto-h2">Ciclo HEXA obligatorio del
+reto H2</h2>
+<p><strong>Reto del hito:</strong> Transformar MiniJarvis en un programa
+interactivo con decisiones, repetición y depuración reproducible.</p>
+<p>Debes conservar evidencias de las cuatro fases. Entregar solo el
+producto final no demuestra el ciclo completo.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Fase</th>
+<th>Pregunta que guía la fase</th>
+<th>Acción del profesorado</th>
+<th>Acción y evidencia del alumnado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>H — Hecho / reto</strong></td>
+<td>¿Qué problema real debemos resolver y con qué límites?</td>
+<td>Presenta contexto, producto, restricciones, criterios y diagnóstico;
+no da todavía la solución completa.</td>
+<td>Reformula el reto, identifica lo que sabe/no sabe y deja una ficha
+inicial con criterios de éxito.</td>
+</tr>
+<tr class="even">
+<td><strong>E — Exploración</strong></td>
+<td>¿Qué alternativas, hipótesis o pruebas iniciales ayudan a
+entenderlo?</td>
+<td>Propone preguntas, ejemplos mínimos, casos y límites seguros.</td>
+<td>Observa, compara, predice, prueba alternativas y registra decisiones
+o bloqueos.</td>
+</tr>
+<tr class="odd">
+<td><strong>X — eXplicación</strong></td>
+<td>¿Qué conceptos permiten explicar lo observado y decidir con
+criterio?</td>
+<td>Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes,
+seguridad y criterios de calidad.</td>
+<td>Explica con palabras propias, conecta teoría y exploración y corrige
+sus hipótesis.</td>
+</tr>
+<tr class="even">
+<td><strong>A — Aplicación</strong></td>
+<td>¿Cómo construimos, comprobamos, documentamos y defendemos la
+solución?</td>
+<td>Desbloquea, exige pruebas y comprueba autoría y transferencia.</td>
+<td>Implementa el producto, lo prueba, documenta evidencias, realiza
+review/defensa y propone mejora.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="temporalización-mínima-explícita">Temporalización mínima
+explícita</h3>
+<p>H2-S1–S9; 405 min mínimos en la guía autónoma. Los tiempos de fases
+se reservan dentro de las sesiones indicadas; los rangos pueden
+solaparse cuando una sesión cierra una fase y abre la siguiente.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Fase</th>
+<th>Reserva y momento recomendado</th>
+<th>Puerta de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H</td>
+<td>H2-S1; 45 min</td>
+<td>Reto reformulado, límites y criterio de éxito visibles.</td>
+</tr>
+<tr class="even">
+<td>E</td>
+<td>H2-S1–S2; 90 min integrados</td>
+<td>Hipótesis, comparación, prueba inicial o decisiones
+justificadas.</td>
+</tr>
+<tr class="odd">
+<td>X</td>
+<td>H2-S2–S4; 90 min integrados</td>
+<td>Explicación individual breve y conexión con el producto.</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>H2-S5–S9; 180 min integrados</td>
+<td>Producto comprobado, documentación, defensa y mejora.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Expediente HEXA mínimo del hito:</strong> mapa de comandos,
+hipótesis de flujo, explicación de condiciones/bucle, menú funcional,
+pruebas, depuración y defensa.</p>
+<p>Regla de avance: puede haber prototipos durante E, pero no se
+considera completada A si faltan evidencias de H, E o X. Si una fase
+falta, se recupera esa fase y su evidencia; no se repite automáticamente
+todo el hito.</p>
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
+
+<h2 id="ficha-para-el-alumnado">Ficha para el alumnado</h2>
+<p>Curso: 1.º DAW — Programación + Entornos de Desarrollo</p>
+<hr />
+<h2 id="1-reto">1. Reto</h2>
+<p>Vais a convertir MiniJarvis H1 en un agente con menú de comandos.</p>
+<p>Ahora el programa no debe terminar después del primer saludo. Debe
+seguir funcionando hasta que la persona usuaria escriba:</p>
+<pre class="text"><code>salir</code></pre>
+<hr />
+<h2 id="2-qué-debe-hacer-minijarvis-h2">2. Qué debe hacer MiniJarvis
+H2</h2>
+<p>Comandos mínimos:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Comando</th>
+<th>Qué debe hacer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ayuda</code></td>
+<td>Mostrar comandos disponibles.</td>
+</tr>
+<tr class="even">
+<td><code>saluda</code></td>
+<td>Saludar al usuario.</td>
+</tr>
+<tr class="odd">
+<td><code>estado</code></td>
+<td>Mostrar un estado simple del agente.</td>
+</tr>
+<tr class="even">
+<td><code>salir</code></td>
+<td>Terminar el programa.</td>
+</tr>
+<tr class="odd">
+<td>comando desconocido</td>
+<td>Mostrar un mensaje de ayuda o error controlado.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-qué-entra-en-h2">3. Qué entra en H2</h2>
+<pre class="text"><code>[x] Menú.
+[x] Bucle hasta escribir salir.
+[x] if/else o switch.
+[x] Comandos básicos.
+[x] Comando desconocido.
+[x] Pruebas manuales.
+[x] Depuración con breakpoint.
+[x] Comparación Java ↔ Python.</code></pre>
+<hr />
+<h2 id="4-qué-no-entra-todavía">4. Qué NO entra todavía</h2>
+<pre class="text"><code>[ ] Memoria con listas o mapas.
+[ ] Ficheros.
+[ ] Varias clases avanzadas.
+[ ] Patrones de diseño.
+[ ] Conexión con IA real.
+[ ] Base de conocimiento.</code></pre>
+<p>Eso se trabajará en hitos posteriores.</p>
+<hr />
+<h2 id="5-entregables">5. Entregables</h2>
+<pre class="text"><code>h2-decisiones-depuracion/
+├── README.md
+├── src/
+│   └── Main.java
+└── docs/
+    ├── evidencia-ejecucion-h2.md
+    ├── pruebas-h2.md
+    ├── depuracion-h2.md
+    ├── incidencia-h2.md
+    ├── comparacion-java-python-h2.md
+    ├── registro-ia.md
+    └── defensa-h2.md</code></pre>
+<p>Plantillas disponibles:</p>
+<pre class="text"><code>plantillas/README-h2-template.md
+plantillas/evidencia-ejecucion-h2-template.md
+plantillas/pruebas-h2-template.md
+plantillas/depuracion-h2-template.md
+plantillas/incidencia-h2-template.md
+plantillas/comparacion-java-python-h2-template.md
+plantillas/registro-ia-h2-template.md
+plantillas/defensa-h2-template.md</code></pre>
+<hr />
+<h2 id="6-pasos-recomendados">6. Pasos recomendados</h2>
+<ol type="1">
+<li>Recuperar el código de H1.</li>
+<li>Diseñar la tabla de comandos.</li>
+<li>Crear un bucle <code>while</code>.</li>
+<li>Leer comandos con <code>Scanner</code>.</li>
+<li>Comparar comandos con <code>.equals()</code> o usar
+<code>switch</code>.</li>
+<li>Añadir <code>salir</code> como salida controlada.</li>
+<li>Gestionar comandos desconocidos.</li>
+<li>Probar cada comando.</li>
+<li>Usar un breakpoint.</li>
+<li>Documentar pruebas, depuración e incidencias.</li>
+</ol>
+<hr />
+<h2 id="7-uso-de-ia">7. Uso de IA</h2>
+<p>Puedes usar IA para entender errores, pedir ejemplos de pruebas o
+comparar con Python.</p>
+<p>Debes registrar el uso si afecta a la entrega.</p>
+<p>No puedes entregar un menú completo generado por IA si no puedes
+explicarlo.</p>
+<hr />
+<h2 id="8-preguntas-de-defensa">8. Preguntas de defensa</h2>
+<p>Prepárate para responder:</p>
+<pre class="text"><code>¿Cómo se repite el menú?
+¿Qué ocurre si escribo un comando incorrecto?
+¿Qué variable controla la salida?
+¿Qué diferencia hay entre == y equals en Java?
+¿Dónde pusiste el breakpoint?
+¿Qué variable observaste?
+¿Qué pruebas hiciste?
+¿Qué diferencia viste entre Java y Python?</code></pre>
+<hr />
+<h2 id="9-checklist-antes-de-entregar">9. Checklist antes de
+entregar</h2>
+<pre class="text"><code>[ ] El programa se ejecuta.
+[ ] El menú se repite.
+[ ] Existe el comando ayuda.
+[ ] Existe el comando saluda.
+[ ] Existe el comando estado.
+[ ] Existe el comando salir.
+[ ] Hay respuesta para comando desconocido.
+[ ] Hay plan de pruebas.
+[ ] Hay evidencia de depuración.
+[ ] Hay incidencia documentada si apareció.
+[ ] Hay comparación Java ↔ Python.
+[ ] He registrado IA si la he usado.
+[ ] Puedo defender el flujo del programa.</code></pre>
+<h2 id="cobertura-curricular-de-programación">Cobertura curricular de
+Programación</h2>
+<p>Este hito queda alineado con el mapa
+<code>32-lista-conceptos-programacion-por-tema.md</code>.</p>
+<pre class="text"><code>Hito: H2
+Temas de referencia: Temas 1 y 3
+Foco: decisiones, menú, repetición y depuración</code></pre>
+<p>Conceptos que deben trabajarse o, como mínimo, quedar conectados con
+evidencias del alumnado:</p>
+<ul>
+<li>if/else</li>
+<li>boolean</li>
+<li>comparaciones</li>
+<li>switch</li>
+<li>enhanced switch como ampliación</li>
+<li>while</li>
+<li>do-while como comparación</li>
+<li>for</li>
+<li>condición de salida</li>
+<li>bucle infinito</li>
+<li>pruebas manuales</li>
+<li>error de compilación</li>
+<li>error lógico</li>
+<li>eficiencia básica</li>
+</ul>
+<p>Criterio docente de cierre:</p>
+<ul>
+<li>El alumnado no solo entrega el producto; debe poder señalar dónde
+aparece cada concepto en su código, README, pruebas o defensa.</li>
+<li>Si un concepto se marca como ampliación, no penaliza al alumnado que
+alcance el mínimo, pero sí orienta mejora, recuperación o
+enriquecimiento.</li>
+<li>La defensa debe incluir al menos una pregunta de comprensión sobre
+los conceptos nuevos del hito.</li>
+</ul>
+
+  </main>
+</body>
+</html>

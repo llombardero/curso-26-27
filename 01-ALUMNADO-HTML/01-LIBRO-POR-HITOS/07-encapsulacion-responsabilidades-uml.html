@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capítulo 07 — Encapsulación, responsabilidades y UML</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="capítulo-07--encapsulación-responsabilidades-y-uml">Capítulo 07
+— Encapsulación, responsabilidades y UML</h1>
+<h2 id="hitos-relacionados">Hitos relacionados</h2>
+<pre class="text"><code>H4</code></pre>
+<h2 id="qué-aprenderás">Qué aprenderás</h2>
+<ul>
+<li>private/public</li>
+<li>encapsulación</li>
+<li>diagrama de clases</li>
+<li>diagrama de comportamiento</li>
+<li>relación diagrama-código</li>
+</ul>
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>MiniJarvis se construye por capas. Este capítulo trabaja una pieza
+concreta del proyecto y la conecta con evidencias reales: código,
+pruebas, documentación, defensa y uso responsable de IA si procede.</p>
+<p>La regla de estudio es siempre la misma:</p>
+<pre class="text"><code>Lee el concepto, ejecuta un ejemplo pequeño, aplícalo a MiniJarvis, documenta la evidencia y prepárate para defenderlo.</code></pre>
+<h2 id="2-conceptos-básicos-explicados">2. Conceptos básicos
+explicados</h2>
+<p>Encapsular significa proteger el estado interno de una clase. En
+Java, los atributos suelen ser <code>private</code> y se accede a ellos
+mediante métodos controlados. <code>public</code> debe reservarse para
+lo que otras clases necesitan usar.</p>
+<p>UML ayuda a representar estructura y comportamiento. Un diagrama de
+clases muestra clases, atributos, métodos y relaciones. Un diagrama de
+comportamiento muestra pasos en el tiempo.</p>
+<h2 id="3-ejemplo-guiado-en-java">3. Ejemplo guiado en Java</h2>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Memory <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> memories<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Memory</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">memories</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">int</span> <span class="fu">count</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> memories<span class="op">.</span><span class="fu">size</span><span class="op">();</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="4-caso-práctico-minijarvis">4. Caso práctico MiniJarvis</h2>
+<p>Haz un diagrama de clases de MiniJarvis H4 con <code>Main</code>,
+<code>Agent</code> y <code>Memory</code>. Después elige el flujo
+<code>recuerda</code> y escribe los pasos: usuario escribe comando,
+Agent pide texto, Memory guarda, Agent informa.</p>
+<p>Relaciona al menos cinco elementos del diagrama con código real.</p>
+<h2 id="5-evidencia-de-entornos-de-desarrollo">5. Evidencia de Entornos
+de Desarrollo</h2>
+<p>Crea <code>docs/diagrama-clases.md</code>,
+<code>docs/diagrama-comportamiento.md</code> y
+<code>docs/relacion-diagrama-codigo.md</code>. Entornos exige que el
+diagrama no sea inventado: debe coincidir con el código.</p>
+<h2 id="6-errores-frecuentes-y-cómo-corregirlos">6. Errores frecuentes y
+cómo corregirlos</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Error</th>
+<th>Síntoma</th>
+<th>Corrección</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Todo public</td>
+<td>Cualquier clase puede tocar datos internos</td>
+<td>Atributos private</td>
+</tr>
+<tr class="even">
+<td>Diagrama inventado</td>
+<td>Aparecen clases inexistentes</td>
+<td>Actualizar desde código real</td>
+</tr>
+<tr class="odd">
+<td>Confundir estructura y comportamiento</td>
+<td>Mezcla clases con pasos</td>
+<td>Separar diagrama de clases y flujo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-preguntas-de-repaso">7. Preguntas de repaso</h2>
+<ol type="1">
+<li>¿Por qué los atributos suelen ser private?</li>
+<li>¿Qué significa + y - en un diagrama?</li>
+<li>¿Qué relación hay entre Agent y Memory?</li>
+<li>¿Cómo demuestras que un diagrama coincide con código?</li>
+</ol>
+<h2 id="8-para-tu-portfolio">8. Para tu portfolio</h2>
+<p>Copia y completa este bloque en tu portfolio:</p>
+<pre class="text"><code>Capítulo 07: Encapsulación, responsabilidades y UML
+Qué he aprendido:
+Código o documento que lo demuestra:
+Prueba realizada:
+Error que he corregido:
+Qué puedo defender oralmente:
+Uso de IA, si lo hubo, y cómo lo validé:</code></pre>
+<h2 id="9-estudio-paso-a-paso">9. Estudio paso a paso</h2>
+<p>La encapsulación evita que cualquier parte del programa cambie datos
+internos sin control. Si <code>memories</code> fuera público, otra clase
+podría borrar la lista, meter valores vacíos o sustituirla por
+<code>null</code>. Al hacerla <code>private</code>, obligas a usar
+métodos que pueden validar.</p>
+<p>Caso de estudio: intenta explicar una decisión de visibilidad. No
+digas “es private porque sí”. Di qué riesgo evita. Después revisa tu
+diagrama: por cada atributo o método importante, busca la línea de
+código correspondiente. Si no la encuentras, el diagrama está inventando
+información o el código está desactualizado.</p>
+
+  </main>
+</body>
+</html>

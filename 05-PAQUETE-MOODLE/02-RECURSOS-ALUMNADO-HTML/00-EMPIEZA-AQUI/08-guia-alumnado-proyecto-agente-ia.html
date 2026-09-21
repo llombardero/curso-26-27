@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía del alumnado — Proyecto Agente IA</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="guía-del-alumnado--proyecto-agente-ia">Guía del alumnado —
+Proyecto Agente IA</h1>
+<h2
+id="programación--entornos-de-desarrollo--1º-daw--curso-20262027">Programación
++ Entornos de Desarrollo — 1.º DAW — Curso 2026/2027</h2>
+<p>Edición final para Moodle — septiembre de 2026</p>
+<p>Documentos relacionados:</p>
+<ul>
+<li><code>00-mapa-maestro-curso-2026-2027.md</code></li>
+<li><code>02-calendario-hitos-sprints-2026-2027.md</code></li>
+<li><code>04A-enunciados-y-entregables-alumnado.md</code></li>
+<li><code>05-politica-uso-ia-semaforo-registro-defensa.md</code></li>
+<li><code>06-rubricas-hitos.md</code></li>
+<li><code>07-plantillas-entregables.md</code></li>
+<li>carpeta <code>plantillas/</code></li>
+</ul>
+<hr />
+<h2 id="1-qué-vamos-a-hacer-durante-el-curso">1. Qué vamos a hacer
+durante el curso</h2>
+<p>Durante el curso vais a construir poco a poco un pequeño agente IA
+propio.</p>
+<p>No empezaremos usando inteligencia artificial real desde el primer
+día. Primero aprenderemos las bases necesarias para poder construir,
+entender, probar y defender el proyecto.</p>
+<p>La idea general es esta:</p>
+<blockquote>
+<p>Seremos equipos de desarrollo que construyen, documentan, prueban y
+defienden un asistente inteligente propio, usando Java, herramientas
+profesionales, Scrum e IA responsable.</p>
+</blockquote>
+<p>El proyecto se llama de forma orientativa:</p>
+<pre class="text"><code>MiniJarvis</code></pre>
+<p>Al final del curso, el proyecto podrá tener:</p>
+<ul>
+<li>un agente por consola en Java;</li>
+<li>comandos o herramientas internas;</li>
+<li>memoria temporal;</li>
+<li>clases y objetos bien organizados;</li>
+<li>pruebas y depuración;</li>
+<li>documentación clara;</li>
+<li>uso de Git/GitHub;</li>
+<li>diagramas;</li>
+<li>persistencia en ficheros o base de conocimiento simple;</li>
+<li>registro de uso de IA;</li>
+<li>defensa individual;</li>
+<li>integración real con Gemini/Jarvis o simulación robusta, si el grupo
+llega preparado.</li>
+</ul>
+<p>Lo importante no es que la IA “haga” el proyecto.</p>
+<p>Lo importante es que aprendáis a construir software, verificarlo,
+explicarlo y usar IA con criterio.</p>
+<hr />
+<h2 id="2-cómo-se-trabaja-por-hitos">2. Cómo se trabaja por hitos</h2>
+<p>El curso se organiza por hitos. Cada hito añade una capacidad nueva
+al agente.</p>
+<p>Un hito es una entrega parcial con un objetivo claro.</p>
+<p>No se espera que el proyecto final aparezca de golpe. Se irá
+construyendo por versiones.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Hito</th>
+<th>Fechas orientativas</th>
+<th>Qué construiremos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H0. Bootcamp Scrum</td>
+<td>15-18 septiembre</td>
+<td>Conoceremos el curso y Scrum, reconoceremos habilidades,
+prepararemos equipos provisionales de 3 o 4 y aplicaremos el sprint en
+la torre.</td>
+</tr>
+<tr class="even">
+<td>H1. Primer asistente básico</td>
+<td>21 septiembre - 9 octubre</td>
+<td>Programa Java básico por consola: saludo, nombre, variables,
+constantes y README.</td>
+</tr>
+<tr class="odd">
+<td>H2. Decisiones y depuración</td>
+<td>13 octubre - 6 noviembre</td>
+<td>Agente con menú, comandos, bucles, gestión de errores, pruebas y
+depuración.</td>
+</tr>
+<tr class="even">
+<td>H3. Memoria en colecciones</td>
+<td>9 noviembre - 4 diciembre</td>
+<td>Agente que recuerda información durante la ejecución usando
+colecciones.</td>
+</tr>
+<tr class="odd">
+<td>C1. Cierre 1.ª evaluación</td>
+<td>9-22 diciembre</td>
+<td>Demo parcial, portfolio, revisión de evidencias y recuperación si
+procede.</td>
+</tr>
+<tr class="even">
+<td>H4. Agente orientado a objetos</td>
+<td>7 enero - 5 febrero</td>
+<td>Rediseño con clases, objetos, responsabilidades y diagramas
+UML.</td>
+</tr>
+<tr class="odd">
+<td>H5. Herramientas, código limpio y patrones iniciales</td>
+<td>8 febrero - 19 marzo</td>
+<td>Agente extensible, refactorización, Git profesional y patrones si
+tienen sentido.</td>
+</tr>
+<tr class="even">
+<td>C2. Cierre 2.ª evaluación</td>
+<td>29-31 marzo</td>
+<td>Demo parcial, revisión de repositorio, defensa y recuperación.</td>
+</tr>
+<tr class="odd">
+<td>H6. Persistencia y trazabilidad</td>
+<td>1-23 abril</td>
+<td>Ficheros, logs, base de conocimiento simple, README reproducible y
+seguridad.</td>
+</tr>
+<tr class="even">
+<td>H7. IA responsable opcional</td>
+<td>26-29 abril</td>
+<td>Integración con Gemini/Jarvis o simulación robusta y
+defendible.</td>
+</tr>
+<tr class="odd">
+<td>FFEOE</td>
+<td>30 abril - 28 mayo</td>
+<td>No hay clases ni entregas. El proyecto base debe quedar cerrado
+antes.</td>
+</tr>
+<tr class="even">
+<td>HF. Presentación final</td>
+<td>31 mayo - 22 junio</td>
+<td>Defensa final, portfolio final, demo, recuperación y mejora.</td>
+</tr>
+</tbody>
+</table>
+<!-- H0-INICIO-SCRUM-DIAGNOSTICO:START -->
+
+<h3 id="h0-comienza-antes-de-la-torre">H0 comienza antes de la
+torre</h3>
+<ol type="1">
+<li>Presentación de curso, hitos, HEXA, evidencias, defensa e IA
+responsable.</li>
+<li>Scrum mínimo: sprint, backlog, bloqueo, prueba, review y
+retrospectiva.</li>
+<li>Diagnóstico sin nota: autoevaluación + microprueba +
+observación.</li>
+<li>Equipos provisionales de tres o cuatro, con habilidades y apoyos
+variados.</li>
+<li>Sesión siguiente: torre, review, retrospectiva y revisión de
+equipos.</li>
+</ol>
+<p>El diagnóstico no es una prueba psicológica. No se publican
+puntuaciones, no fija roles y no se utiliza para decidir quién “vale”.
+Los roles rotan y todas las habilidades se desarrollan.</p>
+<!-- H0-INICIO-SCRUM-DIAGNOSTICO:END -->
+
+<p>Cada hito tendrá:</p>
+<ol type="1">
+<li>una explicación del reto;</li>
+<li>una lista de tareas;</li>
+<li>entregables concretos;</li>
+<li>relación con Programación;</li>
+<li>relación con Entornos de Desarrollo;</li>
+<li>normas de uso de IA;</li>
+<li>defensa oral o revisión técnica.</li>
+</ol>
+<p>Material de estudio:</p>
+<pre class="text"><code>El libro del alumnado se entregará por capítulos asociados a cada hito.
+No recibirás todo el libro como obligación inicial: trabajarás cada capítulo cuando lo necesites para construir MiniJarvis.</code></pre>
+<p>Ejemplos de Laura:</p>
+<pre class="text"><code>Los ejemplos de Laura se mostrarán después de que hayas intentado tu propia solución o cerrado una primera versión defendible.
+Sirven para comparar, mejorar y preparar la defensa, no para copiar antes de pensar.</code></pre>
+<hr />
+<h2 id="3-qué-se-entrega">3. Qué se entrega</h2>
+<p>Las entregas combinan trabajo de equipo y trabajo individual.</p>
+<h3 id="31-entregas-de-equipo">3.1. Entregas de equipo</h3>
+<p>Normalmente el equipo entregará:</p>
+<ul>
+<li>código del proyecto;</li>
+<li>repositorio GitHub o entrega equivalente;</li>
+<li>README;</li>
+<li>pruebas o checklist;</li>
+<li>documentación técnica;</li>
+<li>diagramas cuando correspondan;</li>
+<li>evidencias de tablero, roles o Scrum;</li>
+<li>informes de depuración, incidencias o refactorización;</li>
+<li>registro de decisiones técnicas;</li>
+<li>demo del producto.</li>
+</ul>
+<h3 id="32-entregas-individuales">3.2. Entregas individuales</h3>
+<p>Cada persona deberá entregar o defender evidencias propias, por
+ejemplo:</p>
+<ul>
+<li>portfolio individual;</li>
+<li>registro de uso de IA;</li>
+<li>comparación Java ↔︎ Python;</li>
+<li>reflexión de aprendizaje;</li>
+<li>defensa de una parte del código;</li>
+<li>explicación de una decisión técnica;</li>
+<li>recuperación individual si algún RA queda pendiente.</li>
+</ul>
+<h3 id="33-estructura-recomendada-del-repositorio">3.3. Estructura
+recomendada del repositorio</h3>
+<p>La estructura crecerá poco a poco. Una estructura orientativa
+será:</p>
+<pre class="text"><code>hN-nombre-del-hito/
+├── README.md
+├── src/
+│   └── ...
+├── docs/
+│   ├── portfolio.md
+│   ├── registro-ia.md
+│   ├── pruebas.md
+│   ├── depuracion.md
+│   ├── retrospectiva.md
+│   ├── comparacion-java-python.md
+│   └── decisiones-tecnicas.md
+└── .gitignore</code></pre>
+<p>En los primeros hitos no hará falta tener todos los archivos. Se
+añadirán cuando tengan sentido.</p>
+<hr />
+<h2 id="4-qué-se-espera-en-cada-entrega">4. Qué se espera en cada
+entrega</h2>
+<p>Una entrega válida debe permitir comprobar tres cosas:</p>
+<ol type="1">
+<li>Que el producto funciona o se puede revisar.</li>
+<li>Que el proceso está documentado.</li>
+<li>Que cada alumno/a puede explicar lo que ha entregado.</li>
+</ol>
+<p>Por eso, no basta con subir código.</p>
+<p>Una buena entrega debe incluir:</p>
+<ul>
+<li>instrucciones para ejecutar;</li>
+<li>explicación de qué se ha implementado;</li>
+<li>pruebas realizadas;</li>
+<li>errores encontrados y cómo se han corregido;</li>
+<li>evidencias de Git o del proceso de trabajo;</li>
+<li>registro de uso de IA, si se ha usado;</li>
+<li>indicación de qué sabe defender cada integrante.</li>
+</ul>
+<p>Regla práctica:</p>
+<pre class="text"><code>Si no se puede ejecutar, revisar o defender, la evidencia queda incompleta.</code></pre>
+<hr />
+<h2 id="5-cómo-se-usa-ia-en-este-curso">5. Cómo se usa IA en este
+curso</h2>
+<p>La IA está permitida porque forma parte del trabajo profesional
+actual.</p>
+<p>Pero se usará con reglas claras.</p>
+<p>La IA puede ayudarte a:</p>
+<ul>
+<li>entender conceptos;</li>
+<li>pedir ejemplos pequeños;</li>
+<li>revisar errores;</li>
+<li>preparar pruebas;</li>
+<li>mejorar documentación;</li>
+<li>comparar Java con Python;</li>
+<li>proponer mejoras;</li>
+<li>preparar una defensa;</li>
+<li>revisar un README o portfolio.</li>
+</ul>
+<p>La IA no puede sustituir tu aprendizaje.</p>
+<p>Regla básica:</p>
+<pre class="text"><code>Puedes usar IA como copiloto, tutor o revisor.
+No puedes usarla como autor oculto de tu entrega.</code></pre>
+<h3 id="51-semáforo-de-ia">5.1. Semáforo de IA</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Color</th>
+<th>Significado</th>
+<th>Ejemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Verde</td>
+<td>Permitido y recomendado</td>
+<td>Pedir explicaciones, entender errores, revisar claridad, pedir
+ejemplos pequeños, generar preguntas de repaso.</td>
+</tr>
+<tr class="even">
+<td>Amarillo</td>
+<td>Permitido con registro, verificación y defensa</td>
+<td>Generar fragmentos de código, proponer tests, refactorizar, traducir
+Java a Python, sugerir diagramas o patrones.</td>
+</tr>
+<tr class="odd">
+<td>Rojo</td>
+<td>No permitido</td>
+<td>Copiar una solución completa sin entenderla, ocultar uso de IA, usar
+IA en pruebas no autorizadas, introducir datos personales, subir
+secretos o claves.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-registro-obligatorio">5.2. Registro obligatorio</h3>
+<p>Si usas IA en una entrega evaluable, debes registrarlo.</p>
+<p>Archivo recomendado:</p>
+<pre class="text"><code>docs/registro-ia.md</code></pre>
+<p>El registro debe explicar:</p>
+<ul>
+<li>herramienta usada;</li>
+<li>fecha;</li>
+<li>objetivo;</li>
+<li>prompt o resumen fiel;</li>
+<li>resultado obtenido;</li>
+<li>qué aceptaste;</li>
+<li>qué modificaste tú;</li>
+<li>cómo lo verificaste;</li>
+<li>qué aprendiste;</li>
+<li>riesgos o errores detectados.</li>
+</ul>
+<h3 id="53-seguridad">5.3. Seguridad</h3>
+<p>Nunca debes introducir en una IA ni subir a GitHub:</p>
+<ul>
+<li>contraseñas;</li>
+<li>tokens;</li>
+<li>claves API;</li>
+<li>archivos <code>.env</code> reales;</li>
+<li>datos personales;</li>
+<li>datos de compañeros/as;</li>
+<li>credenciales de GitHub, Moodle, Gemini o Jarvis.</li>
+</ul>
+<p>Si hace falta simular datos, se usarán datos ficticios.</p>
+<p>Ejemplo permitido:</p>
+<pre class="text"><code>API_KEY_EJEMPLO
+usuario_prueba
+mensaje de ejemplo sin datos personales</code></pre>
+<hr />
+<h2 id="6-cómo-se-evalúa">6. Cómo se evalúa</h2>
+<p>La evaluación se apoya en Resultados de Aprendizaje y Criterios de
+Evaluación de Programación y Entornos de Desarrollo.</p>
+<p>Aunque el proyecto sea común, los módulos se evalúan por
+separado.</p>
+<p>Una misma evidencia puede servir para ambos módulos, pero se mirará
+desde puntos de vista distintos.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>un menú en Java puede servir para Programación porque demuestra
+estructuras de control;</li>
+<li>el plan de pruebas del mismo menú puede servir para Entornos;</li>
+<li>una defensa puede confirmar si la evidencia grupal también demuestra
+aprendizaje individual.</li>
+</ul>
+<h3 id="61-qué-se-valora">6.1. Qué se valora</h3>
+<p>Se valorará especialmente:</p>
+<ul>
+<li>funcionamiento técnico;</li>
+<li>ajuste al hito;</li>
+<li>código limpio y comprensible;</li>
+<li>documentación;</li>
+<li>pruebas y verificación;</li>
+<li>uso de Git/GitHub y trazabilidad;</li>
+<li>uso responsable de IA;</li>
+<li>defensa oral;</li>
+<li>capacidad de corregir errores;</li>
+<li>mejora progresiva.</li>
+</ul>
+<h3 id="62-rúbrica-común">6.2. Rúbrica común</h3>
+<p>La escala general será:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4 — Excelente</td>
+<td>Cumple lo pedido con autonomía, claridad, calidad técnica y defensa
+sólida.</td>
+</tr>
+<tr class="even">
+<td>3 — Adecuado</td>
+<td>Cumple los requisitos principales con pequeños errores o aspectos
+mejorables.</td>
+</tr>
+<tr class="odd">
+<td>2 — Básico</td>
+<td>Cumple parcialmente, pero necesita revisión o mejora.</td>
+</tr>
+<tr class="even">
+<td>1 — Insuficiente</td>
+<td>No cumple lo esencial, falta evidencia o no puede defenderse.</td>
+</tr>
+</tbody>
+</table>
+<p>Importante:</p>
+<pre class="text"><code>Una entrega con buena apariencia técnica puede no ser válida si el alumno/a no puede explicarla, modificarla o defenderla.</code></pre>
+<hr />
+<h2 id="7-cómo-usar-las-plantillas">7. Cómo usar las plantillas</h2>
+<p>Las plantillas están en dos lugares:</p>
+<ol type="1">
+<li>Documento general:</li>
+</ol>
+<pre class="text"><code>07-plantillas-entregables.md</code></pre>
+<ol start="2" type="1">
+<li>Carpeta de plantillas individuales:</li>
+</ol>
+<pre class="text"><code>plantillas/</code></pre>
+<p>Plantillas disponibles:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Plantilla</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>README-template.md</code></td>
+<td>Explicar qué hace el proyecto y cómo se ejecuta.</td>
+</tr>
+<tr class="even">
+<td><code>portfolio-template.md</code></td>
+<td>Reflexionar individualmente sobre aportaciones y aprendizaje.</td>
+</tr>
+<tr class="odd">
+<td><code>registro-ia-template.md</code></td>
+<td>Declarar y analizar el uso de IA.</td>
+</tr>
+<tr class="even">
+<td><code>pruebas-template.md</code></td>
+<td>Diseñar y registrar pruebas.</td>
+</tr>
+<tr class="odd">
+<td><code>depuracion-template.md</code></td>
+<td>Documentar un proceso de depuración.</td>
+</tr>
+<tr class="even">
+<td><code>incidencia-template.md</code></td>
+<td>Registrar errores o problemas detectados.</td>
+</tr>
+<tr class="odd">
+<td><code>retrospectiva-template.md</code></td>
+<td>Revisar cómo ha trabajado el equipo.</td>
+</tr>
+<tr class="even">
+<td><code>comparacion-java-python-template.md</code></td>
+<td>Comparar una solución Java con Python.</td>
+</tr>
+<tr class="odd">
+<td><code>decision-tecnica-template.md</code></td>
+<td>Justificar una decisión técnica.</td>
+</tr>
+<tr class="even">
+<td><code>patron-diseno-template.md</code></td>
+<td>Registrar un patrón usado o descartado.</td>
+</tr>
+<tr class="odd">
+<td><code>seguridad-datos-template.md</code></td>
+<td>Revisar riesgos de datos, secretos y configuración.</td>
+</tr>
+<tr class="even">
+<td><code>defensa-individual-template.md</code></td>
+<td>Preparar la defensa técnica individual.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="71-cómo-copiar-una-plantilla">7.1. Cómo copiar una
+plantilla</h3>
+<p>Para cada hito, copia solo las plantillas necesarias dentro de
+<code>docs/</code> y cambia el nombre para que se entienda.</p>
+<p>Ejemplo para H2:</p>
+<pre class="text"><code>docs/pruebas-h2.md
+docs/depuracion-h2.md
+docs/registro-ia.md
+docs/comparacion-java-python-h2.md</code></pre>
+<h3 id="72-qué-hacer-si-un-apartado-no-aplica">7.2. Qué hacer si un
+apartado no aplica</h3>
+<p>No borres apartados importantes sin más.</p>
+<p>Si algo no aplica, escribe:</p>
+<pre class="text"><code>No aplica en este hito porque...</code></pre>
+<p>Esto ayuda a diferenciar entre:</p>
+<ul>
+<li>algo que no era necesario;</li>
+<li>algo que se ha olvidado.</li>
+</ul>
+<hr />
+<h2 id="8-qué-se-espera-en-las-defensas">8. Qué se espera en las
+defensas</h2>
+<p>Habrá defensas orales, revisiones técnicas o preguntas individuales
+durante el curso.</p>
+<p>La defensa sirve para comprobar comprensión, no para pillar a
+nadie.</p>
+<p>Pero si una entrega ha usado IA o es grupal, la defensa es
+especialmente importante.</p>
+<p>En una defensa se puede pedir:</p>
+<ul>
+<li>explicar una función;</li>
+<li>explicar una clase;</li>
+<li>justificar una colección;</li>
+<li>explicar un diagrama;</li>
+<li>ejecutar el proyecto;</li>
+<li>modificar una línea;</li>
+<li>detectar un error;</li>
+<li>explicar una prueba;</li>
+<li>justificar un uso de IA;</li>
+<li>comparar Java y Python;</li>
+<li>explicar qué parte hizo cada persona.</li>
+</ul>
+<p>Preguntas típicas:</p>
+<pre class="text"><code>¿Qué hace esta parte del código?
+¿Por qué elegisteis esta solución?
+¿Qué error encontrasteis y cómo lo corregisteis?
+¿Qué parte generó o sugirió la IA?
+¿Qué modificaste tú?
+¿Cómo comprobaste que funcionaba?
+¿Qué pasaría si cambio este valor?
+¿Qué datos no debe recibir nunca una IA?</code></pre>
+<p>Cada integrante debe saber defender su aportación y una parte
+razonable del producto común.</p>
+<hr />
+<h2 id="9-qué-hacer-si-el-equipo-se-bloquea">9. Qué hacer si el equipo
+se bloquea</h2>
+<p>Bloquearse forma parte del aprendizaje.</p>
+<p>Cuando aparezca un problema:</p>
+<ol type="1">
+<li>anotad qué ocurre;</li>
+<li>intentad reproducirlo;</li>
+<li>revisad el mensaje de error;</li>
+<li>buscad una hipótesis;</li>
+<li>usad depuración o pruebas;</li>
+<li>pedid ayuda si el bloqueo continúa;</li>
+<li>registrad la incidencia o el aprendizaje.</li>
+</ol>
+<p>No se penaliza tener errores.</p>
+<p>Sí puede afectar negativamente:</p>
+<ul>
+<li>ocultarlos;</li>
+<li>no probar nada;</li>
+<li>no documentar;</li>
+<li>entregar código que nadie entiende;</li>
+<li>decir “lo hizo la IA” sin poder explicarlo.</li>
+</ul>
+<hr />
+<h2 id="10-checklist-rápido-antes-de-entregar">10. Checklist rápido
+antes de entregar</h2>
+<p>Antes de entregar un hito, revisad:</p>
+<pre class="text"><code>[ ] El proyecto se puede abrir o ejecutar.
+[ ] El README explica qué hace y cómo se ejecuta.
+[ ] El código corresponde al nivel del hito.
+[ ] Hay pruebas o checklist si se piden.
+[ ] Hay evidencias de depuración, incidencias o decisiones si corresponden.
+[ ] El portfolio individual está actualizado si se pide.
+[ ] El registro de IA existe si se ha usado IA.
+[ ] No hay datos personales ni secretos.
+[ ] Cada integrante sabe qué parte puede defender.
+[ ] La entrega está subida o preparada en el lugar indicado.</code></pre>
+<hr />
+<h2 id="11-idea-final">11. Idea final</h2>
+<p>Este curso no consiste solo en “hacer un programa”.</p>
+<p>Consiste en aprender a trabajar como desarrolladores/as en
+formación:</p>
+<ul>
+<li>entender un problema;</li>
+<li>construir una solución paso a paso;</li>
+<li>usar herramientas profesionales;</li>
+<li>colaborar;</li>
+<li>probar;</li>
+<li>depurar;</li>
+<li>documentar;</li>
+<li>usar IA con responsabilidad;</li>
+<li>defender técnicamente lo aprendido.</li>
+</ul>
+<p>La meta no es tener un agente perfecto.</p>
+<p>La meta es que puedas decir:</p>
+<pre class="text"><code>Sé qué he construido, sé cómo funciona, sé cómo lo he comprobado y puedo mejorarlo.</code></pre>
+<h1 id="16-ajuste-aplicado-a-los-hitos-minijarvis">16. Ajuste aplicado a
+los hitos MiniJarvis</h1>
+<p>Este documento ya no queda solo como análisis: se ha usado para
+modificar los hitos, guías docentes autónomas, paquetes de hito, libro
+del alumnado, índice global y respuestas modelo de Laura.</p>
+<p>Criterio aplicado:</p>
+<pre class="text"><code>Todo concepto de Programación recopilado aquí debe aparecer al final del itinerario como núcleo, ampliación, recuperación o mejora defendible.</code></pre>
+<p>Distribución final:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Bloque</th>
+<th>Función curricular</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H1-H2</td>
+<td>Fundamentos, variables, tipos, entrada/salida, condiciones, bucles,
+switch, depuración y eficiencia básica.</td>
+</tr>
+<tr class="even">
+<td>H3</td>
+<td>Colecciones, listas, recorridos, mutabilidad, arrays, Set y Map como
+ampliaciones.</td>
+</tr>
+<tr class="odd">
+<td>H4</td>
+<td>Clases, objetos, métodos, constructores, referencias, diagramas y
+responsabilidades.</td>
+</tr>
+<tr class="even">
+<td>H5</td>
+<td>Tests, TDD, interfaces, polimorfismo, clean code y Command
+simplificado.</td>
+</tr>
+<tr class="odd">
+<td>H6</td>
+<td>Excepciones, invariantes, persistencia, logs y repositorio como idea
+inicial.</td>
+</tr>
+<tr class="even">
+<td>H7</td>
+<td>Records/enums, abstracción, Strategy opcional, Optional, streams,
+funciones puras e IA responsable.</td>
+</tr>
+<tr class="odd">
+<td>HF</td>
+<td>Cierre y mejora: JavaFX, eventos, MVC, arquitectura hexagonal,
+repositorios, CRUD, transacciones y defensa global.</td>
+</tr>
+</tbody>
+</table>
+<p>Respuesta de Laura esperada al final:</p>
+<blockquote>
+<p>Puedo explicar dónde aparece cada concepto importante en mi proyecto
+MiniJarvis o, si es una ampliación, dónde lo he estudiado y cómo lo
+aplicaría de forma segura sin romper el diseño.</p>
+</blockquote>
+<h2 id="ecosistema-digital-definitivo">Ecosistema digital
+definitivo</h2>
+<p>Antes de empezar H0, lee
+<code>10-ecosistema-digital-y-entregas.md</code>. Cada carpeta de hito
+contiene <code>ENTREGA-DIGITAL.md</code> con los enlaces, exportaciones
+y versión de GitHub que debes presentar.</p>
+
+  </main>
+</body>
+</html>

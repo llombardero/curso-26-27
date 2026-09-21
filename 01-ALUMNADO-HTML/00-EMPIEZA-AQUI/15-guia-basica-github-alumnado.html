@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía básica de GitHub para MiniJarvis</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="guía-básica-de-github-para-minijarvis">Guía básica de GitHub
+para MiniJarvis</h1>
+<p>Esta guía sirve para empezar desde cero. GitHub puede parecer difícil
+al principio, pero en MiniJarvis lo usaremos de forma progresiva.</p>
+<h2 id="1-para-qué-usaremos-github">1. Para qué usaremos GitHub</h2>
+<p>GitHub será el lugar principal del código desde H1.</p>
+<p>Lo usaremos para:</p>
+<ul>
+<li>guardar el código del proyecto;</li>
+<li>conservar el historial de cambios;</li>
+<li>escribir el <code>README.md</code>;</li>
+<li>identificar qué versión se entrega;</li>
+<li>revisar trabajo del equipo;</li>
+<li>demostrar evolución y trazabilidad.</li>
+</ul>
+<p>Drive no sustituye a GitHub para el código.</p>
+<h2 id="2-vocabulario-mínimo">2. Vocabulario mínimo</h2>
+<p>Repositorio:</p>
+<pre class="text"><code>Carpeta del proyecto en GitHub.</code></pre>
+<p>Commit:</p>
+<pre class="text"><code>Foto guardada de un cambio concreto.</code></pre>
+<p>README:</p>
+<pre class="text"><code>Archivo que explica qué es el proyecto, cómo se ejecuta y qué contiene.</code></pre>
+<p>Issue:</p>
+<pre class="text"><code>Tarea, error o mejora registrada.</code></pre>
+<p>Branch o rama:</p>
+<pre class="text"><code>Línea de trabajo separada para desarrollar algo sin romper la versión principal.</code></pre>
+<p>Pull request:</p>
+<pre class="text"><code>Propuesta para revisar e incorporar cambios de una rama.</code></pre>
+<p>Tag:</p>
+<pre class="text"><code>Marca estable para identificar una versión entregada.</code></pre>
+<h2 id="3-crear-una-cuenta-o-iniciar-sesión">3. Crear una cuenta o
+iniciar sesión</h2>
+<ol type="1">
+<li>Entra en <code>https://github.com</code>.</li>
+<li>Inicia sesión o crea una cuenta si el profesorado lo autoriza.</li>
+<li>Usa un correo y nombre de usuario adecuados para clase.</li>
+<li>Activa la verificación que GitHub pida.</li>
+<li>No compartas tu contraseña con nadie.</li>
+</ol>
+<p>Si ya tienes cuenta, revisa que puedes entrar antes de H1.</p>
+<h2 id="4-crear-o-recibir-el-repositorio">4. Crear o recibir el
+repositorio</h2>
+<p>El profesorado indicará si el repositorio lo crea el equipo o si se
+entrega ya preparado.</p>
+<p>Si tienes que crearlo:</p>
+<ol type="1">
+<li>Pulsa <code>New repository</code>.</li>
+<li>Escribe un nombre claro.</li>
+<li>Usa un nombre parecido a:</li>
+</ol>
+<pre class="text"><code>minijarvis-equipo-03</code></pre>
+<ol start="4" type="1">
+<li>Elige la visibilidad indicada por el profesorado.</li>
+<li>Añade un <code>README</code> si el profesorado lo pide.</li>
+<li>Crea el repositorio.</li>
+<li>Copia la URL y guárdala donde indique el equipo.</li>
+</ol>
+<p>No crees repositorios con nombres ofensivos, datos personales o
+información privada.</p>
+<h2 id="5-estructura-inicial-recomendada">5. Estructura inicial
+recomendada</h2>
+<p>Al principio la estructura será pequeña. Puede crecer así:</p>
+<pre class="text"><code>minijarvis-equipo-03/
+├── README.md
+├── src/
+│   └── Main.java
+└── docs/
+    ├── pruebas.md
+    ├── registro-ia.md
+    └── portfolio.md</code></pre>
+<p>No hace falta crear todas las carpetas el primer día. Cada hito
+indicará qué hace falta.</p>
+<h2 id="6-qué-debe-explicar-el-readme">6. Qué debe explicar el
+README</h2>
+<p>El <code>README.md</code> debe permitir que otra persona entienda el
+proyecto.</p>
+<p>Contenido mínimo:</p>
+<ol type="1">
+<li>Nombre del proyecto.</li>
+<li>Equipo o autores, según indique el profesorado.</li>
+<li>Hito actual.</li>
+<li>Qué hace el programa.</li>
+<li>Cómo se ejecuta.</li>
+<li>Qué se ha probado.</li>
+<li>Qué falta o qué limitaciones tiene.</li>
+<li>Versión entregada.</li>
+</ol>
+<p>Ejemplo corto:</p>
+<pre class="text"><code># MiniJarvis Equipo 03
+
+Hito: H1
+
+MiniJarvis saluda al usuario, pide su nombre y muestra mensajes por consola.
+
+Para ejecutar:
+1. Abrir el proyecto en IntelliJ.
+2. Ejecutar Main.java.
+
+Pruebas realizadas:
+- Nombre normal.
+- Nombre vacío.
+- Ejecución repetida.</code></pre>
+<h2 id="7-subir-cambios-desde-la-web-de-github">7. Subir cambios desde
+la web de GitHub</h2>
+<p>En los primeros pasos, si el profesorado lo permite, puedes usar la
+web de GitHub.</p>
+<p>Para crear o modificar un archivo:</p>
+<ol type="1">
+<li>Abre el repositorio.</li>
+<li>Pulsa <code>Add file</code> o abre el archivo que quieres
+editar.</li>
+<li>Escribe o pega el contenido.</li>
+<li>Baja hasta <code>Commit changes</code>.</li>
+<li>Escribe un mensaje claro.</li>
+<li>Confirma el cambio.</li>
+</ol>
+<p>Mensajes de commit recomendados:</p>
+<pre class="text"><code>Añade primer saludo de MiniJarvis
+Documenta ejecución de H1
+Corrige mensaje cuando el nombre está vacío</code></pre>
+<p>Mensajes poco útiles:</p>
+<pre class="text"><code>cambios
+final
+arreglo
+aaa</code></pre>
+<h2 id="8-subir-cambios-desde-intellij-o-git">8. Subir cambios desde
+IntelliJ o Git</h2>
+<p>Cuando el profesorado lo indique, trabajarás con Git desde el entorno
+de desarrollo.</p>
+<p>La idea básica siempre es la misma:</p>
+<ol type="1">
+<li>Cambiar archivos.</li>
+<li>Revisar qué ha cambiado.</li>
+<li>Hacer commit con mensaje claro.</li>
+<li>Subir los cambios a GitHub.</li>
+</ol>
+<p>No memorices comandos sin entender qué guardan. Lo importante es que
+puedas explicar qué cambio hiciste y por qué.</p>
+<h2 id="9-identificar-la-versión-entregada">9. Identificar la versión
+entregada</h2>
+<p>Desde H1, cada entrega debe apuntar a una versión concreta.</p>
+<p>Puede ser:</p>
+<ul>
+<li>un commit concreto;</li>
+<li>un tag como <code>h1-entrega</code>;</li>
+<li>una release si el profesorado lo pide.</li>
+</ul>
+<p>Si entregas solo el enlace general del repositorio, puede cambiar
+después y no quedar claro qué versión se corrige.</p>
+<h2 id="10-qué-no-debe-subirse-a-github">10. Qué no debe subirse a
+GitHub</h2>
+<p>Nunca subas:</p>
+<ul>
+<li>contraseñas;</li>
+<li>tokens;</li>
+<li>claves API;</li>
+<li>archivos <code>.env</code> reales;</li>
+<li>datos personales;</li>
+<li>capturas con cuentas abiertas;</li>
+<li>trabajos completos de otros equipos;</li>
+<li>soluciones copiadas que no puedes defender.</li>
+</ul>
+<p>Si subes un secreto por error, avisa al profesorado. No intentes
+ocultarlo con más commits.</p>
+<h2 id="11-relación-entre-github-drive-y-moodle">11. Relación entre
+GitHub, Drive y Moodle</h2>
+<p>GitHub:</p>
+<pre class="text"><code>Código, README, historial y versión evaluada.</code></pre>
+<p>Drive:</p>
+<pre class="text"><code>Evidencias no-code, exportaciones y documentos de apoyo.</code></pre>
+<p>Moodle:</p>
+<pre class="text"><code>Entrega oficial, fecha, rúbrica y feedback.</code></pre>
+<p>En Moodle normalmente entregarás enlaces, no todo el contenido
+copiado.</p>
+<h2 id="12-checklist-antes-de-entregar-en-moodle">12. Checklist antes de
+entregar en Moodle</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />El repositorio correcto está
+enlazado.</label></li>
+<li><label><input type="checkbox" />El código está
+actualizado.</label></li>
+<li><label><input type="checkbox" />El <code>README.md</code> explica
+cómo ejecutar el proyecto.</label></li>
+<li><label><input type="checkbox" />La versión entregada está
+identificada con commit o tag.</label></li>
+<li><label><input type="checkbox" />No hay contraseñas, tokens ni
+<code>.env</code> reales.</label></li>
+<li><label><input type="checkbox" />El equipo sabe qué ha
+cambiado.</label></li>
+<li><label><input type="checkbox" />Cada persona puede defender su
+aportación.</label></li>
+<li><label><input type="checkbox" />Los enlaces funcionan con una cuenta
+autorizada.</label></li>
+</ul>
+
+  </main>
+</body>
+</html>
