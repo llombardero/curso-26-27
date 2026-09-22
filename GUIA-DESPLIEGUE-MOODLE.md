@@ -12,13 +12,13 @@ Curso 2026/2027 — 1.º DAW.
 
 ## 2. Responsabilidad de cada plataforma
 
-| Plataforma | Responsabilidad única |
-|---|---|
-| Moodle | Reto, materiales, entrega, fecha, rúbrica y feedback. |
-| Drive | Evidencias de trabajo que no son código. |
-| Sheets | Diario individual y seguimiento Scrum. |
-| Sites | Selección razonada de evidencias. |
-| GitHub | Código, README, historial y versión evaluada. |
+| Plataforma | Responsabilidad única                                 |
+| ---------- | ----------------------------------------------------- |
+| Moodle     | Reto, materiales, entrega, fecha, rúbrica y feedback. |
+| Drive      | Evidencias de trabajo que no son código.              |
+| Sheets     | Diario individual y seguimiento Scrum.                |
+| Sites      | Selección razonada de evidencias.                     |
+| GitHub     | Código, README, historial y versión evaluada.         |
 
 ## 3. Estructura del aula
 

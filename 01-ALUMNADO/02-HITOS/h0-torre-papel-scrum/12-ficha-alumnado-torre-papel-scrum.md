@@ -45,22 +45,52 @@ El objetivo es aprender a:
 
 ---
 
-## 2. Reglas del reto
+## 2. Reglas y materiales del reto
+
+### Reglas comunes
 
 ```text
-1. La torre debe mantenerse en pie al menos 10 segundos sin tocarla.
-2. Solo podéis usar el material entregado por el profesor/a.
-3. Antes de construir, debéis crear un backlog con al menos 5 tareas.
-4. Cada persona debe tener un rol inicial.
-5. Durante el trabajo, debéis actualizar el estado de las tareas.
-6. Al final habrá review y retrospectiva.
-7. No gana necesariamente la torre más alta: también importa el proceso.
+1. La torre debe ser autoportante y apoyarse únicamente en la mesa.
+2. La base debe caber dentro de un cuadrado de 25 × 25 cm.
+3. Debe sostener una carga común de aproximadamente 50 g durante 60 segundos sin tocarla.
+4. La carga se coloca en el punto más alto que pueda sostenerla y la altura se mide con la carga colocada.
+5. Solo podéis usar el material autorizado en cada ciclo; no se intercambia material entre equipos.
+6. Las herramientas no forman parte de la torre y los restos cortados cuentan como material consumido.
+7. Antes de construir, debéis crear un backlog con al menos 5 tareas y actualizarlo durante el trabajo.
+8. Habrá dos pruebas comparables, review y retrospectiva.
+9. No gana necesariamente la torre más alta: también importan el proceso, la evidencia y la mejora aplicada.
 ```
+
+### Ciclo 1 — Sin conectores
+
+- 6 hojas A4 reutilizadas;
+- tijeras escolares y regla compartidas.
+
+No se permiten clips, gomas, cordel, cartulina, pegamento, cinta adhesiva ni grapas.
+
+### Ciclo 2 — Mejora justificada
+
+Antes de recibir material debéis registrar:
+
+```text
+Problema observado → material solicitado → cambio previsto → prueba esperada
+```
+
+Podéis desbloquear, como máximo:
+
+- las 4 hojas A4 restantes;
+- 1 cartulina A4 usada;
+- 6 clips medianos;
+- 4 gomas elásticas;
+- 100 cm de cordel;
+- una perforadora compartida.
+
+Tijeras, regla, lápiz, perforadora, cronómetro y cinta métrica son herramientas, no componentes de la torre.
 
 Criterio clave:
 
 ```text
-Producto + proceso + comunicación + mejora
+Producto + proceso + comunicación + mejora basada en evidencia
 ```
 
 ---
@@ -138,7 +168,9 @@ Ejemplo:
 
 ---
 
-## 5. Sprint de construcción
+## 5. Dos ciclos de construcción y prueba
+
+### Ciclo 1 — Construcción sin conectores
 
 Tiempo disponible:
 
@@ -146,7 +178,7 @@ Tiempo disponible:
 __________ minutos
 ```
 
-Durante el sprint:
+Durante el ciclo:
 
 - trabajad según el backlog;
 - moved tareas de estado si cambian;
@@ -161,45 +193,81 @@ Bloqueos detectados:
 | | | |
 | | | |
 
+### Prueba 1
+
+| Comprobación | Resultado |
+|---|---|
+| Material permitido | Sí / No |
+| Apoyo solo en la mesa | Sí / No |
+| Base dentro de 25 × 25 cm | Sí / No |
+| Sostiene la carga durante 60 segundos | Sí / No |
+| Altura con carga, solo si cumple | ______ cm |
+| Modo de fallo o problema observado | |
+
+### Adaptación y solicitud para el ciclo 2
+
+| Problema observado | Material solicitado | Cambio previsto | Prueba esperada |
+|---|---|---|---|
+| | | | |
+
+Actualizad el backlog antes de recibir el material desbloqueado.
+
+### Ciclo 2 — Construcción adaptada
+
+Tiempo disponible:
+
+```text
+__________ minutos
+```
+
+Mantened y modificad la torre del ciclo 1. No añadáis material sin propósito; si necesitáis desmontarla, registrad el motivo.
+
+### Prueba 2
+
+Usad exactamente el mismo protocolo que en la primera prueba.
+
+| Comprobación | Prueba 1 | Prueba 2 |
+|---|---|---|
+| Material permitido | Sí / No | Sí / No |
+| Apoyo solo en la mesa | Sí / No | Sí / No |
+| Base dentro de 25 × 25 cm | Sí / No | Sí / No |
+| Sostiene la carga durante 60 segundos | Sí / No | Sí / No |
+| Altura con carga, solo si cumple | ______ cm | ______ cm |
+| Modo de fallo | | |
+
 ---
 
 ## 6. Review
 
-Al terminar, presentaréis el resultado.
+Al terminar, presentaréis el resultado y compararéis las dos pruebas.
 
 Completad:
 
-Altura aproximada de la torre:
+| Evidencia | Prueba 1 | Prueba 2 |
+|---|---|---|
+| ¿Cumplió estabilidad, carga y dimensiones? | Sí / No | Sí / No |
+| Altura con carga, si cumplió | ______ cm | ______ cm |
+| Problema o modo de fallo | | |
+
+**Estrategia inicial:**
 
 ```text
 
 ```
 
-¿Se mantuvo en pie al menos 10 segundos?
-
-```text
-Sí / No
-```
-
-Estrategia usada:
+**Cambio aplicado entre ciclos:**
 
 ```text
 
 ```
 
-Decisión más importante del equipo:
+**Evidencia de mejora, empeoramiento o aprendizaje:**
 
 ```text
 
 ```
 
-Problema principal durante la construcción:
-
-```text
-
-```
-
-Si tuvierais otro sprint, ¿qué cambiaríais primero?
+**Decisión más importante del equipo:**
 
 ```text
 
@@ -306,9 +374,12 @@ Definid con vuestras palabras:
 
 ```text
 [ ] Hemos escrito el nombre del equipo y los integrantes.
-[ ] Cada persona tiene un rol.
+[ ] Cada persona tiene una responsabilidad inicial.
 [ ] Hay al menos 5 tareas en el backlog.
 [ ] Hemos indicado el estado final de las tareas.
+[ ] Hemos registrado dos pruebas con el mismo protocolo.
+[ ] La solicitud de material del ciclo 2 responde a un problema observado.
+[ ] Hemos comparado estabilidad, carga, dimensiones y altura con carga.
 [ ] Hemos completado la review.
 [ ] Hemos hecho retrospectiva.
 [ ] Hemos conectado la actividad con MiniJarvis.

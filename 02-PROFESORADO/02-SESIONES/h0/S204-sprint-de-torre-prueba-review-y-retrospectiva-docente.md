@@ -51,18 +51,24 @@ El éxito no exige construir la torre más alta. Exige poder responder con evide
 
 ### Material por equipo
 
-- 10 hojas de papel reutilizado del mismo tamaño y gramaje.
-- 50 cm de cinta adhesiva previamente medida.
+- 10 hojas A4 reutilizadas del mismo tamaño y gramaje: 6 para el ciclo 1 y 4 reservadas para el ciclo 2.
+- 1 cartulina A4 usada o una pieza equivalente de carpeta de cartulina, reservada para el ciclo 2.
+- 6 clips medianos, reservados para el ciclo 2.
+- 4 gomas elásticas, reservadas para el ciclo 2.
+- 100 cm de cordel de algodón, reservados para el ciclo 2.
+- 1 folio de planificación que no forma parte de la torre.
 - 8–12 notas adhesivas o recortes para el tablero.
 - Un rotulador.
-- Una regla o cinta métrica.
 - Una ficha S204.
 - El mapa de composición, funciones, backlog y definición de terminado de S203.
 
 ### Material común
 
 - Cronómetro visible.
+- Carga idéntica para todos los equipos, comprobada previamente y de aproximadamente 50 g.
 - Superficie plana de prueba.
+- Plantilla o marca de 25 × 25 cm para comprobar la base.
+- Tijeras escolares, reglas, lápices, perforadoras y cintas métricas compartidas; son herramientas y no pueden incorporarse a la torre.
 - Hoja o tabla docente de observación.
 - Un punto señalizado para depositar material no utilizado.
 - Cámara solo si el centro autoriza imágenes del producto; no es necesario fotografiar alumnado.
@@ -71,8 +77,9 @@ El éxito no exige construir la torre más alta. Exige poder responder con evide
 
 Comprueba antes de repartir:
 
-- mismo número de hojas;
-- misma longitud de cinta;
+- mismo número, tamaño y gramaje de hojas;
+- mismas cantidades de cartulina, clips, gomas y cordel reservadas;
+- misma carga, base máxima y tiempo de prueba;
 - mesas comparables;
 - reglas idénticas;
 - ninguna estructura preparada;
@@ -88,11 +95,13 @@ RETO: torre autoportante de papel
 Debe:
 [ ] usar solo el material entregado;
 [ ] apoyarse únicamente en la mesa;
-[ ] mantenerse 10 segundos sin tocarla;
-[ ] medirse desde la mesa hasta el punto más alto;
+[ ] tener una base que quepa en 25 × 25 cm;
+[ ] sostener la carga común de aproximadamente 50 g durante 60 segundos;
+[ ] medirse con la carga colocada;
 [ ] poder explicarse mediante decisiones y pruebas.
 
-Dos ciclos: construir → probar → inspeccionar → adaptar.
+Ciclo 1: 6 hojas, tijeras y regla; sin conectores.
+Ciclo 2: desbloqueo razonado de 4 hojas, 1 cartulina, 6 clips, 4 gomas, 100 cm de cordel y perforadora.
 ```
 
 Añade los tiempos de cada ciclo y evita cambiarlos salvo incidencia general.
@@ -104,11 +113,16 @@ Añade los tiempos de cada ciclo y evita cambiarlos salvo incidencia general.
 ### Producto
 
 - La torre debe sostenerse por sí misma sobre la mesa.
-- Ninguna persona puede tocarla durante la prueba de 10 segundos.
+- Ninguna persona puede tocarla durante la prueba de 60 segundos.
 - No puede fijarse a mesa, pared, suelo, mobiliario o cuerpo.
-- Solo puede utilizarse el papel y la cinta entregados.
-- Puede doblarse, enrollarse, rasgarse o cortarse el papel con las manos si todos los equipos reciben la misma regla.
-- La altura se mide cuando supera la prueba de estabilidad.
+- La base completa debe caber dentro de un cuadrado de 25 × 25 cm.
+- La carga común de aproximadamente 50 g debe colocarse en el punto más alto que pueda sostenerla.
+- Solo pueden formar parte de la torre los materiales autorizados en el ciclo correspondiente.
+- En el ciclo 1 solo se permiten 6 hojas A4; no se permiten clips, gomas, cordel, cartulina, pegamento, cinta adhesiva ni grapas.
+- En el ciclo 2 pueden desbloquearse las 4 hojas restantes, 1 cartulina A4, 6 clips, 4 gomas y 100 cm de cordel.
+- Tijeras, regla, lápiz, perforadora, cronómetro y cinta métrica son herramientas, no componentes.
+- Los restos cortados siguen contando como material consumido y no se intercambia material entre equipos.
+- La altura se mide con la carga colocada después de superar la prueba de estabilidad.
 
 ### Proceso
 
@@ -124,7 +138,8 @@ Añade los tiempos de cada ciclo y evita cambiarlos salvo incidencia general.
 ```text
 La torre está terminada cuando está sobre la mesa,
 usa solo el material permitido,
-permanece 10 segundos sin contacto
+su base cabe en 25 × 25 cm,
+sostiene la carga común durante 60 segundos sin contacto
 y el equipo ha registrado su prueba.
 ```
 
@@ -191,7 +206,7 @@ Si no hay respuesta verificable, pide reformular. “Ser analista” no es una c
 
 ### Tramo 3 — Refinamiento y estrategia, 12–18 minutos
 
-Entrega material, pero todavía no permitas construir durante dos minutos. El equipo:
+Entrega únicamente el lote del ciclo 1 —6 hojas A4, tijeras y regla—, pero todavía no permitas construir durante dos minutos. El equipo:
 
 1. cuenta material;
 2. genera al menos dos estrategias;
@@ -223,10 +238,12 @@ Detén la construcción para todos. Cada equipo dispone de una oportunidad regis
 
 1. coloca la torre en la zona de prueba;
 2. retira las manos;
-3. cronometra hasta 10 segundos;
-4. registra `cumple/no cumple`;
-5. mide solo si cumple;
-6. anota el modo de fallo si no cumple.
+3. comprueba que la base cabe en 25 × 25 cm;
+4. coloca la carga común en el punto más alto que pueda sostenerla;
+5. cronometra hasta 60 segundos;
+6. registra `cumple/no cumple`;
+7. mide con la carga colocada solo si cumple;
+8. anota el modo de fallo si no cumple.
 
 Modos de fallo útiles:
 
@@ -270,7 +287,13 @@ No cambies la composición del equipo a mitad de la experiencia salvo riesgo de 
 
 ### Tramo 7 — Ciclo 2 de adaptación, 50–68 minutos
 
-El equipo actualiza primero el backlog y marca qué tarea responde a la retrospectiva. Después reanuda la construcción.
+El equipo actualiza primero el backlog y marca qué tarea responde a la retrospectiva. Antes de recibir el lote reservado debe registrar:
+
+```text
+Problema observado → material solicitado → cambio previsto → prueba esperada
+```
+
+Después puede desbloquear, con las mismas cantidades máximas para todos los equipos, las 4 hojas restantes, 1 cartulina A4, 6 clips, 4 gomas, 100 cm de cordel y la perforadora compartida. No se entrega material para añadirlo sin propósito: la solicitud debe responder a un problema observado. El equipo mantiene y modifica la torre del ciclo 1; no empieza una torre nueva salvo que documente que la adaptación exige desmontarla.
 
 A los nueve minutos anuncia:
 
@@ -286,8 +309,9 @@ Registra:
 
 | Indicador | Prueba 1 | Prueba 2 |
 |---|---:|---:|
-| Se mantiene 10 segundos | Sí/No | Sí/No |
-| Altura si cumple | | |
+| Base dentro de 25 × 25 cm | Sí/No | Sí/No |
+| Sostiene la carga 60 segundos | Sí/No | Sí/No |
+| Altura con carga si cumple | | |
 | Restricciones cumplidas | | |
 | Modo de fallo | | |
 
@@ -424,7 +448,7 @@ Prioriza prueba final, registro comparativo y retrospectiva. Reduce las presenta
 
 - Distribuye tareas manipulativas, verbales, gráficas y de observación.
 - Permite comunicar mediante escritura o señalización si la exposición oral crea una barrera.
-- Adapta corte, cinta o manipulación cuando exista necesidad motriz, sin apartar a la persona del diseño y la decisión.
+- Adapta corte, perforación o manipulación cuando exista necesidad motriz, sin apartar a la persona del diseño y la decisión.
 - No interpretes hablar poco como falta de colaboración.
 - Comprueba aportaciones mediante evidencias diversas.
 - No fotografíes caras ni nombres sin base y autorización del centro.

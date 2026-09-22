@@ -25,6 +25,7 @@ La carpeta maestra de Drive simula la separación de una Unidad compartida, pero
 - `Minijarvis-alumnado.zip`: transporte de materiales publicables.
 - `Minijarvis-alumnado-html.zip`: transporte de materiales publicables en HTML para alumnado.
 - `Minijarvis-profesorado.zip`: transporte privado docente.
+- `Minijarvis-presentaciones-sesiones.zip`: las 106 presentaciones de aula organizadas por hito.
 - `Minijarvis-ejemplos-Laura-privados.zip`: ejemplos de apertura diferida.
 - `04-DRIVE-5-EQUIPOS/`: estructura preparada para recursos comunes y cinco equipos en Drive.
 - `Minijarvis-drive-5-equipos.zip`: transporte de la estructura Drive.

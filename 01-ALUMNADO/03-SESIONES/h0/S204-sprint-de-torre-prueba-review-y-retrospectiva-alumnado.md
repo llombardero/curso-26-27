@@ -1,4 +1,4 @@
---# Sesión 204 — Ficha de trabajo del alumnado
+# Sesión 204 — Ficha de trabajo del alumnado
 
 ## Torre de papel: construir, probar, inspeccionar y adaptar
 
@@ -29,14 +29,19 @@ Una torre que cae puede dejar una evidencia útil. Una torre alta construida por
 
 Por equipo:
 
-- 10 hojas de papel reutilizado;
-- 50 cm de cinta adhesiva;
+- 10 hojas A4 reutilizadas: 6 para el ciclo 1 y 4 reservadas para el ciclo 2;
+- 1 cartulina A4 usada o una pieza equivalente de carpeta de cartulina, reservada para el ciclo 2;
+- 6 clips medianos, 4 gomas elásticas y 100 cm de cordel, reservados para el ciclo 2;
+- 1 folio de planificación que no forma parte de la torre;
 - notas o recortes para el tablero;
 - un rotulador;
-- una regla o cinta métrica;
 - esta ficha y el trabajo de S203.
 
-No utilicéis materiales adicionales ni fijéis la torre a mesa, pared, suelo, mobiliario o cuerpo.
+Herramientas compartidas: tijeras escolares, regla, lápiz, perforadora, cronómetro y cinta métrica. Son herramientas: no pueden formar parte de la torre.
+
+En el ciclo 1 recibiréis únicamente 6 hojas, tijeras y regla. No se permiten clips, gomas, cordel, cartulina, pegamento, cinta adhesiva ni grapas. El resto solo se desbloquea en el ciclo 2 después de justificar el cambio.
+
+No utilicéis materiales adicionales, no intercambiéis material ni fijéis la torre a mesa, pared, suelo, mobiliario o cuerpo.
 
 ---
 
@@ -46,11 +51,12 @@ La torre está terminada cuando:
 
 - [ ] usa solo el material entregado;
 - [ ] se apoya únicamente en la mesa;
-- [ ] se mantiene 10 segundos sin tocarla;
+- [ ] su base cabe en un cuadrado de 25 × 25 cm;
+- [ ] sostiene la carga común de aproximadamente 50 g durante 60 segundos sin tocarla;
 - [ ] se ha registrado la prueba;
 - [ ] el equipo puede explicar decisiones y cambios.
 
-La altura se mide cuando la torre supera la prueba de estabilidad. No sustituye a los demás criterios.
+La altura se mide con la carga colocada cuando la torre supera la prueba de estabilidad. No sustituye a los demás criterios.
 
 ---
 
@@ -151,8 +157,9 @@ Detened la construcción cuando lo indique el profesorado.
 |---|---|
 | ¿Usa solo material permitido? | Sí / No |
 | ¿Se apoya solo en la mesa? | Sí / No |
-| ¿Se mantiene 10 segundos? | Sí / No |
-| Altura, solo si cumple estabilidad | ______ cm |
+| ¿La base cabe en 25 × 25 cm? | Sí / No |
+| ¿Sostiene la carga durante 60 segundos? | Sí / No |
+| Altura con carga, solo si cumple | ______ cm |
 | Modo de fallo o problema observado | |
 
 No ocultéis una caída ni reconstruyáis antes de registrarla. El fallo es información para el segundo ciclo.
@@ -200,6 +207,14 @@ Actualizad el backlog antes de volver a construir.
 |---|---|---|---|
 | | | | |
 
+Antes de recibir material, completad:
+
+| Problema observado | Material solicitado | Cambio previsto | Prueba esperada |
+|---|---|---|---|
+| | | | |
+
+Podéis desbloquear, como máximo, las 4 hojas restantes, 1 cartulina A4, 6 clips, 4 gomas, 100 cm de cordel y la perforadora compartida. Solicitad solo material relacionado con el problema que queréis resolver. Mantened y modificad la torre del ciclo 1; si necesitáis desmontarla, registrad por qué.
+
 Si ajustáis una función, registradlo:
 
 ```text
@@ -213,6 +228,8 @@ No cambiéis integrantes durante el sprint salvo indicación docente por una cau
 ---
 
 ## 12. Ciclo 2 — Construcción adaptada
+
+No añadáis material sin propósito. Los restos cortados siguen contando como material consumido y las herramientas no son componentes de la torre.
 
 **Qué estamos cambiando realmente:**  
 ................................................................................
@@ -233,8 +250,9 @@ Usad exactamente el mismo protocolo que en la primera prueba.
 |---|---|---|
 | Material permitido | Sí / No | Sí / No |
 | Apoyo solo en la mesa | Sí / No | Sí / No |
-| Se mantiene 10 segundos | Sí / No | Sí / No |
-| Altura si cumple | ______ cm | ______ cm |
+| Base dentro de 25 × 25 cm | Sí / No | Sí / No |
+| Sostiene la carga durante 60 segundos | Sí / No | Sí / No |
+| Altura con carga si cumple | ______ cm | ______ cm |
 | Modo de fallo | | |
 
 **¿Qué cambió entre las dos pruebas?**  
