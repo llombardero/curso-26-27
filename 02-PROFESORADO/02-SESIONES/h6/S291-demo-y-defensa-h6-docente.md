@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Defender persistencia, logs y reproducibilidad. |
 | Evidencia mínima | Defensa H6. |
 

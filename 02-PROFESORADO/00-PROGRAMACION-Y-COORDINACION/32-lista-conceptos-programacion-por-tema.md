@@ -1953,10 +1953,12 @@ Uso recomendado dentro de HEXA:
 
 | Fase HEXA | Papel del profesor | Papel del alumnado |
 |---|---|---|
-| H — Hecho / reto | Presenta el problema MiniJarvis y las restricciones. | Comprende el producto parcial esperado. |
-| E — Exploración | Da ejemplos mínimos, preguntas guía y límites. | Observa, compara, prueba y formula hipótesis. |
-| X — eXplicación | Formaliza conceptos, vocabulario, errores frecuentes y criterios. | Conecta lo investigado con teoría útil. |
-| A — Aplicación | Acompaña, desbloquea y exige evidencias. | Programa, prueba, documenta y defiende. |
+| 1 — Activar | Presenta el reto MiniJarvis, contexto y restricciones. | Comprende propósito, producto y criterios. |
+| 2 — Investigar | Facilita fuentes, ejemplos mínimos, micropíldoras y preguntas guía. | Busca, contrasta, practica y construye conocimiento útil. |
+| 3 — Idear | Abre alternativas y ofrece criterios de selección. | Propone, compara y elige una solución argumentada. |
+| 4 — Planificar | Ayuda a hacer visibles tareas, tiempos y responsabilidades. | Organiza backlog, hitos y comprobaciones. |
+| 5 — Ejecutar | Acompaña, desbloquea y exige iteración y pruebas. | Programa, prueba y mejora el producto. |
+| 6 — Comunicar | Facilita defensa, evaluación y reflexión. | Presenta, documenta, evalúa y propone mejora. |
 
 Regla práctica:
 

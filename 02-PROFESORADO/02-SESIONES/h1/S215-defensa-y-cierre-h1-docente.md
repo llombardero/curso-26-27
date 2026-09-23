@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Validar comprensión individual. |
 | Evidencia mínima | Plantilla de defensa H1 y portfolio individual. |
 

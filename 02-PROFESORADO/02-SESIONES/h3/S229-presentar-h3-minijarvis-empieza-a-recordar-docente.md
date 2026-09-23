@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H3 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | H |
+| Fase HEXA del hito | Activar — entender el reto |
 | Resultado de hoy | Comprender memoria temporal. |
 | Evidencia mínima | Lista de necesidades de memoria. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Introducir contrato común si el grupo está preparado. |
 | Evidencia mínima | Primera herramienta implementa `Tool`. |
 

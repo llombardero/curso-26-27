@@ -6,7 +6,7 @@
 |---|---|
 | Hito | C2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A/cierre |
+| Fase HEXA del hito | Activar — entender el reto |
 | Resultado de hoy | Anticipar H6. |
 | Evidencia mínima | Boceto de persistencia H6. |
 

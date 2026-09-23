@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Idear — proponer soluciones |
 | Resultado de hoy | Pasar de colección suelta a objeto con responsabilidad. |
 | Evidencia mínima | Comandos `recuerda`, `memoria` y `estado` siguen funcionando. |
 

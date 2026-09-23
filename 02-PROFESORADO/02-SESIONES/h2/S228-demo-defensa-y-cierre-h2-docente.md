@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Validar menú, pruebas y depuración. |
 | Evidencia mínima | Defensa H2, README actualizado y registro IA si procede. |
 

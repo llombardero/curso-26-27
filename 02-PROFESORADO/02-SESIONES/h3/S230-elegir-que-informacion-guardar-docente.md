@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H3 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Definir memoria antes de codificar. |
 | Evidencia mínima | Documento breve de decisión de memoria. |
 

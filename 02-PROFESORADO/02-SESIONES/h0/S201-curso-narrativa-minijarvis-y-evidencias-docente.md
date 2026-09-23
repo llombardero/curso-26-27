@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H0 — Bootcamp inicial de trabajo por proyectos y Scrum |
 | Duración | 45 minutos |
-| Momento HEXA | H — presentación del reto y de las reglas de juego |
+| Fase HEXA del hito | Activar — entender el reto |
 | Agrupamiento | Trabajo individual, contraste por parejas y puesta en común |
 | Resultado observable | Cada estudiante puede explicar qué es MiniJarvis, cómo crecerá y qué convierte un producto en evidencia defendible. |
 | Evidencia individual | Ticket con una idea comprendida, una duda, un uso permitido de IA, uno prohibido y un criterio de evidencia defendible. |

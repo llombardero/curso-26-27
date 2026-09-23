@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H0 — Formación y prueba de equipos Scrum mediante la torre de papel |
 | Duración | 45 minutos |
-| Momento HEXA | E — exploración de preferencias de contribución; X — vocabulario mínimo de Scrum |
+| Fase HEXA del hito | Fase 0 — Equipos + Investigar — aprender lo necesario |
 | Agrupamiento | Trabajo individual, breve contraste conceptual y cierre privado |
 | Producto principal | Ficha HADA puntuada, sumas por perfil y diagrama personal |
 | Uso del producto | Preparar equipos provisionales equilibrados para S203 |

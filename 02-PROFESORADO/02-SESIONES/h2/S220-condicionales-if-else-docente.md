@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Ejecutar una respuesta según comando. |
 | Evidencia mínima | Menú parcial funcional. |
 

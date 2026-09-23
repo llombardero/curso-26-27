@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Separar ayuda del flujo principal. |
 | Evidencia mínima | Comando ayuda funciona mediante herramienta. |
 

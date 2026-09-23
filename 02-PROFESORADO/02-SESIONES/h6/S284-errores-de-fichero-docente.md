@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Asegurar excepciones propias, `throws` e invariantes de estado. |
 | Evidencia mínima | Código o decisión técnica en `docs/incidencia-h6.md`/`docs/seguridad-h6.md` con prueba de error controlado. |
 
@@ -66,7 +66,7 @@ No entregues la solución completa. Pide que localicen el error, predigan el res
 
 ## Comprobación final
 
-Pregunta de control: **¿Qué mensaje recibe el usuario si falla? ### Refuerzo H6 — Excepción propia e invariantes**
+Pregunta de control: **¿Qué mensaje recibe el usuario si falla?**
 
 Criterio para cerrar la sesión:
 

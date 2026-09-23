@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H3 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Comparar colecciones Java con `list` y `dict`. |
 | Evidencia mínima | `docs/comparacion-java-python-h3.md`. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H3 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Asegurar cobertura completa del Tema 4. |
 | Evidencia mínima | `docs/justificacion-coleccion-h3.md` ampliado con array vs lista, uso o descarte de `Set`, y decisión sobre mutabilidad. |
 
@@ -66,7 +66,7 @@ No entregues la solución completa. Pide que localicen el error, predigan el res
 
 ## Comprobación final
 
-Pregunta de control: **¿Cuándo usarías mapa en vez de lista? ### Refuerzo H3 — Array, Set, mutabilidad y envoltorios**
+Pregunta de control: **¿Cuándo usarías mapa en vez de lista?**
 
 Criterio para cerrar la sesión:
 

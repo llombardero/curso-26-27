@@ -1,68 +1,79 @@
 # Sesión 267 — Ficha de trabajo del alumnado
 
-## Patrón Command simplificado
+## Patrón Command simplificado o decisión de no patrón
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Trabajar conceptos importantes de los temas 5 y 6 que no siempre aparecen en MiniJarvis mínimo. | `docs/refuerzo-poo-avanzada-h5` con código, pruebas o salidas, decisión de qué se mantiene y qué se descarta, y justificación de composición/interfaz frente a herencia. Debe nombrar explícitamente los conceptos del Tema 6 trabajados y cuáles quedan como ampliación reconocida. |
+| Relacionar un problema real del diseño de herramientas con la idea de Command y decidir si conviene usarla. | `docs/registro-patron-h5.md` con problema, alternativa simple, decisión, semejanza o diferencia respecto a Command y riesgo de sobreingeniería. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H5.
 
 ## Material que necesitas
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
-- Pizarra o una hoja reutilizable para bosquejar antes de modificar el proyecto.
+- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto H5 accesible.
+- Pizarra o una hoja reutilizable para comparar alternativas.
+- Datos ficticios; no utilices contraseñas, tokens, claves API ni datos personales reales.
 
 ## Trabajo de hoy
 
-1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
-2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Crear `enum CommandType`, valorar un `record CommandResult`, añadir `@Override` en herramientas, implementar `toString` y una comparación `equals`/`hashCode` en una clase de dominio, ordenar herramientas por nombre y comparar `interface Tool` con una clase abstracta `BaseTool`. Analizar un microejemplo de `instanceof` y justificar por qué se prefiere polimorfismo cuando sea posible.**
-4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
-5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+1. Localiza qué problema resolvió separar las acciones en clases que implementan `Tool`.
+2. Compara la solución actual con esta idea: «Command encapsula una acción como objeto».
+3. Identifica qué parte del proyecto se parece a Command y qué elementos de un patrón completo no necesitas.
+4. Valora una alternativa más simple y el coste de añadir más infraestructura.
+5. Decide si mantienes la expresión «Command simplificado» o si descartas el patrón.
+6. Registra una justificación que puedas defender con código del proyecto.
 
-## Registro breve
+## Registro de patrón
 
-**Qué intento conseguir:**  
-................................................................................
+Completa `docs/registro-patron-h5.md`:
 
-**Decisión o hipótesis que probaré:**  
-................................................................................
+```markdown
+# Registro de patrón H5
 
-**Prueba que he realizado y resultado:**  
-................................................................................
+## Problema de diseño
 
-**Bloqueo encontrado y siguiente paso:**  
-................................................................................
+## Alternativa simple
+
+## Solución actual
+
+## ¿En qué se parece a Command?
+
+## ¿Qué parte no necesitamos?
+
+## Ventaja comprobable
+
+## Riesgo de sobreingeniería
+
+## Decisión final y justificación
+```
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **`docs/refuerzo-poo-avanzada-h5` con código, pruebas o salidas, decisión de qué se mantiene y qué se descarta, y justificación de composición/interfaz frente a herencia. Debe nombrar explícitamente los conceptos del Tema 6 trabajados y cuáles quedan como ampliación reconocida.**
-- [ ] Puedo señalar dónde está.
-- [ ] Puedo explicar una decisión tomada.
-- [ ] Puedo mostrar una prueba o comprobación.
-- [ ] He registrado mi aportación individual si el trabajo era de equipo.
+- [ ] He nombrado el problema antes que el patrón.
+- [ ] He relacionado la decisión con código real del proyecto.
+- [ ] He explicado una semejanza y una diferencia respecto a Command.
+- [ ] He identificado un riesgo de complicar innecesariamente el diseño.
+- [ ] He decidido mantener, simplificar o descartar el patrón.
+- [ ] Puedo defender la decisión sin limitarme a repetir una definición.
 
 ## Seguridad y uso de IA
 
 - Trabaja únicamente con datos ficticios.
 - No escribas contraseñas, tokens, claves API ni datos personales.
-- Si utilizas IA en un uso permitido, registra qué pediste, qué recibiste, qué cambiaste y cómo lo comprobaste.
+- Si utilizas IA para comprender el patrón, registra qué preguntaste y contrasta la explicación con el código real.
+- No copies una implementación completa de Command si no puedes justificar cada elemento.
 - Los ejemplos de Laura solo se consultan después del intento propio.
 
 ## Si te bloqueas
 
-1. Copia el mensaje exacto o describe qué observas.
-2. Indica qué esperabas que ocurriera.
-3. Reduce el problema a una prueba pequeña.
-4. Pide ayuda mostrando esos tres datos; no pidas directamente la solución completa.
+1. Escribe qué cambio sería difícil con el diseño actual.
+2. Señala la clase o método donde aparece el problema.
+3. Compara una solución simple con otra más compleja.
+4. Si no existe un problema concreto, justifica por qué no conviene forzar el patrón.
 
 ## Cierre
 
-Responde sin copiar: **Pregunta: ¿por qué no siempre conviene usar herencia aunque sepamos programarla?**
+Responde sin copiar: **¿Qué problema real resuelve aquí la idea de Command y qué parte sería sobreingeniería?**
 
-Respuesta:  
-................................................................................
-
-La sesión está completada cuando la evidencia existe, se ha comprobado y puedes defenderla brevemente.
+La sesión está completada cuando la evidencia existe, está vinculada al proyecto y puedes defender la decisión.

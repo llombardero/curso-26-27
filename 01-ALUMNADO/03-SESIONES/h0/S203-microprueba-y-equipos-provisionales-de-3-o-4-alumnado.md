@@ -126,19 +126,26 @@ Ejemplos que podéis valorar después de vuestro intento:
 
 ## 7. Reto que prepararemos
 
-En la próxima sesión tendréis:
+En la próxima sesión trabajaréis en dos ciclos:
 
 ```text
-10 hojas de papel reutilizado.
-50 cm de cinta adhesiva.
-Una mesa como único apoyo.
+Ciclo 1: 6 hojas A4 reutilizadas, tijeras y regla, sin conectores.
+Ciclo 2: podréis solicitar de forma justificada hasta 4 hojas más,
+1 cartulina A4 usada, 6 clips, 4 gomas, 100 cm de cordel y perforadora.
+```
+
+Antes de recibir material del ciclo 2 registraréis:
+
+```text
+Problema observado → material solicitado → cambio previsto → prueba esperada
 ```
 
 Debéis crear una torre autoportante que:
 
 - use solamente el material entregado;
-- se mantenga 10 segundos sin tocarla;
-- pueda medirse desde la mesa hasta su punto más alto;
+- apoye toda su base dentro de 25 × 25 cm;
+- sostenga una carga común aproximada de 50 g durante 60 segundos;
+- pueda medirse desde la mesa hasta su punto más alto con la carga colocada;
 - deje evidencia de decisiones, pruebas y mejora.
 
 Hoy no se construye todavía. Hoy se prepara el trabajo.
@@ -228,7 +235,7 @@ Completa sin copiar:
 - [ ] Cada función tiene responsable, sustituto y conducta observable.
 - [ ] Existe una regla concreta de participación.
 - [ ] El backlog contiene al menos seis tareas.
-- [ ] La definición de terminado incluye la prueba de 10 segundos.
+- [ ] La definición de terminado incluye base, carga, estabilidad durante 60 segundos y altura con carga.
 - [ ] Cada persona ha registrado su aportación y aprendizaje.
 - [ ] Entendemos que composición y funciones son provisionales.
 

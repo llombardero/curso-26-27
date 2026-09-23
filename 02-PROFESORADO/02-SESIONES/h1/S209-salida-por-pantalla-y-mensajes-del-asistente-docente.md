@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Idear — proponer soluciones |
 | Resultado de hoy | Usar `System.out.println` y construir salida legible. |
 | Evidencia mínima | Programa que muestra saludo, propósito y curso. |
 

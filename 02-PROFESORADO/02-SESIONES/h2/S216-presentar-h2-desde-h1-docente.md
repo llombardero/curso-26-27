@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | H |
+| Fase HEXA del hito | Activar — entender el reto |
 | Resultado de hoy | Entender la diferencia entre programa lineal e interactivo. |
 | Evidencia mínima | Tabla H1 frente a H2. |
 

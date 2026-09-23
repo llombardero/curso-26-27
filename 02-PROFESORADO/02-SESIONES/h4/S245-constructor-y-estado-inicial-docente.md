@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Asegurar conceptos del Tema 5 relacionados con programación básica de clases. |
 | Evidencia mínima | Código con constructores sobrecargados y apartado en README/portfolio explicando cuándo se usa cada uno. |
 
@@ -65,7 +65,7 @@ No entregues la solución completa. Pide que localicen el error, predigan el res
 
 ## Comprobación final
 
-Pregunta de control: **¿Qué pasaría si la lista no se inicializa? ### Refuerzo H4 — Constructores sobrecargados y Javadoc mínimo**
+Pregunta de control: **¿Qué pasaría si la lista no se inicializa?**
 
 Criterio para cerrar la sesión:
 

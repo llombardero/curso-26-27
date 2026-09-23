@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Idear — proponer soluciones |
 | Resultado de hoy | Terminar el programa correctamente. |
 | Evidencia mínima | El programa termina solo cuando se escribe `salir`. |
 

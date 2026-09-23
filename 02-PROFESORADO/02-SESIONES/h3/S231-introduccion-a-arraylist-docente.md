@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H3 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Guardar varios elementos en orden. |
 | Evidencia mínima | Ejemplo pequeño de `ArrayList` que compila. |
 

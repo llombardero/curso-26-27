@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Decidir cómo guardar datos. |
 | Evidencia mínima | Documento de formato. |
 

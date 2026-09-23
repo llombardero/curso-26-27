@@ -6,7 +6,7 @@
 |---|---|
 | Hito | HF |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E/X |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Diseñar una demo clara y realista. |
 | Evidencia mínima | Guion de demo final. |
 

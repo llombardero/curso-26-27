@@ -6,7 +6,7 @@
 |---|---|
 | Hito | HF |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E/X |
+| Fase HEXA del hito | Idear — proponer soluciones |
 | Resultado de hoy | Organizar evidencias de aprendizaje. |
 | Evidencia mínima | `portfolio-final.md`. |
 

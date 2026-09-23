@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Explicar un flujo real del agente. |
 | Evidencia mínima | `docs/diagrama-comportamiento-h4.md`. |
 

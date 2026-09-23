@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Repetir lectura de comandos. |
 | Evidencia mínima | Programa que repite prompt `>`. |
 

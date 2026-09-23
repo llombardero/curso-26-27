@@ -2,6 +2,13 @@
 
 Curso 2026/2027 — 1.º DAW — Programación y Entornos de Desarrollo.
 
+## Base metodológica
+
+MiniJarvis adopta el Modelo HEXA de seis fases: Activar, Investigar, Idear, Planificar, Ejecutar y Comunicar, con Equipos como Fase 0 transversal.
+
+- Fuente canónica: `02-PROFESORADO/04-RECURSOS-NORMATIVOS-Y-TEMARIOS/Modelo_HEXA_COMPLETO.pdf`.
+- Aplicación al calendario y a las evidencias de MiniJarvis: `02-PROFESORADO/04-RECURSOS-NORMATIVOS-Y-TEMARIOS/Modelo_HEXA_APLICADO_A_MINIJARVIS.md`.
+
 ## Audiencias
 
 - `01-ALUMNADO/`: materiales publicables progresivamente.

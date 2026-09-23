@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Comparar interfaz, herencia, composición y duck typing. |
 | Evidencia mínima | `docs/comparacion-java-python-h5.md`. |
 

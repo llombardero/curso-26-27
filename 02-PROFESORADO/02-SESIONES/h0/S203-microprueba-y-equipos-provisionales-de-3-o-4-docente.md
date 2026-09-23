@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H0 — Formación y prueba de equipos Scrum mediante la torre de papel |
 | Duración | 45 minutos |
-| Momento HEXA | E/X — interpretar la composición y formalizar una organización provisional |
+| Fase HEXA del hito | Fase 0 — Equipos + Idear — proponer soluciones + Planificar — organizar el trabajo |
 | Agrupamiento | Equipos provisionales de tres o cuatro preparados por el docente |
 | Producto principal | Mapa HADA de equipo, funciones justificadas, reglas de participación y backlog inicial de la torre |
 | Evidencia individual | Aportación inicial, función que se desea practicar y criterio para revisar la asignación |
@@ -255,8 +255,19 @@ El acuerdo debe incluir una persona sustituta para cada función ante una ausenc
 Presenta el reto, sin permitir todavía la construcción:
 
 ```text
-Con 10 hojas de papel reutilizado y 50 cm de cinta,
-construir una torre autoportante que permanezca 10 segundos sin tocarla.
+Ciclo 1: 6 hojas A4 reutilizadas, tijeras y regla, sin conectores.
+Ciclo 2: se podrá solicitar de forma justificada hasta 4 hojas más,
+1 cartulina A4 usada, 6 clips, 4 gomas, 100 cm de cordel y perforadora.
+
+La torre será autoportante, apoyada solo sobre la mesa, con la base dentro
+de 25 × 25 cm y una carga común aproximada de 50 g durante 60 segundos.
+La altura se medirá con la carga colocada.
+```
+
+Aclara que el material del ciclo 2 solo se desbloquea después de registrar:
+
+```text
+Problema observado → material solicitado → cambio previsto → prueba esperada
 ```
 
 El equipo debe crear un backlog de al menos seis tareas. Pide que aparezcan, como mínimo:
@@ -266,7 +277,7 @@ El equipo debe crear un backlog de al menos seis tareas. Pide que aparezcan, com
 - elegir estrategia;
 - hacer una prueba pequeña;
 - construir o integrar;
-- probar durante 10 segundos;
+- probar base, carga y estabilidad durante 60 segundos;
 - medir;
 - preparar review y evidencias.
 

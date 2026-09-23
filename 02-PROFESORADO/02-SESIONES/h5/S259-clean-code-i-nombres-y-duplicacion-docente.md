@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Detectar problemas de legibilidad. |
 | Evidencia mínima | Lista de mejoras priorizadas. |
 

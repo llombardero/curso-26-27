@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Observar el programa mientras se ejecuta. |
 | Evidencia mínima | `docs/depuracion-h2.md` con captura o descripción. |
 

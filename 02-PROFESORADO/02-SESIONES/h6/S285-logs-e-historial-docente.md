@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Registrar eventos simples. |
 | Evidencia mínima | Log generado sin datos sensibles. |
 

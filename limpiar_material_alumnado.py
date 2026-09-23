@@ -84,7 +84,7 @@ def clean_common(text: str) -> str:
     text = re.sub(r"^Edición final para Moodle.*\n", "", text, flags=re.MULTILINE)
     text = re.sub(r"<!--.*?-->\n?", "", text, flags=re.DOTALL)
     text = re.sub(
-        r"\s*\*\*Momento HEXA:\*\*\s*[^.\n]+\.?",
+        r"\s*\*\*(?:Momento|Fase) HEXA:\*\*\s*[^.\n]+\.?",
         "",
         text,
     )

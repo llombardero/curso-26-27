@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Diferenciar variable y constante. |
 | Evidencia mínima | Código con al menos una constante bien usada. |
 

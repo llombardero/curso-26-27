@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H7 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Trazar y validar respuestas. |
 | Evidencia mínima | `docs/registro-prompts-h7.md` y validación humana. |
 

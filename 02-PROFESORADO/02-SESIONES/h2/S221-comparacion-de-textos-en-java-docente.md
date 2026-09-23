@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Evitar el error de usar `==` con cadenas. |
 | Evidencia mínima | Comandos funcionan con espacios o mayúsculas si se decide soportarlo. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H3 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Consultar información guardada. |
 | Evidencia mínima | MiniJarvis muestra los recuerdos guardados. |
 

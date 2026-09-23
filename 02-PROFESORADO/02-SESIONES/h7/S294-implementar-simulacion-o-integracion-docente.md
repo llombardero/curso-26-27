@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H7 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Idear — proponer soluciones → Planificar — organizar el trabajo → Ejecutar — crear |
 | Resultado de hoy | Añadir modo IA controlado. |
 | Evidencia mínima | Modo IA funcional o simulación robusta. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Entender clase `Main` y método `main`. |
 | Evidencia mínima | Código que compila con varios mensajes por pantalla. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Entender la diferencia entre clase y objeto. |
 | Evidencia mínima | Definición propia de clase y objeto con ejemplo. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Documentar diseño OO. |
 | Evidencia mínima | README H4, portfolio y registro IA. |
 

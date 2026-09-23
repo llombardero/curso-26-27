@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Comprobar comportamiento antes de entregar. |
 | Evidencia mínima | `docs/pruebas-h2.md`. |
 

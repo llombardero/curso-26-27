@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Documentar un fallo real y su solución. |
 | Evidencia mínima | `docs/incidencia-h2.md`. |
 

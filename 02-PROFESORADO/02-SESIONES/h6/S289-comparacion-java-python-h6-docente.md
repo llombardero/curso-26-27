@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Comparar ficheros, JSON/logs o lectura simple. |
 | Evidencia mínima | `docs/comparacion-java-python-h6.md`. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Crear y ejecutar un proyecto Java mínimo. |
 | Evidencia mínima | Captura o documento de primera ejecución. |
 

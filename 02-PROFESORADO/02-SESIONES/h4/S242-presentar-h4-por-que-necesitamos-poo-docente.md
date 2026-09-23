@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | H |
+| Fase HEXA del hito | Activar — entender el reto |
 | Resultado de hoy | Motivar POO desde un problema real. |
 | Evidencia mínima | Lista de problemas del código H3. |
 

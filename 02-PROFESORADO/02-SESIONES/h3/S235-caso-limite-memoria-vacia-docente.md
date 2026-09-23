@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H3 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Gestionar ausencia de datos. |
 | Evidencia mínima | Prueba de `memoria` antes de guardar nada. |
 

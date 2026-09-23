@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Verificar que la extensibilidad no rompe H4. |
 | Evidencia mínima | Checklist de pruebas H5. |
 

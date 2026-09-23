@@ -6,7 +6,7 @@
 |---|---|
 | Hito | HF |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Preparar defensa final sin memorizar. |
 | Evidencia mínima | Plantilla de defensa final. |
 

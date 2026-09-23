@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Revisar código de forma constructiva. |
 | Evidencia mínima | `docs/revision-codigo-h5.md`. |
 

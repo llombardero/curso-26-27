@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Idear — proponer soluciones |
 | Resultado de hoy | Separar persistencia de memoria de negocio. |
 | Evidencia mínima | Persistencia encapsulada en clase propia. |
 

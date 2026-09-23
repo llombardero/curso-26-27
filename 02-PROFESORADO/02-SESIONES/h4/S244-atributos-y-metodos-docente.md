@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Separar qué sabe y qué hace una clase. |
 | Evidencia mínima | Tabla: clase, atributos, métodos y responsabilidad. |
 

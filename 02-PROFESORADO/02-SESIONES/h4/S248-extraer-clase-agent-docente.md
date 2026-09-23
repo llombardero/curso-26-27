@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Sacar flujo principal de `Main`. |
 | Evidencia mínima | `Main` queda reducido a crear y lanzar el agente. |
 

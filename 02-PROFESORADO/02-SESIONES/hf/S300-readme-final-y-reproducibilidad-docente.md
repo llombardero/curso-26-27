@@ -6,7 +6,7 @@
 |---|---|
 | Hito | HF |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E/X |
+| Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Dejar el proyecto ejecutable por otra persona. |
 | Evidencia mínima | README final validado. |
 

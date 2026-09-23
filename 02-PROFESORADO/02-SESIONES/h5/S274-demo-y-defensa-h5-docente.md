@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Defender extensibilidad, refactorización, Git y patrón. |
 | Evidencia mínima | Defensa H5 completa. |
 

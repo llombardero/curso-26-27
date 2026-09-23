@@ -6,29 +6,33 @@
 
 **Reto del hito:** Demostrar el aprendizaje del itinerario, localizar carencias y aplicar una mejora o recuperación basada en evidencias.
 
-La secuencia de sesiones constituye un único reto de hito. Las actividades HEXA breves de cada sesión son microciclos, pero no sustituyen este ciclo completo del hito.
+**Base transversal — Fase 0 Equipos:** se mantienen roles, normas, colaboración y herramientas de organización durante todo el reto. El profesorado hace visible el avance de fase y sitúa la instrucción guiada principalmente en Investigar, sin reducir HEXA a una etiqueta.
 
 | Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
 |---|---|---|---|
-| **H — Hecho / reto** | ¿Qué problema real debemos resolver y con qué límites? | Presenta contexto, producto, restricciones, criterios y diagnóstico; no da todavía la solución completa. | Reformula el reto, identifica lo que sabe/no sabe y deja una ficha inicial con criterios de éxito. |
-| **E — Exploración** | ¿Qué alternativas, hipótesis o pruebas iniciales ayudan a entenderlo? | Propone preguntas, ejemplos mínimos, casos y límites seguros. | Observa, compara, predice, prueba alternativas y registra decisiones o bloqueos. |
-| **X — eXplicación** | ¿Qué conceptos permiten explicar lo observado y decidir con criterio? | Formaliza vocabulario, sintaxis, modelo mental, errores frecuentes, seguridad y criterios de calidad. | Explica con palabras propias, conecta teoría y exploración y corrige sus hipótesis. |
-| **A — Aplicación** | ¿Cómo construimos, comprobamos, documentamos y defendemos la solución? | Desbloquea, exige pruebas y comprueba autoría y transferencia. | Implementa el producto, lo prueba, documenta evidencias, realiza review/defensa y propone mejora. |
+| **1 — Activar** | ¿Qué reto real debemos entender y con qué propósito, límites y criterios? | Presenta y contextualiza el reto sin anticipar la solución. | Reformula el reto y explicita objetivos, dudas y criterios. |
+| **2 — Investigar** | ¿Qué necesitamos aprender para abordar el reto? | Facilita búsqueda guiada, micropíldoras y fuentes seguras. | Investiga, contrasta, practica y construye la base conceptual necesaria. |
+| **3 — Idear** | ¿Qué soluciones posibles podemos proponer y cuál elegimos? | Abre alternativas y exige criterios de selección. | Genera, compara y argumenta una solución viable. |
+| **4 — Planificar** | ¿Cómo convertimos la idea en tareas, tiempos y responsabilidades? | Ayuda a hacer visibles backlog, hitos, dependencias y criterios de seguimiento. | Organiza tareas, tiempos, responsabilidades y comprobaciones. |
+| **5 — Ejecutar** | ¿Cómo construimos, probamos y mejoramos la solución? | Desbloquea sin sustituir la autoría y exige iteración y pruebas. | Crea el producto, lo prueba, corrige y conserva evidencias. |
+| **6 — Comunicar** | ¿Cómo presentamos, evaluamos y reflexionamos sobre producto y proceso? | Facilita defensa, evaluación formativa, coevaluación y mejora. | Presenta, defiende, evalúa, reflexiona y formula el siguiente paso. |
 
-### Temporalización mínima explícita
+### Temporalización explícita sobre las sesiones operativas
 
-HF-S1–S7; 315 min mínimos en la guía autónoma. Los tiempos de fases se reservan dentro de las sesiones indicadas; los rangos pueden solaparse cuando una sesión cierra una fase y abre la siguiente.
+Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra una y abre la siguiente.
 
-| Fase | Reserva y momento recomendado | Puerta de salida |
+| Fase | Sesiones de referencia | Puerta de salida |
 |---|---|---|
-| H | HF-S1; 45 min | Reto reformulado, límites y criterio de éxito visibles. |
-| E | HF-S1–S2; 75 min integrados | Hipótesis, comparación, prueba inicial o decisiones justificadas. |
-| X | HF-S2–S3; 75 min integrados | Explicación individual breve y conexión con el producto. |
-| A | HF-S3–S7; 120 min integrados | Producto comprobado, documentación, defensa y mejora. |
+| 1 — Activar | S297 | Reto comprendido y criterios visibles. |
+| 2 — Investigar | S298 | Conocimientos necesarios contrastados. |
+| 3 — Idear | S299 | Solución seleccionada y argumentada. |
+| 4 — Planificar | S300 | Plan, responsabilidades y comprobaciones visibles. |
+| 5 — Ejecutar | S301–S303 | Producto construido, probado y mejorado. |
+| 6 — Comunicar | S304–S306 | Defensa, evaluación, reflexión y mejora. |
 
 **Expediente HEXA mínimo del hito:** mapa de evidencias, selección razonada, explicación del progreso, portfolio, demo, defensa, recuperación y plan de mejora.
 
-Regla de avance: puede haber prototipos durante E, pero no se considera completada A si faltan evidencias de H, E o X. Si una fase falta, se recupera esa fase y su evidencia; no se repite automáticamente todo el hito.
+Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecutar no se considera completada si faltan evidencias de Activar, Investigar, Idear o Planificar. Comunicar exige presentar, evaluar y reflexionar. Si falta una fase, se recuperan esa fase y su evidencia; no se repite automáticamente todo el hito.
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 

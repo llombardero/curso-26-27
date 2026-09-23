@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H7 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Definir uso limitado y seguro de IA. |
 | Evidencia mínima | `docs/riesgos-ia-h7.md` inicial. |
 

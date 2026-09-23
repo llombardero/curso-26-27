@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Que otra persona pueda ejecutar desde cero. |
 | Evidencia mínima | README H6 probado por otro equipo. |
 

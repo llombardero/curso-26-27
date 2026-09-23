@@ -6,7 +6,7 @@
 |---|---|
 | Hito | HF |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | H |
+| Fase HEXA del hito | Activar — entender el reto |
 | Resultado de hoy | Retomar proyecto y detectar estado real. |
 | Evidencia mínima | Diagnóstico final por alumno/a y equipo. |
 

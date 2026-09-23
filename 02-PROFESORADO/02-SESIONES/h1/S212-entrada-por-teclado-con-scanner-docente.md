@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Asegurar conceptos del Tema 1 que no aparecen de forma natural en el saludo inicial. |
 | Evidencia mínima | Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido. |
 
@@ -65,7 +65,7 @@ No entregues la solución completa. Pide que localicen el error, predigan el res
 
 ## Comprobación final
 
-Pregunta de control: **¿Qué devuelve `nextLine()`? ### Refuerzo H1 — Números, operadores y conversiones**
+Pregunta de control: **¿Qué devuelve `nextLine()`?**
 
 Criterio para cerrar la sesión:
 

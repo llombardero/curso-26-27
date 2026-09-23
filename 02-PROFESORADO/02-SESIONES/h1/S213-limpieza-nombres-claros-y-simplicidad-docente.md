@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Mejorar legibilidad sin añadir complejidad. |
 | Evidencia mínima | Código H1 limpio, simple y ejecutable. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Herramienta que colabora con `Memory`. |
 | Evidencia mínima | Comando recordar funciona como herramienta. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H0 — Formación y prueba de equipos Scrum mediante la torre de papel |
 | Duración | 45 minutos |
-| Momento HEXA | A — transferencia y acuerdo de mejora |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Agrupamiento | Equipos provisionales de la torre, con cierre individual |
 | Producto | Decisión razonada sobre el equipo, contrato, funciones para H1, rotación y primer backlog de MiniJarvis |
 | Evidencia central | Comparación entre hipótesis HADA y conductas observadas en la torre |

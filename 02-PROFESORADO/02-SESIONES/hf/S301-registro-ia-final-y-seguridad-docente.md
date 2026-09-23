@@ -6,7 +6,7 @@
 |---|---|
 | Hito | HF |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Cerrar trazabilidad de IA. |
 | Evidencia mínima | Registro IA final. |
 

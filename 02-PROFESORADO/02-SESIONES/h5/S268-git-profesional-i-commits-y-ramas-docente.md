@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Mejorar trazabilidad. |
 | Evidencia mínima | `docs/evidencia-git-h5.md`. |
 

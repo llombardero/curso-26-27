@@ -6,7 +6,7 @@
 |---|---|
 | Hito | HF |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Cerrar aprendizaje y evaluación. |
 | Evidencia mínima | Defensa final, autoevaluación y retrospectiva. |
 
@@ -67,7 +67,7 @@ Pide una explicación o modificación individual breve. El producto de equipo no
 
 ## Comprobación final
 
-Pregunta de control: **¿Qué sabes hacer ahora que no sabías al empezar? --- ## 4. Banco de preguntas rápidas por bloque ### H1 - ¿Dónde empieza el programa? - ¿Qué diferencia hay entre variable y constante? - ¿Qué hace `Scanner`? - ¿Qué ocurre si cambio el valor de `userName`? ### H2 - ¿Qué condición mantiene vivo el bucle? - ¿Por qué usamos `.equals()`? - ¿Qué prueba demuestra que `salir` funciona? - ¿Qué variable observaste con el depurador? ### H3 - ¿Por qué elegiste esa colección? - ¿Cómo gestionas memoria vacía? - ¿Cómo recorres los recuerdos? - ¿Qué diferencia hay entre `ArrayList` y `HashMap`? ### H4 - ¿Qué responsabilidad tiene esta clase? - ¿Qué atributo está encapsulado? - ¿Qué hace el constructor? - ¿Dónde se ve esta relación en el código? ### H5 - ¿Qué mejora aportó la refactorización? - ¿Qué obliga a hacer `Tool`? - ¿Qué problema resuelve el patrón Command simplificado? - ¿Qué commit demuestra tu aportación? ### H6 - ¿Dónde se guardan los recuerdos? - ¿Qué pasa si el fichero no existe? - ¿Qué prueba demuestra persistencia? - ¿Qué datos no deben aparecer en logs? ### H7 - ¿Qué datos recibe la IA o simulación? - ¿Cómo validas una respuesta? - ¿Qué riesgo has mitigado? - ¿Qué hace y qué no hace el modo IA? ### HF - ¿Qué evidencia demuestra tu aprendizaje principal? - ¿Qué parte del proyecto puedes modificar en directo? - ¿Qué uso de IA registraste? - ¿Qué mejorarías si tuvieras otra iteración?**
+Pregunta de control: **¿Qué sabes hacer ahora que no sabías al empezar?**
 
 Criterio para cerrar la sesión:
 

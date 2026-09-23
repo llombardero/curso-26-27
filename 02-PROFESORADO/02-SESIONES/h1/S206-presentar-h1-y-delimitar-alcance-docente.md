@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | H |
+| Fase HEXA del hito | Activar — entender el reto |
 | Resultado de hoy | Comprender el producto mínimo H1. |
 | Evidencia mínima | Lista de requisitos H1 y lista de restricciones. |
 

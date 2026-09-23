@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H7 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Defender límites, seguridad y funcionamiento. |
 | Evidencia mínima | Defensa H7 y configuración segura. |
 

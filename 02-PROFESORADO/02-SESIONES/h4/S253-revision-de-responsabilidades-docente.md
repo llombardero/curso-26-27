@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Evitar clases decorativas o mezcladas. |
 | Evidencia mínima | Lista de ajustes de diseño. |
 

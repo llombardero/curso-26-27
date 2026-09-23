@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Cubrir conceptos del Tema 3 que no siempre aparecen en el menú principal. |
 | Evidencia mínima | Archivo breve `docs/refuerzo-bucles-h2.md` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia. |
 
@@ -65,7 +65,7 @@ No entregues la solución completa. Pide que localicen el error, predigan el res
 
 ## Comprobación final
 
-Pregunta de control: **¿Qué versión puedes defender mejor? ### Refuerzo H2 — Bucles alternativos y eficiencia inicial**
+Pregunta de control: **¿Qué versión puedes defender mejor?**
 
 Criterio para cerrar la sesión:
 

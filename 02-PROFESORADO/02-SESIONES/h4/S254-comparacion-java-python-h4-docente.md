@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H4 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Comparar clases Java con clases Python. |
 | Evidencia mínima | `docs/comparacion-java-python-h4.md`. |
 

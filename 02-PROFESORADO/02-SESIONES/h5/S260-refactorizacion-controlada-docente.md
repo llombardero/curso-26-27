@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Mejorar estructura sin cambiar comportamiento. |
 | Evidencia mínima | `docs/informe-refactorizacion-h5.md` inicial. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | C2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A/cierre |
+| Fase HEXA del hito | Ejecutar — crear → Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Recuperar evidencias incompletas. |
 | Evidencia mínima | Evidencia de recuperación. |
 

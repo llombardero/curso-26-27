@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Verificar guardar y cargar. |
 | Evidencia mínima | `docs/pruebas-persistencia-h6.md`. |
 

@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H7 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | H |
+| Fase HEXA del hito | Activar — entender el reto |
 | Resultado de hoy | Elegir integración real o simulación robusta. |
 | Evidencia mínima | Decisión H7 documentada. |
 

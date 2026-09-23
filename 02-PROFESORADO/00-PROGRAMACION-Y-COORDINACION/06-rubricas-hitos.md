@@ -4,16 +4,20 @@
 
 ## Política obligatoria: un ciclo HEXA completo en cada hito
 
-Cada hito de MiniJarvis se considera un reto didáctico completo. Por tanto, **H0, H1, H2, H3, H4, H5, H6, H7 y HF deben recorrer y evidenciar las cuatro fases H–E–X–A**. No se aplica HEXA una sola vez al proyecto anual ni se da por cumplido mediante actividades aisladas.
+La fuente metodológica canónica es `../04-RECURSOS-NORMATIVOS-Y-TEMARIOS/Modelo_HEXA_COMPLETO.pdf`; su aplicación operativa se documenta en `../04-RECURSOS-NORMATIVOS-Y-TEMARIOS/Modelo_HEXA_APLICADO_A_MINIJARVIS.md`.
+
+Cada hito de MiniJarvis debe recorrer y evidenciar las seis fases: Activar, Investigar, Idear, Planificar, Ejecutar y Comunicar. La Fase 0 Equipos es la base transversal. No se considera aplicado HEXA mediante cuatro letras, una única actividad aislada o solo el producto final.
 
 | Fase | Función obligatoria en cada hito | Evidencia mínima |
 |---|---|---|
-| H — Hecho / reto | Situar el problema, producto, límites y criterios de éxito. | Reformulación del reto y diagnóstico inicial. |
-| E — Exploración | Comparar, predecir, formular hipótesis y realizar pruebas iniciales guiadas. | Registro de alternativas, hipótesis, prueba o decisión. |
-| X — eXplicación | Formalizar conceptos después de la exploración, con instrucción docente explícita. | Explicación individual conectada con el producto. |
-| A — Aplicación | Construir, probar, documentar, defender y mejorar. | Producto funcional o evidencia equivalente, pruebas, documentación y defensa/review. |
+| 1 — Activar | Entender reto, propósito, límites y criterios. | Reformulación y diagnóstico inicial. |
+| 2 — Investigar | Aprender y contrastar lo necesario. | Fuentes, micropíldoras, práctica guiada o base conceptual. |
+| 3 — Idear | Generar alternativas y elegir con criterio. | Opciones y decisión argumentada. |
+| 4 — Planificar | Organizar tareas, tiempos y responsabilidades. | Backlog, tablero o plan verificable. |
+| 5 — Ejecutar | Construir, probar y mejorar. | Producto, iteraciones y pruebas. |
+| 6 — Comunicar | Presentar, evaluar y reflexionar. | Defensa, auto/coevaluación, reflexión y mejora. |
 
-La temporalización de cada hito debe reservar, como orientación, un 10–15 % para H, un 20–25 % para E, un 25–30 % para X y un 35–45 % para A. No son cuatro bloques rígidos: una sesión puede cerrar una fase y abrir la siguiente, pero ninguna puede quedar sin tiempo ni evidencia. Los cierres C1/C2 consolidan o recuperan fases; no sustituyen el ciclo del hito.
+Los cierres C1/C2 regulan o recuperan fases; no sustituyen el ciclo del hito.
 
 ### Trazabilidad por retos
 

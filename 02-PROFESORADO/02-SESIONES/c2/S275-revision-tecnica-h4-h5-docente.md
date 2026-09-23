@@ -6,7 +6,7 @@
 |---|---|
 | Hito | C2 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A/cierre |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Consolidar POO y extensibilidad. |
 | Evidencia mínima | Checklist C2. |
 

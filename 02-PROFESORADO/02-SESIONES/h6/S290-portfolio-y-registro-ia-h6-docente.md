@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Documentar decisiones, seguridad y uso de IA. |
 | Evidencia mínima | Portfolio H6 y registro IA. |
 

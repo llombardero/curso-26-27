@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | X |
+| Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Guardar datos en variables. |
 | Evidencia mínima | Código con variable usada correctamente. |
 

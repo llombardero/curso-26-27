@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H6 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Guardar recuerdos en disco. |
 | Evidencia mínima | `data/recuerdos.txt` generado con datos ficticios. |
 

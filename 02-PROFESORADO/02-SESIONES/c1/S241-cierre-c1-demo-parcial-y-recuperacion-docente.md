@@ -6,7 +6,7 @@
 |---|---|
 | Hito | C1 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | A |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Consolidar H1-H3 antes de POO. |
 | Evidencia mínima | Checklist C1 con RA pendientes y plan de mejora. |
 

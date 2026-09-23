@@ -6,7 +6,7 @@
 |---|---|
 | Hito | H5 |
 | Duración prevista | 45 minutos |
-| Momento HEXA del hito | E |
+| Fase HEXA del hito | Idear — proponer soluciones |
 | Resultado de hoy | Separar comandos como herramientas. |
 | Evidencia mínima | Tabla de herramientas y responsabilidad. |
 
