@@ -1,50 +1,18 @@
-# Vocabulario H1 — Primer asistente básico
+# Vocabulario H1 — apoyo opcional
 
-Alumno/a:
-Fecha:
+> No es un entregable independiente. Úsalo para preparar la defensa o recuperar conceptos.
 
----
+Para cada término, escribe una definición propia, un ejemplo mínimo y un error frecuente:
 
-Define con tus palabras los conceptos básicos de H1.
+- JDK, JVM e IDE;
+- clase y `main`;
+- instrucción, bloque y comentario;
+- tipo primitivo y `String`;
+- declaración, inicialización y asignación;
+- variable, constante y literal;
+- operador aritmético, relacional y lógico;
+- conversión y casting;
+- condición, `if/else` y `?:`;
+- compilación, ejecución y error.
 
-| Concepto | Definición con mis palabras | Ejemplo en mi código |
-|---|---|---|
-| Clase | | |
-| `Main` | | |
-| Método `main` | | |
-| Variable | | |
-| Constante | | |
-| `String` | | |
-| `int` | | |
-| `final` | | |
-| `Scanner` | | |
-| `System.in` | | |
-| `System.out.print` | | |
-| `System.out.println` | | |
-| Compilar | | |
-| Ejecutar | | |
-| README | | |
-
----
-
-## Concepto que mejor entiendo
-
-```text
-
-```
-
----
-
-## Concepto que necesito repasar
-
-```text
-
-```
-
----
-
-## Pregunta para clase
-
-```text
-
-```
+No copies definiciones. Si no puedes mostrar un ejemplo, todavía no dominas el término.

@@ -24,8 +24,8 @@ Los cierres C1/C2 regulan o recuperan fases; no sustituyen el ciclo del hito.
 | Hito | Reto | Expediente HEXA mínimo |
 |---|---|---|
 | H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
-| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
-| H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
+| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible, y demostrar el Tema 1 mediante producto y microprácticas. | reto, salida, estructura Java, datos, operaciones, conversiones, decisión elemental, programa, README, enlaces y defensa |
+| H2 | Integrar las decisiones básicas en un MiniJarvis interactivo con repetición, validación y depuración reproducible. | mapa de comandos, hipótesis de flujo, condiciones encadenadas/bucle, menú funcional, pruebas, depuración y defensa |
 | H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
 | H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
 | H5 | Resolver el crecimiento de comandos mediante refactorización segura, contratos simples y código extensible. | diagnóstico del problema, comparación de diseños, explicación de interfaz/Command, refactorización, herramienta nueva, revisión Git y defensa |
@@ -155,7 +155,7 @@ Las fichas Sxxx son sesiones ancla o checkpoints, no el recuento completo de per
 ## 4. Criterios de secuenciación
 
 1. H1 debe ser muy básico y coherente con el nivel inicial del alumnado.
-2. H2 introduce menús, decisiones, bucles, errores y depuración.
+2. H2 aplica y amplía las decisiones básicas de H1 mediante menús, bucles, validación, errores y depuración.
 3. H3 introduce memoria temporal y colecciones.
 4. H4 introduce diseño orientado a objetos de forma fuerte.
 5. H5 introduce extensibilidad, código limpio avanzado, refactorización, Git profesional y primeros patrones si procede.
@@ -279,7 +279,8 @@ Objetivo:
 
 - Crear una primera versión muy básica del asistente.
 - No introducir aún menú, bucles ni `switch`.
-- Centrar el aprendizaje en estructura de programa, variables, constantes, entrada/salida e IntelliJ.
+- Cubrir el Tema 1: entorno Java, estructura, tipos, variables, constantes, literales, operadores, conversiones, entrada/salida, comparaciones y decisión elemental.
+- Mantener pequeño el producto principal; usar microprácticas para los conceptos que no aporten valor dentro de `Main.java`.
 
 Producto:
 
@@ -295,12 +296,12 @@ Las diez fichas S206–S215 son checkpoints dentro de 24 periodos. Los periodos 
 | S207 | IntelliJ, proyecto y primera ejecución | 3 |
 | S208 | Estructura de `Main` | 2 |
 | S209 | Salida y mensajes | 2 |
-| S210 | Variables | 2 |
-| S211 | Constantes | 2 |
-| S212 | `Scanner` y lectura del nombre | 3 |
-| S213 | Integración, limpieza y pruebas | 3 |
-| S214 | GitHub, README y ejecución | 3 |
-| S215 | Portfolio, defensa, revisión y recuperación | 2 |
+| S210 | Variables, tipos y plan mínimo | 2 |
+| S211 | Constantes, literales, operaciones y actualización | 2 |
+| S212 | `Scanner`, conversiones y errores de conversión | 3 |
+| S213 | Comparaciones, lógica e `if/else` básico | 3 |
+| S214 | README, prueba cruzada, diario y Sites | 3 |
+| S215 | Defensa, recuperación y cierre del Tema 1 | 2 |
 | **Total** | | **24** |
 
 Entregables:
@@ -309,9 +310,10 @@ Entregables:
 |---|---|---|
 | Código Java básico | Equipo o individual según decidas | `src/Main.java` en GitHub. |
 | README de ejecución | Equipo | `README.md`. |
-| Captura o evidencia de ejecución | Equipo | Imagen o bloque de salida. |
-| Portfolio H1 | Individual | Markdown. |
-| Registro de IA si se usa | Individual | Markdown. |
+| Ejecución y pruebas | Equipo | Sección del README o enlaces profundos al código/prueba. |
+| Proceso individual e IA personal | Individual | Diario: una fila por checkpoint significativo. |
+| Proceso de equipo e IA colectiva | Equipo | Sheet Scrum. |
+| Selección y comunicación | Individual + equipo | Sites personal y de equipo sin copiar diario o Scrum. |
 | Defensa oral H1 | Individual y obligatoria | Explicación y modificación breve en directo. |
 
 RA/CE principales:
@@ -828,9 +830,9 @@ Programación:
 
 | RA | Papel en la evaluación | Evidencias principales |
 |---|---|---|
-| PR RA1 | Principal | H1: estructura básica Java, variables, constantes, entrada/salida. |
+| PR RA1 | Principal | H1: estructura Java, tipos, variables, constantes, operadores, conversiones, entrada/salida y decisión elemental del Tema 1. |
 | PR RA2 inicial | Inicial/refuerzo | H1-H2: programas simples y primeros objetos/librerías. |
-| PR RA3 | Principal | H2: menú, decisiones, bucles, errores y depuración. |
+| PR RA3 | Principal | H2: aplicación de decisiones a menú, bucles, validación, errores y depuración. |
 | PR RA6 | Principal | H3: memoria temporal y colecciones. |
 
 ### 2.ª evaluación

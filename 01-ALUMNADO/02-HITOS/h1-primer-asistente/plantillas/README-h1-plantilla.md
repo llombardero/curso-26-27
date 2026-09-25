@@ -1,180 +1,64 @@
-# H1 — Primer asistente por consola
+# MiniJarvis H1
 
-Equipo o alumno/a:
-Curso: 1.º DAW
-Módulo: Programación
-Fecha:
+## Qué hace
 
----
+Describe en tres líneas el producto principal. Debe seguir siendo pequeño: entrada, salida, datos y alguna operación útil; sin menú ni bucles.
 
-## 1. Qué hace este programa
+## Requisitos y ejecución
 
-Explica brevemente qué hace tu primera versión de MiniJarvis.
-
-Debe incluir, como mínimo:
-
-- saludo inicial;
-- petición del nombre del usuario;
-- uso del nombre en una respuesta;
-- uso de al menos una constante;
-- mensajes relacionados con el proyecto.
-
-Texto:
+- JDK utilizado:
+- IDE opcional:
+- Clase principal:
 
 ```text
-
+Pasos exactos para clonar/abrir/compilar/ejecutar
 ```
 
----
+## Ejemplo reproducible
 
-## 2. Qué NO incluye todavía
-
-Marca lo que NO debe aparecer en H1:
+### Caso normal
 
 ```text
-[ ] No tiene menú.
-[ ] No tiene bucles.
-[ ] No tiene switch.
-[ ] No tiene memoria.
-[ ] No tiene listas ni mapas.
-[ ] No tiene clases propias adicionales.
-[ ] No se conecta con una IA real.
+Entrada:
+Salida esperada:
+Salida obtenida:
 ```
 
-Explica por qué todavía no incluye esas funciones:
+### Caso alternativo o error básico
 
 ```text
-
+Entrada:
+Predicción:
+Resultado obtenido:
+Explicación:
 ```
 
----
+## Decisiones técnicas
 
-## 3. Cómo ejecutar desde IntelliJ
+| Decisión | Motivo | Enlace a código/commit |
+|---|---|---|
+| | | |
 
-1. Abrir el proyecto en IntelliJ.
-2. Comprobar que el SDK de Java está configurado.
-3. Abrir el archivo:
+## Microprácticas del Tema 1
 
-```text
-src/Main.java
-```
+No fuerces todo dentro del producto. Enlaza ejemplos mínimos que puedas ejecutar y explicar.
 
-4. Pulsar Run.
+| Concepto | Archivo o commit | Prueba o salida |
+|---|---|---|
+| Tipos, variables y asignación | | |
+| Constantes, literales y operadores | | |
+| Conversión y casting | | |
+| Comparaciones y booleanos | | |
+| `if/else` y `?:` básicos | | |
 
-Añade aquí cualquier indicación específica de tu proyecto:
+## Limitaciones deliberadas
 
-```text
+- Sin menú.
+- Sin bucle.
+- Sin credenciales, datos personales ni conexión con IA real.
 
-```
+## Versión evaluada
 
----
-
-## 4. Cómo ejecutar desde terminal, si procede
-
-```bash
-javac src/Main.java
-java -cp src Main
-```
-
-Si no lo has ejecutado desde terminal, escribe:
-
-```text
-No lo he ejecutado desde terminal en este hito.
-```
-
----
-
-## 5. Ejemplo de ejecución
-
-Copia una salida real o escribe una transcripción fiel.
-
-```text
-Hola, soy MiniJarvis.
-¿Cómo te llamas? Laura
-Encantada, Laura.
-Este curso vamos a crear un pequeño agente IA.
-```
-
-Tu ejemplo:
-
-```text
-
-```
-
----
-
-## 6. Estructura del proyecto
-
-```text
-h1-primer-asistente/
-├── README
-├── src/
-│   └── Main.java
-└── docs/
-    ├── portfolio-h1
-    ├── registro-ia
-    └── defensa-h1
-```
-
-Si tu estructura es distinta, indícala aquí:
-
-```text
-
-```
-
----
-
-## 7. Conceptos usados
-
-| Concepto | Dónde aparece en mi código |
-|---|---|
-| Clase `Main` | |
-| Método `main` | |
-| Variable para el nombre | |
-| Constante | |
-| `Scanner` | |
-| `System.out.print` o `println` | |
-
----
-
-## 8. Uso de IA
-
-He usado IA:
-
-```text
-Sí / No
-```
-
-Si la he usado, el registro está en:
-
-```text
-docs/registro-ia
-```
-
-Resumen breve:
-
-```text
-
-```
-
----
-
-## 9. Qué sé defender
-
-Indica qué partes puedes explicar en una defensa oral:
-
-```text
-[ ] Dónde empieza el programa.
-[ ] Qué variable guarda el nombre.
-[ ] Qué constante he usado.
-[ ] Qué hace Scanner.
-[ ] Diferencia entre print y println.
-[ ] Cómo ejecuto el programa.
-[ ] Por qué todavía no hay menú.
-```
-
-Añade comentarios si hace falta:
-
-```text
-
-```
+- Tag `h1-entrega` o commit:
+- Fecha:
+- Integrantes y aportación verificable:

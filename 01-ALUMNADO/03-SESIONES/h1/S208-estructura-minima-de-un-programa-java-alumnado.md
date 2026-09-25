@@ -1,68 +1,136 @@
-# Sesión 208 — Ficha de trabajo del alumnado
+# S208 — La estructura mínima de un programa Java
 
-## Estructura mínima de un programa Java
-
-| Hoy vas a… | Debe quedar… |
+| Dato | Valor |
 |---|---|
-| Entender clase `Main` y método `main`. | Código que compila con varios mensajes por pantalla. |
+| Hito | H1 — Primer MiniJarvis |
+| Duración | 2 periodos; esta ficha organiza el checkpoint de 45 minutos |
+| Fase HEXA | Investigar — aprender lo necesario |
+| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
 
-**Tiempo previsto:** 45 minutos.  
-**Hito:** H1.
+> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
 
-## Material que necesitas
+**Objetivo:** Leer, reconstruir y depurar la estructura mínima; reconocer aspectos léxicos y comentarios.
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
-- Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+**D1** · 00:00–00:05 · INVESTIGAR
 
-## Trabajo de hoy
+## ¿Qué líneas hacen algo visible?
 
-1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
-2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Reescribir un programa mínimo y señalar dónde empieza.**
-4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
-5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+public class Main {<br>
+public static void main(String\[\] args) {<br>
+System.out.println("Hola");<br>
+System.out.println("MiniJarvis arranca");<br>
+}<br>
+}
 
-## Registro breve
+**Qué haces:** Señala y justifica.
 
-**Qué intento conseguir:**  
-................................................................................
+**Qué debe quedar:** identifiquen println como instrucción visible.
 
-**Decisión o hipótesis que probaré:**  
-................................................................................
+**D2** · 00:05–00:12 · PÍLDORA DOCENTE 1/4
 
-**Prueba que he realizado y resultado:**  
-................................................................................
+## Clase, archivo y main
 
-**Bloqueo encontrado y siguiente paso:**  
-................................................................................
+**Qué haces:** Localiza cada parte en su proyecto.
 
-## Evidencia mínima antes de salir
+**Qué debe quedar:** puedan señalar ambas piezas.
 
-- [ ] He producido o actualizado: **Código que compila con varios mensajes por pantalla.**
-- [ ] Puedo señalar dónde está.
-- [ ] Puedo explicar una decisión tomada.
-- [ ] Puedo mostrar una prueba o comprobación.
-- [ ] He registrado mi aportación individual si el trabajo era de equipo.
+**D3** · 00:12–00:18 · PÍLDORA DOCENTE 2/4
+
+## Java es preciso con la escritura
+
+**Qué haces:** Busca los símbolos en el código.
+
+**Qué debe quedar:** puedan anticipar un error sencillo.
+
+**D4** · 00:18–00:23 · DIAGNÓSTICO
+
+## ¿Compilará? Caso 1
+
+public class Main {<br>
+public static void main(string\[\] args) {<br>
+System.out.println("Hola");<br>
+}<br>
+}
+
+**Qué haces:** Predice y corrige.
+
+**Qué debe quedar:** expliquen por qué falla.
+
+**D5** · 00:23–00:27 · DIAGNÓSTICO
+
+## ¿Compilará? Caso 2
+
+public class Main {<br>
+public static void main(String\[\] args) {<br>
+System.out.println("Hola")<br>
+}<br>
+}
+
+**Qué haces:** Predice y corrige.
+
+**Qué debe quedar:** formulen la regla.
+
+**D6** · 00:27–00:32 · PÍLDORA DOCENTE 3/4
+
+## Identificadores y palabras reservadas
+
+**Qué haces:** Propone nombres válidos/invalidos.
+
+**Qué debe quedar:** puedan justificar 3 casos.
+
+**D7** · 00:32–00:35 · PÍLDORA DOCENTE 4/4
+
+## Comentarios: explicar intención
+
+// Comentario de una línea<br>
+<br>
+/\* Comentario<br>
+de varias líneas \*/
+
+**Qué haces:** Escribe un comentario útil.
+
+**Qué debe quedar:** haya un comentario que aporte contexto.
+
+**D8** · 00:35–00:42 · ACTIVIDAD
+
+## Reconstruye el programa sin copiar
+
+1\. Crea la estructura mínima.<br>
+2. Añade 2–3 mensajes.<br>
+3. Añade un comentario útil.<br>
+4. Ejecuta.<br>
+5. Corrige el primer error que aparezca.
+
+**Qué haces:** Escribe y depura.
+
+**Qué debe quedar:** cada persona logre ejecución.
+
+**D9** · 00:42–00:45 · CIERRE
+
+## Microdefensa de sintaxis
+
+Señala:<br>
+• dónde empieza la ejecución<br>
+• una regla que rompería la compilación<br>
+• un comentario útil
+
+**Qué haces:** Defiende sobre su código.
+
+**Qué debe quedar:** quede diagnosticada la comprensión.
+
+**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
+
+## Evidencia única antes de salir
+
+- conserva el código o la prueba en el lugar indicado por la sesión;
+- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
+- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
 
 ## Seguridad y uso de IA
 
-- Trabaja únicamente con datos ficticios.
-- No escribas contraseñas, tokens, claves API ni datos personales.
-- Si utilizas IA en un uso permitido, registra qué pediste, qué recibiste, qué cambiaste y cómo lo comprobaste.
-- Los ejemplos de Laura solo se consultan después del intento propio.
+- Usa datos ficticios y no publiques credenciales ni información personal.
+- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
 
-## Si te bloqueas
+## Cierre individual
 
-1. Copia el mensaje exacto o describe qué observas.
-2. Indica qué esperabas que ocurriera.
-3. Reduce el problema a una prueba pequeña.
-4. Pide ayuda mostrando esos tres datos; no pidas directamente la solución completa.
-
-## Cierre
-
-Responde sin copiar: **Microdefensa: señalar en el código dónde empieza el programa.**
-
-Respuesta:  
-................................................................................
-
-La sesión está completada cuando la evidencia existe, se ha comprobado y puedes defenderla brevemente.
+**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**

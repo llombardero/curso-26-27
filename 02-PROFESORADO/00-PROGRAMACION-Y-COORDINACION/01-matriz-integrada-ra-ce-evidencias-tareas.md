@@ -40,8 +40,8 @@ Documentos anexos:
 | Hito | Periodo orientativo | Producto guía | Scrum/HEXA | Resultado esperado |
 |---|---|---|---|---|
 | H0 | Semana 1 | Diagnóstico + equipos provisionales + torre + tablero | H–E–X–A completo | Comprender Scrum, reconocer aportaciones y validar equipos de 3 o 4. |
-| H1 | Sept-oct | Primer asistente por consola | H–E–X–A completo | Programa Java muy básico con entrada, salida, variables y constantes; sin menú ni estructuras de control avanzadas. |
-| H2 | Oct-nov | Agente con decisiones y depuración | H–E–X–A completo | Comandos, menús, estructuras de control, pruebas manuales y depuración. |
+| H1 | Sept-oct | Primer asistente por consola | H–E–X–A completo | Producto Java pequeño con entrada, salida, datos y operaciones; conversiones y decisión básica demostradas también mediante microprácticas. |
+| H2 | Oct-nov | Agente interactivo y depuración | H–E–X–A completo | Las decisiones básicas se aplican a comandos, menú repetitivo, entradas no válidas, pruebas y depuración. |
 | H3 | Nov-dic | Agente con memoria en colecciones | H–E–X–A completo | Memoria temporal con arrays/listas/mapas y búsquedas. |
 | H4 | Ene-feb | Agente orientado a objetos | H–E–X–A completo | Modelo de clases: Agent, Message, Memory, Tool, Command. |
 | H5 | Feb-mar | Agente extensible con herramientas | H–E–X–A completo | Interfaces, composición/herencia, refactorización y GitHub colaborativo. |
@@ -69,13 +69,13 @@ Documentos anexos:
 
 | Elemento | Detalle |
 |---|---|
-| Producto | Programa Java muy básico de consola que recibe una entrada simple y muestra varias respuestas. No incluye aún menú, bucles ni `switch`. |
+| Producto | Programa Java pequeño de consola que recibe una entrada y muestra respuestas. No incluye aún menú, bucles ni `switch`; las conversiones, comparaciones y una decisión básica pueden demostrarse en microprácticas separadas. |
 | Programación | PR RA1; PR RA2 inicial. |
 | Prácticas integradas | IntelliJ, estructura del proyecto, relación fuente-ejecutable y configuración básica. |
-| Evidencias | Repositorio inicial, código Java sencillo, capturas de ejecución, README básico, primer portfolio individual. |
-| Tareas | Crear proyecto en IntelliJ; escribir programa básico; usar variables y constantes; leer entrada; mostrar mensajes; comentar solo si aporta claridad; subir a GitHub. |
+| Evidencias | Repositorio y README con ejecución; microprácticas del Tema 1; diario individual; Scrum; Sites como selección enlazada; defensa. |
+| Tareas | Crear proyecto en IntelliJ; escribir programa básico; usar tipos, variables, constantes, literales y operadores; leer y convertir entrada; probar comparaciones y `if/else` básico; documentar y defender sin duplicar evidencias. |
 | CE dominantes | PR RA1 a,b,c,d,e,f,i; PR RA2 b,i. |
-| Defensa | Explicar estructura del programa, variables usadas, flujo de ejecución y cómo se ejecuta desde IntelliJ. |
+| Defensa | Explicar estructura, datos, operaciones, conversiones y una decisión básica; distinguir producto y microprácticas; ejecutar y modificar desde IntelliJ. |
 | IA | Verde: pedir explicación de sintaxis. Amarillo: pedir ejemplos, registrarlos y adaptarlos. Rojo: entregar programa completo sin entender. |
 
 ### H2. Agente con decisiones y depuración

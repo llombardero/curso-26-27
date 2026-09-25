@@ -50,9 +50,9 @@ Criterio de seguridad evaluativa:
 
 | RA | Tipo | Hitos principales | Producto/evidencia principal |
 |---|---|---|---|
-| RA1 | Imprescindible | H1 | Primer asistente Java por consola: estructura, variables, constantes, comentarios útiles y uso de IntelliJ. |
+| RA1 | Imprescindible | H1 | Primer asistente Java por consola: estructura, tipos, variables, constantes, literales, operadores, conversiones, comentarios y uso de IntelliJ. |
 | RA2 | Imprescindible | H1-H2 | Programas simples, objetos predefinidos básicos, métodos/librerías introductorias y compilación/ejecución. |
-| RA3 | Imprescindible | H2 | Menús, decisiones, bucles, excepciones, depuración, aserciones y documentación. |
+| RA3 | Imprescindible | H2 | Aplicación de decisiones a menús, bucles, excepciones, depuración, aserciones y documentación; H1 aporta solo una introducción no duplicada. |
 | RA4 | Imprescindible | H4 | Diseño OO del agente: clases, atributos, métodos, constructores, visibilidad y objetos. |
 | RA5 | Imprescindible | H6 | Entrada/salida, ficheros, logs, base de conocimiento y posible interfaz simple. |
 | RA6 | Imprescindible | H3 | Memoria temporal con arrays, listas, mapas, iteradores, búsquedas y tratamiento de datos. |
@@ -74,9 +74,9 @@ Esta correspondencia se tendrá en cuenta al diseñar hitos, tareas, entregables
 
 | Tema/UD 2025/2026 | Nombre | RA asociado | Uso en el nuevo diseño |
 |---|---|---|---|
-| Tema 1 / UD1 | Aspectos básicos de la programación | RA1 | Base de H1: estructura, variables, constantes, entrada/salida básica e IntelliJ. |
+| Tema 1 / UD1 | Aspectos básicos de la programación | RA1 | Base de H1: estructura, datos, operadores, conversiones, entrada/salida, decisión elemental e IntelliJ. |
 | Tema 2 / UD2 | La programación orientada a objetos | RA2 | Base inicial H1-H2 y preparación conceptual para H4. |
-| Tema 3 / UD3 | La programación estructurada | RA3 | Base de H2: decisiones, bucles, errores y depuración. |
+| Tema 3 / UD3 | La programación estructurada | RA3 | Base de H2: integrar decisiones en menús y bucles, validar entradas, tratar errores y depurar. |
 | Tema 4 / UD4 | Estructuras de datos | RA6 | Base de H3: memoria temporal, listas, mapas, recorridos y búsquedas. |
 | Tema 5 / UD5 | Programación básica de clases | RA4 | Base de H4: clases, atributos, métodos, constructores y visibilidad. |
 | Tema 6 / UD6 | Programación avanzada de clases | RA7 | Base de H5: herencia, interfaces, composición, extensibilidad y primeros patrones si procede. |
@@ -100,8 +100,9 @@ Nota didáctica:
 | Código Java funcional | Evidencia técnica principal del RA correspondiente. |
 | Repositorio GitHub | Historial, autoría, evolución, colaboración y trazabilidad. |
 | README técnico | Explicación de instalación, ejecución, decisiones y limitaciones. |
-| Portfolio individual | Reflexión, comprensión, incidencias, aprendizajes y decisiones. |
-| Registro de uso de IA | Trazabilidad de Gemini/Jarvis u otras herramientas autorizadas. |
+| Diario individual | Proceso, prueba, bloqueo, siguiente paso y uso/validación personal de IA. |
+| Sites personal y de equipo | Selección reflexiva y comunicación mediante enlaces profundos; no copia del diario o Scrum. |
+| Registro de uso de IA | Integrado en diario o Scrum; solo se amplía cuando el uso es complejo. |
 | Checklist de funcionamiento | Validación de requisitos mínimos del hito. |
 | Pruebas manuales o unitarias | Validación de comportamiento y detección de errores. |
 | Defensa oral individual | Comprobación de comprensión, autoría y capacidad de modificación. |
@@ -126,7 +127,7 @@ Hito principal:
 
 Producto asociado:
 
-- Programa Java inicial que recibe una entrada simple y muestra mensajes básicos por consola, sin menú ni estructuras de control avanzadas.
+- Programa Java inicial que recibe una entrada y muestra mensajes por consola, sin menú ni bucles. Las conversiones, comparaciones y una decisión elemental pueden demostrarse en microprácticas separadas.
 
 ### 5.1. Criterios de evaluación y evidencias
 
@@ -146,11 +147,12 @@ Producto asociado:
 
 - Crear el proyecto inicial en IntelliJ.
 - Implementar el primer asistente por consola.
-- Usar variables, constantes, literales y operadores.
-- Ejecutar y capturar pruebas básicas.
+- Usar tipos, variables, constantes, literales y operadores.
+- Probar conversiones, comparaciones, booleanos y un `if/else` elemental sin forzar todos esos conceptos dentro del producto principal.
+- Ejecutar y conservar pruebas básicas en el README o mediante enlaces profundos.
 - Subir el proyecto a GitHub.
 - Documentar en README cómo se ejecuta.
-- Explicar en portfolio qué partes forman un programa Java.
+- Seleccionar en el Site personal una evidencia profunda y explicarla sin copiar el diario.
 
 ### 5.3. Defensa mínima
 

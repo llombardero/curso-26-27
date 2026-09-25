@@ -4,7 +4,7 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Entender la diferencia entre programa lineal e interactivo. | Tabla H1 frente a H2. |
+| Entender cómo H2 integra y repite las decisiones básicas practicadas en H1. | Tabla H1 frente a H2. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H2.
@@ -18,7 +18,7 @@
 
 1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
 2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Comparar salida H1 con comportamiento esperado H2.**
+3. Realiza esta tarea: **Comparar el producto lineal H1 —con decisiones aisladas en microprácticas— con el menú repetitivo H2.**
 4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
 5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
 
@@ -60,7 +60,7 @@
 
 ## Cierre
 
-Responde sin copiar: **Pregunta: ¿qué necesitamos para que el programa no termine?**
+Responde sin copiar: **Pregunta: ¿qué aporta el bucle y cómo reutiliza las decisiones que ya conoces?**
 
 Respuesta:  
 ................................................................................

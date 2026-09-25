@@ -1,4 +1,9 @@
-
 # Artefactos ZIP generados
 Minijarvis-profesorado.zip
 Minijarvis-presentaciones-sesiones.zip
+
+# Entornos y cachés Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/

@@ -121,17 +121,18 @@ No penalizar una necesidad de apoyo ni premiar saber programar de antemano. Si f
 
 RA/CE principales:
 
-- Programación PR RA1.
-- Programación PR RA2 inicial.
-- Prácticas integradas: IntelliJ, estructura del proyecto y ejecución reproducible.
+- PR RA1.
+- PR RA2 inicial.
+- La decisión elemental de H1 es evidencia introductoria del Tema 1; la evaluación fuerte del control de flujo permanece en PR RA3/H2.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
-| Programa Java básico | Clase `Main` clara, entrada/salida correcta, variables y constantes bien usadas. | Programa ejecutable con entrada/salida y variables. | Programa muy incompleto o con errores menores. | No compila o no responde al hito. |
-| Ajuste al nivel | Mantiene la solución simple, sin menú ni complejidad prematura. | Alguna ampliación menor pero defendible. | Introduce código no trabajado que apenas entiende. | Entrega código avanzado no defendible o generado sin comprensión. |
-| IntelliJ y proyecto | Proyecto configurado, ejecutable y explicado. | Proyecto se abre y ejecuta con alguna ayuda. | Configuración confusa. | No puede ejecutarse en el entorno. |
-| README | Explica qué hace, cómo ejecutar y qué se entrega. | README suficiente. | README incompleto. | Sin README útil. |
-| Defensa | Explica `main`, variable, constante, `Scanner` y ejecución. | Explica lo principal. | Dudas importantes en conceptos básicos. | No puede explicar el código. |
+| Producto mínimo | `Main` claro, ejecutable y simple; entrada/salida, datos, constante y operación aportan valor. | Producto ejecutable con los requisitos principales. | Producto parcial o frágil. | No compila o no responde al hito. |
+| Tema 1 | Demuestra estructura, tipos, variables, constantes, literales, operadores, conversiones, comparaciones, booleanos y decisión básica mediante producto o microprácticas. | Demuestra los núcleos con lagunas menores. | Evidencias incompletas o poco explicadas. | No demuestra los fundamentos. |
+| Predicción y pruebas | Predice, prueba casos normales/alternativos y explica errores básicos. | Pruebas suficientes y reproducibles. | Pruebas superficiales. | No comprueba el comportamiento. |
+| Ajuste al nivel | Distingue producto y microprácticas; evita menú, bucles y complejidad prematura. | Alguna ampliación menor pero defendible. | Integra código innecesario que apenas entiende. | Entrega código avanzado no defendible. |
+| Trazabilidad sin duplicidades | Repo, README, diario, Scrum y Sites enlazan evidencias profundas sin repetir contenido. | Evidencias localizables con alguna repetición menor. | Evidencias dispersas o redundantes. | No permiten seguir el aprendizaje. |
+| Defensa | Ejecuta, explica datos/operaciones/conversiones/decisión y realiza una modificación. | Explica y modifica lo principal. | Dudas importantes o modificación con mucha ayuda. | No puede explicar lo entregado. |
 
 ---
 

@@ -1,67 +1,160 @@
-# Sesión 213 — Ficha de trabajo del alumnado
+# S213 — Comparaciones, lógica y decisiones
 
-## Limpieza, nombres claros y simplicidad
-
-| Hoy vas a… | Debe quedar… |
+| Dato | Valor |
 |---|---|
-| Mejorar legibilidad sin añadir complejidad. | Código H1 limpio, simple y ejecutable. |
+| Hito | H1 — Primer MiniJarvis |
+| Duración | 3 periodos; esta ficha organiza el checkpoint de 45 minutos |
+| Fase HEXA | Ejecutar — crear |
+| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
 
-**Tiempo previsto:** 45 minutos.  
-**Hito:** H1.
+> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
 
-## Material que necesitas
+**Objetivo:** Construir booleanos, combinarlos y usarlos en if/else; reconocer anidamiento y asignación condicional.
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
+**D1** · 00:00–00:04 · EJECUTAR
 
-## Trabajo de hoy
+## ¿Qué devuelve 5 > 3?
 
-1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
-2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Revisar el código H1 con una checklist sencilla.**
-4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
-5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+No devuelve 5 ni 3.<br>
+Devuelve una respuesta lógica.
 
-## Registro breve
+**Qué haces:** Predice.
 
-**Qué intento conseguir:**  
-................................................................................
+**Qué debe quedar:** respondan true/false.
 
-**Decisión o hipótesis que probaré:**  
-................................................................................
+**D2** · 00:04–00:10 · PÍLDORA DOCENTE 1/6
 
-**Prueba que he realizado y resultado:**  
-................................................................................
+## Comparar produce boolean
 
-**Bloqueo encontrado y siguiente paso:**  
-................................................................................
+**Qué haces:** Predice 4 comparaciones.
 
-## Evidencia mínima antes de salir
+**Qué debe quedar:** puedan escribir una comparación simple.
 
-- [ ] He producido o actualizado: **Código H1 limpio, simple y ejecutable.**
-- [ ] Puedo señalar dónde está.
-- [ ] Puedo explicar una decisión tomada.
-- [ ] Puedo mostrar una prueba o comprobación.
-- [ ] He registrado mi aportación individual si el trabajo era de equipo.
+**D3** · 00:10–00:14 · MICROPRÁCTICA
+
+## Guarda el resultado de comparar
+
+int hours = 5;<br>
+boolean enough = hours >= 4;<br>
+System.out.println(enough);
+
+**Qué haces:** Cambia hours y predice.
+
+**Qué debe quedar:** ambos valores hayan aparecido.
+
+**D4** · 00:14–00:20 · PÍLDORA DOCENTE 2/6
+
+## AND, OR, NOT
+
+**Qué haces:** Resuelve 3 casos.
+
+**Qué debe quedar:** puedan verbalizar cada operador.
+
+**D5** · 00:20–00:23 · MICROPRÁCTICA
+
+## Combina condiciones
+
+boolean canStart = hasName && hasGoal;<br>
+boolean needsHelp = !canStart || hasError;
+
+**Qué haces:** Traduce código↔lenguaje.
+
+**Qué debe quedar:** puedan leer una expresión.
+
+**D6** · 00:23–00:26 · PÍLDORA DOCENTE 3/6
+
+## Del boolean a una decisión
+
+Una condición es algo que produce true o false.<br>
+<br>
+if (...) usa ese resultado para decidir qué bloque ejecutar.
+
+**Qué haces:** Propone una condición posible.
+
+**Qué debe quedar:** entiendan que if necesita boolean.
+
+**D7** · 00:26–00:32 · PÍLDORA DOCENTE 4/6
+
+## if / else: dos caminos
+
+if (hours >= 4) {<br>
+System.out.println("Objetivo alcanzado");<br>
+} else {<br>
+System.out.println("Objetivo pendiente");<br>
+}
+
+**Qué haces:** Predice ambas rutas.
+
+**Qué debe quedar:** puedan señalar qué rama se ejecuta.
+
+**D8** · 00:32–00:35 · PRUEBA
+
+## Una condición, dos casos
+
+Caso A: hours = 5<br>
+Caso B: hours = 2<br>
+<br>
+Escribe salida esperada antes de ejecutar.
+
+**Qué haces:** Prueba ambas ramas.
+
+**Qué debe quedar:** ambas ramas estén verificadas.
+
+**D9** · 00:35–00:38 · PÍLDORA DOCENTE 5/6
+
+## Anidamiento: reconocer la idea
+
+**Qué haces:** Explica qué condición se mira primero.
+
+**Qué debe quedar:** puedan leer el esquema.
+
+**D10** · 00:38–00:40 · PÍLDORA DOCENTE 6/6
+
+## Asignación condicional ?:
+
+String message = hours >= 4<br>
+? "Objetivo alcanzado"<br>
+: "Objetivo pendiente";
+
+**Qué haces:** Identifica condición, valor true y valor false.
+
+**Qué debe quedar:** puedan señalar tres partes.
+
+**D11** · 00:40–00:43 · ACTIVIDAD
+
+## Micropráctica defendible
+
+Dato → comparación → boolean → if/else → salida<br>
+<br>
+Prueba una entrada que haga true y otra que haga false.
+
+**Qué haces:** Programa y prueba.
+
+**Qué debe quedar:** dos casos funcionen.
+
+**D12** · 00:43–00:45 · CIERRE
+
+## Revisa una línea que ahora entiendes mejor
+
+Elige una mejora de nombres, comentario o condición y regístrala.
+
+**Qué haces:** Mejora y registra.
+
+**Qué debe quedar:** quede una mejora concreta.
+
+**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
+
+## Evidencia única antes de salir
+
+- conserva el código o la prueba en el lugar indicado por la sesión;
+- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
+- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
 
 ## Seguridad y uso de IA
 
-- Trabaja únicamente con datos ficticios.
-- No escribas contraseñas, tokens, claves API ni datos personales.
-- Si utilizas IA en un uso permitido, registra qué pediste, qué recibiste, qué cambiaste y cómo lo comprobaste.
-- Los ejemplos de Laura solo se consultan después del intento propio.
+- Usa datos ficticios y no publiques credenciales ni información personal.
+- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
 
-## Si te bloqueas
+## Cierre individual
 
-1. Copia el mensaje exacto o describe qué observas.
-2. Indica qué esperabas que ocurriera.
-3. Reduce el problema a una prueba pequeña.
-4. Pide ayuda mostrando esos tres datos; no pidas directamente la solución completa.
-
-## Cierre
-
-Responde sin copiar: **Pregunta: ¿qué parte sobra o no sabes explicar?**
-
-Respuesta:  
-................................................................................
-
-La sesión está completada cuando la evidencia existe, se ha comprobado y puedes defenderla brevemente.
+**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**

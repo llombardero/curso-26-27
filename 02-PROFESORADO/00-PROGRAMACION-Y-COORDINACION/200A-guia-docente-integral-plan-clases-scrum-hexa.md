@@ -24,7 +24,7 @@ Los cierres C1/C2 regulan o recuperan fases; no sustituyen el ciclo del hito.
 | Hito | Reto | Expediente HEXA mínimo |
 |---|---|---|
 | H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
-| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
+| H1 | Construir el primer MiniJarvis Java por consola y demostrar el Tema 1 con un producto pequeño y microprácticas defendibles. | repositorio, README con pruebas, diario, Scrum, enlaces a Sites y defensa |
 | H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
 | H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
 | H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
@@ -63,8 +63,8 @@ La estructura actual es coherente y progresiva:
 | Hito | Foco principal | Sentido didáctico |
 |---|---|---|
 | H0 | Scrum y torre de papel | Aprender la dinámica de trabajo antes de programar. |
-| H1 | Primer asistente básico | Estructura mínima de Java, entrada/salida, variables y constantes. |
-| H2 | Decisiones y depuración | Menús, bucles, condicionales, pruebas manuales y depuración. |
+| H1 | Primer MiniJarvis | Entorno Java, estructura, datos, operaciones, entrada, conversiones y decisión básica. |
+| H2 | Decisiones y depuración | Integración de decisiones en menú, bucle, comandos, pruebas y depuración. |
 | H3 | Memoria en colecciones | Listas/mapas, memoria temporal y casos límite. |
 | C1 | Cierre 1.ª evaluación | Consolidación, defensa, recuperación y portfolio. |
 | H4 | Agente orientado a objetos | Clases, objetos, responsabilidades, encapsulación y UML. |
@@ -268,7 +268,7 @@ H1 ocupa 24 periodos de Programación. Las diez fichas S206–S215 son checkpoin
 Producto:
 
 ```text
-MiniJarvis H1: programa Java básico que pide el nombre y muestra mensajes iniciales.
+MiniJarvis H1: programa Java pequeño y ejecutable, acompañado de microprácticas que demuestran el Tema 1.
 ```
 
 Cuándo explicar los elementos clave:
@@ -278,14 +278,16 @@ Cuándo explicar los elementos clave:
 | Inicio | Qué es un programa Java | Mostrar `Main` como punto de entrada. |
 | Antes de codificar | Clase `Main` y método `main` | Dibujar dónde empieza la ejecución. |
 | Primer código | `System.out.println` | Ejecutar mensajes simples. |
-| Después | Variables y constantes | Diferenciar dato que cambia y dato fijo. |
-| Cuando haga falta entrada | `Scanner` | Leer nombre y usarlo en una respuesta. |
-| Cierre | README y ejecución | Explicar cómo reproducir el programa. |
+| Después | Variables, tipos y constantes | Diferenciar dato que cambia, dato fijo y representación adecuada. |
+| Práctica | Literales, operaciones y precedencia | Predecir antes de ejecutar. |
+| Entrada | `Scanner`, conversiones y casting | Leer texto, convertirlo y comprender un error de conversión. |
+| Decisión elemental | comparaciones, booleanos e `if/else` | Probar dos ramas en una micropráctica. |
+| Cierre | README, pruebas, Sites y defensa | Reproducir, enlazar y explicar el trabajo. |
 
 Restricción clave:
 
 ```text
-No introducir menú, bucles, listas, clases propias, ficheros ni IA real.
+No introducir menú, bucle principal, colecciones, clases propias adicionales, ficheros, persistencia ni IA real. Una decisión básica puede aparecer en una micropráctica; su integración pertenece a H2.
 ```
 
 Secuencia de clases:
@@ -294,11 +296,12 @@ Secuencia de clases:
 |---|---|
 | Presentar H1 | Lista de lo que entra y no entra. |
 | IntelliJ | Proyecto creado y primer mensaje ejecutado. |
-| Variables y constantes | Mensajes que usan datos. |
-| Entrada por teclado | Nombre leído con `Scanner`. |
-| Limpieza | Código simple, nombres claros y sin complejidad prematura. |
-| Práctica técnica | README, estructura del proyecto y evidencia de ejecución. |
-| Defensa | Explicar `main`, variable, constante, `Scanner` y ejecución. |
+| Estructura y salida | Programa mínimo reconstruido y salida elegida. |
+| Variables, tipos y operaciones | Predicciones y microprácticas comprobadas. |
+| Entrada y conversiones | Lectura, conversión y error explicado. |
+| Comparaciones y decisión | Booleanos y dos ramas probadas. |
+| Comunicación | README con ejecución, pruebas y enlaces profundos. |
+| Defensa | Explicar producto y microprácticas, ejecutar y modificar. |
 
 Intervención docente:
 
@@ -324,10 +327,10 @@ Cuándo explicar los elementos clave:
 
 | Momento | Concepto | Forma de explicación |
 |---|---|---|
-| Inicio | Diferencia entre programa lineal y programa interactivo | Comparar H1 con un menú que se repite. |
+| Inicio | Diferencia entre una decisión aislada y un programa interactivo | Comparar la micropráctica H1 con un menú que se repite. |
 | Antes de programar | Tabla de comandos | Diseñar `ayuda`, `saluda`, `estado`, `salir` y `otro`. |
 | Primera implementación | Bucle `while` | Preguntar cómo evitar que el programa termine. |
-| Después | `if/else` o `switch` | Elegir respuesta según comando. |
+| Después | `if/else` encadenado o `switch` | Aplicar decisiones ya conocidas para elegir respuesta según comando. |
 | Al aparecer errores | `.equals`, `trim`, `toLowerCase` | Resolver fallos reales de entrada. |
 | Práctica técnica | Casos de prueba | Definir esperado/obtenido. |
 | Práctica técnica | Breakpoints | Observar `command`, `running` y `userName`. |

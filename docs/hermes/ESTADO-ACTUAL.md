@@ -5,70 +5,77 @@
 
 ## Última actualización
 
-2026-09-25 02:47 CEST. Estado comprobado en el árbol de trabajo y en Git.
+2026-09-25 17:26 CEST. Estado comprobado en el árbol de trabajo y Git.
 
-## Rama activa
+## Rama y raíz
 
-`refactor/hitos-v3`
-
-## Raíz del proyecto
-
-`/mnt/compartido/Programación-26-27/Minijarvis`
-
-`pwd` y `git rev-parse --show-toplevel` coinciden con esta ruta.
+- Rama activa: `refactor/hitos-v3`.
+- Raíz: `/mnt/compartido/Programación-26-27/Minijarvis`.
+- `HEAD`: `c738289` (`Actualizado estado actual y sincronizado github Itos-v3`).
+- `HEAD` coincide con `origin/refactor/hitos-v3`; no hay commits locales pendientes de publicación.
+- No hay cambios preparados en el índice.
 
 ## Objetivo actual
 
-Preparar y validar la transición del modelo de hitos hacia la versión 3 tomando `H1-Temp` como referencia, manteniendo únicamente H0, H1 y H2 como foco de la rama de refactorización.
+Organizar para su consolidación los cambios ya revisados de la migración H0-H2 al modelo de hitos v3, sin mezclar fuentes, documentación técnica y artefactos generados.
 
 ## Decisiones vigentes
 
-- MiniJarvis es, en esta rama, un proyecto exclusivo del módulo de Programación de 1.º DAW.
-- H1-Temp contiene la referencia de la versión 3 del modelo de hitos.
-- Antes de adaptar H0 y H2 hay que deducir qué caracteriza realmente a H1 v3.
-- Antes de modificar H0, H1 o H2 hay que comparar H1 actual con `H1-Temp` y presentar un plan si se proponen cambios estructurales.
-- La auditoría de evidencias del alumnado en H0-H2 es prioritaria y debe favorecer la evidencia única sin perder aprendizaje, trazabilidad ni evaluación.
-- Toda trazabilidad curricular debe limitarse a RA y criterios de Programación.
-- No deben eliminarse ni fusionarse evidencias sin análisis y autorización.
-- Debe preservarse el trabajo manual y modificarse la fuente o el generador antes que un artefacto generado.
-- Git y GitHub deben utilizarse de forma conservadora, evitando operaciones destructivas.
-- El contexto de Hermes debe gestionarse mediante sesiones acotadas, compresión preventiva y persistencia en archivos.
+- MiniJarvis es un proyecto exclusivo del módulo de Programación de 1.º DAW.
+- H1-Temp conserva la referencia de H1 v3; la tabla S206-S215 y los 24 periodos son la temporalización canónica actual.
+- H1 introduce los fundamentos del Tema 1 y una decisión elemental mediante microprácticas; H2 aplica y encadena decisiones en menús, bucles, validaciones, pruebas y depuración.
+- El producto principal de H1 permanece pequeño; no se premia la complejidad no solicitada.
+- La evidencia de proceso se registra una sola vez: diario individual para el proceso personal, Scrum para el trabajo colectivo y Sites para seleccionar y explicar evidencias enlazadas. No existe un portfolio paralelo en H1.
+- Los PDF temáticos permanecen en el área docente y se publican progresivamente. No se anticipan todos en el paquete HTML del alumnado.
+- Toda trazabilidad curricular se limita a RA y criterios de Programación.
+- Las fuentes se modifican antes que sus derivados; el HTML, las presentaciones y los ZIP se regeneran y verifican después.
 
 ## Trabajo completado relevante
 
-- La referencia de H1 v3 está conservada en `H1-Temp`; Git registra siete archivos en ese directorio.
-- El commit actual es `95dd434` (`archivo: mantiene las referencias a H1 v3 antes de refactorizar`).
-- `.hermes.md` y los cuatro documentos de `docs/hermes/` están presentes en el árbol de trabajo.
-- Se comprobó el tamaño del prompt compacto mediante `minijarvis prompt-size`.
-- Se verificaron la raíz, la rama, el estado del árbol de trabajo y los cinco commits más recientes.
+- Se auditó la conservación de las dos guías H1 condensadas frente a `HEAD`, `H1-Temp` y S206-S215. El núcleo se conserva; el desarrollo detallado está trasladado a las sesiones.
+- Se recuperaron referencias operativas que habían quedado debilitadas: trazabilidad curricular, fuente integral del ejemplo, checklist, preguntas de defensa, apoyos, uso de IA, recuperación y ampliación.
+- S212 usa `java.util.Scanner`, una instancia reutilizable y cierre explícito; se sincronizaron la ficha del alumnado, la guía docente, el HTML y la presentación.
+- Se revisaron los dos modelos visuales de Google Sites en escritorio y móvil: cobertura OCR 0,89-0,95, sin texto en los bordes y con contrastes mínimos superiores a 5:1.
+- Las diez presentaciones H1 separan ahora la proyección y las notas: la secuencia, los tiempos y las claves docentes quedan en las notas del título; las diapositivas visibles conservan objetivos, ejemplos, actividad, evidencia, seguridad y cierre para el alumnado.
+- Las diez presentaciones H1 se regeneraron con 9 diapositivas cada una: 90 en total, cero elementos fuera del lienzo y cobertura OCR mínima de 0,67.
+- Los siete HTML regenerados de H3, H5 y HF reproducen exactamente sus fuentes canónicas actuales; se mantienen como sincronización derivada, no como ampliación curricular.
+- Se añadió `generar_paquete_moodle.py` con modo `--check`, ZIP determinista y sincronización de recursos del alumnado, tareas Moodle y copias de rúbricas.
+- Se regeneraron `01-ALUMNADO-HTML/`, `05-PAQUETE-MOODLE/`, `Minijarvis-paquete-moodle.zip`, los ZIP del alumnado, el ZIP local de presentaciones y `MANIFIESTO-ARCHIVOS.md`.
+
+## Verificación vigente
+
+- Suite canónica: `30 passed in 2.35s`.
+- Validación de las 106 presentaciones: todas en `PASS`; permanecen advertencias informativas de seguridad en algunas sesiones heredadas.
+- Validación ad hoc de separación y coherencia H1: 10 presentaciones, 90 diapositivas, 781 líneas de notas sincronizadas y cero marcadores docentes visibles.
+- Validación renderizada H1: 10 presentaciones, 90 diapositivas, sin desbordes geométricos, cobertura OCR mínima de 0,67 y media de 0,88.
+- Validación renderizada de Sites: escritorio y móvil sin recortes detectados; contrastes WCAG comprobados.
+- `generar_paquete_moodle.py --check`: `PASS`, 261 archivos sincronizados.
+- Prueba de integridad de los cuatro ZIP regenerados: correcta.
+- `git diff --check`: correcto.
 
 ## Estado actual del repositorio
 
-- `HEAD` está en `95dd434`; también apuntan a ese commit `archive/pre-hitos-v3` y `origin/archive/pre-hitos-v3`.
-- El índice está limpio: no hay cambios preparados para commit.
-- El árbol de trabajo contiene 112 archivos modificados, 3 eliminados y 4 entradas sin seguimiento.
-- Entre las entradas sin seguimiento están `.hermes.md`, `CONTINUIDAD_MINIJARVIS.md`, `docs/` y la nueva presentación inicial de Programación.
-- Los cambios locales afectan a materiales de alumnado y profesorado, ejemplos privados, generadores, pruebas y artefactos binarios.
-- `git diff --check` no detecta errores de espacios en los cambios rastreados actuales.
+- `git status --porcelain` muestra 216 entradas: 200 modificadas, 8 eliminadas y 8 entradas sin seguimiento.
+- El diff rastreado comprende 208 archivos.
+- No hay cambios preparados en el índice.
+- Los bloqueos temporales de LibreOffice quedan excluidos de cualquier commit; no aparece ninguno en el estado actual.
 
-## Tareas pendientes
+## Partición propuesta, todavía sin commits
 
-1. Analizar H1 actual frente a `H1-Temp` y determinar qué define el modelo v3.
-2. Identificar las consecuencias sobre metodología, secuencia, productos, evidencias, evaluación, Scrum, HEXA, IA, sesiones, presentaciones y entregables.
-3. Realizar la auditoría de evidencias de H0, H1 y H2.
-4. Proponer una simplificación del sistema de evidencias sin eliminar ni fusionar elementos todavía.
-5. Definir el plan de adaptación de H0 y H2 al modelo v3.
-6. Clasificar los cambios locales existentes como trabajo manual, fuente, generado, sustitución, eliminación o temporal antes de consolidarlos.
-7. Realizar cambios estructurales únicamente después de presentar el plan y recibir autorización.
+1. Fuentes pedagógicas H0-H2 y evidencia única: guías, fichas, sesiones, rúbricas, calendario y frontera H1-H2.
+2. Modelos de Google Sites y documentación del ecosistema digital.
+3. Generadores, dependencias, pruebas y documentación técnica.
+4. HTML generado del alumnado y copias sincronizadas del staging Moodle.
+5. Presentaciones H1 y manifiesto actualizado.
+6. ZIP públicos y paquete Moodle reproducible.
+7. Documentación de continuidad y seguimiento.
 
-## Riesgos o bloqueos
+## Riesgos o pendientes
 
-- El árbol de trabajo tiene muchos cambios previos sin preparar; no deben mezclarse, descartarse ni atribuirse sin revisar su origen y función.
-- Hay tres eliminaciones, incluida documentación de Entornos y una presentación, que deben validarse como retiradas intencionadas antes de consolidarlas.
-- Existen cambios fuera del foco H0-H2 y en scripts generadores; ampliar el refactor sin delimitar alcance aumentaría el riesgo de cambios colaterales.
-- `docs/` y `.hermes.md` aún no están bajo seguimiento en esta rama.
-- No hay un bloqueo técnico para el análisis de lectura, pero cualquier cambio estructural está bloqueado hasta disponer de diagnóstico, plan y autorización.
+- El árbol es amplio y mezcla fuentes, binarios y derivados; debe revisarse y prepararse por bloques, nunca con un `git add .` global.
+- Los cambios derivados de H3, H5 y HF son reproducibles desde fuentes limpias, pero conviene aislarlos en el bloque de artefactos generados.
+- Falta convertir la partición propuesta en una secuencia de staging y commits; esta sesión no tiene autorización para crear commits.
 
 ## Siguiente acción concreta
 
-Realizar, sin modificar archivos, una comparación estructurada entre H1 actual y las fuentes de `H1-Temp`. El resultado debe identificar los rasgos de la versión 3, sus dependencias y los archivos de H0-H2 potencialmente afectados, y terminar con una propuesta de plan para aprobación.
+Revisar la partición propuesta y, cuando exista autorización expresa, preparar cada bloque por separado, comprobar su diff y ejecutar las verificaciones focalizadas antes de crear el commit correspondiente.

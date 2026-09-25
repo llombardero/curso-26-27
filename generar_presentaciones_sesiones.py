@@ -509,6 +509,8 @@ def chunk_items(items: list[str], max_items: int, max_chars: int) -> list[list[s
         size += len(item)
     if current:
         chunks.append(current)
+    if len(chunks) > 1 and len(chunks[-1]) == 1 and len(chunks[-2]) > 2:
+        chunks[-1].insert(0, chunks[-2].pop())
     return chunks
 
 def timeline_display_item(block: TimelineBlock) -> str:
@@ -585,6 +587,12 @@ def projectable_activity_items(session: Session) -> list[str]:
     return specific
 
 def projectable_checklist_items(session: Session) -> list[str]:
+    if session.folder == "h1":
+        student = session.student_source.read_text(encoding="utf-8")
+        evidence = list_items(section(student, r"Evidencia única antes de salir"))
+        if evidence:
+            return evidence
+
     corpus = " ".join([session.topic, session.evidence, *session.activity]).lower()
     if "breakpoint" in corpus and "username" in corpus:
         return [
@@ -734,20 +742,32 @@ def disciplinary_visuals(session: Session) -> list[SlideSpec]:
 
 def plan_slides(session: Session) -> list[SlideSpec]:
     """Construye un plan variable según el contenido real de la sesión."""
-    slides = [SlideSpec("title", session.topic, [], f"{session.hito} · {session.duration}")]
+    is_h1 = session.folder == "h1"
+    title_subtitle = session.hito
+    if is_h1 and session.moment:
+        title_subtitle = f"{session.hito} · Fase HEXA: {session.moment}"
+    elif session.duration:
+        title_subtitle = f"{session.hito} · {session.duration}"
+    slides = [SlideSpec("title", session.topic, [], title_subtitle)]
 
-    outcome_items = expanded_items(
-        [f"Objetivo: {session.objective}", f"Evidencia: {session.evidence}"], 190
-    )
+    outcome_source = [f"Objetivo: {session.objective}"]
+    if is_h1:
+        outcome_source.append(
+            "Al terminar: señala la evidencia, explica qué demuestra y reproduce la prueba."
+        )
+    else:
+        outcome_source.append(f"Evidencia: {session.evidence}")
+    outcome_items = expanded_items(outcome_source, 190)
     for index, chunk in enumerate(chunk_items(outcome_items, 4, 520), 1):
         suffix = "" if index == 1 else f" · {index}"
         slides.append(SlideSpec("outcome", f"Qué debe conseguirse{suffix}", chunk, session.moment))
 
-    timeline_items = [timeline_display_item(block) for block in session.timeline]
-    timeline_chunk_size = 6 if len(timeline_items) > 7 else 7
-    for index, chunk in enumerate(chunk_items(timeline_items, timeline_chunk_size, 1200), 1):
-        suffix = "" if len(timeline_items) <= timeline_chunk_size else f" · tramo {index}"
-        slides.append(SlideSpec("timeline", f"Secuencia de aula{suffix}", chunk))
+    if not is_h1:
+        timeline_items = [timeline_display_item(block) for block in session.timeline]
+        timeline_chunk_size = 6 if len(timeline_items) > 7 else 7
+        for index, chunk in enumerate(chunk_items(timeline_items, timeline_chunk_size, 1200), 1):
+            suffix = "" if len(timeline_items) <= timeline_chunk_size else f" · tramo {index}"
+            slides.append(SlideSpec("timeline", f"Secuencia de aula{suffix}", chunk))
 
     visuals = disciplinary_visuals(session)
     visual_kinds = {spec.kind for spec in visuals}
@@ -765,7 +785,7 @@ def plan_slides(session: Session) -> list[SlideSpec]:
                 str(len(concepts)),
             )
         )
-    elif not (replaces_sparse_explanation and len(concepts) <= 2):
+    elif not is_h1 and not (replaces_sparse_explanation and len(concepts) <= 2):
         for index, chunk in enumerate(chunk_items(concepts, 7, 900), 1):
             suffix = "" if len(concepts) <= 7 else f" · {index}"
             slides.append(SlideSpec("concepts", f"Claves para explicar{suffix}", chunk))
@@ -1127,13 +1147,61 @@ RENDERERS = {
     "closure": render_closure,
 }
 
+def speaker_notes(session: Session, spec: SlideSpec, index: int, total: int) -> str:
+    """Genera un guion docente trazable desde la misma fuente que la diapositiva."""
+    lines = [
+        f"Objetivo docente: {session.objective}",
+        f"Diapositiva {index} de {total}: {spec.title}",
+    ]
+    if session.moment:
+        lines.append(f"Fase HEXA: {session.moment}")
+
+    if spec.kind == "title":
+        lines.append(f"Presenta el producto y anticipa la evidencia: {session.evidence}")
+        if session.folder == "h1":
+            lines.append("Secuencia docente:")
+            lines.extend(f"- {block.time}: {block.action}" for block in session.timeline)
+            if session.key_concepts:
+                lines.append("Claves docentes:")
+                lines.extend(f"- {item}" for item in session.key_concepts)
+    elif spec.kind == "timeline":
+        lines.append("Conduce estos tiempos y evita ampliar la explicación si reduce la práctica:")
+        lines.extend(f"- {block.time}: {block.action}" for block in session.timeline)
+    elif spec.kind in {"concepts", "focus", "relationship", "debugger", "pattern", "exception_flow"}:
+        lines.append("Explica con predicción y ejemplo mínimo; comprueba comprensión antes de continuar.")
+        lines.extend(f"- {item}" for item in spec.items)
+    elif spec.kind == "example":
+        lines.append("Modela el ejemplo sin resolver la actividad completa; pide una predicción antes de ejecutar.")
+        lines.extend(f"- {item}" for item in spec.items)
+    elif spec.kind == "activity":
+        lines.append("Entrega la consigna, observa decisiones y pide una prueba reproducible.")
+        lines.extend(f"- {item}" for item in spec.items)
+    elif spec.kind == "evidence":
+        lines.append(f"Comprueba la evidencia en su fuente canónica: {session.evidence}")
+        lines.extend(f"- {item}" for item in spec.items)
+    elif spec.kind == "safety":
+        lines.append("Recuerda estos límites antes de que el alumnado comparta o publique:")
+        lines.extend(f"- {item}" for item in spec.items)
+    elif spec.kind in {"closure", "defense", "microdefense"}:
+        lines.append("Cierra con explicación individual, prueba observable y siguiente paso concreto.")
+        lines.extend(f"- {item}" for item in spec.items)
+    else:
+        lines.extend(f"- {item}" for item in spec.items)
+
+    lines.append(f"Fuente docente: {session.teacher_source.as_posix()}")
+    return "\n".join(lines)
+
+def add_speaker_notes(slide, text: str) -> None:
+    slide.notes_slide.notes_text_frame.text = text
+
 def build_presentation(session: Session, target: Path) -> int:
     prs = Presentation()
     prs.slide_width = SLIDE_W
     prs.slide_height = SLIDE_H
     plan = plan_slides(session)
-    for spec in plan:
+    for index, spec in enumerate(plan, 1):
         RENDERERS[spec.kind](prs, session, spec)
+        add_speaker_notes(prs.slides[-1], speaker_notes(session, spec, index, len(plan)))
     target.parent.mkdir(parents=True, exist_ok=True)
     prs.save(target)
     return len(plan)

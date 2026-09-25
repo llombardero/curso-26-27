@@ -46,6 +46,8 @@ Publicar únicamente:
 7. rúbrica o criterios visibles;
 8. ejemplo de Laura solo después del intento propio.
 
+Los PDF temáticos se conservan en el área docente y se publican individualmente cuando el avance del reto los haga necesarios. No se incluyen todos por adelantado en el paquete HTML del alumnado.
+
 Cuando se publique un documento suelto, usar preferentemente su versión `.html`. El archivo `LEEME-ALUMNADO.html` sirve como entrada simple al paquete completo.
 
 ## 5. Entrega verificable

@@ -1,10 +1,10 @@
 # Sesión 220 — Ficha de trabajo del alumnado
 
-## Condicionales `if/else`
+## Aplicar y encadenar condicionales `if/else`
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Ejecutar una respuesta según comando. | Menú parcial funcional. |
+| Aplicar el `if/else` básico de H1 a varios comandos y cubrir el caso desconocido. | Menú parcial funcional. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H2.

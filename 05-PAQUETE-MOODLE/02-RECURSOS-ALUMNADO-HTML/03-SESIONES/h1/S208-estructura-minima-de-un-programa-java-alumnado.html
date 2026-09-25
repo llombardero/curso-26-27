@@ -3,101 +3,130 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sesión 208 — Ficha de trabajo del alumnado</title>
+  <title>S208 — La estructura mínima de un programa Java</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
     <nav class="topbar">Inicio alumnado</nav>
-<h1 id="sesión-208--ficha-de-trabajo-del-alumnado">Sesión 208 — Ficha de
-trabajo del alumnado</h1>
-<h2 id="estructura-mínima-de-un-programa-java">Estructura mínima de un
-programa Java</h2>
+<h1 id="s208--la-estructura-mínima-de-un-programa-java">S208 — La
+estructura mínima de un programa Java</h1>
 <table>
 <thead>
 <tr class="header">
-<th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Dato</th>
+<th>Valor</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Entender clase <code>Main</code> y método <code>main</code>.</td>
-<td>Código que compila con varios mensajes por pantalla.</td>
+<td>Hito</td>
+<td>H1 — Primer MiniJarvis</td>
+</tr>
+<tr class="even">
+<td>Duración</td>
+<td>2 periodos; esta ficha organiza el checkpoint de 45 minutos</td>
+</tr>
+<tr class="odd">
+<td>Fase HEXA</td>
+<td>Investigar — aprender lo necesario</td>
+</tr>
+<tr class="even">
+<td>Registro de proceso</td>
+<td>Una entrada en el diario individual al cerrar el checkpoint; no se
+crea un documento adicional</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1.</p>
-<h2 id="material-que-necesitas">Material que necesitas</h2>
-<ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
-<li>Proyector solo si habrá demostración colectiva; la defensa puede
-realizarse directamente en el equipo.</li>
-</ul>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
-<ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Reescribir un programa mínimo y señalar
-dónde empieza.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
-</ol>
-<h2 id="registro-breve">Registro breve</h2>
-<p><strong>Qué intento conseguir:</strong><br />
-................................................................................</p>
-<p><strong>Decisión o hipótesis que probaré:</strong><br />
-................................................................................</p>
-<p><strong>Prueba que he realizado y resultado:</strong><br />
-................................................................................</p>
-<p><strong>Bloqueo encontrado y siguiente paso:</strong><br />
-................................................................................</p>
-<h2 id="evidencia-mínima-antes-de-salir">Evidencia mínima antes de
+<blockquote>
+<p>El producto principal H1 sigue siendo pequeño. Las microprácticas
+demuestran el Tema 1 y pueden permanecer separadas de
+<code>Main.java</code>.</p>
+</blockquote>
+<p><strong>Objetivo:</strong> Leer, reconstruir y depurar la estructura
+mínima; reconocer aspectos léxicos y comentarios.</p>
+<p><strong>D1</strong> · 00:00–00:05 · INVESTIGAR</p>
+<h2 id="qué-líneas-hacen-algo-visible">¿Qué líneas hacen algo
+visible?</h2>
+<p>public class Main {<br> public static void main(String[] args) {<br>
+System.out.println("Hola");<br> System.out.println("MiniJarvis
+arranca");<br> }<br> }</p>
+<p><strong>Qué haces:</strong> Señala y justifica.</p>
+<p><strong>Qué debe quedar:</strong> identifiquen println como
+instrucción visible.</p>
+<p><strong>D2</strong> · 00:05–00:12 · PÍLDORA DOCENTE 1/4</p>
+<h2 id="clase-archivo-y-main">Clase, archivo y main</h2>
+<p><strong>Qué haces:</strong> Localiza cada parte en su proyecto.</p>
+<p><strong>Qué debe quedar:</strong> puedan señalar ambas piezas.</p>
+<p><strong>D3</strong> · 00:12–00:18 · PÍLDORA DOCENTE 2/4</p>
+<h2 id="java-es-preciso-con-la-escritura">Java es preciso con la
+escritura</h2>
+<p><strong>Qué haces:</strong> Busca los símbolos en el código.</p>
+<p><strong>Qué debe quedar:</strong> puedan anticipar un error
+sencillo.</p>
+<p><strong>D4</strong> · 00:18–00:23 · DIAGNÓSTICO</p>
+<h2 id="compilará-caso-1">¿Compilará? Caso 1</h2>
+<p>public class Main {<br> public static void main(string[] args) {<br>
+System.out.println("Hola");<br> }<br> }</p>
+<p><strong>Qué haces:</strong> Predice y corrige.</p>
+<p><strong>Qué debe quedar:</strong> expliquen por qué falla.</p>
+<p><strong>D5</strong> · 00:23–00:27 · DIAGNÓSTICO</p>
+<h2 id="compilará-caso-2">¿Compilará? Caso 2</h2>
+<p>public class Main {<br> public static void main(String[] args) {<br>
+System.out.println("Hola")<br> }<br> }</p>
+<p><strong>Qué haces:</strong> Predice y corrige.</p>
+<p><strong>Qué debe quedar:</strong> formulen la regla.</p>
+<p><strong>D6</strong> · 00:27–00:32 · PÍLDORA DOCENTE 3/4</p>
+<h2 id="identificadores-y-palabras-reservadas">Identificadores y
+palabras reservadas</h2>
+<p><strong>Qué haces:</strong> Propone nombres válidos/invalidos.</p>
+<p><strong>Qué debe quedar:</strong> puedan justificar 3 casos.</p>
+<p><strong>D7</strong> · 00:32–00:35 · PÍLDORA DOCENTE 4/4</p>
+<h2 id="comentarios-explicar-intención">Comentarios: explicar
+intención</h2>
+<p>// Comentario de una línea<br> <br> /* Comentario<br> de varias
+líneas */</p>
+<p><strong>Qué haces:</strong> Escribe un comentario útil.</p>
+<p><strong>Qué debe quedar:</strong> haya un comentario que aporte
+contexto.</p>
+<p><strong>D8</strong> · 00:35–00:42 · ACTIVIDAD</p>
+<h2 id="reconstruye-el-programa-sin-copiar">Reconstruye el programa sin
+copiar</h2>
+<p>1. Crea la estructura mínima.<br> 2. Añade 2–3 mensajes.<br> 3. Añade
+un comentario útil.<br> 4. Ejecuta.<br> 5. Corrige el primer error que
+aparezca.</p>
+<p><strong>Qué haces:</strong> Escribe y depura.</p>
+<p><strong>Qué debe quedar:</strong> cada persona logre ejecución.</p>
+<p><strong>D9</strong> · 00:42–00:45 · CIERRE</p>
+<h2 id="microdefensa-de-sintaxis">Microdefensa de sintaxis</h2>
+<p>Señala:<br> • dónde empieza la ejecución<br> • una regla que rompería
+la compilación<br> • un comentario útil</p>
+<p><strong>Qué haces:</strong> Defiende sobre su código.</p>
+<p><strong>Qué debe quedar:</strong> quede diagnosticada la
+comprensión.</p>
+<p><strong>Cierre:</strong> registra evidencia y una breve explicación
+de lo aprendido. Usa datos ficticios y no publiques credenciales ni
+información personal.</p>
+<h2 id="evidencia-única-antes-de-salir">Evidencia única antes de
 salir</h2>
-<ul class="task-list">
-<li><label><input type="checkbox" />He producido o actualizado:
-<strong>Código que compila con varios mensajes por
-pantalla.</strong></label></li>
-<li><label><input type="checkbox" />Puedo señalar dónde
-está.</label></li>
-<li><label><input type="checkbox" />Puedo explicar una decisión
-tomada.</label></li>
-<li><label><input type="checkbox" />Puedo mostrar una prueba o
-comprobación.</label></li>
-<li><label><input type="checkbox" />He registrado mi aportación
-individual si el trabajo era de equipo.</label></li>
+<ul>
+<li>conserva el código o la prueba en el lugar indicado por la
+sesión;</li>
+<li>añade una sola entrada al diario individual con prueba, bloqueo y
+siguiente paso;</li>
+<li>no copies la misma reflexión en otro documento; el Site personal
+seleccionará evidencias al cerrar H1.</li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
 <ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
+<li>Usa datos ficticios y no publiques credenciales ni información
+personal.</li>
+<li>Si utilizas IA de forma sustantiva, registra propósito, propuesta,
+cambios propios y validación en el registro de IA del hito.</li>
 </ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
-<ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
-</ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Microdefensa: señalar en el código dónde
-empieza el programa.</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<h2 id="cierre-individual">Cierre individual</h2>
+<p><strong>¿Qué puedes señalar, explicar y probar al terminar este
+checkpoint?</strong></p>
 
   </main>
 </body>

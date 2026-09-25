@@ -11,7 +11,8 @@
     <nav class="topbar">Inicio alumnado</nav>
 <h1 id="sesión-267--ficha-de-trabajo-del-alumnado">Sesión 267 — Ficha de
 trabajo del alumnado</h1>
-<h2 id="patrón-command-simplificado">Patrón Command simplificado</h2>
+<h2 id="patrón-command-simplificado-o-decisión-de-no-patrón">Patrón
+Command simplificado o decisión de no patrón</h2>
 <table>
 <thead>
 <tr class="header">
@@ -21,13 +22,11 @@ trabajo del alumnado</h1>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Trabajar conceptos importantes de los temas 5 y 6 que no siempre
-aparecen en MiniJarvis mínimo.</td>
-<td><code>docs/refuerzo-poo-avanzada-h5</code> con código, pruebas o
-salidas, decisión de qué se mantiene y qué se descarta, y justificación
-de composición/interfaz frente a herencia. Debe nombrar explícitamente
-los conceptos del Tema 6 trabajados y cuáles quedan como ampliación
-reconocida.</td>
+<td>Relacionar un problema real del diseño de herramientas con la idea
+de Command y decidir si conviene usarla.</td>
+<td><code>docs/registro-patron-h5.md</code> con problema, alternativa
+simple, decisión, semejanza o diferencia respecto a Command y riesgo de
+sobreingeniería.</td>
 </tr>
 </tbody>
 </table>
@@ -36,82 +35,87 @@ reconocida.</td>
 <h2 id="material-que-necesitas">Material que necesitas</h2>
 <ul>
 <li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
-<li>Pizarra o una hoja reutilizable para bosquejar antes de modificar el
-proyecto.</li>
+y el proyecto H5 accesible.</li>
+<li>Pizarra o una hoja reutilizable para comparar alternativas.</li>
+<li>Datos ficticios; no utilices contraseñas, tokens, claves API ni
+datos personales reales.</li>
 </ul>
 <h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
 <ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Crear <code>enum CommandType</code>,
-valorar un <code>record CommandResult</code>, añadir
-<code>@Override</code> en herramientas, implementar
-<code>toString</code> y una comparación
-<code>equals</code>/<code>hashCode</code> en una clase de dominio,
-ordenar herramientas por nombre y comparar <code>interface Tool</code>
-con una clase abstracta <code>BaseTool</code>. Analizar un microejemplo
-de <code>instanceof</code> y justificar por qué se prefiere polimorfismo
-cuando sea posible.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
+<li>Localiza qué problema resolvió separar las acciones en clases que
+implementan <code>Tool</code>.</li>
+<li>Compara la solución actual con esta idea: «Command encapsula una
+acción como objeto».</li>
+<li>Identifica qué parte del proyecto se parece a Command y qué
+elementos de un patrón completo no necesitas.</li>
+<li>Valora una alternativa más simple y el coste de añadir más
+infraestructura.</li>
+<li>Decide si mantienes la expresión «Command simplificado» o si
+descartas el patrón.</li>
+<li>Registra una justificación que puedas defender con código del
+proyecto.</li>
 </ol>
-<h2 id="registro-breve">Registro breve</h2>
-<p><strong>Qué intento conseguir:</strong><br />
-................................................................................</p>
-<p><strong>Decisión o hipótesis que probaré:</strong><br />
-................................................................................</p>
-<p><strong>Prueba que he realizado y resultado:</strong><br />
-................................................................................</p>
-<p><strong>Bloqueo encontrado y siguiente paso:</strong><br />
-................................................................................</p>
+<h2 id="registro-de-patrón">Registro de patrón</h2>
+<p>Completa <code>docs/registro-patron-h5.md</code>:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Registro de patrón H5</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Problema de diseño</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternativa simple</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Solución actual</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## ¿En qué se parece a Command?</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## ¿Qué parte no necesitamos?</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ventaja comprobable</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Riesgo de sobreingeniería</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Decisión final y justificación</span></span></code></pre></div>
 <h2 id="evidencia-mínima-antes-de-salir">Evidencia mínima antes de
 salir</h2>
 <ul class="task-list">
-<li><label><input type="checkbox" />He producido o actualizado:
-<strong><code>docs/refuerzo-poo-avanzada-h5</code> con código, pruebas o
-salidas, decisión de qué se mantiene y qué se descarta, y justificación
-de composición/interfaz frente a herencia. Debe nombrar explícitamente
-los conceptos del Tema 6 trabajados y cuáles quedan como ampliación
-reconocida.</strong></label></li>
-<li><label><input type="checkbox" />Puedo señalar dónde
-está.</label></li>
-<li><label><input type="checkbox" />Puedo explicar una decisión
-tomada.</label></li>
-<li><label><input type="checkbox" />Puedo mostrar una prueba o
-comprobación.</label></li>
-<li><label><input type="checkbox" />He registrado mi aportación
-individual si el trabajo era de equipo.</label></li>
+<li><label><input type="checkbox" />He nombrado el problema antes que el
+patrón.</label></li>
+<li><label><input type="checkbox" />He relacionado la decisión con
+código real del proyecto.</label></li>
+<li><label><input type="checkbox" />He explicado una semejanza y una
+diferencia respecto a Command.</label></li>
+<li><label><input type="checkbox" />He identificado un riesgo de
+complicar innecesariamente el diseño.</label></li>
+<li><label><input type="checkbox" />He decidido mantener, simplificar o
+descartar el patrón.</label></li>
+<li><label><input type="checkbox" />Puedo defender la decisión sin
+limitarme a repetir una definición.</label></li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
 <ul>
 <li>Trabaja únicamente con datos ficticios.</li>
 <li>No escribas contraseñas, tokens, claves API ni datos
 personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
+<li>Si utilizas IA para comprender el patrón, registra qué preguntaste y
+contrasta la explicación con el código real.</li>
+<li>No copies una implementación completa de Command si no puedes
+justificar cada elemento.</li>
 <li>Los ejemplos de Laura solo se consultan después del intento
 propio.</li>
 </ul>
 <h2 id="si-te-bloqueas">Si te bloqueas</h2>
 <ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
+<li>Escribe qué cambio sería difícil con el diseño actual.</li>
+<li>Señala la clase o método donde aparece el problema.</li>
+<li>Compara una solución simple con otra más compleja.</li>
+<li>Si no existe un problema concreto, justifica por qué no conviene
+forzar el patrón.</li>
 </ol>
 <h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Pregunta: ¿por qué no siempre conviene
-usar herencia aunque sepamos programarla?</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>Responde sin copiar: <strong>¿Qué problema real resuelve aquí la idea
+de Command y qué parte sería sobreingeniería?</strong></p>
+<p>La sesión está completada cuando la evidencia existe, está vinculada
+al proyecto y puedes defender la decisión.</p>
 
   </main>
 </body>

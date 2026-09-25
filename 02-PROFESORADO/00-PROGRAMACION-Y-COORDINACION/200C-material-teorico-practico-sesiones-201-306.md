@@ -235,117 +235,24 @@ Comprobación: ¿Cómo sabremos que una tarea de programación está terminada?
 
 ---
 
-## H1 — Java básico y primer asistente
+## H1 — Java básico y primer MiniJarvis v3
 
-### Sesión 206 — Presentar H1 y delimitar alcance
+H1 cubre el Tema 1 con un producto pequeño y microprácticas defendibles. No se fuerza cada concepto dentro de `Main.java`.
 
-Explicación docente: H1 busca base sólida, no espectacularidad. No hay menú, bucles, memoria ni IA.
+| Sesión | Explicación y demostración | Práctica y comprobación |
+|---|---|---|
+| S206 | Producto mínimo, límites y criterios correcto/eficiente/mantenible. | Clasificar alcance y redactar requisitos observables. |
+| S207 | Código fuente, JDK, compilador, bytecode, JVM y ejecución. | Crear, ejecutar, provocar y explicar un error. |
+| S208 | Clase, `main`, instrucciones, comentarios, palabras reservadas y sintaxis. | Reconstruir un programa mínimo y corregir un fallo. |
+| S209 | `print`, `println`, concatenación y caracteres de escape. | Diseñar dos salidas y justificar una. |
+| S210 | Declaración, inicialización, asignación y tipos primitivos. | Predecir, modificar y enlazar variables con el plan de H1. |
+| S211 | `final`, literales, operadores, precedencia, división y actualización. | Predecir operaciones y contrastarlas al ejecutar. |
+| S212 | `Scanner`, texto, parseo, casting y `NumberFormatException`. | Probar una entrada válida y otra inválida. |
+| S213 | Comparaciones, booleanos, lógica, `if/else`, anidamiento y `?:`. | Programar una microdecisión y probar sus dos ramas. |
+| S214 | README, pruebas, diario, Sites, permisos y uso de IA. | Hacer una prueba cruzada y entregar enlaces profundos. |
+| S215 | Defensa, modificación y recuperación específica. | Señalar, explicar, ejecutar, modificar y fijar siguiente paso. |
 
-Demostración: Enseña una salida esperada de H1 en consola.
-
-Práctica: Clasificar funcionalidades en “H1”, “más adelante” y “no adecuado”.
-
-Comprobación: ¿Por qué un menú no pertenece todavía a H1?
-
-### Sesión 207 — Entorno de trabajo: IntelliJ, proyecto y ejecución
-
-Explicación docente: Diferencia entre código fuente, proyecto, JDK, compilación y ejecución.
-
-Demostración: Crear proyecto y ejecutar `System.out.println("Hola")`.
-
-Práctica: Cada alumno crea y ejecuta su primer proyecto.
-
-Comprobación: ¿Dónde está el archivo fuente que acabas de ejecutar?
-
-### Sesión 208 — Estructura mínima de un programa Java
-
-Explicación docente: Java organiza el código en clases; `main` es el punto de entrada.
-
-Demostración: Señala línea a línea `public class Main` y `public static void main`.
-
-Práctica: Escribir un programa mínimo sin copiar y ejecutarlo.
-
-Comprobación: ¿Qué línea indica dónde empieza el programa?
-
-### Sesión 209 — Salida por pantalla y mensajes del asistente
-
-Explicación docente: La consola es la primera interfaz. La salida debe ser clara para el usuario.
-
-Demostración: Comparar mensajes confusos con mensajes claros.
-
-Práctica: Diseñar los primeros mensajes de MiniJarvis.
-
-Comprobación: ¿Qué verá exactamente la persona usuaria al ejecutar?
-
-### Sesión 210 — Variables
-
-Explicación docente: Una variable guarda un dato que puede usarse varias veces.
-
-Demostración: Cambia el valor de `userName` y muestra cómo afecta a varios mensajes.
-
-Práctica: Crear y usar `userName`.
-
-Comprobación: ¿Qué partes tiene una declaración de variable?
-
-### Sesión 211 — Constantes
-
-Explicación docente: Una constante representa un dato que no debe cambiar durante la ejecución.
-
-Demostración: `final String ASSISTANT_NAME = "MiniJarvis";`.
-
-Práctica: Añadir nombre del asistente y año como constantes.
-
-Comprobación: ¿Por qué `ASSISTANT_NAME` es mejor como constante que como texto repetido?
-
-### Sesión 212 — Entrada por teclado con Scanner
-
-Explicación docente: `Scanner` permite leer información introducida por usuario.
-
-Demostración: Leer una línea y usarla en un saludo.
-
-Práctica: Pedir nombre y responder con ese nombre.
-
-Comprobación: ¿Qué devuelve `nextLine()`?
-
-### Bloque H1 — Números, operadores y conversiones
-
-Explicación docente: `nextLine()` siempre lee texto. Para calcular, hay que convertir ese texto a número. Introduce `int`, `double`, operadores aritméticos, comparación y precedencia básica con ejemplos muy pequeños.
-
-Demostración: Leer `studyHoursText`, convertir con `Integer.parseInt(studyHoursText)` y mostrar una recomendación con `if` sencillo. Provoca una entrada inválida para ver `NumberFormatException`.
-
-Práctica: MiniJarvis pregunta horas de estudio, calcula una recomendación y registra una prueba válida y otra inválida.
-
-Comprobación: ¿Por qué Java no puede sumar directamente el texto que devuelve `nextLine()`?
-
-### Sesión 213 — Limpieza, nombres claros y simplicidad
-
-Explicación docente: Código limpio en H1 significa que se entiende, no que sea avanzado.
-
-Demostración: Renombra `x` a `userName` y compara legibilidad.
-
-Práctica: Revisar nombres, orden y comentarios.
-
-Comprobación: ¿Qué línea de tu código no sabes explicar?
-
-### Sesión 214 — README y evidencia de ejecución
-
-Explicación docente: Un README permite que otra persona entienda y ejecute el proyecto.
-
-Demostración: Modelo mínimo: qué hace, cómo ejecutar, ejemplo de salida, limitaciones.
-
-Práctica: Crear README H1.
-
-Comprobación: ¿Podría otro compañero ejecutar tu proyecto leyendo solo el README?
-
-### Sesión 215 — Defensa y cierre H1
-
-Explicación docente: Defender no es recitar; es explicar código propio y modificar algo simple.
-
-Demostración: Preguntas modelo: qué es `main`, qué es una variable, qué hace `Scanner`.
-
-Práctica: Defensa por parejas antes de defensa docente.
-
-Comprobación: ¿Puedes cambiar el mensaje inicial sin romper el programa?
+El producto H1 no necesita menú, bucle principal, colecciones, persistencia, clases propias adicionales ni IA real. H2 aplica y encadena las decisiones básicas en comandos, repetición, pruebas y depuración.
 
 ---
 

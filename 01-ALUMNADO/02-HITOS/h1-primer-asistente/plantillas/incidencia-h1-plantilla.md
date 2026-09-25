@@ -1,103 +1,25 @@
-# Incidencia — H1 Primer asistente básico
+# Incidencia H1 — registro solo cuando aporta evidencia
 
-Alumno/a o equipo:
-Fecha:
-Estado: Abierta / En curso / Resuelta
+Los bloqueos cotidianos se registran en el Diario individual o en Scrum. Completa una incidencia separada únicamente si el análisis del error demuestra un aprendizaje que no cabe en una fila.
 
----
+## Reproducción
 
-## 1. Descripción del problema
+- Fecha y commit:
+- Qué esperaba:
+- Qué ocurrió:
+- Mensaje exacto, sin datos personales:
+- Pasos mínimos para reproducir:
 
-¿Qué ocurrió?
+## Hipótesis y prueba
 
-```text
+- Hipótesis:
+- Prueba mínima:
+- Resultado:
+- Cambio aplicado:
+- Nueva comprobación:
 
-```
+## Enlaces
 
----
-
-## 2. Dónde ocurrió
-
-Archivo o lugar:
-
-```text
-src/Main.java / IntelliJ / Terminal / README / Otro
-```
-
-Línea aproximada, si procede:
-
-```text
-
-```
-
----
-
-## 3. Mensaje de error o síntoma
-
-Copia el mensaje de error o describe el síntoma.
-
-```text
-
-```
-
----
-
-## 4. Pasos para reproducir
-
-1.
-2.
-3.
-
----
-
-## 5. Causa probable
-
-¿Qué crees que causaba el problema?
-
-```text
-
-```
-
----
-
-## 6. Solución aplicada
-
-¿Qué cambiaste?
-
-```text
-
-```
-
----
-
-## 7. Verificación
-
-¿Cómo comprobaste que ya funcionaba?
-
-```text
-
-```
-
----
-
-## 8. Qué aprendí
-
-```text
-
-```
-
----
-
-## 9. Uso de IA, si procede
-
-¿Usaste IA para entender o resolver la incidencia?
-
-```text
-Sí / No
-```
-
-Si la usaste, resume y registra también en `registro-ia`.
-
-```text
-
-```
+- Fila del diario o Scrum donde apareció:
+- Código o commit relacionado:
+- Sección del README si afecta a una prueba entregada:

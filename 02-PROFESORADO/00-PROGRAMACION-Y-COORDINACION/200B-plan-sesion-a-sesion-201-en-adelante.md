@@ -111,130 +111,26 @@ Los resultados individuales no tienen nota, no son psicométricos y no se public
 
 ---
 
-## 4. Sesiones H1 — Primer asistente básico
+## 4. Sesiones H1 — Primer MiniJarvis v3
 
-### Sesión 206 — Presentar H1 y delimitar alcance
+H1 ocupa 24 periodos. S206-S215 son checkpoints; los talleres asociados permiten practicar, apoyar y recuperar sin crear nuevas evidencias obligatorias.
 
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Comprender el producto mínimo H1. |
-| Explicar | H1 será lineal: saludo, nombre, mensajes y constantes. No habrá menú ni bucles. |
-| Actividad | Clasificar ideas en tres columnas: H1, más adelante, no adecuado. |
-| Evidencia | Lista de requisitos H1 y lista de restricciones. |
-| Cierre | Pregunta: ¿por qué no conviene empezar con IA real? |
+| Sesión | Periodos | Fase | Foco | Evidencia canónica |
+|---|---:|---|---|---|
+| S206 | 2 | Activar | alcance, producto mínimo y requisitos observables | diario: objetivo y límites |
+| S207 | 3 | Investigar | código, JDK, compilación, JVM y ejecución | proyecto ejecutado + diario |
+| S208 | 2 | Investigar | clase, `main`, instrucciones, comentarios y errores | micropráctica enlazada |
+| S209 | 2 | Idear | `print`, `println`, concatenación y formato | salida elegida en el producto |
+| S210 | 2 | Planificar | variables, tipos y plan mínimo | código o micropráctica |
+| S211 | 2 | Ejecutar | constantes, literales, operaciones y actualización | micropráctica comprobada |
+| S212 | 3 | Ejecutar | `Scanner`, conversiones, casting y error de conversión | pruebas válida e inválida |
+| S213 | 3 | Ejecutar | comparaciones, lógica, `if/else`, anidamiento y `?:` | dos ramas probadas |
+| S214 | 3 | Comunicar | README, prueba cruzada, Sites y permisos | README y enlaces profundos |
+| S215 | 2 | Comunicar | defensa, modificación, recuperación y cierre | defensa y siguiente paso |
 
-### Sesión 207 — Entorno de trabajo: IntelliJ, proyecto y ejecución
+El producto principal sigue siendo pequeño y puede conservar flujo lineal. Operaciones, conversiones y decisiones que no aporten valor a `Main.java` se demuestran en microprácticas. H2 no vuelve a presentar `if/else` como novedad: integra decisiones en un menú repetitivo, prueba comandos y depura el flujo.
 
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Crear y ejecutar un proyecto Java mínimo. |
-| Explicar | Código fuente, proyecto, JDK, compilación, ejecución y consola. |
-| Actividad | Crear proyecto en IntelliJ, clase `Main` y primer `println`. |
-| Evidencia | Captura o documento de primera ejecución. |
-| Cierre | Cada alumno localiza dónde está `Main.java`. |
-
-### Sesión 208 — Estructura mínima de un programa Java
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Entender clase `Main` y método `main`. |
-| Explicar | `public class Main`, `public static void main(String[] args)` y orden de ejecución. |
-| Actividad | Reescribir un programa mínimo y señalar dónde empieza. |
-| Evidencia | Código que compila con varios mensajes por pantalla. |
-| Cierre | Microdefensa: señalar en el código dónde empieza el programa. |
-
-### Sesión 209 — Salida por pantalla y mensajes del asistente
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Usar `System.out.println` y construir salida legible. |
-| Explicar | Diferencia entre texto literal, concatenación y orden de mensajes. |
-| Actividad | Diseñar el primer guion de presentación de MiniJarvis. |
-| Evidencia | Programa que muestra saludo, propósito y curso. |
-| Cierre | Revisar si la salida es comprensible para una persona usuaria. |
-
-### Sesión 210 — Variables
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Guardar datos en variables. |
-| Explicar | Tipo, nombre, valor y uso de una variable `String`. |
-| Actividad | Crear variable `userName` con un valor fijo y usarla en varios mensajes. |
-| Evidencia | Código con variable usada correctamente. |
-| Cierre | Pregunta: ¿qué cambia si modifico el valor de la variable? |
-
-### Sesión 211 — Constantes
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Diferenciar variable y constante. |
-| Explicar | `final`, nombres claros y datos que no deberían cambiar. |
-| Actividad | Añadir `ASSISTANT_NAME` y `COURSE_YEAR`. |
-| Evidencia | Código con al menos una constante bien usada. |
-| Cierre | Pregunta: ¿qué dato de nuestro programa debería ser constante? |
-
-### Sesión 212 — Entrada por teclado con Scanner
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Leer el nombre de la persona usuaria. |
-| Explicar | `import`, `Scanner`, `nextLine()` y cierre del scanner. |
-| Actividad | Pedir nombre por consola y responder usando ese dato. |
-| Evidencia | Ejecución donde el programa saluda usando el nombre introducido. |
-| Cierre | Microdefensa: explicar qué hace `scanner.nextLine()`. |
-
-### Bloque H1 — Números, operadores y conversiones
-
-Este refuerzo puede integrarse entre las sesiones 212 y 214 o usarse como recuperación H1.
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Asegurar conceptos del Tema 1 que no aparecen de forma natural en el saludo inicial. |
-| Explicar | `int`, `double`, operadores aritméticos, comparación, precedencia básica y conversión `String` -> número con `Integer.parseInt`. |
-| Actividad | MiniJarvis pregunta cuántas horas se han estudiado esta semana, convierte la entrada a número y muestra una recomendación sencilla. |
-| Evidencia | Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido. |
-| Cierre | Pregunta: ¿por qué `scanner.nextLine()` devuelve texto aunque escribas un número? |
-
-### Sesión 213 — Limpieza, nombres claros y simplicidad
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Mejorar legibilidad sin añadir complejidad. |
-| Explicar | Código limpio inicial: nombres, orden, comentarios útiles y ausencia de adornos. |
-| Actividad | Revisar el código H1 con una checklist sencilla. |
-| Evidencia | Código H1 limpio, simple y ejecutable. |
-| Cierre | Pregunta: ¿qué parte sobra o no sabes explicar? |
-
-### Sesión 214 — README y evidencia de ejecución
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Documentar cómo ejecutar H1. |
-| Explicar | README mínimo: qué hace, cómo se ejecuta, ejemplo de salida y limitaciones. |
-| Actividad | Crear `README.md` y evidencia de ejecución. |
-| Evidencia | README H1 y documento/captura de ejecución. |
-| Cierre | Intercambio: otro equipo intenta entender el README. |
-
-### Sesión 215 — Defensa y cierre H1
-
-| Campo | Desarrollo |
-|---|---|
-| Hito | H1 |
-| Foco | Validar comprensión individual. |
-| Explicar | Cómo se defiende una entrega técnica breve. |
-| Actividad | Defensa: `main`, variable, constante, `Scanner`, ejecución y límites de H1. |
-| Evidencia | Plantilla de defensa H1 y portfolio individual. |
-| Cierre | Decidir qué debe mejorar cada alumno antes de H2. |
+Fuente detallada: `13-guia-docente-h1-primer-asistente.md` y guías S206-S215.
 
 ---
 

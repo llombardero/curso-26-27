@@ -7,24 +7,27 @@
 - Alumno/a, si es entrega individual:
 - Fecha:
 
-## Enlaces
+## Enlaces profundos
 
-| Evidencia | URL concreta | Permiso comprobado | Identificador estable |
-|---|---|---|---|
-| Site personal | | Sí / No | Página HN |
-| Site de equipo | | Sí / No | Página HN |
-| Diario individual | | Sí / No | Hoja/filas HN |
-| Sheet Scrum | | Sí / No | Pestaña/filas HN |
-| Drive | | Sí / No | Archivo o carpeta HN |
-| GitHub, si procede | | Sí / No | Tag/commit |
+| Evidencia | Fuente canónica | URL concreta | Permiso comprobado | Identificador estable |
+|---|---|---|---|---|
+| Site personal | Google Sites | | Sí / No | Página HN |
+| Site de equipo | Google Sites | | Sí / No | Página HN |
+| Diario individual | Google Sheets | | Sí / No | Hoja/filas HN |
+| Proceso del equipo | Sheet Scrum | | Sí / No | Pestaña/filas HN |
+| Producto y pruebas | GitHub/README | | Sí / No | Tag/commit/sección |
+| Evidencia no-code excepcional | Drive | | Sí / No | Archivo HN |
 
-## Evidencia cerrada adjunta
+No adjuntes otra copia de una evidencia que ya tiene una fuente canónica. Usa Drive solo cuando la evidencia no pertenezca a GitHub, Sheets o Sites.
+
+## Evidencia cerrada adjunta, solo si se solicita
 
 - Nombre del PDF/XLSX:
-- Qué contiene:
+- Qué documento vivo congela:
+- Fecha y versión:
 
 ## Declaración
 
 ```text
-Hemos comprobado los permisos con una cuenta distinta de la propietaria. Los enlaces apuntan a la evidencia declarada y no contienen datos personales ni secretos. Podemos explicar y defender lo entregado.
+Hemos comprobado los permisos con una cuenta distinta de la propietaria. Los enlaces apuntan a la fuente canónica declarada, no duplican evidencias y no contienen datos personales ni secretos. Podemos explicar y defender lo entregado.
 ```

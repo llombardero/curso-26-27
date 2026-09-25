@@ -47,4 +47,24 @@ Para regenerar la versión HTML después de editar los originales:
 python3 exportar_alumnado_html.py
 ```
 
+Después de regenerar el HTML o modificar una tarea Moodle, sincroniza el staging y crea el ZIP reproducible:
+
+```bash
+python3 generar_paquete_moodle.py
+python3 generar_paquete_moodle.py --check
+```
+
+Ambos exportadores requieren `pandoc` instalado en el sistema.
+
+## Entorno Python de mantenimiento
+
+Los generadores de presentaciones y sus pruebas requieren las dependencias declaradas en `requirements.txt` y `requirements-dev.txt`.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-dev.txt
+pytest -q
+```
+
 Los ZIP no son copias restaurables `.mbz`. La copia `.mbz` se genera desde Moodle después de configurar y probar el aula, sin usuarios ni datos de usuario.

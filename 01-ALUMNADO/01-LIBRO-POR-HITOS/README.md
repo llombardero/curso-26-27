@@ -34,3 +34,5 @@ programa básico -> menú -> memoria -> clases -> herramientas -> persistencia -
 5. Comprueba que puedes explicarlo con tus palabras.
 
 Los ejemplos resueltos sirven para comparar y mejorar después del intento propio, no para copiar antes de pensar.
+
+Los PDF temáticos complementarios se publican de forma individual cuando el avance del reto los hace necesarios; no forman parte del paquete HTML completo disponible desde el inicio.

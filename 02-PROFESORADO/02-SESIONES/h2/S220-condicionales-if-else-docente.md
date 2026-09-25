@@ -1,13 +1,13 @@
 # Sesión 220 — Guía operativa del profesorado
 
-## Condicionales `if/else`
+## Aplicar y encadenar condicionales `if/else`
 
 | Dato | Valor |
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
-| Resultado de hoy | Ejecutar una respuesta según comando. |
+| Resultado de hoy | Aplicar el `if/else` básico de H1 a varios comandos y justificar el orden de evaluación. |
 | Evidencia mínima | Menú parcial funcional. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
@@ -35,7 +35,7 @@ Guion breve sugerido:
 | Tiempo | Acción |
 |---|---|
 | 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
-| 5–13 min | Explicación breve: Un condicional permite ejecutar una rama u otra según una condición. |
+| 5–13 min | Reentrada breve: recuperar el `if/else` de H1 y ampliarlo a `else if`, orden de evaluación y caso por defecto. |
 | 13–18 min | Demostración o ejemplo: Rama para `ayuda`, `estado` y `else`. |
 | 18–35 min | Trabajo del alumnado: Implementar `ayuda`, `estado` y comando desconocido. |
 | 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |

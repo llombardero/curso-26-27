@@ -224,9 +224,63 @@ def test_presentation_uses_named_hexa_phase_from_canonical_model(generator, tmp_
         if hasattr(shape, "text")
     )
 
-    assert session.moment == "Investigar — aprender lo necesario"
-    assert "Fase HEXA: Investigar — aprender lo necesario" in rendered_text
+    assert session.moment == "Ejecutar — crear"
+    assert "Fase HEXA: Ejecutar — crear" in rendered_text
     assert "Momento HEXA:" not in rendered_text
+
+def test_h1_v3_sources_cover_topic_one_without_stealing_h2_application(generator):
+    teacher_213, student_213 = source_pair("213")
+    teacher_220, student_220 = source_pair("220")
+
+    h1 = generator.parse_session(teacher_213, student_213)
+    h2 = generator.parse_session(teacher_220, student_220)
+    h1_text = " ".join([h1.objective, *h1.key_concepts, *h1.activity])
+
+    assert "if/else" in h1_text
+    assert "micropráctica" in h1_text.lower()
+    assert "aplicar" in h2.objective.lower()
+    assert "varios comandos" in h2.objective.lower()
+
+def test_generated_presentation_contains_synchronised_speaker_notes(generator, tmp_path):
+    teacher, student = source_pair("213")
+    session = generator.parse_session(teacher, student)
+    target = tmp_path / "S213.pptx"
+
+    generator.build_presentation(session, target)
+    presentation = generator.Presentation(target)
+    notes = [slide.notes_slide.notes_text_frame.text.strip() for slide in presentation.slides]
+    combined = " ".join(notes)
+
+    assert all(notes)
+    assert "Objetivo docente" in notes[0]
+    assert session.objective in combined
+    assert any(block.time in combined for block in session.timeline)
+
+def test_h1_keeps_teacher_guidance_in_speaker_notes(generator):
+    forbidden_visible = (
+        "PÍLDORA DOCENTE",
+        "PÍLDORA BREVE",
+        "Secuencia de aula",
+        "Objetivo docente:",
+        "Fuente docente:",
+    )
+
+    for number in range(206, 216):
+        teacher, student = source_pair(str(number))
+        session = generator.parse_session(teacher, student)
+        plan = generator.plan_slides(session)
+        visible = " ".join(
+            text
+            for slide in plan
+            for text in (slide.title, slide.subtitle, *slide.items)
+        )
+        title_notes = generator.speaker_notes(session, plan[0], 1, len(plan))
+
+        assert not any(marker in visible for marker in forbidden_visible), number
+        assert not any(slide.kind in {"timeline", "concepts"} for slide in plan), number
+        assert session.duration not in plan[0].subtitle, number
+        assert all(block.action in title_notes for block in session.timeline), number
+        assert all(item in title_notes for item in session.key_concepts), number
 
 def test_pilot_avoids_sparse_duplicate_slides(generator):
     for number in ("203", "225", "267", "284", "306"):
@@ -263,12 +317,17 @@ def test_full_collection_avoids_sparse_and_template_only_slides(generator):
             if slide.kind == "activity":
                 assert not any(item.startswith(boilerplate) for item in slide.items), session.number
 
-    for number in ("212", "232", "245", "290", "304"):
+    for number in ("232", "245", "290", "304"):
         teacher, student = source_pair(number)
         kinds = [slide.kind for slide in generator.plan_slides(generator.parse_session(teacher, student))]
         assert "focus" in kinds, number
         assert "concepts" not in kinds, number
         assert "example" not in kinds, number
+
+    teacher, student = source_pair("212")
+    kinds = [slide.kind for slide in generator.plan_slides(generator.parse_session(teacher, student))]
+    assert "concepts" not in kinds
+    assert "example" in kinds
 
 def test_projectable_lists_do_not_contain_join_artifacts(generator):
     for number in ("203", "225", "267", "284", "306"):

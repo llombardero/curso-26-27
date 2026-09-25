@@ -9,16 +9,16 @@ Presentaciones adaptativas generadas principalmente desde las guías docentes.
 | 203 | H0 — Formación y prueba de equipos Scrum mediante la torre de papel | Composición HADA, equipos provisionales y funciones para la torre | 14 | `h0/S203-microprueba-y-equipos-provisionales-de-3-o-4-presentacion.pptx` |
 | 204 | H0 — Formación y prueba de equipos Scrum mediante la torre de papel | Torre de papel: dos ciclos Scrum, prueba, review y retrospectiva | 13 | `h0/S204-sprint-de-torre-prueba-review-y-retrospectiva-presentacion.pptx` |
 | 205 | H0 — Formación y prueba de equipos Scrum mediante la torre de papel | De la torre a MiniJarvis: revisión del equipo, contrato y rotación de funciones | 11 | `h0/S205-transferencia-a-minijarvis-y-contrato-de-equipo-presentacion.pptx` |
-| 206 | H1 | Presentar H1 y delimitar alcance | 8 | `h1/S206-presentar-h1-y-delimitar-alcance-presentacion.pptx` |
-| 207 | H1 | Entorno de trabajo: IntelliJ, proyecto y ejecución | 8 | `h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-presentacion.pptx` |
-| 208 | H1 | Estructura mínima de un programa Java | 8 | `h1/S208-estructura-minima-de-un-programa-java-presentacion.pptx` |
-| 209 | H1 | Salida por pantalla y mensajes del asistente | 8 | `h1/S209-salida-por-pantalla-y-mensajes-del-asistente-presentacion.pptx` |
-| 210 | H1 | Variables | 8 | `h1/S210-variables-presentacion.pptx` |
-| 211 | H1 | Constantes | 8 | `h1/S211-constantes-presentacion.pptx` |
-| 212 | H1 | Entrada por teclado con Scanner | 8 | `h1/S212-entrada-por-teclado-con-scanner-presentacion.pptx` |
-| 213 | H1 | Limpieza, nombres claros y simplicidad | 8 | `h1/S213-limpieza-nombres-claros-y-simplicidad-presentacion.pptx` |
-| 214 | H1 | README y evidencia de ejecución | 8 | `h1/S214-readme-y-evidencia-de-ejecucion-presentacion.pptx` |
-| 215 | H1 | Defensa y cierre H1 | 8 | `h1/S215-defensa-y-cierre-h1-presentacion.pptx` |
+| 206 | H1 — Primer MiniJarvis | H1: qué vamos a construir y qué queda fuera | 11 | `h1/S206-presentar-h1-y-delimitar-alcance-presentacion.pptx` |
+| 207 | H1 — Primer MiniJarvis | Entorno Java: del código fuente a la ejecución | 12 | `h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-presentacion.pptx` |
+| 208 | H1 — Primer MiniJarvis | Estructura mínima de Java y errores de compilación | 13 | `h1/S208-estructura-minima-de-un-programa-java-presentacion.pptx` |
+| 209 | H1 — Primer MiniJarvis | Salida por pantalla: forma y mensajes | 11 | `h1/S209-salida-por-pantalla-y-mensajes-del-asistente-presentacion.pptx` |
+| 210 | H1 — Primer MiniJarvis | Variables y tipos | 13 | `h1/S210-variables-presentacion.pptx` |
+| 211 | H1 — Primer MiniJarvis | Constantes, literales, operaciones y actualización | 13 | `h1/S211-constantes-presentacion.pptx` |
+| 212 | H1 — Primer MiniJarvis | Scanner, conversiones y casting | 13 | `h1/S212-entrada-por-teclado-con-scanner-presentacion.pptx` |
+| 213 | H1 — Primer MiniJarvis | Comparaciones, lógica y decisiones | 13 | `h1/S213-limpieza-nombres-claros-y-simplicidad-presentacion.pptx` |
+| 214 | H1 — Primer MiniJarvis | Documentar, probar y comunicar H1 | 12 | `h1/S214-readme-y-evidencia-de-ejecucion-presentacion.pptx` |
+| 215 | H1 — Primer MiniJarvis | Defender y cerrar el Tema 1 | 11 | `h1/S215-defensa-y-cierre-h1-presentacion.pptx` |
 | 216 | H2 | Presentar H2 desde H1 | 8 | `h2/S216-presentar-h2-desde-h1-presentacion.pptx` |
 | 217 | H2 | Diseño de comandos antes de programar | 7 | `h2/S217-diseno-de-comandos-antes-de-programar-presentacion.pptx` |
 | 218 | H2 | Booleanos y variable de control | 8 | `h2/S218-booleanos-y-variable-de-control-presentacion.pptx` |

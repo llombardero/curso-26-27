@@ -1,84 +1,107 @@
-# Sesión 215 — Guía operativa del profesorado
+# S215 — Guía docente
 
-## Defensa y cierre H1
+## Defensa y cierre del hito
 
 | Dato | Valor |
 |---|---|
-| Hito | H1 |
-| Duración prevista | 45 minutos |
-| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
-| Resultado de hoy | Validar comprensión individual. |
-| Evidencia mínima | Plantilla de defensa H1 y portfolio individual. |
+| Hito | H1 — Primer MiniJarvis |
+| Duración | 2 periodos; checkpoint proyectable de 45 minutos y taller asociado |
+| Fase HEXA | Comunicar — evaluar y reflexionar |
+| Agrupamiento | Individual con contraste por parejas o equipo cuando la práctica lo requiera |
+| Resultado observable | Demostrar comprensión individual, modificar algo pequeño y cerrar el ciclo HEXA con reflexión y mejora. |
+| Evidencia mínima | Quede siguiente paso claro. |
 
-> Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+## Propósito
 
-## Antes de entrar en clase
+Demostrar comprensión individual, modificar algo pequeño y cerrar el ciclo HEXA con reflexión y mejora.
 
-- [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Plantilla de defensa H1 y portfolio individual.
-- [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
+El concepto se incorpora al Tema 1, pero solo pasa a `Main.java` cuando mejora el producto mínimo. Las demás prácticas se conservan como microejercicios defendibles.
 
 ## Material imprescindible
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
-- Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
-
-## Qué debes explicar
-
-Cómo se defiende una entrega técnica breve.
-
-Guion breve sugerido:
-
-> Hoy necesitamos comprender y practicar lo justo para producir una evidencia verificable. Primero observaremos un ejemplo, después trabajaréis y al final cada persona deberá poder explicar qué hizo y cómo sabe que funciona.
+- presentación de S215;
+- IntelliJ y JDK cuando haya práctica de código;
+- proyecto o microarchivo de prueba;
+- diario individual y tablero Scrum del equipo;
+- datos ficticios.
 
 ## Secuencia de aula
 
-| Tiempo | Acción |
-|---|---|
-| 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
-| 5–13 min | Explicación breve: Defender no es recitar; es explicar código propio y modificar algo simple. |
-| 13–18 min | Demostración o ejemplo: Preguntas modelo: qué es `main`, qué es una variable, qué hace `Scanner`. |
-| 18–35 min | Trabajo del alumnado: Defensa: `main`, variable, constante, `Scanner`, ejecución y límites de H1. |
-| 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |
-| 40–45 min | Cierre: Decidir qué debe mejorar cada alumno antes de H2. |
+| Tiempo / diap. | Tipo y actuación | Alumnado | Observa | Puerta de avance | Si hay retraso |
+|---|---|---|---|---|---|
+| 00:00–00:05 / D1 | COMUNICAR: Explica formato y reduce incertidumbre. | Prepara proyecto y evidencias. | Ansiedad o desconocimiento del formato. | sepan qué se les pedirá. | 4 minutos. |
+| 00:05–00:10 / D2 | MODELO DOCENTE: Haz una mini-defensa modelo con código neutro. Muestra respuesta suficiente y vaga. | Observa criterios. | Si creen que basta “lo hice así porque sí”. | entiendan el estándar. | 3 minutos. |
+| 00:10–00:30 / D3 | DEFENSAS: Realiza defensas rotativas y pide modificación/predicción. | Defiende o ensaya. | Autoría, comprensión, capacidad de predecir y corregir. | haya evidencia individual suficiente o necesidad concreta de recuperación. | prioriza defensa de quienes aún no tienen evidencia individual. |
+| 00:30–00:36 / D4 | MEJORA: Da oportunidad de corrección inmediata de una carencia pequeña. | Mejora y vuelve a defender. | Capacidad de aprender del feedback. | la laguna quede identificada o recuperada. | registra recuperación para otro momento. |
+| 00:36–00:40 / D5 | CIERRE CONCEPTUAL: Pide reconstrucción colectiva y conecta con lo aprendido. | Explica relaciones. | Conceptos aislados sin conexión. | puedan narrar el flujo. | 2 minutos. |
+| 00:40–00:45 / D6 | RETROSPECTIVA: Cierra el ciclo HEXA y pide registro individual. | Reflexiona y registra. | Reflexiones genéricas sin evidencia. | quede siguiente paso claro. | mantén siempre la retrospectiva aunque sea breve. |
+
+## Qué debes explicar
+
+- Enmarca defensa y cierre del hito con un ejemplo observable y una comprobación.
 
 ## Ejemplo o demostración preparada
 
-Preguntas modelo: qué es `main`, qué es una variable, qué hace `Scanner`.
+**D1 · La defensa no es recitar —** Vas a señalar, explicar, ejecutar y modificar una parte pequeña de tu propio H1.
+
+**D2 · Así es una respuesta defendible —** SEÑALA: “Esta línea lee el nombre” / “Esta variable guarda la edad” \| EXPLICA: tipo, decisión y efecto \| DEMUESTRA: ejecuta con una entrada y predice la salida
+
+**D3 · Ronda de defensa + ensayo por parejas —** Mientras una persona defiende, el resto:<br>
+• ensaya preguntas<br>
+• revisa el diario y la selección de evidencias del Site<br>
+• comprueba enlaces<br>
+• prepara una modificación pequeña
+
+**D4 · Si aparece una laguna, se recupera la evidencia concreta —** No hace falta repetir todo H1.<br>
+Investiga → corrige → prueba → vuelve a explicar.
+
+**D5 · Reconstruye el hilo de Tema 1 —** dato → variable → operación/comparación → boolean → decisión → salida
+
+**D6 · Cierra HEXA: comunica y decide la siguiente mejora —** 1 cosa que ya haces solo<br>
+1 cosa que aún necesita apoyo<br>
+1 hábito de trabajo que mantendrás<br>
+1 siguiente mejora para H2
 
 ## Consigna que se entrega al alumnado
 
-Defensa por parejas antes de defensa docente.
-
-Producto o evidencia que debe quedar: **Plantilla de defensa H1 y portfolio individual.**
+1. Predice antes de ejecutar cuando haya código.
+2. Realiza la micropráctica o modificación prevista.
+3. Prueba el caso normal y, cuando exista una decisión o conversión, también el caso alternativo o erróneo.
+4. Conserva el código o resultado en el repositorio o espacio indicado.
+5. Registra una sola entrada en el diario individual; no crees un informe paralelo.
 
 ## Qué observar mientras trabajan
 
-- [ ] Pueden explicar qué están intentando conseguir.
-- [ ] Registran una decisión, prueba o bloqueo; no muestran solo el resultado final.
-- [ ] Todas las personas pueden describir su aportación.
-- [ ] Comprueban el producto con un criterio observable.
-- [ ] No usan datos personales, credenciales ni respuestas de ejemplo antes del intento propio.
+- Ansiedad o desconocimiento del formato.
+- Si creen que basta “lo hice así porque sí”.
+- Autoría, comprensión, capacidad de predecir y corregir.
+- Capacidad de aprender del feedback.
+- Conceptos aislados sin conexión.
+- Reflexiones genéricas sin evidencia.
 
-## Si aparece un bloqueo
+## Criterios para considerar cerrada la sesión
 
-Pide una explicación o modificación individual breve. El producto de equipo no sustituye la evidencia individual.
+- Sepan qué se les pedirá.
+- Entiendan el estándar.
+- Haya evidencia individual suficiente o necesidad concreta de recuperación.
+- La laguna quede identificada o recuperada.
+- Puedan narrar el flujo.
+- Quede siguiente paso claro.
+- La persona puede señalar la evidencia y explicar qué demuestra.
+
+## Seguridad y uso de IA
+
+- Trabajar con datos ficticios.
+- No publicar credenciales, tokens, claves ni información personal.
+- Si la IA interviene de forma sustantiva, registrar propuesta, cambios propios y validación; no aceptar código que no pueda defenderse.
 
 ## Comprobación final
 
-Pregunta de control: **¿Puedes cambiar el mensaje inicial sin romper el programa? ---**
+**¿Qué puedes señalar, explicar, predecir o modificar para demostrar el aprendizaje de esta sesión?**
 
-Criterio para cerrar la sesión:
+## Anotación docente al terminar
 
-- [ ] Existe la evidencia mínima.
-- [ ] Al menos una persona puede demostrarla y otra puede explicarla.
-- [ ] El bloqueo pendiente queda escrito con un siguiente paso concreto.
-
-## Al terminar
-
-Anota solo lo operativo:
-
-- alumnado que necesita apoyo en la siguiente sesión;
+- alumnado que necesita reentrada;
 - evidencia pendiente;
-- error común que conviene retomar;
-- ajuste de tiempo necesario.
+- error común;
+- ajuste temporal necesario sin eliminar el núcleo conceptual.

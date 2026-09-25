@@ -1,69 +1,98 @@
-# Sesión 209 — Ficha de trabajo del alumnado
+# S209 — Diseñar mensajes claros por consola
 
-## Salida por pantalla y mensajes del asistente
-
-| Hoy vas a… | Debe quedar… |
+| Dato | Valor |
 |---|---|
-| Usar `System.out.println` y construir salida legible. | Programa que muestra saludo, propósito y curso. |
+| Hito | H1 — Primer MiniJarvis |
+| Duración | 2 periodos; esta ficha organiza el checkpoint de 45 minutos |
+| Fase HEXA | Idear — proponer soluciones |
+| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
 
-**Tiempo previsto:** 45 minutos.  
-**Hito:** H1.
+> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
 
-## Material que necesitas
+**Objetivo:** Idear la salida de MiniJarvis antes de programarla y usar concatenación cuando sea necesaria.
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
-- Pizarra o una hoja reutilizable para bosquejar antes de modificar el proyecto.
-- Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+**D1** · 00:00–00:05 · IDEAR
 
-## Trabajo de hoy
+## Dos salidas, ¿cuál ayuda más?
 
-1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
-2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Diseñar el primer guion de presentación de MiniJarvis.**
-4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
-5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+**Qué haces:** Compara.
 
-## Registro breve
+**Qué debe quedar:** aparezcan criterios propios.
 
-**Qué intento conseguir:**  
-................................................................................
+**D2** · 00:05–00:10 · PÍLDORA BREVE
 
-**Decisión o hipótesis que probaré:**  
-................................................................................
+## La consola también es una interfaz
 
-**Prueba que he realizado y resultado:**  
-................................................................................
+Aunque solo sea texto, alguien debe entender qué ocurre, qué se le pide y qué resultado obtiene.
 
-**Bloqueo encontrado y siguiente paso:**  
-................................................................................
+**Qué haces:** Propone un criterio de claridad.
 
-## Evidencia mínima antes de salir
+**Qué debe quedar:** tengan 2–3 criterios.
 
-- [ ] He producido o actualizado: **Programa que muestra saludo, propósito y curso.**
-- [ ] Puedo señalar dónde está.
-- [ ] Puedo explicar una decisión tomada.
-- [ ] Puedo mostrar una prueba o comprobación.
-- [ ] He registrado mi aportación individual si el trabajo era de equipo.
+**D3** · 00:10–00:20 · ACTIVIDAD DE IDEACIÓN
+
+## Generad alternativas antes de programar
+
+Cada equipo propone al menos 2 versiones de:<br>
+• saludo<br>
+• propósito<br>
+• mensaje final<br>
+<br>
+Todavía NO programéis.
+
+**Qué haces:** Genera y compara alternativas.
+
+**Qué debe quedar:** haya al menos dos opciones y una decisión justificada.
+
+**D4** · 00:20–00:26 · PÍLDORA DOCENTE 1/1
+
+## Literal y concatenación
+
+String userName = "Laura";<br>
+System.out.println("Hola, " + userName + ".");
+
+**Qué haces:** Predice la salida.
+
+**Qué debe quedar:** puedan predecir el mensaje.
+
+**D5** · 00:26–00:40 · ACTIVIDAD
+
+## Construye y mejora la salida elegida
+
+1\. Implementa los mensajes.<br>
+2. Ejecuta.<br>
+3. Pide a otra persona que lea solo la consola.<br>
+4. Mejora una frase si hace falta.
+
+**Qué haces:** Programa, prueba e itera.
+
+**Qué debe quedar:** la salida sea legible y coherente con H1.
+
+**D6** · 00:40–00:45 · CIERRE
+
+## Registra la decisión de diseño
+
+¿Qué mensaje elegiste?<br>
+¿Por qué?<br>
+¿Qué cambiaste después de verlo ejecutado?
+
+**Qué haces:** Documenta decisión y mejora.
+
+**Qué debe quedar:** quede trazabilidad de la ideación.
+
+**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
+
+## Evidencia única antes de salir
+
+- conserva el código o la prueba en el lugar indicado por la sesión;
+- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
+- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
 
 ## Seguridad y uso de IA
 
-- Trabaja únicamente con datos ficticios.
-- No escribas contraseñas, tokens, claves API ni datos personales.
-- Si utilizas IA en un uso permitido, registra qué pediste, qué recibiste, qué cambiaste y cómo lo comprobaste.
-- Los ejemplos de Laura solo se consultan después del intento propio.
+- Usa datos ficticios y no publiques credenciales ni información personal.
+- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
 
-## Si te bloqueas
+## Cierre individual
 
-1. Copia el mensaje exacto o describe qué observas.
-2. Indica qué esperabas que ocurriera.
-3. Reduce el problema a una prueba pequeña.
-4. Pide ayuda mostrando esos tres datos; no pidas directamente la solución completa.
-
-## Cierre
-
-Responde sin copiar: **Revisar si la salida es comprensible para una persona usuaria.**
-
-Respuesta:  
-................................................................................
-
-La sesión está completada cuando la evidencia existe, se ha comprobado y puedes defenderla brevemente.
+**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**

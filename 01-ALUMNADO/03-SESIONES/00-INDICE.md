@@ -12,16 +12,16 @@
 | 203 | Microprueba y equipos provisionales de 3 o 4 | [Abrir](h0/S203-microprueba-y-equipos-provisionales-de-3-o-4-alumnado) |
 | 204 | Sprint de torre prueba review y retrospectiva | [Abrir](h0/S204-sprint-de-torre-prueba-review-y-retrospectiva-alumnado) |
 | 205 | Transferencia a minijarvis y contrato de equipo | [Abrir](h0/S205-transferencia-a-minijarvis-y-contrato-de-equipo-alumnado) |
-| 206 | Presentar h1 y delimitar alcance | [Abrir](h1/S206-presentar-h1-y-delimitar-alcance-alumnado) |
-| 207 | Entorno de trabajo intellij proyecto y ejecucion | [Abrir](h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-alumnado) |
-| 208 | Estructura minima de un programa java | [Abrir](h1/S208-estructura-minima-de-un-programa-java-alumnado) |
-| 209 | Salida por pantalla y mensajes del asistente | [Abrir](h1/S209-salida-por-pantalla-y-mensajes-del-asistente-alumnado) |
-| 210 | Variables | [Abrir](h1/S210-variables-alumnado) |
-| 211 | Constantes | [Abrir](h1/S211-constantes-alumnado) |
-| 212 | Entrada por teclado con scanner | [Abrir](h1/S212-entrada-por-teclado-con-scanner-alumnado) |
-| 213 | Limpieza nombres claros y simplicidad | [Abrir](h1/S213-limpieza-nombres-claros-y-simplicidad-alumnado) |
-| 214 | Readme y evidencia de ejecucion | [Abrir](h1/S214-readme-y-evidencia-de-ejecucion-alumnado) |
-| 215 | Defensa y cierre h1 | [Abrir](h1/S215-defensa-y-cierre-h1-alumnado) |
+| 206 | Reto y alcance de H1 | [Abrir](h1/S206-presentar-h1-y-delimitar-alcance-alumnado) |
+| 207 | Entorno Java y ciclo de ejecución | [Abrir](h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-alumnado) |
+| 208 | Estructura Java y errores de compilación | [Abrir](h1/S208-estructura-minima-de-un-programa-java-alumnado) |
+| 209 | Salida por pantalla | [Abrir](h1/S209-salida-por-pantalla-y-mensajes-del-asistente-alumnado) |
+| 210 | Variables y tipos | [Abrir](h1/S210-variables-alumnado) |
+| 211 | Constantes, literales y operaciones | [Abrir](h1/S211-constantes-alumnado) |
+| 212 | Scanner y conversiones | [Abrir](h1/S212-entrada-por-teclado-con-scanner-alumnado) |
+| 213 | Comparaciones, lógica y decisiones | [Abrir](h1/S213-limpieza-nombres-claros-y-simplicidad-alumnado) |
+| 214 | Documentar, probar y comunicar H1 | [Abrir](h1/S214-readme-y-evidencia-de-ejecucion-alumnado) |
+| 215 | Defender y cerrar el Tema 1 | [Abrir](h1/S215-defensa-y-cierre-h1-alumnado) |
 | 216 | Presentar h2 desde h1 | [Abrir](h2/S216-presentar-h2-desde-h1-alumnado) |
 | 217 | Diseno de comandos antes de programar | [Abrir](h2/S217-diseno-de-comandos-antes-de-programar-alumnado) |
 | 218 | Booleanos y variable de control | [Abrir](h2/S218-booleanos-y-variable-de-control-alumnado) |

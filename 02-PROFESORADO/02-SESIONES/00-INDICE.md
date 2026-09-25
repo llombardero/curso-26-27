@@ -14,16 +14,16 @@ Edición final para Moodle — curso 2026/2027.
 | 203 | Microprueba y equipos provisionales de 3 o 4 | [Abrir](h0/S203-microprueba-y-equipos-provisionales-de-3-o-4-docente.md) |
 | 204 | Sprint de torre prueba review y retrospectiva | [Abrir](h0/S204-sprint-de-torre-prueba-review-y-retrospectiva-docente.md) |
 | 205 | Transferencia a minijarvis y contrato de equipo | [Abrir](h0/S205-transferencia-a-minijarvis-y-contrato-de-equipo-docente.md) |
-| 206 | Presentar h1 y delimitar alcance | [Abrir](h1/S206-presentar-h1-y-delimitar-alcance-docente.md) |
-| 207 | Entorno de trabajo intellij proyecto y ejecucion | [Abrir](h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-docente.md) |
-| 208 | Estructura minima de un programa java | [Abrir](h1/S208-estructura-minima-de-un-programa-java-docente.md) |
-| 209 | Salida por pantalla y mensajes del asistente | [Abrir](h1/S209-salida-por-pantalla-y-mensajes-del-asistente-docente.md) |
-| 210 | Variables | [Abrir](h1/S210-variables-docente.md) |
-| 211 | Constantes | [Abrir](h1/S211-constantes-docente.md) |
-| 212 | Entrada por teclado con scanner | [Abrir](h1/S212-entrada-por-teclado-con-scanner-docente.md) |
-| 213 | Limpieza nombres claros y simplicidad | [Abrir](h1/S213-limpieza-nombres-claros-y-simplicidad-docente.md) |
-| 214 | Readme y evidencia de ejecucion | [Abrir](h1/S214-readme-y-evidencia-de-ejecucion-docente.md) |
-| 215 | Defensa y cierre h1 | [Abrir](h1/S215-defensa-y-cierre-h1-docente.md) |
+| 206 | Reto y alcance de H1 | [Abrir](h1/S206-presentar-h1-y-delimitar-alcance-docente.md) |
+| 207 | Entorno Java y ciclo de ejecución | [Abrir](h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-docente.md) |
+| 208 | Estructura Java y errores de compilación | [Abrir](h1/S208-estructura-minima-de-un-programa-java-docente.md) |
+| 209 | Salida por pantalla | [Abrir](h1/S209-salida-por-pantalla-y-mensajes-del-asistente-docente.md) |
+| 210 | Variables y tipos | [Abrir](h1/S210-variables-docente.md) |
+| 211 | Constantes, literales y operaciones | [Abrir](h1/S211-constantes-docente.md) |
+| 212 | Scanner y conversiones | [Abrir](h1/S212-entrada-por-teclado-con-scanner-docente.md) |
+| 213 | Comparaciones, lógica y decisiones | [Abrir](h1/S213-limpieza-nombres-claros-y-simplicidad-docente.md) |
+| 214 | Documentar, probar y comunicar H1 | [Abrir](h1/S214-readme-y-evidencia-de-ejecucion-docente.md) |
+| 215 | Defender y cerrar el Tema 1 | [Abrir](h1/S215-defensa-y-cierre-h1-docente.md) |
 | 216 | Presentar h2 desde h1 | [Abrir](h2/S216-presentar-h2-desde-h1-docente.md) |
 | 217 | Diseno de comandos antes de programar | [Abrir](h2/S217-diseno-de-comandos-antes-de-programar-docente.md) |
 | 218 | Booleanos y variable de control | [Abrir](h2/S218-booleanos-y-variable-de-control-docente.md) |

@@ -7,7 +7,7 @@
 | Hito | H2 |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Activar — entender el reto |
-| Resultado de hoy | Entender la diferencia entre programa lineal e interactivo. |
+| Resultado de hoy | Entender cómo H2 integra en un programa interactivo las decisiones básicas practicadas en H1. |
 | Evidencia mínima | Tabla H1 frente a H2. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
@@ -25,7 +25,7 @@
 
 ## Qué debes explicar
 
-H2 añade menú, comandos y repetición hasta `salir`.
+H2 añade menú, comandos y repetición hasta `salir`; no presenta `if/else` como novedad, sino que lo aplica y amplía.
 
 Guion breve sugerido:
 
@@ -36,7 +36,7 @@ Guion breve sugerido:
 | Tiempo | Acción |
 |---|---|
 | 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
-| 5–13 min | Explicación breve: H1 era lineal; H2 será interactivo. La diferencia clave es repetir y decidir. |
+| 5–13 min | Explicación breve: el producto H1 era lineal y las decisiones quedaron en microprácticas; H2 las integra, encadena y repite. |
 | 13–18 min | Demostración o ejemplo: Ejecuta una salida H1 y pregunta por qué termina. |
 | 18–35 min | Trabajo del alumnado: Comparar salida H1 con comportamiento esperado H2. |
 | 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |
@@ -66,7 +66,7 @@ No entregues la solución completa. Pide que localicen el error, predigan el res
 
 ## Comprobación final
 
-Pregunta de control: **¿Qué dos estructuras nuevas necesitamos?**
+Pregunta de control: **¿Qué aporta el bucle y cómo reutiliza las decisiones que ya conoces?**
 
 Criterio para cerrar la sesión:
 

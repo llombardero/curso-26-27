@@ -1,68 +1,95 @@
-# Sesión 215 — Ficha de trabajo del alumnado
+# S215 — Defensa y cierre del hito
 
-## Defensa y cierre H1
-
-| Hoy vas a… | Debe quedar… |
+| Dato | Valor |
 |---|---|
-| Validar comprensión individual. | Plantilla de defensa H1 y portfolio individual. |
+| Hito | H1 — Primer MiniJarvis |
+| Duración | 2 periodos; esta ficha organiza el checkpoint de 45 minutos |
+| Fase HEXA | Comunicar — evaluar y reflexionar |
+| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
 
-**Tiempo previsto:** 45 minutos.  
-**Hito:** H1.
+> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
 
-## Material que necesitas
+**Objetivo:** Demostrar comprensión individual, modificar algo pequeño y cerrar el ciclo HEXA con reflexión y mejora.
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
-- Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+**D1** · 00:00–00:05 · COMUNICAR
 
-## Trabajo de hoy
+## La defensa no es recitar
 
-1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
-2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Defensa: `main`, variable, constante, `Scanner`, ejecución y límites de H1.**
-4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
-5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+Vas a señalar, explicar, ejecutar y modificar una parte pequeña de tu propio H1.
 
-## Registro breve
+**Qué haces:** Prepara proyecto y evidencias.
 
-**Qué intento conseguir:**  
-................................................................................
+**Qué debe quedar:** sepan qué se les pedirá.
 
-**Decisión o hipótesis que probaré:**  
-................................................................................
+**D2** · 00:05–00:10 · MODELO DOCENTE
 
-**Prueba que he realizado y resultado:**  
-................................................................................
+## Así es una respuesta defendible
 
-**Bloqueo encontrado y siguiente paso:**  
-................................................................................
+**Qué haces:** Observa criterios.
 
-## Evidencia mínima antes de salir
+**Qué debe quedar:** entiendan el estándar.
 
-- [ ] He producido o actualizado: **Plantilla de defensa H1 y portfolio individual.**
-- [ ] Puedo señalar dónde está.
-- [ ] Puedo explicar una decisión tomada.
-- [ ] Puedo mostrar una prueba o comprobación.
-- [ ] He registrado mi aportación individual si el trabajo era de equipo.
+**D3** · 00:10–00:30 · DEFENSAS
+
+## Ronda de defensa + ensayo por parejas
+
+Mientras una persona defiende, el resto:<br>
+• ensaya preguntas<br>
+• revisa el diario y la selección de evidencias del Site<br>
+• comprueba enlaces<br>
+• prepara una modificación pequeña
+
+**Qué haces:** Defiende o ensaya.
+
+**Qué debe quedar:** haya evidencia individual suficiente o necesidad concreta de recuperación.
+
+**D4** · 00:30–00:36 · MEJORA
+
+## Si aparece una laguna, se recupera la evidencia concreta
+
+No hace falta repetir todo H1.<br>
+Investiga → corrige → prueba → vuelve a explicar.
+
+**Qué haces:** Mejora y vuelve a defender.
+
+**Qué debe quedar:** la laguna quede identificada o recuperada.
+
+**D5** · 00:36–00:40 · CIERRE CONCEPTUAL
+
+## Reconstruye el hilo de Tema 1
+
+dato → variable → operación/comparación → boolean → decisión → salida
+
+**Qué haces:** Explica relaciones.
+
+**Qué debe quedar:** puedan narrar el flujo.
+
+**D6** · 00:40–00:45 · RETROSPECTIVA
+
+## Cierra HEXA: comunica y decide la siguiente mejora
+
+1 cosa que ya haces solo<br>
+1 cosa que aún necesita apoyo<br>
+1 hábito de trabajo que mantendrás<br>
+1 siguiente mejora para H2
+
+**Qué haces:** Reflexiona y registra.
+
+**Qué debe quedar:** quede siguiente paso claro.
+
+**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
+
+## Evidencia única antes de salir
+
+- conserva el código o la prueba en el lugar indicado por la sesión;
+- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
+- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
 
 ## Seguridad y uso de IA
 
-- Trabaja únicamente con datos ficticios.
-- No escribas contraseñas, tokens, claves API ni datos personales.
-- Si utilizas IA en un uso permitido, registra qué pediste, qué recibiste, qué cambiaste y cómo lo comprobaste.
-- Los ejemplos de Laura solo se consultan después del intento propio.
+- Usa datos ficticios y no publiques credenciales ni información personal.
+- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
 
-## Si te bloqueas
+## Cierre individual
 
-1. Copia el mensaje exacto o describe qué observas.
-2. Indica qué esperabas que ocurriera.
-3. Reduce el problema a una prueba pequeña.
-4. Pide ayuda mostrando esos tres datos; no pidas directamente la solución completa.
-
-## Cierre
-
-Responde sin copiar: **Decidir qué debe mejorar cada alumno antes de H2.**
-
-Respuesta:  
-................................................................................
-
-La sesión está completada cuando la evidencia existe, se ha comprobado y puedes defenderla brevemente.
+**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**

@@ -192,8 +192,8 @@ Tema 1. Aspectos básicos de la programación.pdf
 Este tema alimenta principalmente:
 
 ```text
-H1 — Primer asistente básico
-H2 — Primeras decisiones y depuración
+H1 — Primer asistente y decisión elemental
+H2 — Decisiones aplicadas, repetición y depuración
 ```
 
 Conceptos clave que deben quedar dominados antes de avanzar:
@@ -1669,7 +1669,7 @@ Criterio de lectura:
 | if | H1 | H2-HF | Estructura que ejecuta código solo si se cumple una condición. | En la primera toma de decisiones. | Si el nombre está vacío, mostrar aviso. |
 | if-else | H1 | H2-HF | Estructura que elige entre dos caminos. | Cuando hay respuesta alternativa. | Si hay recuerdos, mostrarlos; si no, decir que no hay memoria. |
 | Condiciones encadenadas | H2 | H3-HF | Varios `if/else if/else` para elegir entre múltiples casos. | En menús pequeños antes de refactorizar. | `ayuda`, `salir`, `recordar`, comando desconocido. |
-| Asignación condicional | H2 | H7 | Forma de elegir un valor según condición. | Para simplificar asignaciones sencillas. | Mensaje distinto si el usuario tiene recuerdos o no. |
+| Asignación condicional | H1 | H2-H7 | Forma de elegir un valor según condición. | Para simplificar asignaciones sencillas. | Mensaje distinto según una comparación elemental. |
 | switch-case | H2 | H5 | Selección entre valores discretos. | Para menús de comandos antes de introducir Command. | `switch (command)` con `ayuda`, `recordar`, `salir`. |
 | switch mejorado | H2 | H5-H7 | Variante moderna de `switch` más expresiva. | Cuando mejora legibilidad sin adelantar complejidad. | `case "ayuda" -> showHelp();`. |
 | break | H2 | H5 | Instrucción que evita que un `switch` clásico continúe al siguiente caso. | En `switch-case` tradicional. | Terminar el caso `ayuda` tras mostrar comandos. |

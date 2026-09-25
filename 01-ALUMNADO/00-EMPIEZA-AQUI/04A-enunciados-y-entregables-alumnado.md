@@ -119,62 +119,59 @@ Cada persona debe poder explicar qué aportó, qué practicó y qué cambiaría.
 
 ---
 
-## 4. H1 — Primer asistente básico
+## 4. H1 — Primer MiniJarvis
 
-### Enunciado para el alumnado
+### Enunciado
 
-Vais a crear la primera versión de vuestro asistente por consola en Java.
+Construid la primera versión ejecutable de MiniJarvis en Java. El producto principal debe ser pequeño: presentación, entrada con `Scanner`, variables y tipos adecuados, una constante, una operación útil y una salida clara.
 
-Debe ser una versión muy sencilla. Todavía no debe tener menú, bucles, `switch`, comandos avanzados ni inteligencia artificial real.
+H1 también cubre el Tema 1 mediante microprácticas: entorno Java, estructura, errores de compilación, literales, operaciones y precedencia, conversiones, comparaciones, booleanos y una decisión `if/else` básica. No forcéis todo dentro de `Main.java`.
 
-El objetivo es demostrar que comprendéis la estructura básica de un programa Java, el uso de variables, constantes, entrada por teclado y salida por pantalla.
+H1 no necesita menú, bucle principal, `switch`, colecciones, persistencia, clases propias adicionales ni IA real. H2 integrará las decisiones en comandos, repetición, pruebas y depuración.
 
 ### Qué debe hacer el alumnado
 
-1. Crear un proyecto Java en IntelliJ.
-2. Crear una clase `Main`.
-3. Mostrar un saludo inicial.
-4. Pedir el nombre de la persona usuaria.
-5. Guardar el nombre en una variable.
-6. Usar al menos una constante.
-7. Mostrar varios mensajes relacionados con el futuro agente IA.
-8. Preparar un README con instrucciones de ejecución.
-9. Subir el proyecto a GitHub o entregarlo en formato alternativo si hay problemas.
+1. Crear y ejecutar el proyecto Java.
+2. Construir el producto mínimo y mantenerlo simple.
+3. Conservar las microprácticas del Tema 1 en el repositorio.
+4. Predecir antes de ejecutar y probar resultados normales y alternativos.
+5. Preparar un README con instrucciones, transcripción real y pruebas.
+6. Registrar una sola fila personal por checkpoint significativo.
+7. Actualizar Scrum solo con tareas, decisiones y bloqueos de equipo.
+8. Publicar Sites que seleccionen y enlacen, sin copiar diario ni Scrum.
+9. Entregar en Moodle enlaces profundos y defender el trabajo.
 
-### Qué debe entregar el alumnado
+### Evidencia única
 
-| Entregable | Responsable | Formato |
-|---|---|---|
-| Código Java básico | Equipo o individual, según organización | `src/Main.java` |
-| README de ejecución | Equipo | `README` |
-| Evidencia de ejecución | Equipo | Captura o bloque de salida |
-| Portfolio H1 | Individual | `docs/portfolio-h1` |
-| Registro de IA, si se usa | Individual | `docs/registro-ia` |
-| Defensa oral H1 | Individual y obligatoria | Explicación y modificación breve en directo |
+| Finalidad | Fuente de verdad |
+|---|---|
+| Producto, microprácticas y trazabilidad | repositorio y commits |
+| Ejecución, instrucciones y pruebas | README |
+| Proceso e IA personal | diario individual |
+| Proceso e IA del equipo | Sheet Scrum |
+| Selección personal | Site personal |
+| Comunicación del incremento | Site de equipo |
+| Entrega | Moodle con enlaces profundos |
+| Comprensión y autoría | defensa y modificación breve |
+
+No se exige una captura de ejecución, portfolio o registro de IA como archivo separado si esa información ya está en su fuente canónica.
 
 ### Uso de IA
 
-Permitido en verde para:
+Puede utilizarse para comprender conceptos, interpretar errores, revisar claridad o preparar preguntas. Si el uso es sustantivo, se registra en el diario personal o en Scrum y se valida mediante predicción, ejecución, contraste y defensa.
 
-- pedir explicación de conceptos;
-- preguntar qué es `Scanner`;
-- preguntar qué es `final`;
-- pedir ejemplos pequeños que luego se adapten.
-
-No permitido:
-
-- entregar un programa completo generado por IA que no puedas explicar.
+No se acepta código que la persona no pueda explicar y modificar.
 
 ### Defensa
 
-Preguntas posibles:
+La persona debe poder:
 
-- ¿Dónde empieza el programa?
-- ¿Qué variable guarda el nombre?
-- ¿Qué constante has usado?
-- ¿Qué hace `Scanner`?
-- ¿Cómo se ejecuta desde IntelliJ?
-- ¿Por qué todavía no hay menú?
+- localizar `main` y explicar el flujo del producto;
+- justificar variables, tipos, constantes y operaciones;
+- explicar `Scanner`, una conversión y un error de conversión;
+- predecir una comparación y las dos ramas de una decisión básica;
+- ejecutar, probar y modificar una parte pequeña;
+- distinguir producto principal y microprácticas.
 
 ---
 

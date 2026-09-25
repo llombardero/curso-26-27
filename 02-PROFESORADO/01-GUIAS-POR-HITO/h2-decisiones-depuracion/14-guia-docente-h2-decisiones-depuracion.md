@@ -82,7 +82,7 @@ El hito introduce:
 |---|---|
 | Programa lineal. | Programa que se repite hasta escribir `salir`. |
 | Saludo y nombre. | Menú con comandos. |
-| Variables y constantes. | Decisiones, bucles y control de entrada. |
+| Variables, constantes, comparaciones y una decisión elemental en microprácticas. | Decisiones aplicadas y encadenadas dentro de un menú, bucles y control de entrada. |
 | README básico. | README + pruebas + depuración + incidencia. |
 | Defensa de conceptos básicos. | Defensa de flujo, menú, breakpoint y casos de prueba. |
 
@@ -225,7 +225,7 @@ Hasta pronto, Laura.
 Mensaje docente:
 
 ```text
-H1 era una secuencia lineal. H2 añade decisiones y repetición. MiniJarvis ahora podrá recibir comandos hasta que el usuario escriba salir.
+El producto principal H1 era lineal, aunque el alumnado ya probó comparaciones, booleanos y un `if/else` básico en microprácticas. H2 integra y encadena esas decisiones dentro de un menú repetitivo, con pruebas y depuración, hasta que el usuario escriba salir.
 ```
 
 Pregunta inicial:

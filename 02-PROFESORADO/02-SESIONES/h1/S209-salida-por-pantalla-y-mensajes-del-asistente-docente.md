@@ -1,85 +1,115 @@
-# Sesión 209 — Guía operativa del profesorado
+# S209 — Guía docente
 
-## Salida por pantalla y mensajes del asistente
+## Diseñar mensajes claros por consola
 
 | Dato | Valor |
 |---|---|
-| Hito | H1 |
-| Duración prevista | 45 minutos |
-| Fase HEXA del hito | Idear — proponer soluciones |
-| Resultado de hoy | Usar `System.out.println` y construir salida legible. |
-| Evidencia mínima | Programa que muestra saludo, propósito y curso. |
+| Hito | H1 — Primer MiniJarvis |
+| Duración | 2 periodos; checkpoint proyectable de 45 minutos y taller asociado |
+| Fase HEXA | Idear — proponer soluciones |
+| Agrupamiento | Individual con contraste por parejas o equipo cuando la práctica lo requiera |
+| Resultado observable | Idear la salida de MiniJarvis antes de programarla y usar concatenación cuando sea necesaria. |
+| Evidencia mínima | Quede trazabilidad de la ideación. |
 
-> Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+## Propósito
 
-## Antes de entrar en clase
+Idear la salida de MiniJarvis antes de programarla y usar concatenación cuando sea necesaria.
 
-- [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Programa que muestra saludo, propósito y curso.
-- [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
+El concepto se incorpora al Tema 1, pero solo pasa a `Main.java` cuando mejora el producto mínimo. Las demás prácticas se conservan como microejercicios defendibles.
 
 ## Material imprescindible
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
-- Pizarra o una hoja reutilizable para bosquejar antes de modificar el proyecto.
-- Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
-
-## Qué debes explicar
-
-Diferencia entre texto literal, concatenación y orden de mensajes.
-
-Guion breve sugerido:
-
-> Hoy necesitamos comprender y practicar lo justo para producir una evidencia verificable. Primero observaremos un ejemplo, después trabajaréis y al final cada persona deberá poder explicar qué hizo y cómo sabe que funciona.
+- presentación de S209;
+- IntelliJ y JDK cuando haya práctica de código;
+- proyecto o microarchivo de prueba;
+- diario individual y tablero Scrum del equipo;
+- datos ficticios.
 
 ## Secuencia de aula
 
-| Tiempo | Acción |
-|---|---|
-| 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
-| 5–13 min | Explicación breve: La consola es la primera interfaz. La salida debe ser clara para el usuario. |
-| 13–18 min | Demostración o ejemplo: Comparar mensajes confusos con mensajes claros. |
-| 18–35 min | Trabajo del alumnado: Diseñar el primer guion de presentación de MiniJarvis. |
-| 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |
-| 40–45 min | Cierre: Revisar si la salida es comprensible para una persona usuaria. |
+| Tiempo / diap. | Tipo y actuación | Alumnado | Observa | Puerta de avance | Si hay retraso |
+|---|---|---|---|---|---|
+| 00:00–00:05 / D1 | IDEAR: Pide elegir y justificar por claridad. | Compara. | Criterios de claridad y orden. | aparezcan criterios propios. | 3 minutos. |
+| 00:05–00:10 / D2 | PÍLDORA BREVE: Conecta diseño de mensajes con experiencia de usuario sin introducir teoría extra. | Propone un criterio de claridad. | Mensajes técnicos o ambiguos. | tengan 2–3 criterios. | 2 minutos. |
+| 00:10–00:20 / D3 | ACTIVIDAD DE IDEACIÓN: Impide que salten directamente al IDE. Facilita con preguntas. | Genera y compara alternativas. | Si idean de verdad o copian la primera ocurrencia. | haya al menos dos opciones y una decisión justificada. | una alternativa + mejora de la original. |
+| 00:20–00:26 / D4 | PÍLDORA DOCENTE 1/1: Explica literal de texto y concatenación solo porque ahora necesitan insertar un dato. | Predice la salida. | Confusión entre + como suma y concatenación. | puedan predecir el mensaje. | 4 minutos. |
+| 00:26–00:40 / D5 | ACTIVIDAD: Circula y pide justificar decisiones. | Programa, prueba e itera. | Mensajes que prometen funciones aún inexistentes. | la salida sea legible y coherente con H1. | omite el intercambio y haz revisión rápida por parejas. |
+| 00:40–00:45 / D6 | CIERRE: Pide un registro breve en el diario individual. | Documenta decisión y mejora. | Capacidad de justificar. | quede trazabilidad de la ideación. | respuesta oral + anotación posterior. |
+
+## Qué debes explicar
+
+- **PÍLDORA BREVE:** Conecta diseño de mensajes con experiencia de usuario sin introducir teoría extra.
+- **PÍLDORA DOCENTE 1/1:** Explica literal de texto y concatenación solo porque ahora necesitan insertar un dato.
 
 ## Ejemplo o demostración preparada
 
-Comparar mensajes confusos con mensajes claros.
+**D1 · Dos salidas, ¿cuál ayuda más? —** A: MJ v1<br>
+2026<br>
+ok \| B: Hola, soy MiniJarvis.<br>
+Estoy en mi primera versión por consola.<br>
+Curso de trabajo: 2026.
+
+**D2 · La consola también es una interfaz —** Aunque solo sea texto, alguien debe entender qué ocurre, qué se le pide y qué resultado obtiene.
+
+**D3 · Generad alternativas antes de programar —** Cada equipo propone al menos 2 versiones de:<br>
+• saludo<br>
+• propósito<br>
+• mensaje final<br>
+<br>
+Todavía NO programéis.
+
+**D4 · Literal y concatenación —** String userName = "Laura";<br>
+System.out.println("Hola, " + userName + ".");
+
+**D5 · Construye y mejora la salida elegida —** 1. Implementa los mensajes.<br>
+2. Ejecuta.<br>
+3. Pide a otra persona que lea solo la consola.<br>
+4. Mejora una frase si hace falta.
+
+**D6 · Registra la decisión de diseño —** ¿Qué mensaje elegiste?<br>
+¿Por qué?<br>
+¿Qué cambiaste después de verlo ejecutado?
 
 ## Consigna que se entrega al alumnado
 
-Diseñar los primeros mensajes de MiniJarvis.
-
-Producto o evidencia que debe quedar: **Programa que muestra saludo, propósito y curso.**
+1. Predice antes de ejecutar cuando haya código.
+2. Realiza la micropráctica o modificación prevista.
+3. Prueba el caso normal y, cuando exista una decisión o conversión, también el caso alternativo o erróneo.
+4. Conserva el código o resultado en el repositorio o espacio indicado.
+5. Registra una sola entrada en el diario individual; no crees un informe paralelo.
 
 ## Qué observar mientras trabajan
 
-- [ ] Pueden explicar qué están intentando conseguir.
-- [ ] Registran una decisión, prueba o bloqueo; no muestran solo el resultado final.
-- [ ] Todas las personas pueden describir su aportación.
-- [ ] Comprueban el producto con un criterio observable.
-- [ ] No usan datos personales, credenciales ni respuestas de ejemplo antes del intento propio.
+- Criterios de claridad y orden.
+- Mensajes técnicos o ambiguos.
+- Si idean de verdad o copian la primera ocurrencia.
+- Confusión entre + como suma y concatenación.
+- Mensajes que prometen funciones aún inexistentes.
+- Capacidad de justificar.
 
-## Si aparece un bloqueo
+## Criterios para considerar cerrada la sesión
 
-Pide una explicación o modificación individual breve. El producto de equipo no sustituye la evidencia individual.
+- Aparezcan criterios propios.
+- Tengan 2–3 criterios.
+- Haya al menos dos opciones y una decisión justificada.
+- Puedan predecir el mensaje.
+- La salida sea legible y coherente con H1.
+- Quede trazabilidad de la ideación.
+- La persona puede señalar la evidencia y explicar qué demuestra.
+
+## Seguridad y uso de IA
+
+- Trabajar con datos ficticios.
+- No publicar credenciales, tokens, claves ni información personal.
+- Si la IA interviene de forma sustantiva, registrar propuesta, cambios propios y validación; no aceptar código que no pueda defenderse.
 
 ## Comprobación final
 
-Pregunta de control: **¿Qué verá exactamente la persona usuaria al ejecutar?**
+**¿Qué puedes señalar, explicar, predecir o modificar para demostrar el aprendizaje de esta sesión?**
 
-Criterio para cerrar la sesión:
+## Anotación docente al terminar
 
-- [ ] Existe la evidencia mínima.
-- [ ] Al menos una persona puede demostrarla y otra puede explicarla.
-- [ ] El bloqueo pendiente queda escrito con un siguiente paso concreto.
-
-## Al terminar
-
-Anota solo lo operativo:
-
-- alumnado que necesita apoyo en la siguiente sesión;
+- alumnado que necesita reentrada;
 - evidencia pendiente;
-- error común que conviene retomar;
-- ajuste de tiempo necesario.
+- error común;
+- ajuste temporal necesario sin eliminar el núcleo conceptual.

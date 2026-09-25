@@ -8,7 +8,7 @@ Curso: 1.º DAW — Programación
 
 ## 1. Reto
 
-Vais a convertir MiniJarvis H1 en un agente con menú de comandos.
+Vais a convertir el producto lineal de H1 en un agente con menú de comandos. En H1 ya probaste comparaciones, booleanos y un `if/else` básico; ahora los integrarás en un flujo repetitivo, probarás casos y depurarás errores.
 
 Ahora el programa no debe terminar después del primer saludo. Debe seguir funcionando hasta que la persona usuaria escriba:
 
@@ -37,7 +37,7 @@ Comandos mínimos:
 ```text
 [x] Menú.
 [x] Bucle hasta escribir salir.
-[x] if/else o switch.
+[x] if/else encadenado o `switch` aplicado a varios comandos.
 [x] Comandos básicos.
 [x] Comando desconocido.
 [x] Pruebas manuales.

@@ -1,67 +1,108 @@
-# Sesión 207 — Ficha de trabajo del alumnado
+# S207 — Del código fuente a la consola
 
-## Entorno de trabajo: IntelliJ, proyecto y ejecución
-
-| Hoy vas a… | Debe quedar… |
+| Dato | Valor |
 |---|---|
-| Crear y ejecutar un proyecto Java mínimo. | Captura o documento de primera ejecución. |
+| Hito | H1 — Primer MiniJarvis |
+| Duración | 3 periodos; esta ficha organiza el checkpoint de 45 minutos |
+| Fase HEXA | Investigar — aprender lo necesario |
+| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
 
-**Tiempo previsto:** 45 minutos.  
-**Hito:** H1.
+> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
 
-## Material que necesitas
+**Objetivo:** Comprender el camino código fuente → compilación → ejecución → consola y conseguir una primera ejecución.
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
+**D1** · 00:00–00:04 · INVESTIGAR
 
-## Trabajo de hoy
+## Hoy investigamos el recorrido del programa
 
-1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
-2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Crear proyecto en IntelliJ, clase `Main` y primer `println`.**
-4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
-5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+¿Qué ocurre entre escribir Main.java y ver un mensaje en la consola?
 
-## Registro breve
+**Qué haces:** Anticipa pasos.
 
-**Qué intento conseguir:**  
-................................................................................
+**Qué debe quedar:** haya hipótesis de pasos.
 
-**Decisión o hipótesis que probaré:**  
-................................................................................
+**D2** · 00:04–00:10 · PÍLDORA DOCENTE 1/2
 
-**Prueba que he realizado y resultado:**  
-................................................................................
+## Código → compilación → ejecución → consola
 
-**Bloqueo encontrado y siguiente paso:**  
-................................................................................
+**Qué haces:** Copia o reconstruye el mapa y hace una pregunta.
 
-## Evidencia mínima antes de salir
+**Qué debe quedar:** distingan archivo, proyecto y salida.
 
-- [ ] He producido o actualizado: **Captura o documento de primera ejecución.**
-- [ ] Puedo señalar dónde está.
-- [ ] Puedo explicar una decisión tomada.
-- [ ] Puedo mostrar una prueba o comprobación.
-- [ ] He registrado mi aportación individual si el trabajo era de equipo.
+**D3** · 00:10–00:16 · DEMOSTRACIÓN
+
+## Primera ejecución: mira antes de copiar
+
+public class Main {<br>
+public static void main(String\[\] args) {<br>
+System.out.println("Hola, soy MiniJarvis.");<br>
+}<br>
+}
+
+**Qué haces:** Observa primero; después reproduce.
+
+**Qué debe quedar:** la mayoría tenga el proyecto listo.
+
+**D4** · 00:16–00:27 · ACTIVIDAD
+
+## Ahora ejecútalo tú
+
+1\. Escribe un mensaje distinto al del ejemplo.<br>
+2. Predice la salida.<br>
+3. Ejecuta.<br>
+4. Comprueba si coincide.
+
+**Qué haces:** Escribe, predice y ejecuta.
+
+**Qué debe quedar:** cada persona haya logrado al menos una ejecución.
+
+**D5** · 00:27–00:33 · MICROINVESTIGACIÓN
+
+## Rompe algo a propósito
+
+Quita un ; o una comilla.<br>
+<br>
+Antes de corregir:<br>
+• ¿compila?<br>
+• ¿dónde marca el IDE?<br>
+• ¿qué hipótesis haces?
+
+**Qué haces:** Predice, ejecuta, localiza y corrige.
+
+**Qué debe quedar:** puedan distinguir error de código de error de entorno.
+
+**D6** · 00:33–00:38 · PÍLDORA DOCENTE 2/2
+
+## Tres verbos que no significan lo mismo
+
+**Qué haces:** Explica los tres pasos a un compañero.
+
+**Qué debe quedar:** puedan describir el recorrido sin mirar.
+
+**D7** · 00:38–00:45 · CIERRE
+
+## Guarda una primera evidencia
+
+Código + salida visible + frase:<br>
+“Sé que se ha ejecutado porque…”
+
+**Qué haces:** Guarda y registra.
+
+**Qué debe quedar:** quede evidencia recuperable.
+
+**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
+
+## Evidencia única antes de salir
+
+- conserva el código o la prueba en el lugar indicado por la sesión;
+- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
+- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
 
 ## Seguridad y uso de IA
 
-- Trabaja únicamente con datos ficticios.
-- No escribas contraseñas, tokens, claves API ni datos personales.
-- Si utilizas IA en un uso permitido, registra qué pediste, qué recibiste, qué cambiaste y cómo lo comprobaste.
-- Los ejemplos de Laura solo se consultan después del intento propio.
+- Usa datos ficticios y no publiques credenciales ni información personal.
+- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
 
-## Si te bloqueas
+## Cierre individual
 
-1. Copia el mensaje exacto o describe qué observas.
-2. Indica qué esperabas que ocurriera.
-3. Reduce el problema a una prueba pequeña.
-4. Pide ayuda mostrando esos tres datos; no pidas directamente la solución completa.
-
-## Cierre
-
-Responde sin copiar: **Cada alumno localiza dónde está `Main.java`.**
-
-Respuesta:  
-................................................................................
-
-La sesión está completada cuando la evidencia existe, se ha comprobado y puedes defenderla brevemente.
+**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**

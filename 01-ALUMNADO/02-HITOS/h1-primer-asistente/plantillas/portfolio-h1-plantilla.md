@@ -1,185 +1,46 @@
-# Portfolio individual — H1 Primer asistente básico
+# Guía para la página H1 del Site personal
 
-Alumno/a:
-Equipo:
-Fecha:
+> Esta plantilla ya no genera un archivo `portfolio-h1.md`. Se usa como guion para seleccionar y explicar evidencias en la página H1 del Site personal.
 
----
+## Mi aportación verificable
 
-## 1. Qué he hecho yo
+- Qué hice yo:
+- Resultado observable:
+- Enlace profundo al commit, prueba o fila Scrum:
 
-Describe tus aportaciones concretas.
+## Concepto del Tema 1
 
-Ejemplos:
+- Concepto que ahora puedo explicar:
+- Ejemplo propio:
+- Error o confusión que resolví:
 
-- he creado el proyecto en IntelliJ;
-- he escrito parte del código;
-- he probado la ejecución;
-- he preparado el README;
-- he revisado nombres de variables;
-- he documentado el uso de IA.
+## Prueba seleccionada
 
-Mi aportación:
+- Entrada o caso:
+- Resultado esperado:
+- Resultado obtenido:
+- Qué demuestra:
+- Enlace a README, código o diario:
 
-```text
+## Decisión o bloqueo significativo
 
-```
+- Qué ocurrió:
+- Qué predije o decidí:
+- Qué prueba hice:
+- Enlace a las filas del diario; no copies aquí el registro completo:
 
----
+## IA, solo si fue relevante
 
-## 2. Qué hace nuestro programa
+- Enlace a la fila del diario donde registré petición, cambio y validación:
+- Qué parte puedo defender sin ayuda:
 
-Explica con tus palabras qué hace MiniJarvis H1.
+## Próximo paso
 
-```text
+- Mejora concreta para H2:
 
-```
+## Comprobación
 
----
-
-## 3. Qué he aprendido
-
-Completa con ejemplos concretos.
-
-| Concepto | Qué he entendido |
-|---|---|
-| `main` | |
-| Variable | |
-| Constante | |
-| `Scanner` | |
-| `System.out.println` | |
-| Ejecutar en IntelliJ | |
-
----
-
-## 4. Problemas encontrados
-
-| Problema | Cómo lo detecté | Cómo lo resolví |
-|---|---|---|
-| | | |
-| | | |
-
-Si no hubo problemas, escribe al menos una dificultad pequeña o una duda que hayas tenido.
-
----
-
-## 5. Código que sé defender
-
-Pega o describe 2-4 líneas importantes del código y explica qué hacen.
-
-### Fragmento 1
-
-```java
-
-```
-
-Explicación:
-
-```text
-
-```
-
-### Fragmento 2
-
-```java
-
-```
-
-Explicación:
-
-```text
-
-```
-
----
-
-## 6. Qué NO hemos añadido todavía
-
-Marca y explica:
-
-```text
-[ ] Menú.
-[ ] Bucles.
-[ ] switch.
-[ ] Memoria.
-[ ] IA real.
-```
-
-¿Por qué no pertenece todavía a H1?
-
-```text
-
-```
-
----
-
-## 7. Uso de IA
-
-He usado IA:
-
-```text
-Sí / No
-```
-
-Si la he usado:
-
-- ¿para qué?
-- ¿qué acepté?
-- ¿qué cambié yo?
-- ¿cómo lo comprobé?
-
-Resumen:
-
-```text
-
-```
-
-Registro completo:
-
-```text
-docs/registro-ia
-```
-
----
-
-## 8. Qué necesito mejorar
-
-```text
-
-```
-
----
-
-## 9. Preguntas que puedo responder en defensa
-
-Prepara respuestas breves.
-
-### ¿Dónde empieza el programa?
-
-```text
-
-```
-
-### ¿Qué variable guarda el nombre?
-
-```text
-
-```
-
-### ¿Qué constante has usado?
-
-```text
-
-```
-
-### ¿Qué hace Scanner?
-
-```text
-
-```
-
-### ¿Cómo ejecutas el proyecto?
-
-```text
-
-```
+- [ ] He seleccionado evidencias, no copiado el diario.
+- [ ] Todos los enlaces son profundos y abren con permisos restringidos.
+- [ ] No aparecen secretos, datos personales ni calificaciones.
+- [ ] Puedo ejecutar, explicar y modificar la parte enlazada.

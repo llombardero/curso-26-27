@@ -1,727 +1,151 @@
-# Guía docente — H1 Primer asistente básico
+# Guía docente H1 — Primer MiniJarvis
+
+## 1. Decisión pedagógica vigente
+
+H1 cubre el Tema 1 completo con dos niveles de evidencia:
+
+- **producto mínimo:** programa lineal, pequeño, ejecutable y defendible;
+- **microprácticas:** demostraciones separadas de los conceptos que sobrecargarían `Main.java`.
+
+Las comparaciones, booleanos y un `if/else` básico se introducen en H1. H2 no vuelve a presentarlos como novedad: los aplica a menú, comandos, repetición, validación de entradas, pruebas y depuración.
+
+## 2. Alcance del producto
+
+El incremento principal debe incluir clase `Main`, método `main`, salida clara, `Scanner`, variables tipadas, al menos una constante, una operación sencilla y ejecución repetible.
+
+No se exige integrar en el producto todas las conversiones, comparaciones o decisiones. Su evidencia puede ser una micropráctica defendible. H1 no incorpora todavía menú, bucle principal, `switch`, colecciones, persistencia, clases de dominio ni IA real.
+
+## 3. Cobertura curricular
+
+| Núcleo | Tratamiento en H1 | Continuidad en H2 |
+|---|---|---|
+| entorno, JDK, compilación y JVM | comprensión y ejecución | uso autónomo |
+| sintaxis, clase y `main` | construcción mínima | consolidación |
+| tipos, variables, constantes y literales | uso y explicación | aplicación |
+| operaciones y precedencia | predicción y micropráctica | aplicación |
+| `Scanner`, conversiones y casting | lectura, prueba y error básico | entradas de comandos y validación |
+| comparaciones y booleanos | producción y lectura | combinación en lógica de menú |
+| `if/else`, anidamiento y `?:` | lectura y decisión elemental | diseño, pruebas y depuración de flujo |
+
+La evaluación fuerte de control de flujo pertenece a RA3/H2. En H1 estas decisiones aportan evidencia inicial de comprensión del Tema 1 y no deben duplicar la calificación de H2.
+
+## 4. Temporalización canónica
+
+| Sesión | Periodos | HEXA | Puerta de avance |
+|---|---:|---|---|
+| S206 | 2 | Activar | alcance clasificado y salida esperada |
+| S207 | 3 | Investigar | proyecto mínimo ejecutado y error interpretado |
+| S208 | 2 | Investigar | estructura Java reconstruida y explicada |
+| S209 | 2 | Idear | alternativa elegida y salida diseñada |
+| S210 | 2 | Planificar | variables tipadas y plan viable |
+| S211 | 2 | Ejecutar | operaciones predichas y comprobadas |
+| S212 | 3 | Ejecutar | entrada convertida y error comprendido |
+| S213 | 3 | Ejecutar | booleanos y dos ramas probadas |
+| S214 | 3 | Comunicar | README probado, evidencias enlazadas y permisos comprobados |
+| S215 | 2 | Comunicar | defensa, modificación y siguiente paso |
+| **Total** | **24** |  |  |
+
+Las presentaciones organizan checkpoints de 45 minutos. Los periodos adicionales son talleres asociados; no deben convertirse en nuevas evidencias obligatorias.
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
 
-## Ciclo HEXA obligatorio del reto H1
+### Ciclo HEXA canónico de H1
 
-**Reto del hito:** Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible.
-
-**Base transversal — Fase 0 Equipos:** se mantienen roles, normas, colaboración y herramientas de organización durante todo el reto. El profesorado hace visible el avance de fase y sitúa la instrucción guiada principalmente en Investigar, sin reducir HEXA a una etiqueta.
-
-| Fase | Pregunta que guía la fase | Acción del profesorado | Acción y evidencia del alumnado |
-|---|---|---|---|
-| **1 — Activar** | ¿Qué reto real debemos entender y con qué propósito, límites y criterios? | Presenta y contextualiza el reto sin anticipar la solución. | Reformula el reto y explicita objetivos, dudas y criterios. |
-| **2 — Investigar** | ¿Qué necesitamos aprender para abordar el reto? | Facilita búsqueda guiada, micropíldoras y fuentes seguras. | Investiga, contrasta, practica y construye la base conceptual necesaria. |
-| **3 — Idear** | ¿Qué soluciones posibles podemos proponer y cuál elegimos? | Abre alternativas y exige criterios de selección. | Genera, compara y argumenta una solución viable. |
-| **4 — Planificar** | ¿Cómo convertimos la idea en tareas, tiempos y responsabilidades? | Ayuda a hacer visibles backlog, hitos, dependencias y criterios de seguimiento. | Organiza tareas, tiempos, responsabilidades y comprobaciones. |
-| **5 — Ejecutar** | ¿Cómo construimos, probamos y mejoramos la solución? | Desbloquea sin sustituir la autoría y exige iteración y pruebas. | Crea el producto, lo prueba, corrige y conserva evidencias. |
-| **6 — Comunicar** | ¿Cómo presentamos, evaluamos y reflexionamos sobre producto y proceso? | Facilita defensa, evaluación formativa, coevaluación y mejora. | Presenta, defiende, evalúa, reflexiona y formula el siguiente paso. |
-
-### Temporalización explícita sobre las sesiones operativas
-
-Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra una y abre la siguiente.
-
-| Fase | Sesiones de referencia | Puerta de salida |
-|---|---|---|
-| 1 — Activar | S206 | Reto comprendido y criterios visibles. |
-| 2 — Investigar | S207–S208 y S212 | Conocimientos necesarios contrastados. |
-| 3 — Idear | S209 | Solución seleccionada y argumentada. |
-| 4 — Planificar | S210 | Plan, responsabilidades y comprobaciones visibles. |
-| 5 — Ejecutar | S211 y S213 | Producto construido, probado y mejorado. |
-| 6 — Comunicar | S214–S215 | Defensa, evaluación, reflexión y mejora. |
-
-**Expediente HEXA mínimo del hito:** ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa.
-
-Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecutar no se considera completada si faltan evidencias de Activar, Investigar, Idear o Planificar. Comunicar exige presentar, evaluar y reflexionar. Si falta una fase, se recuperan esa fase y su evidencia; no se repite automáticamente todo el hito.
+1. **1 — Activar** — entender el reto y delimitar el producto.
+2. **2 — Investigar** — aprender lo necesario sobre entorno, estructura y salida.
+3. **3 — Idear** — proponer mensajes y comportamiento mínimo.
+4. **4 — Planificar** — organizar datos, operaciones, tareas y pruebas.
+5. **5 — Ejecutar** — crear, convertir, comparar, decidir y comprobar.
+6. **6 — Comunicar** — documentar, enlazar, defender y reflexionar.
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-## Programación — 1.º DAW — Curso 2026/2027
+## 5. Patrón de cada checkpoint
 
-Edición final para Moodle — septiembre de 2026
+1. Activación o predicción breve.
+2. Micropíldora docente acotada.
+3. Micropráctica con resultado observable.
+4. Prueba o explicación.
+5. Registro único en el diario al cerrar el checkpoint.
 
-Documento para uso del profesorado.
+Si falta tiempo, se reduce la cantidad de ejemplos o se realiza una demostración colectiva. No se elimina el núcleo conceptual de la sesión.
 
-Documentos relacionados:
+## 6. Evidencia única
 
-- `../../02-calendario-hitos-sprints-2026-2027.md`
-- `../../04A-enunciados-y-entregables-alumnado.md`
-- `../../06-rubricas-hitos.md`
-- `../../07-plantillas-entregables.md`
-- `13B-ficha-alumnado-h1-primer-asistente.md`
-- `13C-checklist-correccion-h1.md`
-- `../../99-ejemplos-alumna/h1-primer-asistente/`
-
----
-
-## 1. Propósito del hito
-
-H1 es el primer hito técnico del proyecto MiniJarvis.
-
-El alumnado debe crear una primera versión muy sencilla de un asistente por consola en Java.
-
-Este hito no busca complejidad. Busca base sólida.
-
-Producto esperado:
-
-```text
-MiniJarvis H1: programa Java básico que pide el nombre de la persona usuaria y muestra varios mensajes iniciales.
-```
-
-El hito debe servir para comprobar que el alumnado empieza a comprender:
-
-- estructura mínima de un programa Java;
-- método `main`;
-- variables;
-- constantes;
-- entrada por teclado;
-- salida por pantalla;
-- ejecución en IntelliJ;
-- README básico;
-- defensa oral sencilla.
-
----
-
-## 2. Restricciones didácticas
-
-Estas restricciones son importantes para mantener el hito en el nivel adecuado.
-
-En H1 NO debe incluirse:
-
-- menú;
-- bucles;
-- `switch`;
-- listas o mapas;
-- clases propias adicionales;
-- herencia;
-- interfaces;
-- ficheros;
-- excepciones complejas;
-- conexión con Gemini, Jarvis u otra IA real;
-- arquitectura avanzada;
-- patrones de diseño.
-
-Motivo:
-
-```text
-H1 debe demostrar comprensión de la estructura básica de un programa Java antes de añadir estructuras de control, memoria, orientación a objetos o integración IA.
-```
-
-Si un equipo trae algo más avanzado, no debe premiarse automáticamente. Debe comprobarse si:
-
-- corresponde al hito;
-- lo pueden explicar;
-- no oculta falta de comprensión básica;
-- no procede de IA sin adaptación ni defensa.
-
----
-
-## 3. Fechas y duración
-
-Fechas orientativas:
-
-```text
-21 septiembre - 9 octubre 2026
-```
-
-Carga estimada según calendario:
-
-```text
-Programación: 24 periodos de 45 min
-```
-
-Las diez fichas S206–S215 funcionan como checkpoints dentro de esa carga. Los periodos restantes se destinan a explicación, práctica guiada, taller, revisión y defensa, sin generar evidencias adicionales por defecto.
-
----
-
-## 4. RA/CE y evidencias
-
-### Programación
-
-RA principales:
-
-- PR RA1: estructura de un programa informático y elementos del lenguaje.
-- PR RA2 inicial: programas sencillos y primeros fundamentos vinculados a objetos/librerías.
-
-Evidencias H1:
-
-- `src/Main.java`;
-- uso correcto de `main`;
-- variable `String` para nombre;
-- constante con `final`;
-- uso básico de `Scanner`;
-- mensajes por pantalla;
-- defensa individual.
-
-### Prácticas técnicas del proyecto
-
-RA principales:
-
-- fundamentos del desarrollo y metodologías: relación programa, sistema, código fuente, ejecutable, JVM y herramientas.
-- uso del entorno de desarrollo: uso inicial de IntelliJ y configuración del entorno.
-
-Evidencias H1:
-
-- proyecto creado y abierto en IntelliJ;
-- ejecución desde IntelliJ;
-- opcionalmente ejecución desde terminal;
-- README con instrucciones;
-- estructura mínima del repositorio;
-- evidencia de ejecución.
-
----
-
-## 5. Producto mínimo esperado
-
-El programa debe:
-
-1. Tener una clase `Main`.
-2. Tener método `public static void main(String[] args)`.
-3. Mostrar un saludo inicial.
-4. Pedir el nombre de la persona usuaria.
-5. Guardar el nombre en una variable.
-6. Usar al menos una constante.
-7. Mostrar varios mensajes relacionados con el proyecto MiniJarvis.
-8. Ejecutarse en IntelliJ.
-9. Tener un README básico.
-
-Ejemplo de comportamiento esperado:
-
-```text
-Hola, soy MiniJarvis.
-¿Cómo te llamas? Laura
-Encantada, Laura.
-Este curso vamos a crear un pequeño agente IA.
-Curso de inicio: 2026.
-Primer objetivo: aprender la estructura básica de un programa Java.
-```
-
----
-
-## 6. Código mínimo de referencia docente
-
-Este código es referencia para calibrar el nivel. No debe entregarse como solución directa si se quiere que el alumnado lo construya paso a paso.
-
-```java
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        final String ASSISTANT_NAME = "MiniJarvis";
-        final int COURSE_YEAR = 2026;
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Hola, soy " + ASSISTANT_NAME + ".");
-        System.out.print("¿Cómo te llamas? ");
-        String userName = scanner.nextLine();
-
-        System.out.println("Encantada, " + userName + ".");
-        System.out.println("Este curso vamos a crear un pequeño agente IA.");
-        System.out.println("Curso de inicio: " + COURSE_YEAR + ".");
-        System.out.println("Primer objetivo: aprender la estructura básica de un programa Java.");
-
-        scanner.close();
-    }
-}
-```
-
-Puntos que debe poder defender el alumnado:
-
-- qué hace `import java.util.Scanner`;
-- dónde empieza el programa;
-- qué es una constante;
-- qué es una variable;
-- qué hace `scanner.nextLine()`;
-- para qué sirve `System.out.println`;
-- por qué todavía no hay menú ni bucles.
-
----
-
-## 3. Temporalización oficial de H1
-
-H1 ocupa 24 periodos de Programación. Las diez fichas S206–S215 son checkpoints; los periodos restantes son taller y no generan evidencias nuevas.
-
-| Secuencia | Foco | Periodos |
-|---|---|---:|
-| S206 | Alcance y producto mínimo | 2 |
-| S207 | IntelliJ, proyecto y primera ejecución | 3 |
-| S208 | Estructura de `Main` | 2 |
-| S209 | Salida y mensajes | 2 |
-| S210 | Variables | 2 |
-| S211 | Constantes | 2 |
-| S212 | `Scanner` y lectura del nombre | 3 |
-| S213 | Integración, limpieza y pruebas | 3 |
-| S214 | GitHub, README y ejecución | 3 |
-| S215 | Portfolio, defensa obligatoria, revisión y recuperación | 2 |
-| **Total** | | **24** |
-
-No es necesario que cada bloque sea una sesión completa. Puede redistribuirse según ritmo real.
-
----
-
-## 8. Desarrollo docente paso a paso
-
-### Bloque 1 — Presentar H1
-
-Objetivo:
-
-- Aterrizar el primer hito técnico.
-- Dejar claro qué entra y qué no entra.
-
-Mensaje docente:
-
-```text
-En H1 vamos a construir la primera versión mínima de MiniJarvis. Será muy sencilla. No tendrá menú, memoria ni IA real. Queremos entender bien la estructura básica de un programa Java.
-```
-
-Actividad breve:
-
-Pedir al alumnado que responda:
-
-```text
-¿Qué debería hacer una primera versión mínima de un asistente?
-¿Qué sería demasiado avanzado para esta primera versión?
-```
-
-Cierre:
-
-Clasificar ideas en pizarra:
-
-```text
-H1 | Hitos posteriores | No adecuado
-```
-
----
-
-### Bloque 2 — Crear proyecto y primera ejecución
-
-Objetivo:
-
-- Crear proyecto Java en IntelliJ.
-- Ejecutar un primer `Hola, soy MiniJarvis`.
-
-Pasos docentes:
-
-1. Crear proyecto Java.
-2. Localizar carpeta `src`.
-3. Crear `Main.java`.
-4. Escribir estructura mínima.
-5. Ejecutar.
-
-Código inicial:
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hola, soy MiniJarvis.");
-    }
-}
-```
-
-Preguntas de defensa inmediata:
-
-```text
-¿Dónde empieza el programa?
-¿Qué línea muestra texto por pantalla?
-¿Qué ocurre si cambia el texto entre comillas?
-```
-
----
-
-### Bloque 3 — Variables y constantes
-
-Objetivo:
-
-- Introducir `String`, `int` y `final`.
-- Usar nombres claros.
-
-Código progresivo:
-
-```java
-final String ASSISTANT_NAME = "MiniJarvis";
-final int COURSE_YEAR = 2026;
-
-System.out.println("Hola, soy " + ASSISTANT_NAME + ".");
-System.out.println("Curso de inicio: " + COURSE_YEAR + ".");
-```
-
-Ideas clave:
-
-- una variable guarda un dato;
-- una constante guarda un dato que no debe cambiar;
-- los nombres deben ayudar a entender el código;
-- concatenar significa unir texto y valores.
-
-Error frecuente:
-
-```java
-System.out.println("Hola, soy ASSISTANT_NAME.");
-```
-
-Explicación:
-
-- dentro de las comillas se imprime texto literal;
-- fuera de las comillas se usa el valor de la variable o constante.
-
----
-
-### Bloque 4 — Entrada por teclado con Scanner
-
-Objetivo:
-
-- Leer el nombre de la persona usuaria.
-
-Código:
-
-```java
-import java.util.Scanner;
-
-Scanner scanner = new Scanner(System.in);
-System.out.print("¿Cómo te llamas? ");
-String userName = scanner.nextLine();
-System.out.println("Encantada, " + userName + ".");
-scanner.close();
-```
-
-Puntos a explicar:
-
-- `Scanner` es una clase de la biblioteca de Java;
-- `System.in` representa la entrada por teclado;
-- `nextLine()` lee una línea completa;
-- `System.out.print` no salta de línea;
-- `System.out.println` sí salta de línea;
-- `scanner.close()` cierra el recurso.
-
-No profundizar todavía en excepciones ni gestión avanzada de entrada.
-
----
-
-### Bloque 5 — Código limpio inicial
-
-Objetivo:
-
-- Revisar que el código es simple y defendible.
-
-Criterios H1:
-
-- nombres claros;
-- programa corto;
-- sin funciones prematuras;
-- sin menú;
-- sin bucles;
-- sin código copiado que no se entiende;
-- mensajes comprensibles.
-
-Actividad:
-
-Dar dos nombres y preguntar cuál es mejor:
-
-| Nombre débil | Nombre mejor |
+| Función | Fuente de verdad |
 |---|---|
-| `x` | `userName` |
-| `cosa` | `assistantName` |
-| `numero` | `courseYear` |
+| código y evolución | GitHub/repo y commits |
+| instrucciones, ejecución y pruebas | README |
+| proceso individual e IA personal | diario individual |
+| planificación, decisiones, bloqueos, review, retrospectiva e IA de equipo | Sheet Scrum |
+| selección personal | Site personal |
+| comunicación del incremento | Site de equipo |
+| índice de entrega | Moodle |
+| autoría y comprensión | defensa y modificación |
 
-Mensaje docente:
+Normas:
 
-```text
-Código limpio en H1 no significa código avanzado. Significa código sencillo, claro y explicable.
-```
+- una fila de diario por checkpoint o evidencia significativa, no una narración por cada actividad;
+- una tarea, decisión o bloqueo de equipo se registra una sola vez en Scrum;
+- Sites seleccionan y enlazan: no copian el diario ni Scrum;
+- Moodle recibe enlaces profundos: no nuevas copias;
+- las plantillas auxiliares son andamiajes opcionales, no entregables automáticos.
 
----
+## 7. Uso de IA
 
-### Bloque 6 — README y evidencia de ejecución
+El uso personal se registra en las columnas `Uso de IA` y `Cómo validé la IA` del diario. El uso colectivo se registra en `REGISTRO_IA_EQUIPO` de Scrum. Solo se solicita un registro ampliado cuando el uso sea complejo o exista una incidencia de autoría.
 
-Objetivo:
+Toda evidencia debe mostrar finalidad, resultado aprovechado, cambios propios y validación. No se acepta código que la persona no pueda explicar y modificar.
 
-- Documentar cómo ejecutar el proyecto.
+## 8. Sites y permisos
 
-README mínimo:
+- Site personal: una aportación, una evidencia profunda, un aprendizaje, un bloqueo y una mejora.
+- Site de equipo: incremento, repo/README, decisión, prueba, review y retrospectiva.
+- Comprobar permisos con una cuenta distinta antes de Moodle.
+- Evitar datos personales, credenciales y observaciones privadas.
 
-```markdown
-# H1 — Primer asistente por consola
+## 9. Evaluación
 
-## Qué hace
+La rúbrica común H1 se aplica sobre estas fuentes:
 
-Este programa muestra un saludo, pide el nombre del usuario y muestra mensajes iniciales del proyecto MiniJarvis.
+- producto y funcionamiento: repo y README;
+- Tema 1: producto más microprácticas;
+- proceso: diario y Scrum;
+- comunicación: Sites y defensa;
+- IA: únicamente cuando haya uso, con verificación y autoría.
 
-## Cómo ejecutar
+Una evidencia puede cubrir varios criterios. No se multiplica la calificación por repetirla en varios soportes.
 
-Desde IntelliJ:
+La complejidad adelantada no se premia por sí misma: solo cuenta cuando respeta el alcance, mejora el producto y la persona puede explicarla, probarla y modificarla. La trazabilidad normativa se consulta en `02-PROFESORADO/00-PROGRAMACION-Y-COORDINACION/01-matriz-integrada-ra-ce-evidencias-tareas.md`; esta guía no mantiene una segunda copia de RA y criterios.
 
-1. Abrir el proyecto.
-2. Abrir `src/Main.java`.
-3. Pulsar Run.
+## 10. Recuperación
 
-## Ejemplo de ejecución
+La recuperación debe ser mínima y específica:
 
-```text
-Hola, soy MiniJarvis.
-¿Cómo te llamas? Laura
-Encantada, Laura.
-```
+- error de entorno: reconstruir y ejecutar un proyecto mínimo;
+- concepto: predecir, ejecutar y explicar una micropráctica;
+- producto: corregir el criterio incumplido;
+- autoría: explicar y modificar en directo;
+- evidencia: reparar el enlace o permiso, no rehacer el trabajo.
 
-## Qué no incluye todavía
+## 11. Riesgos a vigilar
 
-No incluye menú, bucles, memoria ni IA real.
-```
+- convertir las diez presentaciones en diez clases magistrales;
+- forzar todos los conceptos dentro de `Main.java`;
+- evaluar `if/else` dos veces, en H1 y H2;
+- pedir captura, transcripción, ficha y Site para la misma ejecución;
+- confundir registro de proceso con portfolio público;
+- publicar datos personales o credenciales;
+- conservar archivos generados sin actualizar sus fuentes.
 
-Evidencia de ejecución:
+## 12. Fuentes canónicas
 
-- captura;
-- o bloque de salida copiado en README;
-- o explicación validada en clase.
-
----
-
-### Bloque 7 — Revisión y defensa
-
-Objetivo:
-
-- Comprobar comprensión individual.
-
-Formato posible:
-
-- defensa oral breve de 2-3 minutos;
-- preguntas rápidas durante revisión;
-- entrevista técnica por muestreo;
-- checklist individual.
-
-Preguntas esenciales:
-
-```text
-¿Dónde empieza el programa?
-¿Qué variable guarda el nombre?
-¿Qué constante has usado?
-¿Qué hace Scanner?
-¿Qué diferencia hay entre print y println?
-¿Cómo ejecutas el proyecto en IntelliJ?
-¿Por qué no hay menú todavía?
-¿Has usado IA? ¿Para qué? ¿Cómo lo comprobaste?
-```
-
----
-
-## 9. Entregables H1
-
-| Entregable | Responsable | Formato | Plantilla local |
-|---|---|---|---|
-| Código Java básico | Individual o equipo, según decisión docente | `src/Main.java` | No aplica. |
-| README de ejecución | Equipo o individual | `README.md` | `plantillas/README-h1-plantilla.md` |
-| Evidencia de ejecución | Equipo o individual | `docs/evidencia-ejecucion-h1.md` | `plantillas/evidencia-ejecucion-h1-plantilla.md` |
-| Portfolio H1 | Individual | `docs/portfolio-h1.md` | `plantillas/portfolio-h1-plantilla.md` |
-| Registro de IA, si se usa | Individual | `docs/registro-ia.md` | `plantillas/registro-ia-h1-plantilla.md` |
-| Defensa H1 | Individual | `docs/defensa-h1.md` | `plantillas/defensa-h1-plantilla.md` |
-| Incidencia, si aparece | Individual/equipo | `docs/incidencia-h1.md` | `plantillas/incidencia-h1-plantilla.md` |
-| Vocabulario H1, si se pide | Individual | `docs/vocabulario-h1.md` | `plantillas/vocabulario-h1-plantilla.md` |
-
-Recomendación:
-
-Si el trabajo se hace en equipo, mantener defensa individual obligatoria para evitar que una evidencia grupal oculte falta de comprensión.
-
-Carpeta de plantillas específicas del hito:
-
-```text
-plantillas/
-```
-
----
-
-## 10. Uso de IA en H1
-
-### Permitido en verde
-
-- Pedir explicación de `Scanner`.
-- Preguntar qué es una variable.
-- Preguntar qué es una constante.
-- Pedir un ejemplo mínimo y adaptarlo.
-- Revisar la claridad del README.
-
-### Permitido en amarillo
-
-- Pedir ayuda para corregir un error de compilación.
-- Pedir que explique un mensaje de error.
-- Pedir sugerencias de nombres más claros.
-
-Debe registrarse si afecta a la entrega.
-
-### No permitido
-
-- Generar el programa completo y entregarlo sin entender.
-- Añadir menú, memoria o IA real porque lo sugirió una herramienta.
-- Ocultar el uso de IA.
-- Entregar código que no se puede defender.
-
-Frase para el alumnado:
-
-```text
-Si una IA te da código que no puedes explicar, todavía no tienes una solución: tienes una tarea pendiente.
-```
-
----
-
-## 11. Errores previsibles y respuesta docente
-
-| Error | Señal | Intervención docente |
-|---|---|---|
-| Falta `main` | El programa no ejecuta | Revisar estructura mínima de Java. |
-| Clase con nombre distinto al archivo | Error de compilación | Explicar relación `Main.java` / `public class Main`. |
-| Comillas mal cerradas | Error de compilación | Localizar línea y revisar literales. |
-| Variable dentro de comillas | Imprime el nombre de la variable | Explicar texto literal vs valor de variable. |
-| Olvida `import java.util.Scanner` | No reconoce Scanner | Explicar importación de biblioteca. |
-| Usa `next()` y pierde apellidos | Solo lee primera palabra | Mostrar diferencia básica con `nextLine()`. |
-| Añade menú o bucles | Hito se desborda | Reencuadrar: eso será H2. |
-| Código demasiado avanzado | No puede explicarlo | Pedir versión mínima defendible. |
-| README vacío | No se puede reproducir | Dar plantilla mínima. |
-
----
-
-## 12. Checklist docente de corrección rápida
-
-Usar junto con:
-
-```text
-13C-checklist-correccion-h1.md
-```
-
-Mínimos imprescindibles:
-
-```text
-[ ] Existe `src/Main.java`.
-[ ] Compila o se ejecuta en IntelliJ.
-[ ] Tiene clase `Main`.
-[ ] Tiene método `main`.
-[ ] Muestra mensajes por pantalla.
-[ ] Pide el nombre al usuario.
-[ ] Guarda el nombre en una variable.
-[ ] Usa al menos una constante.
-[ ] No introduce complejidad fuera de H1.
-[ ] README explica cómo ejecutar.
-[ ] El alumno/a puede defender lo básico.
-```
-
----
-
-## 13. Rúbrica H1 resumida
-
-| Dimensión | Excelente | Adecuado | Básico | Insuficiente |
-|---|---|---|---|---|
-| Programa Java básico | Claro, ejecutable, con entrada/salida, variable y constante bien usadas. | Ejecutable con los elementos principales. | Incompleto o con errores menores. | No compila o no responde al hito. |
-| Ajuste al nivel | Simple y sin complejidad prematura. | Alguna ampliación menor defendible. | Introduce código no trabajado con comprensión parcial. | Código avanzado no defendible. |
-| IntelliJ y ejecución | Configura y ejecuta con autonomía. | Ejecuta con poca ayuda. | Necesita ayuda importante. | No puede ejecutarlo. |
-| README | Explica qué hace y cómo ejecutar. | Suficiente. | Incompleto. | No útil o inexistente. |
-| Defensa | Explica `main`, variable, constante, `Scanner` y ejecución. | Explica lo principal. | Dudas importantes. | No puede explicar el código. |
-
----
-
-## 14. Atención a la diversidad
-
-### Apoyos
-
-- Plantilla inicial con huecos.
-- Parejas de explicación.
-- Ejemplo de salida antes del código.
-- Lista de vocabulario: clase, método, variable, constante, entrada, salida.
-- Ejecución guiada en IntelliJ.
-
-### Ampliación sin romper H1
-
-Si un alumno termina pronto, no añadir menú ni bucles.
-
-Propuestas de ampliación permitidas:
-
-- mejorar mensajes;
-- añadir otra constante simple;
-- mejorar README;
-- preparar explicación de defensa;
-- comparar `print` y `println`;
-- explicar línea por línea el programa.
-
-### Recuperación
-
-Para alumnado con dificultades, pedir una versión mínima:
-
-```text
-Clase Main + main + saludo + variable nombre + una constante + ejecución.
-```
-
-La defensa puede hacerse con apoyo visual del propio código.
-
----
-
-## 15. Criterio de éxito del hito
-
-H1 habrá funcionado si la mayoría del alumnado puede decir y demostrar:
-
-```text
-Sé crear y ejecutar un programa Java básico.
-Sé dónde empieza el programa.
-Sé guardar un dato en una variable.
-Sé usar una constante sencilla.
-Sé pedir un dato por teclado.
-Sé mostrar mensajes por pantalla.
-Sé explicar por qué esta versión todavía no tiene menú ni IA real.
-```
-
----
-
-## 16. Preparación para H2
-
-Antes de pasar a H2, comprobar:
-
-- si el alumnado entiende `main`;
-- si diferencia variable y constante;
-- si puede ejecutar en IntelliJ;
-- si sabe leer un error básico;
-- si puede explicar `Scanner` a nivel inicial;
-- si README y evidencia de ejecución están integrados.
-
-H2 introducirá:
-
-- menú;
-- comandos;
-- decisiones;
-- bucles;
-- entradas no válidas;
-- depuración;
-- pruebas manuales.
-
-Mensaje de transición:
-
-```text
-H1 nos da una primera versión mínima. En H2 convertiremos esta primera versión en un agente con comandos y menú, pero solo cuando la base esté entendida.
-```
-
-## Cobertura curricular de Programación
-
-Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.md`.
-
-```text
-Hito: H1
-Temas de referencia: Tema 1
-Foco: primer programa Java por consola y asistente mínimo
-```
-
-Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias del alumnado:
-
-- programa
-- instrucción
-- sintaxis
-- comentarios
-- variable
-- tipo de dato
-- literal
-- String
-- Scanner
-- entrada/salida
-- operadores
-- expresiones
-- conversiones básicas
-
-Criterio docente de cierre:
-
-- El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
-- Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
-- La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
-
+- calendario: `02-PROFESORADO/00-PROGRAMACION-Y-COORDINACION/02-calendario-hitos-sprints-2026-2027.md`;
+- alumnado: `01-ALUMNADO/02-HITOS/h1-primer-asistente/13B-ficha-alumnado-h1-primer-asistente.md` y `01-ALUMNADO/03-SESIONES/h1/`;
+- profesorado: `02-PROFESORADO/02-SESIONES/h1/`;
+- referencia integral de código docente: `02-PROFESORADO/00-PROGRAMACION-Y-COORDINACION/200C-material-teorico-practico-sesiones-201-306.md`;
+- corrección y defensa: `02-PROFESORADO/01-GUIAS-POR-HITO/h1-primer-asistente/13C-checklist-correccion-h1.md`;
+- ejemplo privado de calibración: `03-EJEMPLOS-LAURA-PRIVADOS/h1-primer-asistente/`;
+- presentación: generada desde las guías docentes;
+- HTML Moodle: generado desde las fuentes del alumnado;
+- RA, criterios y rúbrica: documentos de coordinación del repositorio.

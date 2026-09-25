@@ -1,281 +1,170 @@
-# H1 — Primer asistente básico
-
-## Ficha para el alumnado
-
-Curso: 1.º DAW — Programación
-
-Proyecto anual:
-
-```text
-MiniJarvis: construcción progresiva de un pequeño agente IA propio
-```
-
----
+# H1 — Primer MiniJarvis
 
 ## 1. Reto
 
-Vas a crear la primera versión técnica de MiniJarvis.
+Construirás la primera versión ejecutable de MiniJarvis en Java. Debe recibir datos, mostrar una salida clara y demostrar los conceptos del Tema 1 sin convertirse todavía en un menú completo.
+
+El producto principal será pequeño. Algunas ideas —conversiones, comparaciones, booleanos y una decisión básica— se demostrarán mediante microprácticas separadas cuando añadirlas a `Main.java` complique el programa sin aportar valor.
+
+## 2. Producto mínimo
+
+`Main.java` debe:
+
+1. iniciar en `public static void main(String[] args)`;
+2. mostrar una presentación clara de MiniJarvis;
+3. pedir al menos un dato mediante `Scanner`;
+4. guardar datos en variables con tipos adecuados;
+5. utilizar al menos una constante con `final`;
+6. realizar una operación sencilla útil;
+7. mostrar una respuesta que combine texto y datos;
+8. compilar y ejecutarse de forma repetible.
 
-Será un programa Java muy sencillo que se ejecuta por consola.
+H1 no necesita menú, bucle de interacción, `switch`, colecciones, persistencia, clases propias adicionales ni conexión con una IA real. Esas ampliaciones pertenecen a hitos posteriores.
 
-El programa debe:
+## 3. Conceptos del Tema 1 que debes poder demostrar
 
-- mostrar un saludo inicial;
-- pedir tu nombre;
-- guardar tu nombre en una variable;
-- usar al menos una constante;
-- mostrar varios mensajes relacionados con el proyecto;
-- poder ejecutarse en IntelliJ;
-- tener un README básico.
+| Bloque | Debes poder… | Evidencia admitida |
+|---|---|---|
+| Entorno Java | distinguir código fuente, JDK, compilación, JVM y ejecución | proyecto ejecutable y explicación |
+| Estructura | localizar clase, método `main`, instrucciones, comentarios y errores básicos | `Main.java` y micropráctica |
+| Datos | declarar, inicializar, asignar y actualizar variables de tipos básicos | producto o micropráctica |
+| Constantes y literales | usar `final` y reconocer literales | producto o micropráctica |
+| Operaciones | predecir y comprobar operaciones y precedencia elemental | micropráctica |
+| Entrada y conversión | leer texto, convertirlo y explicar un error de conversión | micropráctica |
+| Comparaciones y lógica | obtener y combinar valores `boolean` | micropráctica |
+| Decisión básica | leer y probar un `if/else` con sus dos caminos | micropráctica |
 
----
+En H2 aplicarás las decisiones a un menú, comandos, repetición, validación y depuración. En H1 solo necesitas comprender y probar la decisión básica.
 
-## 2. Muy importante: qué NO entra todavía
+## 4. Recorrido de 24 periodos
 
-En H1 todavía NO debes incluir:
+| Checkpoint | Periodos | Fase HEXA | Núcleo |
+|---|---:|---|---|
+| S206 | 2 | Activar | reto, alcance y salida esperada |
+| S207 | 3 | Investigar | JDK, proyecto, compilación, JVM y errores |
+| S208 | 2 | Investigar | lenguaje, clase, `main`, comentarios y sintaxis |
+| S209 | 2 | Idear | alternativas de salida y concatenación |
+| S210 | 2 | Planificar | variables, tipos y plan mínimo |
+| S211 | 2 | Ejecutar | constantes, literales, operaciones y actualización |
+| S212 | 3 | Ejecutar | `Scanner`, conversiones y errores de conversión |
+| S213 | 3 | Ejecutar | comparaciones, lógica e `if/else` básico |
+| S214 | 3 | Comunicar | README, prueba cruzada, diario y Sites |
+| S215 | 2 | Comunicar | defensa, recuperación y cierre |
+| **Total** | **24** |  |  |
 
-```text
-[ ] Menú.
-[ ] Bucles.
-[ ] switch.
-[ ] Memoria.
-[ ] Listas o mapas.
-[ ] Clases propias adicionales.
-[ ] Ficheros.
-[ ] Conexión con Gemini, Jarvis u otra IA real.
-[ ] Patrones de diseño.
-```
+Cada ficha S206-S215 organiza un checkpoint proyectable de 45 minutos. El resto de sus periodos se dedica a práctica, construcción, apoyo y recuperación.
 
-Esto se trabajará en hitos posteriores.
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->
 
-En H1 buscamos una versión pequeña, clara y defendible.
+### Ciclo HEXA canónico de H1
 
----
+1. **1 — Activar** — entender el reto y delimitar el producto.
+2. **2 — Investigar** — aprender lo necesario sobre entorno, estructura y salida.
+3. **3 — Idear** — proponer mensajes y comportamiento mínimo.
+4. **4 — Planificar** — organizar datos, operaciones, tareas y pruebas.
+5. **5 — Ejecutar** — crear, convertir, comparar, decidir y comprobar.
+6. **6 — Comunicar** — documentar, enlazar, defender y reflexionar.
 
-## 3. Producto esperado
+<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-Ejemplo de ejecución orientativo:
+## 5. Forma de trabajo
 
-```text
-Hola, soy MiniJarvis.
-¿Cómo te llamas? Laura
-Encantada, Laura.
-Este curso vamos a crear un pequeño agente IA.
-Curso de inicio: 2026.
-Primer objetivo: aprender la estructura básica de un programa Java.
-```
+1. Predice antes de ejecutar.
+2. Realiza la modificación o micropráctica.
+3. Prueba y compara el resultado con la predicción.
+4. Corrige el error con la pista mínima necesaria.
+5. Conserva el código o enlaza la prueba.
+6. Registra una única entrada breve en el diario individual al cerrar el checkpoint.
+7. Actualiza Scrum solo cuando exista una tarea, decisión o bloqueo de equipo.
 
-Tu salida puede tener otros mensajes, pero debe mantener el nivel básico del hito.
+## 6. Evidencia única
 
----
+| Necesidad | Fuente de verdad | No debes duplicar en… |
+|---|---|---|
+| Producto y trazabilidad técnica | repositorio, código, commits y README | documentos paralelos |
+| Ejecución y pruebas | sección del README con transcripción o enlace profundo | ficha independiente de ejecución |
+| Proceso individual | diario individual: una fila por checkpoint significativo | registro repetido por sesión y portfolio |
+| Proceso de equipo | Sheet Scrum | actas y tableros paralelos |
+| Uso personal de IA | columnas de IA del diario individual | un segundo registro salvo petición docente |
+| Uso de IA del equipo | pestaña `REGISTRO_IA_EQUIPO` de Scrum | copias personales idénticas |
+| Selección y reflexión | Site personal | copia completa del diario |
+| Comunicación del incremento | Site de equipo | copia completa de Scrum |
+| Entrega | Moodle con enlaces profundos | nueva subida de las mismas evidencias |
+| Comprensión y autoría | defensa y modificación en directo | cuestionario escrito duplicado |
 
-## 4. Pasos de trabajo
+Las plantillas auxiliares son apoyos. Solo se entregan como archivos separados si el profesorado lo solicita expresamente.
 
-### Paso 1 — Crear proyecto
+## 7. Contenido mínimo del README
 
-```text
-[ ] Crear un proyecto Java en IntelliJ.
-[ ] Crear la clase Main.
-[ ] Comprobar que el proyecto ejecuta.
-```
+- propósito y alcance de H1;
+- requisitos para ejecutar;
+- instrucciones de ejecución;
+- ejemplo o transcripción real de entrada y salida;
+- pruebas realizadas, incluida una conversión o decisión cuando proceda;
+- limitaciones conocidas;
+- enlace al Site de equipo si está publicado.
 
-### Paso 2 — Primer mensaje
+## 8. Sites
 
-```text
-[ ] Mostrar un saludo inicial con System.out.println.
-```
+### Site personal
 
-### Paso 3 — Constantes y variables
+Selecciona una aportación, una evidencia profunda, un aprendizaje, un bloqueo y una mejora. Resume: no copies el diario.
 
-```text
-[ ] Crear una constante para el nombre del asistente.
-[ ] Crear al menos otra constante sencilla si procede.
-[ ] Usar nombres claros.
-```
+### Site de equipo
 
-Ejemplos de nombres claros:
+Presenta el incremento, enlaza el repositorio y el README, resume una decisión, una prueba, una mejora de review y una acción de retrospectiva. Resume: no copies Scrum.
 
-```text
-ASSISTANT_NAME
-COURSE_YEAR
-userName
-```
+Comprueba los permisos de lectura con una cuenta diferente antes de entregar.
 
-### Paso 4 — Entrada por teclado
+## 9. Uso de IA
 
-```text
-[ ] Usar Scanner.
-[ ] Pedir el nombre de la persona usuaria.
-[ ] Guardar el nombre en una variable.
-[ ] Usar esa variable en un mensaje.
-```
+La IA puede ayudarte a comprender un concepto, interpretar un error, revisar claridad o preparar preguntas de defensa. No debe generar un producto completo que no puedas explicar.
 
-### Paso 5 — Mensajes finales
+Cuando el uso sea sustantivo registra:
 
-```text
-[ ] Mostrar varios mensajes sobre el proyecto MiniJarvis.
-[ ] Comprobar que todo se entiende.
-[ ] Evitar añadir funciones que no son de H1.
-```
+- finalidad;
+- prompt o resumen fiel;
+- resultado utilizado;
+- cambios propios;
+- forma de validación.
 
-### Paso 6 — README
+Si no utilizas IA, marca “No” en el diario; no redactes una declaración adicional.
 
-```text
-[ ] Explicar qué hace el programa.
-[ ] Explicar cómo se ejecuta.
-[ ] Añadir ejemplo de ejecución.
-[ ] Indicar qué no incluye todavía.
-```
+## 10. Entrega
 
----
+Entrega en Moodle enlaces profundos a:
 
-## 5. Estructura mínima de entrega
+1. repositorio o carpeta de código;
+2. README con ejecución y pruebas;
+3. diario individual;
+4. Sheet Scrum;
+5. Site personal;
+6. Site de equipo.
 
-```text
-h1-primer-asistente/
-├── README
-├── src/
-│   └── Main.java
-└── docs/
-    ├── evidencia-ejecucion-h1
-    ├── portfolio-h1
-    ├── registro-ia      # solo si has usado IA
-    ├── defensa-h1
-    ├── incidencia-h1    # si aparece una incidencia importante
-    └── vocabulario-h1   # si lo pide el profesor/a
-```
+No entregues archivos vacíos “por si acaso”.
 
-Si todavía no se usa carpeta `docs/`, el profesor/a indicará el formato alternativo.
+## 11. Defensa
 
-Plantillas específicas disponibles en este paquete H1:
+Debes poder:
 
-```text
-plantillas/README-h1-plantilla
-plantillas/evidencia-ejecucion-h1-plantilla
-plantillas/portfolio-h1-plantilla
-plantillas/registro-ia-h1-plantilla
-plantillas/defensa-h1-plantilla
-plantillas/incidencia-h1-plantilla
-plantillas/vocabulario-h1-plantilla
-```
+- ejecutar H1;
+- localizar el punto de entrada;
+- explicar variables, tipos, constantes, operaciones y `Scanner`;
+- explicar una conversión y un posible error;
+- predecir comparaciones y booleanos;
+- probar las dos ramas de un `if/else` básico;
+- distinguir lo que está en el producto de lo que se demostró como micropráctica;
+- realizar una modificación pequeña;
+- justificar y validar cualquier uso de IA.
 
----
+## 12. Criterio de terminado
 
-## 6. README mínimo
+H1 está terminado cuando:
 
-Puedes usar esta estructura:
-
-```markdown
-# H1 — Primer asistente por consola
-
-## Qué hace
-
-Este programa muestra un saludo, pide el nombre del usuario y muestra mensajes iniciales del proyecto MiniJarvis.
-
-## Cómo ejecutar
-
-Desde IntelliJ:
-
-1. Abrir el proyecto.
-2. Abrir `src/Main.java`.
-3. Pulsar Run.
-
-## Ejemplo de ejecución
-
-```text
-Hola, soy MiniJarvis.
-¿Cómo te llamas? Laura
-Encantada, Laura.
-```
-
-## Qué no incluye todavía
-
-No incluye menú, bucles, memoria ni IA real.
-```
-
----
-
-## 7. Uso de IA en H1
-
-Puedes usar IA para:
-
-- preguntar qué es una variable;
-- preguntar qué es una constante;
-- pedir explicación de `Scanner`;
-- entender un error;
-- revisar la claridad del README.
-
-No puedes usar IA para:
-
-- generar el programa completo y entregarlo sin entender;
-- añadir cosas que no pertenecen a H1;
-- ocultar que la has usado;
-- entregar código que no puedes explicar.
-
-Si usas IA para la entrega, regístralo en:
-
-```text
-docs/registro-ia
-```
-
-Debes poder explicar:
-
-```text
-Qué pediste.
-Qué aceptaste.
-Qué cambiaste tú.
-Cómo comprobaste que funcionaba.
-Qué aprendiste.
-```
-
----
-
-## 8. Preguntas de defensa
-
-Prepárate para responder:
-
-```text
-¿Dónde empieza el programa?
-¿Qué variable guarda el nombre?
-¿Qué constante has usado?
-¿Qué hace Scanner?
-¿Qué diferencia hay entre print y println?
-¿Cómo se ejecuta desde IntelliJ?
-¿Por qué todavía no hay menú?
-¿Has usado IA? ¿Para qué?
-```
-
----
-
-## 9. Checklist antes de entregar
-
-```text
-[ ] Existe src/Main.java.
-[ ] El programa se ejecuta.
-[ ] Hay una clase Main.
-[ ] Hay método main.
-[ ] El programa muestra un saludo.
-[ ] El programa pide el nombre.
-[ ] El nombre se guarda en una variable.
-[ ] Hay al menos una constante.
-[ ] Los nombres son claros.
-[ ] No hay menú, bucles, switch ni IA real.
-[ ] El README explica cómo ejecutar.
-[ ] Hay evidencia de ejecución.
-[ ] He registrado la IA si la he usado.
-[ ] Puedo explicar cada línea importante.
-```
-
----
-
-## 10. Idea clave
-
-En H1 no buscamos un agente avanzado.
-
-Buscamos una primera versión pequeña que puedas entender completamente.
-
-Frase clave:
-
-```text
-Si puedo ejecutarlo, explicarlo y defenderlo, voy por buen camino.
-```
+- el producto mínimo compila y se ejecuta;
+- las microprácticas cubren los conceptos del Tema 1 que no están en `Main.java`;
+- las pruebas son localizables mediante enlaces profundos;
+- diario y Scrum están actualizados sin duplicidades;
+- Sites sintetizan, no copian;
+- los permisos han sido comprobados;
+- cada persona puede defender y modificar su trabajo.
