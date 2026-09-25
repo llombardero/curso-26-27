@@ -36,10 +36,9 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
 ## Primer asistente básico — MiniJarvis H1
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -103,19 +102,23 @@ Si H1 es pequeño, claro y defendible, H1 está bien.
 
 ---
 
-## 3. Secuencia de sesiones H1
+## 3. Temporalización oficial de H1
 
-Propuesta de 7 sesiones de 45 minutos.
+H1 ocupa 24 periodos de Programación. Las diez fichas S206–S215 son checkpoints; los periodos restantes son taller y no generan evidencias nuevas.
 
-| Sesión | Foco | Producto parcial |
-|---|---|---|
-| H1-S1 | Presentar H1 y analizar salida esperada | Idea clara del producto mínimo. |
-| H1-S2 | Crear proyecto en IntelliJ y clase Main | Proyecto ejecutable con primer mensaje. |
-| H1-S3 | Variables, constantes y salida | Mensajes con datos fijos y variables. |
-| H1-S4 | Entrada con Scanner | Nombre leído por teclado. |
-| H1-S5 | Código completo, limpieza y ejecución | MiniJarvis H1 funcional. |
-| H1-S6 | README y evidencias | Documentación mínima. |
-| H1-S7 | Revisión, defensa y recuperación | Validación individual. |
+| Secuencia | Foco | Periodos |
+|---|---|---:|
+| S206 | Alcance y producto mínimo | 2 |
+| S207 | IntelliJ, proyecto y primera ejecución | 3 |
+| S208 | Estructura de `Main` | 2 |
+| S209 | Salida y mensajes | 2 |
+| S210 | Variables | 2 |
+| S211 | Constantes | 2 |
+| S212 | `Scanner` y lectura del nombre | 3 |
+| S213 | Integración, limpieza y pruebas | 3 |
+| S214 | GitHub, README y ejecución | 3 |
+| S215 | Portfolio, defensa obligatoria, revisión y recuperación | 2 |
+| **Total** | | **24** |
 
 ---
 

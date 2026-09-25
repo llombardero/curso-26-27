@@ -62,7 +62,7 @@ Haría el backlog antes de tocar el material y probaría una base pequeña antes
 Relación con `32-lista-conceptos-programacion-por-tema.md`:
 
 ```text
-H0 trabaja principalmente: base transversal de Entornos; no introduce todavía conceptos técnicos de Programación evaluables.
+H0 trabaja principalmente la preparación metodológica del proyecto; no introduce todavía conceptos técnicos de Programación evaluables.
 Foco de aprendizaje: preparación metodológica: Scrum de aula, evidencias, roles, comunicación técnica y primer backlog de MiniJarvis.
 ```
 

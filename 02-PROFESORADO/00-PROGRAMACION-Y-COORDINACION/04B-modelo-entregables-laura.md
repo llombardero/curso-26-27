@@ -1,6 +1,6 @@
 # Modelo de entregables de Laura
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 Documento complementario: `04A-enunciados-y-entregables-alumnado.md`
@@ -17,7 +17,7 @@ No debe entregarse al alumnado como solución cerrada. Su función es ayudar al 
 - estructura de carpetas;
 - profundidad de documentación;
 - evidencias mínimas;
-- relación entre Programación y Entornos;
+- relación entre Programación;
 - uso responsable de IA;
 - defensa individual.
 

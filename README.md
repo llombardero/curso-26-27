@@ -1,6 +1,6 @@
 # MiniJarvis — edición final de trabajo y publicación
 
-Curso 2026/2027 — 1.º DAW — Programación y Entornos de Desarrollo.
+Curso 2026/2027 — 1.º DAW — Programación.
 
 ## Base metodológica
 

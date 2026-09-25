@@ -1,6 +1,6 @@
 # H0 — HADA, formación de equipos y distribución de funciones
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Documento maestro para utilizar HADA en la formación provisional de equipos antes de la torre de papel Scrum.
 

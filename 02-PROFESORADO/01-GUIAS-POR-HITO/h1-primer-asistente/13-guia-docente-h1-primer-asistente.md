@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -129,10 +128,9 @@ Carga estimada según calendario:
 
 ```text
 Programación: 24 periodos de 45 min
-Entornos: 9 periodos de 45 min
 ```
 
-La distribución exacta puede ajustarse según horario real y nivel del grupo.
+Las diez fichas S206–S215 funcionan como checkpoints dentro de esa carga. Los periodos restantes se destinan a explicación, práctica guiada, taller, revisión y defensa, sin generar evidencias adicionales por defecto.
 
 ---
 
@@ -155,12 +153,12 @@ Evidencias H1:
 - mensajes por pantalla;
 - defensa individual.
 
-### Entornos de Desarrollo
+### Prácticas técnicas del proyecto
 
 RA principales:
 
-- ED RA1: relación programa, sistema, código fuente, ejecutable, JVM y herramientas.
-- ED RA2: uso inicial de IntelliJ y configuración del entorno.
+- fundamentos del desarrollo y metodologías: relación programa, sistema, código fuente, ejecutable, JVM y herramientas.
+- uso del entorno de desarrollo: uso inicial de IntelliJ y configuración del entorno.
 
 Evidencias H1:
 
@@ -240,19 +238,23 @@ Puntos que debe poder defender el alumnado:
 
 ---
 
-## 7. Secuencia didáctica sugerida
+## 3. Temporalización oficial de H1
 
-### Vista global
+H1 ocupa 24 periodos de Programación. Las diez fichas S206–S215 son checkpoints; los periodos restantes son taller y no generan evidencias nuevas.
 
-| Sesión / bloque | Foco | Producto parcial |
-|---|---|---|
-| 1 | Presentar H1 y analizar ejemplo de salida | Idea clara del producto mínimo. |
-| 2 | Crear proyecto en IntelliJ y clase `Main` | Proyecto ejecutable con primer mensaje. |
-| 3 | Variables, constantes y salida por pantalla | Mensajes con datos fijos y variables. |
-| 4 | Entrada con `Scanner` | Nombre leído por teclado. |
-| 5 | Limpieza, nombres claros y ejecución | Código H1 completo y simple. |
-| 6 | README y evidencia de ejecución | Documentación mínima. |
-| 7 | Revisión, defensa y recuperación | Validación individual. |
+| Secuencia | Foco | Periodos |
+|---|---|---:|
+| S206 | Alcance y producto mínimo | 2 |
+| S207 | IntelliJ, proyecto y primera ejecución | 3 |
+| S208 | Estructura de `Main` | 2 |
+| S209 | Salida y mensajes | 2 |
+| S210 | Variables | 2 |
+| S211 | Constantes | 2 |
+| S212 | `Scanner` y lectura del nombre | 3 |
+| S213 | Integración, limpieza y pruebas | 3 |
+| S214 | GitHub, README y ejecución | 3 |
+| S215 | Portfolio, defensa obligatoria, revisión y recuperación | 2 |
+| **Total** | | **24** |
 
 No es necesario que cada bloque sea una sesión completa. Puede redistribuirse según ritmo real.
 

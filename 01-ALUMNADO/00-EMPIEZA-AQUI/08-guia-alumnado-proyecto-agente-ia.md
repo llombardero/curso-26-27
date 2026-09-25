@@ -1,6 +1,6 @@
 # Guía del alumnado — Proyecto Agente IA
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 ---
 
@@ -80,7 +80,7 @@ Cada hito tendrá:
 2. una lista de tareas;
 3. entregables concretos;
 4. relación con Programación;
-5. relación con Entornos de Desarrollo;
+5. relación con Programación;
 6. normas de uso de IA;
 7. defensa oral o revisión técnica.
 
@@ -267,16 +267,16 @@ mensaje de ejemplo sin datos personales
 
 ## 6. Cómo se evalúa
 
-La evaluación se apoya en Resultados de Aprendizaje y Criterios de Evaluación de Programación y Entornos de Desarrollo.
+La evaluación se apoya en Resultados de Aprendizaje y Criterios de Evaluación de Programación.
 
-Aunque el proyecto sea común, los módulos se evalúan por separado.
+Aunque el proyecto sea común, el proyecto se evalúa dentro de Programación.
 
-Una misma evidencia puede servir para ambos módulos, pero se mirará desde puntos de vista distintos.
+Una misma evidencia puede servir para el módulo, pero se mirará desde puntos de vista distintos.
 
 Por ejemplo:
 
-- un menú en Java puede servir para Programación porque demuestra estructuras de control;
-- el plan de pruebas del mismo menú puede servir para Entornos;
+- un menú en Java puede demostrar estructuras de control;
+- el plan de pruebas del mismo menú puede aportar trazabilidad y confirmar que esas estructuras funcionan;
 - una defensa puede confirmar si la evidencia grupal también demuestra aprendizaje individual.
 
 ### 6.1. Qué se valora

@@ -1,21 +1,21 @@
 # Sesión 223 — Guía operativa del profesorado
 
-## `switch` como alternativa controlada
+## Refuerzo de bucles y elección de estructura de control
 
 | Dato | Valor |
 |---|---|
 | Hito | H2 |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Planificar — organizar el trabajo |
-| Resultado de hoy | Cubrir conceptos del Tema 3 que no siempre aparecen en el menú principal. |
-| Evidencia mínima | Archivo breve `docs/refuerzo-bucles-h2.md` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia. |
+| Resultado de hoy | Comparar `while`, `do-while`, `for` y `switch` mediante ejercicios acotados. |
+| Evidencia mínima | Apartado `Refuerzo de bucles` dentro de `docs/pruebas-h2.md`, con código, explicación y una pregunta de eficiencia. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Archivo breve `docs/refuerzo-bucles-h2.md` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia.
+- [ ] Comprobar que la evidencia mínima se integra en `docs/pruebas-h2.md`; no se crea otro documento.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -49,7 +49,7 @@ Reescribir dos comandos con `switch`.
 
 Comparar `if/else` y `switch` y elegir.
 
-Producto o evidencia que debe quedar: **Archivo breve `docs/refuerzo-bucles-h2.md` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia.**
+Producto o evidencia que debe quedar: **apartado `Refuerzo de bucles` dentro de `docs/pruebas-h2.md`.**
 
 ## Qué observar mientras trabajan
 

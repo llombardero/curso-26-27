@@ -1,4 +1,4 @@
-# Libro del alumnado - Programación y Entornos con MiniJarvis
+# Libro del alumnado - Programación con MiniJarvis
 
 Este libro acompaña el proyecto anual. Cada capítulo se publica cuando es necesario para construir el hito activo.
 

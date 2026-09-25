@@ -1,6 +1,6 @@
 # Enunciados finales de tareas y entregables modelo de Laura
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 Documentos relacionados:
@@ -8,7 +8,7 @@ Documentos relacionados:
 - `00-mapa-maestro-curso-2026-2027.md`
 - `01-matriz-integrada-ra-ce-evidencias-tareas.md`
 - `01A-anexo-programacion-ra-ce.md`
-- `01B-anexo-entornos-ra-ce.md`
+- `01A-anexo-programacion-ra-ce.md`
 - `02-calendario-hitos-sprints-2026-2027.md`
 - `hitos/h0-torre-papel-scrum/03-primera-semana-scrum-torre-papel.md`
 
@@ -24,7 +24,7 @@ Cada tarea incluye:
 - qué debe hacer el alumnado;
 - qué debe entregar;
 - relación con Programación;
-- relación con Entornos de Desarrollo;
+- relación con Programación;
 - uso permitido de IA;
 - defensa;
 - qué entregaría Laura como ejemplo de alumna.
@@ -42,7 +42,7 @@ Todo entregable evaluable debe dejar claro:
 3. Dónde se entrega: Moodle, GitHub o formato mixto.
 4. Qué evidencias mínimas debe contener.
 5. Qué parte corresponde a Programación.
-6. Qué parte corresponde a Entornos de Desarrollo.
+6. Qué parte corresponde a Programación.
 7. Si se ha usado IA, cómo se registra.
 8. Qué se puede preguntar en defensa oral.
 
@@ -106,10 +106,10 @@ Programación:
 - diagnóstico inicial de resolución de problemas;
 - preparación del proyecto del agente.
 
-Entornos:
+Prácticas técnicas integradas:
 
-- ED RA1.b: fases de desarrollo;
-- ED RA1.g: metodologías ágiles.
+- fundamentos del desarrollo y metodologías: fases de desarrollo;
+- fundamentos del desarrollo y metodologías: metodologías ágiles.
 
 ### Uso de IA
 
@@ -185,10 +185,10 @@ Programación:
 - PR RA1;
 - PR RA2 inicial.
 
-Entornos:
+Prácticas técnicas integradas:
 
-- ED RA1: relación entre programa, sistema, fuente y ejecutable;
-- ED RA2: uso de IntelliJ y proyecto inicial.
+- fundamentos del desarrollo y metodologías: relación entre programa, sistema, fuente y ejecutable;
+- uso del entorno de desarrollo: uso de IntelliJ y proyecto inicial.
 
 ### Uso de IA
 
@@ -289,9 +289,9 @@ Programación:
 - PR RA3;
 - refuerzo PR RA1/RA2.
 
-Entornos:
+Prácticas técnicas integradas:
 
-- ED RA3: pruebas, depuración e incidencias.
+- pruebas y depuración: pruebas, depuración e incidencias.
 
 ### Uso de IA
 
@@ -381,9 +381,9 @@ Programación:
 - PR RA6;
 - refuerzo PR RA3.
 
-Entornos:
+Prácticas técnicas integradas:
 
-- ED RA3: casos de prueba, incidencias y pruebas iniciales.
+- pruebas y depuración: casos de prueba, incidencias y pruebas iniciales.
 
 ### Defensa
 
@@ -457,10 +457,10 @@ Programación:
 - PR RA4;
 - refuerzo PR RA2.
 
-Entornos:
+Prácticas técnicas integradas:
 
-- ED RA5: diagramas de clases;
-- ED RA6: diagramas de comportamiento.
+- diagramas de clases: diagramas de clases;
+- diagramas de comportamiento: diagramas de comportamiento.
 
 ### Defensa
 
@@ -530,10 +530,10 @@ Programación:
 - PR RA7 no imprescindible/evaluable;
 - refuerzo PR RA4/RA6.
 
-Entornos:
+Prácticas técnicas integradas:
 
-- ED RA4;
-- ED RA6 si se usan diagramas de estados o comportamiento.
+- control de versiones, refactorización y automatización;
+- diagramas de comportamiento si se usan diagramas de estados o comportamiento.
 
 ### Defensa
 
@@ -607,10 +607,10 @@ Programación:
 - PR RA5;
 - PR RA8/RA9 si procede como ampliación.
 
-Entornos:
+Prácticas técnicas integradas:
 
-- ED RA3;
-- ED RA4.
+- pruebas y depuración;
+- control de versiones, refactorización y automatización.
 
 ### Defensa
 
@@ -673,10 +673,10 @@ Programación:
 - consolidación PR RA1-RA6;
 - PR RA7/RA8/RA9 si procede.
 
-Entornos:
+Prácticas técnicas integradas:
 
-- ED RA3;
-- ED RA4;
+- pruebas y depuración;
+- control de versiones, refactorización y automatización;
 - seguridad, documentación, configuración y validación.
 
 ### Defensa

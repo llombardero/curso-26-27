@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -122,8 +121,8 @@ El cierre es válido si:
 ¿Qué parte del proyecto puedes explicar mejor?
 ¿Qué error técnico recuerdas y cómo lo resolviste?
 ¿Qué hito te hizo aprender más y por qué?
-¿Qué evidencia demuestra Programación?
-¿Qué evidencia demuestra Entornos?
+¿Qué evidencia demuestra el código y los RA de Programación?
+¿Qué evidencia demuestra la calidad del proceso técnico?
 ¿Cómo usaste IA de forma responsable?
 ¿Qué cambiarías si tuvieras dos semanas más?
 ```

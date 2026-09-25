@@ -2,7 +2,7 @@
 
 Equipo o alumno/a:
 Curso: 1.º DAW
-Módulos: Programación + Entornos de Desarrollo
+Módulo: Programación
 Fecha:
 
 ---

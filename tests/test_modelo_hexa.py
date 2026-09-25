@@ -1,7 +1,6 @@
 import re
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 TEACHER_SESSIONS = ROOT / "02-PROFESORADO" / "02-SESIONES"
 METHODOLOGY_ROOT = ROOT / "02-PROFESORADO" / "04-RECURSOS-NORMATIVOS-Y-TEMARIOS"
@@ -16,7 +15,6 @@ PHASES = (
     "Comunicar — evaluar y reflexionar",
 )
 
-
 def marked_hexa_blocks():
     start = "<!-- HEXA-CICLO-COMPLETO-POR-HITO:START -->"
     end = "<!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->"
@@ -25,7 +23,6 @@ def marked_hexa_blocks():
         if start in text:
             yield path, text.split(start, 1)[1].split(end, 1)[0]
 
-
 def test_operational_model_uses_canonical_pdf_and_six_phases():
     assert CANONICAL_PDF.is_file()
     text = OPERATIONAL_MODEL.read_text(encoding="utf-8")
@@ -33,7 +30,6 @@ def test_operational_model_uses_canonical_pdf_and_six_phases():
     assert "Fase 0 — Equipos" in text
     for number, phase in enumerate(PHASES, 1):
         assert f"{number}. {phase}" in text
-
 
 def test_every_marked_hexa_cycle_uses_all_six_canonical_phases():
     blocks = list(marked_hexa_blocks())
@@ -46,7 +42,6 @@ def test_every_marked_hexa_cycle_uses_all_six_canonical_phases():
         assert "X — eXplicación" not in block, path
         assert "A — Aplicación" not in block, path
 
-
 def test_hexa_correction_checklists_preserve_six_phase_review_table():
     paths = sorted((ROOT / "02-PROFESORADO" / "01-GUIAS-POR-HITO").rglob("*C-checklist-correccion-*.md"))
     assert len(paths) == 8
@@ -55,7 +50,6 @@ def test_hexa_correction_checklists_preserve_six_phase_review_table():
         assert "### Lista de comprobación del ciclo" in text, path
         for number, phase in enumerate(PHASES, 1):
             assert f"| {number} — {phase.split(' — ', 1)[0]}" in text, path
-
 
 def test_all_teacher_sessions_use_named_hexa_phases():
     paths = sorted(TEACHER_SESSIONS.rglob("S*-docente.md"))
@@ -73,7 +67,6 @@ def test_all_teacher_sessions_use_named_hexa_phases():
             short = label.split(" — ", 1)[0]
             assert short in allowed, (path, label)
         assert not re.search(r"\| Momento HEXA", text), path
-
 
 def test_project_no_longer_defines_hexa_as_four_letter_phases():
     forbidden = (

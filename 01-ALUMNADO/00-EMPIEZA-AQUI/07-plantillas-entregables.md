@@ -1,6 +1,6 @@
 # Plantillas de entregables
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 ---
 
@@ -10,7 +10,7 @@ Este documento recoge plantillas reutilizables para los entregables del proyecto
 
 > Construcción progresiva de un pequeño agente IA propio.
 
-Las plantillas sirven para que el alumnado entregue evidencias homogéneas, revisables y defendibles, y para facilitar la coordinación entre Programación y Entornos de Desarrollo.
+Las plantillas sirven para que el alumnado entregue evidencias homogéneas, revisables y defendibles, y para facilitar la coordinación entre Programación.
 
 Uso recomendado:
 
@@ -62,7 +62,7 @@ No todos los hitos necesitan todos los archivos.
 Equipo:
 Integrantes:
 Curso:
-Módulos: Programación + Entornos de Desarrollo
+Módulo: Programación
 Fecha:
 
 ---
@@ -128,7 +128,7 @@ Evidencias:
 
 ---
 
-## 7. Relación con Entornos de Desarrollo
+## 7. Aplicación al proyecto
 
 Aprendizajes trabajados:
 
@@ -244,7 +244,7 @@ Explicación:
 
 ---
 
-## 6. Relación con Entornos de Desarrollo
+## 6. Aplicación al proyecto
 
 Aprendizajes que creo haber trabajado:
 

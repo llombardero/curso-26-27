@@ -52,7 +52,7 @@ Implementa un modo `ia` simulado. Prueba un prompt seguro: “Explícame ArrayLi
 
 Documenta ambos sin copiar secretos completos.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
 Crea `docs/registro-prompts`, `docs/riesgos-ia`, `docs/configuracion-segura` y `docs/validacion-humana`. `.env.example` puede existir; `.env` real no.
 

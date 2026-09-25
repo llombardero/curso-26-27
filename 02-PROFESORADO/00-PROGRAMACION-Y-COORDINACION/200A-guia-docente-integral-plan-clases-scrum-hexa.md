@@ -37,7 +37,6 @@ Regla de evaluación: el producto final por sí solo no acredita el proceso. Si 
 
 <!-- HEXA-POLITICA-TODOS-HITOS:END -->
 
-
 ## Programación orientada a objetos — Proyecto MiniJarvis — Curso 2026/2027
 
 Documento creado a partir del análisis de los materiales existentes en esta carpeta del curso.
@@ -195,11 +194,9 @@ El comando memoria está terminado cuando guarda al menos un recuerdo, muestra m
 
 ## 6. Ritmo semanal recomendado
 
-Programación tiene 8 periodos semanales y Entornos 3 periodos semanales. Conviene diferenciar la función de cada módulo.
+Programación dispone de 8 periodos semanales de 45 minutos: 3 el martes, 2 el jueves y 3 el viernes. En ese horario se integran dos funciones complementarias.
 
-### Programación
-
-Uso principal:
+Uso curricular principal:
 
 - explicación técnica;
 - práctica guiada;
@@ -207,9 +204,7 @@ Uso principal:
 - pruebas de comportamiento;
 - defensa de estructuras, clases y decisiones.
 
-### Entornos de Desarrollo
-
-Uso principal:
+Uso técnico instrumental:
 
 - IntelliJ, Git, GitHub y estructura de repositorio;
 - README, documentación técnica y evidencias;
@@ -220,11 +215,13 @@ Uso principal:
 
 ### Semana tipo
 
-| Momento | Programación | Entornos |
-|---|---|---|
-| Inicio de semana | Activar, explicar concepto clave y mini-reto. | Revisar tablero, backlog y evidencias. |
-| Mitad de semana | Construcción guiada del incremento. | Pruebas, depuración, Git o documentación. |
-| Final de semana | Integración, revisión técnica y dudas. | README, portfolio, registro IA y defensa parcial. |
+| Día | Periodos | Uso combinado dentro de Programación |
+|---|---:|---|
+| Martes | 3 | Activar, explicar el concepto clave, practicar y arrancar el incremento. |
+| Jueves | 2 | Construcción guiada, pruebas, depuración, Git o documentación. |
+| Viernes | 3 | Integración, revisión técnica, README/portfolio, defensa y cierre. |
+
+Las prácticas instrumentales apoyan las evidencias de Programación; no tienen RA, CE, horas, entregables ni calificación independientes.
 
 ---
 
@@ -244,15 +241,9 @@ Secuencia:
 
 | Momento | Minutos | Acción y evidencia |
 |---|---:|---|
-| Curso, MiniJarvis, hitos, HEXA y evidencias | 35 | Mapa y reformulación del reto. |
-| IA responsable | 15 | Semáforo y reglas de defensa. |
-| Scrum mínimo | 20 | Sprint, backlog, bloqueo, prueba, review y retrospectiva. |
-| Autoevaluación | 10 | Dos aportaciones y dos habilidades por desarrollar; privada y no calificable. |
-| Microprueba | 20 | Backlog, prioridad, terminado, bloqueo y aportación individual. |
-| Equipos provisionales | 25 | Grupos de 3 o 4 equilibrados, accesibles y con responsabilidades rotatorias. |
-| Cierre | 10 | Ticket y preparación de la torre. |
-| Sesión siguiente | 90 | Backlog de torre, sprint, prueba, review y retrospectiva. |
-| Cierre H0 | 45 + apoyo ED | Revisión de equipos, contrato y transferencia a MiniJarvis. |
+| Martes | 135 | Curso, MiniJarvis, HEXA, IA, Scrum mínimo, autoevaluación y microprueba individual y en pareja/trío. |
+| Jueves | 90 | Equipos provisionales, backlog, construcción de la torre y primera prueba. |
+| Viernes | 135 | Segundo ciclo, prueba comparativa, review, retrospectiva, contrato, transferencia a MiniJarvis y preparación de H1. |
 
 Regla de tamaño: resto N÷4 = 0, todos de cuatro; 1, tres equipos de tres; 2, dos de tres; 3, uno de tres; el resto de cuatro. Evitar equipos de cinco y alumnado solo. Revisar asistencia y accesibilidad.
 
@@ -271,6 +262,8 @@ No calificar las puntuaciones del diagnóstico ni una habilidad previa. Evaluar 
 ### H1. Primer asistente básico
 
 Fechas: 21 septiembre - 9 octubre.
+
+H1 ocupa 24 periodos de Programación. Las diez fichas S206–S215 son checkpoints dentro de esa carga; los periodos restantes son explicación, práctica guiada, taller, revisión y defensa, sin evidencias adicionales por defecto.
 
 Producto:
 
@@ -304,7 +297,7 @@ Secuencia de clases:
 | Variables y constantes | Mensajes que usan datos. |
 | Entrada por teclado | Nombre leído con `Scanner`. |
 | Limpieza | Código simple, nombres claros y sin complejidad prematura. |
-| Entornos | README, estructura del proyecto y evidencia de ejecución. |
+| Práctica técnica | README, estructura del proyecto y evidencia de ejecución. |
 | Defensa | Explicar `main`, variable, constante, `Scanner` y ejecución. |
 
 Intervención docente:
@@ -318,6 +311,8 @@ Si un equipo trae código avanzado, pedir que lo reduzca o que demuestre compren
 ### H2. Decisiones, menús y depuración
 
 Fechas: 13 octubre - 6 noviembre.
+
+H2 ocupa 28 periodos de Programación. Las trece fichas S216–S228 son sesiones ancla; el resto se dedica a explicación, práctica, taller, consolidación, revisión y defensa sin generar evidencias nuevas por defecto.
 
 Producto:
 
@@ -334,8 +329,8 @@ Cuándo explicar los elementos clave:
 | Primera implementación | Bucle `while` | Preguntar cómo evitar que el programa termine. |
 | Después | `if/else` o `switch` | Elegir respuesta según comando. |
 | Al aparecer errores | `.equals`, `trim`, `toLowerCase` | Resolver fallos reales de entrada. |
-| Entornos | Casos de prueba | Definir esperado/obtenido. |
-| Entornos | Breakpoints | Observar `command`, `running` y `userName`. |
+| Práctica técnica | Casos de prueba | Definir esperado/obtenido. |
+| Práctica técnica | Breakpoints | Observar `command`, `running` y `userName`. |
 
 Restricción clave:
 
@@ -388,7 +383,7 @@ Cuándo explicar los elementos clave:
 | Ejecución | Añadir comando `recuerda` | Guardar una entrada. |
 | Ejecución | Añadir comando `memoria` | Recorrer y mostrar datos. |
 | Calidad | Casos límite | Memoria vacía, entrada vacía y repetidos. |
-| Entornos | Pruebas de memoria | Casos esperado/obtenido. |
+| Práctica técnica | Pruebas de memoria | Casos esperado/obtenido. |
 
 Restricción clave:
 
@@ -471,8 +466,8 @@ Cuándo explicar los elementos clave:
 | Investigación | Constructor | Crear objetos en estado inicial válido. |
 | Investigación | Encapsulación | Usar `private` y métodos públicos con intención. |
 | Idear | Responsabilidad única | Separar `Agent`, `Memory` y `Main`. |
-| Entornos | Diagrama de clases | Dibujar clases antes o durante el rediseño. |
-| Entornos | Diagrama de comportamiento | Explicar flujo real de un comando. |
+| Práctica técnica | Diagrama de clases | Dibujar clases antes o durante el rediseño. |
+| Práctica técnica | Diagrama de comportamiento | Explicar flujo real de un comando. |
 
 Restricción clave:
 
@@ -530,7 +525,7 @@ Cuándo explicar los elementos clave:
 | Ejecución | Composición frente a herencia | Priorizar delegar en herramientas. |
 | Después | Refactorización | Mostrar antes/después y motivo. |
 | Cuando haya necesidad | Patrón Command simplificado | Nombrarlo solo si resuelve el problema real. |
-| Entornos | Git profesional | Ramas, commits, PR o revisión documentada. |
+| Práctica técnica | Git profesional | Ramas, commits, PR o revisión documentada. |
 
 Restricción clave:
 
@@ -589,7 +584,7 @@ Actividades recomendadas:
 | Defensa de diseño | Validar clases, responsabilidades y decisiones. |
 | Revisión Git | Comprobar commits, trazabilidad y revisión. |
 | Informe de refactorización | Ver mejora real antes/después. |
-| Recuperación | Cubrir RA4 y RA de Entornos pendientes. |
+| Recuperación | Cubrir RA4 y RA técnicos pendientes. |
 
 Preguntas de defensa:
 
@@ -621,7 +616,7 @@ Cuándo explicar los elementos clave:
 | Ejecución | Rutas y carpetas | Crear `data/` y `logs/`. |
 | Ejecución | Errores de E/S | Gestionar fichero inexistente o permisos. |
 | Calidad | Prueba de segunda ejecución | Guardar, cerrar, abrir y consultar. |
-| Entornos | README reproducible | Ejecutar desde cero siguiendo instrucciones. |
+| Práctica técnica | README reproducible | Ejecutar desde cero siguiendo instrucciones. |
 | Seguridad | Secretos y datos personales | Prohibir `.env` real, tokens y datos reales. |
 
 Restricción clave:
@@ -679,7 +674,7 @@ Cuándo explicar los elementos clave:
 | Antes de integrar | Seguridad de prompts | No enviar datos personales ni secretos. |
 | Ejecución | Simulador o API | Priorizar robustez sobre espectacularidad. |
 | Calidad | Validación humana | Revisar respuestas y límites. |
-| Entornos | Configuración segura | `.env.example`, nunca `.env` real. |
+| Práctica técnica | Configuración segura | `.env.example`, nunca `.env` real. |
 | Cierre | Registro de prompts | Documentar uso, riesgos y verificación. |
 
 Caso de uso recomendado:
@@ -918,7 +913,7 @@ Ticket de salida recomendado:
 5. Usar Scrum de forma ligera pero constante.
 6. Usar HEXA como estructura docente de cada hito.
 7. Evaluar siempre producto, proceso, documentación, pruebas y defensa.
-8. Reservar Entornos para profesionalizar el proceso: Git, pruebas, depuración, UML, README, reproducibilidad y seguridad.
+8. Integrar Git, pruebas, depuración, UML, README, reproducibilidad y seguridad cuando apoyen la construcción y evaluación de MiniJarvis en Programación.
 9. Usar los ejemplos de Laura como calibración, no como solución previa.
 10. Cerrar cada evaluación con recuperación específica por evidencias, no con tareas genéricas.
 

@@ -48,7 +48,7 @@ Prepara `portfolio-final` con evidencias H0-H7. Después prepara `demo-final` co
 
 Ensaya tres preguntas de defensa: qué hice, qué evidencia lo demuestra y qué mejoraría.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
 Crea `registro-ia-final`, `autoevaluacion-final` y, si procede, `recuperacion-especifica`. Revisa que no haya secretos ni datos personales antes de compartir.
 
@@ -63,7 +63,7 @@ Crea `registro-ia-final`, `autoevaluacion-final` y, si procede, `recuperacion-es
 ## 7. Preguntas de repaso
 
 1. ¿Qué diferencia hay entre demo y defensa?
-2. ¿Por qué el portfolio debe separar Programación y Entornos?
+2. ¿Por qué el portfolio debe separar Programación?
 3. ¿Qué es una recuperación específica?
 4. ¿Qué significa “sin comprensión defendible no hay evidencia completa”?
 
@@ -85,4 +85,4 @@ Uso de IA, si lo hubo, y cómo lo validé:
 
 El portfolio final debe permitir reconstruir tu aprendizaje. No basta con poner enlaces: cada evidencia necesita una explicación. Una buena defensa no consiste en saberlo todo, sino en explicar con claridad una parte real que has trabajado y reconocer límites.
 
-Caso de estudio: elige una evidencia fuerte de Programación y otra de Entornos. Para cada una escribe: dónde está, qué demuestra, cómo se prueba y qué pregunta podrías responder. Después prepara un plan B para la demo. Si el programa no ejecuta en directo, debes poder enseñar pruebas, logs, README o una incidencia documentada.
+Caso de estudio: elige una evidencia fuerte del código y otra del proceso técnico. Para cada una escribe: dónde está, qué demuestra, cómo se prueba y qué pregunta podrías responder. Después prepara un plan B para la demo. Si el programa no ejecuta en directo, debes poder enseñar pruebas, logs, README o una incidencia documentada.

@@ -56,7 +56,7 @@ java -cp src Main
 
 Guarda en tu portfolio qué comando has usado y qué salida esperabas.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
 Documento mínimo: `README` con dos apartados: “Cómo compilar” y “Cómo ejecutar”. Añade una captura o copia de salida de consola. Si hay error, anota el mensaje exacto.
 

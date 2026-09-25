@@ -6,10 +6,8 @@ import sys
 
 import pytest
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = ROOT / "generar_presentaciones_sesiones.py"
-
 
 def load_module():
     spec = importlib.util.spec_from_file_location("generar_presentaciones_sesiones", MODULE_PATH)
@@ -19,17 +17,14 @@ def load_module():
     spec.loader.exec_module(module)
     return module
 
-
 @pytest.fixture(scope="module")
 def generator():
     return load_module()
-
 
 def source_pair(number: str) -> tuple[Path, Path]:
     teacher = next((ROOT / "02-PROFESORADO" / "02-SESIONES").rglob(f"S{number}-*-docente.md"))
     student = next((ROOT / "01-ALUMNADO" / "03-SESIONES").rglob(f"S{number}-*-alumnado.md"))
     return teacher, student
-
 
 def test_teacher_guide_is_primary_source_for_special_h0_session(generator):
     teacher, student = source_pair("203")
@@ -44,7 +39,6 @@ def test_teacher_guide_is_primary_source_for_special_h0_session(generator):
     assert any("HADA" in item for item in session.key_concepts)
     assert "Comprender y aplicar el objetivo" not in session.objective
 
-
 def test_parser_accepts_numbered_and_unnumbered_headings(generator):
     teacher, student = source_pair("203")
 
@@ -53,7 +47,6 @@ def test_parser_accepts_numbered_and_unnumbered_headings(generator):
     assert session.materials
     assert session.timeline
     assert session.closure
-
 
 def test_timeline_preserves_operational_content_after_introductory_labels(generator):
     teacher, student = source_pair("203")
@@ -64,7 +57,6 @@ def test_timeline_preserves_operational_content_after_introductory_labels(genera
     assert "Ayer obtuvimos una hipótesis" in timeline_text
     assert "¿Qué diferencia hay entre una preferencia HADA y una función?" in timeline_text
     assert all(not block.action.rstrip().endswith(":") for block in session.timeline)
-
 
 def test_slide_plan_is_adaptive_and_preserves_content_without_ellipsis(generator):
     teacher_225, student_225 = source_pair("225")
@@ -83,7 +75,6 @@ def test_slide_plan_is_adaptive_and_preserves_content_without_ellipsis(generator
     assert "sobreingeniería" in combined
     assert "problema real" in combined
 
-
 def test_cli_exposes_safe_generation_modes(generator, tmp_path):
     parser = generator.build_arg_parser()
 
@@ -101,13 +92,11 @@ def test_cli_exposes_safe_generation_modes(generator, tmp_path):
     assert args.sessions == ["S203"]
     assert args.output_dir == tmp_path
 
-
 def test_partial_generation_requires_an_explicit_output_directory(generator):
     args = generator.build_arg_parser().parse_args(["--session", "S203"])
 
     with pytest.raises(SystemExit, match="--output-dir"):
         generator.validate_cli_safety(args)
-
 
 def test_atomic_publish_preserves_previous_output_in_backup(generator, tmp_path):
     output = tmp_path / "POR-SESION"
@@ -125,7 +114,6 @@ def test_atomic_publish_preserves_previous_output_in_backup(generator, tmp_path)
     assert (backup / "old.txt").read_text(encoding="utf-8") == "old"
     assert not staging.exists()
 
-
 def test_check_reports_fallbacks_and_truncation_as_errors(generator):
     teacher, student = source_pair("225")
     session = generator.parse_session(teacher, student)
@@ -134,7 +122,6 @@ def test_check_reports_fallbacks_and_truncation_as_errors(generator):
 
     assert report.errors == []
     assert report.warnings == []
-
 
 def test_pilot_plans_exclude_teacher_template_noise_and_malformed_questions(generator):
     forbidden = (
@@ -150,7 +137,6 @@ def test_pilot_plans_exclude_teacher_template_noise_and_malformed_questions(gene
 
     teacher, student = source_pair("284")
     assert generator.parse_session(teacher, student).close_question == "¿qué invariante debe mantener siempre Memory?"
-
 
 def test_pilot_plans_preserve_session_specific_operational_content(generator):
     expected_fragments = {
@@ -194,7 +180,6 @@ def test_pilot_plans_preserve_session_specific_operational_content(generator):
         for fragment in fragments:
             assert fragment.lower() in combined.lower(), (number, fragment)
 
-
 def test_pilot_uses_content_specific_visual_structures(generator):
     expected_kind = {
         "203": "relationship",
@@ -208,7 +193,6 @@ def test_pilot_uses_content_specific_visual_structures(generator):
         teacher, student = source_pair(number)
         kinds = [slide.kind for slide in generator.plan_slides(generator.parse_session(teacher, student))]
         assert kind in kinds, (number, kinds)
-
 
 def test_pilot_content_specific_visuals_are_renderable(generator, tmp_path):
     for number in ("203", "225", "267", "284", "306"):
@@ -227,7 +211,6 @@ def test_pilot_content_specific_visuals_are_renderable(generator, tmp_path):
         )
         assert "…" not in rendered_text
 
-
 def test_presentation_uses_named_hexa_phase_from_canonical_model(generator, tmp_path):
     teacher, student = source_pair("212")
     session = generator.parse_session(teacher, student)
@@ -245,7 +228,6 @@ def test_presentation_uses_named_hexa_phase_from_canonical_model(generator, tmp_
     assert "Fase HEXA: Investigar — aprender lo necesario" in rendered_text
     assert "Momento HEXA:" not in rendered_text
 
-
 def test_pilot_avoids_sparse_duplicate_slides(generator):
     for number in ("203", "225", "267", "284", "306"):
         teacher, student = source_pair(number)
@@ -258,7 +240,6 @@ def test_pilot_avoids_sparse_duplicate_slides(generator):
         kinds = [slide.kind for slide in generator.plan_slides(generator.parse_session(teacher, student))]
         assert "concepts" not in kinds, number
         assert "example" not in kinds, number
-
 
 def test_full_collection_avoids_sparse_and_template_only_slides(generator):
     boilerplate = (
@@ -289,7 +270,6 @@ def test_full_collection_avoids_sparse_and_template_only_slides(generator):
         assert "concepts" not in kinds, number
         assert "example" not in kinds, number
 
-
 def test_projectable_lists_do_not_contain_join_artifacts(generator):
     for number in ("203", "225", "267", "284", "306"):
         teacher, student = source_pair(number)
@@ -300,7 +280,6 @@ def test_projectable_lists_do_not_contain_join_artifacts(generator):
         assert ";," not in combined
         assert "…" not in combined
 
-
 def test_evidence_paths_are_unambiguous_in_every_pilot_slide(generator):
     for number in ("225", "284"):
         teacher, student = source_pair(number)
@@ -309,7 +288,6 @@ def test_evidence_paths_are_unambiguous_in_every_pilot_slide(generator):
         assert "docs/depuracion-h2 con" not in combined
         assert "docs/incidencia-h6.md/docs/seguridad-h6.md" not in combined
         assert "docs/incidencia-h6/docs/seguridad-h6" not in combined
-
 
 def test_activity_numbering_continues_across_slides_and_skips_intro(generator):
     teacher, student = source_pair("267")
@@ -321,7 +299,6 @@ def test_activity_numbering_continues_across_slides_and_skips_intro(generator):
 
     assert [slide.subtitle for slide in activity_slides] == ["1", "6"]
     assert not any(item.rstrip().endswith("con:") for slide in activity_slides for item in slide.items)
-
 
 def test_all_special_h0_guides_have_real_timeline_and_concepts(generator):
     for number in ("201", "202", "204", "205"):

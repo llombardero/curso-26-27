@@ -1,6 +1,5 @@
 # HF - Presentación final, recuperación y mejora
 
-
 ## Evidencias digitales correspondientes a la entrega
 
 La carpeta `evidencias-digitales` muestra cómo se presenta este hito en los cinco documentos comunes del curso:

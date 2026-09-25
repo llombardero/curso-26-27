@@ -8,11 +8,9 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
-
 ROOT = Path(__file__).resolve().parent
 EXAMPLES = ROOT / "03-EJEMPLOS-LAURA-PRIVADOS"
 MASTERS = ROOT / "02-PROFESORADO" / "05-ECOSISTEMA-DIGITAL" / "PLANTILLAS-MAESTRAS"
-
 
 HITOS = {
     "h0-torre-papel": {
@@ -134,11 +132,9 @@ HITOS = {
     },
 }
 
-
 def set_row(ws, row: int, values: tuple[object, ...]) -> None:
     for column, value in enumerate(values, start=1):
         ws.cell(row=row, column=column, value=value)
-
 
 def create_diary(target: Path, data: dict[str, str]) -> None:
     source = MASTERS / "01-Diario-individual-MiniJarvis.xlsx"
@@ -164,7 +160,6 @@ def create_diary(target: Path, data: dict[str, str]) -> None:
         ),
     )
     workbook.save(target)
-
 
 def create_scrum(target: Path, data: dict[str, str]) -> None:
     source = MASTERS / "02-Scrum-equipo-MiniJarvis.xlsx"
@@ -209,7 +204,6 @@ def create_scrum(target: Path, data: dict[str, str]) -> None:
         set_row(workbook["ENLACES_EVIDENCIAS"], row, values)
     workbook.save(target)
 
-
 def site_personal(data: dict[str, str]) -> str:
     return f"""# Ejemplo de Site personal de Laura - {data['code']}
 
@@ -250,7 +244,6 @@ Usé IA solo para revisar una explicación. Validé las sugerencias comparándol
 {data['next']}
 """
 
-
 def site_team(data: dict[str, str]) -> str:
     github = "No se usa GitHub en H0." if data["code"] == "H0" else f"Versión evaluada: `{data['version']}`."
     return f"""# Ejemplo de Site del Equipo Ada - {data['code']}
@@ -288,7 +281,6 @@ Detectamos este problema: {data['problem']}
 Siguiente acción: {data['next']}
 """
 
-
 def moodle_delivery(data: dict[str, str]) -> str:
     github = "No aplica" if data["code"] == "H0" else data["version"]
     return f"""# Ejemplo de entrega de enlaces en Moodle - {data['code']}
@@ -321,7 +313,6 @@ def moodle_delivery(data: dict[str, str]) -> str:
 Hemos comprobado los permisos con una cuenta distinta de la propietaria. Los enlaces son ejemplos restringidos, no contienen datos personales ni secretos y podemos explicar lo entregado.
 """
 
-
 def update_readme(path: Path, data: dict[str, str]) -> None:
     marker = "## Evidencias digitales correspondientes a la entrega"
     text = path.read_text(encoding="utf-8") if path.exists() else f"# {data['code']} - {data['title']}\n"
@@ -343,7 +334,6 @@ Los archivos de código y la carpeta `docs` contienen las evidencias técnicas o
 """
     path.write_text(text, encoding="utf-8")
 
-
 def main() -> None:
     for folder, data in HITOS.items():
         hito = EXAMPLES / folder
@@ -357,7 +347,6 @@ def main() -> None:
         (evidence / "04-Site-equipo-estructura.md").write_text(site_team(data), encoding="utf-8")
         (evidence / "05-Entrega-enlaces-Moodle.md").write_text(moodle_delivery(data), encoding="utf-8")
         update_readme(hito / "README.md", data)
-
 
 if __name__ == "__main__":
     main()

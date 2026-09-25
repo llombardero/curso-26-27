@@ -22,7 +22,6 @@ from pptx.enum.shapes import MSO_AUTO_SHAPE_TYPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.util import Inches, Pt
 
-
 ROOT = Path(__file__).resolve().parent
 STUDENT_ROOT = ROOT / "01-ALUMNADO" / "03-SESIONES"
 TEACHER_ROOT = ROOT / "02-PROFESORADO" / "02-SESIONES"
@@ -55,12 +54,10 @@ COLORS = {
     "hf": RGBColor(109, 87, 37),
 }
 
-
 @dataclass
 class TimelineBlock:
     time: str
     action: str
-
 
 @dataclass
 class Session:
@@ -85,7 +82,6 @@ class Session:
     teacher_source: Path
     student_source: Path
 
-
 @dataclass
 class SlideSpec:
     kind: str
@@ -93,13 +89,11 @@ class SlideSpec:
     items: list[str] = field(default_factory=list)
     subtitle: str = ""
 
-
 @dataclass
 class ValidationReport:
     session: str
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
-
 
 GENERIC_MARKERS = {
     "Comprender y aplicar el objetivo de la sesión.",
@@ -108,14 +102,12 @@ GENERIC_MARKERS = {
     "¿Qué has hecho y cómo sabes que funciona?",
 }
 
-
 def clean(text: str) -> str:
     text = re.sub(r"\[([^]]+)]\([^)]*\)", r"\1", text)
     text = text.replace("**", "").replace("__", "").replace("`", "")
     text = re.sub(r"<[^>]+>", "", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text.replace(".,", ",").replace(";,", ";")
-
 
 def normalize_projectable_text(text: str) -> str:
     text = re.sub(r"docs/depuracion-h2(?!\.md)", "docs/depuracion-h2.md", text)
@@ -128,10 +120,8 @@ def normalize_projectable_text(text: str) -> str:
         "docs/incidencia-h6.md o docs/seguridad-h6.md",
     )
 
-
 def heading_pattern(title_pattern: str) -> str:
     return rf"(?:\d+(?:\.\d+)*[.)]?\s+)?(?:{title_pattern})"
-
 
 def section(text: str, title_pattern: str, levels: tuple[int, ...] = (2, 3)) -> str:
     """Devuelve una sección Markdown aunque el título tenga prefijo numérico."""
@@ -153,7 +143,6 @@ def section(text: str, title_pattern: str, levels: tuple[int, ...] = (2, 3)) -> 
         return "\n".join(body).strip()
     return ""
 
-
 def list_items(text: str, limit: int | None = None) -> list[str]:
     items: list[str] = []
     for line in text.splitlines():
@@ -167,7 +156,6 @@ def list_items(text: str, limit: int | None = None) -> list[str]:
             break
     return items
 
-
 def is_noise(value: str) -> bool:
     return bool(
         re.search(
@@ -176,7 +164,6 @@ def is_noise(value: str) -> bool:
             flags=re.IGNORECASE,
         )
     )
-
 
 def meaningful_lines(text: str, limit: int | None = None) -> list[str]:
     result: list[str] = []
@@ -202,7 +189,6 @@ def meaningful_lines(text: str, limit: int | None = None) -> list[str]:
         if limit is not None and len(result) >= limit:
             break
     return result
-
 
 def semantic_items(text: str, limit: int | None = None) -> list[str]:
     """Agrupa introducciones, listas y filas de tabla en ideas proyectables."""
@@ -244,7 +230,6 @@ def semantic_items(text: str, limit: int | None = None) -> list[str]:
             break
     return items
 
-
 def operational_details(text: str, limit: int = 3) -> list[str]:
     """Conserva el contenido anunciado por etiquetas como ``Di:`` o ``Pregunta:``."""
     items = semantic_items(text)
@@ -261,7 +246,6 @@ def operational_details(text: str, limit: int = 3) -> list[str]:
         index += 1
     return details
 
-
 def metadata_table(text: str) -> dict[str, str]:
     values: dict[str, str] = {}
     for line in text.splitlines():
@@ -275,7 +259,6 @@ def metadata_table(text: str) -> dict[str, str]:
         values.setdefault(cells[0].lower(), cells[1])
     return values
 
-
 def first_student_outcome(text: str) -> tuple[str, str]:
     lines = text.splitlines()
     for index, line in enumerate(lines):
@@ -288,14 +271,12 @@ def first_student_outcome(text: str) -> tuple[str, str]:
                         return cells[0], cells[1]
     return "", ""
 
-
 def value_for(meta: dict[str, str], *keys: str) -> str:
     for key in keys:
         value = meta.get(key.lower(), "")
         if value:
             return value
     return ""
-
 
 def parse_markdown_timeline(text: str) -> list[TimelineBlock]:
     body = section(text, r"Secuencia de aula")
@@ -346,7 +327,6 @@ def parse_markdown_timeline(text: str) -> list[TimelineBlock]:
         timeline.append(TimelineBlock(f"{clean(match.group(1))} min", action))
     return timeline
 
-
 def extract_question(teacher_text: str, student_text: str) -> str:
     for source, heading in (
         (student_text, r"Cierre(?: individual)?"),
@@ -364,16 +344,13 @@ def extract_question(teacher_text: str, student_text: str) -> str:
             return lines[0]
     return ""
 
-
 def teacher_for_student(student_path: Path) -> Path:
     relative = student_path.relative_to(STUDENT_ROOT)
     return TEACHER_ROOT / relative.with_name(relative.name.replace("-alumnado.md", "-docente.md"))
 
-
 def student_for_teacher(teacher_path: Path) -> Path:
     relative = teacher_path.relative_to(TEACHER_ROOT)
     return STUDENT_ROOT / relative.with_name(relative.name.replace("-docente.md", "-alumnado.md"))
-
 
 def parse_session(teacher_path: Path, student_path: Path | None = None) -> Session:
     """Analiza una sesión usando la guía docente como fuente de autoridad."""
@@ -492,7 +469,6 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
         student_source=student_path,
     )
 
-
 def split_long_text(text: str, max_chars: int = 170) -> list[str]:
     """Divide texto largo sin recortarlo ni introducir puntos suspensivos."""
     text = clean(text)
@@ -514,13 +490,11 @@ def split_long_text(text: str, max_chars: int = 170) -> list[str]:
         result.append(current)
     return result
 
-
 def expanded_items(items: list[str], max_chars: int = 170) -> list[str]:
     expanded: list[str] = []
     for item in items:
         expanded.extend(split_long_text(item, max_chars))
     return expanded
-
 
 def chunk_items(items: list[str], max_items: int, max_chars: int) -> list[list[str]]:
     chunks: list[list[str]] = []
@@ -537,7 +511,6 @@ def chunk_items(items: list[str], max_items: int, max_chars: int) -> list[list[s
         chunks.append(current)
     return chunks
 
-
 def timeline_display_item(block: TimelineBlock) -> str:
     """Resume la agenda sin repetir el desarrollo detallado ni dejar etiquetas abiertas."""
     action = clean(block.action)
@@ -548,7 +521,6 @@ def timeline_display_item(block: TimelineBlock) -> str:
     first_sentence = re.split(r"(?<=[.!?])\s+|\s+·\s+", detail, maxsplit=1)[0]
     summary = f"{title}: {first_sentence}".rstrip(":")
     return f"{block.time} — {summary}"
-
 
 def projectable_activity_items(session: Session) -> list[str]:
     """Condensa actividades densas en fases completas y proyectables."""
@@ -612,7 +584,6 @@ def projectable_activity_items(session: Session) -> list[str]:
         specific.append(f"Comprueba y registra la evidencia: {session.evidence}")
     return specific
 
-
 def projectable_checklist_items(session: Session) -> list[str]:
     corpus = " ".join([session.topic, session.evidence, *session.activity]).lower()
     if "breakpoint" in corpus and "username" in corpus:
@@ -641,7 +612,6 @@ def projectable_checklist_items(session: Session) -> list[str]:
         ]
     return session.checklist
 
-
 def projectable_close_items(session: Session) -> list[str]:
     corpus = " ".join([session.topic, *session.activity]).lower()
     if "hada" in corpus and "torre" in corpus:
@@ -654,7 +624,6 @@ def projectable_close_items(session: Session) -> list[str]:
     if session.close_question:
         return [session.close_question]
     return expanded_items(session.closure, 175)
-
 
 def disciplinary_visuals(session: Session) -> list[SlideSpec]:
     """Selecciona apoyos visuales específicos a partir del contenido didáctico."""
@@ -763,7 +732,6 @@ def disciplinary_visuals(session: Session) -> list[SlideSpec]:
         )
     return visuals
 
-
 def plan_slides(session: Session) -> list[SlideSpec]:
     """Construye un plan variable según el contenido real de la sesión."""
     slides = [SlideSpec("title", session.topic, [], f"{session.hito} · {session.duration}")]
@@ -840,7 +808,6 @@ def plan_slides(session: Session) -> list[SlideSpec]:
         for slide in slides
     ]
 
-
 def validate_session(session: Session) -> ValidationReport:
     report = ValidationReport(session.number)
     required = {
@@ -869,13 +836,11 @@ def validate_session(session: Session) -> ValidationReport:
         report.warnings.append("No se extrajeron reglas específicas de seguridad")
     return report
 
-
 def add_full_background(slide, color: RGBColor) -> None:
     shape = slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.RECTANGLE, 0, 0, SLIDE_W, SLIDE_H)
     shape.fill.solid()
     shape.fill.fore_color.rgb = color
     shape.line.fill.background()
-
 
 def add_text(slide, x, y, w, h, text, size=24, color=INK, bold=False, align=PP_ALIGN.LEFT, valign=MSO_ANCHOR.TOP):
     box = slide.shapes.add_textbox(x, y, w, h)
@@ -894,7 +859,6 @@ def add_text(slide, x, y, w, h, text, size=24, color=INK, bold=False, align=PP_A
     paragraph.font.color.rgb = color
     return box
 
-
 def body_size(items: list[str], maximum: int = 22, minimum: int = 14) -> int:
     total = sum(len(item) for item in items)
     if total > 650:
@@ -904,7 +868,6 @@ def body_size(items: list[str], maximum: int = 22, minimum: int = 14) -> int:
     if total > 320:
         return max(minimum, maximum - 3)
     return maximum
-
 
 def add_bullets(slide, x, y, w, h, items: list[str], size=20, color=INK, numbered=False):
     box = slide.shapes.add_textbox(x, y, w, h)
@@ -923,14 +886,12 @@ def add_bullets(slide, x, y, w, h, items: list[str], size=20, color=INK, numbere
         paragraph.space_after = Pt(9)
     return box
 
-
 def add_footer(slide, session: Session, accent: RGBColor) -> None:
     bar = slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.RECTANGLE, 0, Inches(7.22), SLIDE_W, Inches(0.28))
     bar.fill.solid()
     bar.fill.fore_color.rgb = accent
     bar.line.fill.background()
     add_text(slide, Inches(0.45), Inches(7.25), Inches(12.3), Inches(0.18), f"MiniJarvis · 1.º DAW · Sesión {session.number} · {session.hito}", 9, WHITE)
-
 
 def base_slide(prs: Presentation, session: Session, title: str, kicker: str = ""):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
@@ -946,14 +907,12 @@ def base_slide(prs: Presentation, session: Session, title: str, kicker: str = ""
     add_footer(slide, session, accent)
     return slide, accent
 
-
 def rounded_card(slide, x, y, w, h, fill=WHITE, line=SOFT):
     card = slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.ROUNDED_RECTANGLE, x, y, w, h)
     card.fill.solid()
     card.fill.fore_color.rgb = fill
     card.line.color.rgb = line
     return card
-
 
 def render_title(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
@@ -970,8 +929,7 @@ def render_title(prs: Presentation, session: Session, spec: SlideSpec) -> None:
         add_text(slide, Inches(0.78), Inches(4.72), Inches(11.2), Inches(0.55), f"Fase HEXA: {session.moment}", 19, WHITE)
     if session.grouping:
         add_text(slide, Inches(0.78), Inches(5.43), Inches(11.2), Inches(0.65), session.grouping, 17, RGBColor(210, 217, 228))
-    add_text(slide, Inches(0.78), Inches(6.86), Inches(11.6), Inches(0.22), "MINIJARVIS · PROGRAMACIÓN + ENTORNOS DE DESARROLLO", 10, RGBColor(160, 170, 185), True)
-
+    add_text(slide, Inches(0.78), Inches(6.86), Inches(11.6), Inches(0.22), "MINIJARVIS · PROGRAMACIÓN", 10, RGBColor(160, 170, 185), True)
 
 def render_outcome(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Punto de partida")
@@ -985,7 +943,6 @@ def render_outcome(prs: Presentation, session: Session, spec: SlideSpec) -> None
         rounded_card(slide, Inches(x), Inches(y), Inches(width - 0.28), Inches(h))
         add_text(slide, Inches(x + 0.25), Inches(y + 0.25), Inches(width - 0.78), Inches(h - 0.5), item, body_size([item], 21, 15), INK, index < 2)
 
-
 def render_timeline(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Ritmo de la sesión")
     count = max(1, len(spec.items)); step_h = min(1.02, 5.55 / count); size = body_size(spec.items, 19, 14)
@@ -996,7 +953,6 @@ def render_timeline(prs: Presentation, session: Session, spec: SlideSpec) -> Non
         add_text(slide, Inches(0.72), Inches(y + 0.11), Inches(0.52), Inches(0.22), str(index), 13, WHITE, True, PP_ALIGN.CENTER)
         add_text(slide, Inches(1.52), Inches(y - 0.02), Inches(11.0), Inches(step_h - 0.08), item, size, INK)
         y += step_h
-
 
 def render_concepts(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Comprender")
@@ -1009,7 +965,6 @@ def render_concepts(prs: Presentation, session: Session, spec: SlideSpec) -> Non
         rounded_card(slide, Inches(x), Inches(y), Inches(card_w - 0.25), Inches(card_h - 0.22))
         add_text(slide, Inches(x + 0.22), Inches(y + 0.18), Inches(0.42), Inches(0.38), f"{index + 1:02}", 15, accent, True)
         add_text(slide, Inches(x + 0.72), Inches(y + 0.18), Inches(card_w - 1.1), Inches(card_h - 0.48), item, size, INK)
-
 
 def render_focus(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Comprender y transferir")
@@ -1024,7 +979,6 @@ def render_focus(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     add_text(slide, Inches(7.10), Inches(1.78), Inches(2.4), Inches(0.36), "EN PRÁCTICA", 13, accent, True)
     add_bullets(slide, Inches(7.10), Inches(2.38), Inches(5.05), Inches(3.75), examples, body_size(examples, 23, 17), WHITE)
 
-
 def render_relationship(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Relacionar sin encasillar")
     for index, item in enumerate(spec.items[:4]):
@@ -1036,7 +990,6 @@ def render_relationship(prs: Presentation, session: Session, spec: SlideSpec) ->
     note = spec.items[4] if len(spec.items) > 4 else spec.subtitle
     rounded_card(slide, Inches(0.68), Inches(5.93), Inches(11.95), Inches(0.83), accent, accent)
     add_text(slide, Inches(0.96), Inches(6.12), Inches(11.35), Inches(0.42), note, 16, WHITE, True, PP_ALIGN.CENTER)
-
 
 def render_debugger(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Mapa del depurador")
@@ -1055,7 +1008,6 @@ def render_debugger(prs: Presentation, session: Session, spec: SlideSpec) -> Non
     add_text(slide, Inches(8.38), Inches(2.25), Inches(3.82), Inches(1.65), "command  = ____\nrunning  = ____\nuserName = ____", 19, INK, True)
     add_text(slide, Inches(8.38), Inches(4.25), Inches(3.82), Inches(1.7), "\n".join(spec.items[-2:]), 14, MUTED)
 
-
 def render_pattern(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Decidir desde el problema")
     colors = [RGBColor(56, 94, 142), RGBColor(45, 130, 105), RGBColor(184, 111, 36), RGBColor(122, 83, 153)]
@@ -1066,7 +1018,6 @@ def render_pattern(prs: Presentation, session: Session, spec: SlideSpec) -> None
         rounded_card(slide, Inches(x), Inches(y), Inches(5.72), Inches(2.22), colors[index], colors[index])
         add_text(slide, Inches(x + 0.24), Inches(y + 0.20), Inches(1.35), Inches(0.34), f"{index + 1} · {labels[index]}", 12, WHITE, True)
         add_text(slide, Inches(x + 0.24), Inches(y + 0.68), Inches(5.15), Inches(1.24), item, body_size([item], 17, 13), WHITE, True, PP_ALIGN.LEFT, MSO_ANCHOR.MIDDLE)
-
 
 def render_exception_flow(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Flujo de control del error")
@@ -1082,7 +1033,6 @@ def render_exception_flow(prs: Presentation, session: Session, spec: SlideSpec) 
     down = slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.DOWN_ARROW, Inches(9.22), Inches(3.37), Inches(0.52), Inches(0.62))
     down.fill.solid(); down.fill.fore_color.rgb = MUTED; down.line.fill.background()
 
-
 def render_defense(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Rúbrica visual")
     for index, item in enumerate(spec.items):
@@ -1091,7 +1041,6 @@ def render_defense(prs: Presentation, session: Session, spec: SlideSpec) -> None
         rounded_card(slide, Inches(x), Inches(y), Inches(3.82), Inches(2.22))
         add_text(slide, Inches(x + 0.24), Inches(y + 0.20), Inches(0.55), Inches(0.48), f"{index + 1}", 22, accent, True)
         add_text(slide, Inches(x + 0.88), Inches(y + 0.24), Inches(2.55), Inches(1.55), item, 18, INK, True, PP_ALIGN.LEFT, MSO_ANCHOR.MIDDLE)
-
 
 def render_microdefense(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Modelo de intervención breve")
@@ -1103,14 +1052,12 @@ def render_microdefense(prs: Presentation, session: Session, spec: SlideSpec) ->
         add_text(slide, Inches(x + 0.18), Inches(y + 0.18), Inches(0.44), Inches(0.34), str(index + 1), 15, accent, True, PP_ALIGN.CENTER)
         add_text(slide, Inches(x + 0.72), Inches(y + 0.13), Inches(widths[index] - 0.95), Inches(0.52), item, 16, INK, index == 0)
 
-
 def render_example(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Observar antes de actuar")
     panel = slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.ROUNDED_RECTANGLE, Inches(0.68), Inches(1.48), Inches(11.95), Inches(4.95))
     panel.fill.solid(); panel.fill.fore_color.rgb = DARK; panel.line.fill.background()
     add_text(slide, Inches(1.02), Inches(1.78), Inches(2.25), Inches(0.45), "DEMOSTRACIÓN", 13, accent, True)
     add_bullets(slide, Inches(1.02), Inches(2.42), Inches(10.9), Inches(3.55), spec.items, body_size(spec.items, 22, 15), WHITE)
-
 
 def render_activity(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Aplicar y decidir")
@@ -1123,7 +1070,6 @@ def render_activity(prs: Presentation, session: Session, spec: SlideSpec) -> Non
         add_text(slide, Inches(0.93), Inches(y + 0.16), Inches(0.75), Inches(0.42), f"PASO {start_step + index}", 12, accent, True)
         add_text(slide, Inches(1.82), Inches(y + 0.12), Inches(10.35), Inches(block_h - 0.38), item, size, INK)
 
-
 def render_evidence(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Comprobar")
     size = body_size(spec.items, 19, 14); y = 1.42; step = 5.45 / max(1, len(spec.items))
@@ -1132,7 +1078,6 @@ def render_evidence(prs: Presentation, session: Session, spec: SlideSpec) -> Non
         square.fill.solid(); square.fill.fore_color.rgb = WHITE; square.line.color.rgb = accent
         add_text(slide, Inches(1.52), Inches(y - 0.02), Inches(10.75), Inches(step - 0.04), item, size, INK)
         y += step
-
 
 def render_safety(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Límites que protegen el aprendizaje")
@@ -1146,7 +1091,6 @@ def render_safety(prs: Presentation, session: Session, spec: SlideSpec) -> None:
         marker = slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.ROUNDED_RECTANGLE, Inches(x + 0.24), Inches(y + 0.25), Inches(0.26), Inches(card_h - 0.72))
         marker.fill.solid(); marker.fill.fore_color.rgb = colors[index % len(colors)]; marker.line.fill.background()
         add_text(slide, Inches(x + 0.72), Inches(y + 0.25), Inches(4.62), Inches(card_h - 0.65), item, size, INK)
-
 
 def render_closure(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Explicar y defender")
@@ -1163,7 +1107,6 @@ def render_closure(prs: Presentation, session: Session, spec: SlideSpec) -> None
         add_bullets(slide, Inches(0.82), Inches(3.92), Inches(11.6), Inches(2.35), supporting, body_size(supporting, 18, 14))
     else:
         add_text(slide, Inches(0.82), Inches(4.25), Inches(11.6), Inches(1.4), "La sesión termina cuando la evidencia existe, está comprobada y puede defenderse.", 23, GREEN, True, PP_ALIGN.CENTER, MSO_ANCHOR.MIDDLE)
-
 
 RENDERERS = {
     "title": render_title,
@@ -1184,7 +1127,6 @@ RENDERERS = {
     "closure": render_closure,
 }
 
-
 def build_presentation(session: Session, target: Path) -> int:
     prs = Presentation()
     prs.slide_width = SLIDE_W
@@ -1196,11 +1138,9 @@ def build_presentation(session: Session, target: Path) -> int:
     prs.save(target)
     return len(plan)
 
-
 def target_for(session: Session, output_root: Path) -> Path:
     stem = session.teacher_source.name.replace("-docente.md", "-presentacion.pptx")
     return output_root / session.folder / stem
-
 
 def collect_sessions(selected: list[str] | None = None) -> list[Session]:
     wanted = {value.upper().removeprefix("S") for value in selected or []}
@@ -1212,7 +1152,6 @@ def collect_sessions(selected: list[str] | None = None) -> list[Session]:
         sessions.append(parse_session(teacher_path, student_for_teacher(teacher_path)))
     sessions.sort(key=lambda item: int(item.number))
     return sessions
-
 
 def generate_index(generated: list[tuple[Session, Path, int]], output_root: Path) -> None:
     lines = [
@@ -1227,7 +1166,6 @@ def generate_index(generated: list[tuple[Session, Path, int]], output_root: Path
         relative = target.relative_to(output_root).as_posix()
         lines.append(f"| {session.number} | {session.hito} | {session.topic} | {count} | `{relative}` |")
     (output_root / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-
 
 def atomic_publish(staging: Path, output: Path, backup_root: Path) -> Path | None:
     """Publica staging conservando el directorio anterior completo en backup_root."""
@@ -1250,7 +1188,6 @@ def atomic_publish(staging: Path, output: Path, backup_root: Path) -> Path | Non
         raise
     return backup
 
-
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Valida fuentes y planes sin escribir PPTX.")
@@ -1260,11 +1197,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--backup-dir", type=Path, help="Directorio temporal donde conservar la salida anterior.")
     return parser
 
-
 def validate_cli_safety(args: argparse.Namespace) -> None:
     if args.sessions and args.output_dir is None and not args.check and not args.dry_run:
         raise SystemExit("La generación parcial con --session requiere --output-dir para no sustituir la colección completa.")
-
 
 def print_validation(sessions: list[Session]) -> bool:
     valid = True
@@ -1279,7 +1214,6 @@ def print_validation(sessions: list[Session]) -> bool:
         valid = valid and not report.errors
     return valid
 
-
 def generate_to(sessions: list[Session], output_root: Path) -> list[tuple[Session, Path, int]]:
     generated: list[tuple[Session, Path, int]] = []
     for session in sessions:
@@ -1288,7 +1222,6 @@ def generate_to(sessions: list[Session], output_root: Path) -> list[tuple[Sessio
         generated.append((session, target, count))
     generate_index(generated, output_root)
     return generated
-
 
 def main(argv: list[str] | None = None) -> int:
     args = build_arg_parser().parse_args(argv)
@@ -1329,7 +1262,6 @@ def main(argv: list[str] | None = None) -> int:
     if backup:
         print(f"Salida anterior conservada en: {backup}")
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

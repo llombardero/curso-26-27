@@ -17,7 +17,7 @@ Todas las personas pueden diseñar, construir, comprobar y explicar. La responsa
 
 ## Ficha para el alumnado
 
-Curso: 1.º DAW — Programación + Entornos de Desarrollo
+Curso: 1.º DAW — Programación
 
 Proyecto anual:
 
@@ -56,7 +56,7 @@ El objetivo es aprender a:
 4. La carga se coloca en el punto más alto que pueda sostenerla y la altura se mide con la carga colocada.
 5. Solo podéis usar el material autorizado en cada ciclo; no se intercambia material entre equipos.
 6. Las herramientas no forman parte de la torre y los restos cortados cuentan como material consumido.
-7. Antes de construir, debéis crear un backlog con al menos 5 tareas y actualizarlo durante el trabajo.
+7. Antes de construir, debéis crear un backlog con al menos 6 tareas y actualizarlo durante el trabajo.
 8. Habrá dos pruebas comparables, review y retrospectiva.
 9. No gana necesariamente la torre más alta: también importan el proceso, la evidencia y la mejora aplicada.
 ```
@@ -128,7 +128,7 @@ Tener un rol no significa mandar. Significa cuidar una parte del trabajo del equ
 
 ## 4. Backlog de la torre
 
-Antes de construir, escribid al menos 5 tareas.
+Antes de construir, escribid al menos 6 tareas.
 
 Ejemplos:
 

@@ -36,10 +36,9 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
 ## Integración IA responsable o simulación robusta — MiniJarvis H7
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 

@@ -36,10 +36,9 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
 ## Presentación final, recuperación y mejora — MiniJarvis HF
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -63,7 +62,7 @@ HF sirve para:
 
 ```text
 - ordenar evidencias H0-H7;
-- distinguir evidencias de Programación y Entornos de Desarrollo;
+- distinguir evidencias de Programación;
 - preparar una demo final realista;
 - defender individualmente comprensión y aportación;
 - recuperar RA/CE pendientes con evidencias focalizadas;
@@ -95,7 +94,7 @@ En HF sí entra:
 [x] Autoevaluación final.
 [x] Plan de mejora si procede.
 [x] Evidencias de Programación.
-[x] Evidencias de Entornos de Desarrollo.
+[x] Evidencias de Programación.
 [x] Seguridad: sin secretos ni datos personales reales.
 [x] Reflexión sobre errores, decisiones y aprendizaje.
 ```
@@ -161,7 +160,7 @@ Equipo:
 
 ## Evidencias por hito
 
-| Hito | Evidencia | Qué demuestra | ¿Programación, Entornos o ambos? |
+| Hito | Evidencia | RA/CE de Programación | Práctica técnica asociada |
 |---|---|---|---|
 | H0 | | | |
 | H1 | | | |
@@ -174,7 +173,7 @@ Equipo:
 
 ## Evidencias de Programación
 
-## Evidencias de Entornos de Desarrollo
+## Evidencias técnicas del proyecto
 
 ## Errores importantes y cómo los resolví
 
@@ -229,9 +228,9 @@ Plantilla de defensa individual:
 
 ## Qué decisión técnica tomé
 
-## Qué evidencia demuestra Programación
+## Qué evidencia demuestra el código y los RA de Programación
 
-## Qué evidencia demuestra Entornos
+## Qué evidencia demuestra la calidad del proceso técnico
 
 ## Qué uso de IA puedo justificar
 
@@ -272,7 +271,7 @@ Propuesta de 7 sesiones de 45 minutos.
 | Sesión | Foco | Producto parcial |
 |---|---|---|
 | HF-S1 | Presentar cierre HF y mapa de evidencias | Índice H0-H7 personal. |
-| HF-S2 | Portfolio final: Programación y Entornos | Portfolio final estructurado. |
+| HF-S2 | Portfolio final: Programación | Portfolio final estructurado. |
 | HF-S3 | Demo final y plan B | Demo ensayada y documentada. |
 | HF-S4 | Defensa individual | Guion de defensa y preguntas. |
 | HF-S5 | Recuperación específica | Evidencia focalizada por RA/CE pendiente. |
@@ -340,7 +339,7 @@ Sí es:
 
 ```text
 - Qué entregables forman HF.
-- Por qué el portfolio debe distinguir Programación y Entornos.
+- Por qué el portfolio debe distinguir Programación.
 - Por qué una demo puede fallar y aun así haber evidencia si hay plan B.
 - Por qué la defensa individual puede matizar la nota de una evidencia grupal.
 ```
@@ -430,7 +429,7 @@ El alumnado comprende el propósito de HF y empieza a ordenar evidencias concret
 
 ---
 
-# HF-S2 — Portfolio final: Programación y Entornos
+# HF-S2 — Portfolio final: Programación
 
 ## Duración
 
@@ -440,11 +439,11 @@ El alumnado comprende el propósito de HF y empieza a ordenar evidencias concret
 
 ## Objetivo
 
-Construir el portfolio final diferenciando evidencias de Programación y Entornos de Desarrollo.
+Construir el portfolio final diferenciando evidencias de Programación.
 
 ## Resultado esperado
 
-Borrador sólido de `portfolio-final.md` con evidencias H0-H7 y separación por módulos.
+Borrador sólido de `portfolio-final.md` con evidencias H0-H7 y separación de Programación.
 
 ## Guion docente
 
@@ -453,7 +452,7 @@ El portfolio final no es una carpeta con enlaces. Es una narración técnica de 
 
 Debe responder a tres preguntas: qué construí, qué evidencia lo demuestra y qué puedo explicar yo.
 
-Además, como este proyecto une Programación y Entornos, debemos nombrar ambos módulos de forma visible.
+Además, como este proyecto une Programación, debemos nombrar el módulo de forma visible.
 ```
 
 ## Pizarra
@@ -466,7 +465,7 @@ Programación:
 - ficheros;
 - pruebas de ejecución.
 
-Entornos:
+Prácticas técnicas integradas:
 - README;
 - Git o registro;
 - diagramas;
@@ -480,7 +479,7 @@ Entornos:
 ## Qué explicas tú
 
 ```text
-- Que una misma evidencia puede servir para ambos módulos, pero debe explicarse.
+- Que una misma evidencia puede servir para el módulo, pero debe explicarse.
 - Que el portfolio debe tener voz individual.
 - Que las evidencias deben estar ordenadas temporalmente.
 - Que no hay que esconder errores: los errores resueltos son aprendizaje defendible.
@@ -523,7 +522,7 @@ Completar este bloque:
 |---|---|---|---|
 | | | | |
 
-## Evidencias de Entornos de Desarrollo
+## Evidencias técnicas del proyecto
 
 | Evidencia | Hito | Qué demuestra | Qué puedo explicar |
 |---|---|---|---|
@@ -546,7 +545,7 @@ Preguntas de apoyo:
 | Error | Señal | Intervención docente |
 |---|---|---|
 | Portfolio como índice sin reflexión | Solo enlaces | Añadir qué demuestra y defensa. |
-| Entornos invisible | Solo habla de código | Pedir README, pruebas, diagramas, seguridad. |
+| Proceso técnico invisible | Solo habla de código | Pedir README, pruebas, diagramas o seguridad cuando sean pertinentes. |
 | Programación invisible | Solo reflexiones | Pedir clase, método, ejecución o fichero. |
 | Frases genéricas | “He aprendido mucho” | Pedir ejemplo concreto. |
 
@@ -556,14 +555,14 @@ Ticket:
 
 ```text
 1. Escribe una evidencia clara de Programación.
-2. Escribe una evidencia clara de Entornos.
+2. Explica qué demuestra su proceso técnico.
 3. ¿Qué evidencia te cuesta defender todavía?
 ```
 
 ## Criterio de éxito
 
 ```text
-El portfolio final empieza a mostrar evidencias concretas, separa ambos módulos y refleja comprensión individual.
+El portfolio final empieza a mostrar evidencias concretas, separa el módulo y refleja comprensión individual.
 ```
 
 ---
@@ -792,8 +791,8 @@ Ensayo por parejas.
 2. ¿Qué clase o método puedes enseñar?
 3. ¿Qué prueba demuestra que funciona?
 4. ¿Qué problema técnico resolviste?
-5. ¿Qué evidencia demuestra Programación?
-6. ¿Qué evidencia demuestra Entornos?
+5. ¿Qué evidencia demuestra el código y los RA de Programación?
+6. ¿Qué evidencia demuestra la calidad del proceso técnico?
 7. ¿Qué aportaste al equipo?
 8. ¿Qué uso de IA hiciste?
 9. ¿Cómo validaste una respuesta de IA?
@@ -877,7 +876,7 @@ RA/CE pendiente -> evidencia necesaria -> tarea focalizada -> verificación -> d
 ```text
 - Que no todo el alumnado necesitará la misma recuperación.
 - Que recuperar Programación puede requerir código y ejecución.
-- Que recuperar Entornos puede requerir pruebas, documentación, Git, seguridad o diagramas.
+- Que recuperar una evidencia de Programación puede requerir pruebas, documentación, Git, seguridad o diagramas.
 - Que una recuperación debe ser proporcional y defendible.
 ```
 
@@ -1219,8 +1218,8 @@ Revisión final con checklist.
 | Elemento | Sí | Parcial | No | Observación |
 |---|---|---|---|---|
 | Portfolio H0-H7 ordenado | | | | |
-| Evidencias de Programación | | | | |
-| Evidencias de Entornos | | | | |
+| Evidencias del código y los RA de Programación | | | | |
+| Evidencias técnicas y de proceso integradas | | | | |
 | Demo final preparada | | | | |
 | Plan B de demo | | | | |
 | Defensa individual suficiente | | | | |
@@ -1277,7 +1276,7 @@ HF debe servir para detectar:
 
 ```text
 - quién puede ordenar su aprendizaje;
-- quién distingue evidencias de Programación y Entornos;
+- quién distingue evidencias de Programación;
 - quién puede hacer una demo realista;
 - quién tiene plan B;
 - quién defiende su aportación individual;
@@ -1310,7 +1309,7 @@ Evidencias mínimas:
 Reducir objetivo:
 
 ```text
-Elegir una evidencia fuerte de Programación y una evidencia fuerte de Entornos. Después completar el resto.
+Elegir una evidencia fuerte del código y otra del proceso técnico. Después completar el resto.
 ```
 
 Preguntas de apoyo:
@@ -1418,7 +1417,7 @@ HF está consolidado cuando:
 [x] El portfolio final existe.
 [x] El portfolio cubre H0-H7.
 [x] Hay evidencias explícitas de Programación.
-[x] Hay evidencias explícitas de Entornos de Desarrollo.
+[x] Hay evidencias explícitas de Programación.
 [x] La demo final está preparada.
 [x] Existe plan B de demo.
 [x] La defensa individual está preparada y realizada.

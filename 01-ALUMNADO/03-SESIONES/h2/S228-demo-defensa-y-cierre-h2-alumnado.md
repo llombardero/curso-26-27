@@ -4,7 +4,7 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Validar menú, pruebas y depuración. | Defensa H2, README actualizado y registro IA si procede. |
+| Validar menú, pruebas, depuración y comparación. | Defensa H2, README actualizado y declaración universal de IA. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H2.
@@ -38,7 +38,8 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **Defensa H2, README actualizado y registro IA si procede.**
+- [ ] He producido o actualizado la defensa H2 y el README.
+- [ ] He entregado una declaración `Sí/No` sobre uso de IA; si la respuesta es `Sí`, he completado el detalle de cada uso relevante.
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

@@ -6,7 +6,6 @@ from __future__ import annotations
 import hashlib
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parent
 MANIFEST = ROOT / "MANIFIESTO-ARCHIVOS.md"
 SOURCE_DIRS = (
@@ -15,14 +14,12 @@ SOURCE_DIRS = (
     ROOT / "03-EJEMPLOS-LAURA-PRIVADOS",
 )
 
-
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as source:
         for chunk in iter(lambda: source.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
-
 
 def main() -> None:
     files = sorted(
@@ -43,7 +40,6 @@ def main() -> None:
         relative = path.relative_to(ROOT).as_posix()
         lines.append(f"| `{sha256(path)}` | `{relative}` |")
     MANIFEST.write_text("\n".join(lines) + "\n", encoding="utf-8")
-
 
 if __name__ == "__main__":
     main()

@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -128,7 +127,6 @@ Carga estimada:
 
 ```text
 Programación: 32 periodos de 45 min
-Entornos: 12 periodos de 45 min
 ```
 
 ---
@@ -150,13 +148,13 @@ Evidencias:
 - explicación de elección de colección;
 - defensa del recorrido o consulta.
 
-### Entornos de Desarrollo
+### Prácticas técnicas del proyecto
 
 RA principales:
 
-- ED RA3.b: definición de casos de prueba.
-- ED RA3.f-g: pruebas automáticas si el grupo está preparado.
-- ED RA3.h: documentación de incidencias y casos límite.
+- pruebas y depuración: definición de casos de prueba.
+- pruebas y depuración: pruebas automáticas si el grupo está preparado.
+- pruebas y depuración: documentación de incidencias y casos límite.
 
 Evidencias:
 

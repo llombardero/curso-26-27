@@ -1301,7 +1301,7 @@ Comprobación: ¿Qué concepto estás demostrando?
 
 ### Sesión 303 — Recuperación específica II
 
-Explicación docente: Recuperar Entornos exige evidencia de herramienta, proceso o documentación.
+Explicación docente: Recuperar El proyecto exige evidencia de herramienta, proceso o documentación.
 
 Demostración: Depuración, Git, UML, README o pruebas según caso.
 

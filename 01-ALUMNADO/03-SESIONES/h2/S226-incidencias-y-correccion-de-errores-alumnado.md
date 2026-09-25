@@ -4,7 +4,7 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Documentar un fallo real y su solución. | `docs/incidencia-h2`. |
+| Documentar una incidencia natural o didáctica reproducida y su solución. | Una ficha combinada de incidencia y depuración en `docs/incidencia-h2`. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H2.
@@ -17,9 +17,10 @@
 
 1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
 2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Registrar un error encontrado, causa, solución y prueba posterior.**
-4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
-5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+3. Documenta un fallo real encontrado durante H2. Si no existe uno adecuado, utiliza la incidencia didáctica que proporcione el profesorado e identifícala como reproducida.
+4. Registra síntoma, pasos, resultado esperado y obtenido, breakpoint, variables observadas, causa, corrección y prueba posterior.
+5. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
+6. Guarda o entrega la evidencia indicada y prepárate para explicarla.
 
 ## Registro breve
 

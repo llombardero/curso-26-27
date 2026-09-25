@@ -37,7 +37,7 @@ Explicación:
 
 - 
 
-## 6. Relación con Entornos de Desarrollo
+## 6. Aplicación al proyecto
 
 Aprendizajes que creo haber trabajado:
 

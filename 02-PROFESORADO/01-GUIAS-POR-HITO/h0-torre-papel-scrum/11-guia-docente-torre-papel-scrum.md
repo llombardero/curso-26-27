@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -103,14 +102,14 @@ Uso principal:
 
 No conviene usar esta actividad para calificar fuertemente RA técnicos de Programación.
 
-### Entornos de Desarrollo
+### Prácticas técnicas del proyecto
 
 Evidencias especialmente útiles:
 
-| RA/CE Entornos | Evidencia posible |
+| Práctica metodológica | Evidencia posible |
 |---|---|
-| ED RA1.b — Fases de desarrollo | Traducción de la actividad a fases: idea, análisis, diseño, construcción, prueba, revisión y mejora. |
-| ED RA1.g — Metodologías ágiles | Uso de sprint, backlog, tablero, roles, review y retrospectiva. |
+| fundamentos del desarrollo y metodologías — Fases de desarrollo | Traducción de la actividad a fases: idea, análisis, diseño, construcción, prueba, revisión y mejora. |
+| fundamentos del desarrollo y metodologías — Metodologías ágiles | Uso de sprint, backlog, tablero, roles, review y retrospectiva. |
 
 ### Metodología
 
@@ -691,7 +690,7 @@ Uso recomendado:
 - diagnóstico inicial;
 - formación de equipos posteriores;
 - detección de alumnado que necesita apoyo;
-- evidencias iniciales para Entornos;
+- evidencias iniciales de proceso;
 - preparación del contrato de equipo.
 
 No usar como etiqueta permanente del alumnado.
@@ -997,7 +996,7 @@ Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.m
 
 ```text
 Hito: H0
-Temas de referencia: base transversal de Entornos; no introduce todavía conceptos técnicos de Programación evaluables
+Temas de referencia: preparación metodológica del proyecto; no introduce todavía conceptos técnicos de Programación evaluables
 Foco: preparación metodológica: Scrum de aula, evidencias, roles, comunicación técnica y primer backlog de MiniJarvis
 ```
 

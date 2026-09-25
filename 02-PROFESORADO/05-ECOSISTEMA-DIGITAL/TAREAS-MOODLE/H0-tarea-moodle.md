@@ -4,7 +4,7 @@
 
 - Modalidad: Equipo más aportación individual.
 - Grupos separados para la entrega de equipo.
-- Rúbrica: usar la del hito y conservar separadas Programación y Entornos.
+- Rúbrica: usar la del hito y conservar separadas Programación.
 - Finalización: envío realizado y, cuando proceda, defensa completada.
 
 ## Evidencias solicitadas

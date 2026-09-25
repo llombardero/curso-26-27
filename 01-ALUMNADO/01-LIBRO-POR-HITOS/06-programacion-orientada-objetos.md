@@ -73,9 +73,9 @@ Refuerzo de cobertura del Tema 5:
 - Usa `this` cuando inicialices atributos.
 - Añade Javadoc mínimo a una clase y a dos métodos públicos.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
-Crea `docs/relacion-clases` con una tabla: clase, responsabilidad, atributos, métodos y qué otra clase la usa. Esto prepara los diagramas de Entornos.
+Crea `docs/relacion-clases` con una tabla: clase, responsabilidad, atributos, métodos y qué otra clase la usa. Esto prepara los diagramas del proyecto.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

@@ -10,12 +10,10 @@ import shutil
 import subprocess
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "01-ALUMNADO"
 TARGET = ROOT / "01-ALUMNADO-HTML"
 CSS_FILE = "estilos-minijarvis.css"
-
 
 CSS = """
 :root {
@@ -106,10 +104,8 @@ img { max-width: 100%; height: auto; }
 }
 """.strip()
 
-
 def relative_css_path(html_path: Path) -> str:
     return os.path.relpath(TARGET / CSS_FILE, html_path.parent).replace(os.sep, "/")
-
 
 def remove_internal_document_links(text: str) -> str:
     pattern = re.compile(
@@ -117,7 +113,6 @@ def remove_internal_document_links(text: str) -> str:
         re.IGNORECASE | re.DOTALL,
     )
     return pattern.sub(r"\1", text)
-
 
 def wrap_html(title: str, body: str, html_path: Path) -> str:
     css = relative_css_path(html_path)
@@ -139,13 +134,11 @@ def wrap_html(title: str, body: str, html_path: Path) -> str:
 </html>
 """
 
-
 def markdown_title(path: Path) -> str:
     for line in path.read_text(encoding="utf-8").splitlines():
         if line.startswith("# "):
             return line[2:].strip()
     return path.stem
-
 
 def export_markdown(path: Path) -> None:
     rel = path.relative_to(SOURCE)
@@ -161,13 +154,11 @@ def export_markdown(path: Path) -> None:
     body = remove_internal_document_links(result.stdout)
     out.write_text(wrap_html(markdown_title(path), body, out), encoding="utf-8")
 
-
 def copy_asset(path: Path) -> None:
     rel = path.relative_to(SOURCE)
     out = TARGET / rel
     out.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(path, out)
-
 
 def main() -> None:
     if not SOURCE.exists():
@@ -205,7 +196,6 @@ def main() -> None:
         ),
         encoding="utf-8",
     )
-
 
 if __name__ == "__main__":
     main()

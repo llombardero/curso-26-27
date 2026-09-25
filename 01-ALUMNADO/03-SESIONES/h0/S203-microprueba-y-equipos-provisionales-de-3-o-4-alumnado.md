@@ -22,6 +22,33 @@
 
 ---
 
+## Microprueba materializada: primero individual, después en pareja o trío
+
+Esta microprueba es diagnóstica y no calificable. Se realiza antes de acordar las funciones del equipo.
+
+### Fase individual — 4 minutos
+
+Sin consultar a otra persona, escribe:
+
+1. tres tareas necesarias para preparar la torre;
+2. una restricción que habría que comprobar;
+3. una prueba pequeña anterior a la entrega;
+4. un bloqueo probable y cómo lo harías visible.
+
+### Fase en pareja o trío aleatorio — 6 minutos
+
+Comparad las propuestas individuales y entregad una síntesis con:
+
+- seis tareas ordenadas por prioridad;
+- dos alternativas de diseño;
+- una definición inicial de terminado;
+- una prueba observable;
+- una decisión que identifique una aportación ajena incorporada.
+
+Conserva tu respuesta individual en el diario. La pareja o trío entrega una única síntesis. El equipo definitivo puede reutilizarla después, pero no copiarla sin revisarla.
+
+---
+
 ## 2. Presentación individual al equipo
 
 Cada persona completa y comparte lo que considere necesario:

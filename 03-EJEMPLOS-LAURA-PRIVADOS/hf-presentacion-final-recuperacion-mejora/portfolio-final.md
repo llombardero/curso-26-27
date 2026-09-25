@@ -46,7 +46,7 @@ H6-H7 demuestran entrada/salida, seguridad y cierre responsable.
 
 ---
 
-## Evidencias de Entornos
+## Evidencias técnicas y de proceso
 
 ```text
 He documentado pruebas, depuración, incidencias, diagramas, revisión de código, seguridad, configuración y defensa.

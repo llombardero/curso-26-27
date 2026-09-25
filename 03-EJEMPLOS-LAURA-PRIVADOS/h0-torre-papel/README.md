@@ -2,7 +2,7 @@
 
 Alumna: Laura García Martín  
 Equipo: Equipo Ada  
-Módulos: Programación + Entornos de Desarrollo  
+Módulo: Programación
 Curso: 1.º DAW — 2026/2027
 
 ---
@@ -50,7 +50,7 @@ Lo más importante que aprendimos fue que empezar a construir sin planificar bie
 
 ---
 
-## 4. Relación con Entornos de Desarrollo
+## 4. Aplicación al proyecto
 
 Esta actividad nos ayuda a entender:
 
@@ -94,7 +94,7 @@ Puedo explicar:
 Relación con `32-lista-conceptos-programacion-por-tema.md`:
 
 ```text
-H0 trabaja principalmente: base transversal de Entornos; no introduce todavía conceptos técnicos de Programación evaluables.
+H0 trabaja principalmente la preparación metodológica del proyecto; no introduce todavía conceptos técnicos de Programación evaluables.
 Foco de aprendizaje: preparación metodológica: Scrum de aula, evidencias, roles, comunicación técnica y primer backlog de MiniJarvis.
 ```
 
@@ -117,8 +117,6 @@ Evidencia que Laura debe señalar:
 - una parte concreta del código o documento donde aparezca el concepto;
 - una prueba, ejecución, captura o explicación que demuestre que no lo ha copiado sin entender;
 - una mejora razonable que podría hacer si tuviera más tiempo.
-
-
 
 ## Evidencias digitales correspondientes a la entrega
 

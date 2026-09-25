@@ -1,6 +1,6 @@
 # Presentación para el alumnado — Proyecto Agente IA
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Documento breve para presentar el proyecto al inicio del curso.
 
@@ -13,8 +13,6 @@ Guía completa relacionada:
 ---
 
 ## 1. Bienvenida al proyecto
-
-Este curso vamos a aprender Programación y Entornos de Desarrollo construyendo un proyecto común:
 
 ```text
 MiniJarvis: un pequeño agente IA propio
@@ -197,9 +195,9 @@ Y tendrás que poder explicar:
 El proyecto servirá para evaluar evidencias de dos módulos:
 
 - Programación;
-- Entornos de Desarrollo.
+- Programación.
 
-Aunque el proyecto sea común, cada módulo se evaluará por separado.
+Aunque el proyecto sea común, el módulo se evaluará por separado.
 
 Se valorará:
 

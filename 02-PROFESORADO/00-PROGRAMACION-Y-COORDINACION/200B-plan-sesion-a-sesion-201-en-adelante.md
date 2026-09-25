@@ -1295,10 +1295,10 @@ Este refuerzo debe conectarse con la persistencia real del hito.
 | Campo | Desarrollo |
 |---|---|
 | Hito | HF |
-| Foco | Recuperar evidencias de Entornos. |
-| Explicar | Entornos se demuestra con IDE, Git, pruebas, depuración, UML, documentación y reproducibilidad. |
+| Foco | Recuperar evidencias técnicas de Programación. |
+| Explicar | La carencia se demuestra y recupera mediante el código y, según corresponda, IDE, Git, pruebas, depuración, UML, documentación o reproducibilidad. |
 | Actividad | Completar README, prueba, depuración, diagrama, Git o seguridad según pendiente. |
-| Evidencia | Evidencia de recuperación Entornos. |
+| Evidencia | Evidencia específica de recuperación de Programación. |
 | Cierre | Validación con checklist. |
 
 ### Sesión 304 — Ensayo de defensa individual

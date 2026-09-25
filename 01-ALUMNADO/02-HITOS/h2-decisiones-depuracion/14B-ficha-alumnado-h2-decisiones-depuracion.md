@@ -2,7 +2,7 @@
 
 ## Ficha para el alumnado
 
-Curso: 1.º DAW — Programación + Entornos de Desarrollo
+Curso: 1.º DAW — Programación
 
 ---
 
@@ -72,8 +72,7 @@ h2-decisiones-depuracion/
 └── docs/
     ├── evidencia-ejecucion-h2
     ├── pruebas-h2
-    ├── depuracion-h2
-    ├── incidencia-h2
+    ├── incidencia-h2       # incluye reproducción y depuración
     ├── comparacion-java-python-h2
     ├── registro-ia
     └── defensa-h2
@@ -85,7 +84,6 @@ Plantillas disponibles:
 plantillas/README-h2-plantilla
 plantillas/evidencia-ejecucion-h2-plantilla
 plantillas/pruebas-h2-plantilla
-plantillas/depuracion-h2-plantilla
 plantillas/incidencia-h2-plantilla
 plantillas/comparacion-java-python-h2-plantilla
 plantillas/registro-ia-h2-plantilla
@@ -147,9 +145,8 @@ Prepárate para responder:
 [ ] Existe el comando salir.
 [ ] Hay respuesta para comando desconocido.
 [ ] Hay plan de pruebas.
-[ ] Hay evidencia de depuración.
-[ ] Hay incidencia documentada si apareció.
+[ ] Hay una incidencia natural o didáctica reproducida con evidencia de depuración.
 [ ] Hay comparación Java ↔ Python.
-[ ] He registrado IA si la he usado.
+[ ] He declarado `Sí/No` sobre el uso de IA y, si la he usado, he completado el detalle.
 [ ] Puedo defender el flujo del programa.
 ```

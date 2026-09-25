@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -123,12 +122,12 @@ Evidencias:
 - responsabilidades mejoradas;
 - capacidad de añadir una herramienta con bajo impacto.
 
-### Entornos de Desarrollo
+### Prácticas técnicas del proyecto
 
-- ED RA4.a-e: refactorización, análisis de código y pruebas asociadas.
-- ED RA4.f-h: control de versiones, documentación y repositorios remotos.
-- ED RA4.i: integración continua si el nivel lo permite.
-- ED RA6.g-h si se usan diagramas de comportamiento/estado.
+- control de versiones, refactorización y automatización: refactorización, análisis de código y pruebas asociadas.
+- control de versiones, refactorización y automatización: control de versiones, documentación y repositorios remotos.
+- control de versiones, refactorización y automatización: integración continua si el nivel lo permite.
+- diagramas de comportamiento si se usan diagramas de comportamiento/estado.
 
 Evidencias:
 

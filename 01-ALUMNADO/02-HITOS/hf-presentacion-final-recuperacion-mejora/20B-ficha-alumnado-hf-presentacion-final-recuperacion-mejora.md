@@ -36,8 +36,8 @@ hf-presentacion-final-recuperacion-mejora/
 ```text
 [ ] Qué has construido.
 [ ] Qué has aprendido.
-[ ] Qué evidencias tienes de Programación.
-[ ] Qué evidencias tienes de Entornos.
+[ ] Qué evidencias tienes del código y los RA de Programación.
+[ ] Qué evidencias tienes del proceso técnico: pruebas, Git, documentación, diagramas o seguridad.
 [ ] Qué errores resolviste.
 [ ] Qué uso hiciste de IA.
 [ ] Qué puedes defender tú individualmente.

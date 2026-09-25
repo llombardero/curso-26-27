@@ -3,7 +3,7 @@
 Equipo:
 Integrantes:
 Curso:
-Módulos: Programación + Entornos de Desarrollo
+Módulo: Programación
 Fecha:
 
 ---
@@ -55,7 +55,7 @@ Evidencias:
 
 - 
 
-## 7. Relación con Entornos de Desarrollo
+## 7. Aplicación al proyecto
 
 Aprendizajes trabajados:
 

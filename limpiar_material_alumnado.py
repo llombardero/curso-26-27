@@ -6,10 +6,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parent
 ALUMNADO = ROOT / "01-ALUMNADO"
-
 
 RESUMENES_HITOS = {
     "h0-torre-papel-scrum": (
@@ -59,7 +57,6 @@ RESUMENES_HITOS = {
     ),
 }
 
-
 def remove_marked_block(text: str, marker: str) -> str:
     pattern = re.compile(
         rf"\n?<!-- {re.escape(marker)}:START -->.*?<!-- {re.escape(marker)}:END -->\n?",
@@ -67,14 +64,12 @@ def remove_marked_block(text: str, marker: str) -> str:
     )
     return pattern.sub("\n", text)
 
-
 def remove_related_documents(text: str) -> str:
     return re.sub(
         r"\n?Documentos relacionados:\n\n(?:- .*\n)+\n---\n",
         "\n---\n",
         text,
     )
-
 
 def clean_common(text: str) -> str:
     text = text.replace("TEMPLATE", "PLANTILLA")
@@ -93,7 +88,6 @@ def clean_common(text: str) -> str:
     text = text.replace("RA pendientes", "aprendizajes pendientes")
     text = text.replace("RA pendiente", "aprendizaje pendiente")
     return re.sub(r"\n{3,}", "\n\n", text).rstrip() + "\n"
-
 
 def clean_general(path: Path, text: str) -> str:
     name = path.name
@@ -141,7 +135,6 @@ def clean_general(path: Path, text: str) -> str:
         text = re.split(r"\n## 15\. Próximo paso", text, maxsplit=1)[0]
         text = text.replace(
             "- La rúbrica no sustituye a la calificación por RA/CE.\n- Sirve para valorar la calidad de evidencias asociadas a RA/CE.\n",
-            "- La rúbrica explica la calidad esperada en las evidencias.\n- Programación y Entornos se califican por separado aunque compartan evidencias.\n",
         )
 
     if name == "07-plantillas-entregables.md":
@@ -152,13 +145,11 @@ def clean_general(path: Path, text: str) -> str:
 
     return text
 
-
 def clean_hito_file(path: Path, text: str) -> str:
     if "ficha-alumnado" in path.name:
         text = remove_marked_block(text, "HEXA-CICLO-COMPLETO-POR-HITO")
         text = re.split(r"\n## Cobertura curricular de Programación", text, maxsplit=1)[0]
     return text
-
 
 def rewrite_hito_readmes() -> None:
     hito_root = ALUMNADO / "02-HITOS"
@@ -173,7 +164,6 @@ def rewrite_hito_readmes() -> None:
             "Comprueba los permisos y asegúrate de que puedes explicar lo entregado.\n",
             encoding="utf-8",
         )
-
 
 def rewrite_entry_readmes() -> None:
     (ALUMNADO / "README.md").write_text(
@@ -191,7 +181,7 @@ def rewrite_entry_readmes() -> None:
     )
 
     (ALUMNADO / "01-LIBRO-POR-HITOS" / "README.md").write_text(
-        "# Libro del alumnado - Programación y Entornos con MiniJarvis\n\n"
+        "# Libro del alumnado - Programación con MiniJarvis\n\n"
         "Este libro acompaña el proyecto anual. Cada capítulo se publica cuando es necesario para construir el hito activo.\n\n"
         "MiniJarvis crece así:\n\n"
         "```text\n"
@@ -222,7 +212,6 @@ def rewrite_entry_readmes() -> None:
         encoding="utf-8",
     )
 
-
 def rename_templates() -> None:
     paths = sorted(
         (p for p in ALUMNADO.rglob("*") if "template" in p.name.lower()),
@@ -236,7 +225,6 @@ def rename_templates() -> None:
             raise RuntimeError(f"No se puede renombrar {path}: ya existe {target}")
         path.rename(target)
 
-
 def update_project_template_references() -> None:
     for directory in (ROOT / "02-PROFESORADO", ROOT / "03-EJEMPLOS-LAURA-PRIVADOS"):
         for path in directory.rglob("*.md"):
@@ -245,7 +233,6 @@ def update_project_template_references() -> None:
             text = text.replace("Template", "Plantilla")
             text = text.replace("template", "plantilla")
             path.write_text(text, encoding="utf-8")
-
 
 def main() -> None:
     for path in sorted(ALUMNADO.rglob("*.md")):
@@ -258,7 +245,6 @@ def main() -> None:
     rewrite_entry_readmes()
     rename_templates()
     update_project_template_references()
-
 
 if __name__ == "__main__":
     main()

@@ -52,9 +52,9 @@ Haz un diagrama de clases de MiniJarvis H4 con `Main`, `Agent` y `Memory`. Despu
 
 Relaciona al menos cinco elementos del diagrama con código real.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
-Crea `docs/diagrama-clases`, `docs/diagrama-comportamiento` y `docs/relacion-diagrama-codigo`. Entornos exige que el diagrama no sea inventado: debe coincidir con el código.
+Crea `docs/diagrama-clases`, `docs/diagrama-comportamiento` y `docs/relacion-diagrama-codigo`. El proyecto exige que el diagrama no sea inventado: debe coincidir con el código.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

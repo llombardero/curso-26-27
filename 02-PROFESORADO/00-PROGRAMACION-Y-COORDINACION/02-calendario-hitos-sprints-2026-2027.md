@@ -37,13 +37,12 @@ Regla de evaluación: el producto final por sí solo no acredita el proceso. Si 
 
 <!-- HEXA-POLITICA-TODOS-HITOS:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Granada
+## Programación — 1.º DAW — Granada
 
 Edición final para Moodle — septiembre de 2026
 Documento base: `00-mapa-maestro-curso-2026-2027.md`
 Matriz: `01-matriz-integrada-ra-ce-evidencias-tareas.md`
-Anexos: `01A-anexo-programacion-ra-ce.md`, `01B-anexo-entornos-ra-ce.md`
+Anexo curricular: `01A-anexo-programacion-ra-ce.md`
 
 ---
 
@@ -55,13 +54,13 @@ Proyecto guía:
 
 > Construcción progresiva de un pequeño agente IA propio.
 
-El calendario mantiene separados los módulos de Programación y Entornos de Desarrollo, aunque ambos se coordinan mediante el mismo proyecto.
+Todo el proyecto se desarrolla y evalúa dentro del módulo de Programación.
 
 ---
 
 ## 2. Referencia principal de objetivos
 
-La referencia principal para los objetivos por módulos es:
+La referencia principal para los objetivos de Programación es:
 
 ```text
 documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf
@@ -141,20 +140,15 @@ Durante la FFEOE:
 - no se piden tareas nuevas;
 - el proyecto debe quedar cerrado en versión base antes del inicio.
 
-### 3.3. Horario de módulos
+### 3.3. Horario semanal de Programación
 
-Programación:
-
-- lunes: 2 periodos;
 - martes: 3 periodos;
-- jueves: 3 periodos.
-
-Entornos de Desarrollo:
-
-- lunes: 2 periodos;
-- martes: 1 periodo.
+- jueves: 2 periodos;
+- viernes: 3 periodos.
 
 Cada periodo lectivo dura 45 minutos.
+
+Las fichas Sxxx son sesiones ancla o checkpoints, no el recuento completo de periodos. Los periodos restantes se dedican a explicación, práctica guiada, taller, consolidación, recuperación, revisión y defensa. No generan evidencias adicionales por el mero hecho de existir.
 
 ---
 
@@ -175,38 +169,36 @@ Cada periodo lectivo dura 45 minutos.
 
 ## 5. Vista global de bloques
 
-| Bloque | Fechas | Programación: periodos de 45 min | Entornos: periodos de 45 min | Producto principal |
-|---|---|---:|---:|---|
-| H0. Bootcamp Scrum | 15-18 septiembre | 6 | 1 | Presentación, diagnóstico de habilidades, equipos provisionales, torre, tablero, review, retrospectiva y contrato. |
-| H1. Primer asistente básico | 21 septiembre - 9 octubre | 24 | 9 | Programa Java muy básico + proyecto IntelliJ/GitHub. |
-| H2. Decisiones y depuración | 13 octubre - 6 noviembre | 28 | 8 | Agente con menú, comandos, control de flujo y depuración. |
-| H3. Memoria en colecciones | 9 noviembre - 4 diciembre | 32 | 12 | Agente con memoria temporal y pruebas de comportamiento. |
-| C1. Cierre 1.ª evaluación | 9-22 diciembre | 16 | 6 | Demo parcial, portfolio, recuperación de mínimos y revisión. |
-| H4. Agente orientado a objetos | 7 enero - 5 febrero | 35 | 12 | Modelo de clases del agente + diagramas UML. |
-| H5. Herramientas, clean code y patrones iniciales | 8 febrero - 19 marzo | 46 | 16 | Agente extensible, refactorización, Git profesional y revisión. |
-| C2. Cierre 2.ª evaluación | 29-31 marzo | 5 | 3 | Demo parcial, defensa y recuperación. |
-| H6. Persistencia y trazabilidad | 1-23 abril | 27 | 9 | Ficheros, logs, base de conocimiento y documentación reproducible. |
-| H7. IA responsable opcional | 26-29 abril | 8 | 3 | Integración Gemini/Jarvis o simulación robusta. |
-| FFEOE | 30 abril - 28 mayo | 0 | 0 | Sin clases ni entregas. |
-| HF. Presentación final y recuperación | 31 mayo - 22 junio | 29 | 12 | Defensa, portfolio final, recuperación y mejora. |
+| Bloque | Fechas | Periodos de Programación de 45 min | Producto principal |
+|---|---|---:|---|
+| H0. Bootcamp Scrum | 15-18 septiembre | 8 | Presentación, diagnóstico de habilidades, equipos provisionales, torre, tablero, review, retrospectiva y contrato. |
+| H1. Primer asistente básico | 21 septiembre - 9 octubre | 24 | Programa Java muy básico + proyecto IntelliJ/GitHub. |
+| H2. Decisiones y depuración | 13 octubre - 6 noviembre | 28 | Agente con menú, comandos, control de flujo y depuración. |
+| H3. Memoria en colecciones | 9 noviembre - 4 diciembre | 32 | Agente con memoria temporal y pruebas de comportamiento. |
+| C1. Cierre 1.ª evaluación | 9-22 diciembre | 16 | Demo parcial, portfolio, recuperación de mínimos y revisión. |
+| H4. Agente orientado a objetos | 7 enero - 5 febrero | 35 | Modelo de clases del agente + diagramas UML. |
+| H5. Herramientas, clean code y patrones iniciales | 8 febrero - 19 marzo | 46 | Agente extensible, refactorización, Git profesional y revisión. |
+| C2. Cierre 2.ª evaluación | 29-31 marzo | 5 | Demo parcial, defensa y recuperación. |
+| H6. Persistencia y trazabilidad | 1-23 abril | 27 | Ficheros, logs, base de conocimiento y documentación reproducible. |
+| H7. IA responsable opcional | 26-29 abril | 8 | Integración Gemini/Jarvis o simulación robusta. |
+| FFEOE | 30 abril - 28 mayo | 0 | Sin clases ni entregas. |
+| HF. Presentación final y recuperación | 31 mayo - 22 junio | 29 | Defensa, portfolio final, recuperación y mejora. |
 
-### 5.1. Vista global RA por bloque y módulo
+### 5.1. Vista global de Programación
 
-Esta tabla se añade para que el calendario sea útil tanto para Programación como para Entornos de Desarrollo. Programación y Entornos mantienen documentación, RA/CE y evaluación separada, aunque compartan proyecto.
-
-| Bloque | RA Programación | RA Entornos | Entregables especialmente útiles para Entornos |
-|---|---|---|---|
-| H0. Bootcamp Scrum | Diagnóstico inicial no calificable y resolución de microproblemas | ED RA1.g | Autoevaluación privada, microprueba, criterio de equipos, tablero, contrato y retrospectiva. |
-| H1. Primer asistente básico | PR RA1, PR RA2 inicial | ED RA1, ED RA2 | Proyecto IntelliJ, repositorio GitHub inicial, README de ejecución, evidencia de fuente/ejecutable. |
-| H2. Decisiones y depuración | PR RA3, refuerzo PR RA1/RA2 | ED RA3 | Plan de pruebas manuales, informe de depuración, incidencias, capturas de breakpoints. |
-| H3. Memoria en colecciones | PR RA6, refuerzo PR RA3 | ED RA3 | Pruebas de memoria, casos límite, documentación de incidencias, checklist de comportamiento. |
-| C1. Cierre 1.ª evaluación | Consolidación PR RA1, RA2, RA3, RA6 | Consolidación ED RA1, RA2, RA3 inicial | Revisión de repositorio, portfolio técnico, defensa parcial, recuperación de evidencias. |
-| H4. Agente orientado a objetos | PR RA4, refuerzo PR RA2 | ED RA5, ED RA6 | Diagrama de clases, diagrama de comportamiento, relación diagrama-código, defensa de diseño. |
-| H5. Herramientas, clean code y patrones iniciales | PR RA7 no imprescindible, refuerzo PR RA4/RA6 | ED RA4, ED RA6 | Ramas/PRs, revisión de código, informe de refactorización, documentación de patrón si procede. |
-| C2. Cierre 2.ª evaluación | Consolidación PR RA4 y ampliación PR RA7 | Consolidación ED RA4, RA5, RA6 | Demo parcial, revisión GitHub, defensa individual, plan de mejora. |
-| H6. Persistencia y trazabilidad | PR RA5, PR RA8/RA9 como ampliación | ED RA3, ED RA4 | README reproducible, pruebas de persistencia, logs, Docker guiado si procede, documentación técnica. |
-| H7. IA responsable opcional | Consolidación PR RA1-RA6; PR RA7/RA8/RA9 si procede | ED RA3, ED RA4 aplicados a seguridad, validación y trazabilidad | Documento de configuración segura, registro de prompts, validación humana, riesgos. |
-| HF. Presentación final y recuperación | Recuperación/mejora de RA pendientes | Recuperación/mejora de RA pendientes | Portfolio final técnico, defensa individual, revisión de repositorio y evidencias. |
+| Bloque | RA de Programación | Prácticas y evidencias necesarias para el proyecto |
+|---|---|---|
+| H0 | Diagnóstico inicial no calificable | Autoevaluación privada, microprueba, Scrum, tablero, contrato y retrospectiva. |
+| H1 | PR RA1; PR RA2 inicial | IntelliJ, GitHub inicial, README y ejecución reproducible. |
+| H2 | PR RA3; refuerzo PR RA1/RA2 | Pruebas manuales, breakpoint, incidencia y depuración. |
+| H3 | PR RA6; refuerzo PR RA3 | Pruebas de memoria, casos límite e incidencias. |
+| C1 | Consolidación PR RA1, RA2, RA3 y RA6 | Revisión de repositorio, portfolio, defensa y recuperación. |
+| H4 | PR RA4; refuerzo PR RA2 | Código orientado a objetos y diagramas coherentes con él. |
+| H5 | PR RA7 no imprescindible; refuerzo PR RA4/RA6 | Ramas, revisión, refactorización y pruebas. |
+| C2 | Consolidación PR RA4 y ampliación PR RA7 | Demo, revisión GitHub, defensa y mejora. |
+| H6 | PR RA5; PR RA8/RA9 como ampliación | Persistencia, pruebas, logs y ejecución reproducible. |
+| H7 | Consolidación PR RA1–RA6; ampliaciones si procede | Configuración segura, registro, validación humana y riesgos. |
+| HF | Recuperación y mejora de RA pendientes | Portfolio final, demo, defensa y revisión del repositorio. |
 
 ---
 
@@ -228,14 +220,13 @@ Objetivos:
 - Formar equipos provisionales y equilibrados de tres o cuatro.
 - Aplicar el ciclo en la torre, hacer review y retrospectiva y revisar los equipos.
 
-Distribución de los siete periodos:
+Distribución de los ocho periodos:
 
-| Momento | Módulo | Periodos | Minutos | Uso |
-|---|---|---:|---:|---|
-| Primera sesión larga | Programación | 3 | 135 | Curso, MiniJarvis, HEXA, IA, Scrum mínimo, autoevaluación, microprueba y equipos provisionales. |
-| Sesión siguiente | Programación | 2 | 90 | Backlog, torre, prueba, review y retrospectiva. |
-| Cierre H0 | Programación | 1 | 45 | Revisión de equipos, contrato, transferencia a MiniJarvis y preparación de H1. |
-| Apoyo metodológico | Entornos | 1 | 45 | Vocabulario Scrum, fases, tablero y evidencia del proceso. |
+| Día | Periodos | Minutos | Uso |
+|---|---:|---:|---|
+| Martes | 3 | 135 | Curso, MiniJarvis, HEXA, IA, Scrum mínimo, autoevaluación y microprueba individual/pareja. |
+| Jueves | 2 | 90 | Equipos provisionales, backlog, torre y pruebas. |
+| Viernes | 3 | 135 | Segundo ciclo, review, retrospectiva, contrato, transferencia a MiniJarvis y preparación de H1. |
 
 La primera sesión puede dividirse en 90 + 45 minutos. En ese caso, la torre se realiza después de completar el diagnóstico y no antes.
 
@@ -263,8 +254,7 @@ Entregables y evidencias:
 RA/CE principales:
 
 - Programación: diagnóstico inicial sin calificación fuerte de RA técnicos y resolución de problemas acotados.
-- Entornos ED RA1.g: metodologías ágiles.
-- Entornos ED RA1.b: fases de desarrollo de una aplicación informática.
+
 
 HEXA:
 
@@ -297,6 +287,22 @@ Producto:
 MiniJarvis H1: programa Java básico que pide el nombre y muestra mensajes iniciales.
 ```
 
+Las diez fichas S206–S215 son checkpoints dentro de 24 periodos. Los periodos adicionales son taller y no crean nuevas evidencias:
+
+| Secuencia | Foco | Periodos |
+|---|---|---:|
+| S206 | Alcance y producto mínimo | 2 |
+| S207 | IntelliJ, proyecto y primera ejecución | 3 |
+| S208 | Estructura de `Main` | 2 |
+| S209 | Salida y mensajes | 2 |
+| S210 | Variables | 2 |
+| S211 | Constantes | 2 |
+| S212 | `Scanner` y lectura del nombre | 3 |
+| S213 | Integración, limpieza y pruebas | 3 |
+| S214 | GitHub, README y ejecución | 3 |
+| S215 | Portfolio, defensa, revisión y recuperación | 2 |
+| **Total** | | **24** |
+
 Entregables:
 
 | Entregable | Responsable | Formato |
@@ -306,6 +312,7 @@ Entregables:
 | Captura o evidencia de ejecución | Equipo | Imagen o bloque de salida. |
 | Portfolio H1 | Individual | Markdown. |
 | Registro de IA si se usa | Individual | Markdown. |
+| Defensa oral H1 | Individual y obligatoria | Explicación y modificación breve en directo. |
 
 RA/CE principales:
 
@@ -314,12 +321,12 @@ Programación:
 - PR RA1.
 - PR RA2 inicial.
 
-Entornos de Desarrollo:
+Prácticas técnicas integradas:
 
-- ED RA1.a-f: relación programa-sistema, fases, fuente/ejecutable, JVM, clasificación de lenguajes y herramientas.
-- ED RA2.a, ED RA2.g: instalación/configuración de IntelliJ y características del entorno.
+- relación programa-sistema, fases, fuente/ejecutable, JVM, lenguajes y herramientas;
+- instalación y configuración de IntelliJ.
 
-Entregables clave para Entornos:
+Evidencias técnicas integradas:
 
 - Proyecto IntelliJ configurado.
 - Repositorio GitHub inicial.
@@ -355,6 +362,8 @@ Fechas:
 13 octubre - 6 noviembre 2026
 ```
 
+H2 ocupa 28 periodos de Programación. Las trece fichas S216–S228 son sesiones ancla o checkpoints; los periodos restantes se dedican a explicación, práctica guiada, taller, consolidación, revisión y defensa sin crear evidencias nuevas por defecto.
+
 Objetivo:
 
 - Convertir el asistente básico en un agente con menú.
@@ -372,9 +381,9 @@ Entregables:
 |---|---|---|
 | Código Java con menú | Equipo | GitHub. |
 | Plan de pruebas manuales | Equipo | `docs/pruebas-h2.md`. |
-| Informe de depuración | Individual/equipo | Capturas o explicación de breakpoints. |
+| Incidencia y depuración combinadas | Equipo, con defensa individual | Reproducción, breakpoint, corrección y verificación. |
 | Comparación Java ↔ Python | Individual, casa | Markdown + código Python si procede. |
-| Registro de IA | Individual | Markdown. |
+| Declaración de IA y detalle si se usa | Individual | Markdown. |
 | Defensa corta | Individual | Oral. |
 
 RA/CE principales:
@@ -384,17 +393,16 @@ Programación:
 - PR RA3.
 - Refuerzo PR RA1/RA2.
 
-Entornos de Desarrollo:
+Prácticas técnicas integradas:
 
-- ED RA3.a-b: tipos de pruebas y definición de casos de prueba.
-- ED RA3.c-e: herramientas de depuración, breakpoints y seguimiento en IntelliJ.
-- ED RA3.h: documentación de incidencias.
+- tipos de pruebas y definición de casos;
+- breakpoints y seguimiento de variables en IntelliJ;
+- documentación de incidencias.
 
-Entregables clave para Entornos:
+Evidencias técnicas integradas:
 
 - `docs/pruebas-h2.md`.
-- Informe de depuración.
-- Registro de incidencia con síntoma, causa, solución y verificación.
+- Incidencia combinada con depuración, causa, solución y verificación.
 
 HEXA:
 
@@ -448,13 +456,13 @@ Programación:
 - PR RA6.
 - Refuerzo PR RA3.
 
-Entornos de Desarrollo:
+Prácticas técnicas instrumentales:
 
-- ED RA3.b: definición de casos de prueba para memoria temporal.
-- ED RA3.f-g: pruebas unitarias/automáticas si el nivel lo permite.
-- ED RA3.h: documentación de incidencias y casos límite.
+- pruebas y depuración: definición de casos de prueba para memoria temporal.
+- pruebas y depuración: pruebas unitarias/automáticas si el nivel lo permite.
+- pruebas y depuración: documentación de incidencias y casos límite.
 
-Entregables clave para Entornos:
+Evidencias incluidas en los entregables de H3:
 
 - Checklist de memoria temporal.
 - Casos límite documentados.
@@ -531,12 +539,12 @@ Programación:
 - PR RA4.
 - Refuerzo PR RA2.
 
-Entornos de Desarrollo:
+Prácticas técnicas instrumentales:
 
-- ED RA5.a-f: conceptos de POO, herramientas de diagramado, interpretación/generación de diagramas de clases e ingeniería inversa si procede.
-- ED RA6.a-f: diagramas de comportamiento, casos de uso, interacción y actividad.
+- diagramas de clases: conceptos de POO, herramientas de diagramado, interpretación/generación de diagramas de clases e ingeniería inversa si procede.
+- diagramas de comportamiento: diagramas de comportamiento, casos de uso, interacción y actividad.
 
-Entregables clave para Entornos:
+Evidencias incluidas en los entregables de H4:
 
 - Diagrama de clases editable.
 - Diagrama de comportamiento editable.
@@ -589,14 +597,14 @@ Programación:
 - PR RA7, no imprescindible pero evaluable.
 - Refuerzo PR RA4 y PR RA6.
 
-Entornos de Desarrollo:
+Prácticas técnicas instrumentales:
 
-- ED RA4.a-e: patrones de refactorización, pruebas asociadas, analizador de código y refactorización con herramientas del entorno.
-- ED RA4.f-h: control de versiones, documentación y repositorios remotos.
-- ED RA4.i: integración continua si el nivel lo permite.
-- ED RA6.g-h si se usan diagramas de estados para herramientas o flujo del agente.
+- control de versiones, refactorización y automatización: patrones de refactorización, pruebas asociadas, analizador de código y refactorización con herramientas del entorno.
+- control de versiones, refactorización y automatización: control de versiones, documentación y repositorios remotos.
+- control de versiones, refactorización y automatización: integración continua si el nivel lo permite.
+- diagramas de comportamiento si se usan diagramas de estados para herramientas o flujo del agente.
 
-Entregables clave para Entornos:
+Evidencias incluidas en los entregables de H5:
 
 - Evidencia de ramas, commits, PR o revisión de código.
 - Informe antes/después de refactorización.
@@ -651,9 +659,9 @@ Programación:
 - Consolidación PR RA4.
 - PR RA7 como ampliación/no imprescindible.
 
-Entornos de Desarrollo:
+Prácticas técnicas instrumentales:
 
-- Consolidación ED RA4, ED RA5 y ED RA6.
+- Consolidación control de versiones, refactorización y automatización, diagramas de clases y diagramas de comportamiento.
 - Revisión de evidencias: refactorización, GitHub, diagramas de clases y comportamiento.
 
 ---
@@ -695,12 +703,12 @@ Programación:
 - PR RA5.
 - PR RA8/RA9 como ampliación si procede.
 
-Entornos de Desarrollo:
+Prácticas técnicas instrumentales:
 
-- ED RA3.b, ED RA3.f-h: pruebas de persistencia, pruebas automáticas si procede e incidencias.
-- ED RA4.f-i: control de versiones, documentación técnica, repositorios remotos e integración continua si el nivel lo permite.
+- pruebas de persistencia, pruebas automáticas si proceden e incidencias;
+- control de versiones, refactorización y automatización: control de versiones, documentación técnica, repositorios remotos e integración continua si el nivel lo permite.
 
-Entregables clave para Entornos:
+Evidencias incluidas en los entregables de H6:
 
 - README reproducible.
 - Checklist o pruebas de persistencia.
@@ -752,13 +760,13 @@ Programación:
 - Consolidación de RA imprescindibles.
 - PR RA7/RA8/RA9 si procede.
 
-Entornos de Desarrollo:
+Prácticas técnicas instrumentales:
 
-- ED RA3: pruebas y validación del comportamiento de la integración o simulación IA.
-- ED RA4: documentación, control de versiones, configuración, revisión y trazabilidad.
+- pruebas y depuración: pruebas y validación del comportamiento de la integración o simulación IA.
+- control de versiones, refactorización y automatización: documentación, control de versiones, configuración, revisión y trazabilidad.
 - Aplicación transversal de seguridad: no secretos, no datos personales, validación humana.
 
-Entregables clave para Entornos:
+Evidencias incluidas en los entregables de H7:
 
 - Documento de configuración segura.
 - Registro de prompts y validación.
@@ -825,14 +833,6 @@ Programación:
 | PR RA3 | Principal | H2: menú, decisiones, bucles, errores y depuración. |
 | PR RA6 | Principal | H3: memoria temporal y colecciones. |
 
-Entornos de Desarrollo:
-
-| RA | Papel en la evaluación | Evidencias principales |
-|---|---|---|
-| ED RA1 | Principal | H0-H1: fases, metodologías ágiles, fuente/ejecutable, herramientas. |
-| ED RA2 | Principal | H1: IntelliJ, proyecto, configuración, ejecución y comparación básica de entornos. |
-| ED RA3 inicial | Inicial/principal parcial | H2-H3: casos de prueba, depuración, incidencias y pruebas iniciales. |
-
 ### 2.ª evaluación
 
 Programación:
@@ -842,14 +842,6 @@ Programación:
 | PR RA4 | Principal | H4: clases, objetos, constructores, visibilidad y diseño OO. |
 | PR RA7 | No imprescindible/evaluable | H5: extensibilidad, interfaces/herencia/composición si procede. |
 | PR RA2, RA3, RA6 | Refuerzo | Evolución del agente y defensa técnica. |
-
-Entornos de Desarrollo:
-
-| RA | Papel en la evaluación | Evidencias principales |
-|---|---|---|
-| ED RA4 | Principal | H5: refactorización, GitHub, revisión de código, documentación e integración si procede. |
-| ED RA5 | Principal | H4: diagrama de clases, interpretación y relación con código. |
-| ED RA6 | Principal | H4-H5: diagramas de comportamiento, actividad/secuencia/estados si procede. |
 
 ### 3.ª evaluación antes de FFEOE
 
@@ -862,14 +854,6 @@ Programación:
 | PR RA9 | No imprescindible/evaluable | H6-H7: gestión de datos/BD si el ritmo lo permite. |
 | PR RA1-RA6 | Consolidación | Cierre del proyecto base antes de FFEOE. |
 
-Entornos de Desarrollo:
-
-| RA | Papel en la evaluación | Evidencias principales |
-|---|---|---|
-| ED RA3 | Aplicación avanzada | H6-H7: pruebas de persistencia, validación de integración/simulación IA, incidencias. |
-| ED RA4 | Aplicación avanzada | H6-H7: documentación reproducible, GitHub, CI/Docker si procede, seguridad y trazabilidad. |
-| ED RA1-RA6 | Consolidación | Revisión final del flujo profesional y evidencias pendientes. |
-
 ### Tras FFEOE
 
 Programación:
@@ -877,12 +861,7 @@ Programación:
 - Recuperación de RA imprescindibles pendientes.
 - Mejora de evidencias.
 - Defensa individual.
-
-Entornos de Desarrollo:
-
-- Recuperación de RA pendientes.
-- Revisión de repositorio, documentación, diagramas, pruebas y portfolio.
-- Defensa individual del proceso técnico seguido.
+- La recuperación puede requerir revisar repositorio, documentación, diagramas o pruebas cuando formen parte de la evidencia de Programación.
 
 ---
 

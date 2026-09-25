@@ -2,7 +2,7 @@
 
 Equipo o alumno/a: Laura García Martín  
 Curso: 1.º DAW  
-Módulos: Programación + Entornos de Desarrollo  
+Módulo: Programación
 Fecha: ejemplo docente
 
 ---
@@ -194,8 +194,6 @@ Evidencia que Laura debe señalar:
 - una parte concreta del código o documento donde aparezca el concepto;
 - una prueba, ejecución, captura o explicación que demuestre que no lo ha copiado sin entender;
 - una mejora razonable que podría hacer si tuviera más tiempo.
-
-
 
 ## Evidencias digitales correspondientes a la entrega
 

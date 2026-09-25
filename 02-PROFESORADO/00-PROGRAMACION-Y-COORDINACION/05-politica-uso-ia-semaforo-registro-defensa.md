@@ -1,6 +1,6 @@
 # Política de uso de IA — Semáforo, registro y defensa
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 Documentos relacionados:

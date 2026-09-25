@@ -68,7 +68,7 @@ Criterio aportado por el docente:
 
 Matiz posterior:
 
-> Los temas son una referencia de contenidos y secuencia. La referencia principal de objetivos por módulos es `documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`.
+> Los temas son una referencia de contenidos y secuencia. La referencia principal de objetivos de Programación es `documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`.
 
 Esta correspondencia se tendrá en cuenta al diseñar hitos, tareas, entregables y materiales de apoyo, aunque el nuevo curso se organice mediante el proyecto guía del agente IA.
 
@@ -542,10 +542,10 @@ Las rúbricas por hito deberían valorar al menos:
 
 ## 16. Próximo paso recomendado
 
-Crear el anexo separado de Entornos de Desarrollo:
+Crear el anexo separado de Programación:
 
 ```text
-01B-anexo-entornos-ra-ce.md
+01A-anexo-programacion-ra-ce.md
 ```
 
 Después, elaborar:

@@ -1,6 +1,6 @@
 # Rúbricas por hitos
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 ---
 
@@ -10,7 +10,7 @@ Este documento define rúbricas de evaluación por hitos para el proyecto anual:
 
 > Construcción progresiva de un pequeño agente IA propio.
 
-Las rúbricas están pensadas para evaluar evidencias de Programación y Entornos de Desarrollo manteniendo ambos módulos separados, aunque compartan proyecto, entregables y defensas.
+Las rúbricas están pensadas para evaluar evidencias de Programación manteniendo el módulo separados, aunque compartan proyecto, entregables y defensas.
 
 ---
 
@@ -26,7 +26,6 @@ Las rúbricas están pensadas para evaluar evidencias de Programación y Entorno
 Uso recomendado:
 
 - La rúbrica explica la calidad esperada en las evidencias.
-- Programación y Entornos se califican por separado aunque compartan evidencias.
 - La defensa individual puede ajustar la validez de una evidencia grupal.
 - Si hay uso de IA no trazado, la evidencia puede quedar condicionada o invalidada.
 

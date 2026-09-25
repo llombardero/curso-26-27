@@ -1,10 +1,10 @@
 # Sesión 223 — Ficha de trabajo del alumnado
 
-## `switch` como alternativa controlada
+## Refuerzo de bucles y elección de estructura de control
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Cubrir conceptos del Tema 3 que no siempre aparecen en el menú principal. | Archivo breve `docs/refuerzo-bucles-h2` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia. |
+| Comparar `while`, `do-while`, `for` y `switch` mediante ejercicios acotados. | Apartado `Refuerzo de bucles` dentro de `docs/pruebas-h2`, con código, explicación y una pregunta de eficiencia. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H2.
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **Archivo breve `docs/refuerzo-bucles-h2` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia.**
+- [ ] He actualizado `docs/pruebas-h2` con un apartado **Refuerzo de bucles**, código, explicación y una pregunta de eficiencia.
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

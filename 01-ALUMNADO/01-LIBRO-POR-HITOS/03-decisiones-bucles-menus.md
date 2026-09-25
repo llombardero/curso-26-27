@@ -78,9 +78,9 @@ Refuerzo de cobertura del Tema 3:
 - Explica un ejemplo de bucle infinito y cómo lo evitarías.
 - Compara una búsqueda simple con una búsqueda repetida dentro de otro bucle y explica cuál parece menos eficiente.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
-Crea `docs/pruebas-menu` con tabla: comando, resultado esperado, resultado observado, estado. Esto conecta Programación con Entornos mediante pruebas manuales.
+Crea `docs/pruebas-menu` con tabla: comando, resultado esperado, resultado observado, estado. Esto conecta Programación con su verificación mediante pruebas manuales.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

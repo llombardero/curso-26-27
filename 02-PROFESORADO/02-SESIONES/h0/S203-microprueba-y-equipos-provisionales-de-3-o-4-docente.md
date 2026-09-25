@@ -8,8 +8,8 @@
 | Duración | 45 minutos |
 | Fase HEXA del hito | Fase 0 — Equipos + Idear — proponer soluciones + Planificar — organizar el trabajo |
 | Agrupamiento | Equipos provisionales de tres o cuatro preparados por el docente |
-| Producto principal | Mapa HADA de equipo, funciones justificadas, reglas de participación y backlog inicial de la torre |
-| Evidencia individual | Aportación inicial, función que se desea practicar y criterio para revisar la asignación |
+| Producto principal | Mapa HADA de equipo, microprueba individual y en pareja/trío, funciones justificadas, reglas de participación y backlog inicial de la torre |
+| Evidencia individual | Tres tareas, una restricción, una prueba, un bloqueo, aportación inicial, función que se desea practicar y criterio para revisar la asignación |
 | Carácter | Diagnóstico formativo no calificable; agrupamiento provisional y funciones explícitas, compensatorias y rotatorias |
 
 > Esta sesión convierte los perfiles individuales de S202 en una hipótesis de funcionamiento colectivo. No se construye todavía la torre: se diseña el equipo que la construirá y se deja preparado su primer sprint.
@@ -43,6 +43,13 @@ Al finalizar, cada equipo debe disponer de:
 - backlog inicial de al menos seis tareas para la torre;
 - definición de terminado de la torre;
 - evidencia individual de lo que cada persona aportará y practicará.
+
+La microprueba se materializa en dos artefactos previos al trabajo del equipo definitivo:
+
+1. respuesta individual de cuatro minutos con tres tareas, una restricción, una prueba y un bloqueo;
+2. síntesis de seis minutos en pareja o trío aleatorio con seis tareas priorizadas, dos alternativas, definición de terminado, prueba observable y una aportación ajena incorporada.
+
+La respuesta individual se conserva en el diario. La pareja o trío entrega una síntesis. Ninguna de las dos se califica.
 
 ---
 

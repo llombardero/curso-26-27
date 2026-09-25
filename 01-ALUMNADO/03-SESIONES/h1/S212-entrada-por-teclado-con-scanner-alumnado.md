@@ -4,7 +4,7 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Asegurar conceptos del Tema 1 que no aparecen de forma natural en el saludo inicial. | Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido. |
+| Integrar la entrada por teclado que necesita el producto H1. | MiniJarvis pide un nombre con `Scanner`, lo guarda y lo utiliza en la respuesta. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H1.
@@ -17,7 +17,7 @@
 
 1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
 2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **MiniJarvis pregunta cuántas horas se han estudiado esta semana, convierte la entrada a número y muestra una recomendación sencilla.**
+3. Realiza esta tarea: **MiniJarvis pide un nombre con `scanner.nextLine()`, lo guarda en una variable `String` y lo utiliza en un saludo.**
 4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
 5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
 
@@ -37,7 +37,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido.**
+- [ ] He producido o actualizado: **Código H1 que lee un nombre y lo utiliza en la salida.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.
@@ -59,7 +59,7 @@
 
 ## Cierre
 
-Responde sin copiar: **Pregunta: ¿por qué `scanner.nextLine()` devuelve texto aunque escribas un número?**
+Responde sin copiar: **Pregunta: ¿qué devuelve `scanner.nextLine()` y en qué variable guardas ese valor?**
 
 Respuesta:  
 ................................................................................

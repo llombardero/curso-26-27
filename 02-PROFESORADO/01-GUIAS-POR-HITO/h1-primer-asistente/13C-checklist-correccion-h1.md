@@ -34,7 +34,6 @@ Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra
 
 Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecutar no se considera completada si faltan evidencias de Activar, Investigar, Idear o Planificar. Comunicar exige presentar, evaluar y reflexionar. Si falta una fase, se recuperan esa fase y su evidencia; no se repite automáticamente todo el hito.
 
-
 ### Lista de comprobación del ciclo
 
 | Fase | Sí | Parcial | No | Evidencia observada / recuperación |
@@ -48,8 +47,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Documento para uso docente.
 
@@ -135,7 +133,7 @@ Si hay complejidad extra, anotar:
 
 ---
 
-## 5. Entornos de Desarrollo
+## 5. Prácticas técnicas del proyecto
 
 | Ítem | Sí | Parcial | No | Observaciones |
 |---|---|---|---|---|

@@ -7,8 +7,8 @@
 | Hito | H2 |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
-| Resultado de hoy | Documentar un fallo real y su solución. |
-| Evidencia mínima | `docs/incidencia-h2.md`. |
+| Resultado de hoy | Documentar una incidencia natural o didáctica reproducida y su solución. |
+| Evidencia mínima | Una ficha combinada de incidencia y depuración en `docs/incidencia-h2.md`. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
@@ -37,7 +37,7 @@ Guion breve sugerido:
 | 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
 | 5–13 min | Explicación breve: Una incidencia documenta problema, causa, solución y verificación. |
 | 13–18 min | Demostración o ejemplo: Incidencia típica: `salir` no termina porque no cambia `running`. |
-| 18–35 min | Trabajo del alumnado: Registrar un error encontrado, causa, solución y prueba posterior. |
+| 18–35 min | Documentar un fallo real o, si no existe uno adecuado, una incidencia didáctica proporcionada por el profesorado e identificada como reproducida. |
 | 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |
 | 40–45 min | Cierre: Compartir una incidencia útil con la clase. |
 
@@ -47,7 +47,7 @@ Incidencia típica: `salir` no termina porque no cambia `running`.
 
 ## Consigna que se entrega al alumnado
 
-Documentar un error real.
+Documentar una incidencia natural o didáctica reproducida. Debe incluir síntoma, reproducción, esperado/obtenido, breakpoint, variables, causa, corrección y verificación.
 
 Producto o evidencia que debe quedar: **`docs/incidencia-h2.md`.**
 

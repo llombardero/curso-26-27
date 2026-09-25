@@ -4,7 +4,7 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Comparar control de flujo entre Java y Python. | `docs/comparacion-java-python-h2`. |
+| Revisar, comprobar y corregir la comparación Java-Python iniciada en casa después de S226. | `docs/comparacion-java-python-h2` validado y preparado para la defensa. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H2.
@@ -13,13 +13,17 @@
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
 
+## Trabajo previo en casa — 30 a 45 minutos
+
+Después de S226 y antes de S227, selecciona un solo comportamiento de H2: bucle del menú, decisión sobre un comando, salida o comando desconocido. Prepara su versión o pseudoversión Python, compara ambas soluciones, comprueba el resultado y registra la IA si la utilizas.
+
 ## Trabajo de hoy
 
 1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
 2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Analizar versión Python generada o guiada y señalar equivalencias.**
-4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
-5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+3. Revisa por parejas la comparación preparada en casa, ejecuta o comprueba el ejemplo y corrige los errores detectados.
+4. Prepara dos preguntas que puedas responder en la defensa de S228.
+5. Guarda la evidencia validada y prepárate para explicarla.
 
 ## Registro breve
 

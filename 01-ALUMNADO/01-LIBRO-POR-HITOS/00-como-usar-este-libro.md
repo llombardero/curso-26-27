@@ -26,7 +26,7 @@ Lee el concepto, ejecuta un ejemplo pequeño, aplícalo a MiniJarvis, documenta 
 
 ## 2. Conceptos básicos explicados
 
-El libro no sustituye a las clases ni a las prácticas: las acompaña. Cada capítulo se puede leer como una unidad de estudio independiente. La parte de Programación se centra en construir código Java progresivamente. La parte de Entornos se centra en documentar, probar, depurar, versionar, revisar y defender.
+El libro no sustituye a las clases ni a las prácticas: las acompaña. Cada capítulo se puede leer como una unidad de estudio independiente. Programación se centra en construir código Java progresivamente e integra la documentación, las pruebas, la depuración, el control de versiones, la revisión y la defensa que necesita el proyecto.
 
 Un hito es una etapa con un producto parcial. Una evidencia es una prueba concreta de aprendizaje. Una defensa es la explicación oral o escrita que demuestra que comprendes lo entregado. Si una evidencia no se puede localizar, probar o explicar, todavía está incompleta.
 
@@ -48,9 +48,9 @@ Crea una carpeta de portfolio personal. Dentro, crea un archivo `indice-portfoli
 
 Caso práctico: escribe una primera entrada titulada “Qué espero aprender construyendo MiniJarvis”. Incluye una fortaleza, una dificultad prevista y una norma personal de uso de IA.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
-Crea un README inicial de tu carpeta personal. Debe explicar qué contiene, cómo se irán guardando evidencias y qué regla seguirás para registrar IA. Esto ya es Entornos: documentación, organización y trazabilidad.
+Crea un README inicial de tu carpeta personal. Debe explicar qué contiene, cómo se irán guardando evidencias y qué regla seguirás para registrar IA. Esto forma parte del proyecto: documentación, organización y trazabilidad.
 
 ## 6. Errores frecuentes y cómo corregirlos
 

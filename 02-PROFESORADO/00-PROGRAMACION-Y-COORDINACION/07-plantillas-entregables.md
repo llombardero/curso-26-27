@@ -1,6 +1,6 @@
 # Plantillas de entregables
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 Documentos relacionados:
@@ -8,7 +8,7 @@ Documentos relacionados:
 - `00-mapa-maestro-curso-2026-2027.md`
 - `01-matriz-integrada-ra-ce-evidencias-tareas.md`
 - `01A-anexo-programacion-ra-ce.md`
-- `01B-anexo-entornos-ra-ce.md`
+- `01A-anexo-programacion-ra-ce.md`
 - `02-calendario-hitos-sprints-2026-2027.md`
 - `04A-enunciados-y-entregables-alumnado.md`
 - `04B-modelo-entregables-laura.md`
@@ -23,7 +23,7 @@ Este documento recoge plantillas reutilizables para los entregables del proyecto
 
 > Construcción progresiva de un pequeño agente IA propio.
 
-Las plantillas sirven para que el alumnado entregue evidencias homogéneas, revisables y defendibles, y para facilitar la coordinación entre Programación y Entornos de Desarrollo.
+Las plantillas sirven para que el alumnado entregue evidencias homogéneas, revisables y defendibles, y para facilitar la coordinación entre Programación.
 
 Uso recomendado:
 
@@ -75,7 +75,7 @@ No todos los hitos necesitan todos los archivos.
 Equipo:
 Integrantes:
 Curso:
-Módulos: Programación + Entornos de Desarrollo
+Módulo: Programación
 Fecha:
 
 ---
@@ -141,7 +141,7 @@ Evidencias:
 
 ---
 
-## 7. Relación con Entornos de Desarrollo
+## 7. Aplicación al proyecto
 
 RA/CE trabajados:
 
@@ -257,7 +257,7 @@ Explicación:
 
 ---
 
-## 6. Relación con Entornos de Desarrollo
+## 6. Aplicación al proyecto
 
 RA/CE que creo haber trabajado:
 

@@ -80,8 +80,6 @@ Pregunta de defensa aconsejada:
 
 > Si falla la lectura de `data/recuerdos.txt`, ¿qué ve la persona usuaria, qué se registra y qué excepción se lanza o captura?
 
-
-
 ## Evidencias digitales correspondientes a la entrega
 
 La carpeta `evidencias-digitales` muestra cómo se presenta este hito en los cinco documentos comunes del curso:

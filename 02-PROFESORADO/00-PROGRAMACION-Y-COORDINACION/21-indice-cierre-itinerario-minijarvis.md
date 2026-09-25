@@ -54,8 +54,6 @@ Cada hito combina, según corresponda:
 - review y retrospectiva;
 - defensa individual.
 
-Programación y Entornos de Desarrollo comparten el proyecto, pero conservan sus RA/CE, actividades evaluables y calificaciones diferenciadas.
-
 ## 6. Seguridad y publicación
 
 - No publicar puntuaciones HADA ni observaciones privadas.

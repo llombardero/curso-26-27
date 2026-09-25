@@ -84,7 +84,7 @@ Laboratorio obligatorio de cobertura del Tema 6, sin convertirlo todo en arquite
 | Métodos `default` y métodos privados en interfaces | Lectura guiada o microejemplo si el grupo está preparado. | Explicar cuándo ayudan y cuándo complican. |
 | Clases anónimas, clases finales y clases selladas | Reconocimiento como ampliación, no exigencia de producto. | Saber identificarlas y decidir no usarlas si no aportan claridad. |
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
 Crea `docs/informe-refactorizacion`, `docs/revision-codigo` y `docs/registro-patron`. Incluye antes/después, prueba, revisión y decisión razonada sobre patrón.
 

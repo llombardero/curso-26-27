@@ -83,8 +83,6 @@ Pregunta de defensa aconsejada:
 
 > ¿Qué concepto avanzado del Tema 6 has decidido no meter en MiniJarvis y por qué esa renuncia mejora el diseño?
 
-
-
 ## Evidencias digitales correspondientes a la entrega
 
 La carpeta `evidencias-digitales` muestra cómo se presenta este hito en los cinco documentos comunes del curso:

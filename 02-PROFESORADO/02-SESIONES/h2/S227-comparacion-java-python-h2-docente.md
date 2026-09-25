@@ -7,7 +7,7 @@
 | Hito | H2 |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
-| Resultado de hoy | Comparar control de flujo entre Java y Python. |
+| Resultado de hoy | Revisar, comprobar y corregir la comparación preparada en casa después de S226. |
 | Evidencia mínima | `docs/comparacion-java-python-h2.md`. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
@@ -15,7 +15,8 @@
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/comparacion-java-python-h2.md`.
+- [ ] Haber publicado al final de S226 una tarea acotada de 30–45 minutos para casa.
+- [ ] Comprobar que la evidencia mínima que se revisará es: `docs/comparacion-java-python-h2.md`.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -37,7 +38,7 @@ Guion breve sugerido:
 | 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
 | 5–13 min | Explicación breve: El objetivo es comparar ideas: bucle, decisión y entrada. |
 | 13–18 min | Demostración o ejemplo: Mostrar `while` en Java y Python. |
-| 18–35 min | Trabajo del alumnado: Analizar versión Python generada o guiada y señalar equivalencias. |
+| 18–35 min | Revisión por parejas, ejecución o comprobación, corrección y preparación de dos preguntas de defensa. |
 | 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |
 | 40–45 min | Cierre: Pregunta: ¿dónde está el equivalente del `while`? |
 
@@ -47,7 +48,7 @@ Mostrar `while` en Java y Python.
 
 ## Consigna que se entrega al alumnado
 
-Señalar equivalencias entre ambas versiones.
+Traer de casa una comparación acotada de un comportamiento H2; revisarla y validarla en clase.
 
 Producto o evidencia que debe quedar: **`docs/comparacion-java-python-h2.md`.**
 

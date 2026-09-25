@@ -3,6 +3,7 @@
 Alumno/a o equipo:
 Fecha:
 Estado: Abierta / En curso / Resuelta
+Origen: Natural / Didáctica reproducida
 
 ---
 
@@ -38,7 +39,21 @@ Estado: Abierta / En curso / Resuelta
 
 ---
 
-## 5. Causa probable
+## 5. Depuración con breakpoint
+
+Archivo y línea o zona:
+
+```text
+
+```
+
+| Variable | Valor observado | Qué significa |
+|---|---|---|
+| | | |
+
+---
+
+## 6. Causa probable
 
 ```text
 
@@ -46,7 +61,7 @@ Estado: Abierta / En curso / Resuelta
 
 ---
 
-## 6. Solución aplicada
+## 7. Solución aplicada
 
 ```text
 
@@ -54,7 +69,7 @@ Estado: Abierta / En curso / Resuelta
 
 ---
 
-## 7. Verificación
+## 8. Verificación y prueba de regresión
 
 ```text
 
@@ -62,7 +77,7 @@ Estado: Abierta / En curso / Resuelta
 
 ---
 
-## 8. Uso de IA, si procede
+## 9. Uso de IA, si procede
 
 ```text
 

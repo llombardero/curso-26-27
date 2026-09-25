@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -117,10 +116,10 @@ Programación:
 - consolidación PR RA1-RA6;
 - PR RA7/RA8/RA9 si procede.
 
-Entornos:
+Prácticas técnicas integradas:
 
-- ED RA3: pruebas y validación;
-- ED RA4: documentación, configuración, revisión y trazabilidad;
+- pruebas y depuración: pruebas y validación;
+- control de versiones, refactorización y automatización: documentación, configuración, revisión y trazabilidad;
 - seguridad transversal.
 
 Evidencias:

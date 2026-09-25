@@ -34,7 +34,6 @@ Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra
 
 Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecutar no se considera completada si faltan evidencias de Activar, Investigar, Idear o Planificar. Comunicar exige presentar, evaluar y reflexionar. Si falta una fase, se recuperan esa fase y su evidencia; no se repite automáticamente todo el hito.
 
-
 ### Lista de comprobación del ciclo
 
 | Fase | Sí | Parcial | No | Evidencia observada / recuperación |
@@ -48,7 +47,6 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
 Documento para uso docente.
 
 ---
@@ -59,8 +57,8 @@ Documento para uso docente.
 |---|---|---|---|---|
 | Evidencias H0-H7 ordenadas | | | | |
 | Reflexión individual | | | | |
-| Evidencias de Programación | | | | |
-| Evidencias de Entornos | | | | |
+| Evidencias del código y los RA de Programación | | | | |
+| Evidencias técnicas y de proceso integradas | | | | |
 | Registro IA final | | | | |
 
 ---

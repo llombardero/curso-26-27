@@ -1,6 +1,6 @@
 # Enunciados y entregables para el alumnado
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Documento complementario: `04B-modelo-entregables-laura`
 
@@ -19,7 +19,7 @@ Cada hito indica:
 - qué debe hacer el alumnado;
 - qué debe entregar;
 - relación con Programación;
-- relación con Entornos de Desarrollo;
+- relación con Programación;
 - uso permitido de IA;
 - defensa oral prevista.
 
@@ -36,7 +36,7 @@ Todo entregable evaluable debe dejar claro:
 3. Dónde se entrega: Moodle, GitHub o formato mixto.
 4. Qué evidencias mínimas debe contener.
 5. Qué parte corresponde a Programación.
-6. Qué parte corresponde a Entornos de Desarrollo.
+6. Qué parte corresponde a Programación.
 7. Si se ha usado IA, cómo se registra.
 8. Qué se puede preguntar en defensa oral.
 
@@ -150,6 +150,7 @@ El objetivo es demostrar que comprendéis la estructura básica de un programa J
 | Evidencia de ejecución | Equipo | Captura o bloque de salida |
 | Portfolio H1 | Individual | `docs/portfolio-h1` |
 | Registro de IA, si se usa | Individual | `docs/registro-ia` |
+| Defensa oral H1 | Individual y obligatoria | Explicación y modificación breve en directo |
 
 ### Uso de IA
 
@@ -198,8 +199,8 @@ También aprenderéis a probar y depurar el programa usando IntelliJ.
    - `salir`.
 4. Gestionar comandos desconocidos.
 5. Crear una tabla de pruebas manuales.
-6. Documentar al menos una incidencia o error encontrado.
-7. Usar el depurador de IntelliJ con un breakpoint.
+6. Documentar al menos una incidencia natural o didáctica reproducida.
+7. Investigarla con el depurador de IntelliJ y un breakpoint.
 8. Realizar en casa una comparación Java ↔ Python del menú.
 
 ### Qué debe entregar el alumnado
@@ -208,10 +209,9 @@ También aprenderéis a probar y depurar el programa usando IntelliJ.
 |---|---|---|
 | Código Java con menú | Equipo | GitHub |
 | Plan de pruebas | Equipo | `docs/pruebas-h2` |
-| Informe de depuración | Individual/equipo | `docs/depuracion-h2` |
-| Registro de incidencia | Equipo | GitHub issue o Markdown |
+| Incidencia y depuración combinadas | Equipo, con defensa individual | `docs/incidencia-h2` |
 | Comparación Java ↔ Python | Individual, casa | `docs/comparacion-java-python-h2` |
-| Registro de IA | Individual | `docs/registro-ia` |
+| Declaración de IA y detalle si se usa | Individual | `docs/registro-ia` |
 
 ### Uso de IA
 

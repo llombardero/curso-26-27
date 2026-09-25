@@ -69,7 +69,7 @@ Refuerzo de cobertura del Tema 1: añade una pregunta numérica.
 
 Lee la respuesta como texto, conviértela a `int`, calcula una recomendación sencilla y muestra un mensaje. Por ejemplo, si el número es menor que 3, MiniJarvis recomienda practicar más; si es mayor o igual que 3, felicita al usuario.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
 Actualiza el README indicando que el programa requiere interacción por teclado. Añade una prueba manual: entrada usada y salida observada.
 

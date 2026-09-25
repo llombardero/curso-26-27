@@ -74,7 +74,7 @@ Refuerzo de cobertura del Tema 4:
 - Usa `HashMap<String, String>` en un mini-ejercicio de preferencias.
 - Explica si tu memoria interna es mutable y cómo la proteges.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
 Crea `docs/pruebas-memoria` y `docs/justificacion-coleccion`. Explica por qué `ArrayList` es suficiente en este hito y por qué todavía no se guarda en fichero.
 

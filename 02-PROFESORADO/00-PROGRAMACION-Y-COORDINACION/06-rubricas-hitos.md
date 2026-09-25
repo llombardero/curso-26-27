@@ -37,8 +37,7 @@ Regla de evaluación: el producto final por sí solo no acredita el proceso. Si 
 
 <!-- HEXA-POLITICA-TODOS-HITOS:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 Documentos relacionados:
@@ -46,7 +45,6 @@ Documentos relacionados:
 - `00-mapa-maestro-curso-2026-2027.md`
 - `01-matriz-integrada-ra-ce-evidencias-tareas.md`
 - `01A-anexo-programacion-ra-ce.md`
-- `01B-anexo-entornos-ra-ce.md`
 - `02-calendario-hitos-sprints-2026-2027.md`
 - `04A-enunciados-y-entregables-alumnado.md`
 - `04B-modelo-entregables-laura.md`
@@ -60,7 +58,7 @@ Este documento define rúbricas de evaluación por hitos para el proyecto anual:
 
 > Construcción progresiva de un pequeño agente IA propio.
 
-Las rúbricas están pensadas para evaluar evidencias de Programación y Entornos de Desarrollo manteniendo ambos módulos separados, aunque compartan proyecto, entregables y defensas.
+Las rúbricas están pensadas para evaluar evidencias vinculadas exclusivamente a los RA y CE de Programación. Las prácticas técnicas se valoran dentro de esas evidencias cuando resultan necesarias para construir, probar, documentar o defender MiniJarvis.
 
 ---
 
@@ -101,7 +99,7 @@ Estas dimensiones pueden aparecer en todos los hitos, ajustadas al nivel.
 
 ## 4. H0 — Bootcamp Scrum, diagnóstico y torre de papel
 
-RA/CE principales: Entornos ED RA1.b y ED RA1.g; diagnóstico inicial de Programación.
+RA/CE principales: diagnóstico inicial de Programación, sin calificación fuerte de RA técnicos.
 
 La autoevaluación, sus puntuaciones y la habilidad previa no se califican. Se evalúa la comprensión y el proceso observable, no “tener un perfil alto”.
 
@@ -125,8 +123,7 @@ RA/CE principales:
 
 - Programación PR RA1.
 - Programación PR RA2 inicial.
-- Entornos ED RA1.
-- Entornos ED RA2.
+- Prácticas integradas: IntelliJ, estructura del proyecto y ejecución reproducible.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -143,7 +140,7 @@ RA/CE principales:
 RA/CE principales:
 
 - Programación PR RA3.
-- Entornos ED RA3.
+- Prácticas integradas: pruebas, breakpoint, seguimiento de variables e incidencia documentada.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -161,7 +158,7 @@ RA/CE principales:
 RA/CE principales:
 
 - Programación PR RA6.
-- Entornos ED RA3.
+- Prácticas integradas: pruebas de memoria y casos límite.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -178,8 +175,7 @@ RA/CE principales:
 RA/CE principales:
 
 - Programación PR RA4.
-- Entornos ED RA5.
-- Entornos ED RA6.
+- Prácticas integradas: diagramas de clases y de comportamiento coherentes con el código.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -197,8 +193,7 @@ RA/CE principales:
 RA/CE principales:
 
 - Programación PR RA7 no imprescindible/evaluable.
-- Entornos ED RA4.
-- Entornos ED RA6 si procede.
+- Prácticas integradas: control de versiones, refactorización, revisión y diagramas si proceden.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -217,8 +212,7 @@ RA/CE principales:
 
 - Programación PR RA5.
 - Programación PR RA8/RA9 como ampliación.
-- Entornos ED RA3.
-- Entornos ED RA4.
+- Prácticas integradas: pruebas de persistencia, control de versiones y ejecución reproducible.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -237,7 +231,7 @@ RA/CE principales:
 
 - Consolidación Programación PR RA1-RA6.
 - Programación PR RA7/RA8/RA9 si procede.
-- Entornos ED RA3/RA4 aplicados a validación, seguridad y documentación.
+- Prácticas integradas: validación, seguridad, documentación y trazabilidad.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
@@ -266,9 +260,8 @@ RA/CE principales:
 
 Para cada hito, el profesorado debe vincular la puntuación de estas dimensiones con los RA/CE correspondientes:
 
-- Programación se calificará según PR RA/CE del anexo `01A`.
-- Entornos se calificará según ED RA/CE del anexo `01B`.
-- Una misma evidencia puede servir para ambos módulos, pero la calificación se separa.
+- Programación se calificará según sus RA/CE y el anexo `01A`.
+- Las prácticas instrumentales solo se valorarán por su contribución a las evidencias de Programación; no generan una calificación separada.
 - La defensa individual puede confirmar, matizar o invalidar una evidencia grupal.
 
 ---

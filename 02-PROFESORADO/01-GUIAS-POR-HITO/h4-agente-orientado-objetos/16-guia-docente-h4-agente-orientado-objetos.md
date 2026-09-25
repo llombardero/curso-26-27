@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -126,10 +125,10 @@ Evidencias:
 - constructor;
 - defensa de responsabilidades.
 
-### Entornos de Desarrollo
+### Prácticas técnicas del proyecto
 
-- ED RA5: diagramas de clases.
-- ED RA6: diagramas de comportamiento.
+- diagramas de clases: diagramas de clases.
+- diagramas de comportamiento: diagramas de comportamiento.
 
 Evidencias:
 

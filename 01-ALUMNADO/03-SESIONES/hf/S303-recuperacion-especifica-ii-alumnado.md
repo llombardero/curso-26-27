@@ -4,7 +4,7 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Recuperar evidencias de Entornos. | Evidencia de recuperación Entornos. |
+| Recuperar una evidencia técnica de Programación. | Evidencia específica de recuperación. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** HF.
@@ -38,7 +38,7 @@
 
 ## Evidencia mínima antes de salir
 
-- [ ] He producido o actualizado: **Evidencia de recuperación Entornos.**
+- [ ] He producido o actualizado: **evidencia específica de recuperación de Programación.**
 - [ ] Puedo señalar dónde está.
 - [ ] Puedo explicar una decisión tomada.
 - [ ] Puedo mostrar una prueba o comprobación.

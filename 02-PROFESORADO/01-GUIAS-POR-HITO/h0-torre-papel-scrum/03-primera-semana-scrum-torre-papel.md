@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 Calendario de referencia: `02-calendario-hitos-sprints-2026-2027.md`
@@ -79,18 +78,18 @@ Usos en Programación:
 - introducir el proyecto del agente IA;
 - preparar el primer hito H1.
 
-### Entornos de Desarrollo
+### Prácticas metodológicas del proyecto
 
-Esta semana sí es especialmente relevante para Entornos.
+Esta semana establece la forma de trabajo que se utilizará después en Programación. Tiene carácter diagnóstico y formativo.
 
-RA/CE principales:
+Prácticas principales:
 
-| RA/CE Entornos | Aplicación en la primera semana |
+| Práctica | Aplicación en la primera semana |
 |---|---|
-| ED RA1.b | Identificar fases de desarrollo de una aplicación: idea, análisis, diseño, construcción, prueba, revisión y mejora. |
-| ED RA1.g | Identificar características y escenarios de uso de metodologías ágiles. |
+| fundamentos del desarrollo y metodologías | Identificar fases de desarrollo de una aplicación: idea, análisis, diseño, construcción, prueba, revisión y mejora. |
+| fundamentos del desarrollo y metodologías | Identificar características y escenarios de uso de metodologías ágiles. |
 
-Evidencias útiles para Entornos:
+Evidencias útiles de proceso:
 
 - tablero Scrum inicial;
 - contrato de equipo;
@@ -113,15 +112,15 @@ Periodos disponibles aproximados:
 | Módulo | Periodos de 45 min durante H0 |
 |---|---:|
 | Programación | 6 |
-| Entornos de Desarrollo | 1 |
+| Programación | 1 |
 
 Distribución orientativa:
 
-| Día | Módulo | Periodos | Uso principal |
+| Fecha | Módulo | Periodos | Enfoque |
 |---|---|---:|---|
 | Martes 15 septiembre | Programación | 3 | Presentación del curso, MiniJarvis, forma de trabajo, Scrum mínimo, diagnóstico de habilidades y equipos provisionales. |
-| Jueves 17 septiembre | Programación | 3 | Torre de papel con los equipos provisionales, review, retrospectiva, revisión de equipos y conexión con MiniJarvis. |
-| Martes 15 septiembre | Entornos | 1 | Vocabulario Scrum, fases de desarrollo y evidencia inicial. |
+| Jueves 17 septiembre | Programación | 2 | Backlog de la torre, construcción y primera prueba. |
+| Viernes 18 septiembre | Programación | 3 | Segundo ciclo, prueba comparativa, review, retrospectiva, revisión de equipos y conexión con MiniJarvis. |
 
 Nota:
 
@@ -186,9 +185,9 @@ Por equipo:
 El docente puede ajustar las restricciones. Propuesta inicial:
 
 - tiempo total de construcción limitado;
-- la torre debe mantenerse en pie al menos 10 segundos;
+- la torre debe sostener una carga común aproximada de 50 g durante 60 segundos;
 - solo puede usarse el material entregado;
-- el equipo debe documentar al menos 5 tareas del backlog;
+- el equipo debe documentar al menos 6 tareas del backlog;
 - debe haber review y retrospectiva final.
 
 ### 7.3. Criterios de éxito
@@ -354,8 +353,7 @@ Preguntas guía:
 
 - ¿Qué será nuestro agente IA en versión mínima?
 - ¿Qué sería un backlog inicial del agente?
-- ¿Qué tareas pertenecen a Programación?
-- ¿Qué tareas pertenecen a Entornos?
+- ¿Qué tareas construyen el producto y cuáles aseguran su calidad y trazabilidad?
 - ¿Qué riesgos tenemos como equipo?
 - ¿Cómo vamos a registrar el uso de IA?
 - ¿Qué significa que todos puedan defender lo entregado?
@@ -375,8 +373,8 @@ Esta semana debe tener peso principalmente diagnóstico y formativo.
 | Aspecto | Evidencia | Uso evaluativo |
 |---|---|---|
 | Participación | Observación | Diagnóstico. |
-| Comprensión de Scrum | Glosario y defensa breve | Entornos RA1.g. |
-| Fases de desarrollo | Traducción torre → agente | Entornos RA1.b. |
+| Comprensión de Scrum | Glosario y defensa breve | Diagnóstico formativo del proceso. |
+| Fases de desarrollo | Traducción torre → agente | Diagnóstico formativo del proceso. |
 | Trabajo en equipo | Contrato y retrospectiva | Formativo. |
 | Comunicación | Review | Formativo. |
 
@@ -384,14 +382,14 @@ No conviene penalizar todavía errores técnicos, porque el objetivo es aprender
 
 ---
 
-## 11. Papel del docente de Entornos
+## 11. Papel del docente de Programación
 
-Este documento debe ser útil para la persona que imparta Entornos de Desarrollo.
+Este documento debe ser útil para la persona que imparta Programación.
 
-Responsabilidades sugeridas del docente de Entornos en H0:
+Responsabilidades sugeridas del docente en H0:
 
 - asegurar que el alumnado entiende Scrum como herramienta de trabajo profesional;
-- recoger evidencias de ED RA1.b y ED RA1.g;
+- recoger evidencias formativas sobre Scrum, fases de trabajo y comunicación técnica;
 - revisar contratos de equipo y tableros;
 - introducir vocabulario técnico de ciclo de vida del software;
 - conectar la simulación con GitHub, issues, PRs y documentación que se usarán en hitos posteriores.
@@ -409,7 +407,7 @@ Al terminar H0, cada equipo debe tener:
 - retrospectiva;
 - glosario Scrum;
 - primera idea de backlog del agente IA;
-- comprensión inicial de cómo Programación y Entornos trabajarán coordinados.
+- comprensión inicial de cómo se integrarán código, pruebas, documentación y defensa en Programación.
 
 ---
 
@@ -435,7 +433,7 @@ Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.m
 
 ```text
 Hito: H0
-Temas de referencia: base transversal de Entornos; no introduce todavía conceptos técnicos de Programación evaluables
+Temas de referencia: preparación metodológica del proyecto; no introduce todavía conceptos técnicos de Programación evaluables
 Foco: preparación metodológica: Scrum de aula, evidencias, roles, comunicación técnica y primer backlog de MiniJarvis
 ```
 

@@ -112,8 +112,6 @@ Evidencia que Laura debe señalar:
 - una prueba, ejecución, captura o explicación que demuestre que no lo ha copiado sin entender;
 - una mejora razonable que podría hacer si tuviera más tiempo.
 
-
-
 ## Evidencias digitales correspondientes a la entrega
 
 La carpeta `evidencias-digitales` muestra cómo se presenta este hito en los cinco documentos comunes del curso:

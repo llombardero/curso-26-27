@@ -37,8 +37,7 @@ Regla de evaluación: el producto final por sí solo no acredita el proceso. Si 
 
 <!-- HEXA-POLITICA-TODOS-HITOS:END -->
 
-
-## Programación y Entornos de Desarrollo — 1.º DAW — Granada
+## Programación — 1.º DAW — Granada
 
 Edición final para Moodle — septiembre de 2026
 Fecha de creación: 2026-07-04
@@ -48,18 +47,15 @@ Fuente de trabajo: documentación en `/mnt/compartido/Hlanz/Programacion/Curso 2
 
 ## 1. Propósito del documento
 
-Este documento define el mapa maestro inicial para enfocar de forma coordinada los módulos de:
+Este documento define el mapa maestro de Programación de 1.º DAW, con 8 periodos semanales de 45 minutos.
 
-- Programación, 1.º DAW, 8 horas semanales.
-- Entornos de Desarrollo, 1.º DAW, 3 horas semanales.
-
-El objetivo no es sustituir todavía a las programaciones didácticas oficiales separadas, sino crear un marco común que permita que ambas programaciones se complementen mediante un proyecto guía anual.
+El objetivo es concretar un marco común para el módulo mediante un proyecto guía anual. Las herramientas y prácticas de desarrollo se incorporan solo cuando son necesarias para construir, probar, documentar y defender MiniJarvis; no constituyen un currículo ni una evaluación independientes.
 
 Proyecto guía:
 
 > Diseño y construcción progresiva de un pequeño agente IA propio.
 
-Este proyecto actuará como hilo conductor del curso mediante retos, hitos, tareas técnicas, defensas y evidencias vinculadas a los Resultados de Aprendizaje y Criterios de Evaluación de ambos módulos.
+Este proyecto actuará como hilo conductor del curso mediante retos, hitos, tareas técnicas, defensas y evidencias vinculadas exclusivamente a los Resultados de Aprendizaje y Criterios de Evaluación de Programación.
 
 ---
 
@@ -158,15 +154,15 @@ Objetivo de la semana:
 
 ## 3. Fuentes documentales ya revisadas
 
-### 3.0. Propuesta de objetivos por módulos del IES
+### 3.0. Propuesta de objetivos de Programación del IES
 
-Documento principal para objetivos por módulos:
+Documento principal para objetivos de Programación:
 
 ```text
 documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf
 ```
 
-Este documento se considera la referencia prioritaria para orientar los objetivos de Programación + Entornos de Desarrollo, manteniendo no obstante la separación documental entre ambos módulos.
+Este documento se considera la referencia prioritaria para orientar los objetivos de Programación.
 
 Objetivo final del ciclo según la propuesta:
 
@@ -178,7 +174,7 @@ El alumnado debe avanzar hacia saber:
 2. Cómo construirlo rápido: prompting, agentes y automatización.
 3. Cómo asegurar que funciona y escalarlo: CI/CD, Docker, Git y pruebas.
 
-Objetivos específicos para Programación + Entornos de Desarrollo:
+Objetivos específicos para Programación:
 
 - Fundamentos y algoritmia.
 - Paradigmas y arquitectura: POO, MVC e introducción práctica a arquitectura hexagonal.
@@ -190,8 +186,7 @@ Objetivos específicos para Programación + Entornos de Desarrollo:
 Implicación para este diseño:
 
 - Los temas del curso 2025/2026 se mantienen como referencia de contenidos.
-- La propuesta IESHLanz 2026/2027 orienta el perfil profesional y la integración Programación + Entornos.
-- Programación y Entornos seguirán separados en documentos y evaluación, pero coordinados por un proyecto común.
+- La propuesta IESHLanz 2026/2027 orienta el perfil profesional y la integración de esas prácticas en Programación.
 
 ### 3.1. Perfil de salida y diseño inverso
 
@@ -286,24 +281,9 @@ Criterio didáctico:
 - Si el ritmo del grupo lo permite, se trabajarán mediante herramientas extensibles, persistencia y gestión de datos.
 - Si el ritmo del grupo no lo permite, se recogerán evidencias mínimas o parciales sin comprometer la superación del módulo cuando los RA imprescindibles estén superados.
 
-### 4.2. Entornos de Desarrollo
+### 4.2. Prácticas técnicas instrumentales
 
-Fuente:
-
-```text
-Programación Didactica Entornos de Desarrollo 1º GS DAW.pdf
-```
-
-| RA | Descripción | Peso en programación anterior |
-|---|---|---:|
-| RA1 | Reconoce los elementos y herramientas que intervienen en el desarrollo de un programa informático, analizando sus características y las fases en las que actúan hasta llegar a su puesta en funcionamiento. | 16,66% |
-| RA2 | Evalúa entornos integrados de desarrollo, analizando sus características para editar código fuente y generar ejecutables. | 16,66% |
-| RA3 | Verifica el funcionamiento de programas diseñando y realizando pruebas. | 16,66% |
-| RA4 | Optimiza el código empleando las herramientas disponibles en el entorno de desarrollo. | 16,66% |
-| RA5 | Genera diagramas de clases, valorando su importancia en el desarrollo de aplicaciones y empleando las herramientas disponibles específicas. | 16,66% |
-| RA6 | Genera diagramas de comportamiento, valorando su importancia en el desarrollo de aplicaciones y empleando las herramientas específicas. | 16,66% |
-
-Entornos debe actuar como módulo profesionalizador del proyecto:
+MiniJarvis incorpora, dentro de Programación, las prácticas necesarias para desarrollar el producto con calidad y trazabilidad:
 
 - IntelliJ para Java.
 - Git/GitHub.
@@ -315,6 +295,8 @@ Entornos debe actuar como módulo profesionalizador del proyecto:
 - Repositorios remotos.
 - Integración continua si el ritmo lo permite.
 - Docker en uso guiado y, si procede, creación de contenedores.
+
+Estas prácticas apoyan las tareas y evidencias de Programación. No tienen RA, CE, horas, calificación ni entregables propios.
 
 ---
 
@@ -378,20 +360,21 @@ Fechas FFEOE lectivas contadas:
 2027-05-24, 2027-05-25, 2027-05-26
 ```
 
-Cómputo provisional de horas de Programación con horario lunes 2h, martes 3h, jueves 3h, considerando las fiestas locales indicadas y sin otros días de libre disposición todavía:
+Carga semanal confirmada de Programación:
 
-| Periodo | Días lectivos aproximados | Horas Programación aproximadas | Sesiones Programación |
-|---|---:|---:|---:|
-| 1.ª evaluación, hasta 22 dic | 67 | 106 | 39 |
-| 2.ª evaluación | 53 | 86 | 32 |
-| 3.ª evaluación antes de FFEOE | 21 | 35 | 13 |
-| FFEOE | 0 clases | 0 | 0 |
-| Recuperación/cierre tras FFEOE | 17 | 29 | 11 |
+| Día | Periodos de 45 minutos |
+|---|---:|
+| Martes | 3 |
+| Jueves | 2 |
+| Viernes | 3 |
+| **Total semanal** | **8** |
+
+El cómputo detallado por hitos y evaluaciones se mantiene en `02-calendario-hitos-sprints-2026-2027.md`.
 
 Pendiente:
 
 - Confirmar si existen días no lectivos adicionales de centro/municipio.
-- Elegir la distribución definitiva de las 3 horas de Entornos.
+
 
 ---
 
@@ -429,17 +412,17 @@ Progresión recomendada:
 
 Esta propuesta debe revisarse después con la matriz RA/CE detallada.
 
-| Hito | Periodo orientativo | Producto del alumnado | Programación | Entornos |
-|---|---|---|---|---|
-| 0. Bootcamp Scrum, diagnóstico y acuerdos | Semana 1 | Presentación, autoevaluación privada, microprueba, equipos provisionales 3–4, torre, tablero, review, retrospectiva y contrato | Diagnóstico no calificable de resolución, prueba y explicación | Metodologías ágiles, fases, tablero y revisión de equipos |
-| 1. Primer asistente por consola | Sept-oct | Programa Java que recibe órdenes simples y responde con reglas | RA1, RA2 inicial | RA1, RA2: IDE, ciclo fuente-ejecutable, IntelliJ |
-| 2. Agente con decisiones y depuración | Oct-nov | Agente con comandos, menús, control de flujo y manejo básico de errores | RA3 | RA3: depuración, puntos de ruptura, casos de prueba |
-| 3. Agente con memoria en colecciones | Nov-dic | Memoria temporal usando arrays/listas/mapas y búsqueda simple | RA6 inicial | RA3: pruebas unitarias básicas, documentación de incidencias |
-| 4. Agente orientado a objetos | Ene-feb | Modelo de clases: Agent, Message, Memory, Tool, Command | RA4 | RA5/RA6: diagramas de clases y comportamiento |
-| 5. Agente extensible con herramientas | Feb-mar | Herramientas internas mediante interfaces, composición/herencia y plugins simples | RA7 | RA4: refactorización, GitHub, revisión de código |
-| 6. Agente persistente y trazable | Abr-inicio mayo | Ficheros/base de conocimiento, logs, registro de IA, posible Docker guiado | RA5, RA8/RA9 según alcance | RA4: repos remoto, CI básica opcional, Docker guiado |
-| 7. Integración IA responsable | Antes FFEOE, si el ritmo lo permite | Integración opcional con Gemini/Jarvis o simulación robusta de LLM | Consolidación RA | Validación, seguridad, documentación, pruebas |
-| Presentación final | Después FFEOE | Demo, defensa oral, portfolio final, recuperación/mejora | Recuperación o mejora | Recuperación o mejora |
+| Hito | Periodo orientativo | Producto del alumnado | RA de Programación y prácticas integradas |
+|---|---|---|---|
+| 0. Bootcamp Scrum, diagnóstico y acuerdos | Semana 1 | Presentación, autoevaluación privada, microprueba, equipos provisionales 3–4, torre, tablero, review, retrospectiva y contrato | Diagnóstico no calificable; Scrum, tablero y revisión de equipos. |
+| 1. Primer asistente por consola | Sept-oct | Programa Java que recibe una entrada simple y responde | RA1 y RA2 inicial; IDE, ciclo fuente-ejecutable, IntelliJ y Git. |
+| 2. Agente con decisiones y depuración | Oct-nov | Agente con comandos, menús, control de flujo y manejo básico de errores | RA3; pruebas, breakpoints e incidencia documentada. |
+| 3. Agente con memoria en colecciones | Nov-dic | Memoria temporal usando arrays/listas/mapas y búsqueda simple | RA6 inicial; casos límite y pruebas de comportamiento. |
+| 4. Agente orientado a objetos | Ene-feb | Modelo de clases: Agent, Message, Memory, Tool, Command | RA4; diagramas vinculados al código. |
+| 5. Agente extensible con herramientas | Feb-mar | Herramientas internas mediante interfaces, composición/herencia y plugins simples | RA7; refactorización, GitHub y revisión de código. |
+| 6. Agente persistente y trazable | Abr-inicio mayo | Ficheros/base de conocimiento, logs, registro de IA, posible Docker guiado | RA5 y RA8/RA9 según alcance; ejecución reproducible y pruebas de persistencia. |
+| 7. Integración IA responsable | Antes FFEOE, si el ritmo lo permite | Integración opcional con Gemini/Jarvis o simulación robusta de LLM | Consolidación de RA; validación, seguridad, documentación y pruebas. |
+| Presentación final | Después FFEOE | Demo, defensa oral, portfolio final, recuperación/mejora | Recuperación o mejora de RA de Programación. |
 
 Notas:
 
@@ -603,7 +586,7 @@ Resultado esperado:
 | Grupo heterogéneo y con poco nivel inicial | DUA, andamiaje, tareas mínimas/recomendadas/avanzadas. |
 | Uso de IA como sustituto del aprendizaje | Semáforo, registro, defensas orales, preguntas individuales. |
 | Dependencia de servicios externos de IA | El agente debe funcionar sin IA real hasta hito avanzado. |
-| Descoordinación entre Programación y Entornos | Mapa maestro común, matriz RA/CE/evidencias/tareas, reuniones de coordinación. |
+| Descoordinación entre documentos | Mapa maestro común, matriz RA/CE/evidencias/tareas y revisiones de coherencia. |
 | Exceso de ambición del agente | Mínimo viable por consola; interfaz como ampliación. |
 | FFEOE corta la tercera evaluación | Cerrar el producto base antes del 4 de mayo; dejar presentación/recuperación después. |
 | Alumnado en Windows si se quiere Linux | Transición guiada, Docker, documentación dual, Linux recomendado pero no bloqueo inicial. |
@@ -618,8 +601,8 @@ Resultado esperado:
 1. Criterio de superación de Programación:
    - RA1, RA2, RA3, RA4, RA5 y RA6 son imprescindibles.
    - RA7, RA8 y RA9 no son imprescindibles, aunque deben tenerse en cuenta según avance del grupo.
-2. Entornos de Desarrollo será asumido en este diseño como módulo plenamente coordinado con Programación.
-3. En este proceso de diseño, Hermes asumirá el papel de profesor de Entornos para proponer secuencias, evidencias y rúbricas coordinadas.
+2. El proyecto se desarrolla íntegramente dentro de Programación.
+3. En este proceso de diseño, Hermes asumirá el papel de docente responsable del proyecto para proponer secuencias, evidencias y rúbricas coordinadas.
 4. El alumnado usará IntelliJ IDEA como IDE principal para Java.
 5. Gemini y Jarvis se usarán con cuentas nominales: cada alumno tendrá usuario propio.
 6. El portfolio se diseñará preferentemente en Markdown sobre GitHub.
@@ -630,24 +613,12 @@ Resultado esperado:
 
 ### 13.2. Decisiones cerradas tras revisión
 
-1. Distribución de Entornos de Desarrollo:
-   - 2 periodos lectivos el lunes + 1 periodo lectivo el martes.
-   - Motivo: la sesión doble del lunes permite trabajo técnico profundo coordinado con Programación, y la sesión del martes permite seguimiento inmediato, resolución de incidencias, GitHub/portfolio, pruebas, depuración o preparación del sprint.
+1. Distribución de Programación:
+   - 3 periodos lectivos el martes, 2 el jueves y 3 el viernes.
+   - Cada semana combina explicación, práctica guiada, taller, revisión, documentación y defensa dentro del mismo módulo.
 2. Todas las clases se imparten por la tarde.
 3. Cada periodo lectivo tiene una duración de 45 minutos.
 4. No se contemplan más días festivos/no lectivos que los ya indicados en este mapa.
-
-Cómputo provisional de Entornos con esta distribución:
-
-| Periodo | Periodos lectivos de 45 min | Horas reloj aproximadas | Días con sesión de Entornos |
-|---|---:|---:|---:|
-| 1.ª evaluación | 36 | 27 h | 25 |
-| 2.ª evaluación | 31 | 23,25 h | 21 |
-| 3.ª evaluación antes de FFEOE | 12 | 9 h | 8 |
-| FFEOE | 0 | 0 h | 0 |
-| Recuperación/cierre tras FFEOE | 12 | 9 h | 8 |
-
----
 
 ## 14. Próximos artefactos derivados
 
@@ -659,8 +630,7 @@ Orden recomendado:
 4. Política de uso ético de IA: semáforo, registro y defensa.
 5. Backlog anual del proyecto agente IA.
 6. Rúbricas de hitos.
-7. Documento específico de Programación.
-8. Documento específico de Entornos.
+7. Anexo curricular de Programación.
 
 ---
 
@@ -668,7 +638,7 @@ Orden recomendado:
 
 Estado: documento de referencia curricular.
 
-Este mapa ya permite avanzar hacia una programación integrada, pero aún no debe considerarse documento final porque faltan:
+Este mapa ya permite avanzar hacia la programación del proyecto, pero aún no debe considerarse documento final porque faltan:
 
 - matriz completa RA/CE/evidencias;
 - rúbricas;

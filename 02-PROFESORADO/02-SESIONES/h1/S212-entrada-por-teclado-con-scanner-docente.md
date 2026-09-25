@@ -7,15 +7,15 @@
 | Hito | H1 |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
-| Resultado de hoy | Asegurar conceptos del Tema 1 que no aparecen de forma natural en el saludo inicial. |
-| Evidencia mínima | Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido. |
+| Resultado de hoy | Integrar la entrada por teclado que necesita el producto H1. |
+| Evidencia mínima | Código H1 que lee un nombre con `Scanner`, lo guarda y lo utiliza en la salida. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: código H1 que lee y utiliza un nombre.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -24,7 +24,7 @@
 
 ## Qué debes explicar
 
-`int`, `double`, operadores aritméticos, comparación, precedencia básica y conversión `String` -> número con `Integer.parseInt`.
+`Scanner`, `nextLine()`, variables `String` y uso del dato leído en una salida.
 
 Guion breve sugerido:
 
@@ -37,9 +37,9 @@ Guion breve sugerido:
 | 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
 | 5–13 min | Explicación breve: `Scanner` permite leer información introducida por usuario. |
 | 13–18 min | Demostración o ejemplo: Leer una línea y usarla en un saludo. |
-| 18–35 min | Trabajo del alumnado: MiniJarvis pregunta cuántas horas se han estudiado esta semana, convierte la entrada a número y muestra una recomendación sencilla. |
+| 18–35 min | Trabajo del alumnado: MiniJarvis pide el nombre, lo guarda en una variable y lo utiliza en un saludo. |
 | 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |
-| 40–45 min | Cierre: Pregunta: ¿por qué `scanner.nextLine()` devuelve texto aunque escribas un número? |
+| 40–45 min | Cierre: ¿qué devuelve `scanner.nextLine()` y dónde se guarda? |
 
 ## Ejemplo o demostración preparada
 
@@ -49,7 +49,7 @@ Leer una línea y usarla en un saludo.
 
 Pedir nombre y responder con ese nombre.
 
-Producto o evidencia que debe quedar: **Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido.**
+Producto o evidencia que debe quedar: **Código H1 que lee un nombre y lo utiliza en la salida.**
 
 ## Qué observar mientras trabajan
 

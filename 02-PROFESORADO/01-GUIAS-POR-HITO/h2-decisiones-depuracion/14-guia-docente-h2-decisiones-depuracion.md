@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -131,8 +130,9 @@ Carga estimada:
 
 ```text
 Programación: 28 periodos de 45 min
-Entornos: 8 periodos de 45 min
 ```
+
+Las trece fichas S216–S228 son sesiones ancla o checkpoints. Los periodos restantes se dedican a explicación, práctica guiada, taller, consolidación, revisión y defensa, sin generar evidencias adicionales por defecto.
 
 ---
 
@@ -153,13 +153,13 @@ Evidencias:
 - gestión de entrada no válida;
 - defensa del flujo del programa.
 
-### Entornos de Desarrollo
+### Prácticas técnicas del proyecto
 
 RA principales:
 
-- ED RA3.a-b: tipos de pruebas y casos de prueba.
-- ED RA3.c-e: depuración, breakpoints y seguimiento de variables.
-- ED RA3.h: documentación de incidencias.
+- pruebas y depuración: tipos de pruebas y casos de prueba.
+- pruebas y depuración: depuración, breakpoints y seguimiento de variables.
+- pruebas y depuración: documentación de incidencias.
 
 Evidencias:
 

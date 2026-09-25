@@ -49,7 +49,7 @@ Elige un fallo real de tu MiniJarvis: comando que no responde, mensaje incorrect
 
 Después vuelve a ejecutar la prueba.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
 Crea `docs/informe-depuracion`. Debe incluir mensaje de error si existe, pasos para reproducir y evidencia de corrección. No borres el aprendizaje: un error bien explicado vale como evidencia.
 

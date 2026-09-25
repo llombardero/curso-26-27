@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -115,10 +114,10 @@ Fechas orientativas:
 - PR RA5: entrada/salida y gestión de información persistente.
 - PR RA8/RA9 como ampliación si procede.
 
-### Entornos de Desarrollo
+### Prácticas técnicas del proyecto
 
-- ED RA3: pruebas e incidencias.
-- ED RA4: documentación, repositorio, reproducibilidad y CI si procede.
+- pruebas y depuración: pruebas e incidencias.
+- control de versiones, refactorización y automatización: documentación, repositorio, reproducibilidad y CI si procede.
 
 Evidencias clave:
 

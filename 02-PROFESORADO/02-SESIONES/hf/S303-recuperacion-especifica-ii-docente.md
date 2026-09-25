@@ -7,15 +7,15 @@
 | Hito | HF |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
-| Resultado de hoy | Recuperar evidencias de Entornos. |
-| Evidencia mínima | Evidencia de recuperación Entornos. |
+| Resultado de hoy | Recuperar una evidencia técnica de Programación. |
+| Evidencia mínima | Evidencia específica de recuperación de Programación. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Evidencia de recuperación Entornos.
+- [ ] Comprobar que la evidencia mínima que se pedirá responde al RA/CE de Programación pendiente.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -25,7 +25,7 @@
 
 ## Qué debes explicar
 
-Entornos se demuestra con IDE, Git, pruebas, depuración, UML, documentación y reproducibilidad.
+La recuperación debe demostrar el RA/CE pendiente mediante código y, cuando corresponda, IDE, Git, pruebas, depuración, UML, documentación o reproducibilidad.
 
 Guion breve sugerido:
 
@@ -36,7 +36,7 @@ Guion breve sugerido:
 | Tiempo | Acción |
 |---|---|
 | 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
-| 5–13 min | Explicación breve: Recuperar Entornos exige evidencia de herramienta, proceso o documentación. |
+| 5–13 min | Explicación breve: Recuperar El proyecto exige evidencia de herramienta, proceso o documentación. |
 | 13–18 min | Demostración o ejemplo: Depuración, Git, UML, README o pruebas según caso. |
 | 18–35 min | Trabajo del alumnado: Completar README, prueba, depuración, diagrama, Git o seguridad según pendiente. |
 | 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |
@@ -50,7 +50,7 @@ Depuración, Git, UML, README o pruebas según caso.
 
 Completar evidencia pendiente.
 
-Producto o evidencia que debe quedar: **Evidencia de recuperación Entornos.**
+Producto o evidencia que debe quedar: **evidencia específica de recuperación de Programación.**
 
 ## Qué observar mientras trabajan
 

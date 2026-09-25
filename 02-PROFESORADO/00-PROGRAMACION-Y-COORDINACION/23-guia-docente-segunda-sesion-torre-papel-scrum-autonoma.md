@@ -36,8 +36,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
-
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -889,7 +888,7 @@ No conviene poner una nota fuerte.
 Uso recomendado:
 
 ```text
-Diagnóstico inicial + evidencia formativa de Entornos.
+Diagnóstico inicial + evidencia formativa de proceso.
 ```
 
 ### Evidencias observables
@@ -1055,7 +1054,7 @@ Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.m
 
 ```text
 Hito: H0
-Temas de referencia: base transversal de Entornos; no introduce todavía conceptos técnicos de Programación evaluables
+Temas de referencia: preparación metodológica del proyecto; no introduce todavía conceptos técnicos de Programación evaluables
 Foco: preparación metodológica: Scrum de aula, evidencias, roles, comunicación técnica y primer backlog de MiniJarvis
 ```
 

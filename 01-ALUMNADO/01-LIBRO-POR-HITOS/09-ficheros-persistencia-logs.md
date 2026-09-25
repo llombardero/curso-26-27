@@ -63,7 +63,7 @@ Refuerzo de cobertura de los temas 5 y 6:
 - Usa `throws` cuando un método delegue el manejo del error.
 - Comprueba que `Memory` mantiene sus invariantes: no guarda recuerdos vacíos y no expone una lista interna modificable.
 
-## 5. Evidencia de Entornos de Desarrollo
+## 5. Evidencia técnica del proyecto
 
 Crea `docs/pruebas-persistencia`, `docs/seguridad` y `docs/logs-historial`. Incluye `.gitignore` con `.env`, `*.key`, `*.token`.
 
