@@ -89,6 +89,21 @@ class SlideSpec:
     items: list[str] = field(default_factory=list)
     subtitle: str = ""
 
+
+H1_SOURCES = {
+    "206": "Libro: introducción de H1 · Tema 1: objetivos de un programa",
+    "207": "Libro: capítulo 01 · Tema 1: código fuente y ejecución",
+    "208": "Libro: capítulo 01 · Tema 1: aspectos léxicos y comentarios",
+    "209": "Libro: capítulos 01-02 · Tema 1: salida y concatenación",
+    "210": "Libro: capítulo 02 · Tema 1: variables y tipos",
+    "211": "Libro: capítulo 02 · Tema 1: constantes, literales y operadores",
+    "212": "Libro: capítulo 02 · Tema 1: entrada y conversiones",
+    "213": "Libro: capítulo 02 · Tema 1: comparación, lógica e if/else",
+    "214": "Libro: capítulos 01-02 · Evidencias y README de H1",
+    "215": "Libro: capítulos 01-02 · Defensa y cierre de H1",
+}
+
+
 @dataclass
 class ValidationReport:
     session: str
@@ -110,6 +125,8 @@ def clean(text: str) -> str:
     return text.replace(".,", ",").replace(";,", ";")
 
 def normalize_projectable_text(text: str) -> str:
+    for escaped, visible in ((r"\|", "|"), (r"\<", "<"), (r"\>", ">"), (r"\*", "*")):
+        text = text.replace(escaped, visible)
     text = re.sub(r"docs/depuracion-h2(?!\.md)", "docs/depuracion-h2.md", text)
     text = text.replace(
         "docs/incidencia-h6.md/docs/seguridad-h6.md",
@@ -119,6 +136,336 @@ def normalize_projectable_text(text: str) -> str:
         "docs/incidencia-h6/docs/seguridad-h6",
         "docs/incidencia-h6.md o docs/seguridad-h6.md",
     )
+
+
+def h1_plan(session: Session) -> list[SlideSpec]:
+    """Plan curado de H1 basado en sus fichas, píldoras, libro y Tema 1."""
+    title = SlideSpec("title", session.topic, [], session.hito)
+    outcome = SlideSpec(
+        "outcome",
+        "Qué aprenderás y cómo lo demostrarás",
+        [f"Objetivo: {session.objective}", f"Comprobación: {session.evidence}"],
+        session.moment,
+    )
+    source = H1_SOURCES.get(session.number, "Libro por hitos · Temario de Programación")
+
+    content: dict[str, list[SlideSpec]] = {
+        "206": [
+            SlideSpec("compare", "H1 ahora; lo demás después", [
+                "AHORA · programa Java de consola, saludo, datos simples, entrada/salida, prueba y explicación",
+                "DESPUÉS O FUERA · menús, bucles, memoria persistente, ficheros, credenciales e IA real",
+                "Una función entra en H1 solo si puede observarse, probarse y defenderse sin inflar el producto.",
+            ]),
+            SlideSpec("console", "El MiniJarvis mínimo ya es demostrable", [
+                "Hola, soy MiniJarvis.\n¿Cómo te llamas? Laura\nEncantado, Laura.\nEstoy aprendiendo la base de Java.",
+                "Describe exactamente lo que existe: no promete memoria ni inteligencia que todavía no tiene.",
+            ]),
+            SlideSpec("concepts", "De una idea a requisitos comprobables", [
+                "Muestra · pide · guarda · calcula · ejecuta · explica: verbos que producen resultados observables.",
+                "Correcto: cumple la tarea y supera los casos previstos.",
+                "Sencillo: no añade trabajo o complejidad innecesaria.",
+                "Mantenible: se entiende y puede modificarse sin romperse.",
+            ]),
+            SlideSpec("activity", "Delimita el incremento H1", [
+                "Clasifica cada propuesta en H1 ahora, hito posterior o fuera del reto.",
+                "Escribe entre 4 y 6 requisitos observables.",
+                "Añade 2 o 3 límites explícitos.",
+                "Para cada requisito indica cómo lo comprobarás.",
+            ], "1"),
+            SlideSpec("evidence", "Puerta de avance", [
+                "Puedo describir H1 en una frase.",
+                "Cada requisito tiene una prueba observable.",
+                "Puedo justificar por qué una función queda fuera.",
+                "He definido una evidencia concreta y el siguiente paso.",
+            ]),
+            SlideSpec("closure", "Defiende el alcance", ["Completa: H1 no tendrá ____ porque ____; lo comprobaremos mediante ____. "]),
+        ],
+        "207": [
+            SlideSpec("flow", "Del archivo a la salida", ["Main.java", "javac / compilación", "bytecode .class", "JVM / ejecución", "consola"]),
+            SlideSpec("code", "Primer programa ejecutable", [
+                'public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hola, soy MiniJarvis.");\n    }\n}',
+                "Salida esperada: Hola, soy MiniJarvis.",
+                "Escribir, compilar y ejecutar son acciones distintas.",
+            ]),
+            SlideSpec("compare", "¿Error de código o de entorno?", [
+                "CÓDIGO · comilla, llave o punto y coma ausente; el compilador señala una zona y un mensaje.",
+                "ENTORNO · JDK no configurado, clase equivocada o ejecución desde una ruta incorrecta.",
+                "Antes de borrar y reescribir: lee el primer diagnóstico y comprueba qué clase estás ejecutando.",
+            ]),
+            SlideSpec("activity", "Predice, ejecuta y diagnostica", [
+                "Escribe un mensaje diferente al ejemplo y predice la salida exacta.",
+                "Ejecuta y contrasta predicción y resultado.",
+                "Elimina una comilla o un punto y coma y lee el diagnóstico.",
+                "Corrige solo después de explicar qué falló.",
+            ], "1"),
+            SlideSpec("evidence", "Prueba de la primera ejecución", [
+                "Se identifica el código fuente ejecutado.",
+                "La salida de consola es visible.",
+                "Puedo explicar fuente → compilación → bytecode → JVM → consola.",
+                "Completo: Sé que se ha ejecutado porque ____.",
+            ]),
+            SlideSpec("closure", "Comprobación final", ["¿Qué diferencia hay entre escribir, compilar y ejecutar?"]),
+        ],
+        "208": [
+            SlideSpec("code", "Estructura mínima completa", [
+                'public class Main {\n    public static void main(String[] args) {\n        // Presenta la versión actual.\n        System.out.println("Hola");\n        System.out.println("MiniJarvis arranca");\n    }\n}',
+                "Main.java coincide con public class Main.",
+                "La ejecución comienza dentro de main.",
+            ]),
+            SlideSpec("concepts", "Java exige precisión", [
+                "Distingue mayúsculas: Main, main y String son identificadores diferentes.",
+                "Las llaves delimitan bloques; paréntesis, comillas y punto y coma tienen funciones concretas.",
+                "Un identificador debe ser válido y comunicar intención.",
+                "Un comentario útil explica contexto o decisión; no repite una instrucción obvia.",
+            ]),
+            SlideSpec("compare", "Detecta antes de compilar", [
+                'CORRECTO · String message = "Hola";\nSystem.out.println(message);',
+                'INCORRECTO · string message = "Hola"\nSystem.out.println(message)',
+                "Busca: mayúscula de String, punto y coma y equilibrio de delimitadores.",
+            ]),
+            SlideSpec("activity", "Reconstruye y depura", [
+                "Reconstruye la clase sin copiar directamente.",
+                "Añade dos mensajes y un comentario que explique una decisión.",
+                "Introduce un error de mayúsculas o delimitador y predice el diagnóstico.",
+                "Compila, corrige y señala dónde comienza la ejecución.",
+            ], "1"),
+            SlideSpec("evidence", "Comprueba la estructura", [
+                "Archivo y clase pública tienen el mismo nombre.",
+                "Las dos parejas de llaves están completas.",
+                "Puedo señalar las instrucciones que generan salida.",
+                "El comentario aporta información que el código no expresa solo.",
+            ]),
+            SlideSpec("closure", "Salida diagnóstica", ["Señala una regla sintáctica cuya ruptura impida compilar y explica por qué."]),
+        ],
+        "209": [
+            SlideSpec("compare", "La consola también es una interfaz", [
+                "POCO CLARO · MJ v1\nok\nDato:",
+                "CLARO · Hola, soy MiniJarvis.\nEscribe un nombre ficticio:\nFin de la primera prueba.",
+                "El mensaje debe indicar qué ocurre, qué dato se espera y qué resultado obtiene la persona.",
+            ]),
+            SlideSpec("code", "Concatena texto y valores", [
+                'String userName = "Laura";\nSystem.out.println("Hola, " + userName + ".");',
+                "Salida esperada: Hola, Laura.",
+                "Las comillas contienen texto fijo; la variable aporta el valor cambiante.",
+            ]),
+            SlideSpec("compare", "Suma o concatenación", [
+                'NÚMEROS · System.out.println(2 + 3);\nSalida: 5',
+                'TEXTO · System.out.println("Total: " + 2 + 3);\nSalida: Total: 23',
+                "Predice el resultado según el tipo y el orden de las piezas.",
+            ]),
+            SlideSpec("activity", "Diseña antes de programar", [
+                "Propón dos versiones de saludo, propósito y cierre.",
+                "Elige una versión y justifica claridad, orden y honestidad.",
+                "Impleméntala y pide a otra persona que lea solo la consola.",
+                "Corrige una frase, un espacio o un signo tras la revisión.",
+            ], "1"),
+            SlideSpec("evidence", "Salida defendible", [
+                "La conversación tiene presentación, petición, respuesta y cierre.",
+                "La entrada aparece en una salida mediante concatenación.",
+                "No se prometen memoria, ficheros o IA real.",
+                "Puedo explicar qué mensaje cambié después de probarlo.",
+            ]),
+            SlideSpec("closure", "Decisión de diseño", ["¿Qué mensaje elegiste, por qué y qué cambió después de verlo ejecutado?"]),
+        ],
+        "210": [
+            SlideSpec("concepts", "Variable = tipo + nombre + valor", [
+                "int · números enteros", "double · números con decimales", "boolean · true o false",
+                "char · un carácter con comillas simples", "String · texto con comillas dobles",
+                "Elige el tipo por los valores y operaciones que necesitarás.",
+            ]),
+            SlideSpec("code", "Declarar, inicializar y asignar", [
+                'int studyHours;       // declaración\nstudyHours = 4;       // inicialización\nstudyHours = 5;       // nueva asignación\nSystem.out.println(studyHours);',
+                "Salida esperada: 5",
+                "No se repite int al cambiar el valor: la variable ya existe.",
+            ]),
+            SlideSpec("compare", "Un nombre válido no siempre es bueno", [
+                'VAGO · String x = "Laura";\nint n = 4;',
+                'CLARO · String userName = "Laura";\nint studyHours = 4;',
+                "Usa lowerCamelCase y evita espacios, palabras reservadas y nombres que empiezan por número.",
+            ]),
+            SlideSpec("activity", "Planifica los datos de MiniJarvis", [
+                "Anota dato, tipo, nombre, si cambia y dónde se usa.",
+                "Implementa al menos dos variables del plan.",
+                "Muestra una, cambia su valor y vuelve a mostrarla.",
+                "Comprueba que no has creado variables sin uso.",
+            ], "1"),
+            SlideSpec("evidence", "Microdefensa de una variable", [
+                "Puedo señalar tipo, nombre y valor inicial.",
+                "Distingo declaración, inicialización y asignación posterior.",
+                "La salida demuestra el valor antes o después del cambio.",
+                "El nombre elegido explica el dato que guarda.",
+            ]),
+            SlideSpec("closure", "Comprobación final", ["Explica por qué studyHours = studyHours + 1 no es una igualdad matemática."]),
+        ],
+        "211": [
+            SlideSpec("code", "Constante, variable y literal", [
+                'final String ASSISTANT_NAME = "MiniJarvis";\nint studyHours = 5;\nint minutes = studyHours * 60;\nSystem.out.println(ASSISTANT_NAME + ": " + minutes);',
+                "final impide reasignar la variable; el nombre de constante usa UPPER_SNAKE_CASE.",
+                "Los literales del ejemplo son \"MiniJarvis\", 5 y 60.",
+            ]),
+            SlideSpec("compare", "La división depende de los operandos", [
+                "ENTERA · int result = 5 / 2;\nResultado: 2",
+                "REAL · double result = 5 / 2.0;\nResultado: 2.5",
+                "Si ambos operandos son enteros, la parte decimal no aparece.",
+            ]),
+            SlideSpec("code", "Resto, precedencia y actualización", [
+                'int remainder = 10 % 4;       // 2\nint a = 8 * 4 + 2;            // 34\nint b = 8 * (4 + 2);          // 48\nint tasks = 3;\ntasks += 2;                    // 5',
+                "% devuelve el resto; no calcula un porcentaje.",
+                "Los paréntesis hacen explícito qué se calcula primero.",
+            ]),
+            SlideSpec("activity", "Predice antes de ejecutar", [
+                "Predice 7 / 2, 7 / 2.0 y 7 % 2.",
+                "Construye un microprograma con una constante, una variable y una operación.",
+                "Actualiza la variable y muestra el resultado.",
+                "Intenta reasignar la constante, lee el error y deshazlo.",
+            ], "1"),
+            SlideSpec("evidence", "Resultados que debes poder explicar", [
+                "Distingo variable, constante y literal.",
+                "Explico división entera y real.",
+                "Explico qué devuelve %.",
+                "Justifico un resultado con precedencia y paréntesis.",
+            ]),
+            SlideSpec("closure", "Salida diagnóstica", ["Sin ejecutar: ¿qué producen 5 / 2, 5 / 2.0 y 10 % 4, y por qué?"]),
+        ],
+        "212": [
+            SlideSpec("flow", "Flujo de entrada", ["pedir", "leer texto", "guardar", "convertir", "calcular", "mostrar"]),
+            SlideSpec("code", "Una sola instancia de Scanner", [
+                'import java.util.Scanner;\n\nScanner scanner = new Scanner(System.in);\nSystem.out.print("Nombre ficticio: ");\nString userName = scanner.nextLine();\nSystem.out.println("Hola, " + userName + ".");\nscanner.close();',
+                "nextLine() devuelve String.",
+                "La entrada se guarda y cambia una salida observable.",
+            ]),
+            SlideSpec("code", "Texto a número", [
+                'String text = "5";\nint hours = Integer.parseInt(text);\nint minutes = hours * 60;\nSystem.out.println(minutes);',
+                "Salida esperada: 300",
+                "Parsear texto no es lo mismo que convertir entre tipos numéricos.",
+            ]),
+            SlideSpec("compare", "Conversión automática y casting", [
+                "AMPLIACIÓN · int whole = 7;\ndouble wider = whole; // 7.0",
+                "CASTING · double price = 12.75;\nint wholePrice = (int) price; // 12",
+                "El casting descarta la parte decimal hacia cero; no redondea.",
+            ]),
+            SlideSpec("compare", "Compila, pero falla al ejecutar", [
+                'VÁLIDO · Integer.parseInt("12") → 12',
+                'ERROR · Integer.parseInt("hola") → NumberFormatException',
+                "H1 observa y explica el error de ejecución; try-catch llegará más adelante.",
+            ]),
+            SlideSpec("activity", "Prueba entrada válida e inválida", [
+                "Pide un nombre ficticio y úsalo en un saludo.",
+                "Lee horas como texto, conviértelas a int y calcula minutos.",
+                "Ejecuta con un número válido y registra salida esperada y observada.",
+                "Ejecuta con hola, identifica cuándo falla y explica por qué.",
+            ], "1"),
+            SlideSpec("evidence", "Qué debe demostrar la prueba", [
+                "Uso una sola instancia de Scanner.",
+                "La entrada afecta a la salida o al cálculo.",
+                "Distingo nextLine, parseInt, ampliación y casting.",
+                "Distingo error de compilación y error de ejecución.",
+            ]),
+            SlideSpec("closure", "Comprobación final", ["¿Qué devuelve nextLine(), qué hace parseInt y qué información puede perder un casting?"]),
+        ],
+        "213": [
+            SlideSpec("code", "Comparar produce boolean", [
+                'int hours = 5;\nboolean enough = hours >= 4;\nSystem.out.println(hours == 5); // true\nSystem.out.println(hours != 5); // false\nSystem.out.println(enough);     // true',
+                "= asigna; == compara.",
+                "Comparar devuelve true o false, no uno de los operandos.",
+            ]),
+            SlideSpec("concepts", "AND, OR y NOT", [
+                "&& · las dos condiciones deben ser true.",
+                "|| · basta con que una condición sea true.",
+                "! · invierte true y false.",
+                "Traduce primero a palabras: necesita ayuda si no puede empezar o si tiene un error.",
+            ]),
+            SlideSpec("code", "if / else: dos caminos", [
+                'if (hours >= 4) {\n    System.out.println("Objetivo alcanzado");\n} else {\n    System.out.println("Objetivo pendiente");\n}',
+                "hours = 5 → Objetivo alcanzado",
+                "hours = 2 → Objetivo pendiente",
+            ]),
+            SlideSpec("compare", "Condición válida e inválida", [
+                "VÁLIDA · if (hours >= 4) { ... }",
+                "INVÁLIDA · if (hours) { ... }",
+                "if necesita una expresión boolean; hours es int.",
+            ]),
+            SlideSpec("code", "Asignación condicional sencilla", [
+                'String message = hours >= 4\n        ? "Objetivo alcanzado"\n        : "Objetivo pendiente";',
+                "Identifica condición, valor si true y valor si false.",
+                "Si cada camino tiene varias instrucciones, if/else suele ser más claro.",
+            ]),
+            SlideSpec("activity", "Dato → decisión → salida", [
+                "Construye una comparación y guarda su boolean.",
+                "Traduce una expresión con &&, otra con || y otra con !.",
+                "Programa un if/else y predice las dos salidas.",
+                "Ejecuta un caso true y otro false.",
+            ], "1"),
+            SlideSpec("evidence", "Cobertura de las dos ramas", [
+                "Caso A y salida esperada quedan registrados.",
+                "Caso B y salida esperada quedan registrados.",
+                "Puedo señalar condición, bloque if y bloque else.",
+                "La práctica sigue siendo pequeña; los menús pertenecen a H2.",
+            ]),
+            SlideSpec("closure", "Comprobación final", ["Explica en palabras qué hace una comparación, qué necesita if y cómo demuestras que ambas ramas funcionan."]),
+        ],
+        "214": [
+            SlideSpec("code", "README mínimo y honesto", [
+                '## Qué hace\nMiniJarvis saluda y pide un nombre ficticio.\n\n## Límites de H1\nNo incluye menú, memoria, ficheros ni IA real.\n\n## Cómo ejecutar\n1. Abre el proyecto.\n2. Ejecuta Main.\n3. Introduce datos ficticios.',
+                "Otra persona debe poder reproducir la ejecución sin explicación oral.",
+                "El README describe el producto real, no el futuro.",
+            ]),
+            SlideSpec("compare", "Una evidencia debe demostrar algo", [
+                "DÉBIL · Funciona.\nEnlace a una carpeta general.",
+                "VERIFICABLE · entrada, salida esperada, salida obtenida, qué demuestra y enlace profundo.",
+                "Una captura aislada no explica qué se probó ni con qué resultado.",
+            ]),
+            SlideSpec("concepts", "Cada espacio responde a una pregunta", [
+                "Diario · proceso individual: objetivo, acción, prueba, bloqueo y siguiente paso.",
+                "Site personal · selección razonada de evidencias y qué demuestran.",
+                "Site de equipo · reto, decisiones, pruebas, review y retrospectiva.",
+                "Moodle · índice de entrega y enlaces solicitados, no otra copia completa.",
+            ]),
+            SlideSpec("activity", "Prueba tu documentación con otra persona", [
+                "Completa alcance, límites, ejecución y ejemplo del README.",
+                "Crea una evidencia con entrada, salida esperada, observada y explicación.",
+                "Pide a otra persona que ejecute siguiendo solo el README.",
+                "Corrige la primera ambigüedad y verifica enlaces y permisos.",
+            ], "1"),
+            SlideSpec("evidence", "Documentación reproducible", [
+                "El README permite ejecutar H1 sin ayuda oral.",
+                "Los enlaces llevan al archivo o prueba concreta.",
+                "Diario y Sites no duplican la misma reflexión.",
+                "No aparecen datos personales, contraseñas, claves o tokens.",
+            ]),
+            SlideSpec("closure", "Comprobación final", ["¿Qué cambió después de que otra persona intentara seguir tu README sin ayuda?"]),
+        ],
+        "215": [
+            SlideSpec("flow", "Una defensa demuestra comprensión", ["señala", "explica", "predice", "ejecuta", "modifica", "vuelve a probar"]),
+            SlideSpec("compare", "Respuesta defendible o respuesta vaga", [
+                "VAGA · Lo hice así porque funcionaba.",
+                "DEFENDIBLE · Esta línea lee un String, lo guarda en userName y por eso Laura aparece en la salida.",
+                "La defensa conecta una afirmación con código, ejecución y evidencia propia.",
+            ]),
+            SlideSpec("concepts", "Hilo conceptual de H1", [
+                "dato → variable o constante", "operación o comparación → resultado",
+                "boolean → decisión", "salida → prueba observable",
+                "requisito → código → ejecución → evidencia",
+            ]),
+            SlideSpec("activity", "Ronda individual", [
+                "Señala una línea y explica su función.",
+                "Predice la salida para una entrada concreta y ejecútala.",
+                "Haz una modificación pequeña y predice su efecto.",
+                "Localiza la evidencia que demuestra el resultado.",
+            ], "1"),
+            SlideSpec("flow", "Si aparece una laguna", ["identifica", "investiga", "corrige", "prueba", "vuelve a explicar"]),
+            SlideSpec("evidence", "Retrospectiva con evidencia", [
+                "Una capacidad que ya realizo sin ayuda.",
+                "Una capacidad para la que todavía necesito apoyo.",
+                "Un hábito de trabajo que conservaré.",
+                "Una mejora concreta que aplicaré en H2.",
+            ]),
+            SlideSpec("closure", "Cierre de H1", ["¿Qué puedes señalar, predecir, ejecutar y modificar para demostrar que comprendes tu propio MiniJarvis?"]),
+        ],
+    }
+    slides = [title, outcome, *content[session.number]]
+    slides.append(SlideSpec("source", "Fuentes utilizadas", [source, "Fichas S206-S215 y píldoras H1", "Ejemplos revisados y adaptados a MiniJarvis; no se copian errores ni capturas antiguas del PDF."]))
+    return slides
 
 def heading_pattern(title_pattern: str) -> str:
     return rf"(?:\d+(?:\.\d+)*[.)]?\s+)?(?:{title_pattern})"
@@ -743,6 +1090,8 @@ def disciplinary_visuals(session: Session) -> list[SlideSpec]:
 def plan_slides(session: Session) -> list[SlideSpec]:
     """Construye un plan variable según el contenido real de la sesión."""
     is_h1 = session.folder == "h1"
+    if is_h1:
+        return h1_plan(session)
     title_subtitle = session.hito
     if is_h1 and session.moment:
         title_subtitle = f"{session.hito} · Fase HEXA: {session.moment}"
@@ -904,6 +1253,22 @@ def add_bullets(slide, x, y, w, h, items: list[str], size=20, color=INK, numbere
         paragraph.font.size = Pt(size)
         paragraph.font.color.rgb = color
         paragraph.space_after = Pt(9)
+    return box
+
+
+def add_code(slide, x, y, w, h, code: str, size=18, color=WHITE):
+    box = slide.shapes.add_textbox(x, y, w, h)
+    frame = box.text_frame
+    frame.clear()
+    frame.word_wrap = False
+    frame.margin_left = frame.margin_right = Inches(0.18)
+    frame.margin_top = frame.margin_bottom = Inches(0.12)
+    paragraph = frame.paragraphs[0]
+    paragraph.text = code
+    paragraph.font.name = "Liberation Mono"
+    paragraph.font.size = Pt(size)
+    paragraph.font.color.rgb = color
+    paragraph.space_after = Pt(0)
     return box
 
 def add_footer(slide, session: Session, accent: RGBColor) -> None:
@@ -1079,6 +1444,82 @@ def render_example(prs: Presentation, session: Session, spec: SlideSpec) -> None
     add_text(slide, Inches(1.02), Inches(1.78), Inches(2.25), Inches(0.45), "DEMOSTRACIÓN", 13, accent, True)
     add_bullets(slide, Inches(1.02), Inches(2.42), Inches(10.9), Inches(3.55), spec.items, body_size(spec.items, 22, 15), WHITE)
 
+
+def render_code(prs: Presentation, session: Session, spec: SlideSpec) -> None:
+    slide, accent = base_slide(prs, session, spec.title, "Código explicado")
+    code = spec.items[0] if spec.items else ""
+    notes = spec.items[1:]
+    panel_w = 8.0 if notes else 11.95
+    panel = rounded_card(slide, Inches(0.68), Inches(1.45), Inches(panel_w), Inches(5.15), DARK, DARK)
+    line_count = max(1, len(code.splitlines()))
+    longest_line = max(map(len, code.splitlines() or [""]))
+    if line_count > 10 or longest_line > 58:
+        font_size = 14
+    elif line_count > 7 or longest_line > 44:
+        font_size = 16
+    else:
+        font_size = 18
+    add_code(slide, Inches(0.90), Inches(1.72), Inches(panel_w - 0.45), Inches(4.65), code, font_size)
+    if notes:
+        rounded_card(slide, Inches(8.92), Inches(1.45), Inches(3.72), Inches(5.15), WHITE, SOFT)
+        add_text(slide, Inches(9.20), Inches(1.78), Inches(3.15), Inches(0.35), "LEE Y PREDICE", 12, accent, True)
+        add_bullets(slide, Inches(9.18), Inches(2.30), Inches(3.05), Inches(3.8), notes, body_size(notes, 17, 13), INK)
+
+
+def render_console(prs: Presentation, session: Session, spec: SlideSpec) -> None:
+    slide, accent = base_slide(prs, session, spec.title, "Salida observable")
+    output = spec.items[0] if spec.items else ""
+    panel = rounded_card(slide, Inches(0.72), Inches(1.50), Inches(7.65), Inches(4.95), DARK, DARK)
+    add_text(slide, Inches(1.00), Inches(1.76), Inches(2.5), Inches(0.30), "CONSOLA", 12, accent, True)
+    add_code(slide, Inches(1.00), Inches(2.25), Inches(6.95), Inches(3.7), output, 20)
+    rounded_card(slide, Inches(8.68), Inches(1.50), Inches(3.92), Inches(4.95), WHITE, SOFT)
+    add_text(slide, Inches(8.98), Inches(1.78), Inches(3.30), Inches(0.35), "QUÉ DEMUESTRA", 12, accent, True)
+    add_bullets(slide, Inches(8.98), Inches(2.35), Inches(3.16), Inches(3.55), spec.items[1:], body_size(spec.items[1:], 18, 14), INK)
+
+
+def render_compare(prs: Presentation, session: Session, spec: SlideSpec) -> None:
+    slide, accent = base_slide(prs, session, spec.title, "Contrastar para decidir")
+    left = spec.items[0] if spec.items else ""
+    right = spec.items[1] if len(spec.items) > 1 else ""
+    for index, (label, value, x, color) in enumerate((
+        ("A", left, 0.68, RGBColor(68, 91, 128)),
+        ("B", right, 6.73, accent),
+    )):
+        rounded_card(slide, Inches(x), Inches(1.45), Inches(5.72), Inches(3.72), WHITE, color)
+        badge = rounded_card(slide, Inches(x + 0.25), Inches(1.72), Inches(0.62), Inches(0.52), color, color)
+        add_text(slide, Inches(x + 0.25), Inches(1.84), Inches(0.62), Inches(0.20), label, 13, WHITE, True, PP_ALIGN.CENTER)
+        if "\n" in value or any(token in value for token in (";", "→", "==", "if (")):
+            add_code(slide, Inches(x + 0.30), Inches(2.52), Inches(5.10), Inches(2.20), value, 16, INK)
+        else:
+            add_text(slide, Inches(x + 0.30), Inches(2.48), Inches(5.10), Inches(2.25), value, body_size([value], 21, 15), INK, True)
+    if len(spec.items) > 2:
+        rounded_card(slide, Inches(0.68), Inches(5.48), Inches(11.77), Inches(1.02), DARK, DARK)
+        add_text(slide, Inches(0.98), Inches(5.72), Inches(11.16), Inches(0.52), spec.items[2], body_size([spec.items[2]], 17, 13), WHITE, True, PP_ALIGN.CENTER)
+
+
+def render_flow(prs: Presentation, session: Session, spec: SlideSpec) -> None:
+    slide, accent = base_slide(prs, session, spec.title, "Proceso")
+    count = max(1, len(spec.items))
+    width = min(2.18, 11.55 / count)
+    gap = (11.75 - width * count) / max(1, count - 1)
+    x = 0.78
+    for index, item in enumerate(spec.items, 1):
+        rounded_card(slide, Inches(x), Inches(2.45), Inches(width), Inches(2.05), accent if index == count else WHITE, accent)
+        add_text(slide, Inches(x + 0.15), Inches(2.72), Inches(width - 0.30), Inches(0.35), f"{index:02}", 14, WHITE if index == count else accent, True, PP_ALIGN.CENTER)
+        add_text(slide, Inches(x + 0.15), Inches(3.25), Inches(width - 0.30), Inches(0.72), item, body_size([item], 17, 13), WHITE if index == count else INK, True, PP_ALIGN.CENTER, MSO_ANCHOR.MIDDLE)
+        if index < count:
+            arrow_x = x + width + max(0.05, gap / 3)
+            arrow = slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.RIGHT_ARROW, Inches(arrow_x), Inches(3.18), Inches(max(0.25, gap * 0.65)), Inches(0.45))
+            arrow.fill.solid(); arrow.fill.fore_color.rgb = MUTED; arrow.line.fill.background()
+        x += width + gap
+
+
+def render_source(prs: Presentation, session: Session, spec: SlideSpec) -> None:
+    slide, accent = base_slide(prs, session, spec.title, "Trazabilidad del contenido")
+    add_text(slide, Inches(0.85), Inches(1.55), Inches(11.5), Inches(0.72), "Esta presentación selecciona y adapta contenido; no sustituye al libro ni copia el PDF completo.", 23, INK, True, PP_ALIGN.CENTER)
+    add_bullets(slide, Inches(1.10), Inches(2.70), Inches(11.0), Inches(2.55), spec.items, 20, INK)
+    add_text(slide, Inches(1.05), Inches(5.75), Inches(11.2), Inches(0.45), "Consulta el libro para ampliar, practicar y repasar errores frecuentes.", 18, accent, True, PP_ALIGN.CENTER)
+
 def render_activity(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide, accent = base_slide(prs, session, spec.title, "Aplicar y decidir")
     size = body_size(spec.items, 20, 14)
@@ -1141,6 +1582,11 @@ RENDERERS = {
     "defense": render_defense,
     "microdefense": render_microdefense,
     "example": render_example,
+    "code": render_code,
+    "console": render_console,
+    "compare": render_compare,
+    "flow": render_flow,
+    "source": render_source,
     "activity": render_activity,
     "evidence": render_evidence,
     "safety": render_safety,
@@ -1167,7 +1613,7 @@ def speaker_notes(session: Session, spec: SlideSpec, index: int, total: int) -> 
     elif spec.kind == "timeline":
         lines.append("Conduce estos tiempos y evita ampliar la explicación si reduce la práctica:")
         lines.extend(f"- {block.time}: {block.action}" for block in session.timeline)
-    elif spec.kind in {"concepts", "focus", "relationship", "debugger", "pattern", "exception_flow"}:
+    elif spec.kind in {"concepts", "focus", "relationship", "debugger", "pattern", "exception_flow", "code", "console", "compare", "flow"}:
         lines.append("Explica con predicción y ejemplo mínimo; comprueba comprensión antes de continuar.")
         lines.extend(f"- {item}" for item in spec.items)
     elif spec.kind == "example":
@@ -1184,6 +1630,9 @@ def speaker_notes(session: Session, spec: SlideSpec, index: int, total: int) -> 
         lines.extend(f"- {item}" for item in spec.items)
     elif spec.kind in {"closure", "defense", "microdefense"}:
         lines.append("Cierra con explicación individual, prueba observable y siguiente paso concreto.")
+        lines.extend(f"- {item}" for item in spec.items)
+    elif spec.kind == "source":
+        lines.append("Indica al alumnado dónde ampliar el contenido y qué fragmentos se han adaptado.")
         lines.extend(f"- {item}" for item in spec.items)
     else:
         lines.extend(f"- {item}" for item in spec.items)

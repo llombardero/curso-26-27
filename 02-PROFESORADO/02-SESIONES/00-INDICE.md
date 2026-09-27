@@ -14,6 +14,7 @@ Edición final para Moodle — curso 2026/2027.
 | 203 | Microprueba y equipos provisionales de 3 o 4 | [Abrir](h0/S203-microprueba-y-equipos-provisionales-de-3-o-4-docente.md) |
 | 204 | Sprint de torre prueba review y retrospectiva | [Abrir](h0/S204-sprint-de-torre-prueba-review-y-retrospectiva-docente.md) |
 | 205 | Transferencia a minijarvis y contrato de equipo | [Abrir](h0/S205-transferencia-a-minijarvis-y-contrato-de-equipo-docente.md) |
+| H1 | Guion docente completo del hito | [Abrir](h1/00-GUION-DOCENTE-H1-COMPLETO.md) |
 | 206 | Reto y alcance de H1 | [Abrir](h1/S206-presentar-h1-y-delimitar-alcance-docente.md) |
 | 207 | Entorno Java y ciclo de ejecución | [Abrir](h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-docente.md) |
 | 208 | Estructura Java y errores de compilación | [Abrir](h1/S208-estructura-minima-de-un-programa-java-docente.md) |

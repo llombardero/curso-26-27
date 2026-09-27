@@ -1,13 +1,13 @@
 # Manifiesto de archivos - MiniJarvis
 
-Archivos de contenido registrados: 729
+Archivos de contenido registrados: 740
 
 | SHA-256 | Ruta |
 |---|---|
 | `3a4559d9e7e36cef89027cedf1cea5f5cf424b6da22e2d502e3714eee8d7d310` | `01-ALUMNADO/00-EMPIEZA-AQUI/04A-enunciados-y-entregables-alumnado.md` |
 | `350aad421b83135c7ac29678499bc63a5f33e3ac7cdf0e17a21442a16d96f9ea` | `01-ALUMNADO/00-EMPIEZA-AQUI/05-politica-uso-ia-semaforo-registro-defensa.md` |
 | `7c7f95eb3df64978d0da10b33d772ade526e6f8abfc6cda5977c5a139b111d19` | `01-ALUMNADO/00-EMPIEZA-AQUI/06-rubricas-hitos.md` |
-| `62a3fe89d245c9bd7930bf3a69af79294f63ff8266aa261fbff731d5b76713cd` | `01-ALUMNADO/00-EMPIEZA-AQUI/07-plantillas-entregables.md` |
+| `51cd37c752543e6f9e72c54f0f63309cc6c000a1a28accaaba17352600bc3447` | `01-ALUMNADO/00-EMPIEZA-AQUI/07-plantillas-entregables.md` |
 | `8d9ab725f87f6d6288031ab9d48bf0ec805a0cd524f410f590217e729ac0a8b7` | `01-ALUMNADO/00-EMPIEZA-AQUI/08-guia-alumnado-proyecto-agente-ia.md` |
 | `4c7a0ca27f2950555078191f99a1432e35850f1584af3ca9562d7eb8ce7faf80` | `01-ALUMNADO/00-EMPIEZA-AQUI/09-presentacion-alumnado-proyecto-agente-ia.md` |
 | `0419330f4ef45549ce622a7f296566e43c94703992e04c77d41610fb8fbad5e4` | `01-ALUMNADO/00-EMPIEZA-AQUI/10-ecosistema-digital-y-entregas.md` |
@@ -16,6 +16,7 @@ Archivos de contenido registrados: 729
 | `d6f782e3c4d96cfac268c23dd871444938efbc8892459eb9a085e23d8f9add43` | `01-ALUMNADO/00-EMPIEZA-AQUI/13-evidencias-ia-y-seguridad-digital.md` |
 | `b9dc2a08036bb4b54438f8ef98e3436c098c90d4d154133710e78152f032b197` | `01-ALUMNADO/00-EMPIEZA-AQUI/14-guia-basica-drive-alumnado.md` |
 | `3d38a293763de5918918490295371d294f2a5c942007f123598d77a937d9e31d` | `01-ALUMNADO/00-EMPIEZA-AQUI/15-guia-basica-github-alumnado.md` |
+| `fb952e728e0604574f097f45293780950915410e73820b487f662b3b525a96fb` | `01-ALUMNADO/00-EMPIEZA-AQUI/16-ejemplos-entregables-h1.md` |
 | `172c3dc6dc75b16db88c85f9bd72c883d25869d3ce86c63b0c1c3ea112dc6a8f` | `01-ALUMNADO/01-LIBRO-POR-HITOS/00-como-usar-este-libro.md` |
 | `948d9ffab5dd644d137d528af7a8afac6ebac45581e5ee6f9b573b165a0ecee4` | `01-ALUMNADO/01-LIBRO-POR-HITOS/01-primeros-programas-java.md` |
 | `f01262cf8137343f1038a7f4f05fd40e413beb03a7bb747b81a26067d1c4f481` | `01-ALUMNADO/01-LIBRO-POR-HITOS/02-variables-constantes-entrada-salida.md` |
@@ -142,6 +143,15 @@ Archivos de contenido registrados: 729
 | `67864a551f362e28e606531a93215c7e13ba3de8d25031b12a19ec00988cdfaa` | `01-ALUMNADO/03-SESIONES/h1/S213-limpieza-nombres-claros-y-simplicidad-alumnado.md` |
 | `e93934bd67708910254ff67f10a8071f3a374d6c234027bffb08058ba8b4f41e` | `01-ALUMNADO/03-SESIONES/h1/S214-readme-y-evidencia-de-ejecucion-alumnado.md` |
 | `e1c717d24f8904257b638b2e0d5d12b52eda77da0b5f6b2cc7e3579520a06eeb` | `01-ALUMNADO/03-SESIONES/h1/S215-defensa-y-cierre-h1-alumnado.md` |
+| `45ed03e95a048580950fe6c9d3b63c80f378c6b93be8b005b0de562b0914d00c` | `01-ALUMNADO/03-SESIONES/h1/pildoras/S206-pildoras-alumnado.md` |
+| `a5abc7c23d54f2a5a7a2b365e7514964a760ad0df6f2d1e9a25a838a1d1e9b05` | `01-ALUMNADO/03-SESIONES/h1/pildoras/S207-pildoras-alumnado.md` |
+| `01f35193a46df5632ff57f029d039cfea95bd04f85074902e55da36623731560` | `01-ALUMNADO/03-SESIONES/h1/pildoras/S208-pildoras-alumnado.md` |
+| `43b2da4f61e264f96f7907c514b372339c68bffd73e1aea862bea625dee68859` | `01-ALUMNADO/03-SESIONES/h1/pildoras/S209-pildoras-alumnado.md` |
+| `92ddab18de35e351854c2e486e46e24b46c1b554daf10ab24495654921153705` | `01-ALUMNADO/03-SESIONES/h1/pildoras/S210-pildoras-alumnado.md` |
+| `bc4d54e712d282f09cf3fe18fa5d18762b9c5958979b50cff5cbaca91ce1bc82` | `01-ALUMNADO/03-SESIONES/h1/pildoras/S211-pildoras-alumnado.md` |
+| `7ac0f2f3f11764f0aa2c0a4bbd626fe9906d4c6efb2abee478b0463b98f46084` | `01-ALUMNADO/03-SESIONES/h1/pildoras/S212-pildoras-alumnado.md` |
+| `1639c003c2e88adec96d6c01915b9d29ccbcd7bf3a4ccfe02e341ebda779d996` | `01-ALUMNADO/03-SESIONES/h1/pildoras/S213-pildoras-alumnado.md` |
+| `bf508a5e1dae2a9d69d89c5f65e85c7c4afa5a8a9261ec0c30e186c095f3091f` | `01-ALUMNADO/03-SESIONES/h1/pildoras/S214-pildoras-alumnado.md` |
 | `238c98fddaccc1f03a8c32501cbd697d0ebf1e2784811fea79a02e8aa4019f26` | `01-ALUMNADO/03-SESIONES/h2/S216-presentar-h2-desde-h1-alumnado.md` |
 | `2505da931e8a4749b6f9f7ed1974bda5a3712701489cc9f331f9e13016bc71fd` | `01-ALUMNADO/03-SESIONES/h2/S217-diseno-de-comandos-antes-de-programar-alumnado.md` |
 | `b8cecef293f99c04cc0d6a9eb3f8949e6209206ef7564cd4b0cdd5a0110849cd` | `01-ALUMNADO/03-SESIONES/h2/S218-booleanos-y-variable-de-control-alumnado.md` |
@@ -297,7 +307,7 @@ Archivos de contenido registrados: 729
 | `60bc52428721faa52c7eab9efb2330a38b2a9d1e9d5e773c62c1a998a8a6cc78` | `02-PROFESORADO/01-GUIAS-POR-HITO/hf-presentacion-final-recuperacion-mejora/20-guia-docente-hf-presentacion-final-recuperacion-mejora.md` |
 | `66cbaea01f35335dbaf3a15ba546d0350355a6f47c3eafc6984d6c7de3bd38cd` | `02-PROFESORADO/01-GUIAS-POR-HITO/hf-presentacion-final-recuperacion-mejora/20C-checklist-correccion-hf.md` |
 | `064b2b8339238100c9e344ffbedbe66926065f4cce598ebabfe99a404d8628bd` | `02-PROFESORADO/01-GUIAS-POR-HITO/hf-presentacion-final-recuperacion-mejora/README.md` |
-| `99490120c4d5fdc6a703ebaad4941bb1b0566a0f54c9cb9a7695d6d0fdd7eabe` | `02-PROFESORADO/02-SESIONES/00-INDICE.md` |
+| `89e15cafca7b2969d3b61ea390485fceea209cd37fc7bd51a8f29e9e56a4b520` | `02-PROFESORADO/02-SESIONES/00-INDICE.md` |
 | `e5d1c795f48b08cadf8d1170adeece80975e4484926fe569ef16ae76d134b296` | `02-PROFESORADO/02-SESIONES/c1/S241-cierre-c1-demo-parcial-y-recuperacion-docente.md` |
 | `c6571e6f7cfed717bf787e88df39472337862e6d8d687056616e53ba7f8ea231` | `02-PROFESORADO/02-SESIONES/c2/S275-revision-tecnica-h4-h5-docente.md` |
 | `9f241ca3e6d0bdec707633cb46052079eae80972c0a33831e2f9d19ec6b191fd` | `02-PROFESORADO/02-SESIONES/c2/S276-defensa-individual-c2-docente.md` |
@@ -308,6 +318,7 @@ Archivos de contenido registrados: 729
 | `24cde9bab02f49f8ad102fae08e4f3223d9bc064aaedb1e93f596142d4a9f647` | `02-PROFESORADO/02-SESIONES/h0/S203-microprueba-y-equipos-provisionales-de-3-o-4-docente.md` |
 | `3776cce426378cfb5b1ee9ad396a899a9d8623fca71b882d18c97de4af860a2e` | `02-PROFESORADO/02-SESIONES/h0/S204-sprint-de-torre-prueba-review-y-retrospectiva-docente.md` |
 | `d5779007b46f6038616f1670784850cb0a857b6497aad92d1ce18b2e7eaaa29c` | `02-PROFESORADO/02-SESIONES/h0/S205-transferencia-a-minijarvis-y-contrato-de-equipo-docente.md` |
+| `38b0a58819bf1648729cb46b055dd51e4d7874a313e73c1f66a315de314707a4` | `02-PROFESORADO/02-SESIONES/h1/00-GUION-DOCENTE-H1-COMPLETO.md` |
 | `3305ca6aebf8a04d29a0f975dd6781aeec5ca83ba13141b2135890ddef2b127a` | `02-PROFESORADO/02-SESIONES/h1/S206-presentar-h1-y-delimitar-alcance-docente.md` |
 | `d19a2a9e76e9042e14266f4c6dd185fcb75d361dfdd1b4927d3061d5b2f73596` | `02-PROFESORADO/02-SESIONES/h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-docente.md` |
 | `0ecf7a438b66d8a209fb53db34ab70d6ad1083ea366fd8f2a365d31b49900870` | `02-PROFESORADO/02-SESIONES/h1/S208-estructura-minima-de-un-programa-java-docente.md` |
@@ -405,7 +416,7 @@ Archivos de contenido registrados: 729
 | `131ef413c6f94b64eb3ab1d020e1a0a9ddaf6fd6bc9a485fced65dc7eca15c8b` | `02-PROFESORADO/02-SESIONES/hf/S305-presentaciones-finales-docente.md` |
 | `aec9e5a3b6bf02a86d7cdc8d0fd766362dc0419aa3b6de255d7146b4eca37ddb` | `02-PROFESORADO/02-SESIONES/hf/S306-defensa-final-cierre-y-retrospectiva-del-curso-docente.md` |
 | `ad4a30e219683d43a859c1e81b374e4c2fbd203684549708deafd890faad3314` | `02-PROFESORADO/03-PRESENTACIONES/00-presentacion-inicial-programacion.pptx` |
-| `a24de81dc1ac4a1df9ed0920953aecff6bb13cf10632c7d675da8679c9b6511e` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/README.md` |
+| `bb0ceb90e82cbda879d2a14c3bfea9d33632309d1d84002d060952ee1c92410c` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/README.md` |
 | `82476dd5a748a55c555e6ba5ed3539e2f8541a5d23b6db35a0cb1e378ee76f98` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/c1/S241-cierre-c1-demo-parcial-y-recuperacion-presentacion.pptx` |
 | `b8a7ed58ce7a2ccaa7628f9161cfd32e0030dd392a19724906cd443ee4737715` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/c2/S275-revision-tecnica-h4-h5-presentacion.pptx` |
 | `82771dab7f4b2dd8b6b9e315d1da6582ca2e62a3754c90269ab06b031ee919db` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/c2/S276-defensa-individual-c2-presentacion.pptx` |
@@ -416,16 +427,16 @@ Archivos de contenido registrados: 729
 | `24a9f367f900ecf04fb5a0b67222944003da91d21ad1324a12bac804cd240c92` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h0/S203-microprueba-y-equipos-provisionales-de-3-o-4-presentacion.pptx` |
 | `c6ee7a6d6baecfeecd4699a6a447ea7344af48155a1a2bc5fefa0fadd9d941c5` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h0/S204-sprint-de-torre-prueba-review-y-retrospectiva-presentacion.pptx` |
 | `326703deed59574abc68b4890790dbbb45856328c76f1de67c7155564f51e6a4` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h0/S205-transferencia-a-minijarvis-y-contrato-de-equipo-presentacion.pptx` |
-| `dc6003596ec5ee71482d7ae1a552f4549c6edb19751be989be8e81d9b1a9b176` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S206-presentar-h1-y-delimitar-alcance-presentacion.pptx` |
-| `9b5facf544e5c7c8186d6398e6f9054aa449b525bd0157e16340540827e3147b` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-presentacion.pptx` |
-| `03780ab410f8fe760e301fd293d6c6ff4287d020b8c053944d47a934f2e607db` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S208-estructura-minima-de-un-programa-java-presentacion.pptx` |
-| `bd50f85d0571fb5ce9c8f47843fb477603b531a9e159545cbe8dd388114ae4a6` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S209-salida-por-pantalla-y-mensajes-del-asistente-presentacion.pptx` |
-| `05f684d4e0266701413ee71cab6285ed5a2ae574fd71bce48d77b447019ab258` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S210-variables-presentacion.pptx` |
-| `81013733a085d801b2aa966b6b669bb050b344ecb327ecdff897013c31de04fd` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S211-constantes-presentacion.pptx` |
-| `99221eb73667a525165d24fbfb10cbf758f0f8352a800d5acef1bb6535dc66fd` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S212-entrada-por-teclado-con-scanner-presentacion.pptx` |
-| `bceac12c721d566994f01f1e6613059dd1bd35cf9484ee409284d9aedfdc9edd` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S213-limpieza-nombres-claros-y-simplicidad-presentacion.pptx` |
-| `77e34109cde3658fa56d13eff7a5812cee419980e77179cfa51b06a8248c28dc` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S214-readme-y-evidencia-de-ejecucion-presentacion.pptx` |
-| `242bcb793deba0ce0062a494fb19dce1fc337b7e66329a03c2114f9b7264adef` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S215-defensa-y-cierre-h1-presentacion.pptx` |
+| `a4f76093eaae507fc8658de1873659442f9b2af0e27051fba19494a11eec8b97` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S206-presentar-h1-y-delimitar-alcance-presentacion.pptx` |
+| `a55087c6279e03af627eebce17c198a67015a6965b72c6e646c59b488987888a` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S207-entorno-de-trabajo-intellij-proyecto-y-ejecucion-presentacion.pptx` |
+| `3927ab572144999d2c1a65bc13fb190f1469d5661e069c1c11ab96103f2eeca9` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S208-estructura-minima-de-un-programa-java-presentacion.pptx` |
+| `c721ac329b798db038db604ce39eb1e4019f6766c6f525985b5d2ba1f54e60eb` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S209-salida-por-pantalla-y-mensajes-del-asistente-presentacion.pptx` |
+| `d4645d6f87716b9025e05696832e46b4e29277bf2bf1ec611c7b4b3cf2cf29c6` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S210-variables-presentacion.pptx` |
+| `cb1894c79c48ac1cb79c90a470251e727e7897288b0b54e0f35903d88bd98781` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S211-constantes-presentacion.pptx` |
+| `7364225f2a21d824ff585bd268d8a34b1f0c3e4ff51e46f8e4d308a64dc686de` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S212-entrada-por-teclado-con-scanner-presentacion.pptx` |
+| `17c1a6df0cd8f86325f76e27ba633d920d1a4c0f1d06fe07ad5d776e3dd795a9` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S213-limpieza-nombres-claros-y-simplicidad-presentacion.pptx` |
+| `73b5af80b8fea06098b7c8a26dd873deb4fafff13e199902b9382337cd4a13af` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S214-readme-y-evidencia-de-ejecucion-presentacion.pptx` |
+| `8befaec38ca40a03c538c477b7d4e6c4bc0fa561736c1f1115e7024471750ab7` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h1/S215-defensa-y-cierre-h1-presentacion.pptx` |
 | `150a6a0bdc918ae9c320603152a0e8a287e3edc32ce83bfd51b3295977164184` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h2/S216-presentar-h2-desde-h1-presentacion.pptx` |
 | `abc68f28cd2c55896759d97191d8408ed6c32d7bc08484f2f46d52234a629c25` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h2/S217-diseno-de-comandos-antes-de-programar-presentacion.pptx` |
 | `b5b764978bf7ad2c468528bac7fb006ed452d831adf9d4d60c0f607f84b378d4` | `02-PROFESORADO/03-PRESENTACIONES/POR-SESION/h2/S218-booleanos-y-variable-de-control-presentacion.pptx` |

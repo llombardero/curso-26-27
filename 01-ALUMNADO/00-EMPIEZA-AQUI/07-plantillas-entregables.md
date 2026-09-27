@@ -17,6 +17,7 @@ Uso recomendado:
 - Copiar la plantilla necesaria en la carpeta `docs/` del hito correspondiente.
 - Completar solo los apartados aplicables al hito.
 - No borrar apartados importantes: si algo no aplica, escribir “No aplica en este hito” y justificar brevemente.
+- Para ver ejemplos completos de H1, consulta `16-ejemplos-entregables-h1`.
 
 ---
 

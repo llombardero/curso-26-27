@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S209 — Píldoras: mensajes claros y concatenación</title>
+  <link rel="stylesheet" href="../../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s209--píldoras-mensajes-claros-y-concatenación">S209 — Píldoras:
+mensajes claros y concatenación</h1>
+<blockquote>
+<p>Material de consulta de la sesión S209. Diseña primero lo que leerá
+la persona usuaria y programa después.</p>
+</blockquote>
+<h2 id="1-la-consola-también-es-una-interfaz">1. La consola también es
+una interfaz</h2>
+<p>Una interfaz permite que una persona entienda qué ocurre y qué debe
+hacer. Aunque la consola solo muestre texto, sus mensajes deben ser
+claros, ordenados y coherentes con el alcance real de H1.</p>
+<h3 id="ejemplo-1--saludo-comprensible">Ejemplo 1 — Saludo
+comprensible</h3>
+<p>Poco claro:</p>
+<pre class="text"><code>MJ v1
+ok</code></pre>
+<p>Más claro:</p>
+<pre class="text"><code>Hola, soy MiniJarvis.
+Estoy preparado para comenzar.</code></pre>
+<h3 id="ejemplo-2--petición-concreta">Ejemplo 2 — Petición concreta</h3>
+<p>Ambiguo:</p>
+<pre class="text"><code>Dato:</code></pre>
+<p>Más claro:</p>
+<pre class="text"><code>Escribe un nombre ficticio:</code></pre>
+<p>La segunda versión indica qué dato se espera y recuerda que no
+necesitamos información personal real.</p>
+<h3 id="ejemplo-3--orden-de-la-conversación">Ejemplo 3 — Orden de la
+conversación</h3>
+<pre class="text"><code>Hola, soy MiniJarvis.
+Escribe un nombre ficticio: Laura
+Encantado, Laura.
+Fin de la primera prueba.</code></pre>
+<p>El orden ayuda a distinguir presentación, petición, respuesta y
+cierre.</p>
+<h3 id="ejemplo-4--no-prometer-funciones-inexistentes">Ejemplo 4 — No
+prometer funciones inexistentes</h3>
+<p>Evita mensajes como «Puedo recordar todo» o «Estoy conectado a una
+IA» si H1 todavía no implementa memoria ni IA real. La interfaz debe
+describir el programa que existe, no el que quizá construiremos
+después.</p>
+<h2 id="2-literal-y-concatenación">2. Literal y concatenación</h2>
+<p>Un literal de texto se escribe entre comillas dobles. El operador
+<code>+</code> permite unir texto y valores.</p>
+<h3 id="ejemplo-1--texto-fijo-y-variable">Ejemplo 1 — Texto fijo y
+variable</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Salida:</p>
+<pre class="text"><code>Hola, Laura.</code></pre>
+<h3 id="ejemplo-2--varias-piezas">Ejemplo 2 — Varias piezas</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> assistantName <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> version <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Soy &quot;</span> <span class="op">+</span> assistantName <span class="op">+</span> <span class="st">&quot;, versión &quot;</span> <span class="op">+</span> version <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Salida:</p>
+<pre class="text"><code>Soy MiniJarvis, versión 1.</code></pre>
+<h3 id="ejemplo-3--espacios-y-signos">Ejemplo 3 — Espacios y signos</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Álex&quot;</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Encantado,&quot;</span> <span class="op">+</span> userName<span class="op">);</span></span></code></pre></div>
+<p>Produce <code>Encantado,Álex</code>. El programa funciona, pero el
+mensaje no está bien cuidado. La corrección es:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Encantado, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<h3 id="ejemplo-4--suma-o-concatenación">Ejemplo 4 — Suma o
+concatenación</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">);</span>        <span class="co">// 5</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;2&quot;</span> <span class="op">+</span> <span class="st">&quot;3&quot;</span><span class="op">);</span>  <span class="co">// 23</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Total: &quot;</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">);</span> <span class="co">// Total: 23</span></span></code></pre></div>
+<p>El tipo y el orden de las piezas cambian el resultado. En esta sesión
+basta con reconocerlo y predecir la salida.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Olvidar espacios o signos dentro de los literales.</li>
+<li>Mostrar mensajes técnicos que la persona usuaria no necesita.</li>
+<li>Confundir <code>+</code> como suma numérica con <code>+</code> como
+concatenación.</li>
+<li>Programar la primera idea sin comparar alternativas.</li>
+</ul>
+<h2 id="comprueba-que-lo-entiendes">Comprueba que lo entiendes</h2>
+<ol type="1">
+<li>Mejora un mensaje ambiguo de consola.</li>
+<li>Predice la salida de los cuatro ejemplos de concatenación.</li>
+<li>Diseña un saludo, una petición y un cierre coherentes.</li>
+<li>Explica por qué tu salida no promete funciones ajenas a H1.</li>
+</ol>
+
+  </main>
+</body>
+</html>

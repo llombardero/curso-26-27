@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S212 — Píldoras: `Scanner` y conversiones</title>
+  <link rel="stylesheet" href="../../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s212--píldoras-scanner-y-conversiones">S212 — Píldoras:
+<code>Scanner</code> y conversiones</h1>
+<blockquote>
+<p>Material de consulta de la sesión S212. En todos los ejemplos usa
+datos ficticios y una sola instancia de <code>Scanner</code>.</p>
+</blockquote>
+<h2 id="1-scanner-pedir--leer--guardar">1. <code>Scanner</code>: pedir →
+leer → guardar</h2>
+<p><code>Scanner</code> permite leer lo que una persona escribe en la
+consola. <code>nextLine()</code> devuelve un <code>String</code>.</p>
+<h3 id="ejemplo-1--leer-un-nombre">Ejemplo 1 — Leer un nombre</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;Escribe un nombre ficticio: &quot;</span><span class="op">);</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>scanner<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span></code></pre></div>
+<h3 id="ejemplo-2--leer-un-texto-diferente">Ejemplo 2 — Leer un texto
+diferente</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;Escribe un objetivo: &quot;</span><span class="op">);</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> goal <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo registrado: &quot;</span> <span class="op">+</span> goal<span class="op">);</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>scanner<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span></code></pre></div>
+<h3 id="ejemplo-3--reutilizar-la-instancia">Ejemplo 3 — Reutilizar la
+instancia</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> goal <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>scanner<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span></code></pre></div>
+<p>No hace falta crear un <code>Scanner</code> nuevo para cada
+línea.</p>
+<h2 id="2-parsear-texto-a-un-tipo-básico">2. Parsear texto a un tipo
+básico</h2>
+<p>Si <code>nextLine()</code> devuelve texto, necesitamos convertirlo
+para hacer operaciones numéricas.</p>
+<h3 id="ejemplo-1--texto-a-entero">Ejemplo 1 — Texto a entero</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> text <span class="op">=</span> <span class="st">&quot;5&quot;</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>text<span class="op">);</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> minutes <span class="op">=</span> hours <span class="op">*</span> <span class="dv">60</span><span class="op">;</span></span></code></pre></div>
+<h3 id="ejemplo-2--texto-a-decimal">Ejemplo 2 — Texto a decimal</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> text <span class="op">=</span> <span class="st">&quot;7.5&quot;</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> score <span class="op">=</span> <span class="bu">Double</span><span class="op">.</span><span class="fu">parseDouble</span><span class="op">(</span>text<span class="op">);</span></span></code></pre></div>
+<h3 id="ejemplo-3--texto-a-booleano">Ejemplo 3 — Texto a booleano</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> text <span class="op">=</span> <span class="st">&quot;true&quot;</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> ready <span class="op">=</span> <span class="bu">Boolean</span><span class="op">.</span><span class="fu">parseBoolean</span><span class="op">(</span>text<span class="op">);</span></span></code></pre></div>
+<h3 id="ejemplo-4--entrada-no-convertible">Ejemplo 4 — Entrada no
+convertible</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> text <span class="op">=</span> <span class="st">&quot;cinco&quot;</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>text<span class="op">);</span></span></code></pre></div>
+<p>Compila, pero falla al ejecutar porque <code>"cinco"</code> no
+representa un entero. En H1 observamos y explicamos el error; todavía no
+necesitamos resolverlo con <code>try-catch</code>.</p>
+<h2 id="3-conversión-implícita">3. Conversión implícita</h2>
+<p>Java puede convertir automáticamente algunos números a un tipo más
+amplio.</p>
+<h3 id="ejemplo-1--int-a-double">Ejemplo 1 — <code>int</code> a
+<code>double</code></h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> whole <span class="op">=</span> <span class="dv">7</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> wider <span class="op">=</span> whole<span class="op">;</span> <span class="co">// 7.0</span></span></code></pre></div>
+<h3 id="ejemplo-2--char-a-int">Ejemplo 2 — <code>char</code> a
+<code>int</code></h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> letter <span class="op">=</span> <span class="ch">&#39;A&#39;</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> code <span class="op">=</span> letter<span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>code<span class="op">);</span> <span class="co">// 65</span></span></code></pre></div>
+<p>Basta con reconocer que Java puede ampliar el valor; no necesitas
+memorizar todos los códigos de caracteres.</p>
+<h3 id="ejemplo-3--no-es-parseo">Ejemplo 3 — No es parseo</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> decimalHours <span class="op">=</span> hours<span class="op">;</span></span></code></pre></div>
+<p>Aquí convertimos entre tipos numéricos. No partimos de un
+<code>String</code>, por lo que no usamos <code>parseInt</code>.</p>
+<h2 id="4-casting-forzar-puede-perder-información">4. Casting: forzar
+puede perder información</h2>
+<p>Un casting indica explícitamente el tipo de destino. Cuando pasamos
+de un decimal a un entero se descarta la parte decimal; no se
+redondea.</p>
+<h3 id="ejemplo-1--precio">Ejemplo 1 — Precio</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> price <span class="op">=</span> <span class="fl">12.75</span><span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> wholePrice <span class="op">=</span> <span class="op">(</span><span class="dt">int</span><span class="op">)</span> price<span class="op">;</span> <span class="co">// 12</span></span></code></pre></div>
+<h3 id="ejemplo-2--nota">Ejemplo 2 — Nota</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> score <span class="op">=</span> <span class="fl">8.99</span><span class="op">;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> wholeScore <span class="op">=</span> <span class="op">(</span><span class="dt">int</span><span class="op">)</span> score<span class="op">;</span> <span class="co">// 8</span></span></code></pre></div>
+<h3 id="ejemplo-3--valor-negativo">Ejemplo 3 — Valor negativo</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> temperature <span class="op">=</span> <span class="op">-</span><span class="fl">3.8</span><span class="op">;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> wholeTemperature <span class="op">=</span> <span class="op">(</span><span class="dt">int</span><span class="op">)</span> temperature<span class="op">;</span> <span class="co">// -3</span></span></code></pre></div>
+<p>Se elimina la parte decimal acercándose a cero; no se obtiene
+<code>-4</code>.</p>
+<h3 id="ejemplo-4--comparar-antes-y-después">Ejemplo 4 — Comparar antes
+y después</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> duration <span class="op">=</span> <span class="fl">2.75</span><span class="op">;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> completeHours <span class="op">=</span> <span class="op">(</span><span class="dt">int</span><span class="op">)</span> duration<span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>duration<span class="op">);</span>      <span class="co">// 2.75</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>completeHours<span class="op">);</span> <span class="co">// 2</span></span></code></pre></div>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Pensar que <code>nextLine()</code> devuelve un número porque el
+texto contiene cifras.</li>
+<li>Crear varios objetos <code>Scanner</code> sobre
+<code>System.in</code> sin necesidad.</li>
+<li>Confundir parseo de texto con conversión entre números.</li>
+<li>Creer que el casting redondea.</li>
+<li>No guardar el resultado de <code>parseInt</code> o del casting.</li>
+</ul>
+<h2 id="comprueba-que-lo-entiendes">Comprueba que lo entiendes</h2>
+<ol type="1">
+<li>Explica qué devuelve <code>nextLine()</code>.</li>
+<li>Convierte <code>"12"</code> a entero y calcula sus minutos.</li>
+<li>Distingue un ejemplo de parseo, uno de conversión implícita y uno de
+casting.</li>
+<li>Predice qué ocurre con <code>Integer.parseInt("hola")</code> y
+cuándo ocurre.</li>
+</ol>
+
+  </main>
+</body>
+</html>

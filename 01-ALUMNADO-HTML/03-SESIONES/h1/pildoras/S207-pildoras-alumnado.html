@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S207 — Píldoras: del código a la consola</title>
+  <link rel="stylesheet" href="../../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s207--píldoras-del-código-a-la-consola">S207 — Píldoras: del
+código a la consola</h1>
+<blockquote>
+<p>Material de consulta de la sesión S207. El objetivo es distinguir qué
+escribes, qué comprueba Java y qué observas al ejecutar.</p>
+</blockquote>
+<h2 id="1-código--compilación--ejecución--consola">1. Código →
+compilación → ejecución → consola</h2>
+<p>El recorrido básico es:</p>
+<ol type="1">
+<li><strong>Código fuente:</strong> escribes instrucciones en
+<code>Main.java</code>.</li>
+<li><strong>Compilación:</strong> Java comprueba y traduce el
+código.</li>
+<li><strong>Ejecución:</strong> el programa se pone en marcha.</li>
+<li><strong>Consola:</strong> ves los mensajes y escribes datos cuando
+el programa los pide.</li>
+</ol>
+<p>El <strong>proyecto</strong> contiene <code>Main.java</code> y la
+configuración necesaria. El proyecto no es la consola ni una única línea
+de código.</p>
+<h3 id="ejemplo-1--recorrido-correcto">Ejemplo 1 — Recorrido
+correcto</h3>
+<p>Código fuente:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis arranca&quot;</span><span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Después de compilar y ejecutar, la consola muestra:</p>
+<pre class="text"><code>MiniJarvis arranca</code></pre>
+<h3 id="ejemplo-2--el-código-cambia-la-salida-también">Ejemplo 2 — El
+código cambia, la salida también</h3>
+<p>Si modificas solo el literal:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis está preparado&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>la nueva ejecución debe mostrar:</p>
+<pre class="text"><code>MiniJarvis está preparado</code></pre>
+<p>Si la consola sigue mostrando el mensaje anterior, comprueba que has
+guardado y ejecutado el archivo correcto.</p>
+<h3 id="ejemplo-3--error-de-código">Ejemplo 3 — Error de código</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">)</span></span></code></pre></div>
+<p>Falta <code>;</code>. La compilación falla antes de que el programa
+pueda ejecutarse. La consola no puede mostrar la salida prevista.</p>
+<h3 id="ejemplo-4--error-de-entorno">Ejemplo 4 — Error de entorno</h3>
+<p>El código puede estar bien y, aun así, no ejecutarse porque el JDK no
+está configurado o se ha seleccionado otra clase de inicio. En ese caso
+no debes reescribir todo el programa: lee el mensaje y comprueba la
+configuración.</p>
+<h2 id="2-escribir-compilar-y-ejecutar-no-significan-lo-mismo">2.
+Escribir, compilar y ejecutar no significan lo mismo</h2>
+<ul>
+<li><strong>Escribir:</strong> crear o modificar el código fuente.</li>
+<li><strong>Compilar:</strong> comprobar y traducir ese código.</li>
+<li><strong>Ejecutar:</strong> poner en marcha el programa ya
+preparado.</li>
+</ul>
+<h3 id="ejemplo-1--escribir-sin-ejecutar">Ejemplo 1 — Escribir sin
+ejecutar</h3>
+<p>Cambias <code>"Hola"</code> por <code>"Buenos días"</code>, pero no
+pulsas ejecutar. Has escrito código, pero todavía no has comprobado su
+comportamiento.</p>
+<h3 id="ejemplo-2--compilar-sin-comportamiento-correcto">Ejemplo 2 —
+Compilar sin comportamiento correcto</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Adiós&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Puede compilar correctamente, pero sería incorrecto si el requisito
+era mostrar un saludo inicial. Compilar no demuestra que el programa
+resuelva el reto.</p>
+<h3 id="ejemplo-3--ejecutar-y-comprobar">Ejemplo 3 — Ejecutar y
+comprobar</h3>
+<p>Predicción: «La consola mostrará dos líneas».</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">);</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Soy MiniJarvis&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Ejecución observada:</p>
+<pre class="text"><code>Hola
+Soy MiniJarvis</code></pre>
+<p>La comparación entre predicción y salida es una prueba sencilla.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Llamar «programa» a la ventana de consola.</li>
+<li>Pulsar ejecutar muchas veces sin leer el primer error.</li>
+<li>Cambiar varias cosas a la vez y no saber qué corrección
+funcionó.</li>
+<li>Guardar una captura sin indicar qué código produjo esa salida.</li>
+</ul>
+<h2 id="comprueba-que-lo-entiendes">Comprueba que lo entiendes</h2>
+<ol type="1">
+<li>Señala dónde está el código fuente en tu proyecto.</li>
+<li>Explica qué ocurre antes de que aparezca un mensaje en la
+consola.</li>
+<li>Da un ejemplo de error de código y otro de configuración.</li>
+<li>Completa: «Sé que se ha ejecutado porque…».</li>
+</ol>
+
+  </main>
+</body>
+</html>

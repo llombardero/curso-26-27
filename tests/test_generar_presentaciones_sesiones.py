@@ -277,7 +277,7 @@ def test_h1_keeps_teacher_guidance_in_speaker_notes(generator):
         title_notes = generator.speaker_notes(session, plan[0], 1, len(plan))
 
         assert not any(marker in visible for marker in forbidden_visible), number
-        assert not any(slide.kind in {"timeline", "concepts"} for slide in plan), number
+        assert not any(slide.kind == "timeline" for slide in plan), number
         assert session.duration not in plan[0].subtitle, number
         assert all(block.action in title_notes for block in session.timeline), number
         assert all(item in title_notes for item in session.key_concepts), number
@@ -326,8 +326,43 @@ def test_full_collection_avoids_sparse_and_template_only_slides(generator):
 
     teacher, student = source_pair("212")
     kinds = [slide.kind for slide in generator.plan_slides(generator.parse_session(teacher, student))]
-    assert "concepts" not in kinds
-    assert "example" in kinds
+    assert "flow" in kinds
+    assert "code" in kinds
+    assert "compare" in kinds
+
+
+def test_h1_plans_cover_session_specific_learning_and_sources(generator):
+    expected = {
+        "206": ("H1 ahora", "requisitos observables", "Defiende el alcance"),
+        "207": ("bytecode", "Primer programa ejecutable", "compilar y ejecutar"),
+        "208": ("Estructura mínima completa", "String message", "Reconstruye y depura"),
+        "209": ("Concatena texto", "Total: 23", "Diseña antes de programar"),
+        "210": ("Declarar, inicializar", "lowerCamelCase", "Microdefensa de una variable"),
+        "211": ("5 / 2.0", "10 % 4", "división entera y real"),
+        "212": ("Integer.parseInt", "NumberFormatException", "casting"),
+        "213": ("hours >= 4", "if / else", "ambas ramas"),
+        "214": ("README mínimo", "enlace profundo", "permisos"),
+        "215": ("señala", "investiga", "mejora concreta"),
+    }
+
+    for number, fragments in expected.items():
+        teacher, student = source_pair(number)
+        plan = generator.plan_slides(generator.parse_session(teacher, student))
+        combined = " ".join(text for slide in plan for text in [slide.title, *slide.items])
+        assert plan[-1].kind == "source", number
+        assert "Tema 1" in combined or "Evidencias" in combined or "Defensa" in combined, number
+        for fragment in fragments:
+            assert fragment.lower() in combined.lower(), (number, fragment)
+
+
+def test_h1_plans_have_no_visible_markdown_escapes_or_generic_exit(generator):
+    forbidden = (r"\|", r"\>", r"\<", r"\*", "¿Qué puedes señalar, explicar y probar al terminar este checkpoint?")
+    for number in range(206, 216):
+        teacher, student = source_pair(str(number))
+        plan = generator.plan_slides(generator.parse_session(teacher, student))
+        combined = " ".join(text for slide in plan for text in [slide.title, *slide.items])
+        assert all(marker not in combined for marker in forbidden), number
+        assert any(slide.kind in {"code", "console", "compare", "flow"} for slide in plan), number
 
 def test_projectable_lists_do_not_contain_join_artifacts(generator):
     for number in ("203", "225", "267", "284", "306"):

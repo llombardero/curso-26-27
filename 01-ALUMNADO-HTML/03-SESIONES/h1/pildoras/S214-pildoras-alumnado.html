@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S214 — Píldoras: README y evidencias</title>
+  <link rel="stylesheet" href="../../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s214--píldoras-readme-y-evidencias">S214 — Píldoras: README y
+evidencias</h1>
+<blockquote>
+<p>Material de consulta de la sesión S214. Documentar no significa
+copiar la misma información en varios lugares: cada espacio cumple una
+función.</p>
+</blockquote>
+<h2 id="1-readme-mínimo-de-h1">1. README mínimo de H1</h2>
+<p>El README permite que otra persona entienda qué hace el proyecto y
+cómo comprobarlo sin depender de una explicación oral.</p>
+<h3 id="ejemplo-1--qué-hace-y-qué-no-hace">Ejemplo 1 — Qué hace y qué no
+hace</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Qué hace</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>MiniJarvis muestra un saludo, pide un nombre ficticio y responde por consola.</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Límites de H1</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Todavía no incluye menú, bucle, memoria, ficheros ni conexión con una IA real.</span></code></pre></div>
+<h3 id="ejemplo-2--cómo-ejecutar">Ejemplo 2 — Cómo ejecutar</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cómo ejecutar</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Abre el proyecto con el JDK indicado.</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Abre <span class="in">`Main.java`</span>.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Ejecuta el método <span class="in">`main`</span>.</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Escribe un nombre ficticio cuando lo pida la consola.</span></code></pre></div>
+<h3 id="ejemplo-3--ejemplo-verificable">Ejemplo 3 — Ejemplo
+verificable</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejemplo</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Entrada: Laura</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Salida esperada: Encantado, Laura.</span></code></pre></div>
+<h3 id="ejemplo-4--readme-que-promete-demasiado">Ejemplo 4 — README que
+promete demasiado</h3>
+<p>Evita frases como «MiniJarvis recuerda conversaciones y usa IA» si H1
+no lo implementa. El README describe el producto real y sus límites.</p>
+<h2 id="2-una-evidencia-debe-demostrar-algo">2. Una evidencia debe
+demostrar algo</h2>
+<p>Una evidencia útil conecta una prueba con una afirmación
+concreta.</p>
+<h3 id="ejemplo-1--evidencia-débil">Ejemplo 1 — Evidencia débil</h3>
+<pre class="text"><code>Funciona.</code></pre>
+<p>No indica qué se probó, con qué entrada ni qué resultado
+apareció.</p>
+<h3 id="ejemplo-2--evidencia-verificable">Ejemplo 2 — Evidencia
+verificable</h3>
+<pre class="text"><code>Prueba: saludo con nombre ficticio.
+Entrada usada: Laura.
+Salida esperada: Encantado, Laura.
+Salida obtenida: Encantado, Laura.
+Demuestra: la entrada leída se guarda y se usa en la salida.
+Enlace: archivo o captura concreta, no la carpeta general.</code></pre>
+<h3 id="ejemplo-3--evidencia-de-dos-ramas">Ejemplo 3 — Evidencia de dos
+ramas</h3>
+<pre class="text"><code>Caso A: hours = 5 → Objetivo alcanzado.
+Caso B: hours = 2 → Objetivo pendiente.
+Demuestra: se han probado las dos ramas del if/else.</code></pre>
+<h3 id="ejemplo-4--evidencia-de-error-útil">Ejemplo 4 — Evidencia de
+error útil</h3>
+<pre class="text"><code>Entrada: hola.
+Operación: Integer.parseInt(text).
+Resultado: error durante la ejecución.
+Demuestra: un texto no convertible no produce un entero válido.</code></pre>
+<p>No publiques contraseñas, tokens, datos personales ni capturas que
+los contengan.</p>
+<h2 id="3-diario-site-personal-y-site-de-equipo-no-son-lo-mismo">3.
+Diario, Site personal y Site de equipo no son lo mismo</h2>
+<p>Cada lugar responde a una pregunta distinta. No copies la misma
+reflexión completa en todos.</p>
+<h3 id="ejemplo-1--diario-individual-proceso-personal">Ejemplo 1 —
+Diario individual: proceso personal</h3>
+<pre class="text"><code>Objetivo: leer un nombre con Scanner.
+Acción y prueba: ejecuté dos veces con nombres ficticios.
+Bloqueo: olvidé guardar el resultado de nextLine().
+Siguiente paso: usar la variable en el saludo.</code></pre>
+<h3 id="ejemplo-2--site-personal-selección-explicada">Ejemplo 2 — Site
+personal: selección explicada</h3>
+<pre class="text"><code>He seleccionado la prueba de Scanner porque demuestra que puedo seguir el flujo pedir → leer → guardar → usar. El enlace lleva a la evidencia concreta.</code></pre>
+<p>El Site personal selecciona y explica; no copia todas las entradas
+del diario.</p>
+<h3 id="ejemplo-3--site-de-equipo-trabajo-colectivo">Ejemplo 3 — Site de
+equipo: trabajo colectivo</h3>
+<pre class="text"><code>Decisión del equipo: usar mensajes breves y coherentes.
+Prueba compartida: revisión cruzada de la salida.
+Review: el incremento muestra el flujo previsto.
+Retrospectiva: necesitamos acordar los nombres antes de programar.</code></pre>
+<h3 id="ejemplo-4--moodle-índice-de-entrega">Ejemplo 4 — Moodle: índice
+de entrega</h3>
+<p>En Moodle se entregan los enlaces solicitados. No hace falta pegar
+otra copia de todo el diario, el README y los Sites.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Enlazar una carpeta general en lugar del archivo o evidencia
+concreta.</li>
+<li>Guardar una captura sin entrada, salida ni explicación.</li>
+<li>Copiar la misma reflexión en diario, Sites y Moodle.</li>
+<li>Publicar permisos cerrados que impiden revisar la evidencia.</li>
+<li>Incluir datos personales o credenciales.</li>
+</ul>
+<h2 id="comprueba-que-lo-entiendes">Comprueba que lo entiendes</h2>
+<ol type="1">
+<li>Pide a otra persona que ejecute H1 siguiendo solo tu README.</li>
+<li>Completa una evidencia con entrada, salida esperada, salida obtenida
+y qué demuestra.</li>
+<li>Clasifica tres contenidos entre diario, Site personal y Site de
+equipo.</li>
+<li>Comprueba cada enlace desde una cuenta que tenga los permisos
+adecuados.</li>
+</ol>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S211 — Píldoras: constantes, literales y operaciones</title>
+  <link rel="stylesheet" href="../../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s211--píldoras-constantes-literales-y-operaciones">S211 —
+Píldoras: constantes, literales y operaciones</h1>
+<blockquote>
+<p>Material de consulta de la sesión S211. Predice cada resultado antes
+de ejecutar los ejemplos.</p>
+</blockquote>
+<h2 id="1-constantes-con-final">1. Constantes con
+<code>final</code></h2>
+<p>Una constante representa un dato que no debe cambiar durante la
+ejecución. En Java usamos <code>final</code> y, por convención, un
+nombre en mayúsculas con guiones bajos.</p>
+<h3 id="ejemplo-1--nombre-del-asistente">Ejemplo 1 — Nombre del
+asistente</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> ASSISTANT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>ASSISTANT_NAME<span class="op">);</span></span></code></pre></div>
+<h3 id="ejemplo-2--año-de-inicio">Ejemplo 2 — Año de inicio</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="dt">int</span> START_YEAR <span class="op">=</span> <span class="dv">2026</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Inicio: &quot;</span> <span class="op">+</span> START_YEAR<span class="op">);</span></span></code></pre></div>
+<h3 id="ejemplo-3--reasignación-no-permitida">Ejemplo 3 — Reasignación
+no permitida</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="dt">int</span> MAX_ATTEMPTS <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>MAX_ATTEMPTS <span class="op">=</span> <span class="dv">4</span><span class="op">;</span> <span class="co">// error: una constante no se reasigna</span></span></code></pre></div>
+<p>No todo dato que hoy coincide varias veces debe ser constante: lo es
+cuando su significado indica que no debe cambiar durante esa
+ejecución.</p>
+<h2 id="2-literal--valor-escrito-directamente">2. Literal = valor
+escrito directamente</h2>
+<h3 id="ejemplo-1--literales-de-varios-tipos">Ejemplo 1 — Literales de
+varios tipos</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="dv">5</span><span class="op">;</span>                 <span class="co">// 5 es literal entero</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> score <span class="op">=</span> <span class="fl">7.5</span><span class="op">;</span>            <span class="co">// 7.5 es literal decimal</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> initial <span class="op">=</span> <span class="ch">&#39;L&#39;</span><span class="op">;</span>            <span class="co">// &#39;L&#39; es literal de carácter</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> message <span class="op">=</span> <span class="st">&quot;Hola&quot;</span><span class="op">;</span>       <span class="co">// &quot;Hola&quot; es literal de texto</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> ready <span class="op">=</span> <span class="kw">true</span><span class="op">;</span>          <span class="co">// true es literal lógico</span></span></code></pre></div>
+<h3 id="ejemplo-2--comillas-simples-y-dobles">Ejemplo 2 — Comillas
+simples y dobles</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> initial <span class="op">=</span> <span class="ch">&#39;M&#39;</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> name <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<h3 id="ejemplo-3--literal-reutilizado-mediante-constante">Ejemplo 3 —
+Literal reutilizado mediante constante</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> ASSISTANT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy &quot;</span> <span class="op">+</span> ASSISTANT_NAME<span class="op">);</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>ASSISTANT_NAME <span class="op">+</span> <span class="st">&quot; está preparado&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>El texto estable se define una sola vez.</p>
+<h2 id="3-operadores-aritméticos">3. Operadores aritméticos</h2>
+<p><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> y
+<code>%</code> producen un resultado. Debemos mostrarlo, guardarlo o
+usarlo si queremos conservarlo.</p>
+<h3 id="ejemplo-1--operaciones-básicas">Ejemplo 1 — Operaciones
+básicas</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> total <span class="op">=</span> <span class="dv">6</span> <span class="op">+</span> <span class="dv">2</span><span class="op">;</span>       <span class="co">// 8</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> pending <span class="op">=</span> <span class="dv">6</span> <span class="op">-</span> <span class="dv">2</span><span class="op">;</span>     <span class="co">// 4</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> minutes <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">60</span><span class="op">;</span>    <span class="co">// 180</span></span></code></pre></div>
+<h3 id="ejemplo-2--división-entera-y-real">Ejemplo 2 — División entera y
+real</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span>        <span class="co">// 2</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> b <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> <span class="fl">2.0</span><span class="op">;</span>   <span class="co">// 2.5</span></span></code></pre></div>
+<p>Si ambos operandos son enteros, la parte decimal no aparece.</p>
+<h3 id="ejemplo-3--precedencia">Ejemplo 3 — Precedencia</h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> resultA <span class="op">=</span> <span class="dv">8</span> <span class="op">*</span> <span class="dv">4</span> <span class="op">+</span> <span class="dv">2</span><span class="op">;</span>      <span class="co">// 34</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> resultB <span class="op">=</span> <span class="dv">8</span> <span class="op">*</span> <span class="op">(</span><span class="dv">4</span> <span class="op">+</span> <span class="dv">2</span><span class="op">);</span>    <span class="co">// 48</span></span></code></pre></div>
+<p>Los paréntesis permiten expresar con claridad qué se calcula
+primero.</p>
+<h2 id="4-el-resto-">4. El resto <code>%</code></h2>
+<p><code>%</code> no calcula un porcentaje: devuelve el resto de una
+división entera.</p>
+<h3 id="ejemplo-1--reparto">Ejemplo 1 — Reparto</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> candies <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> people <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> remaining <span class="op">=</span> candies <span class="op">%</span> people<span class="op">;</span> <span class="co">// 2</span></span></code></pre></div>
+<h3 id="ejemplo-2--saber-si-un-número-es-par">Ejemplo 2 — Saber si un
+número es par</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> number <span class="op">=</span> <span class="dv">8</span><span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> remainder <span class="op">=</span> number <span class="op">%</span> <span class="dv">2</span><span class="op">;</span> <span class="co">// 0</span></span></code></pre></div>
+<p>Si el resto al dividir entre 2 es <code>0</code>, el número es
+par.</p>
+<h3 id="ejemplo-3--ciclos-sencillos">Ejemplo 3 — Ciclos sencillos</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> minute <span class="op">=</span> <span class="dv">67</span><span class="op">;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> minutesAfterHour <span class="op">=</span> minute <span class="op">%</span> <span class="dv">60</span><span class="op">;</span> <span class="co">// 7</span></span></code></pre></div>
+<h2 id="5-actualizar-sin-reescribir-todo">5. Actualizar sin reescribir
+todo</h2>
+<h3 id="ejemplo-1--operadores-compuestos">Ejemplo 1 — Operadores
+compuestos</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> tasks <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>tasks <span class="op">+=</span> <span class="dv">2</span><span class="op">;</span> <span class="co">// equivale a tasks = tasks + 2; ahora vale 5</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>tasks <span class="op">-=</span> <span class="dv">1</span><span class="op">;</span> <span class="co">// ahora vale 4</span></span></code></pre></div>
+<h3 id="ejemplo-2--incremento-y-decremento">Ejemplo 2 — Incremento y
+decremento</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> attempts <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>attempts<span class="op">++;</span> <span class="co">// 2</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>attempts<span class="op">--;</span> <span class="co">// 1</span></span></code></pre></div>
+<h3 id="ejemplo-3--actualizar-una-cantidad-mayor">Ejemplo 3 — Actualizar
+una cantidad mayor</h3>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> minutes <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>minutes <span class="op">*=</span> <span class="dv">2</span><span class="op">;</span> <span class="co">// equivale a minutes = minutes * 2; ahora vale 60</span></span></code></pre></div>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Intentar cambiar una variable declarada con <code>final</code>.</li>
+<li>Confundir <code>%</code> con porcentaje.</li>
+<li>Esperar <code>2.5</code> en una división
+<code>int / int</code>.</li>
+<li>Calcular un resultado sin guardarlo, mostrarlo ni usarlo.</li>
+<li>Leer <code>tasks++</code> como si declarase otra variable.</li>
+</ul>
+<h2 id="comprueba-que-lo-entiendes">Comprueba que lo entiendes</h2>
+<ol type="1">
+<li>Clasifica cinco literales por tipo.</li>
+<li>Predice <code>7 / 2</code>, <code>7 / 2.0</code> y
+<code>7 % 2</code>.</li>
+<li>Explica la diferencia entre variable y constante.</li>
+<li>Parte de <code>int tasks = 3;</code> y predice tres actualizaciones
+distintas.</li>
+</ol>
+
+  </main>
+</body>
+</html>

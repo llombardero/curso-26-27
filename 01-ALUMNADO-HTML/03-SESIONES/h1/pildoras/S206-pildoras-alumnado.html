@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S206 — Píldoras: alcance y calidad de H1</title>
+  <link rel="stylesheet" href="../../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s206--píldoras-alcance-y-calidad-de-h1">S206 — Píldoras: alcance
+y calidad de H1</h1>
+<blockquote>
+<p>Material de consulta de la sesión S206. Lee cada ejemplo y explica
+por qué cumple —o no— el criterio indicado. No necesitas añadir más
+funciones a tu MiniJarvis.</p>
+</blockquote>
+<h2 id="1-qué-hace-bueno-a-un-primer-programa">1. ¿Qué hace bueno a un
+primer programa?</h2>
+<p>Un primer programa debe ser <strong>correcto</strong>,
+<strong>eficiente</strong> y <strong>mantenible</strong>.</p>
+<ul>
+<li><strong>Correcto:</strong> hace lo que se ha pedido y podemos
+comprobarlo.</li>
+<li><strong>Eficiente:</strong> resuelve el reto sin trabajo ni
+complejidad innecesarios.</li>
+<li><strong>Mantenible:</strong> se entiende y se puede modificar sin
+romperlo fácilmente.</li>
+</ul>
+<h3 id="ejemplo-1--correcto">Ejemplo 1 — Correcto</h3>
+<p>Requisito: «Al ejecutar, muestra un saludo».</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Es correcto porque la salida permite comprobar el requisito. En
+cambio, un programa que compila pero no muestra el saludo todavía no
+cumple el requisito.</p>
+<h3 id="ejemplo-2--eficiente">Ejemplo 2 — Eficiente</h3>
+<p>Para H1 basta con pedir un nombre y responder. No necesitamos todavía
+un menú, un bucle, una base de datos ni una conexión con una IA
+real.</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Encantado, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Esta solución es adecuada al alcance. Añadir cinco clases y veinte
+opciones que nadie ha pedido produciría más código que mantener, pero no
+demostraría mejor el objetivo de H1.</p>
+<h3 id="ejemplo-3--mantenible">Ejemplo 3 — Mantenible</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Encantado, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Se entiende mejor que:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> x <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Encantado, &quot;</span> <span class="op">+</span> x <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Los dos ejemplos producen la misma salida, pero <code>userName</code>
+explica qué dato se guarda.</p>
+<h3 id="ejemplo-4--los-tres-criterios-juntos">Ejemplo 4 — Los tres
+criterios juntos</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> ASSISTANT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Álex&quot;</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy &quot;</span> <span class="op">+</span> ASSISTANT_NAME <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Encantado, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<ul>
+<li>Es correcto si esos son los mensajes pedidos.</li>
+<li>Es eficiente porque no añade funciones ajenas a H1.</li>
+<li>Es mantenible porque los nombres explican la intención y el nombre
+fijo se guarda una sola vez.</li>
+</ul>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Confundir «compila» con «es correcto». Compilar solo significa que
+Java ha podido preparar el programa; aún falta comprobar el
+comportamiento.</li>
+<li>Confundir «eficiente» con «va muy rápido». En H1 importa sobre todo
+no añadir complejidad innecesaria.</li>
+<li>Pensar que más líneas o más funciones siempre significan mejor
+programa.</li>
+<li>Usar nombres como <code>x</code>, <code>dato1</code> o
+<code>a</code> cuando podemos expresar qué guardan.</li>
+</ul>
+<h2 id="comprueba-que-lo-entiendes">Comprueba que lo entiendes</h2>
+<ol type="1">
+<li>¿Qué requisito demuestra cada línea visible de tu programa?</li>
+<li>¿Qué parte quitarías si no pertenece al alcance de H1?</li>
+<li>Señala un nombre que ayude a entender tu código.</li>
+<li>Explica por qué «compila» no basta para afirmar que el programa es
+correcto.</li>
+</ol>
+
+  </main>
+</body>
+</html>

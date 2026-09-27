@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S210 — Píldoras: variables, tipos y nombres</title>
+  <link rel="stylesheet" href="../../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s210--píldoras-variables-tipos-y-nombres">S210 — Píldoras:
+variables, tipos y nombres</h1>
+<blockquote>
+<p>Material de consulta de la sesión S210. Una variable permite guardar
+un dato con un tipo y un nombre para utilizarlo después.</p>
+</blockquote>
+<h2 id="1-variable--dato--nombre--memoria">1. Variable = dato + nombre +
+memoria</h2>
+<p>Una variable es una zona de memoria identificada por un nombre. Su
+valor puede cambiar durante la ejecución si su tipo lo permite.</p>
+<h3 id="ejemplo-1--entero">Ejemplo 1 — Entero</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>studyHours<span class="op">);</span></span></code></pre></div>
+<p><code>studyHours</code> es la variable; <code>4</code> es el valor
+guardado en este momento.</p>
+<h3 id="ejemplo-2--texto">Ejemplo 2 — Texto</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName<span class="op">);</span></span></code></pre></div>
+<p>La variable evita repetir el nombre directamente en todos los
+mensajes.</p>
+<h3 id="ejemplo-3--el-valor-cambia">Ejemplo 3 — El valor cambia</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> completedTasks <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>completedTasks <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>completedTasks<span class="op">);</span></span></code></pre></div>
+<p>La salida es <code>2</code>. La variable es la misma; ha cambiado su
+valor.</p>
+<h2 id="2-mapa-de-tipos-de-tema-1">2. Mapa de tipos de Tema 1</h2>
+<p>El tipo indica qué clase de dato puede guardar una variable.</p>
+<h3 id="ejemplo-1--tipos-de-uso-inmediato">Ejemplo 1 — Tipos de uso
+inmediato</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span>          <span class="co">// entero</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> averageScore <span class="op">=</span> <span class="fl">7.5</span><span class="op">;</span>   <span class="co">// decimal</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> goalReached <span class="op">=</span> <span class="kw">true</span><span class="op">;</span>  <span class="co">// verdadero o falso</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> initial <span class="op">=</span> <span class="ch">&#39;L&#39;</span><span class="op">;</span>          <span class="co">// un carácter</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span>   <span class="co">// texto</span></span></code></pre></div>
+<h3 id="ejemplo-2--char-y-string">Ejemplo 2 — <code>char</code> y
+<code>String</code></h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> initial <span class="op">=</span> <span class="ch">&#39;L&#39;</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> name <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p><code>char</code> usa comillas simples y guarda un carácter.
+<code>String</code> usa comillas dobles y puede guardar una cadena de
+caracteres.</p>
+<h3 id="ejemplo-3--entero-y-decimal">Ejemplo 3 — Entero y decimal</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> sessions <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> duration <span class="op">=</span> <span class="fl">1.5</span><span class="op">;</span></span></code></pre></div>
+<p>No elijas el tipo por el nombre de la variable, sino por los valores
+que necesitas representar.</p>
+<h2 id="3-nombres-válidos-y-significativos">3. Nombres válidos y
+significativos</h2>
+<p>Un buen nombre es válido para Java y explica qué dato guarda.</p>
+<h3 id="ejemplo-1--mejorar-nombres-vagos">Ejemplo 1 — Mejorar nombres
+vagos</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> x <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> n <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>Mejor:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<h3 id="ejemplo-2--nombres-inválidos">Ejemplo 2 — Nombres inválidos</h3>
+<pre class="text"><code>1name      empieza por número
+my name    contiene un espacio
+class      es palabra reservada</code></pre>
+<h3 id="ejemplo-3--convención-lowercamelcase">Ejemplo 3 — Convención
+<code>lowerCamelCase</code></h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> assistantName <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> completedTasks <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> averageScore <span class="op">=</span> <span class="fl">8.25</span><span class="op">;</span></span></code></pre></div>
+<p>La primera palabra comienza en minúscula y las siguientes, en
+mayúscula.</p>
+<h2 id="4-declarar-inicializar-y-asignar">4. Declarar, inicializar y
+asignar</h2>
+<ul>
+<li><strong>Declarar:</strong> indicar tipo y nombre.</li>
+<li><strong>Inicializar:</strong> dar el primer valor.</li>
+<li><strong>Asignar:</strong> guardar un nuevo valor
+posteriormente.</li>
+</ul>
+<h3 id="ejemplo-1--declarar-y-luego-inicializar">Ejemplo 1 — Declarar y
+luego inicializar</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours<span class="op">;</span>  <span class="co">// declaración</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span>  <span class="co">// primera asignación: inicialización</span></span></code></pre></div>
+<h3 id="ejemplo-2--declarar-e-inicializar-a-la-vez">Ejemplo 2 — Declarar
+e inicializar a la vez</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<h3 id="ejemplo-3--cambiar-el-valor">Ejemplo 3 — Cambiar el valor</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>studyHours <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span></code></pre></div>
+<p>No se repite <code>int</code> en la segunda línea porque la variable
+ya estaba declarada.</p>
+<h3 id="ejemplo-4---no-significa-igualdad-matemática">Ejemplo 4 —
+<code>=</code> no significa igualdad matemática</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> tasks <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>tasks <span class="op">=</span> tasks <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span></code></pre></div>
+<p>Java calcula primero <code>tasks + 1</code> y guarda el resultado,
+<code>3</code>, en <code>tasks</code>.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Confundir la variable con su valor actual.</li>
+<li>Usar <code>String</code> para cualquier dato sin pensar qué
+operaciones necesitará.</li>
+<li>Escribir otra vez el tipo al cambiar un valor.</li>
+<li>Usar nombres válidos pero poco explicativos.</li>
+</ul>
+<h2 id="comprueba-que-lo-entiendes">Comprueba que lo entiendes</h2>
+<ol type="1">
+<li>Identifica tipo, nombre y valor en tres ejemplos.</li>
+<li>Elige tipos para un nombre, una edad, una nota, una inicial y una
+respuesta sí/no.</li>
+<li>Renombra tres variables vagas.</li>
+<li>Señala una declaración, una inicialización y una asignación
+posterior.</li>
+</ol>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S213 — Píldoras: comparaciones, lógica y decisiones</title>
+  <link rel="stylesheet" href="../../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s213--píldoras-comparaciones-lógica-y-decisiones">S213 —
+Píldoras: comparaciones, lógica y decisiones</h1>
+<blockquote>
+<p>Material de consulta de la sesión S213. Predice siempre
+<code>true</code>, <code>false</code> o la salida antes de ejecutar. H1
+introduce decisiones pequeñas; los menús y decisiones encadenadas se
+trabajarán en H2.</p>
+</blockquote>
+<h2 id="1-comparar-produce-un-boolean">1. Comparar produce un
+<code>boolean</code></h2>
+<p>Una comparación no devuelve uno de los valores comparados: devuelve
+<code>true</code> o <code>false</code>.</p>
+<h3 id="ejemplo-1--igual-y-distinto">Ejemplo 1 — Igual y distinto</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>hours <span class="op">==</span> <span class="dv">4</span><span class="op">);</span> <span class="co">// true</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>hours <span class="op">!=</span> <span class="dv">4</span><span class="op">);</span> <span class="co">// false</span></span></code></pre></div>
+<p><code>=</code> asigna un valor; <code>==</code> compara valores.</p>
+<h3 id="ejemplo-2--orden">Ejemplo 2 — Orden</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>hours <span class="op">&gt;</span> <span class="dv">3</span><span class="op">);</span>  <span class="co">// true</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>hours <span class="op">&lt;=</span> <span class="dv">4</span><span class="op">);</span> <span class="co">// false</span></span></code></pre></div>
+<h3 id="ejemplo-3--guardar-el-resultado">Ejemplo 3 — Guardar el
+resultado</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> enough <span class="op">=</span> hours <span class="op">&gt;=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>enough<span class="op">);</span> <span class="co">// true</span></span></code></pre></div>
+<h3 id="ejemplo-4--texto">Ejemplo 4 — Texto</h3>
+<p>En Tema 1 no usamos <code>==</code> para comparar el contenido de dos
+<code>String</code>. Basta con recordar que el texto necesita otra forma
+de comparación, que se retomará cuando sea necesaria.</p>
+<h2 id="2-and-or-not">2. AND, OR, NOT</h2>
+<ul>
+<li><code>&amp;&amp;</code> — AND: las dos condiciones deben ser
+verdaderas.</li>
+<li><code>||</code> — OR: basta con que una sea verdadera.</li>
+<li><code>!</code> — NOT: invierte <code>true</code> y
+<code>false</code>.</li>
+</ul>
+<h3 id="ejemplo-1--and">Ejemplo 1 — AND</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> hasName <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> hasGoal <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> canStart <span class="op">=</span> hasName <span class="op">&amp;&amp;</span> hasGoal<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
+<p>Si <code>hasGoal</code> fuese <code>false</code>,
+<code>canStart</code> sería <code>false</code>.</p>
+<h3 id="ejemplo-2--or">Ejemplo 2 — OR</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> hasQuestion <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> hasError <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> needsHelp <span class="op">=</span> hasQuestion <span class="op">||</span> hasError<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
+<h3 id="ejemplo-3--not">Ejemplo 3 — NOT</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> finished <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> pending <span class="op">=</span> <span class="op">!</span>finished<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
+<h3 id="ejemplo-4--expresión-combinada-y-legible">Ejemplo 4 — Expresión
+combinada y legible</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> canStart <span class="op">=</span> hasName <span class="op">&amp;&amp;</span> hasGoal<span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> needsHelp <span class="op">=</span> <span class="op">!</span>canStart <span class="op">||</span> hasError<span class="op">;</span></span></code></pre></div>
+<p>Primero explica cada parte con palabras: «Necesita ayuda si no puede
+empezar o si tiene un error».</p>
+<h2 id="3-del-boolean-a-una-decisión">3. Del <code>boolean</code> a una
+decisión</h2>
+<p><code>if</code> necesita una condición que produzca <code>true</code>
+o <code>false</code>.</p>
+<h3 id="ejemplo-1--variable-booleana">Ejemplo 1 — Variable booleana</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> ready <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>ready<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Empezamos&quot;</span><span class="op">);</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="ejemplo-2--comparación-directa">Ejemplo 2 — Comparación
+directa</h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>hours <span class="op">&gt;=</span> <span class="dv">4</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo alcanzado&quot;</span><span class="op">);</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="ejemplo-3--lo-que-no-sirve-como-condición">Ejemplo 3 — Lo que no
+sirve como condición</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">// if (hours) { ... }  // incorrecto: hours es int, no boolean</span></span></code></pre></div>
+<h2 id="4-if--else-dos-caminos">4. <code>if / else</code>: dos
+caminos</h2>
+<p>Si la condición es <code>true</code>, se ejecuta el bloque
+<code>if</code>; si es <code>false</code>, el bloque
+<code>else</code>.</p>
+<h3 id="ejemplo-1--horas-de-estudio">Ejemplo 1 — Horas de estudio</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>hours <span class="op">&gt;=</span> <span class="dv">4</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo alcanzado&quot;</span><span class="op">);</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo pendiente&quot;</span><span class="op">);</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Prueba <code>hours = 5</code> y <code>hours = 2</code>.</p>
+<h3 id="ejemplo-2--preparación">Ejemplo 2 — Preparación</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>ready<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis está preparado&quot;</span><span class="op">);</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Falta completar la preparación&quot;</span><span class="op">);</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="ejemplo-3--dos-casos-necesarios">Ejemplo 3 — Dos casos
+necesarios</h3>
+<p>Un único caso favorable no demuestra el <code>else</code>. Guarda la
+entrada o valor usado y la salida esperada de cada rama.</p>
+<h2 id="5-anidamiento-reconocer-la-idea">5. Anidamiento: reconocer la
+idea</h2>
+<p>Un <code>if</code> puede contener otra decisión. En H1 solo necesitas
+leer la estructura, no construir decisiones complejas.</p>
+<h3 id="ejemplo-1--primera-condición-y-condición-interior">Ejemplo 1 —
+Primera condición y condición interior</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>hasName<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>hasGoal<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Datos completos&quot;</span><span class="op">);</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Primero se comprueba <code>hasName</code>. Solo si es
+<code>true</code> se comprueba <code>hasGoal</code>.</p>
+<h3 id="ejemplo-2--rama-exterior">Ejemplo 2 — Rama exterior</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>ready<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>hasError<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Revisa el error&quot;</span><span class="op">);</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Puedes continuar&quot;</span><span class="op">);</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Completa la preparación&quot;</span><span class="op">);</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="ejemplo-3--evitar-sobrecarga">Ejemplo 3 — Evitar sobrecarga</h3>
+<p>Si necesitas dibujar muchas ramas para explicar una condición de H1,
+probablemente estás adelantando el trabajo de H2. Reduce la práctica a
+una pregunta sí/no defendible.</p>
+<h2 id="6-asignación-condicional-">6. Asignación condicional
+<code>?:</code></h2>
+<p>El operador ternario elige un valor a partir de una condición
+sencilla.</p>
+<pre class="text"><code>condición ? valor_si_true : valor_si_false</code></pre>
+<h3 id="ejemplo-1--mensaje">Ejemplo 1 — Mensaje</h3>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> message <span class="op">=</span> hours <span class="op">&gt;=</span> <span class="dv">4</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>        <span class="op">?</span> <span class="st">&quot;Objetivo alcanzado&quot;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">:</span> <span class="st">&quot;Objetivo pendiente&quot;</span><span class="op">;</span></span></code></pre></div>
+<h3 id="ejemplo-2--estado">Ejemplo 2 — Estado</h3>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> status <span class="op">=</span> ready <span class="op">?</span> <span class="st">&quot;Preparado&quot;</span> <span class="op">:</span> <span class="st">&quot;Pendiente&quot;</span><span class="op">;</span></span></code></pre></div>
+<h3 id="ejemplo-3--valor-numérico">Ejemplo 3 — Valor numérico</h3>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> points <span class="op">=</span> goalReached <span class="op">?</span> <span class="dv">1</span> <span class="op">:</span> <span class="dv">0</span><span class="op">;</span></span></code></pre></div>
+<h3 id="ejemplo-4--cuándo-preferir-if--else">Ejemplo 4 — Cuándo preferir
+<code>if / else</code></h3>
+<p>Si cada camino necesita varias instrucciones, <code>if / else</code>
+suele ser más claro. El ternario no sustituye a cualquier decisión.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Usar <code>=</code> cuando se quería comparar con
+<code>==</code>.</li>
+<li>Escribir <code>if (hours)</code> cuando <code>hours</code> es
+<code>int</code>.</li>
+<li>Memorizar <code>&amp;&amp;</code>, <code>||</code> y <code>!</code>
+sin traducir la expresión a palabras.</li>
+<li>Probar solo la rama que produce <code>true</code>.</li>
+<li>Comparar el contenido de <code>String</code> con
+<code>==</code>.</li>
+<li>Encadenar decisiones complejas que pertenecen a H2.</li>
+</ul>
+<h2 id="comprueba-que-lo-entiendes">Comprueba que lo entiendes</h2>
+<ol type="1">
+<li>Predice cuatro comparaciones con resultados <code>true</code> y
+<code>false</code>.</li>
+<li>Traduce a palabras una expresión con <code>&amp;&amp;</code>, otra
+con <code>||</code> y otra con <code>!</code>.</li>
+<li>Prueba las dos ramas de un <code>if / else</code> y anota los
+valores usados.</li>
+<li>Señala condición, valor verdadero y valor falso en un ternario.</li>
+</ol>
+
+  </main>
+</body>
+</html>

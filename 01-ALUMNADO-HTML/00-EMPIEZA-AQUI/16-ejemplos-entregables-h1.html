@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplos de entregables H1</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="ejemplos-de-entregables-h1">Ejemplos de entregables H1</h1>
+<h2 id="para-qué-sirve-este-documento">Para qué sirve este
+documento</h2>
+<p>Este documento muestra ejemplos de cómo pueden quedar los entregables
+de H1.</p>
+<p>No copies los ejemplos literalmente. Úsalos como modelo de claridad,
+profundidad y formato. Tus entregables deben hablar de tu equipo, tu
+código, tus pruebas y tus evidencias reales.</p>
+<p>Regla principal:</p>
+<blockquote>
+<p>Una evidencia útil permite comprobar algo concreto: qué se probó, con
+qué entrada, qué salida se esperaba, qué salida apareció y dónde está el
+enlace exacto.</p>
+</blockquote>
+<h2 id="1-ejemplo-de-diario-individual">1. Ejemplo de diario
+individual</h2>
+<p>Dónde se hace:</p>
+<ul>
+<li>Sheet de diario individual.</li>
+</ul>
+<p>Cuándo se usa en H1:</p>
+<ul>
+<li>Al final de una sesión con avance, prueba, bloqueo, decisión o uso
+de IA.</li>
+</ul>
+<p>Ejemplo de fila:</p>
+<pre class="text"><code>Fecha: 2026-10-02
+Sesión: S212
+Hito: H1
+Objetivo: leer un nombre ficticio con Scanner y usarlo en la salida.
+Acción realizada: añadí Scanner, pedí un nombre, guardé nextLine() en userName y lo usé en un saludo.
+Prueba y resultado: ejecuté con el nombre ficticio Laura y la consola mostró &quot;Hola, Laura.&quot;.
+Evidencia enlazada: enlace al commit o captura concreta donde se ve código y consola.
+Bloqueo: al principio leía el nombre, pero seguía mostrando un saludo fijo.
+Uso de IA: no.
+Siguiente paso: leer horas como texto y convertirlas con parseInt.</code></pre>
+<p>Ejemplo demasiado pobre:</p>
+<pre class="text"><code>Hoy hice Scanner. Funciona.</code></pre>
+<p>Por qué no sirve:</p>
+<ul>
+<li>No dice qué se probó.</li>
+<li>No indica entrada ni salida.</li>
+<li>No enlaza una evidencia concreta.</li>
+<li>No permite defender el aprendizaje.</li>
+</ul>
+<h2 id="2-ejemplo-de-scrum-de-equipo">2. Ejemplo de Scrum de equipo</h2>
+<p>Dónde se hace:</p>
+<ul>
+<li>Sheet Scrum del equipo.</li>
+</ul>
+<p>Cuándo se usa en H1:</p>
+<ul>
+<li>Durante todo el hito: backlog, tareas, decisiones, bloqueos, review
+y retrospectiva.</li>
+</ul>
+<p>Ejemplo de backlog y tareas:</p>
+<pre class="text"><code>Equipo: Ada
+Hito: H1 - Primer MiniJarvis
+
+Tarea: Definir qué entra y qué queda fuera de H1
+Responsable: equipo completo
+Estado: hecho
+Evidencia: decisión S206 en Scrum
+
+Tarea: Implementar saludo inicial
+Responsable: Nora
+Estado: hecho
+Evidencia: commit S209-salida-clara
+
+Tarea: Leer nombre ficticio con Scanner
+Responsable: Luis y Marta
+Estado: hecho
+Evidencia: README, apartado ejemplo de ejecución
+
+Tarea: Probar dos ramas del if/else
+Responsable: Amira
+Estado: en curso
+Bloqueo: solo está probado el caso true
+Siguiente paso: ejecutar con hours = 2 y registrar salida
+
+Decisión S209:
+Usaremos mensajes breves y claros. No diremos que MiniJarvis recuerda conversaciones porque H1 no tiene memoria.
+
+Review H1:
+El programa ejecuta, saluda, pide nombre ficticio, calcula minutos y muestra si el objetivo se alcanza.
+
+Retrospectiva H1:
+Funcionó revisar por parejas antes de entregar. Debemos actualizar Scrum durante la sesión y no solo al final.</code></pre>
+<p>Ejemplo demasiado pobre:</p>
+<pre class="text"><code>Tarea: hacer Java
+Responsable: todos
+Estado: bien</code></pre>
+<p>Por qué no sirve:</p>
+<ul>
+<li>No se puede comprobar.</li>
+<li>No tiene evidencia enlazada.</li>
+<li>No permite saber qué falta.</li>
+</ul>
+<h2 id="3-ejemplo-de-repositorio-github">3. Ejemplo de repositorio
+GitHub</h2>
+<p>Dónde se entrega:</p>
+<ul>
+<li>En GitHub.</li>
+<li>En Moodle se pega el enlace al repositorio o al archivo concreto que
+se pida.</li>
+</ul>
+<p>Estructura suficiente para H1:</p>
+<pre class="text"><code>minijarvis-h1/
+├── README.md
+├── src/
+│   └── Main.java
+└── practicas-h1/
+    ├── S208-estructura-minima.java
+    ├── S211-operaciones.java
+    └── S213-if-else.java</code></pre>
+<p>Ejemplo de <code>Main.java</code> para H1:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="bu">String</span> ASSISTANT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="dt">int</span> MINIMUM_HOURS <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy &quot;</span> <span class="op">+</span> ASSISTANT_NAME <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;Escribe un nombre ficticio: &quot;</span><span class="op">);</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;Horas de estudio de hoy: &quot;</span><span class="op">);</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> hoursText <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> studyHours <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>hoursText<span class="op">);</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> studyMinutes <span class="op">=</span> studyHours <span class="op">*</span> <span class="dv">60</span><span class="op">;</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Encantado, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Minutos de estudio: &quot;</span> <span class="op">+</span> studyMinutes<span class="op">);</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>studyHours <span class="op">&gt;=</span> MINIMUM_HOURS<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>            <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo alcanzado.&quot;</span><span class="op">);</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>            <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo pendiente.&quot;</span><span class="op">);</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>        scanner<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Ejemplo de commit útil:</p>
+<pre class="text"><code>S212: leer nombre ficticio con Scanner</code></pre>
+<p>Ejemplo de commit poco útil:</p>
+<pre class="text"><code>cambios</code></pre>
+<h2 id="4-ejemplo-de-readme-h1">4. Ejemplo de README H1</h2>
+<p>Dónde se entrega:</p>
+<ul>
+<li>Archivo <code>README.md</code> en la raíz del repositorio.</li>
+<li>En Moodle se pega el enlace al repositorio o al README.</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># MiniJarvis H1</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Qué hace</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>MiniJarvis H1 es un programa Java de consola. Muestra un saludo, pide un nombre ficticio, pide horas de estudio, calcula minutos y muestra si se alcanza un objetivo mínimo.</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Límites de H1</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>Esta versión no tiene menú, bucle principal, memoria, ficheros, clases propias complejas ni conexión con una IA real.</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cómo ejecutar</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Abrir el proyecto en IntelliJ.</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Abrir <span class="in">`src/Main.java`</span>.</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Ejecutar el método <span class="in">`main`</span>.</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Escribir datos ficticios cuando la consola los pida.</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejemplo de ejecución</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>Entrada usada:</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="in">Laura</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="in">5</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>Salida esperada:</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="in">Hola, soy MiniJarvis.</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="in">Escribe un nombre ficticio: Laura</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="in">Horas de estudio de hoy: 5</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="in">Encantado, Laura.</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="in">Minutos de estudio: 300</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="in">Objetivo alcanzado.</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pruebas realizadas</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>Caso A:</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Entrada: Laura, 5</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Resultado esperado: Objetivo alcanzado.</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Resultado obtenido: Objetivo alcanzado.</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Qué demuestra: la rama true del if funciona.</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>Caso B:</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Entrada: Sam, 2</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Resultado esperado: Objetivo pendiente.</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Resultado obtenido: Objetivo pendiente.</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Qué demuestra: la rama false del if funciona.</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>Entrada no convertible:</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Entrada en horas: hola</span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Resultado: el programa falla durante la ejecución al aplicar <span class="in">`Integer.parseInt`</span>.</span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Qué demuestra: <span class="in">`nextLine()`</span> devuelve texto y no todo texto se puede convertir a entero.</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evidencias</span></span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Enlace al commit final.</span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Enlace a captura o registro de ejecución.</span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Enlace al Scrum del equipo.</span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Uso de IA</span></span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a>No se ha usado IA.</span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## Qué sabemos defender</span></span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dónde empieza la ejecución.</span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Qué variables y constantes se usan.</span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Qué hace Scanner.</span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Por qué usamos parseInt.</span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Qué condición controla el if/else.</span></code></pre></div>
+<h2 id="5-ejemplo-de-site-personal-h1">5. Ejemplo de Site personal
+H1</h2>
+<p>Dónde se entrega:</p>
+<ul>
+<li>Página H1 del Site personal.</li>
+<li>En Moodle se pega el enlace profundo a esa página.</li>
+</ul>
+<p>Ejemplo de contenido:</p>
+<pre class="text"><code>Título: H1 - Primer MiniJarvis
+
+Reto con mis palabras:
+En H1 hemos construido una primera versión pequeña de MiniJarvis por consola. El objetivo era entender la base de Java y poder demostrarla con código ejecutable.
+
+Mi aportación individual:
+Me encargué de probar la entrada por teclado con Scanner y de registrar una prueba con entrada válida y otra no convertible.
+
+Decisión justificada:
+Usé el nombre `userName` en lugar de `x` porque permite entender que la variable guarda un nombre ficticio.
+
+Dificultad o cambio:
+Al principio pensaba que si escribía `5` en consola Java ya lo trataba como número. Después entendí que `nextLine()` devuelve texto y que necesitaba `Integer.parseInt`.
+
+Evidencia seleccionada:
+Enlace profundo a la prueba de S212.
+
+Qué demuestra:
+Demuestra que sé explicar el flujo pedir -&gt; leer -&gt; guardar -&gt; convertir -&gt; calcular -&gt; mostrar.
+
+Uso de IA:
+No usé IA en esta parte.
+
+Mejora para H2:
+Necesito probar mejor entradas no válidas y aprender a mantener el programa en ejecución con un menú.</code></pre>
+<p>Ejemplo demasiado pobre:</p>
+<pre class="text"><code>Hice MiniJarvis y aprendí Java.</code></pre>
+<p>Por qué no sirve:</p>
+<ul>
+<li>No selecciona una evidencia.</li>
+<li>No explica qué demuestra.</li>
+<li>No diferencia aportación individual y trabajo del equipo.</li>
+</ul>
+<h2 id="6-ejemplo-de-site-de-equipo-h1">6. Ejemplo de Site de equipo
+H1</h2>
+<p>Dónde se entrega:</p>
+<ul>
+<li>Página H1 del Site de equipo.</li>
+<li>En Moodle se pega el enlace profundo a esa página.</li>
+</ul>
+<p>Ejemplo de contenido:</p>
+<pre class="text"><code>Título: Equipo Ada - H1 Primer MiniJarvis
+
+Reto H1:
+Crear una primera versión ejecutable de MiniJarvis en Java, pequeña, clara y defendible.
+
+Incremento conseguido:
+Nuestro MiniJarvis saluda, pide un nombre ficticio, pide horas de estudio, calcula minutos y muestra si el objetivo mínimo se alcanza.
+
+Decisiones principales:
+No incluimos menú ni memoria porque pertenecen a H2 o hitos posteriores.
+Usamos mensajes sencillos para no prometer funciones inexistentes.
+Guardamos microprácticas separadas cuando no formaban parte del Main final.
+
+Pruebas realizadas:
+Prueba de saludo con nombre ficticio.
+Prueba de cálculo de minutos.
+Prueba de hours = 5.
+Prueba de hours = 2.
+Prueba de entrada no convertible.
+
+Enlaces:
+Repositorio GitHub: https://...
+README H1: https://...
+Scrum H1: https://...
+
+Review:
+El incremento cumple el alcance que definimos en S206.
+
+Retrospectiva:
+Funcionó bien revisar por parejas antes de entregar.
+Debemos mejorar la actualización diaria de Scrum.
+En H2 queremos probar antes de añadir más comandos.</code></pre>
+<h2 id="7-ejemplo-de-entrega-moodle-h1">7. Ejemplo de entrega Moodle
+H1</h2>
+<p>Dónde se entrega:</p>
+<ul>
+<li>Tarea Moodle de H1.</li>
+</ul>
+<p>Cuándo se entrega:</p>
+<ul>
+<li>Al cierre de H1, en S215 o en el plazo indicado por el
+profesor.</li>
+</ul>
+<p>Ejemplo de texto para Moodle:</p>
+<pre class="text"><code>Equipo: Ada
+Integrantes: Nora, Luis, Marta, Amira
+
+Repositorio GitHub:
+https://github.com/...
+
+README H1:
+https://github.com/.../README.md
+
+Site personal H1 - Nora:
+https://sites.google.com/...
+
+Site personal H1 - Luis:
+https://sites.google.com/...
+
+Site personal H1 - Marta:
+https://sites.google.com/...
+
+Site personal H1 - Amira:
+https://sites.google.com/...
+
+Site de equipo H1:
+https://sites.google.com/...
+
+Scrum de equipo H1:
+https://docs.google.com/spreadsheets/...
+
+Evidencia concreta de ejecución:
+https://...
+
+Permisos comprobados: sí
+
+Observaciones:
+La entrada no convertible está documentada como error de ejecución. Todavía no usamos try-catch porque no pertenece a H1.</code></pre>
+<p>Ejemplo que no sirve:</p>
+<pre class="text"><code>Está todo en Drive.</code></pre>
+<p>Por qué no sirve:</p>
+<ul>
+<li>No hay enlaces profundos.</li>
+<li>No indica qué debe revisar el profesor.</li>
+<li>No confirma permisos.</li>
+<li>No funciona como entrega oficial completa.</li>
+</ul>
+<h2 id="lista-final-antes-de-entregar-h1">Lista final antes de entregar
+H1</h2>
+<p>Antes de entregar en Moodle, revisa:</p>
+<ul>
+<li>El repositorio abre correctamente.</li>
+<li>El README está en la raíz del repositorio.</li>
+<li>El código ejecuta con datos ficticios.</li>
+<li>Hay evidencia de entrada y salida.</li>
+<li>Hay prueba de las dos ramas del <code>if/else</code>.</li>
+<li>El diario individual tiene entradas útiles.</li>
+<li>El Scrum de equipo tiene tareas, decisiones, review y
+retrospectiva.</li>
+<li>El Site personal selecciona evidencia individual.</li>
+<li>El Site de equipo comunica el incremento.</li>
+<li>Moodle contiene enlaces profundos, no carpetas generales.</li>
+<li>Los permisos están comprobados.</li>
+<li>No hay datos personales reales, contraseñas, claves ni tokens.</li>
+</ul>
+
+  </main>
+</body>
+</html>

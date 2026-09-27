@@ -5,19 +5,19 @@
 
 ## Última actualización
 
-2026-09-25 17:26 CEST. Estado comprobado en el árbol de trabajo y Git.
+2026-09-25 23:54 CEST. Estado comprobado en el árbol de trabajo y Git.
 
 ## Rama y raíz
 
 - Rama activa: `refactor/hitos-v3`.
 - Raíz: `/mnt/compartido/Programación-26-27/Minijarvis`.
-- `HEAD`: `c738289` (`Actualizado estado actual y sincronizado github Itos-v3`).
+- `HEAD`: `fc5e9be` (`Revisión diapositvas realizadas`).
 - `HEAD` coincide con `origin/refactor/hitos-v3`; no hay commits locales pendientes de publicación.
-- No hay cambios preparados en el índice.
+- El árbol contiene cambios locales de continuidad y las píldoras H1 aún no versionadas que se detallan más abajo.
 
 ## Objetivo actual
 
-Organizar para su consolidación los cambios ya revisados de la migración H0-H2 al modelo de hitos v3, sin mezclar fuentes, documentación técnica y artefactos generados.
+Completar y revisar las píldoras de consulta del alumnado para las sesiones S206-S214 de H1, manteniendo su publicación progresiva fuera del paquete Moodle hasta que corresponda.
 
 ## Decisiones vigentes
 
@@ -27,8 +27,11 @@ Organizar para su consolidación los cambios ya revisados de la migración H0-H2
 - El producto principal de H1 permanece pequeño; no se premia la complejidad no solicitada.
 - La evidencia de proceso se registra una sola vez: diario individual para el proceso personal, Scrum para el trabajo colectivo y Sites para seleccionar y explicar evidencias enlazadas. No existe un portfolio paralelo en H1.
 - Los PDF temáticos permanecen en el área docente y se publican progresivamente. No se anticipan todos en el paquete HTML del alumnado.
+- Las píldoras de H1 se organizan en un documento autónomo por sesión bajo `01-ALUMNADO/03-SESIONES/h1/pildoras/`; S215 no tiene documento porque su sesión no contiene píldoras.
+- Los HTML de las píldoras se conservan como derivados sincronizados. El staging Moodle y los ZIP no se actualizan todavía para no anticipar materiales al alumnado.
 - Toda trazabilidad curricular se limita a RA y criterios de Programación.
 - Las fuentes se modifican antes que sus derivados; el HTML, las presentaciones y los ZIP se regeneran y verifican después.
+- El commit publicado `fc5e9be` no se reescribirá para recuperar la partición por bloques que se había propuesto; esa separación se aplicará únicamente a cambios futuros.
 
 ## Trabajo completado relevante
 
@@ -41,41 +44,38 @@ Organizar para su consolidación los cambios ya revisados de la migración H0-H2
 - Los siete HTML regenerados de H3, H5 y HF reproducen exactamente sus fuentes canónicas actuales; se mantienen como sincronización derivada, no como ampliación curricular.
 - Se añadió `generar_paquete_moodle.py` con modo `--check`, ZIP determinista y sincronización de recursos del alumnado, tareas Moodle y copias de rúbricas.
 - Se regeneraron `01-ALUMNADO-HTML/`, `05-PAQUETE-MOODLE/`, `Minijarvis-paquete-moodle.zip`, los ZIP del alumnado, el ZIP local de presentaciones y `MANIFIESTO-ARCHIVOS.md`.
+- Los 216 cambios revisados quedaron consolidados en `fc5e9be`, que ya está publicado en `origin/refactor/hitos-v3`.
+- Se crearon nueve documentos de píldoras para S206-S214 y sus nueve HTML derivados. Cubren las 31 píldoras presentes en las sesiones, con entre tres y cuatro ejemplos por píldora, errores frecuentes y preguntas de comprobación.
 
 ## Verificación vigente
 
-- Suite canónica: `30 passed in 2.35s`.
+- Última suite canónica completa documentada antes de estas píldoras: `30 passed in 2.35s`.
 - Validación de las 106 presentaciones: todas en `PASS`; permanecen advertencias informativas de seguridad en algunas sesiones heredadas.
 - Validación ad hoc de separación y coherencia H1: 10 presentaciones, 90 diapositivas, 781 líneas de notas sincronizadas y cero marcadores docentes visibles.
 - Validación renderizada H1: 10 presentaciones, 90 diapositivas, sin desbordes geométricos, cobertura OCR mínima de 0,67 y media de 0,88.
 - Validación renderizada de Sites: escritorio y móvil sin recortes detectados; contrastes WCAG comprobados.
-- `generar_paquete_moodle.py --check`: `PASS`, 261 archivos sincronizados.
+- Última verificación del paquete anterior a estas píldoras: `PASS`, 261 archivos sincronizados.
 - Prueba de integridad de los cuatro ZIP regenerados: correcta.
-- `git diff --check`: correcto.
+- `git diff --check`: correcto en la comprobación de cierre de las 23:54 CEST.
+- Validación específica de píldoras: 9 documentos, 31 secciones canónicas y un mínimo de 3 ejemplos por píldora; sin errores de cobertura.
+- Validación de HTML: 9 derivados con jerarquía de encabezados, UTF-8 y bloques de código coherentes con sus fuentes; sin errores estructurales.
+- Suite completa actual: `30 passed in 2.01s`, ejecutada directamente con `/home/llombardero/.hermes/venvs/tools/bin/python`; el entorno contiene `pytest 9.1.1` y `python-pptx 1.0.2`.
 
 ## Estado actual del repositorio
 
-- `git status --porcelain` muestra 216 entradas: 200 modificadas, 8 eliminadas y 8 entradas sin seguimiento.
-- El diff rastreado comprende 208 archivos.
-- No hay cambios preparados en el índice.
-- Los bloqueos temporales de LibreOffice quedan excluidos de cualquier commit; no aparece ninguno en el estado actual.
-
-## Partición propuesta, todavía sin commits
-
-1. Fuentes pedagógicas H0-H2 y evidencia única: guías, fichas, sesiones, rúbricas, calendario y frontera H1-H2.
-2. Modelos de Google Sites y documentación del ecosistema digital.
-3. Generadores, dependencias, pruebas y documentación técnica.
-4. HTML generado del alumnado y copias sincronizadas del staging Moodle.
-5. Presentaciones H1 y manifiesto actualizado.
-6. ZIP públicos y paquete Moodle reproducible.
-7. Documentación de continuidad y seguimiento.
+- `HEAD` y el upstream coinciden en `fc5e9be` (`0` por delante y `0` por detrás).
+- `git status` muestra 20 entradas locales: dos documentos de continuidad modificados y 18 archivos sin seguimiento.
+- Los 18 archivos nuevos son las nueve fuentes Markdown de píldoras S206-S214 y sus nueve páginas HTML derivadas; no existe una píldora S215 porque esa sesión no contiene ninguna.
+- No hay cambios preparados en el índice, commits locales pendientes de publicación ni `push` realizado por Hermes.
+- No aparecen bloqueos temporales de LibreOffice ni otros archivos inesperados.
 
 ## Riesgos o pendientes
 
-- El árbol es amplio y mezcla fuentes, binarios y derivados; debe revisarse y prepararse por bloques, nunca con un `git add .` global.
-- Los cambios derivados de H3, H5 y HF son reproducibles desde fuentes limpias, pero conviene aislarlos en el bloque de artefactos generados.
-- Falta convertir la partición propuesta en una secuencia de staging y commits; esta sesión no tiene autorización para crear commits.
+- El staging Moodle y los ZIP están deliberadamente pendientes: `generar_paquete_moodle.py --check` informa de nueve recursos ausentes hasta que se autorice su publicación progresiva.
+- Los scripts y pruebas Python que necesiten dependencias externas deben ejecutarse con `/home/llombardero/.hermes/venvs/tools/bin/python`; no se debe modificar el Python del sistema.
+- No se pudo completar una inspección visual directa mediante `computer_use`: ni Brave ni Okular expusieron una ventana capturable. La revisión realizada es estructural, no una validación visual de píxeles.
+- La amplitud de `fc5e9be` reduce la granularidad histórica. No debe reescribirse porque ya está publicado; los cambios futuros sí deben separarse por bloques coherentes.
 
 ## Siguiente acción concreta
 
-Revisar la partición propuesta y, cuando exista autorización expresa, preparar cada bloque por separado, comprobar su diff y ejecutar las verificaciones focalizadas antes de crear el commit correspondiente.
+Revisar el contenido de las nueve píldoras con criterio docente y decidir en qué sesión se publica cada una; después, solo cuando corresponda, sincronizar Moodle y regenerar los ZIP.

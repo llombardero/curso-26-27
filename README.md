@@ -67,4 +67,13 @@ python -m pip install -r requirements-dev.txt
 pytest -q
 ```
 
+Para validar los planes sin escribir archivos o regenerar la colección completa:
+
+```bash
+python generar_presentaciones_sesiones.py --check
+python generar_presentaciones_sesiones.py
+```
+
+Las presentaciones H1 se han curado de forma específica a partir de las sesiones, las píldoras, el libro por hitos y el Tema 1. Cada una incluye trazabilidad de sus fuentes.
+
 Los ZIP no son copias restaurables `.mbz`. La copia `.mbz` se genera desde Moodle después de configurar y probar el aula, sin usuarios ni datos de usuario.

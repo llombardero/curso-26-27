@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S208 — Píldoras: estructura y escritura de Java</title>
+  <link rel="stylesheet" href="../../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s208--píldoras-estructura-y-escritura-de-java">S208 — Píldoras:
+estructura y escritura de Java</h1>
+<blockquote>
+<p>Material de consulta de la sesión S208. Usa los ejemplos para
+localizar cada elemento y anticipar errores antes de ejecutar.</p>
+</blockquote>
+<h2 id="1-clase-archivo-y-main">1. Clase, archivo y
+<code>main</code></h2>
+<p>En estos primeros programas:</p>
+<ul>
+<li>el archivo se llama <code>Main.java</code>;</li>
+<li>la clase pública se llama <code>Main</code>;</li>
+<li>el método <code>main</code> es el punto de entrada de la
+ejecución.</li>
+</ul>
+<h3 id="ejemplo-1--estructura-mínima">Ejemplo 1 — Estructura mínima</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Java empieza a ejecutar las instrucciones que están dentro de
+<code>main</code>.</p>
+<h3 id="ejemplo-2--otro-nombre-de-clase">Ejemplo 2 — Otro nombre de
+clase</h3>
+<p>Si el archivo se llama <code>Assistant.java</code>, la clase pública
+debe coincidir:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Assistant <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Asistente preparado&quot;</span><span class="op">);</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="ejemplo-3--diferencia-entre-main-y-main">Ejemplo 3 — Diferencia
+entre <code>Main</code> y <code>main</code></h3>
+<p><code>Main</code> es el nombre de la clase. <code>main</code> es el
+nombre del método de entrada. Las mayúsculas importan: no son la misma
+palabra.</p>
+<h2 id="2-java-es-preciso-con-la-escritura">2. Java es preciso con la
+escritura</h2>
+<p>Java distingue mayúsculas y minúsculas y necesita delimitadores como
+<code>;</code>, <code>{}</code>, <code>()</code> y comillas.</p>
+<h3 id="ejemplo-1--mayúsculas">Ejemplo 1 — Mayúsculas</h3>
+<p>Correcto:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> message <span class="op">=</span> <span class="st">&quot;Hola&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Incorrecto:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>string message <span class="op">=</span> <span class="st">&quot;Hola&quot;</span><span class="op">;</span></span></code></pre></div>
+<p><code>String</code> empieza por mayúscula.</p>
+<h3 id="ejemplo-2--punto-y-coma">Ejemplo 2 — Punto y coma</h3>
+<p>Correcto:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Incorrecto:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">)</span></span></code></pre></div>
+<p>La instrucción necesita terminar con <code>;</code>.</p>
+<h3 id="ejemplo-3--comillas-y-paréntesis">Ejemplo 3 — Comillas y
+paréntesis</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Las comillas delimitan el texto; los paréntesis contienen el dato que
+recibe <code>println</code>.</p>
+<h3 id="ejemplo-4--llaves-equilibradas">Ejemplo 4 — Llaves
+equilibradas</h3>
+<p>Cada llave de apertura debe tener su cierre. Una pareja delimita la
+clase y otra el método <code>main</code>.</p>
+<h2 id="3-identificadores-y-palabras-reservadas">3. Identificadores y
+palabras reservadas</h2>
+<p>Un identificador es un nombre que damos a elementos del programa.</p>
+<h3 id="ejemplo-1--nombres-válidos-y-útiles">Ejemplo 1 — Nombres válidos
+y útiles</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> assistantName <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<h3 id="ejemplo-2--nombres-inválidos">Ejemplo 2 — Nombres inválidos</h3>
+<pre class="text"><code>1name      empieza por número
+my name    contiene un espacio
+class      es una palabra reservada
+public     es una palabra reservada</code></pre>
+<h3 id="ejemplo-3--válido-pero-poco-claro">Ejemplo 3 — Válido pero poco
+claro</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> x <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Compila, pero <code>userName</code> comunica mejor la intención.</p>
+<h2 id="4-comentarios-explicar-intención">4. Comentarios: explicar
+intención</h2>
+<p>Los comentarios no se ejecutan. Sirven para aportar contexto que el
+código por sí solo no expresa con claridad.</p>
+<h3 id="ejemplo-1--comentario-útil">Ejemplo 1 — Comentario útil</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Usamos un nombre ficticio para no publicar datos personales.</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<h3 id="ejemplo-2--comentario-redundante">Ejemplo 2 — Comentario
+redundante</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Muestra Hola</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Repite literalmente lo que ya se ve y no añade información.</p>
+<h3 id="ejemplo-3--comentario-de-varias-líneas">Ejemplo 3 — Comentario
+de varias líneas</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Esta micropráctica prueba la estructura mínima.</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">   No forma parte todavía del Main final de H1. */</span></span></code></pre></div>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Guardar <code>public class Main</code> en un archivo con otro
+nombre.</li>
+<li>Escribir <code>string</code>, <code>system</code> o
+<code>main</code> con mayúsculas incorrectas.</li>
+<li>Corregir el síntoma sin leer la primera marca del IDE.</li>
+<li>Usar comentarios para ocultar código que no se entiende.</li>
+</ul>
+<h2 id="comprueba-que-lo-entiendes">Comprueba que lo entiendes</h2>
+<ol type="1">
+<li>Señala la clase y el punto de entrada en un ejemplo.</li>
+<li>Corrige un error de mayúsculas, uno de <code>;</code> y uno de
+comillas.</li>
+<li>Propón tres identificadores válidos y significativos.</li>
+<li>Escribe un comentario que explique una decisión, no una instrucción
+evidente.</li>
+</ol>
+
+  </main>
+</body>
+</html>
