@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>H1 — Guion de defensa individual (completado)</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="h1--guion-de-defensa-individual-completado">H1 — Guion de
+defensa individual (completado)</h1>
+<blockquote>
+<p>La defensa es una comprobación oral y práctica; no es otro documento
+que debas entregar.</p>
+</blockquote>
+<h2 id="1-ejecutar-la-versión-identificada">1. Ejecutar la versión
+identificada</h2>
+<p><strong>Tag o commit:</strong> <code>h1-entrega</code> (commit
+<code>abc123def456</code>)</p>
+<p><strong>Comando de ejecución:</strong></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-cp</span> src Main</span></code></pre></div>
+<p><strong>Resultado esperado:</strong> El programa pide un nombre, lo
+saluda, pide un número, calcula su doble o indica que no es positivo, y
+termina.</p>
+<hr />
+<h2 id="2-explicar-class-main-instrucciones-comentarios-y-flujo">2.
+Explicar <code>class</code>, <code>main</code>, instrucciones,
+comentarios y flujo</h2>
+<p><strong><code>class Main</code>:</strong></p>
+<ul>
+<li>Señalo: <code>public class Main {</code> en
+<code>src/Main.java</code> línea 1.</li>
+<li>Explico: <code>class</code> define una clase en Java. Todo código
+Java debe estar dentro de una clase. <code>Main</code> es el nombre de
+la clase que contiene el punto de entrada del programa.</li>
+</ul>
+<p><strong><code>public static void main(String[] argumentos)</code>:</strong></p>
+<ul>
+<li>Señalo: <code>public static void main(String[] argumentos) {</code>
+en <code>src/Main.java</code> línea 3.</li>
+<li>Explico: <code>main</code> es el método que Java ejecuta
+automáticamente al arrancar el programa. <code>public</code> significa
+accesible desde fuera. <code>static</code> significa que pertenece a la
+clase, no a una instancia. <code>void</code> significa que no devuelve
+valor. <code>String[] argumentos</code> contiene los argumentos pasados
+por línea de comandos (no se usan en H1).</li>
+</ul>
+<p><strong>Instrucciones:</strong></p>
+<ul>
+<li>Señalo: <code>System.out.println("Hola, " + nombre);</code> en
+<code>src/Main.java</code> línea 10.</li>
+<li>Explico: <code>System.out.println()</code> imprime texto por consola
+y salta de línea. El operador <code>+</code> concatena cadenas.</li>
+</ul>
+<p><strong>Comentarios:</strong></p>
+<ul>
+<li>Señalo: <code>// Lee el nombre del usuario</code> en
+<code>src/Main.java</code> línea 8.</li>
+<li>Explico: Los comentarios con <code>//</code> son ignorados por el
+compilador. Sirven para documentar el código.</li>
+</ul>
+<p><strong>Flujo:</strong></p>
+<ol type="1">
+<li>Se define la constante <code>MENSAJE_BIENVENIDA</code>.</li>
+<li>Se crea el <code>Scanner</code> para leer entrada.</li>
+<li>Se pide y lee el nombre (<code>nextLine()</code>).</li>
+<li>Se pide y lee el número
+(<code>Integer.parseInt(nextLine())</code>).</li>
+<li>Se calcula el doble (<code>numero * 2</code>).</li>
+<li>Se evalúa <code>if (numero &gt; 0)</code> para decidir la
+salida.</li>
+<li>Se imprime el resultado.</li>
+<li>Se cierra el <code>Scanner</code>.</li>
+</ol>
+<hr />
+<h2 id="3-señalar-tipos-variables-constante-literal-y-operador">3.
+Señalar tipos, variables, constante, literal y operador</h2>
+<p><strong>Constante (<code>final</code>):</strong></p>
+<ul>
+<li>Señalo:
+<code>final String MENSAJE_BIENVENIDA = "Bienvenida a MiniJarvis.";</code>
+en <code>src/Main.java</code> línea 8.</li>
+<li>Explico: <code>final</code> significa que no se puede reasignar.
+<code>String</code> es el tipo. <code>MENSAJE_BIENVENIDA</code> es el
+nombre. El valor <code>"Bienvenida a MiniJarvis."</code> es un literal
+de cadena.</li>
+</ul>
+<p><strong>Variable <code>nombre</code>:</strong></p>
+<ul>
+<li>Señalo: <code>String nombre = sc.nextLine();</code> en
+<code>src/Main.java</code> línea 10.</li>
+<li>Explico: <code>String</code> es el tipo. <code>nombre</code> es el
+nombre. Se inicializa con <code>sc.nextLine()</code> que lee la entrada
+del usuario.</li>
+</ul>
+<p><strong>Variable <code>numero</code>:</strong></p>
+<ul>
+<li>Señalo: <code>int numero = Integer.parseInt(sc.nextLine());</code>
+en <code>src/Main.java</code> línea 15.</li>
+<li>Explico: <code>int</code> es el tipo (entero). <code>numero</code>
+es el nombre. Se inicializa con la conversión de la cadena leída a
+entero.</li>
+</ul>
+<p><strong>Variable <code>doble</code>:</strong></p>
+<ul>
+<li>Señalo: <code>int doble = numero * 2;</code> en
+<code>src/Main.java</code> línea 18.</li>
+<li>Explico: <code>int</code> es el tipo. <code>doble</code> es el
+nombre. Se asigna el resultado de <code>numero * 2</code>.</li>
+</ul>
+<p><strong>Literal:</strong></p>
+<ul>
+<li>Señalo: <code>"Hola, "</code> en <code>src/Main.java</code> línea
+10.</li>
+<li>Explico: <code>"Hola, "</code> es un literal de cadena: un valor de
+texto escrito directamente en el código.</li>
+</ul>
+<p><strong>Operador:</strong></p>
+<ul>
+<li>Señalo: <code>+</code> en <code>src/Main.java</code> línea 10.</li>
+<li>Explico: <code>+</code> es el operador de concatenación de cadenas.
+Une <code>"Hola, "</code> con el valor de <code>nombre</code>.</li>
+</ul>
+<hr />
+<h2 id="4-predecir-una-conversión-o-división-antes-de-ejecutarla">4.
+Predecir una conversión o división antes de ejecutarla</h2>
+<p><strong>Predicción:</strong> Si el usuario introduce
+<code>"abc"</code> como número, <code>Integer.parseInt("abc")</code>
+lanzará <code>NumberFormatException</code>.</p>
+<p><strong>Ejecución:</strong></p>
+<pre><code>Entrada: abc
+Resultado: Exception in thread &quot;main&quot; java.lang.NumberFormatException: For input string: &quot;abc&quot;</code></pre>
+<p><strong>Explicación:</strong> <code>Integer.parseInt()</code> solo
+acepta cadenas que representen números enteros válidos.
+<code>"abc"</code> no es un número, por lo que el método lanza una
+excepción de ejecución.</p>
+<hr />
+<h2
+id="5-explicar-una-comparación-una-expresión-booleana-y-un-ifelse-básico">5.
+Explicar una comparación, una expresión booleana y un
+<code>if/else</code> básico</h2>
+<p><strong>Comparación:</strong></p>
+<ul>
+<li>Señalo: <code>if (numero &gt; 0)</code> en
+<code>src/Main.java</code> línea 20.</li>
+<li>Explico: <code>numero &gt; 0</code> es una comparación que evalúa si
+<code>numero</code> es mayor que 0. El resultado es <code>true</code> o
+<code>false</code>.</li>
+</ul>
+<p><strong>Expresión booleana:</strong></p>
+<ul>
+<li>Señalo: <code>numero &gt; 0</code> en <code>src/Main.java</code>
+línea 20.</li>
+<li>Explico: Es una expresión que produce un valor booleano
+(<code>true</code> o <code>false</code>). Si numero = 5, la expresión es
+<code>true</code>. Si numero = -3, es <code>false</code>.</li>
+</ul>
+<p><strong><code>if/else</code>:</strong></p>
+<ul>
+<li>Señalo: <code>if (numero &gt; 0) { ... } else { ... }</code> en
+<code>src/Main.java</code> líneas 20-24.</li>
+<li>Explico: Si la condición es <code>true</code>, se ejecuta el bloque
+<code>if</code> (muestra el doble). Si es <code>false</code>, se ejecuta
+el bloque <code>else</code> (muestra "El número no es positivo.").</li>
+</ul>
+<hr />
+<h2 id="6-diferenciar-el-producto-principal-de-las-microprácticas">6.
+Diferenciar el producto principal de las microprácticas</h2>
+<p><strong>Producto principal:</strong></p>
+<ul>
+<li><code>Main.java</code> completo: lee nombre y número, calcula el
+doble, aplica <code>if/else</code>. Es el programa funcional que se
+entrega.</li>
+</ul>
+<p><strong>Microprácticas:</strong></p>
+<ul>
+<li>Ejemplos mínimos en el README (sección "Microprácticas del Tema 1")
+que demuestran conceptos individuales: tipos, constantes, conversión,
+comparaciones, <code>if/else</code>. No son parte del producto
+funcional; son ejercicios de aprendizaje que se enlazan desde el
+README.</li>
+</ul>
+<hr />
+<h2
+id="7-modificar-una-entrada-mensaje-operación-o-condición-y-volver-a-probar">7.
+Modificar una entrada, mensaje, operación o condición y volver a
+probar</h2>
+<p><strong>Modificación realizada:</strong> Cambié el mensaje de
+bienvenida de <code>"Bienvenida a MiniJarvis."</code> a
+<code>"Hola, " + nombre + ". ¿Qué tal?"</code> en
+<code>src/Main.java</code> línea 8.</p>
+<p><strong>Resultado:</strong></p>
+<pre><code>Entrada: Ana
+Salida: Hola, Ana. ¿Qué tal?
+El doble de 5 es 10.</code></pre>
+<p><strong>Explicación:</strong> Al modificar el literal en
+<code>MENSAJE_BIENVENIDA</code>, el mensaje impreso cambia. La
+modificación se refleja inmediatamente porque
+<code>MENSAJE_BIENVENIDA</code> se usa en la línea 10 con
+<code>System.out.println(MENSAJE_BIENVENIDA)</code>.</p>
+<hr />
+<h2
+id="8-localizar-en-el-readme-la-prueba-y-en-el-diario-una-decisión">8.
+Localizar en el README la prueba y en el diario una decisión</h2>
+<p><strong>Prueba en README:</strong></p>
+<ul>
+<li>Sección "Ejemplo reproducible → Caso normal" del
+<code>README-h1-completo.md</code>.</li>
+<li>Muestra entrada, salida esperada y salida obtenida para el caso
+Ana/5.</li>
+</ul>
+<p><strong>Decisión en diario:</strong></p>
+<ul>
+<li>Fila S209 del diario individual: decisión de usar
+<code>"Hola, " + nombre</code> en lugar de
+<code>"Bienvenido, " + nombre</code> porque "Hola" es más cercano y no
+asume género.</li>
+</ul>
+<hr />
+<h2 id="9-explicar-cualquier-uso-de-ia-y-su-validación">9. Explicar
+cualquier uso de IA y su validación</h2>
+<p><strong>Uso de IA:</strong></p>
+<ul>
+<li>Fila S212 del diario individual: pedí ayuda para entender
+<code>Integer.parseInt()</code> y su diferencia con
+<code>Integer.valueOf()</code>.</li>
+<li>Validación: probé ambos métodos con la entrada <code>"5"</code>.
+Ambos funcionan, pero <code>parseInt()</code> devuelve <code>int</code>
+(primitivo) y <code>valueOf()</code> devuelve <code>Integer</code>
+(objeto). Para H1, <code>parseInt()</code> es suficiente.</li>
+</ul>
+<hr />
+<h2 id="lo-que-puedo-defender-sin-ayuda">Lo que puedo defender sin
+ayuda</h2>
+<ul>
+<li>Explicar el flujo completo del programa.</li>
+<li>Señalar cada variable, su tipo, nombre y valor.</li>
+<li>Explicar por qué <code>final</code> hace que una variable sea
+constante.</li>
+<li>Predecir y explicar el resultado de <code>if/else</code> con
+cualquier entrada.</li>
+<li>Explicar qué pasa si la entrada no es un número.</li>
+<li>Modificar un mensaje o valor y predecir el efecto.</li>
+</ul>
+<h2 id="lo-que-necesito-reforzar">Lo que necesito reforzar</h2>
+<ul>
+<li>Manejo de errores de entrada (try/catch) → se abordará en H2.</li>
+<li>Bucles y menú → se abordará en H2.</li>
+<li>Operadores lógicos <code>&amp;&amp;</code>, <code>||</code>,
+<code>!</code> → se practicaron en S213 pero se usarán más en H2.</li>
+</ul>
+
+  </main>
+</body>
+</html>

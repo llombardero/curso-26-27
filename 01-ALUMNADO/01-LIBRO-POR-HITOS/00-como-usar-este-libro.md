@@ -36,7 +36,7 @@ MiniJarvis sirve como hilo conductor: no aprendes conceptos sueltos, sino concep
 
 ```java
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] argumentos) {
         System.out.println("MiniJarvis empieza paso a paso.");
     }
 }

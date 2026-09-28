@@ -64,8 +64,8 @@ Enlace: archivo o captura concreta, no la carpeta general.
 ### Ejemplo 3 — Evidencia de dos ramas
 
 ```text
-Caso A: hours = 5 → Objetivo alcanzado.
-Caso B: hours = 2 → Objetivo pendiente.
+Caso A: horas = 5 → Objetivo alcanzado.
+Caso B: horas = 2 → Objetivo pendiente.
 Demuestra: se han probado las dos ramas del if/else.
 ```
 
@@ -73,7 +73,7 @@ Demuestra: se han probado las dos ramas del if/else.
 
 ```text
 Entrada: hola.
-Operación: Integer.parseInt(text).
+Operación: Integer.parseInt(texto).
 Resultado: error durante la ejecución.
 Demuestra: un texto no convertible no produce un entero válido.
 ```

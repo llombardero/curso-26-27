@@ -1,119 +1,146 @@
 # S210 — Variables: guardar datos con nombre y tipo
 
-| Dato | Valor |
-|---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 2 periodos; esta ficha organiza el checkpoint de 45 minutos |
-| Fase HEXA | Planificar — organizar el trabajo |
-| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
+## Objetivo
 
-> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
+Comprender la relación entre variable, tipo, nombre y valor; distinguir tipos primitivos de `String`; y planificar datos antes de incorporarlos al programa.
 
-**Objetivo:** Planificar datos y comprender variable, tipo, nombre, declaración, inicialización y asignación.
+## 1. Variable, valor y tipo
 
-**D1** · 00:00–00:05 · PLANIFICAR
+Una variable es una zona de memoria identificada por un nombre. El tipo determina qué valores puede guardar y qué operaciones admite.
 
-## Un dato repetido, un problema
+```java
+int horasEstudio = 4;
+System.out.println(horasEstudio);
+horasEstudio = 5;
+System.out.println(horasEstudio);
+```
 
-Si el curso aparece en tres mensajes y cambia el año… ¿cuántos sitios tendrías que modificar?
+Traza:
 
-**Qué haces:** Detecta repetición.
+| Momento | Valor de `horasEstudio` |
+|---|---:|
+| Después de inicializar | 4 |
+| Después de asignar de nuevo | 5 |
 
-**Qué debe quedar:** aparezca la idea de un único dato reutilizable.
+La segunda asignación sustituye el valor anterior. El signo `=` en Java asigna; no expresa una igualdad matemática.
 
-**D2** · 00:05–00:11 · PÍLDORA DOCENTE 1/4
+## 2. Mapa de tipos primitivos
 
-## Variable = dato + nombre + memoria
+Java tiene ocho tipos primitivos:
 
-**Qué haces:** Explica una variable con sus palabras.
+| Tipo | Uso habitual | Ejemplo |
+|---|---|---|
+| `byte` | enteros muy pequeños | `byte nivel = 3;` |
+| `short` | enteros pequeños | `short dias = 180;` |
+| `int` | enteros de uso general | `int horasEstudio = 4;` |
+| `long` | enteros muy grandes | `long poblacion = 8000000000L;` |
+| `float` | decimales con menor precisión | `float porcentaje = 82.5F;` |
+| `double` | decimales de uso general | `double notaMedia = 7.5;` |
+| `char` | un carácter | `char inicial = 'L';` |
+| `boolean` | verdadero o falso | `boolean objetivoAlcanzado = true;` |
 
-**Qué debe quedar:** puedan distinguir variable/valor.
+En H1 utilizarás sobre todo `int`, `double`, `boolean` y `char`. Debes reconocer los ocho, pero no memorizar sus rangos.
 
-**D3** · 00:11–00:18 · PÍLDORA DOCENTE 2/4
+## 3. `String` no es un tipo primitivo
 
-## Mapa de tipos que aparecen en Tema 1
+```java
+String nombreUsuario = "Laura";
+```
 
-**Qué haces:** Asocia datos a tipos.
+`String` es una clase de Java que representa texto. Por eso empieza con mayúscula. En H1 basta con distinguir:
 
-**Qué debe quedar:** clasifiquen ejemplos básicos.
+- tipo primitivo: guarda un valor básico;
+- tipo de referencia: permite trabajar con objetos, como los textos `String`.
 
-**D4** · 00:18–00:23 · MICROPRÁCTICA
+No necesitas estudiar todavía programación orientada a objetos.
 
-## Elige el tipo adecuado
+## 4. El tipo depende del dato, no de su apariencia
 
-Nombre de usuario → ?<br>
-Horas de estudio → ?<br>
-Nota media → ?<br>
-Objetivo alcanzado → ?<br>
-Inicial → ?
+Un número de teléfono suele guardarse como `String`, no como `int`, porque no vamos a sumarlo y puede contener `+`, espacios o ceros iniciales.
 
-**Qué haces:** Clasifica.
+```java
+String telefonoFicticio = "+34 000 000 000";
+```
 
-**Qué debe quedar:** justifiquen al menos 4 casos.
+Pregúntate siempre qué valores necesitas representar y qué operaciones realizarás.
 
-**D5** · 00:23–00:28 · PÍLDORA DOCENTE 3/4
+## 5. Nombres significativos
 
-## Nombres válidos y significativos
+Poco claros:
 
-**Qué haces:** Renombra ejemplos pobres.
+```java
+String x = "Laura";
+int n = 4;
+```
 
-**Qué debe quedar:** produzcan nombres válidos y semánticos.
+Más claros:
 
-**D6** · 00:28–00:33 · PÍLDORA DOCENTE 4/4
+```java
+String nombreUsuario = "Laura";
+int horasEstudio = 4;
+```
 
-## Declarar, inicializar y asignar
+Usa `lowerCamelCase` para variables: la primera palabra comienza en minúscula y las siguientes en mayúscula.
 
-int studyHours = 4; // declara + inicializa<br>
-<br>
-studyHours = 5; // asigna otro valor
+## 6. Declarar, inicializar y asignar
 
-**Qué haces:** Predice valor antes/después.
+```java
+int horasEstudio;      // declaración
+horasEstudio = 4;      // primera asignación o inicialización
+horasEstudio = 5;      // nueva asignación
+```
 
-**Qué debe quedar:** puedan señalar declaración/inicialización/asignación.
+También puedes declarar e inicializar en una sola línea:
 
-**D7** · 00:33–00:36 · PLANIFICACIÓN
+```java
+int horasEstudio = 4;
+```
 
-## Antes del código: plan de datos
+Una variable local debe recibir un valor antes de usarse.
 
-Dato | Tipo | Nombre | ¿Cambia? | ¿Dónde se usa?
+## 7. Plan de datos
 
-**Qué haces:** Planifica 3–5 datos.
+Antes de programar, completa una tabla:
 
-**Qué debe quedar:** cada dato tenga tipo/nombre/uso.
+| Dato | Tipo | Nombre | ¿Cambia? | ¿Dónde se usa? |
+|---|---|---|---|---|
+| nombre ficticio | `String` | `nombreUsuario` | sí | saludo |
+| horas de estudio | `int` | `horasEstudio` | sí | cálculo |
+| nombre del asistente | `String` | `NOMBRE_ASISTENTE` | no | presentación |
 
-**D8** · 00:36–00:42 · ACTIVIDAD
+Añade al menos dos datos más y justifica el tipo elegido.
 
-## Implementa el plan y comprueba
+## 8. Actividad
 
-Crea variables, muéstralas, cambia una y vuelve a ejecutar.
+1. Implementa entre tres y cinco variables de tu plan.
+2. Muestra sus valores.
+3. Cambia una variable y vuelve a mostrarla.
+4. Explica la traza antes y después.
+5. Renombra cualquier identificador vago.
 
-**Qué haces:** Programa y prueba.
+## Evidencia verificable
 
-**Qué debe quedar:** haya salida antes/después de una asignación.
+Conserva la tabla de planificación, el código y una ejecución que muestre el valor antes y después de una asignación. En tu diario registra qué decisión de tipo o nombre has tenido que justificar.
 
-**D9** · 00:42–00:45 · CIERRE
+## Errores frecuentes
 
-## Microdefensa de una variable
+- Confundir la variable con su valor actual.
+- Usar `String` para todo sin pensar en las operaciones.
+- Escribir otra vez el tipo al cambiar un valor.
+- Usar una variable local antes de inicializarla.
+- Elegir nombres válidos pero poco informativos.
 
-Señala tipo, nombre, valor inicial y una asignación posterior.
+## Autoevaluación
 
-**Qué haces:** Explica.
+Comprueba que puedes:
 
-**Qué debe quedar:** quede evidencia individual.
-
-**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
-
-## Evidencia única antes de salir
-
-- conserva el código o la prueba en el lugar indicado por la sesión;
-- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
-- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
+- identificar tipo, nombre y valor;
+- enumerar los ocho tipos primitivos;
+- explicar por qué `String` no es primitivo;
+- distinguir declaración, inicialización y asignación;
+- justificar el tipo de un teléfono, una nota y una respuesta sí/no;
+- explicar una traza de dos valores.
 
 ## Seguridad y uso de IA
 
-- Usa datos ficticios y no publiques credenciales ni información personal.
-- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
-
-## Cierre individual
-
-**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**
+Usa nombres, teléfonos y demás datos ficticios. Si una IA propone nombres o tipos, comprueba que expresen la intención y permitan las operaciones necesarias.

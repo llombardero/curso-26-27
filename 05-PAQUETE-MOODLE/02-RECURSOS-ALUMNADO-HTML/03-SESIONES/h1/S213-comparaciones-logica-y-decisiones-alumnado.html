@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S213 — Comparaciones, lógica y decisiones</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="s213--comparaciones-lógica-y-decisiones">S213 — Comparaciones,
+lógica y decisiones</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Construir comparaciones, guardar resultados booleanos, utilizar una
+condición en <code>if/else</code> y comprobar sus dos ramas. Como
+ampliación, reconocer combinaciones lógicas, anidamiento y operador
+ternario.</p>
+<h2 id="1-comparar-produce-un-boolean">1. Comparar produce un
+<code>boolean</code></h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horas <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>horas <span class="op">==</span> <span class="dv">5</span><span class="op">);</span> <span class="co">// true</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>horas <span class="op">!=</span> <span class="dv">5</span><span class="op">);</span> <span class="co">// false</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>horas <span class="op">&gt;=</span> <span class="dv">4</span><span class="op">);</span> <span class="co">// true</span></span></code></pre></div>
+<p>Una comparación no devuelve uno de los operandos: devuelve
+<code>true</code> o <code>false</code>.</p>
+<p>Operadores habituales:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>==</code></td>
+<td>igual que</td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>distinto de</td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>mayor que</td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td>menor que</td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td>mayor o igual que</td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>menor o igual que</td>
+</tr>
+</tbody>
+</table>
+<p><code>=</code> asigna; <code>==</code> compara.</p>
+<h2 id="2-guardar-una-comparación">2. Guardar una comparación</h2>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horas <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> suficiente <span class="op">=</span> horas <span class="op">&gt;=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>suficiente<span class="op">);</span></span></code></pre></div>
+<p>Prueba al menos dos valores para observar <code>true</code> y
+<code>false</code>.</p>
+<h2 id="3-de-la-condición-a-ifelse">3. De la condición a
+<code>if/else</code></h2>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horas <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>horas <span class="op">&gt;=</span> <span class="dv">4</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo alcanzado&quot;</span><span class="op">);</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo pendiente&quot;</span><span class="op">);</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>La condición debe producir un <code>boolean</code>.</li>
+<li>Si es <code>true</code>, se ejecuta el bloque <code>if</code>.</li>
+<li>Si es <code>false</code>, se ejecuta el bloque
+<code>else</code>.</li>
+<li>Solo se ejecuta una de las dos ramas.</li>
+</ul>
+<p>Esto no es válido:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>horas<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;No compila&quot;</span><span class="op">);</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><code>horas</code> es un <code>int</code>, no una condición
+booleana.</p>
+<h2 id="4-prueba-las-dos-ramas">4. Prueba las dos ramas</h2>
+<p>Antes de ejecutar, completa:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th style="text-align: right;">Valor de <code>horas</code></th>
+<th>Condición esperada</th>
+<th>Salida esperada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td style="text-align: right;">5</td>
+<td><code>true</code></td>
+<td><code>Objetivo alcanzado</code></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td style="text-align: right;">2</td>
+<td><code>false</code></td>
+<td><code>Objetivo pendiente</code></td>
+</tr>
+</tbody>
+</table>
+<p>Después registra la salida observada. Probar solo una rama no
+demuestra el comportamiento completo.</p>
+<h2 id="5-ampliación-combinar-y-negar-condiciones">5. Ampliación:
+combinar y negar condiciones</h2>
+<h3 id="and-">AND <code>&amp;&amp;</code></h3>
+<p>Las dos condiciones deben cumplirse:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> tieneNombre <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> tieneObjetivo <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> puedeEmpezar <span class="op">=</span> tieneNombre <span class="op">&amp;&amp;</span> tieneObjetivo<span class="op">;</span></span></code></pre></div>
+<h3 id="or-">OR <code>||</code></h3>
+<p>Basta con que se cumpla una:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> tienePregunta <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> hayError <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> necesitaAyuda <span class="op">=</span> tienePregunta <span class="op">||</span> hayError<span class="op">;</span></span></code></pre></div>
+<h3 id="not-">NOT <code>!</code></h3>
+<p>Invierte un booleano:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> terminada <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> pendiente <span class="op">=</span> <span class="op">!</span>terminada<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
+<p>Predice cada resultado antes de ejecutar.</p>
+<h2 id="6-ampliación-reconocer-un-if-anidado">6. Ampliación: reconocer
+un <code>if</code> anidado</h2>
+<p>Un <code>if</code> puede aparecer dentro de otro:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>horas <span class="op">&gt;=</span> <span class="dv">4</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>horas <span class="op">&gt;=</span> <span class="dv">8</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo superado&quot;</span><span class="op">);</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo alcanzado&quot;</span><span class="op">);</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo pendiente&quot;</span><span class="op">);</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>En H1 basta con leerlo y explicar el camino para valores como
+<code>2</code>, <code>5</code> y <code>9</code>. No necesitas
+introducirlo en el producto principal si reduce su claridad.</p>
+<h2 id="7-ampliación-leer-un-operador-ternario">7. Ampliación: leer un
+operador ternario</h2>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> estado <span class="op">=</span> horas <span class="op">&gt;=</span> <span class="dv">4</span> <span class="op">?</span> <span class="st">&quot;alcanzado&quot;</span> <span class="op">:</span> <span class="st">&quot;pendiente&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Se lee así: si la condición es verdadera, usa
+<code>"alcanzado"</code>; en caso contrario, usa
+<code>"pendiente"</code>.</p>
+<p>Es una forma compacta de elegir un valor. Para decisiones con varias
+instrucciones, <code>if/else</code> suele ser más claro.</p>
+<h2 id="8-nota-sobre-textos">8. Nota sobre textos</h2>
+<p><code>==</code> es adecuado para comparar valores primitivos. Para
+comparar el contenido de dos <code>String</code> se utiliza normalmente
+<code>equals</code>:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> mismoTexto <span class="op">=</span> <span class="st">&quot;hola&quot;</span><span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">&quot;hola&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Esta nota es de consulta; el núcleo de S213 son comparaciones
+primitivas y <code>if/else</code>.</p>
+<h2 id="9-actividad">9. Actividad</h2>
+<ol type="1">
+<li>Crea una comparación con <code>horas</code>.</li>
+<li>Guarda el resultado en un <code>boolean</code>.</li>
+<li>Utilízalo directa o indirectamente en <code>if/else</code>.</li>
+<li>Predice y ejecuta un caso verdadero y otro falso.</li>
+<li>Como ampliación, explica una expresión con <code>&amp;&amp;</code>,
+otra con <code>||</code> y otra con <code>!</code>.</li>
+<li>Traza un <code>if</code> anidado y un ternario sin necesidad de
+incorporarlos al producto final.</li>
+</ol>
+<h2 id="evidencia-verificable">Evidencia verificable</h2>
+<p>Registra la condición, cada entrada, el resultado booleano, la salida
+esperada y la observada. La evidencia debe demostrar las dos ramas y
+enlazar al código concreto.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Confundir <code>=</code> con <code>==</code>.</li>
+<li>Escribir <code>if (horas)</code> cuando <code>horas</code> es
+<code>int</code>.</li>
+<li>Probar solo la rama verdadera.</li>
+<li>Confundir <code>&amp;&amp;</code> con <code>||</code>.</li>
+<li>Olvidar que <code>!</code> invierte el valor.</li>
+<li>Usar un ternario largo cuando <code>if/else</code> sería más
+legible.</li>
+</ul>
+<h2 id="autoevaluación">Autoevaluación</h2>
+<p>Comprueba que puedes:</p>
+<ul>
+<li>predecir seis comparaciones;</li>
+<li>explicar por qué una condición es booleana;</li>
+<li>señalar condición, rama <code>if</code> y rama
+<code>else</code>;</li>
+<li>demostrar los dos caminos con pruebas;</li>
+<li>leer <code>&amp;&amp;</code>, <code>||</code> y <code>!</code>;</li>
+<li>seguir un <code>if</code> anidado sencillo;</li>
+<li>interpretar un ternario.</li>
+</ul>
+<h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
+<p>Usa datos ficticios. Si una IA propone una condición, prueba valores
+de frontera y las dos ramas antes de aceptarla.</p>
+
+  </main>
+</body>
+</html>

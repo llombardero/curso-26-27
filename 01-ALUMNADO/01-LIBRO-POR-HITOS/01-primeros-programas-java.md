@@ -36,7 +36,7 @@ La consola será nuestra primera interfaz. MiniJarvis todavía no será intelige
 
 ```java
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] argumentos) {
         System.out.println("Hola, soy MiniJarvis.");
         System.out.println("Estoy aprendiendo a funcionar por consola.");
     }

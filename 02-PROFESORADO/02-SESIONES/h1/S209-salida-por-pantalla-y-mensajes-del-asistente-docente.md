@@ -1,115 +1,163 @@
-# S209 — Guía docente
-
-## Diseñar mensajes claros por consola
+# S209 - Idear - Salida por pantalla y mensajes del asistente
 
 | Dato | Valor |
 |---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 2 periodos; checkpoint proyectable de 45 minutos y taller asociado |
-| Fase HEXA | Idear — proponer soluciones |
-| Agrupamiento | Individual con contraste por parejas o equipo cuando la práctica lo requiera |
-| Resultado observable | Idear la salida de MiniJarvis antes de programarla y usar concatenación cuando sea necesaria. |
-| Evidencia mínima | Quede trazabilidad de la ideación. |
+| Hito | H1 — Primer asistente ejecutable |
+| Duración prevista | 45 minutos |
+| Fase HEXA del hito | Idear — proponer soluciones |
 
-## Propósito
+> Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`. Selecciona y desarrolla los conceptos, ejemplos, actividades y evidencias útiles para esta sesión.
 
-Idear la salida de MiniJarvis antes de programarla y usar concatenación cuando sea necesaria.
+## Qué vas a aprender
 
-El concepto se incorpora al Tema 1, pero solo pasa a `Main.java` cuando mejora el producto mínimo. Las demás prácticas se conservan como microejercicios defendibles.
+Al terminar, debes idear mensajes claros antes de programarlos y usar literales y concatenación cuando sea necesario.
 
-## Material imprescindible
+## Ideas y ejemplos
 
-- presentación de S209;
-- IntelliJ y JDK cuando haya práctica de código;
-- proyecto o microarchivo de prueba;
-- diario individual y tablero Scrum del equipo;
-- datos ficticios.
+Úsala antes de abrir el IDE, para obligar a idear la salida.
 
-## Secuencia de aula
+La consola también es una interfaz. Aunque sea texto, la persona usuaria debe entender qué ocurre, qué se le pide y qué resultado obtiene. Además, no debemos prometer funciones que H1 no tiene.
 
-| Tiempo / diap. | Tipo y actuación | Alumnado | Observa | Puerta de avance | Si hay retraso |
-|---|---|---|---|---|---|
-| 00:00–00:05 / D1 | IDEAR: Pide elegir y justificar por claridad. | Compara. | Criterios de claridad y orden. | aparezcan criterios propios. | 3 minutos. |
-| 00:05–00:10 / D2 | PÍLDORA BREVE: Conecta diseño de mensajes con experiencia de usuario sin introducir teoría extra. | Propone un criterio de claridad. | Mensajes técnicos o ambiguos. | tengan 2–3 criterios. | 2 minutos. |
-| 00:10–00:20 / D3 | ACTIVIDAD DE IDEACIÓN: Impide que salten directamente al IDE. Facilita con preguntas. | Genera y compara alternativas. | Si idean de verdad o copian la primera ocurrencia. | haya al menos dos opciones y una decisión justificada. | una alternativa + mejora de la original. |
-| 00:20–00:26 / D4 | PÍLDORA DOCENTE 1/1: Explica literal de texto y concatenación solo porque ahora necesitan insertar un dato. | Predice la salida. | Confusión entre + como suma y concatenación. | puedan predecir el mensaje. | 4 minutos. |
-| 00:26–00:40 / D5 | ACTIVIDAD: Circula y pide justificar decisiones. | Programa, prueba e itera. | Mensajes que prometen funciones aún inexistentes. | la salida sea legible y coherente con H1. | omite el intercambio y haz revisión rápida por parejas. |
-| 00:40–00:45 / D6 | CIERRE: Pide un registro breve en el diario individual. | Documenta decisión y mejora. | Capacidad de justificar. | quede trazabilidad de la ideación. | respuesta oral + anotación posterior. |
+Compara estos mensajes con el alumnado:
 
-## Qué debes explicar
+```text
+correcto
+```
 
-- **PÍLDORA BREVE:** Conecta diseño de mensajes con experiencia de usuario sin introducir teoría extra.
-- **PÍLDORA DOCENTE 1/1:** Explica literal de texto y concatenación solo porque ahora necesitan insertar un dato.
+Frente a:
 
-## Ejemplo o demostración preparada
+```text
+MiniJarvis se ha iniciado correctamente.
+```
 
-**D1 · Dos salidas, ¿cuál ayuda más? —** A: MJ v1<br>
-2026<br>
-ok \| B: Hola, soy MiniJarvis.<br>
-Estoy en mi primera versión por consola.<br>
-Curso de trabajo: 2026.
+```text
+Dato:
+```
 
-**D2 · La consola también es una interfaz —** Aunque solo sea texto, alguien debe entender qué ocurre, qué se le pide y qué resultado obtiene.
+Frente a:
 
-**D3 · Generad alternativas antes de programar —** Cada equipo propone al menos 2 versiones de:<br>
-• saludo<br>
-• propósito<br>
-• mensaje final<br>
-<br>
-Todavía NO programéis.
+```text
+Escribe tu nombre:
+```
 
-**D4 · Literal y concatenación —** String userName = "Laura";<br>
-System.out.println("Hola, " + userName + ".");
+```text
+5
+```
 
-**D5 · Construye y mejora la salida elegida —** 1. Implementa los mensajes.<br>
-2. Ejecuta.<br>
-3. Pide a otra persona que lea solo la consola.<br>
-4. Mejora una frase si hace falta.
+Frente a:
 
-**D6 · Registra la decisión de diseño —** ¿Qué mensaje elegiste?<br>
-¿Por qué?<br>
-¿Qué cambiaste después de verlo ejecutado?
+```text
+Horas de estudio registradas: 5
+```
 
-## Consigna que se entrega al alumnado
+```text
+String nombreUsuario initialized successfully.
+```
 
-1. Predice antes de ejecutar cuando haya código.
-2. Realiza la micropráctica o modificación prevista.
-3. Prueba el caso normal y, cuando exista una decisión o conversión, también el caso alternativo o erróneo.
-4. Conserva el código o resultado en el repositorio o espacio indicado.
-5. Registra una sola entrada en el diario individual; no crees un informe paralelo.
+Frente a:
 
-## Qué observar mientras trabajan
+```text
+Hola, Laura.
+```
 
-- Criterios de claridad y orden.
-- Mensajes técnicos o ambiguos.
-- Si idean de verdad o copian la primera ocurrencia.
-- Confusión entre + como suma y concatenación.
-- Mensajes que prometen funciones aún inexistentes.
-- Capacidad de justificar.
+```text
+Analizando tus datos con inteligencia artificial...
+```
 
-## Criterios para considerar cerrada la sesión
+Frente a:
 
-- Aparezcan criterios propios.
-- Tengan 2–3 criterios.
-- Haya al menos dos opciones y una decisión justificada.
-- Puedan predecir el mensaje.
-- La salida sea legible y coherente con H1.
-- Quede trazabilidad de la ideación.
-- La persona puede señalar la evidencia y explicar qué demuestra.
+```text
+Hola, soy MiniJarvis. Esta es mi primera versión por consola.
+```
 
-## Seguridad y uso de IA
+Pregunta al alumnado:
 
-- Trabajar con datos ficticios.
-- No publicar credenciales, tokens, claves ni información personal.
-- Si la IA interviene de forma sustantiva, registrar propuesta, cambios propios y validación; no aceptar código que no pueda defenderse.
+Qué salida ayuda más, qué dato cambia y dónde hacen falta espacios o signos.
 
-## Comprobación final
+Error frecuente que debes cortar:
 
-**¿Qué puedes señalar, explicar, predecir o modificar para demostrar el aprendizaje de esta sesión?**
+No escribáis `Puedo recordar todo` si H1 no tiene memoria.
 
-## Anotación docente al terminar
+Di también:
 
-- alumnado que necesita reentrada;
-- evidencia pendiente;
-- error común;
-- ajuste temporal necesario sin eliminar el núcleo conceptual.
+El mensaje debe estar pensado para quien usa el programa, no para demostrarle que sabemos Java.
+
+Trabaja ahora literal de texto y concatenación con predicción:
+
+```java
+System.out.println("Hola");
+```
+
+Pregunta:
+
+Qué parte ha escrito exactamente quien programa.
+
+```java
+String nombreUsuario = "Laura";
+System.out.println("Hola, " + nombreUsuario);
+```
+
+Salida esperada:
+
+```text
+Hola, Laura
+```
+
+```java
+String nombreUsuario = "Laura";
+String nombreAsistente = "MiniJarvis";
+System.out.println("Hola, " + nombreUsuario + ". Soy " + nombreAsistente + ".");
+```
+
+```java
+int horasEstudio = 4;
+System.out.println("Has estudiado " + horasEstudio + " horas.");
+```
+
+Predicción obligatoria:
+
+```java
+System.out.println(2 + 3);
+System.out.println("Resultado: " + 2 + 3);
+```
+
+Pregunta:
+
+Predice ambas salidas antes de ejecutar y explica por qué el signo `+` no se comporta igual en las dos líneas.
+
+## Actividad de la sesión
+
+Todavía no abráis el IDE. Primero escribid dos versiones de saludo, propósito y mensaje final. Después elegid una y justificadla. Solo entonces programadla.
+
+Después:
+
+Programad la salida elegida. Ejecutadla. Pedid a otra persona que lea solo la consola y os diga si entiende qué hace MiniJarvis.
+
+## Evidencia de la sesión
+
+Registrad la decisión de diseño de mensajes y guardad la versión programada.
+
+**Dónde y cómo conservar la evidencia:**
+
+- GitHub: código con mensajes implementados.
+- Diario individual: fila breve si la persona ha cambiado o defendido una decisión.
+- Moodle: no se entrega todavía.
+
+Qué debe aparecer:
+
+- Mensaje elegido.
+- Por qué se elige.
+- Qué se cambió después de verlo ejecutado.
+
+Modelo de uso de decisión de mensajes:
+
+```text
+Decisión S209:
+Elegimos "Hola, soy MiniJarvis" y "Escribe un nombre ficticio" porque son claros y no piden datos personales reales.
+Descartamos "MJ v1 correcto" porque no explica qué ocurre.
+Después de ejecutar añadimos un punto final y un espacio tras la coma para mejorar la lectura.
+```
+
+## Comprueba lo aprendido
+
+Hemos ideado antes de programar. Esa es la clave de hoy. La salida de consola no se improvisa al final: se diseña para que alguien entienda qué ocurre.

@@ -9,22 +9,22 @@ Una constante representa un dato que no debe cambiar durante la ejecución. En J
 ### Ejemplo 1 — Nombre del asistente
 
 ```java
-final String ASSISTANT_NAME = "MiniJarvis";
-System.out.println(ASSISTANT_NAME);
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+System.out.println(NOMBRE_ASISTENTE);
 ```
 
 ### Ejemplo 2 — Año de inicio
 
 ```java
-final int START_YEAR = 2026;
-System.out.println("Inicio: " + START_YEAR);
+final int ANIO_INICIO = 2026;
+System.out.println("Inicio: " + ANIO_INICIO);
 ```
 
 ### Ejemplo 3 — Reasignación no permitida
 
 ```java
-final int MAX_ATTEMPTS = 3;
-MAX_ATTEMPTS = 4; // error: una constante no se reasigna
+final int MAX_INTENTOS = 3;
+MAX_INTENTOS = 4; // error: una constante no se reasigna
 ```
 
 No todo dato que hoy coincide varias veces debe ser constante: lo es cuando su significado indica que no debe cambiar durante esa ejecución.
@@ -34,31 +34,41 @@ No todo dato que hoy coincide varias veces debe ser constante: lo es cuando su s
 ### Ejemplo 1 — Literales de varios tipos
 
 ```java
-int hours = 5;                 // 5 es literal entero
-double score = 7.5;            // 7.5 es literal decimal
-char initial = 'L';            // 'L' es literal de carácter
-String message = "Hola";       // "Hola" es literal de texto
-boolean ready = true;          // true es literal lógico
+int horas = 5;                 // 5 es literal entero
+double nota = 7.5;            // 7.5 es literal decimal
+char inicial = 'L';            // 'L' es literal de carácter
+String mensaje = "Hola";       // "Hola" es literal de texto
+boolean preparado = true;          // true es literal lógico
 ```
 
 ### Ejemplo 2 — Comillas simples y dobles
 
 ```java
-char initial = 'M';
-String name = "MiniJarvis";
+char inicial = 'M';
+String nombre = "MiniJarvis";
 ```
 
 ### Ejemplo 3 — Literal reutilizado mediante constante
 
 ```java
-final String ASSISTANT_NAME = "MiniJarvis";
-System.out.println("Hola, soy " + ASSISTANT_NAME);
-System.out.println(ASSISTANT_NAME + " está preparado");
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+System.out.println("Hola, soy " + NOMBRE_ASISTENTE);
+System.out.println(NOMBRE_ASISTENTE + " está preparado");
 ```
 
 El texto estable se define una sola vez.
 
-## 3. Operadores aritméticos
+## 3. Expresiones y operadores aritméticos
+
+Una expresión combina literales, variables y operadores para producir un resultado. Ese resultado también tiene un tipo.
+
+```java
+int minutos = 3 * 60;                    // resultado int
+boolean suficiente = minutos >= 120;     // resultado boolean
+String resumen = "Minutos: " + minutos;  // resultado String
+```
+
+Una expresión calculada pero no guardada, mostrada ni utilizada no produce un efecto observable.
 
 `+`, `-`, `*`, `/` y `%` producen un resultado. Debemos mostrarlo, guardarlo o usarlo si queremos conservarlo.
 
@@ -66,8 +76,8 @@ El texto estable se define una sola vez.
 
 ```java
 int total = 6 + 2;       // 8
-int pending = 6 - 2;     // 4
-int minutes = 3 * 60;    // 180
+int pendiente = 6 - 2;     // 4
+int minutos = 3 * 60;    // 180
 ```
 
 ### Ejemplo 2 — División entera y real
@@ -79,11 +89,13 @@ double b = 5 / 2.0;   // 2.5
 
 Si ambos operandos son enteros, la parte decimal no aparece.
 
+En `5 / 2.0`, uno de los operandos es decimal; por eso el resultado es `double`. En `5 / 2`, ambos son enteros y el resultado es `int`.
+
 ### Ejemplo 3 — Precedencia
 
 ```java
-int resultA = 8 * 4 + 2;      // 34
-int resultB = 8 * (4 + 2);    // 48
+int resultadoA = 8 * 4 + 2;      // 34
+int resultadoB = 8 * (4 + 2);    // 48
 ```
 
 Los paréntesis permiten expresar con claridad qué se calcula primero.
@@ -95,16 +107,16 @@ Los paréntesis permiten expresar con claridad qué se calcula primero.
 ### Ejemplo 1 — Reparto
 
 ```java
-int candies = 10;
-int people = 4;
-int remaining = candies % people; // 2
+int caramelos = 10;
+int personas = 4;
+int restantes = caramelos % personas; // 2
 ```
 
 ### Ejemplo 2 — Saber si un número es par
 
 ```java
-int number = 8;
-int remainder = number % 2; // 0
+int numero = 8;
+int resto = numero % 2; // 0
 ```
 
 Si el resto al dividir entre 2 es `0`, el número es par.
@@ -112,8 +124,8 @@ Si el resto al dividir entre 2 es `0`, el número es par.
 ### Ejemplo 3 — Ciclos sencillos
 
 ```java
-int minute = 67;
-int minutesAfterHour = minute % 60; // 7
+int minuto = 67;
+int minutosTrasHora = minuto % 60; // 7
 ```
 
 ## 5. Actualizar sin reescribir todo
@@ -121,24 +133,24 @@ int minutesAfterHour = minute % 60; // 7
 ### Ejemplo 1 — Operadores compuestos
 
 ```java
-int tasks = 3;
-tasks += 2; // equivale a tasks = tasks + 2; ahora vale 5
-tasks -= 1; // ahora vale 4
+int tareas = 3;
+tareas += 2; // equivale a tareas = tareas + 2; ahora vale 5
+tareas -= 1; // ahora vale 4
 ```
 
 ### Ejemplo 2 — Incremento y decremento
 
 ```java
-int attempts = 1;
-attempts++; // 2
-attempts--; // 1
+int intentos = 1;
+intentos++; // 2
+intentos--; // 1
 ```
 
 ### Ejemplo 3 — Actualizar una cantidad mayor
 
 ```java
-int minutes = 30;
-minutes *= 2; // equivale a minutes = minutes * 2; ahora vale 60
+int minutos = 30;
+minutos *= 2; // equivale a minutos = minutos * 2; ahora vale 60
 ```
 
 ## Errores frecuentes
@@ -147,11 +159,11 @@ minutes *= 2; // equivale a minutes = minutes * 2; ahora vale 60
 - Confundir `%` con porcentaje.
 - Esperar `2.5` en una división `int / int`.
 - Calcular un resultado sin guardarlo, mostrarlo ni usarlo.
-- Leer `tasks++` como si declarase otra variable.
+- Leer `tareas++` como si declarase otra variable.
 
 ## Comprueba que lo entiendes
 
 1. Clasifica cinco literales por tipo.
 2. Predice `7 / 2`, `7 / 2.0` y `7 % 2`.
 3. Explica la diferencia entre variable y constante.
-4. Parte de `int tasks = 3;` y predice tres actualizaciones distintas.
+4. Parte de `int tareas = 3;` y predice tres actualizaciones distintas.

@@ -3,119 +3,149 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>S206 — H1: qué vamos a construir y qué queda fuera</title>
+  <title>S206 — Presentar H1 y delimitar su alcance</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
     <nav class="topbar">Inicio alumnado</nav>
-<h1 id="s206--h1-qué-vamos-a-construir-y-qué-queda-fuera">S206 — H1: qué
-vamos a construir y qué queda fuera</h1>
+<h1 id="s206--presentar-h1-y-delimitar-su-alcance">S206 — Presentar H1 y
+delimitar su alcance</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Comprender qué vas a construir en H1, distinguir lo imprescindible de
+lo opcional y justificar qué funciones quedan para hitos
+posteriores.</p>
+<h2 id="1-el-reto-h1">1. El reto H1</h2>
+<p>H1 consiste en crear una primera versión pequeña y ejecutable de
+MiniJarvis en Java. No será todavía un asistente completo: será un
+programa de consola que permita demostrar los fundamentos del Tema
+1.</p>
+<p>El producto mínimo debe:</p>
+<ul>
+<li>arrancar desde <code>main</code>;</li>
+<li>mostrar una presentación clara;</li>
+<li>pedir al menos un dato ficticio mediante <code>Scanner</code>;</li>
+<li>guardar datos en variables con tipos adecuados;</li>
+<li>utilizar una constante con <code>final</code>;</li>
+<li>realizar una operación sencilla;</li>
+<li>mostrar una respuesta que combine texto y datos;</li>
+<li>compilar y ejecutarse de forma repetible.</li>
+</ul>
+<p>El menú, los bucles, la memoria, los ficheros, las clases propias
+complejas y la conexión con una IA real llegarán en hitos
+posteriores.</p>
+<h2 id="2-tres-criterios-para-valorar-un-programa">2. Tres criterios
+para valorar un programa</h2>
+<h3 id="correcto">Correcto</h3>
+<p>Hace lo que se ha pedido y produce el resultado esperado. Un programa
+que compila, pero muestra una respuesta equivocada, no es correcto.</p>
+<h3 id="eficiente">Eficiente</h3>
+<p>Resuelve el problema sin pasos o repeticiones innecesarias. En H1 no
+buscamos optimizaciones avanzadas: basta con evitar código duplicado y
+cálculos que no se usan.</p>
+<h3 id="mantenible">Mantenible</h3>
+<p>Se puede leer y modificar con facilidad. Ayudan los nombres claros,
+la indentación coherente, las constantes para datos estables y los
+comentarios que explican decisiones no evidentes.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> NOMBRE_ASISTENTE <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreUsuario <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> nombreUsuario <span class="op">+</span> <span class="st">&quot;. Soy &quot;</span> <span class="op">+</span> NOMBRE_ASISTENTE <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Este fragmento usa nombres que explican la intención y evita repetir
+el nombre del asistente como un literal disperso.</p>
+<h2 id="3-clasifica-el-alcance">3. Clasifica el alcance</h2>
+<p>Coloca cada propuesta en una de estas categorías:</p>
 <table>
 <thead>
 <tr class="header">
-<th>Dato</th>
-<th>Valor</th>
+<th>Entra en H1</th>
+<th>Puede ser micropráctica</th>
+<th>Queda para después</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Hito</td>
-<td>H1 — Primer MiniJarvis</td>
+<td>saludo inicial</td>
+<td>conversión de texto a número</td>
+<td>menú repetitivo</td>
 </tr>
 <tr class="even">
-<td>Duración</td>
-<td>2 periodos; esta ficha organiza el checkpoint de 45 minutos</td>
+<td>nombre ficticio por teclado</td>
+<td>comparación y <code>if/else</code> básico</td>
+<td>memoria entre ejecuciones</td>
 </tr>
 <tr class="odd">
-<td>Fase HEXA</td>
-<td>Activar — entender el reto</td>
+<td>cálculo sencillo</td>
+<td>prueba de entrada no convertible</td>
+<td>lectura de ficheros</td>
 </tr>
 <tr class="even">
-<td>Registro de proceso</td>
-<td>Una entrada en el diario individual al cerrar el checkpoint; no se
-crea un documento adicional</td>
+<td>salida clara</td>
+<td>casting como ampliación</td>
+<td>conexión con una API o IA real</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>El producto principal H1 sigue siendo pequeño. Las microprácticas
-demuestran el Tema 1 y pueden permanecer separadas de
-<code>Main.java</code>.</p>
-</blockquote>
-<p><strong>Objetivo:</strong> Entender el reto, delimitar H1 y
-convertirlo en requisitos observables.</p>
-<p><strong>D1</strong> · 00:00–00:04 · ACTIVAR</p>
-<h2
-id="cuál-es-el-minijarvis-más-pequeño-que-ya-podemos-demostrar">¿Cuál es
-el MiniJarvis más pequeño que ya podemos demostrar?</h2>
-<p>Un programa Java de consola pequeño, ejecutable y defendible.<br>
-<br> Todavía NO buscamos una IA completa.</p>
-<p><strong>Qué haces:</strong> Formula hipótesis y dudas sobre el
-producto.</p>
-<p><strong>Qué debe quedar:</strong> puedan describir H1 con una frase
-sencilla.</p>
-<p><strong>D2</strong> · 00:04–00:09 · ACTIVAR</p>
-<h2 id="mira-primero-el-resultado">Mira primero el resultado</h2>
-<p>Una salida posible. No es la única solución.<br> Hola, soy
-MiniJarvis.<br> ¿Cómo te llamas? Laura<br> Encantado, Laura.<br> Estoy
-aprendiendo la base de Java.</p>
-<p><strong>Qué haces:</strong> Identifica salida, entrada y datos que
-cambian.</p>
-<p><strong>Qué debe quedar:</strong> aparezca la idea de datos fijos
-frente a cambiantes.</p>
-<p><strong>D3</strong> · 00:09–00:15 · PÍLDORA DOCENTE 1/1</p>
-<h2 id="qué-hace-bueno-a-un-primer-programa">¿Qué hace bueno a un primer
-programa?</h2>
-<p><strong>Qué haces:</strong> Propone un ejemplo observable de cada
-criterio.</p>
-<p><strong>Qué debe quedar:</strong> puedan aplicar los tres criterios a
-un programa pequeño.</p>
-<p><strong>D4</strong> · 00:15–00:25 · ACTIVIDAD</p>
-<h2 id="tres-cajas-para-ordenar-ideas">Tres cajas para ordenar
-ideas</h2>
-<p><strong>Qué haces:</strong> Clasifica ideas y explica por qué.</p>
-<p><strong>Qué debe quedar:</strong> cada equipo tenga claro qué entra y
-qué no.</p>
-<p><strong>D5</strong> · 00:25–00:38 · ACTIVIDAD</p>
-<h2 id="convertid-el-reto-en-requisitos-observables">Convertid el reto
-en requisitos observables</h2>
-<p>Ejemplos de verbos útiles:<br> • muestra<br> • pide<br> • guarda<br>
-• calcula<br> • ejecuta<br> • explica<br> <br> Escribid 4–6 requisitos y
-2–3 límites.</p>
-<p><strong>Qué haces:</strong> Redacta requisitos y restricciones del
-hito.</p>
-<p><strong>Qué debe quedar:</strong> cada requisito pueda comprobarse
-con una ejecución o explicación.</p>
-<p><strong>D6</strong> · 00:38–00:45 · CIERRE</p>
-<h2 id="cómo-demostrarás-que-h1-funciona">¿Cómo demostrarás que H1
-funciona?</h2>
-<p><strong>Qué haces:</strong> Formula prueba y defensa breve.</p>
-<p><strong>Qué debe quedar:</strong> quede una evidencia y siguiente
-paso registrados.</p>
-<p><strong>Cierre:</strong> registra evidencia y una breve explicación
-de lo aprendido. Usa datos ficticios y no publiques credenciales ni
-información personal.</p>
-<h2 id="evidencia-única-antes-de-salir">Evidencia única antes de
-salir</h2>
+<p>Clasifica también estas ideas y justifica cada decisión:</p>
 <ul>
-<li>conserva el código o la prueba en el lugar indicado por la
-sesión;</li>
-<li>añade una sola entrada al diario individual con prueba, bloqueo y
-siguiente paso;</li>
-<li>no copies la misma reflexión en otro documento; el Site personal
-seleccionará evidencias al cerrar H1.</li>
+<li>calcular minutos a partir de horas;</li>
+<li>recordar conversaciones anteriores;</li>
+<li>mostrar si se alcanza un objetivo;</li>
+<li>guardar información en un fichero;</li>
+<li>ofrecer diez comandos distintos.</li>
+</ul>
+<h2 id="4-define-vuestro-incremento">4. Define vuestro incremento</h2>
+<p>Redactad una decisión de alcance con este formato:</p>
+<pre class="text"><code>Nuestro H1 hará:
+- ...
+- ...
+
+No hará todavía:
+- ...
+- ...
+
+Lo dejamos fuera porque:
+- ...</code></pre>
+<p>Ejemplo:</p>
+<pre class="text"><code>Nuestro H1 saludará, pedirá un nombre ficticio y unas horas de estudio,
+calculará los minutos y mostrará si se alcanza un objetivo.
+No tendrá menú ni memoria porque esas funciones necesitan contenidos de H2
+y de hitos posteriores.</code></pre>
+<h2 id="5-evidencia-verificable">5. Evidencia verificable</h2>
+<p>Conserva en el Scrum del equipo:</p>
+<ul>
+<li>la lista de funciones que entran;</li>
+<li>la lista de funciones que quedan fuera;</li>
+<li>una justificación concreta;</li>
+<li>el enlace a la tarea o decisión correspondiente.</li>
+</ul>
+<p>No hace falta crear un documento paralelo. En tu diario individual
+registra solo tu aportación, un aprendizaje o un bloqueo
+significativo.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Confundir «compila» con «cumple el reto».</li>
+<li>Prometer memoria o inteligencia artificial que H1 no
+implementa.</li>
+<li>Añadir demasiadas funciones antes de tener un programa mínimo
+ejecutable.</li>
+<li>Escribir «lo dejamos para después» sin explicar por qué.</li>
+</ul>
+<h2 id="autoevaluación">Autoevaluación</h2>
+<p>Antes de cerrar la sesión, comprueba que puedes:</p>
+<ul>
+<li>explicar H1 en una frase;</li>
+<li>enumerar al menos cuatro elementos que sí entran;</li>
+<li>identificar tres funciones que no pertenecen todavía a H1;</li>
+<li>justificar una exclusión por los contenidos necesarios;</li>
+<li>distinguir un programa correcto, eficiente y mantenible.</li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
-<ul>
-<li>Usa datos ficticios y no publiques credenciales ni información
-personal.</li>
-<li>Si utilizas IA de forma sustantiva, registra propósito, propuesta,
-cambios propios y validación en el registro de IA del hito.</li>
-</ul>
-<h2 id="cierre-individual">Cierre individual</h2>
-<p><strong>¿Qué puedes señalar, explicar y probar al terminar este
-checkpoint?</strong></p>
+<p>Usa siempre datos ficticios. No publiques nombres reales,
+contraseñas, claves ni tokens. Si empleas IA de forma sustantiva,
+registra para qué la usaste, qué propuesta recibiste, qué cambiaste y
+cómo comprobaste el resultado.</p>
 
   </main>
 </body>

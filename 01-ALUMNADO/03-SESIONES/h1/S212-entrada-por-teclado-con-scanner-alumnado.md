@@ -1,165 +1,161 @@
-# S212 — Scanner y conversiones
+# S212 — Entrada por teclado y conversiones
 
-| Dato | Valor |
-|---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 3 periodos; esta ficha organiza el checkpoint de 45 minutos |
-| Fase HEXA | Ejecutar — crear |
-| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
+## Objetivo
 
-> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
+Leer datos con una única instancia de `Scanner`, distinguir texto de número, convertir entradas válidas y documentar tanto una ejecución correcta como una entrada no convertible.
 
-**Objetivo:** Leer entrada, convertir tipos y reconocer errores de conversión.
+## 1. Pedir, leer, guardar y usar
 
-**D1** · 00:00–00:05 · MICROINVESTIGACIÓN
+`Scanner` permite leer lo que una persona escribe en la consola. `nextLine()` siempre devuelve un `String`.
 
-## Hasta ahora los datos los decide quien programa
+Programa completo:
 
-¿Cómo hacemos para que los escriba la persona que ejecuta MiniJarvis?
+```java
+import java.util.Scanner;
 
-**Qué haces:** Propone formas de entrada.
+public class Main {
+    public static void main(String[] argumentos) {
+        Scanner teclado = new Scanner(System.in);
 
-**Qué debe quedar:** aparezca “teclado/consola”.
+        System.out.print("Nombre ficticio: ");
+        String nombreUsuario = teclado.nextLine();
 
-**D2** · 00:05–00:11 · PÍLDORA DOCENTE 1/4
+        System.out.print("Horas de estudio: ");
+        String textoHoras = teclado.nextLine();
+        int horasEstudio = Integer.parseInt(textoHoras);
+        int minutosEstudio = horasEstudio * 60;
 
-## Scanner: pedir → leer → guardar
+        System.out.println("Hola, " + nombreUsuario + ".");
+        System.out.println("Minutos de estudio: " + minutosEstudio);
 
-import java.util.Scanner;<br>
-<br>
-Scanner scanner = new Scanner(System.in);<br>
-String userName = scanner.nextLine();<br>
-scanner.close();
+        teclado.close();
+    }
+}
+```
 
-**Qué haces:** Señala qué devuelve y dónde se guarda.
+La misma instancia `teclado` se reutiliza para todas las lecturas. Se cierra solo cuando el programa ya no necesita leer más, porque cerrar el `Scanner` también cierra `System.in`.
 
-**Qué debe quedar:** puedan verbalizar el flujo.
+## 2. Entrada usada frente a entrada ignorada
 
-**D3** · 00:11–00:17 · ACTIVIDAD
+Esto lee un texto, pero no lo guarda ni lo utiliza:
 
-## Pide un nombre y úsalo
+```java
+teclado.nextLine();
+```
 
-Ejecuta dos veces con nombres ficticios distintos.<br>
-<br>
-¿Qué cambia? ¿Qué no?
+Esto sí conserva el dato:
 
-**Qué haces:** Programa y prueba.
+```java
+String nombreUsuario = teclado.nextLine();
+```
 
-**Qué debe quedar:** la entrada afecte a la salida.
+Para que la entrada tenga un efecto observable, el programa debe guardarla y después mostrarla, convertirla o usarla en una operación.
 
-**D4** · 00:17–00:20 · CONFLICTO
+## 3. Texto y número no son lo mismo
 
-## Tengo "5". ¿Tengo el número 5?
+- `"5"` es un `String`.
+- `5` es un `int`.
+- `7.5` puede representarse como `double`.
 
-"5" es texto si procede de nextLine().<br>
-5 es un entero.
+Aunque una persona escriba cifras, `nextLine()` devuelve texto. Para calcular hay que convertirlo.
 
-**Qué haces:** Distingue String/int.
+```java
+String textoHoras = "5";
+int horas = Integer.parseInt(textoHoras);
 
-**Qué debe quedar:** aparezca necesidad de convertir.
+String textoNota = "7.5";
+double nota = Double.parseDouble(textoNota);
+```
 
-**D5** · 00:20–00:25 · PÍLDORA DOCENTE 2/4
+## 4. Parseo
 
-## Parsear texto a un tipo básico
+El parseo interpreta un texto como un valor de otro tipo:
 
-int hours = Integer.parseInt(text);<br>
-double score = Double.parseDouble(text);<br>
-boolean ok = Boolean.parseBoolean(text);
+```java
+int horas = Integer.parseInt("5");
+double nota = Double.parseDouble("7.5");
+boolean preparado = Boolean.parseBoolean("true");
+```
 
-**Qué haces:** Predice tipos resultantes.
+`parseInt` y `parseDouble` pueden fallar si el texto no representa un número válido.
 
-**Qué debe quedar:** puedan explicar para qué sirve parseInt.
+```java
+int numero = Integer.parseInt("hola");
+```
 
-**D6** · 00:25–00:29 · EXPERIMENTO
+Este código compila, pero durante la ejecución produce `NumberFormatException`. En H1 debes reconocer, reproducir y explicar el error; todavía no necesitas resolverlo con `try/catch`.
 
-## Leer → convertir → calcular
+## 5. Ampliación: conversión implícita y casting
 
-Scanner scanner = new Scanner(System.in);<br>
-String text = scanner.nextLine();<br>
-int hours = Integer.parseInt(text);<br>
-int minutes = hours \* 60;<br>
-System.out.println(minutes);<br>
-scanner.close();
+Consulta la píldora S212 para estudiar estos dos mecanismos:
 
-**Qué haces:** Predice y prueba.
+### Conversión implícita
 
-**Qué debe quedar:** comprendan la cadena completa.
+Java puede ampliar automáticamente algunos valores:
 
-**D7** · 00:29–00:33 · PÍLDORA DOCENTE 3/4
+```java
+int horas = 5;
+double horasDecimales = horas; // 5.0
+```
 
-## Conversión implícita
+### Casting
 
-int whole = 7;<br>
-double wider = whole;<br>
-<br>
-// no hace falta casting
+Un casting fuerza una conversión y puede perder información:
 
-**Qué haces:** Identifica origen/destino.
+```java
+double nota = 8.9;
+int notaEntera = (int) nota; // 8
+```
 
-**Qué debe quedar:** distingan conversión numérica de String→número.
+No redondea: descarta la parte decimal acercándose a cero.
 
-**D8** · 00:33–00:37 · PÍLDORA DOCENTE 4/4
+Parsear, convertir implícitamente y hacer casting no son lo mismo:
 
-## Casting: forzar puede perder información
+- parseo: parte de un `String`;
+- conversión implícita: Java amplía un valor automáticamente;
+- casting: se indica el tipo de destino de forma explícita.
 
-double price = 12.75;<br>
-int wholePrice = (int) price;<br>
-// wholePrice vale 12
+## 6. Actividad
 
-**Qué haces:** Predice antes de ejecutar.
+1. Ejecuta el programa completo con dos nombres ficticios.
+2. Prueba dos números válidos y predice los minutos.
+3. Prueba una entrada no convertible, como `hola`.
+4. Registra cuándo aparece el error y qué método lo provoca.
+5. Comprueba que la entrada leída se utiliza realmente.
+6. Como ampliación, ejecuta un ejemplo de conversión implícita y otro de casting.
 
-**Qué debe quedar:** puedan explicar la pérdida.
+## Evidencia verificable
 
-**D9** · 00:37–00:40 · ERROR ÚTIL
+No entregues una captura aislada. Registra:
 
-## ¿Compila? ¿Y al ejecutar?
+| Caso | Entrada | Salida o error esperado | Resultado observado | Qué demuestra |
+|---|---|---|---|---|
+| Válido | `Laura`, `5` | `300` minutos | … | lectura, parseo y cálculo |
+| No convertible | `Sam`, `hola` | `NumberFormatException` | … | el texto no representa un entero |
 
-String text = "hola";<br>
-int number = Integer.parseInt(text);
+La evidencia debe permitir ver o enlazar el código, la entrada usada y la salida completa.
 
-**Qué haces:** Observa el error en ejecución.
+## Errores frecuentes
 
-**Qué debe quedar:** puedan nombrar cuándo falla.
+- Pensar que `nextLine()` devuelve un número.
+- Crear un `Scanner` nuevo para cada dato.
+- Cerrar `teclado` antes de terminar las lecturas.
+- Leer una entrada y no guardarla ni usarla.
+- Confundir parseo con casting.
+- Afirmar que el casting redondea.
+- Mostrar solo el mensaje de error sin indicar qué entrada lo produjo.
 
-**D10** · 00:40–00:43 · ACTIVIDAD
+## Autoevaluación
 
-## Evidencia de conversión
+Comprueba que puedes:
 
-Guarda:<br>
-• una entrada válida<br>
-• resultado esperado<br>
-• resultado obtenido<br>
-• qué ocurre con una entrada no convertible
-
-**Qué haces:** Documenta prueba.
-
-**Qué debe quedar:** quede trazabilidad.
-
-**D11** · 00:43–00:45 · CIERRE
-
-## Microdefensa de tipos
-
-¿Qué devuelve nextLine()?<br>
-¿Por qué necesitamos parseInt?<br>
-¿Qué diferencia hay con un casting?
-
-**Qué haces:** Responde sobre su código.
-
-**Qué debe quedar:** quede diagnóstico.
-
-**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
-
-## Evidencia única antes de salir
-
-- conserva el código o la prueba en el lugar indicado por la sesión;
-- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
-- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
+- explicar qué devuelve `nextLine()`;
+- reutilizar una sola instancia de `Scanner`;
+- describir el flujo pedir → leer → guardar → convertir → calcular → mostrar;
+- distinguir `parseInt` y `parseDouble`;
+- explicar cuándo aparece `NumberFormatException`;
+- reconocer conversión implícita y casting.
 
 ## Seguridad y uso de IA
 
-- Usa datos ficticios y no publiques credenciales ni información personal.
-- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
-
-## Cierre individual
-
-**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**
+Usa datos ficticios y revisa las capturas antes de publicarlas. Nunca escribas contraseñas, claves ni tokens como entradas de prueba. Si una IA interpreta una excepción, reproduce el caso y verifica su explicación.

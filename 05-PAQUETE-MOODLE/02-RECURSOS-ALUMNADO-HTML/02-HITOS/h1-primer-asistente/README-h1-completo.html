@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniJarvis H1 — Primer asistente por consola</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="minijarvis-h1--primer-asistente-por-consola">MiniJarvis H1 —
+Primer asistente por consola</h1>
+<h2 id="qué-hace">Qué hace</h2>
+<p>MiniJarvis es un asistente de consola que pide un nombre al usuario,
+lo saluda con un mensaje personalizado y aplica una operación simple
+(dobla el valor de un número introducido). Lee entrada por teclado, usa
+variables, constantes, comparaciones y <code>if/else</code> para decidir
+la salida. No tiene menú, ni bucles, ni conexión con IA real.</p>
+<h2 id="requisitos-y-ejecución">Requisitos y ejecución</h2>
+<ul>
+<li>JDK utilizado: JDK 17 (o superior)</li>
+<li>IDE opcional: IntelliJ IDEA, VS Code con extensión Java, o
+Eclipse</li>
+<li>Clase principal: <code>Main.java</code></li>
+</ul>
+<pre class="text"><code>1. Clonar o abrir el repositorio en el IDE.
+2. Abrir el archivo src/Main.java.
+3. Compilar: javac src/Main.java
+4. Ejecutar: java -cp src Main
+5. Introducir un nombre cuando se solicite.
+6. Introducir un número entero cuando se solicite.
+7. Observar la salida por consola.</code></pre>
+<h2 id="ejemplo-reproducible">Ejemplo reproducible</h2>
+<h3 id="caso-normal">Caso normal</h3>
+<pre class="text"><code>Entrada:
+Nombre: Ana
+Número: 5
+
+Salida esperada:
+Hola, Ana. Bienvenida a MiniJarvis.
+El doble de 5 es 10.
+
+Salida obtenida:
+Hola, Ana. Bienvenida a MiniJarvis.
+El doble de 5 es 10.</code></pre>
+<h3 id="caso-alternativo-o-error-básico">Caso alternativo o error
+básico</h3>
+<pre class="text"><code>Entrada:
+Nombre: Carlos
+Número: abc
+
+Predicción:
+El programa lanza NumberFormatException porque &quot;abc&quot; no se puede convertir a entero.
+
+Resultado obtenido:
+Exception in thread &quot;main&quot; java.lang.NumberFormatException: For input string: &quot;abc&quot;
+
+Explicación:
+Integer.parseInt(&quot;abc&quot;) falla porque &quot;abc&quot; no es un número válido. El programa no gestiona este error en H1; se detiene con una excepción de ejecución.</code></pre>
+<h2 id="decisiones-técnicas">Decisiones técnicas</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Decisión</th>
+<th>Motivo</th>
+<th>Enlace a código/commit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Usar <code>Scanner</code> con <code>nextLine()</code> para el
+nombre</td>
+<td>Permite leer cadenas con espacios, necesario para nombres
+completos</td>
+<td><a
+href="https://github.com/ejemplo/minijarvis-h1/commit/abc123">commit
+S212</a></td>
+</tr>
+<tr class="even">
+<td>Usar <code>Integer.parseInt()</code> para convertir la entrada
+numérica</td>
+<td>Convierte la cadena leída a entero para realizar operaciones
+aritméticas</td>
+<td><a
+href="https://github.com/ejemplo/minijarvis-h1/commit/abc123">commit
+S212</a></td>
+</tr>
+<tr class="odd">
+<td>Usar <code>final</code> para <code>MENSAJE_BIENVENIDA</code></td>
+<td>Es un valor fijo que no cambia durante la ejecución;
+<code>final</code> previene modificaciones accidentales</td>
+<td><a
+href="https://github.com/ejemplo/minijarvis-h1/commit/def456">commit
+S211</a></td>
+</tr>
+<tr class="even">
+<td>Usar <code>if/else</code> para verificar si el número es
+positivo</td>
+<td>Muestra un mensaje diferente si el número es negativo o cero</td>
+<td><a
+href="https://github.com/ejemplo/minijarvis-h1/commit/ghi789">commit
+S213</a></td>
+</tr>
+<tr class="odd">
+<td>No implementar menú ni bucles</td>
+<td>Queda fuera del alcance de H1; se abordará en H2</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="microprácticas-del-tema-1">Microprácticas del Tema 1</h2>
+<p>No fuerces todo dentro del producto. Enlaza ejemplos mínimos que
+puedas ejecutar y explicar.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th>Archivo o commit</th>
+<th>Prueba o salida</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tipos, variables y asignación</td>
+<td><code>Main.java</code> línea 12-15</td>
+<td><code>String nombre = "Ana";</code> → salida:
+<code>Hola, Ana</code></td>
+</tr>
+<tr class="even">
+<td>Constantes, literales y operadores</td>
+<td><code>Main.java</code> línea 8</td>
+<td><code>final String MENSAJE_BIENVENIDA = "Bienvenida a MiniJarvis.";</code>
+→ no se puede reasignar</td>
+</tr>
+<tr class="odd">
+<td>Conversión y casting</td>
+<td><code>Main.java</code> línea 20</td>
+<td><code>Integer.parseInt("5")</code> → <code>5</code> (int);
+<code>(double) 5 / 2</code> → <code>2.5</code></td>
+</tr>
+<tr class="even">
+<td>Comparaciones y booleanos</td>
+<td><code>Main.java</code> línea 25</td>
+<td><code>numero &gt; 0</code> → <code>true</code> si numero=5,
+<code>false</code> si numero=-3</td>
+</tr>
+<tr class="odd">
+<td><code>if/else</code> y <code>?:</code> básicos</td>
+<td><code>Main.java</code> línea 25-28</td>
+<td>Si <code>numero &gt; 0</code> → "El doble es X"; else → "El número
+no es positivo"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limitaciones-deliberadas">Limitaciones deliberadas</h2>
+<ul>
+<li>Sin menú.</li>
+<li>Sin bucle.</li>
+<li>Sin credenciales, datos personales ni conexión con IA real.</li>
+<li>Sin gestión de errores de entrada (excepto la que se demuestra con
+<code>NumberFormatException</code>).</li>
+<li>Sin persistencia de datos (no guarda ni recupera información entre
+ejecuciones).</li>
+</ul>
+<h2 id="versión-evaluada">Versión evaluada</h2>
+<ul>
+<li>Tag <code>h1-entrega</code> o commit: <code>h1-entrega</code>
+(commit <code>abc123def456</code>)</li>
+<li>Fecha: 2026-10-15</li>
+<li>Integrantes y aportación verificable:
+<ul>
+<li>Ana García: diseño del flujo principal, variables, constantes,
+<code>if/else</code> (commits <code>abc123</code>, <code>def456</code>,
+<code>ghi789</code>)</li>
+<li>Carlos López: implementación de <code>Scanner</code>, conversión de
+entrada, pruebas de ejecución (commits <code>jkl012</code>,
+<code>mno345</code>)</li>
+</ul></li>
+</ul>
+
+  </main>
+</body>
+</html>

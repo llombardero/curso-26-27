@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vocabulario H1 — completado (Ana García)</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="vocabulario-h1--completado-ana-garcía">Vocabulario H1 —
+completado (Ana García)</h1>
+<blockquote>
+<p>No es un entregable independiente. Úsalo para preparar la defensa o
+recuperar conceptos.</p>
+</blockquote>
+<p>Para cada término, escribo una definición propia, un ejemplo mínimo y
+un error frecuente.</p>
+<hr />
+<h2 id="jdk-jvm-e-ide">JDK, JVM e IDE</h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>JDK (Java Development Kit):</strong> El kit de desarrollo de
+Java. Incluye el compilador (<code>javac</code>), la máquina virtual
+(JVM) y herramientas para escribir y ejecutar programas Java.</li>
+<li><strong>JVM (Java Virtual Machine):</strong> La máquina virtual que
+ejecuta el código bytecode de Java. Hace que un programa Java pueda
+correr en cualquier sistema operativo sin modificarlo.</li>
+<li><strong>IDE (Entorno de Desarrollo Integrado):</strong> Un programa
+que ayuda a escribir código Java: IntelliJ IDEA, VS Code con extensión
+Java, o Eclipse. Incluye editor, compilador, depurador y otras
+herramientas.</li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">javac</span> Main.java    <span class="co"># JDK: compila</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> Main          <span class="co"># JVM: ejecuta</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># IntelliJ IDEA    # IDE: escribe y ejecuta</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Creer que JDK y JVM son lo mismo.
+El JDK incluye la JVM, pero también el compilador y otras herramientas.
+La JVM solo ejecuta; el JDK crea y ejecuta.</li>
+</ul>
+<hr />
+<h2 id="clase-y-main">Clase y <code>main</code></h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>Clase:</strong> Un bloque de código que define un "molde"
+para crear objetos. Todo programa Java debe tener al menos una clase. Se
+declara con <code>class</code>.</li>
+<li><strong><code>main</code>:</strong> El método que Java ejecuta
+automáticamente al arrancar el programa. Es el punto de entrada.</li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span>          <span class="co">// Clase</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> argumentos<span class="op">)</span> <span class="op">{</span>  <span class="co">// Método main</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Arranca aquí&quot;</span><span class="op">);</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Olvidar
+<code>public static void</code> antes de <code>main</code>. Sin eso,
+Java no reconoce el método como punto de entrada y no ejecuta el
+programa.</li>
+</ul>
+<hr />
+<h2 id="instrucción-bloque-y-comentario">Instrucción, bloque y
+comentario</h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>Instrucción:</strong> Una orden que el programa ejecuta. En
+Java, cada instrucción termina con punto y coma (<code>;</code>).</li>
+<li><strong>Bloque:</strong> Un conjunto de instrucciones agrupadas
+entre llaves <code>{ }</code>. Se usa en <code>main</code>,
+<code>if</code>, <code>else</code>, <code>for</code>, etc.</li>
+<li><strong>Comentario:</strong> Texto que el compilador ignora. Sirve
+para documentar el código. Puede ser de una línea (<code>//</code>) o de
+varias (<code>/* ... */</code>).</li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">5</span><span class="op">;</span>      <span class="co">// Instrucción</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span>                <span class="co">// Inicio de bloque</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> y <span class="op">=</span> <span class="dv">10</span><span class="op">;</span>  <span class="co">// Otra instrucción dentro del bloque</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>                <span class="co">// Fin de bloque</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Esto es un comentario</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Olvidar el punto y coma
+(<code>;</code>) al final de una instrucción. El compilador da error de
+sintaxis.</li>
+</ul>
+<hr />
+<h2 id="tipo-primitivo-y-string">Tipo primitivo y
+<code>String</code></h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>Tipo primitivo:</strong> Un tipo de dato básico integrado en
+Java: <code>int</code> (enteros), <code>double</code> (decimales),
+<code>boolean</code> (verdadero/falso), <code>char</code> (un
+carácter).</li>
+<li><strong><code>String</code>:</strong> Un tipo de dato para cadenas
+de texto. No es primitivo; es una clase. Se escribe con comillas dobles:
+<code>"Hola"</code>.</li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> edad <span class="op">=</span> <span class="dv">25</span><span class="op">;</span>           <span class="co">// Primitivo</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> precio <span class="op">=</span> <span class="fl">9.99</span><span class="op">;</span>    <span class="co">// Primitivo</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> activo <span class="op">=</span> <span class="kw">true</span><span class="op">;</span>   <span class="co">// Primitivo</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombre <span class="op">=</span> <span class="st">&quot;Ana&quot;</span><span class="op">;</span>   <span class="co">// Clase (no primitivo)</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Usar <code>=</code> para comparar
+valores en lugar de <code>==</code>. <code>=</code> asigna;
+<code>==</code> compara. También confundir <code>String</code> con
+primitivo: <code>String</code> es una clase, no un tipo primitivo.</li>
+</ul>
+<hr />
+<h2 id="declaración-inicialización-y-asignación">Declaración,
+inicialización y asignación</h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>Declaración:</strong> Decirle al compilador que existe una
+variable con un tipo y un nombre: <code>int edad;</code></li>
+<li><strong>Inicialización:</strong> Darle un valor la primera vez:
+<code>int edad = 25;</code></li>
+<li><strong>Asignación:</strong> Cambiar el valor de una variable ya
+declarada: <code>edad = 30;</code></li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> edad<span class="op">;</span>        <span class="co">// Declaración</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>edad <span class="op">=</span> <span class="dv">25</span><span class="op">;</span>       <span class="co">// Inicialización (y primera asignación)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>edad <span class="op">=</span> <span class="dv">30</span><span class="op">;</span>       <span class="co">// Asignación (cambio de valor)</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Usar una variable antes de
+inicializarla. <code>int edad; System.out.println(edad);</code> → error
+de compilación: "variable might not have been initialized".</li>
+</ul>
+<hr />
+<h2 id="variable-constante-y-literal">Variable, constante y literal</h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>Variable:</strong> Un espacio en memoria con un nombre y un
+tipo cuyo valor puede cambiar:
+<code>int numero = 5; numero = 10;</code></li>
+<li><strong>Constante:</strong> Una variable declarada con
+<code>final</code> cuyo valor no puede cambiar:
+<code>final int MAX = 100;</code></li>
+<li><strong>Literal:</strong> Un valor escrito directamente en el
+código, sin nombre: <code>"Hola"</code>, <code>42</code>,
+<code>3.14</code>, <code>true</code>.</li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numero <span class="op">=</span> <span class="dv">42</span><span class="op">;</span>           <span class="co">// Variable: puede cambiar</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span>       <span class="co">// Constante: no puede cambiar</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> saludo <span class="op">=</span> <span class="st">&quot;Hola&quot;</span><span class="op">;</span>    <span class="co">// &quot;Hola&quot; es un literal</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Intentar reasignar una constante:
+<code>MAX = 200;</code> → error de compilación: "cannot assign a value
+to final variable MAX".</li>
+</ul>
+<hr />
+<h2 id="operador-aritmético-relacional-y-lógico">Operador aritmético,
+relacional y lógico</h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>Operador aritmético:</strong> Realiza cálculos matemáticos:
+<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
+<code>%</code> (módulo/resto).</li>
+<li><strong>Operador relacional:</strong> Compara dos valores y devuelve
+<code>true</code> o <code>false</code>: <code>&gt;</code>,
+<code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>,
+<code>==</code>, <code>!=</code>.</li>
+<li><strong>Operador lógico:</strong> Combina expresiones booleanas:
+<code>&amp;&amp;</code> (y), <code>||</code> (o), <code>!</code>
+(no).</li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">10</span><span class="op">,</span> b <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> suma <span class="op">=</span> a <span class="op">+</span> b<span class="op">;</span>          <span class="co">// Aritmético: 13</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> mayor <span class="op">=</span> a <span class="op">&gt;</span> b<span class="op">;</span>     <span class="co">// Relacional: true</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> ambos <span class="op">=</span> <span class="op">(</span>a <span class="op">&gt;</span> <span class="dv">5</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="op">(</span>b <span class="op">&lt;</span> <span class="dv">5</span><span class="op">);</span>  <span class="co">// Lógico: true &amp;&amp; true = true</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Usar <code>=</code> en lugar de
+<code>==</code> para comparar: <code>if (a = 10)</code> → error de
+compilación (intenta asignar, no comparar).</li>
+</ul>
+<hr />
+<h2 id="conversión-y-casting">Conversión y casting</h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>Conversión:</strong> Cambiar un valor de un tipo a otro.
+Java hace conversiones automáticas cuando son seguras (ej:
+<code>int</code> a <code>double</code>).</li>
+<li><strong>Casting:</strong> Conversión explícita con paréntesis:
+<code>(double) 5</code> convierte el entero 5 al decimal 5.0.</li>
+<li><strong><code>Integer.parseInt()</code>:</strong> Convierte una
+cadena a entero. Lanza excepción si la cadena no es un número.</li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> entero <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> decimal <span class="op">=</span> entero<span class="op">;</span>           <span class="co">// Conversión automática: 5.0</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> explicito <span class="op">=</span> <span class="op">(</span><span class="dt">double</span><span class="op">)</span> entero<span class="op">;</span> <span class="co">// Casting explícito: 5.0</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> desdeString <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span><span class="st">&quot;42&quot;</span><span class="op">);</span> <span class="co">// Conversión de String a int: 42</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Casting inseguro:
+<code>int x = (int) 5.9;</code> → <code>x = 5</code> (se pierde la parte
+decimal). También: <code>Integer.parseInt("abc")</code> →
+<code>NumberFormatException</code>.</li>
+</ul>
+<hr />
+<h2 id="condición-ifelse-y-">Condición, <code>if/else</code> y
+<code>?:</code></h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>Condición:</strong> Una expresión que evalúa a
+<code>true</code> o <code>false</code>. Se usa en <code>if</code>,
+<code>while</code>, etc. Ejemplo: <code>numero &gt; 0</code>.</li>
+<li><strong><code>if/else</code>:</strong> Estructura que ejecuta un
+bloque si la condición es <code>true</code> y otro si es
+<code>false</code>.</li>
+<li><strong><code>?:</code> (operador ternario):</strong> Versión corta
+de <code>if/else</code> en una línea:
+<code>condicion ? valorSiTrue : valorSiFalse</code>.</li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numero <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>numero <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Positivo&quot;</span><span class="op">);</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;No positivo&quot;</span><span class="op">);</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Equivalente con ?:</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> resultado <span class="op">=</span> <span class="op">(</span>numero <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">?</span> <span class="st">&quot;Positivo&quot;</span> <span class="op">:</span> <span class="st">&quot;No positivo&quot;</span><span class="op">;</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Olvidar las llaves
+<code>{ }</code> en <code>if/else</code> cuando hay múltiples
+instrucciones. Solo la primera instrucción sin llaves pertenece al
+<code>if</code>; las demás se ejecutan siempre.</li>
+</ul>
+<hr />
+<h2 id="compilación-ejecución-y-error">Compilación, ejecución y
+error</h2>
+<ul>
+<li><strong>Definición propia:</strong>
+<ul>
+<li><strong>Compilación:</strong> El proceso de convertir el código
+fuente (.java) en bytecode (.class). Lo hace <code>javac</code>. Si hay
+errores de sintaxis, la compilación falla.</li>
+<li><strong>Ejecución:</strong> El proceso de correr el bytecode. Lo
+hace <code>java</code>. Si hay errores lógicos o de datos, la ejecución
+falla (excepciones).</li>
+<li><strong>Error de compilación:</strong> Se detecta antes de ejecutar.
+Ejemplo: falta <code>;</code>, nombre de variable incorrecto.</li>
+<li><strong>Error de ejecución:</strong> Se detecta durante la
+ejecución. Ejemplo: división por cero,
+<code>NumberFormatException</code>,
+<code>NullPointerException</code>.</li>
+</ul></li>
+<li><strong>Ejemplo mínimo:</strong>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">javac</span> Main.java    <span class="co"># Compilación: si hay errores de sintaxis, falla aquí</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> Main          <span class="co"># Ejecución: si hay errores lógicos, falla aquí</span></span></code></pre></div></li>
+<li><strong>Error frecuente:</strong> Confundir errores de compilación
+con errores de ejecución. Los de compilación se arreglan antes de
+ejecutar; los de ejecución se detectan al correr el programa.</li>
+</ul>
+
+  </main>
+</body>
+</html>

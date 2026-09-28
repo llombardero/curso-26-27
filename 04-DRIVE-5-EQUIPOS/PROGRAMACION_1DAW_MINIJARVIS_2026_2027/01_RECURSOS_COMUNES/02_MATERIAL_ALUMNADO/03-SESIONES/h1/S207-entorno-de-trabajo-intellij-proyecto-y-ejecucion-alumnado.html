@@ -3,98 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sesión 207 — Ficha de trabajo del alumnado</title>
+  <title>S207 — Entorno de trabajo: IntelliJ, proyecto y ejecución</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
     <nav class="topbar">Inicio alumnado</nav>
-<h1 id="sesión-207--ficha-de-trabajo-del-alumnado">Sesión 207 — Ficha de
-trabajo del alumnado</h1>
-<h2 id="entorno-de-trabajo-intellij-proyecto-y-ejecución">Entorno de
-trabajo: IntelliJ, proyecto y ejecución</h2>
-<table>
-<thead>
-<tr class="header">
-<th>Hoy vas a…</th>
-<th>Debe quedar…</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Crear y ejecutar un proyecto Java mínimo.</td>
-<td>Captura o documento de primera ejecución.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1.</p>
-<h2 id="material-que-necesitas">Material que necesitas</h2>
+<h1 id="s207--entorno-de-trabajo-intellij-proyecto-y-ejecución">S207 —
+Entorno de trabajo: IntelliJ, proyecto y ejecución</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Comprender el recorrido desde el código fuente hasta la salida en
+consola, crear un proyecto Java ejecutable en IntelliJ y obtener una
+evidencia que permita repetir la ejecución.</p>
+<h2 id="1-del-código-a-la-consola">1. Del código a la consola</h2>
+<p>El recorrido básico es:</p>
+<pre class="text"><code>código fuente → compilación → bytecode → JVM → ejecución → consola</code></pre>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
+<li>El <strong>código fuente</strong> es el contenido de los archivos
+<code>.java</code>.</li>
+<li>El <strong>JDK</strong> incluye las herramientas necesarias para
+compilar y ejecutar Java.</li>
+<li>La <strong>compilación</strong> comprueba la sintaxis y transforma
+el código en bytecode.</li>
+<li>La <strong>JVM</strong> ejecuta ese bytecode.</li>
+<li>IntelliJ es el entorno de desarrollo: ayuda a crear, editar y
+ejecutar el proyecto, pero no sustituye al JDK.</li>
+<li>La <strong>consola</strong> muestra la salida y permite escribir
+entradas durante la ejecución.</li>
 </ul>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
+<h2 id="2-programa-mínimo-ejecutable">2. Programa mínimo ejecutable</h2>
+<p>Crea un proyecto Java y guarda este contenido en
+<code>Main.java</code>:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> argumentos<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis arranca&quot;</span><span class="op">);</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Salida esperada:</p>
+<pre class="text"><code>MiniJarvis arranca</code></pre>
+<p>Predice la salida antes de ejecutar. Después, compárala con la salida
+real.</p>
+<h2 id="3-qué-debes-localizar-en-intellij">3. Qué debes localizar en
+IntelliJ</h2>
+<p>Comprueba que puedes señalar:</p>
 <ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Crear proyecto en IntelliJ, clase
-<code>Main</code> y primer <code>println</code>.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
+<li>la carpeta del proyecto;</li>
+<li>la carpeta <code>src</code>;</li>
+<li>el archivo <code>Main.java</code>;</li>
+<li>el JDK asociado al proyecto;</li>
+<li>el botón o configuración de ejecución;</li>
+<li>la consola donde aparece la salida.</li>
 </ol>
-<h2 id="registro-breve">Registro breve</h2>
-<p><strong>Qué intento conseguir:</strong><br />
-................................................................................</p>
-<p><strong>Decisión o hipótesis que probaré:</strong><br />
-................................................................................</p>
-<p><strong>Prueba que he realizado y resultado:</strong><br />
-................................................................................</p>
-<p><strong>Bloqueo encontrado y siguiente paso:</strong><br />
-................................................................................</p>
-<h2 id="evidencia-mínima-antes-de-salir">Evidencia mínima antes de
-salir</h2>
-<ul class="task-list">
-<li><label><input type="checkbox" />He producido o actualizado:
-<strong>Captura o documento de primera ejecución.</strong></label></li>
-<li><label><input type="checkbox" />Puedo señalar dónde
-está.</label></li>
-<li><label><input type="checkbox" />Puedo explicar una decisión
-tomada.</label></li>
-<li><label><input type="checkbox" />Puedo mostrar una prueba o
-comprobación.</label></li>
-<li><label><input type="checkbox" />He registrado mi aportación
-individual si el trabajo era de equipo.</label></li>
+<h2 id="4-si-el-programa-no-se-ejecuta">4. Si el programa no se
+ejecuta</h2>
+<h3 id="el-jdk-no-está-configurado">El JDK no está configurado</h3>
+<p>IntelliJ puede mostrar el código, pero no podrá compilarlo. Revisa el
+SDK del proyecto y selecciona un JDK instalado.</p>
+<h3 id="no-se-encuentra-main">No se encuentra <code>main</code></h3>
+<p>Comprueba que existe exactamente un punto de entrada válido:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> argumentos<span class="op">)</span></span></code></pre></div>
+<h3 id="el-nombre-del-archivo-y-la-clase-no-coinciden">El nombre del
+archivo y la clase no coinciden</h3>
+<p>Si la clase es <code>public class Main</code>, el archivo debe
+llamarse <code>Main.java</code>.</p>
+<h3 id="hay-un-error-de-código">Hay un error de código</h3>
+<p>Lee el primer mensaje de error, localiza la línea y distingue si
+falta una comilla, un paréntesis, una llave o un punto y coma.</p>
+<h2 id="5-práctica-de-predicción-error-y-corrección">5. Práctica de
+predicción, error y corrección</h2>
+<ol type="1">
+<li>Ejecuta el programa correcto.</li>
+<li>Cambia el mensaje y predice la nueva salida.</li>
+<li>Provoca un error controlado, por ejemplo eliminando
+<code>;</code>.</li>
+<li>Copia el mensaje esencial del error.</li>
+<li>Corrige el código y vuelve a ejecutar.</li>
+</ol>
+<p>No conserves el proyecto roto como entrega final: registra el error y
+su corrección en la evidencia.</p>
+<h2 id="6-evidencia-verificable">6. Evidencia verificable</h2>
+<p>Una evidencia útil debe mostrar:</p>
+<ul>
+<li>el archivo y fragmento de código relevante;</li>
+<li>la consola con la salida esperada;</li>
+<li>una frase que explique qué se comprobó;</li>
+<li>un commit con un mensaje concreto.</li>
+</ul>
+<p>Ejemplo de commit útil:</p>
+<pre class="text"><code>S207: crear proyecto Java y verificar primera ejecución</code></pre>
+<p>Ejemplo poco útil:</p>
+<pre class="text"><code>cambios</code></pre>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Pensar que IntelliJ incluye siempre un JDK listo para usar.</li>
+<li>Confundir escribir código con ejecutarlo.</li>
+<li>Fotografiar solo la consola sin mostrar qué programa produjo la
+salida.</li>
+<li>Corregir varios errores a la vez sin leer el primero.</li>
+<li>Usar una clase <code>Main</code> dentro de un archivo con otro
+nombre.</li>
+</ul>
+<h2 id="autoevaluación">Autoevaluación</h2>
+<p>Comprueba que puedes:</p>
+<ul>
+<li>explicar la diferencia entre JDK, compilación, JVM e IntelliJ;</li>
+<li>localizar <code>Main.java</code> y el punto de entrada;</li>
+<li>predecir y verificar una salida;</li>
+<li>provocar, explicar y corregir un error sencillo;</li>
+<li>crear una evidencia reproducible.</li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
-<ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
-</ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
-<ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
-</ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Cada alumno localiza dónde está
-<code>Main.java</code>.</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>No incluyas rutas personales, credenciales ni datos reales en
+capturas o repositorios. Si una IA te ayuda a interpretar un error,
+conserva el mensaje original y verifica la solución ejecutando el
+programa.</p>
 
   </main>
 </body>

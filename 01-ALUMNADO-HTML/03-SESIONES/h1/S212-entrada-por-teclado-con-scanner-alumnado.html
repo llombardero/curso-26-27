@@ -3,146 +3,177 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>S212 — Scanner y conversiones</title>
+  <title>S212 — Entrada por teclado y conversiones</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
     <nav class="topbar">Inicio alumnado</nav>
-<h1 id="s212--scanner-y-conversiones">S212 — Scanner y conversiones</h1>
+<h1 id="s212--entrada-por-teclado-y-conversiones">S212 — Entrada por
+teclado y conversiones</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Leer datos con una única instancia de <code>Scanner</code>,
+distinguir texto de número, convertir entradas válidas y documentar
+tanto una ejecución correcta como una entrada no convertible.</p>
+<h2 id="1-pedir-leer-guardar-y-usar">1. Pedir, leer, guardar y usar</h2>
+<p><code>Scanner</code> permite leer lo que una persona escribe en la
+consola. <code>nextLine()</code> siempre devuelve un
+<code>String</code>.</p>
+<p>Programa completo:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> argumentos<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> teclado <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;Nombre ficticio: &quot;</span><span class="op">);</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> nombreUsuario <span class="op">=</span> teclado<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;Horas de estudio: &quot;</span><span class="op">);</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> textoHoras <span class="op">=</span> teclado<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> horasEstudio <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>textoHoras<span class="op">);</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> minutosEstudio <span class="op">=</span> horasEstudio <span class="op">*</span> <span class="dv">60</span><span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> nombreUsuario <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Minutos de estudio: &quot;</span> <span class="op">+</span> minutosEstudio<span class="op">);</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        teclado<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>La misma instancia <code>teclado</code> se reutiliza para todas las
+lecturas. Se cierra solo cuando el programa ya no necesita leer más,
+porque cerrar el <code>Scanner</code> también cierra
+<code>System.in</code>.</p>
+<h2 id="2-entrada-usada-frente-a-entrada-ignorada">2. Entrada usada
+frente a entrada ignorada</h2>
+<p>Esto lee un texto, pero no lo guarda ni lo utiliza:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>teclado<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span></code></pre></div>
+<p>Esto sí conserva el dato:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreUsuario <span class="op">=</span> teclado<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span></code></pre></div>
+<p>Para que la entrada tenga un efecto observable, el programa debe
+guardarla y después mostrarla, convertirla o usarla en una
+operación.</p>
+<h2 id="3-texto-y-número-no-son-lo-mismo">3. Texto y número no son lo
+mismo</h2>
+<ul>
+<li><code>"5"</code> es un <code>String</code>.</li>
+<li><code>5</code> es un <code>int</code>.</li>
+<li><code>7.5</code> puede representarse como <code>double</code>.</li>
+</ul>
+<p>Aunque una persona escriba cifras, <code>nextLine()</code> devuelve
+texto. Para calcular hay que convertirlo.</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> textoHoras <span class="op">=</span> <span class="st">&quot;5&quot;</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horas <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>textoHoras<span class="op">);</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> textoNota <span class="op">=</span> <span class="st">&quot;7.5&quot;</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> nota <span class="op">=</span> <span class="bu">Double</span><span class="op">.</span><span class="fu">parseDouble</span><span class="op">(</span>textoNota<span class="op">);</span></span></code></pre></div>
+<h2 id="4-parseo">4. Parseo</h2>
+<p>El parseo interpreta un texto como un valor de otro tipo:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horas <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span><span class="st">&quot;5&quot;</span><span class="op">);</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> nota <span class="op">=</span> <span class="bu">Double</span><span class="op">.</span><span class="fu">parseDouble</span><span class="op">(</span><span class="st">&quot;7.5&quot;</span><span class="op">);</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> preparado <span class="op">=</span> <span class="bu">Boolean</span><span class="op">.</span><span class="fu">parseBoolean</span><span class="op">(</span><span class="st">&quot;true&quot;</span><span class="op">);</span></span></code></pre></div>
+<p><code>parseInt</code> y <code>parseDouble</code> pueden fallar si el
+texto no representa un número válido.</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numero <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span><span class="st">&quot;hola&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Este código compila, pero durante la ejecución produce
+<code>NumberFormatException</code>. En H1 debes reconocer, reproducir y
+explicar el error; todavía no necesitas resolverlo con
+<code>try/catch</code>.</p>
+<h2 id="5-ampliación-conversión-implícita-y-casting">5. Ampliación:
+conversión implícita y casting</h2>
+<p>Consulta la píldora S212 para estudiar estos dos mecanismos:</p>
+<h3 id="conversión-implícita">Conversión implícita</h3>
+<p>Java puede ampliar automáticamente algunos valores:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horas <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> horasDecimales <span class="op">=</span> horas<span class="op">;</span> <span class="co">// 5.0</span></span></code></pre></div>
+<h3 id="casting">Casting</h3>
+<p>Un casting fuerza una conversión y puede perder información:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> nota <span class="op">=</span> <span class="fl">8.9</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> notaEntera <span class="op">=</span> <span class="op">(</span><span class="dt">int</span><span class="op">)</span> nota<span class="op">;</span> <span class="co">// 8</span></span></code></pre></div>
+<p>No redondea: descarta la parte decimal acercándose a cero.</p>
+<p>Parsear, convertir implícitamente y hacer casting no son lo
+mismo:</p>
+<ul>
+<li>parseo: parte de un <code>String</code>;</li>
+<li>conversión implícita: Java amplía un valor automáticamente;</li>
+<li>casting: se indica el tipo de destino de forma explícita.</li>
+</ul>
+<h2 id="6-actividad">6. Actividad</h2>
+<ol type="1">
+<li>Ejecuta el programa completo con dos nombres ficticios.</li>
+<li>Prueba dos números válidos y predice los minutos.</li>
+<li>Prueba una entrada no convertible, como <code>hola</code>.</li>
+<li>Registra cuándo aparece el error y qué método lo provoca.</li>
+<li>Comprueba que la entrada leída se utiliza realmente.</li>
+<li>Como ampliación, ejecuta un ejemplo de conversión implícita y otro
+de casting.</li>
+</ol>
+<h2 id="evidencia-verificable">Evidencia verificable</h2>
+<p>No entregues una captura aislada. Registra:</p>
 <table>
 <thead>
 <tr class="header">
-<th>Dato</th>
-<th>Valor</th>
+<th>Caso</th>
+<th>Entrada</th>
+<th>Salida o error esperado</th>
+<th>Resultado observado</th>
+<th>Qué demuestra</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Hito</td>
-<td>H1 — Primer MiniJarvis</td>
+<td>Válido</td>
+<td><code>Laura</code>, <code>5</code></td>
+<td><code>300</code> minutos</td>
+<td>…</td>
+<td>lectura, parseo y cálculo</td>
 </tr>
 <tr class="even">
-<td>Duración</td>
-<td>3 periodos; esta ficha organiza el checkpoint de 45 minutos</td>
-</tr>
-<tr class="odd">
-<td>Fase HEXA</td>
-<td>Ejecutar — crear</td>
-</tr>
-<tr class="even">
-<td>Registro de proceso</td>
-<td>Una entrada en el diario individual al cerrar el checkpoint; no se
-crea un documento adicional</td>
+<td>No convertible</td>
+<td><code>Sam</code>, <code>hola</code></td>
+<td><code>NumberFormatException</code></td>
+<td>…</td>
+<td>el texto no representa un entero</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>El producto principal H1 sigue siendo pequeño. Las microprácticas
-demuestran el Tema 1 y pueden permanecer separadas de
-<code>Main.java</code>.</p>
-</blockquote>
-<p><strong>Objetivo:</strong> Leer entrada, convertir tipos y reconocer
-errores de conversión.</p>
-<p><strong>D1</strong> · 00:00–00:05 · MICROINVESTIGACIÓN</p>
-<h2 id="hasta-ahora-los-datos-los-decide-quien-programa">Hasta ahora los
-datos los decide quien programa</h2>
-<p>¿Cómo hacemos para que los escriba la persona que ejecuta
-MiniJarvis?</p>
-<p><strong>Qué haces:</strong> Propone formas de entrada.</p>
-<p><strong>Qué debe quedar:</strong> aparezca “teclado/consola”.</p>
-<p><strong>D2</strong> · 00:05–00:11 · PÍLDORA DOCENTE 1/4</p>
-<h2 id="scanner-pedir--leer--guardar">Scanner: pedir → leer →
-guardar</h2>
-<p>import java.util.Scanner;<br> <br> Scanner scanner = new
-Scanner(System.in);<br> String userName = scanner.nextLine();<br>
-scanner.close();</p>
-<p><strong>Qué haces:</strong> Señala qué devuelve y dónde se
-guarda.</p>
-<p><strong>Qué debe quedar:</strong> puedan verbalizar el flujo.</p>
-<p><strong>D3</strong> · 00:11–00:17 · ACTIVIDAD</p>
-<h2 id="pide-un-nombre-y-úsalo">Pide un nombre y úsalo</h2>
-<p>Ejecuta dos veces con nombres ficticios distintos.<br> <br> ¿Qué
-cambia? ¿Qué no?</p>
-<p><strong>Qué haces:</strong> Programa y prueba.</p>
-<p><strong>Qué debe quedar:</strong> la entrada afecte a la salida.</p>
-<p><strong>D4</strong> · 00:17–00:20 · CONFLICTO</p>
-<h2 id="tengo-5-tengo-el-número-5">Tengo "5". ¿Tengo el número 5?</h2>
-<p>"5" es texto si procede de nextLine().<br> 5 es un entero.</p>
-<p><strong>Qué haces:</strong> Distingue String/int.</p>
-<p><strong>Qué debe quedar:</strong> aparezca necesidad de
-convertir.</p>
-<p><strong>D5</strong> · 00:20–00:25 · PÍLDORA DOCENTE 2/4</p>
-<h2 id="parsear-texto-a-un-tipo-básico">Parsear texto a un tipo
-básico</h2>
-<p>int hours = Integer.parseInt(text);<br> double score =
-Double.parseDouble(text);<br> boolean ok =
-Boolean.parseBoolean(text);</p>
-<p><strong>Qué haces:</strong> Predice tipos resultantes.</p>
-<p><strong>Qué debe quedar:</strong> puedan explicar para qué sirve
-parseInt.</p>
-<p><strong>D6</strong> · 00:25–00:29 · EXPERIMENTO</p>
-<h2 id="leer--convertir--calcular">Leer → convertir → calcular</h2>
-<p>Scanner scanner = new Scanner(System.in);<br> String text =
-scanner.nextLine();<br> int hours = Integer.parseInt(text);<br> int
-minutes = hours * 60;<br> System.out.println(minutes);<br>
-scanner.close();</p>
-<p><strong>Qué haces:</strong> Predice y prueba.</p>
-<p><strong>Qué debe quedar:</strong> comprendan la cadena completa.</p>
-<p><strong>D7</strong> · 00:29–00:33 · PÍLDORA DOCENTE 3/4</p>
-<h2 id="conversión-implícita">Conversión implícita</h2>
-<p>int whole = 7;<br> double wider = whole;<br> <br> // no hace falta
-casting</p>
-<p><strong>Qué haces:</strong> Identifica origen/destino.</p>
-<p><strong>Qué debe quedar:</strong> distingan conversión numérica de
-String→número.</p>
-<p><strong>D8</strong> · 00:33–00:37 · PÍLDORA DOCENTE 4/4</p>
-<h2 id="casting-forzar-puede-perder-información">Casting: forzar puede
-perder información</h2>
-<p>double price = 12.75;<br> int wholePrice = (int) price;<br> //
-wholePrice vale 12</p>
-<p><strong>Qué haces:</strong> Predice antes de ejecutar.</p>
-<p><strong>Qué debe quedar:</strong> puedan explicar la pérdida.</p>
-<p><strong>D9</strong> · 00:37–00:40 · ERROR ÚTIL</p>
-<h2 id="compila-y-al-ejecutar">¿Compila? ¿Y al ejecutar?</h2>
-<p>String text = "hola";<br> int number = Integer.parseInt(text);</p>
-<p><strong>Qué haces:</strong> Observa el error en ejecución.</p>
-<p><strong>Qué debe quedar:</strong> puedan nombrar cuándo falla.</p>
-<p><strong>D10</strong> · 00:40–00:43 · ACTIVIDAD</p>
-<h2 id="evidencia-de-conversión">Evidencia de conversión</h2>
-<p>Guarda:<br> • una entrada válida<br> • resultado esperado<br> •
-resultado obtenido<br> • qué ocurre con una entrada no convertible</p>
-<p><strong>Qué haces:</strong> Documenta prueba.</p>
-<p><strong>Qué debe quedar:</strong> quede trazabilidad.</p>
-<p><strong>D11</strong> · 00:43–00:45 · CIERRE</p>
-<h2 id="microdefensa-de-tipos">Microdefensa de tipos</h2>
-<p>¿Qué devuelve nextLine()?<br> ¿Por qué necesitamos parseInt?<br> ¿Qué
-diferencia hay con un casting?</p>
-<p><strong>Qué haces:</strong> Responde sobre su código.</p>
-<p><strong>Qué debe quedar:</strong> quede diagnóstico.</p>
-<p><strong>Cierre:</strong> registra evidencia y una breve explicación
-de lo aprendido. Usa datos ficticios y no publiques credenciales ni
-información personal.</p>
-<h2 id="evidencia-única-antes-de-salir">Evidencia única antes de
-salir</h2>
+<p>La evidencia debe permitir ver o enlazar el código, la entrada usada
+y la salida completa.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li>conserva el código o la prueba en el lugar indicado por la
-sesión;</li>
-<li>añade una sola entrada al diario individual con prueba, bloqueo y
-siguiente paso;</li>
-<li>no copies la misma reflexión en otro documento; el Site personal
-seleccionará evidencias al cerrar H1.</li>
+<li>Pensar que <code>nextLine()</code> devuelve un número.</li>
+<li>Crear un <code>Scanner</code> nuevo para cada dato.</li>
+<li>Cerrar <code>teclado</code> antes de terminar las lecturas.</li>
+<li>Leer una entrada y no guardarla ni usarla.</li>
+<li>Confundir parseo con casting.</li>
+<li>Afirmar que el casting redondea.</li>
+<li>Mostrar solo el mensaje de error sin indicar qué entrada lo
+produjo.</li>
+</ul>
+<h2 id="autoevaluación">Autoevaluación</h2>
+<p>Comprueba que puedes:</p>
+<ul>
+<li>explicar qué devuelve <code>nextLine()</code>;</li>
+<li>reutilizar una sola instancia de <code>Scanner</code>;</li>
+<li>describir el flujo pedir → leer → guardar → convertir → calcular →
+mostrar;</li>
+<li>distinguir <code>parseInt</code> y <code>parseDouble</code>;</li>
+<li>explicar cuándo aparece <code>NumberFormatException</code>;</li>
+<li>reconocer conversión implícita y casting.</li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
-<ul>
-<li>Usa datos ficticios y no publiques credenciales ni información
-personal.</li>
-<li>Si utilizas IA de forma sustantiva, registra propósito, propuesta,
-cambios propios y validación en el registro de IA del hito.</li>
-</ul>
-<h2 id="cierre-individual">Cierre individual</h2>
-<p><strong>¿Qué puedes señalar, explicar y probar al terminar este
-checkpoint?</strong></p>
+<p>Usa datos ficticios y revisa las capturas antes de publicarlas. Nunca
+escribas contraseñas, claves ni tokens como entradas de prueba. Si una
+IA interpreta una excepción, reproduce el caso y verifica su
+explicación.</p>
 
   </main>
 </body>

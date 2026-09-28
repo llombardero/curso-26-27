@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página H1 del Site personal — Ana García</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="página-h1-del-site-personal--ana-garcía">Página H1 del Site
+personal — Ana García</h1>
+<blockquote>
+<p>Esta es la página H1 del Site personal. No es una copia del diario:
+es una selección de evidencias con explicación.</p>
+</blockquote>
+<hr />
+<h2 id="el-reto-en-mis-palabras">El reto en mis palabras</h2>
+<p>H1 consiste en crear un asistente de consola llamado MiniJarvis que
+salude al usuario por su nombre, le pida un número, calcule su doble y
+muestre un mensaje diferente si el número es positivo o negativo. El
+programa no tiene menú, ni bucles, ni conexión con IA real. Es un
+ejercicio de programación básica: entrada, procesamiento y salida.</p>
+<hr />
+<h2 id="mi-aportación-personal">Mi aportación personal</h2>
+<p>Yo me encargué del diseño del flujo principal del programa: la
+estructura de la clase, las constantes, las variables, la lógica de
+cálculo del doble y la condición <code>if/else</code> que decide qué
+mensaje mostrar. Escribí el código de <code>Main.java</code> desde la
+primera línea hasta la última, hice los commits de cada sesión y redacté
+las decisiones técnicas del README.</p>
+<p>Mi compañara Carlos se encargó de la implementación de
+<code>Scanner</code> para la lectura de entrada y de las pruebas de
+conversión.</p>
+<hr />
+<h2 id="evidencia-seleccionada">Evidencia seleccionada</h2>
+<h3 id="implementación-de-ifelse-s213">Implementación de
+<code>if/else</code> (S213)</h3>
+<p><strong>Enlace:</strong> <a
+href="https://github.com/ejemplo/minijarvis-h1/commit/ghi789">Commit
+ghi789</a></p>
+<p><strong>Qué demuestra:</strong> Este commit implementa la lógica
+condicional del programa. Con <code>if (numero &gt; 0)</code>, el
+programa decide si muestra el doble del número o un mensaje indicando
+que no es positivo. Probé ambos casos:</p>
+<ul>
+<li>numero = 5 → "El doble de 5 es 10." (rama if)</li>
+<li>numero = -3 → "El número no es positivo." (rama else)</li>
+</ul>
+<p><strong>Por qué la selecciono:</strong> Es la evidencia donde más
+aprendí. Tuve que pensar en qué condición usar, cómo escribir el
+<code>if/else</code> correctamente y cómo probar ambos caminos. No usé
+IA para esto: lo hice yo.</p>
+<hr />
+<h2 id="concepto-que-ahora-domino">Concepto que ahora domino</h2>
+<h3 id="variable-vs-constante">Variable vs constante</h3>
+<p>Antes de H1, confundía <code>final</code> con <code>static</code>.
+Ahora sé que:</p>
+<ul>
+<li><code>final</code> significa que el valor no se puede cambiar.</li>
+<li><code>static</code> significa que la variable pertenece a la clase,
+no a una instancia.</li>
+<li>Pueden combinarse (<code>static final</code>) pero son conceptos
+independientes.</li>
+</ul>
+<p><strong>Ejemplo propio:</strong></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> SALUDO <span class="op">=</span> <span class="st">&quot;Hola&quot;</span><span class="op">;</span>  <span class="co">// No se puede cambiar</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">int</span> contador <span class="op">=</span> <span class="dv">0</span><span class="op">;</span>       <span class="co">// Pertenece a la clase</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> MAX <span class="op">=</span> <span class="dv">100</span><span class="op">;</span>    <span class="co">// Constante de clase</span></span></code></pre></div>
+<hr />
+<h2 id="decisión-significativa">Decisión significativa</h2>
+<h3 id="el-mensaje-de-saludo-hola-vs-bienvenido">El mensaje de saludo:
+"Hola" vs "Bienvenido"</h3>
+<p>En S209, discutimos si el saludo debía ser "Hola, " o "Bienvenido, ".
+Carlos prefería "Bienvenido" por ser más formal. Yo propuse "Hola"
+porque es más cercano, no asume género, y se alinea con la idea de un
+asistente amigable.</p>
+<p><strong>Resultado:</strong> Elegimos "Hola". Lo probamos con ambos
+mensajes y ambos funcionan. La diferencia es puramente estética y de
+tono. Aprendí que las decisiones de diseño no son solo técnicas: también
+son sobre la experiencia del usuario.</p>
+<hr />
+<h2 id="uso-de-ia">Uso de IA</h2>
+<p>Usé IA en tres sesiones (S207, S210, S212) para entender la
+estructura base del programa, la diferencia entre <code>final</code> y
+<code>static</code>, y el comportamiento de
+<code>Integer.parseInt()</code>. En cada caso, validé la respuesta con
+el temario o con pruebas antes de aceptarla.</p>
+<p><strong>Registro completo:</strong> <a
+href="https://github.com/ejemplo/minijarvis-h1/blob/h1-entrega/registro-ia-h1-completo.md">Registro
+IA H1</a></p>
+<hr />
+<h2 id="próximo-paso-para-h2">Próximo paso para H2</h2>
+<p>Implementar un menú con bucle <code>while</code> para que el usuario
+pueda hacer varias consultas sin reiniciar el programa. También quiero
+aprender a gestionar errores de entrada con <code>try/catch</code>.</p>
+
+  </main>
+</body>
+</html>

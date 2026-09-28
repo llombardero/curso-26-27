@@ -3,101 +3,158 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sesión 208 — Ficha de trabajo del alumnado</title>
+  <title>S208 — Estructura mínima de un programa Java</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
     <nav class="topbar">Inicio alumnado</nav>
-<h1 id="sesión-208--ficha-de-trabajo-del-alumnado">Sesión 208 — Ficha de
-trabajo del alumnado</h1>
-<h2 id="estructura-mínima-de-un-programa-java">Estructura mínima de un
-programa Java</h2>
+<h1 id="s208--estructura-mínima-de-un-programa-java">S208 — Estructura
+mínima de un programa Java</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Reconocer la clase, el método <code>main</code>, las instrucciones y
+los delimitadores básicos de Java; identificar errores sencillos y
+utilizar nombres y comentarios que mejoren la lectura.</p>
+<h2 id="1-clase-archivo-y-punto-de-entrada">1. Clase, archivo y punto de
+entrada</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> argumentos<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola desde MiniJarvis&quot;</span><span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li><code>Main.java</code> es el nombre del archivo.</li>
+<li><code>Main</code> es la clase pública; debe coincidir con el nombre
+del archivo.</li>
+<li><code>main</code> es el método donde comienza la ejecución.</li>
+<li><code>String[] argumentos</code> permite recibir argumentos de línea
+de comandos, aunque H1 no los utiliza.</li>
+<li><code>System.out.println(...)</code> es una instrucción que muestra
+texto.</li>
+</ul>
+<p><code>Main</code> y <code>main</code> no son lo mismo: Java distingue
+mayúsculas y minúsculas.</p>
+<h2 id="2-orden-de-ejecución">2. Orden de ejecución</h2>
+<p>Las instrucciones de <code>main</code> se ejecutan de arriba
+abajo:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Primero&quot;</span><span class="op">);</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Después&quot;</span><span class="op">);</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Al final&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Predice la salida y cambia el orden de dos instrucciones para
+comprobar el efecto.</p>
+<h2 id="3-delimitadores-que-debes-revisar">3. Delimitadores que debes
+revisar</h2>
+<ul>
+<li><code>{ }</code> delimitan bloques.</li>
+<li><code>( )</code> delimitan parámetros y expresiones.</li>
+<li><code>" "</code> delimitan textos.</li>
+<li><code>;</code> termina la mayoría de instrucciones.</li>
+</ul>
+<p>Compara:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Correcto&quot;</span><span class="op">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Falta el punto y coma&quot;</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Falta cerrar el paréntesis&quot;</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Falta cerrar la comilla);</span></span></code></pre></div>
+<p>Los tres últimos fragmentos son incorrectos. Lee el primer error del
+compilador y señala el delimitador que falta.</p>
+<h2 id="4-identificadores">4. Identificadores</h2>
+<p>Un identificador es el nombre de una clase, variable o método. Puede
+contener letras, números, <code>_</code> y <code>$</code>, pero no puede
+empezar por un número ni ser una palabra reservada.</p>
+<p>Ejemplos válidos y claros:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreUsuario <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horasEstudio <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreAsistente <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Ejemplos inválidos:</p>
+<pre class="text"><code>1nombre         empieza por número
+horas estudio   contiene un espacio
+class           es una palabra reservada
+public          es una palabra reservada</code></pre>
+<p>Ejemplo válido pero poco claro:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> x <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p><code>nombreUsuario</code> comunica mejor la intención que
+<code>x</code>.</p>
+<h2 id="5-comentarios-útiles">5. Comentarios útiles</h2>
+<p>Los comentarios no se ejecutan. Deben explicar una intención o
+decisión que el código no muestra por sí solo.</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Usamos un nombre ficticio para no publicar datos personales.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreUsuario <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Comentario redundante:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Muestra Hola.</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>No comentes cada línea. Prefiere código legible y comentarios breves
+cuando aporten contexto.</p>
+<h2 id="6-actividad">6. Actividad</h2>
+<ol type="1">
+<li>Escribe el programa mínimo correcto.</li>
+<li>Predice y comprueba su salida.</li>
+<li>Provoca por separado un error de comillas, uno de paréntesis y uno
+de punto y coma.</li>
+<li>Para cada error, registra:
+<ul>
+<li>cambio realizado;</li>
+<li>mensaje esencial del compilador;</li>
+<li>causa;</li>
+<li>corrección.</li>
+</ul></li>
+<li>Renombra dos identificadores vagos.</li>
+<li>Añade un comentario útil y elimina uno redundante.</li>
+</ol>
+<h2 id="evidencia-verificable">Evidencia verificable</h2>
+<p>Conserva el código correcto y una tabla breve:</p>
 <table>
 <thead>
 <tr class="header">
-<th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Error provocado</th>
+<th>Mensaje esencial</th>
+<th>Causa</th>
+<th>Corrección</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Entender clase <code>Main</code> y método <code>main</code>.</td>
-<td>Código que compila con varios mensajes por pantalla.</td>
+<td>Falta <code>;</code></td>
+<td>…</td>
+<td>La instrucción no termina</td>
+<td>Añadir <code>;</code></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1.</p>
-<h2 id="material-que-necesitas">Material que necesitas</h2>
+<p>La evidencia debe permitir localizar el código y comprobar que el
+programa vuelve a ejecutarse después de la corrección.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
-<li>Proyector solo si habrá demostración colectiva; la defensa puede
-realizarse directamente en el equipo.</li>
+<li>Confundir <code>Main</code> con <code>main</code>.</li>
+<li>Escribir <code>string</code> en lugar de <code>String</code>.</li>
+<li>Corregir una línea distinta de la que señala el primer error.</li>
+<li>Usar una palabra reservada como nombre.</li>
+<li>Añadir comentarios que solo repiten la instrucción.</li>
 </ul>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
-<ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Reescribir un programa mínimo y señalar
-dónde empieza.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
-</ol>
-<h2 id="registro-breve">Registro breve</h2>
-<p><strong>Qué intento conseguir:</strong><br />
-................................................................................</p>
-<p><strong>Decisión o hipótesis que probaré:</strong><br />
-................................................................................</p>
-<p><strong>Prueba que he realizado y resultado:</strong><br />
-................................................................................</p>
-<p><strong>Bloqueo encontrado y siguiente paso:</strong><br />
-................................................................................</p>
-<h2 id="evidencia-mínima-antes-de-salir">Evidencia mínima antes de
-salir</h2>
-<ul class="task-list">
-<li><label><input type="checkbox" />He producido o actualizado:
-<strong>Código que compila con varios mensajes por
-pantalla.</strong></label></li>
-<li><label><input type="checkbox" />Puedo señalar dónde
-está.</label></li>
-<li><label><input type="checkbox" />Puedo explicar una decisión
-tomada.</label></li>
-<li><label><input type="checkbox" />Puedo mostrar una prueba o
-comprobación.</label></li>
-<li><label><input type="checkbox" />He registrado mi aportación
-individual si el trabajo era de equipo.</label></li>
+<h2 id="autoevaluación">Autoevaluación</h2>
+<p>Comprueba que puedes:</p>
+<ul>
+<li>localizar clase, <code>main</code> e instrucciones;</li>
+<li>explicar por qué <code>Main.java</code> y <code>Main</code> deben
+coincidir;</li>
+<li>predecir el orden de salida;</li>
+<li>diagnosticar errores de delimitadores;</li>
+<li>distinguir identificadores válidos, inválidos y poco claros;</li>
+<li>justificar un comentario útil.</li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
-<ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
-</ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
-<ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
-</ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Microdefensa: señalar en el código dónde
-empieza el programa.</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>Usa datos ficticios en ejemplos y capturas. Si una IA propone una
+corrección, identifica primero el error por tu cuenta y verifica la
+solución compilando y ejecutando.</p>
 
   </main>
 </body>

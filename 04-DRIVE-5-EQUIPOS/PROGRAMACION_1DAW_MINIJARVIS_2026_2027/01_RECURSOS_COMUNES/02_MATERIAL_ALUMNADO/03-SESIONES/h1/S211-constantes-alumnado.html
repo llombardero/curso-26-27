@@ -3,98 +3,190 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sesión 211 — Ficha de trabajo del alumnado</title>
+  <title>S211 — Constantes, literales y expresiones</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
     <nav class="topbar">Inicio alumnado</nav>
-<h1 id="sesión-211--ficha-de-trabajo-del-alumnado">Sesión 211 — Ficha de
-trabajo del alumnado</h1>
-<h2 id="constantes">Constantes</h2>
+<h1 id="s211--constantes-literales-y-expresiones">S211 — Constantes,
+literales y expresiones</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Distinguir variables, constantes y literales; construir expresiones;
+predecir el tipo y el valor de sus resultados; y comprobar operaciones,
+precedencia y actualizaciones.</p>
+<h2 id="1-constantes-con-final">1. Constantes con
+<code>final</code></h2>
+<p>Una constante representa un dato que no debe cambiar durante la
+ejecución.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> NOMBRE_ASISTENTE <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="dt">int</span> ANIO_INICIO <span class="op">=</span> <span class="dv">2026</span><span class="op">;</span></span></code></pre></div>
+<p>Por convención, sus nombres se escriben en mayúsculas con guiones
+bajos.</p>
+<p>Esto produce un error de compilación:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="dt">int</span> MAX_INTENTOS <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>MAX_INTENTOS <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>No todo valor repetido debe convertirse en constante. Debe tener un
+significado estable durante la ejecución.</p>
+<h2 id="2-literales">2. Literales</h2>
+<p>Un literal es un valor escrito directamente en el código:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horas <span class="op">=</span> <span class="dv">5</span><span class="op">;</span>               <span class="co">// literal entero</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">long</span> poblacion <span class="op">=</span> <span class="dv">8000000000L</span><span class="op">;</span> <span class="co">// literal long</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> porcentaje <span class="op">=</span> <span class="fl">82.5F</span><span class="op">;</span>    <span class="co">// literal float</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> nota <span class="op">=</span> <span class="fl">7.5</span><span class="op">;</span>           <span class="co">// literal double</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> inicial <span class="op">=</span> <span class="ch">&#39;L&#39;</span><span class="op">;</span>          <span class="co">// literal char</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> mensaje <span class="op">=</span> <span class="st">&quot;Hola&quot;</span><span class="op">;</span>     <span class="co">// literal String</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> preparado <span class="op">=</span> <span class="kw">true</span><span class="op">;</span>    <span class="co">// literal boolean</span></span></code></pre></div>
+<p><code>'L'</code> es un carácter y usa comillas simples.
+<code>"L"</code> es un texto y usa comillas dobles.</p>
+<h2 id="3-una-expresión-produce-un-valor-y-un-tipo">3. Una expresión
+produce un valor y un tipo</h2>
+<p>Una expresión combina literales, variables y operadores:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> minutos <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">60</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> suficiente <span class="op">=</span> minutos <span class="op">&gt;=</span> <span class="dv">120</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> resumen <span class="op">=</span> <span class="st">&quot;Minutos: &quot;</span> <span class="op">+</span> minutos<span class="op">;</span></span></code></pre></div>
+<p>Resultados:</p>
+<ul>
+<li><code>3 * 60</code> produce el valor <code>180</code> de tipo
+<code>int</code>;</li>
+<li><code>minutos &gt;= 120</code> produce <code>true</code> o
+<code>false</code> de tipo <code>boolean</code>;</li>
+<li><code>"Minutos: " + minutos</code> produce un
+<code>String</code>.</li>
+</ul>
+<p>Una expresión calculada pero no guardada, mostrada ni utilizada no
+produce un efecto observable.</p>
+<h2 id="4-operadores-aritméticos">4. Operadores aritméticos</h2>
 <table>
 <thead>
 <tr class="header">
-<th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Operador</th>
+<th>Operación</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Diferenciar variable y constante.</td>
-<td>Código con al menos una constante bien usada.</td>
+<td><code>+</code></td>
+<td>suma o concatenación</td>
+</tr>
+<tr class="even">
+<td><code>-</code></td>
+<td>resta</td>
+</tr>
+<tr class="odd">
+<td><code>*</code></td>
+<td>multiplicación</td>
+</tr>
+<tr class="even">
+<td><code>/</code></td>
+<td>división</td>
+</tr>
+<tr class="odd">
+<td><code>%</code></td>
+<td>resto</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1.</p>
-<h2 id="material-que-necesitas">Material que necesitas</h2>
+<p>División entera y real:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> cocienteEntero <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span>       <span class="co">// 2</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> cocienteReal <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> <span class="fl">2.0</span><span class="op">;</span>    <span class="co">// 2.5</span></span></code></pre></div>
+<p>Si ambos operandos son enteros, el resultado también es entero y se
+descarta la parte decimal.</p>
+<h2 id="5-precedencia-y-paréntesis">5. Precedencia y paréntesis</h2>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> resultadoA <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span><span class="op">;</span>       <span class="co">// 14</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> resultadoB <span class="op">=</span> <span class="op">(</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">)</span> <span class="op">*</span> <span class="dv">4</span><span class="op">;</span>     <span class="co">// 20</span></span></code></pre></div>
+<p>La multiplicación se realiza antes que la suma. Los paréntesis
+cambian el orden y hacen explícita la intención.</p>
+<p>Predice también:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> resultadoC <span class="op">=</span> <span class="dv">8</span> <span class="op">*</span> <span class="op">(</span><span class="dv">4</span> <span class="op">+</span> <span class="dv">2</span><span class="op">)</span> <span class="op">-</span> <span class="dv">3</span><span class="op">;</span></span></code></pre></div>
+<h2 id="6-el-resto-">6. El resto <code>%</code></h2>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> caramelos <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> personas <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> restantes <span class="op">=</span> caramelos <span class="op">%</span> personas<span class="op">;</span> <span class="co">// 2</span></span></code></pre></div>
+<p><code>%</code> no calcula porcentajes: devuelve el resto de la
+división entera.</p>
+<p>Otro uso:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numero <span class="op">=</span> <span class="dv">8</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> resto <span class="op">=</span> numero <span class="op">%</span> <span class="dv">2</span><span class="op">;</span></span></code></pre></div>
+<p>Si <code>resto</code> vale <code>0</code>, el número es par.</p>
+<h2 id="7-actualizar-una-variable">7. Actualizar una variable</h2>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> tareas <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>tareas <span class="op">+=</span> <span class="dv">2</span><span class="op">;</span> <span class="co">// 5</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>tareas <span class="op">-=</span> <span class="dv">1</span><span class="op">;</span> <span class="co">// 4</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>tareas<span class="op">++;</span>    <span class="co">// 5</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>tareas<span class="op">--;</span>    <span class="co">// 4</span></span></code></pre></div>
+<p>Traza cada línea de arriba abajo. Los operadores compuestos modifican
+el valor existente.</p>
+<h2 id="8-actividad">8. Actividad</h2>
+<p>Crea una micropráctica que incluya:</p>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
+<li>una constante;</li>
+<li>una variable;</li>
+<li>una expresión aritmética;</li>
+<li>una actualización;</li>
+<li>una salida que permita comprobar el resultado.</li>
 </ul>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
-<ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Añadir <code>ASSISTANT_NAME</code> y
-<code>COURSE_YEAR</code>.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
-</ol>
-<h2 id="registro-breve">Registro breve</h2>
-<p><strong>Qué intento conseguir:</strong><br />
-................................................................................</p>
-<p><strong>Decisión o hipótesis que probaré:</strong><br />
-................................................................................</p>
-<p><strong>Prueba que he realizado y resultado:</strong><br />
-................................................................................</p>
-<p><strong>Bloqueo encontrado y siguiente paso:</strong><br />
-................................................................................</p>
-<h2 id="evidencia-mínima-antes-de-salir">Evidencia mínima antes de
-salir</h2>
-<ul class="task-list">
-<li><label><input type="checkbox" />He producido o actualizado:
-<strong>Código con al menos una constante bien
-usada.</strong></label></li>
-<li><label><input type="checkbox" />Puedo señalar dónde
-está.</label></li>
-<li><label><input type="checkbox" />Puedo explicar una decisión
-tomada.</label></li>
-<li><label><input type="checkbox" />Puedo mostrar una prueba o
-comprobación.</label></li>
-<li><label><input type="checkbox" />He registrado mi aportación
-individual si el trabajo era de equipo.</label></li>
+<p>Antes de ejecutar, anota el valor y el tipo esperados de cada
+expresión. Prueba además <code>5 / 2</code>, <code>5 / 2.0</code>,
+<code>10 % 4</code>, <code>2 + 3 * 4</code> y
+<code>(2 + 3) * 4</code>.</p>
+<h2 id="evidencia-verificable">Evidencia verificable</h2>
+<p>Registra para cada prueba:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Expresión</th>
+<th style="text-align: right;">Valor esperado</th>
+<th>Tipo esperado</th>
+<th style="text-align: right;">Resultado observado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>5 / 2</code></td>
+<td style="text-align: right;">2</td>
+<td><code>int</code></td>
+<td style="text-align: right;">…</td>
+</tr>
+</tbody>
+</table>
+<p>Conserva el código y la ejecución en el repositorio o en el lugar
+indicado para las microprácticas.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Intentar reasignar una constante.</li>
+<li>Confundir <code>%</code> con porcentaje.</li>
+<li>Esperar <code>2.5</code> en una división
+<code>int / int</code>.</li>
+<li>Confundir <code>'L'</code> con <code>"L"</code>.</li>
+<li>Calcular un resultado sin usarlo.</li>
+<li>Ignorar la precedencia o añadir paréntesis sin justificar su
+efecto.</li>
+</ul>
+<h2 id="autoevaluación">Autoevaluación</h2>
+<p>Comprueba que puedes:</p>
+<ul>
+<li>distinguir constante, variable y literal;</li>
+<li>indicar el valor y el tipo de una expresión;</li>
+<li>explicar la división entera;</li>
+<li>predecir una expresión con precedencia;</li>
+<li>explicar el resto;</li>
+<li>trazar operadores compuestos e incrementos.</li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
-<ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
-</ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
-<ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
-</ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Pregunta: ¿qué dato de nuestro programa
-debería ser constante?</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>No uses datos personales reales. Si una IA calcula una expresión,
+realiza primero tu propia predicción y verifica el resultado ejecutando
+el código.</p>
 
   </main>
 </body>

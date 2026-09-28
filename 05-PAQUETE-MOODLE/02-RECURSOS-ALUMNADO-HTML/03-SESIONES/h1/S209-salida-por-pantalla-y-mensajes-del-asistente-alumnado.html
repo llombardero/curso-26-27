@@ -3,113 +3,131 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>S209 — Diseñar mensajes claros por consola</title>
+  <title>S209 — Salida por pantalla y mensajes de MiniJarvis</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
     <nav class="topbar">Inicio alumnado</nav>
-<h1 id="s209--diseñar-mensajes-claros-por-consola">S209 — Diseñar
-mensajes claros por consola</h1>
-<table>
-<thead>
-<tr class="header">
-<th>Dato</th>
-<th>Valor</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Hito</td>
-<td>H1 — Primer MiniJarvis</td>
-</tr>
-<tr class="even">
-<td>Duración</td>
-<td>2 periodos; esta ficha organiza el checkpoint de 45 minutos</td>
-</tr>
-<tr class="odd">
-<td>Fase HEXA</td>
-<td>Idear — proponer soluciones</td>
-</tr>
-<tr class="even">
-<td>Registro de proceso</td>
-<td>Una entrada en el diario individual al cerrar el checkpoint; no se
-crea un documento adicional</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>El producto principal H1 sigue siendo pequeño. Las microprácticas
-demuestran el Tema 1 y pueden permanecer separadas de
-<code>Main.java</code>.</p>
-</blockquote>
-<p><strong>Objetivo:</strong> Idear la salida de MiniJarvis antes de
-programarla y usar concatenación cuando sea necesaria.</p>
-<p><strong>D1</strong> · 00:00–00:05 · IDEAR</p>
-<h2 id="dos-salidas-cuál-ayuda-más">Dos salidas, ¿cuál ayuda más?</h2>
-<p><strong>Qué haces:</strong> Compara.</p>
-<p><strong>Qué debe quedar:</strong> aparezcan criterios propios.</p>
-<p><strong>D2</strong> · 00:05–00:10 · PÍLDORA BREVE</p>
-<h2 id="la-consola-también-es-una-interfaz">La consola también es una
-interfaz</h2>
-<p>Aunque solo sea texto, alguien debe entender qué ocurre, qué se le
-pide y qué resultado obtiene.</p>
-<p><strong>Qué haces:</strong> Propone un criterio de claridad.</p>
-<p><strong>Qué debe quedar:</strong> tengan 2–3 criterios.</p>
-<p><strong>D3</strong> · 00:10–00:20 · ACTIVIDAD DE IDEACIÓN</p>
-<h2 id="generad-alternativas-antes-de-programar">Generad alternativas
-antes de programar</h2>
-<p>Cada equipo propone al menos 2 versiones de:<br> • saludo<br> •
-propósito<br> • mensaje final<br> <br> Todavía NO programéis.</p>
-<p><strong>Qué haces:</strong> Genera y compara alternativas.</p>
-<p><strong>Qué debe quedar:</strong> haya al menos dos opciones y una
-decisión justificada.</p>
-<p><strong>D4</strong> · 00:20–00:26 · PÍLDORA DOCENTE 1/1</p>
-<h2 id="literal-y-concatenación">Literal y concatenación</h2>
-<p>String userName = "Laura";<br> System.out.println("Hola, " + userName
-+ ".");</p>
-<p><strong>Qué haces:</strong> Predice la salida.</p>
-<p><strong>Qué debe quedar:</strong> puedan predecir el mensaje.</p>
-<p><strong>D5</strong> · 00:26–00:40 · ACTIVIDAD</p>
-<h2 id="construye-y-mejora-la-salida-elegida">Construye y mejora la
-salida elegida</h2>
-<p>1. Implementa los mensajes.<br> 2. Ejecuta.<br> 3. Pide a otra
-persona que lea solo la consola.<br> 4. Mejora una frase si hace
-falta.</p>
-<p><strong>Qué haces:</strong> Programa, prueba e itera.</p>
-<p><strong>Qué debe quedar:</strong> la salida sea legible y coherente
-con H1.</p>
-<p><strong>D6</strong> · 00:40–00:45 · CIERRE</p>
-<h2 id="registra-la-decisión-de-diseño">Registra la decisión de
-diseño</h2>
-<p>¿Qué mensaje elegiste?<br> ¿Por qué?<br> ¿Qué cambiaste después de
-verlo ejecutado?</p>
-<p><strong>Qué haces:</strong> Documenta decisión y mejora.</p>
-<p><strong>Qué debe quedar:</strong> quede trazabilidad de la
-ideación.</p>
-<p><strong>Cierre:</strong> registra evidencia y una breve explicación
-de lo aprendido. Usa datos ficticios y no publiques credenciales ni
-información personal.</p>
-<h2 id="evidencia-única-antes-de-salir">Evidencia única antes de
-salir</h2>
+<h1 id="s209--salida-por-pantalla-y-mensajes-de-minijarvis">S209 —
+Salida por pantalla y mensajes de MiniJarvis</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Diseñar mensajes de consola claros, combinar texto y datos
+correctamente y evitar que MiniJarvis prometa funciones que H1 todavía
+no tiene.</p>
+<h2 id="1-un-mensaje-debe-informar">1. Un mensaje debe informar</h2>
+<p>Compara:</p>
+<pre class="text"><code>Dato:</code></pre>
+<pre class="text"><code>Escribe un nombre ficticio:</code></pre>
+<p>El segundo mensaje explica qué debe hacer la persona y qué tipo de
+dato se espera.</p>
+<p>Otro contraste:</p>
+<pre class="text"><code>Hecho.</code></pre>
+<pre class="text"><code>Horas registradas: 4</code></pre>
+<p>Una salida útil permite entender qué ocurrió sin leer el código.</p>
+<h2 id="2-print-y-println">2. <code>print</code> y
+<code>println</code></h2>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;Nombre ficticio: &quot;</span><span class="op">);</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Laura&quot;</span><span class="op">);</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Registro completado.&quot;</span><span class="op">);</span></span></code></pre></div>
 <ul>
-<li>conserva el código o la prueba en el lugar indicado por la
-sesión;</li>
-<li>añade una sola entrada al diario individual con prueba, bloqueo y
-siguiente paso;</li>
-<li>no copies la misma reflexión en otro documento; el Site personal
-seleccionará evidencias al cerrar H1.</li>
+<li><code>print</code> deja el cursor en la misma línea.</li>
+<li><code>println</code> añade un salto de línea al final.</li>
+</ul>
+<p>Usa <code>print</code> para una pregunta cuando quieras que la
+respuesta aparezca a continuación. Usa <code>println</code> para
+mensajes completos.</p>
+<h2 id="3-literales-y-concatenación">3. Literales y concatenación</h2>
+<p>Un literal de texto se escribe entre comillas dobles:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreUsuario <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> nombreUsuario <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>El operador <code>+</code> concatena textos. Debes incluir los
+espacios y signos de puntuación dentro de los literales.</p>
+<p>Incorrecto:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola,&quot;</span> <span class="op">+</span> nombreUsuario <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Salida:</p>
+<pre class="text"><code>Hola,Laura.</code></pre>
+<p>Correcto:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> nombreUsuario <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<h2 id="4-texto-y-operaciones">4. Texto y operaciones</h2>
+<p>Predice estas salidas:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">);</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Resultado: &quot;</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">);</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Resultado: &quot;</span> <span class="op">+</span> <span class="op">(</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">));</span></span></code></pre></div>
+<p>Resultados:</p>
+<pre class="text"><code>5
+Resultado: 23
+Resultado: 5</code></pre>
+<p>Java evalúa de izquierda a derecha cuando concatena con texto. Los
+paréntesis indican que la suma debe realizarse antes de concatenar.</p>
+<h2 id="5-no-prometas-funciones-inexistentes">5. No prometas funciones
+inexistentes</h2>
+<p>Mensaje adecuado para H1:</p>
+<pre class="text"><code>Hola, soy MiniJarvis. Puedo registrar un dato y mostrar un cálculo sencillo.</code></pre>
+<p>Mensaje inadecuado:</p>
+<pre class="text"><code>Recuerdo todas tus conversaciones y puedo responder cualquier pregunta.</code></pre>
+<p>H1 no tiene memoria persistente ni conexión con una IA real. La
+interfaz debe describir solo lo que el programa hace de verdad.</p>
+<h2 id="6-diseña-antes-de-programar">6. Diseña antes de programar</h2>
+<p>Propón al menos dos versiones del saludo y compáralas con estos
+criterios:</p>
+<ul>
+<li>claridad;</li>
+<li>brevedad;</li>
+<li>tono coherente;</li>
+<li>puntuación correcta;</li>
+<li>funciones descritas con precisión.</li>
+</ul>
+<p>Registra la opción elegida y una justificación.</p>
+<p>Ejemplo:</p>
+<pre class="text"><code>Elegimos «Hola, soy MiniJarvis. Vamos a registrar tus horas de estudio.»
+porque presenta el programa y anticipa la entrada sin prometer memoria ni IA.</code></pre>
+<h2 id="7-actividad">7. Actividad</h2>
+<ol type="1">
+<li>Implementa el saludo elegido.</li>
+<li>Declara <code>String nombreUsuario</code> con un nombre
+ficticio.</li>
+<li>Muestra un mensaje que combine texto y la variable.</li>
+<li>Añade una operación sencilla con paréntesis.</li>
+<li>Ejecuta y revisa espacios, tildes, mayúsculas y puntuación.</li>
+<li>Pide a otra persona que interprete la salida sin ver el código.</li>
+</ol>
+<h2 id="evidencia-verificable">Evidencia verificable</h2>
+<p>Conserva:</p>
+<ul>
+<li>las dos propuestas iniciales;</li>
+<li>la decisión justificada;</li>
+<li>el fragmento de código final;</li>
+<li>la salida observada;</li>
+<li>la corrección realizada después de probarla.</li>
+</ul>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Mensajes como «Dato» o «Hecho» sin contexto.</li>
+<li>Olvidar espacios al concatenar.</li>
+<li>Esperar que <code>"Resultado: " + 2 + 3</code> sume antes de
+concatenar.</li>
+<li>Describir memoria, IA o funciones que no existen.</li>
+<li>Cambiar el código sin volver a leer la salida completa.</li>
+</ul>
+<h2 id="autoevaluación">Autoevaluación</h2>
+<p>Comprueba que puedes:</p>
+<ul>
+<li>distinguir <code>print</code> y <code>println</code>;</li>
+<li>construir una concatenación con puntuación correcta;</li>
+<li>predecir una expresión que mezcla texto y números;</li>
+<li>justificar un mensaje por su claridad;</li>
+<li>detectar una promesa que queda fuera de H1.</li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
-<ul>
-<li>Usa datos ficticios y no publiques credenciales ni información
-personal.</li>
-<li>Si utilizas IA de forma sustantiva, registra propósito, propuesta,
-cambios propios y validación en el registro de IA del hito.</li>
-</ul>
-<h2 id="cierre-individual">Cierre individual</h2>
-<p><strong>¿Qué puedes señalar, explicar y probar al terminar este
-checkpoint?</strong></p>
+<p>Los nombres y datos de ejemplo deben ser ficticios. Si una IA propone
+mensajes, revisa que sean breves, verdaderos y coherentes con las
+funciones reales de H1.</p>
 
   </main>
 </body>

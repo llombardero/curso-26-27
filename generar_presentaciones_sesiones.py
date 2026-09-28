@@ -90,17 +90,17 @@ class SlideSpec:
     subtitle: str = ""
 
 
-H1_SOURCES = {
-    "206": "Libro: introducción de H1 · Tema 1: objetivos de un programa",
-    "207": "Libro: capítulo 01 · Tema 1: código fuente y ejecución",
-    "208": "Libro: capítulo 01 · Tema 1: aspectos léxicos y comentarios",
-    "209": "Libro: capítulos 01-02 · Tema 1: salida y concatenación",
-    "210": "Libro: capítulo 02 · Tema 1: variables y tipos",
-    "211": "Libro: capítulo 02 · Tema 1: constantes, literales y operadores",
-    "212": "Libro: capítulo 02 · Tema 1: entrada y conversiones",
-    "213": "Libro: capítulo 02 · Tema 1: comparación, lógica e if/else",
-    "214": "Libro: capítulos 01-02 · Evidencias y README de H1",
-    "215": "Libro: capítulos 01-02 · Defensa y cierre de H1",
+H1_REFERENCES = {
+    "206": ["Libro por hitos · Capítulo 00: hitos y evidencias", "PDF Tema 1 · §2: objetivos de la programación"],
+    "207": ["Libro por hitos · Capítulo 01: fuente, compilación y ejecución", "PDF Tema 1 · introducción y primeros programas"],
+    "208": ["Libro por hitos · Capítulo 01: estructura y errores frecuentes", "PDF Tema 1 · §§2-3: léxico y comentarios"],
+    "209": ["Libro por hitos · Capítulos 01-02: consola y salida", "PDF Tema 1 · §4: salida y expresiones"],
+    "210": ["Libro por hitos · Capítulo 02: variables y tipos", "PDF Tema 1 · §4: almacenamiento de datos"],
+    "211": ["Libro por hitos · Capítulo 02: constantes y operadores", "PDF Tema 1 · §§4-5: literales, constantes y operaciones"],
+    "212": ["Libro por hitos · Capítulo 02: Scanner y parseo", "PDF Tema 1 · §§4 y 6: entrada y conversiones"],
+    "213": ["Libro por hitos · Capítulos 02-03: comparación y decisiones", "PDF Tema 1 · §§5 y 7: lógica y estructura condicional"],
+    "214": ["Libro por hitos · Capítulos 00-02: README, portfolio y evidencias", "PDF Tema 1 · conceptos Java documentados; no trata Site ni entrega"],
+    "215": ["Libro por hitos · Capítulos 00-02: repaso y defensa", "PDF Tema 1 · repaso técnico de §§2-7; no define la defensa"],
 }
 
 
@@ -147,7 +147,10 @@ def h1_plan(session: Session) -> list[SlideSpec]:
         [f"Objetivo: {session.objective}", f"Comprobación: {session.evidence}"],
         session.moment,
     )
-    source = H1_SOURCES.get(session.number, "Libro por hitos · Temario de Programación")
+    references = H1_REFERENCES.get(
+        session.number,
+        ["Libro por hitos · capítulo relacionado", "PDF del temario · apartado relacionado"],
+    )
 
     content: dict[str, list[SlideSpec]] = {
         "206": [
@@ -160,11 +163,12 @@ def h1_plan(session: Session) -> list[SlideSpec]:
                 "Hola, soy MiniJarvis.\n¿Cómo te llamas? Laura\nEncantado, Laura.\nEstoy aprendiendo la base de Java.",
                 "Describe exactamente lo que existe: no promete memoria ni inteligencia que todavía no tiene.",
             ]),
-            SlideSpec("concepts", "De una idea a requisitos comprobables", [
+            SlideSpec("concepts", "Correcto, eficiente y mantenible", [
                 "Muestra · pide · guarda · calcula · ejecuta · explica: verbos que producen resultados observables.",
                 "Correcto: cumple la tarea y supera los casos previstos.",
-                "Sencillo: no añade trabajo o complejidad innecesaria.",
+                "Eficiente para esta escala: evita trabajo y complejidad innecesarios.",
                 "Mantenible: se entiende y puede modificarse sin romperse.",
+                "La sencillez ayuda a la eficiencia y al mantenimiento; no sustituye a ninguno.",
             ]),
             SlideSpec("activity", "Delimita el incremento H1", [
                 "Clasifica cada propuesta en H1 ahora, hito posterior o fuera del reto.",
@@ -182,6 +186,7 @@ def h1_plan(session: Session) -> list[SlideSpec]:
         ],
         "207": [
             SlideSpec("flow", "Del archivo a la salida", ["Main.java", "javac / compilación", "bytecode .class", "JVM / ejecución", "consola"]),
+            SlideSpec("flow", "Ruta mínima en IntelliJ", ["JDK del proyecto", "carpeta src", "clase Main", "botón Run", "consola"]),
             SlideSpec("code", "Primer programa ejecutable", [
                 'public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hola, soy MiniJarvis.");\n    }\n}',
                 "Salida esperada: Hola, soy MiniJarvis.",
@@ -216,12 +221,13 @@ def h1_plan(session: Session) -> list[SlideSpec]:
                 "Distingue mayúsculas: Main, main y String son identificadores diferentes.",
                 "Las llaves delimitan bloques; paréntesis, comillas y punto y coma tienen funciones concretas.",
                 "Un identificador debe ser válido y comunicar intención.",
+                "// comentario de línea · /* comentario de bloque */",
                 "Un comentario útil explica contexto o decisión; no repite una instrucción obvia.",
             ]),
             SlideSpec("compare", "Detecta antes de compilar", [
-                'CORRECTO · String message = "Hola";\nSystem.out.println(message);',
-                'INCORRECTO · string message = "Hola"\nSystem.out.println(message)',
-                "Busca: mayúscula de String, punto y coma y equilibrio de delimitadores.",
+                'MAYÚSCULA · System.out.println("Hola");\nERROR · system.out.println("Hola");',
+                'PUNTO Y COMA · System.out.println("Hola");\nERROR · System.out.println("Hola")',
+                "Compara un cambio cada vez y localiza la diferencia antes de compilar.",
             ]),
             SlideSpec("activity", "Reconstruye y depura", [
                 "Reconstruye la clase sin copiar directamente.",
@@ -247,6 +253,7 @@ def h1_plan(session: Session) -> list[SlideSpec]:
                 'String userName = "Laura";\nSystem.out.println("Hola, " + userName + ".");',
                 "Salida esperada: Hola, Laura.",
                 "Las comillas contienen texto fijo; la variable aporta el valor cambiante.",
+                "print no salta de línea; println termina la línea.",
             ]),
             SlideSpec("compare", "Suma o concatenación", [
                 'NÚMEROS · System.out.println(2 + 3);\nSalida: 5',
@@ -260,21 +267,21 @@ def h1_plan(session: Session) -> list[SlideSpec]:
                 "Corrige una frase, un espacio o un signo tras la revisión.",
             ], "1"),
             SlideSpec("evidence", "Salida defendible", [
-                "La conversación tiene presentación, petición, respuesta y cierre.",
-                "La entrada aparece en una salida mediante concatenación.",
+                "La conversación simulada tiene presentación, propósito y cierre.",
+                "El valor de una variable inicializada en el código aparece mediante concatenación.",
                 "No se prometen memoria, ficheros o IA real.",
                 "Puedo explicar qué mensaje cambié después de probarlo.",
             ]),
             SlideSpec("closure", "Decisión de diseño", ["¿Qué mensaje elegiste, por qué y qué cambió después de verlo ejecutado?"]),
         ],
         "210": [
-            SlideSpec("concepts", "Variable = tipo + nombre + valor", [
+            SlideSpec("concepts", "Una variable tiene tipo, nombre y valor", [
                 "int · números enteros", "double · números con decimales", "boolean · true o false",
                 "char · un carácter con comillas simples", "String · texto con comillas dobles",
                 "Elige el tipo por los valores y operaciones que necesitarás.",
             ]),
-            SlideSpec("code", "Declarar, inicializar y asignar", [
-                'int studyHours;       // declaración\nstudyHours = 4;       // inicialización\nstudyHours = 5;       // nueva asignación\nSystem.out.println(studyHours);',
+            SlideSpec("code", "Declarar e inicializar en una línea", [
+                'int studyHours = 4;   // declaración e inicialización\nstudyHours = 5;       // asignación posterior\n\nint tasks;            // declaración\ntasks = 3;            // primera asignación: inicialización',
                 "Salida esperada: 5",
                 "No se repite int al cambiar el valor: la variable ya existe.",
             ]),
@@ -309,9 +316,9 @@ def h1_plan(session: Session) -> list[SlideSpec]:
                 "Si ambos operandos son enteros, la parte decimal no aparece.",
             ]),
             SlideSpec("code", "Resto, precedencia y actualización", [
-                'int remainder = 10 % 4;       // 2\nint a = 8 * 4 + 2;            // 34\nint b = 8 * (4 + 2);          // 48\nint tasks = 3;\ntasks += 2;                    // 5',
+                'int remainder = 10 % 4;       // 2\nint a = 8 * 4 + 2;            // 34\nint b = 8 * (4 + 2);          // 48\nint tasks = 3;\ntasks += 2;                    // 5\ntasks++;                       // 6\ntasks--;                       // 5',
                 "% devuelve el resto; no calcula un porcentaje.",
-                "Los paréntesis hacen explícito qué se calcula primero.",
+                "tasks++ y tasks-- cambian exactamente una unidad.",
             ]),
             SlideSpec("activity", "Predice antes de ejecutar", [
                 "Predice 7 / 2, 7 / 2.0 y 7 % 2.",
@@ -339,10 +346,10 @@ def h1_plan(session: Session) -> list[SlideSpec]:
                 "Salida esperada: 300",
                 "Parsear texto no es lo mismo que convertir entre tipos numéricos.",
             ]),
-            SlideSpec("compare", "Conversión automática y casting", [
-                "AMPLIACIÓN · int whole = 7;\ndouble wider = whole; // 7.0",
-                "CASTING · double price = 12.75;\nint wholePrice = (int) price; // 12",
-                "El casting descarta la parte decimal hacia cero; no redondea.",
+            SlideSpec("compare", "Consulta: texto a int o double", [
+                'ENTERO · Integer.parseInt("12") → 12',
+                'DECIMAL · Double.parseDouble("12.5") → 12.5',
+                "Ambos convierten texto; fallan durante la ejecución si el formato no es válido.",
             ]),
             SlideSpec("compare", "Compila, pero falla al ejecutar", [
                 'VÁLIDO · Integer.parseInt("12") → 12',
@@ -358,10 +365,10 @@ def h1_plan(session: Session) -> list[SlideSpec]:
             SlideSpec("evidence", "Qué debe demostrar la prueba", [
                 "Uso una sola instancia de Scanner.",
                 "La entrada afecta a la salida o al cálculo.",
-                "Distingo nextLine, parseInt, ampliación y casting.",
+                "Distingo nextLine, parseInt y parseDouble.",
                 "Distingo error de compilación y error de ejecución.",
             ]),
-            SlideSpec("closure", "Comprobación final", ["¿Qué devuelve nextLine(), qué hace parseInt y qué información puede perder un casting?"]),
+            SlideSpec("closure", "Comprobación final", ["¿Qué devuelve nextLine() y en qué se diferencian parseInt y parseDouble?"]),
         ],
         "213": [
             SlideSpec("code", "Comparar produce boolean", [
@@ -369,11 +376,11 @@ def h1_plan(session: Session) -> list[SlideSpec]:
                 "= asigna; == compara.",
                 "Comparar devuelve true o false, no uno de los operandos.",
             ]),
-            SlideSpec("concepts", "AND, OR y NOT", [
+            SlideSpec("concepts", "AND y OR, solo si hacen falta", [
                 "&& · las dos condiciones deben ser true.",
                 "|| · basta con que una condición sea true.",
-                "! · invierte true y false.",
                 "Traduce primero a palabras: necesita ayuda si no puede empezar o si tiene un error.",
+                "Ampliación: combina una sola vez; el núcleo de hoy es comparar y decidir con if/else.",
             ]),
             SlideSpec("code", "if / else: dos caminos", [
                 'if (hours >= 4) {\n    System.out.println("Objetivo alcanzado");\n} else {\n    System.out.println("Objetivo pendiente");\n}',
@@ -385,16 +392,11 @@ def h1_plan(session: Session) -> list[SlideSpec]:
                 "INVÁLIDA · if (hours) { ... }",
                 "if necesita una expresión boolean; hours es int.",
             ]),
-            SlideSpec("code", "Asignación condicional sencilla", [
-                'String message = hours >= 4\n        ? "Objetivo alcanzado"\n        : "Objetivo pendiente";',
-                "Identifica condición, valor si true y valor si false.",
-                "Si cada camino tiene varias instrucciones, if/else suele ser más claro.",
-            ]),
             SlideSpec("activity", "Dato → decisión → salida", [
                 "Construye una comparación y guarda su boolean.",
-                "Traduce una expresión con &&, otra con || y otra con !.",
                 "Programa un if/else y predice las dos salidas.",
                 "Ejecuta un caso true y otro false.",
+                "Si terminas, añade una única condición con && u || y explícala con palabras.",
             ], "1"),
             SlideSpec("evidence", "Cobertura de las dos ramas", [
                 "Caso A y salida esperada quedan registrados.",
@@ -406,7 +408,7 @@ def h1_plan(session: Session) -> list[SlideSpec]:
         ],
         "214": [
             SlideSpec("code", "README mínimo y honesto", [
-                '## Qué hace\nMiniJarvis saluda y pide un nombre ficticio.\n\n## Límites de H1\nNo incluye menú, memoria, ficheros ni IA real.\n\n## Cómo ejecutar\n1. Abre el proyecto.\n2. Ejecuta Main.\n3. Introduce datos ficticios.',
+                '## Qué hace\nMiniJarvis saluda y pide un nombre ficticio.\n\n## Requisitos\nJDK configurado y proyecto abierto.\n\n## Cómo ejecutar\nEjecuta Main e introduce datos ficticios.\n\n## Límites\nSin menú, memoria, ficheros ni IA real.',
                 "Otra persona debe poder reproducir la ejecución sin explicación oral.",
                 "El README describe el producto real, no el futuro.",
             ]),
@@ -437,6 +439,12 @@ def h1_plan(session: Session) -> list[SlideSpec]:
         ],
         "215": [
             SlideSpec("flow", "Una defensa demuestra comprensión", ["señala", "explica", "predice", "ejecuta", "modifica", "vuelve a probar"]),
+            SlideSpec("concepts", "Rúbrica de la defensa", [
+                "Señala: localiza la línea o evidencia solicitada.",
+                "Explica: relaciona dato, operación o condición con el resultado.",
+                "Modifica: predice un cambio pequeño y lo implementa.",
+                "Verifica: ejecuta de nuevo y reconoce una limitación real de H1.",
+            ]),
             SlideSpec("compare", "Respuesta defendible o respuesta vaga", [
                 "VAGA · Lo hice así porque funcionaba.",
                 "DEFENDIBLE · Esta línea lee un String, lo guarda en userName y por eso Laura aparece en la salida.",
@@ -448,10 +456,10 @@ def h1_plan(session: Session) -> list[SlideSpec]:
                 "requisito → código → ejecución → evidencia",
             ]),
             SlideSpec("activity", "Ronda individual", [
-                "Señala una línea y explica su función.",
+                "Explica una variable o constante y una operación.",
                 "Predice la salida para una entrada concreta y ejecútala.",
-                "Haz una modificación pequeña y predice su efecto.",
-                "Localiza la evidencia que demuestra el resultado.",
+                "Explica la condición y prueba las dos ramas del if/else.",
+                "Modifica un dato, operación o condición; vuelve a verificar y localiza la evidencia.",
             ], "1"),
             SlideSpec("flow", "Si aparece una laguna", ["identifica", "investiga", "corrige", "prueba", "vuelve a explicar"]),
             SlideSpec("evidence", "Retrospectiva con evidencia", [
@@ -464,7 +472,11 @@ def h1_plan(session: Session) -> list[SlideSpec]:
         ],
     }
     slides = [title, outcome, *content[session.number]]
-    slides.append(SlideSpec("source", "Fuentes utilizadas", [source, "Fichas S206-S215 y píldoras H1", "Ejemplos revisados y adaptados a MiniJarvis; no se copian errores ni capturas antiguas del PDF."]))
+    slides.append(SlideSpec(
+        "source",
+        "Fuentes diferenciadas",
+        [*references, "Proyecto MiniJarvis · fichas S206-S215, píldoras H1 y criterios de evidencia"],
+    ))
     return slides
 
 def heading_pattern(title_pattern: str) -> str:
@@ -715,10 +727,17 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
 
     objective = value_for(meta, "Producto principal", "Resultado observable", "Resultado de hoy")
     if not objective:
-        objective = student_objective
+        teacher_objective = meaningful_lines(section(teacher, r"Qué vas a aprender"), 1)
+        objective = teacher_objective[0] if teacher_objective else student_objective
     evidence = value_for(meta, "Evidencia individual", "Evidencia mínima")
     if not evidence:
         evidence = student_evidence
+    if not evidence:
+        for evidence_heading in (r"Evidencia de la sesión", r"Entrega final de H1"):
+            teacher_evidence = meaningful_lines(section(teacher, evidence_heading), 1)
+            if teacher_evidence:
+                evidence = teacher_evidence[0]
+                break
 
     duration = value_for(meta, "Duración", "Duración prevista")
     hito = value_for(meta, "Hito") or teacher_path.parent.name.upper()
@@ -744,6 +763,8 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
         r"Qué debes dominar antes de explicarlo",
         r"Reglas que deben explicarse sin ambigüedad",
         r"Marco de decisión sobre los equipos",
+        r"Ideas y ejemplos",
+        r"Cómo se defiende H1",
     ):
         body = section(teacher, key_heading)
         if body and body not in key_bodies:
@@ -757,7 +778,12 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
 
     timeline = parse_markdown_timeline(teacher)
 
-    activity_bodies = [section(teacher, r"Consigna que se entrega al alumnado")]
+    activity_bodies = [
+        section(teacher, r"Consigna que se entrega al alumnado"),
+        section(teacher, r"Actividad de la sesión"),
+        section(teacher, r"Entrega final de H1"),
+        section(teacher, r"Reflexión individual"),
+    ]
     for activity_heading in (
         r"Trabajo de hoy",
         r"Acuerdo de funciones",
@@ -774,6 +800,8 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
     activity = semantic_items("\n\n".join(body for body in activity_bodies if body), 36)
     if not activity:
         activity = [block.action for block in timeline if re.search(r"equipo|completar|crear|decidir|trabajo|backlog|defensa", block.action, re.I)]
+    if not timeline and activity:
+        timeline = [TimelineBlock(duration or "Sesión", activity[0])]
 
     observe = list_items(section(teacher, r"Qué observar mientras trabajan"))
     checklist = list_items(section(teacher, r"Criterios? (?:de cierre|para considerar cerrada la sesión)"))
@@ -789,7 +817,12 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
         candidate_rules = list_items(section(student, r"Reglas de esta sesión"))
         safety = [item for item in candidate_rules if re.search(r"publicar|puntuaciones|datos|consentimiento|particip", item, re.I)]
 
-    closure_body = section(teacher, r"Comprobación final") or section(teacher, r"Criterios? de cierre")
+    closure_body = (
+        section(teacher, r"Comprobación final")
+        or section(teacher, r"Criterios? de cierre")
+        or section(teacher, r"Comprueba lo aprendido")
+        or section(teacher, r"Cierre de H1")
+    )
     closure = meaningful_lines(closure_body, 10)
     close_question = extract_question(teacher, student)
 

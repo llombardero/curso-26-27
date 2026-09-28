@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diario individual H1 — completado (Ana García)</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="diario-individual-h1--completado-ana-garcía">Diario individual
+H1 — completado (Ana García)</h1>
+<blockquote>
+<p>Este documento simula las filas que se registrarían en el Sheet
+individual de diario. Cada sesión tiene una fila con: fecha, sesión,
+hit, objetivo, acción, prueba y resultado, evidencia enlazada, bloqueo
+(si aplica), uso de IA, y próximo paso.</p>
+</blockquote>
+<hr />
+<h2 id="s206--definición-del-alcance-de-h1">S206 — Definición del
+alcance de H1</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-09-29</li>
+<li><strong>Sesión:</strong> S206</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Entender qué incluye y qué excluye H1.
+Crear el backlog inicial del equipo.</li>
+<li><strong>Acción:</strong> Leí la descripción del hit H1. Escribí la
+frase de alcance: "H1 consiste en un asistente de consola que lee nombre
+y número, calcula el doble, y usa if/else para decidir la salida."
+Definimos qué entra (entrada, salida, variables, constantes,
+operaciones, comparaciones, if/else) y qué queda fuera (menú, bucles, IA
+real, credenciales).</li>
+<li><strong>Prueba y resultado:</strong> El equipo acordó el alcance. Lo
+registré en el Scrum Sheet y en mi diario.</li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://sheets.example.com/scrum-h1#S206">Scrum S206</a></li>
+<li><strong>Bloqueo:</strong> Ninguno.</li>
+<li><strong>Uso de IA:</strong> No.</li>
+<li><strong>Próximo paso:</strong> S207: crear la primera ejecución del
+programa.</li>
+</ul>
+<hr />
+<h2 id="s207--primera-ejecución">S207 — Primera ejecución</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-10-01</li>
+<li><strong>Sesión:</strong> S207</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Hacer que el programa imprima algo por
+consola.</li>
+<li><strong>Acción:</strong> Creé <code>Main.java</code> con la
+estructura mínima: <code>class Main</code>, <code>main</code>,
+<code>System.out.println("Hola Mundo")</code>. Compilé con
+<code>javac</code> y ejecuté con <code>java</code>.</li>
+<li><strong>Prueba y resultado:</strong> El programa imprimió "Hola
+Mundo" por consola. Sé que se ha ejecutado porque vi el texto en la
+terminal.</li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://github.com/ejemplo/minijarvis-h1/commit/abc123">Commit
+abc123</a></li>
+<li><strong>Bloqueo:</strong> Ninguno.</li>
+<li><strong>Uso de IA:</strong> Sí. Pedí la estructura mínima a ChatGPT
+(ver registro IA S207).</li>
+<li><strong>Próximo paso:</strong> S208: añadir la estructura completa
+con comentarios y entender cada parte.</li>
+</ul>
+<hr />
+<h2 id="s208--estructura-mínima-y-error-corregido">S208 — Estructura
+mínima y error corregido</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-10-03</li>
+<li><strong>Sesión:</strong> S208</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Entender la estructura de la clase, el
+main, las instrucciones y los comentarios. Provocar y corregir un
+error.</li>
+<li><strong>Acción:</strong> Añadí comentarios explicativos a
+<code>Main.java</code>. Provocué un error olvidando el <code>;</code> al
+final de <code>System.out.println("Hola")</code>. El compilador mostró
+el error y la línea exacta. Corregí el error añadiendo el
+<code>;</code>.</li>
+<li><strong>Prueba y resultado:</strong> El programa compiló y ejecutó
+correctamente tras la corrección. Aprendí que cada instrucción en Java
+debe terminar con <code>;</code>.</li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://github.com/ejemplo/minijarvis-h1/blob/h1-entrega/incidencia-h1-completo.md">Incidencia
+H1</a></li>
+<li><strong>Bloqueo:</strong> Error de compilación por falta de
+<code>;</code>. Resuelto en el acto.</li>
+<li><strong>Uso de IA:</strong> No.</li>
+<li><strong>Próximo paso:</strong> S209: decidir el mensaje de saludo
+del asistente.</li>
+</ul>
+<hr />
+<h2 id="s209--decisión-del-mensaje-de-saludo">S209 — Decisión del
+mensaje de saludo</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-10-05</li>
+<li><strong>Sesión:</strong> S209</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Decidir el mensaje de saludo y
+registrarlo en Scrum.</li>
+<li><strong>Acción:</strong> Discutimos con Carlos si el saludo debía
+ser "Hola, " o "Bienvenido, ". Propuse "Hola" porque es más cercano y no
+asume género. Carlos aceptó. Implementé el mensaje en el código:
+<code>System.out.println("Hola, " + nombre);</code>.</li>
+<li><strong>Prueba y resultado:</strong> Ejecuté con nombre = "Ana" →
+"Hola, Ana". Ejecuté con nombre = "Carlos" → "Hola, Carlos". Ambos
+funcionan.</li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://sheets.example.com/scrum-h1#S209">Scrum S209</a></li>
+<li><strong>Bloqueo:</strong> Ninguno.</li>
+<li><strong>Uso de IA:</strong> No.</li>
+<li><strong>Próximo paso:</strong> S210: crear el plan de datos y
+definir las variables.</li>
+</ul>
+<hr />
+<h2 id="s210--plan-de-datos-y-variables">S210 — Plan de datos y
+variables</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-10-08</li>
+<li><strong>Sesión:</strong> S210</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Crear el plan de datos para H1 antes de
+escribir código.</li>
+<li><strong>Acción:</strong> Creé la tabla de plan de datos:</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Dato</th>
+<th>Tipo</th>
+<th>Nombre</th>
+<th>Cambia</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nombre del usuario</td>
+<td>String</td>
+<td>nombre</td>
+<td>No</td>
+<td>Guardar el nombre introducido</td>
+</tr>
+<tr class="even">
+<td>Número del usuario</td>
+<td>int</td>
+<td>numero</td>
+<td>No</td>
+<td>Guardar el número introducido</td>
+</tr>
+<tr class="odd">
+<td>Doble del número</td>
+<td>int</td>
+<td>doble</td>
+<td>No</td>
+<td>Calcular numero * 2</td>
+</tr>
+<tr class="even">
+<td>Mensaje de bienvenida</td>
+<td>String</td>
+<td>MENSAJE_BIENVENIDA</td>
+<td>No</td>
+<td>Mensaje fijo de bienvenida</td>
+</tr>
+</tbody>
+</table>
+<p>Implementé las variables en el código con nombres claros y
+descriptivos.</p>
+<ul>
+<li><strong>Prueba y resultado:</strong> El programa declara y usa las
+variables correctamente. Puedo señalar cada variable, explicar su tipo,
+nombre y valor.</li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://sheets.example.com/scrum-h1#S210">Scrum S210</a></li>
+<li><strong>Bloqueo:</strong> Confusión entre <code>final</code> y
+<code>static</code>. La aclaré con IA (ver registro IA S210).</li>
+<li><strong>Uso de IA:</strong> Sí. Pregunté sobre
+<code>static final</code> vs <code>final</code> (ver registro IA
+S210).</li>
+<li><strong>Próximo paso:</strong> S211: añadir constantes y operaciones
+aritméticas.</li>
+</ul>
+<hr />
+<h2 id="s211--constantes-operaciones-y-predicción">S211 — Constantes,
+operaciones y predicción</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-10-10</li>
+<li><strong>Sesión:</strong> S211</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Usar <code>final</code> para constantes y
+realizar operaciones aritméticas.</li>
+<li><strong>Acción:</strong> Añadí
+<code>final String MENSAJE_BIENVENIDA = "Bienvenida a MiniJarvis.";</code>
+y <code>final int DOBLE_FACTOR = 2;</code>. Calculé
+<code>int doble = numero * DOBLE_FACTOR;</code>. Provocué un error
+intentando reasignar <code>DOBLE_FACTOR = 3;</code> y lo corregí
+eliminando la reasignación.</li>
+<li><strong>Prueba y resultado:</strong> Predije que
+<code>5 * 2 = 10</code>. El resultado obtenido fue 10. Predije que
+<code>final int DOBLE_FACTOR = 2; DOBLE_FACTOR = 3;</code> daría error
+de compilación. El resultado fue
+<code>cannot assign a value to final variable DOBLE_FACTOR</code>.</li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://github.com/ejemplo/minijarvis-h1/commit/def456">Commit
+def456</a>, <a
+href="https://github.com/ejemplo/minijarvis-h1/blob/h1-entrega/incidencia-h1-completo.md">Incidencia
+H1</a></li>
+<li><strong>Bloqueo:</strong> Error al reasignar constante.
+Resuelto.</li>
+<li><strong>Uso de IA:</strong> No.</li>
+<li><strong>Próximo paso:</strong> S212: implementar la lectura de
+entrada con Scanner.</li>
+</ul>
+<hr />
+<h2 id="s212--entrada-con-scanner-y-conversión">S212 — Entrada con
+Scanner y conversión</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-10-12</li>
+<li><strong>Sesión:</strong> S212</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Leer entrada del usuario con
+<code>Scanner</code> y convertirla a entero.</li>
+<li><strong>Acción:</strong> Carlos implementó
+<code>Scanner sc = new Scanner(System.in);</code>,
+<code>String nombre = sc.nextLine();</code>, y
+<code>int numero = Integer.parseInt(sc.nextLine());</code>. Probé con
+entrada válida ("5") y obtuve 5. Probé con entrada inválida ("abc") y
+obtuve <code>NumberFormatException</code>.</li>
+<li><strong>Prueba y resultado:</strong> Entrada "5" → numero = 5
+(correcto). Entrada "abc" → excepción (correcto, se documenta como
+limitación).</li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://github.com/ejemplo/minijarvis-h1/commit/jkl012">Commit
+jkl012</a></li>
+<li><strong>Bloqueo:</strong> <code>NumberFormatException</code> con
+entrada no numérica. No se gestiona en H1; se documenta.</li>
+<li><strong>Uso de IA:</strong> Sí. Pregunté por qué
+<code>Integer.parseInt("abc")</code> falla (ver registro IA S212).</li>
+<li><strong>Próximo paso:</strong> S213: añadir comparaciones y
+if/else.</li>
+</ul>
+<hr />
+<h2 id="s213--comparaciones-y-ifelse">S213 — Comparaciones y
+if/else</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-10-14</li>
+<li><strong>Sesión:</strong> S213</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Implementar comparaciones y
+<code>if/else</code> para decidir la salida.</li>
+<li><strong>Acción:</strong> Añadí
+<code>if (numero &gt; 0) { System.out.println("El doble de " + numero + " es " + doble); } else { System.out.println("El número no es positivo."); }</code>.
+Probé con numero = 5 (rama if) y numero = -3 (rama else).</li>
+<li><strong>Prueba y resultado:</strong>
+<ul>
+<li>Caso A (numero = 5): <code>5 &gt; 0</code> → <code>true</code> → "El
+doble de 5 es 10." ✓</li>
+<li>Caso B (numero = -3): <code>-3 &gt; 0</code> → <code>false</code> →
+"El número no es positivo." ✓</li>
+</ul></li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://github.com/ejemplo/minijarvis-h1/commit/ghi789">Commit
+ghi789</a></li>
+<li><strong>Bloqueo:</strong> Ninguno.</li>
+<li><strong>Uso de IA:</strong> No. Trabajé de forma independiente.</li>
+<li><strong>Próximo paso:</strong> S214: crear el README y completar las
+evidencias.</li>
+</ul>
+<hr />
+<h2 id="s214--readme-evidencias-y-sites">S214 — README, evidencias y
+Sites</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-10-15</li>
+<li><strong>Sesión:</strong> S214</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Crear el README H1, verificar evidencias,
+completar Sites.</li>
+<li><strong>Acción:</strong> Redacté el README con: qué hace,
+requisitos, ejemplo reproducible, decisiones técnicas, microprácticas,
+limitaciones y versión evaluada. Verifiqué que todos los enlaces
+funcionen y tengan los permisos correctos. Completé mi página H1 en el
+Site personal.</li>
+<li><strong>Prueba y resultado:</strong> El README está en la raíz del
+repositorio. Todos los enlaces son profundos y accesibles.</li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://github.com/ejemplo/minijarvis-h1/blob/h1-entrega/README.md">README-h1-completo.md</a>,
+<a href="https://ana.ejemplo.com/h1">Portfolio H1</a></li>
+<li><strong>Bloqueo:</strong> Ninguno.</li>
+<li><strong>Uso de IA:</strong> No.</li>
+<li><strong>Próximo paso:</strong> S215: defensa, retrospectiva y
+entrega en Moodle.</li>
+</ul>
+<hr />
+<h2 id="s215--defensa-retrospectiva-y-entrega-final">S215 — Defensa,
+retrospectiva y entrega final</h2>
+<ul>
+<li><strong>Fecha:</strong> 2026-10-17</li>
+<li><strong>Sesión:</strong> S215</li>
+<li><strong>Hit:</strong> H1</li>
+<li><strong>Objetivo:</strong> Defender el producto, cerrar la
+retrospectiva y entregar en Moodle.</li>
+<li><strong>Acción:</strong> Defendí el producto oralmente: señalé el
+punto de entrada, las variables, la constante, ejecuté con entrada
+ficticia, expliqué la conversión y el error, probé los dos casos de
+if/else. Completé la retrospectiva del equipo en Scrum. Entregué en
+Moodle con todos los enlaces.</li>
+<li><strong>Prueba y resultado:</strong> Defensa superada. Entrega en
+Moodle completada.</li>
+<li><strong>Evidencia enlazada:</strong> <a
+href="https://moodle.example.com/mod/assign/view.php?id=123">Moodle
+H1</a>, <a
+href="https://sheets.example.com/scrum-h1#retrospectiva">Retrospectiva
+Scrum</a></li>
+<li><strong>Bloqueo:</strong> Ninguno.</li>
+<li><strong>Uso de IA:</strong> No.</li>
+<li><strong>Próximo paso:</strong> H2: implementar menú con bucles y
+gestión de errores.</li>
+</ul>
+<hr />
+<h2 id="resumen-final-h1">Resumen final H1</h2>
+<p><strong>Una cosa que ahora puedo hacer por mi cuenta:</strong></p>
+<ul>
+<li>Explicar y escribir código Java que usa variables, constantes,
+operaciones aritméticas, comparaciones e <code>if/else</code>. Puedo
+predecir el resultado de una ejecución antes de correrla.</li>
+</ul>
+<p><strong>Una cosa que aún necesito apoyo con:</strong></p>
+<ul>
+<li>Gestión de errores con <code>try/catch</code>. No lo hemos visto en
+H1, pero sé que es necesario para manejar entradas inválidas de forma
+elegante.</li>
+</ul>
+<p><strong>Una evidencia que demuestra mi capacidad:</strong></p>
+<ul>
+<li><a
+href="https://github.com/ejemplo/minijarvis-h1/commit/ghi789">Commit
+ghi789</a>: implementé la lógica <code>if/else</code> desde cero, sin
+ayuda de IA, y la probé con ambos casos (true y false).</li>
+</ul>
+<p><strong>Un próximo paso para H2:</strong></p>
+<ul>
+<li>Implementar un menú con bucle <code>while</code> para que el usuario
+pueda hacer varias consultas sin reiniciar el programa.</li>
+</ul>
+
+  </main>
+</body>
+</html>

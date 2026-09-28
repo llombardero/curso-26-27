@@ -1,100 +1,163 @@
-# S214 — README, evidencia y Site
+# S214 — README y evidencia de ejecución
 
-| Dato | Valor |
+## Objetivo
+
+Documentar H1 para que otra persona pueda comprenderlo, ejecutarlo y comprobar sus pruebas; organizar cada evidencia en su fuente de verdad y preparar enlaces profundos para la entrega.
+
+## 1. El README explica el producto
+
+El archivo `README.md` debe estar en la raíz del repositorio y contener, como mínimo:
+
+1. propósito y alcance de H1;
+2. requisitos para ejecutar;
+3. instrucciones de ejecución;
+4. ejemplo real de entrada y salida;
+5. pruebas realizadas;
+6. limitaciones conocidas;
+7. enlace al Site de equipo si está publicado.
+
+Modelo breve:
+
+````markdown
+# MiniJarvis H1
+
+## Qué hace
+Programa Java de consola que saluda, pide datos ficticios y muestra un cálculo.
+
+## Qué no hace todavía
+No tiene menú, memoria, ficheros ni conexión con una IA real.
+
+## Cómo ejecutar
+1. Abrir el proyecto con un JDK configurado.
+2. Ejecutar `src/Main.java`.
+3. Escribir los datos solicitados.
+
+## Ejemplo de ejecución
+```text
+Nombre ficticio: Laura
+Horas de estudio: 5
+Hola, Laura.
+Minutos de estudio: 300
+```
+
+## Pruebas
+- entrada válida;
+- entrada no convertible;
+- rama verdadera del `if`;
+- rama falsa del `if`.
+````
+
+## 2. Una evidencia debe demostrar algo
+
+Una evidencia útil indica:
+
+- qué se probó;
+- con qué entrada;
+- qué salida se esperaba;
+- qué salida apareció;
+- qué demuestra el resultado;
+- dónde está el código correspondiente.
+
+Ejemplo insuficiente:
+
+```text
+Funciona.
+```
+
+Ejemplo verificable:
+
+```text
+Prueba: rama falsa de la condición horas >= 4.
+Entrada: nombre «Sam» y horas «2».
+Salida esperada: «Objetivo pendiente».
+Salida observada: «Objetivo pendiente».
+Qué demuestra: el bloque else se ejecuta cuando la condición es falsa.
+Código: enlace al commit y a las líneas relevantes.
+```
+
+Una captura sin entrada, contexto ni enlace al código no basta.
+
+## 3. Qué corresponde a cada espacio
+
+| Espacio | Función |
 |---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 3 periodos; esta ficha organiza el checkpoint de 45 minutos |
-| Fase HEXA | Comunicar — evaluar y reflexionar |
-| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
+| Repositorio | código, historial, README y trazabilidad técnica |
+| README | ejecución, pruebas, límites e instrucciones |
+| Diario individual | aportación, aprendizaje, bloqueo y siguiente paso |
+| Scrum de equipo | tareas, decisiones, bloqueos, review y retrospectiva |
+| Site personal | selección y reflexión sobre evidencia individual |
+| Site de equipo | comunicación sintética del incremento |
+| Moodle | entrega oficial mediante enlaces profundos |
 
-> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
+No copies el mismo contenido completo en varios lugares. Enlaza la fuente de verdad y sintetiza lo necesario.
 
-**Objetivo:** Documentar H1 y seleccionar evidencias verificables sin duplicar el diario.
+## 4. Prueba cruzada
 
-**D1** · 00:00–00:05 · COMUNICAR
+Pide a otra persona que, sin recibir instrucciones orales:
 
-## ¿Podría otra persona entender tu proyecto sin ti?
+1. abra el repositorio;
+2. localice el README;
+3. ejecute el programa;
+4. reproduzca una prueba;
+5. siga un enlace de evidencia.
 
-README + evidencia + enlaces claros convierten “funciona” en algo verificable.
+Registra qué paso resultó ambiguo y corrige el README.
 
-**Qué haces:** Evalúa qué falta.
+## 5. Permisos y enlaces profundos
 
-**Qué debe quedar:** identifiquen una carencia.
+Un enlace profundo lleva directamente al recurso concreto: README, commit, página H1 o fila relevante. Evita enlaces a carpetas generales.
 
-**D2** · 00:05–00:11 · PÍLDORA DOCENTE 1/3
+Comprueba los permisos en una ventana privada o con una cuenta distinta. Verifica:
 
-## README mínimo de H1
+- el repositorio abre;
+- el README es visible;
+- los Sites están publicados;
+- las hojas permiten lectura;
+- ningún enlace exige permisos que el profesorado no tiene.
 
-**Qué haces:** Compara con su README.
+## 6. Actualiza los Sites
 
-**Qué debe quedar:** sepan qué apartados faltan.
+### Site personal
 
-**D3** · 00:11–00:16 · PÍLDORA DOCENTE 2/3
+Incluye una aportación concreta, una evidencia profunda, un aprendizaje, una dificultad y una mejora. No copies el diario completo.
 
-## Una evidencia debe demostrar algo
+### Site de equipo
 
-**Qué haces:** Mejora un ejemplo débil.
+Presenta el incremento, enlaza repositorio y README, resume una decisión, una prueba, una mejora detectada en la review y una acción de retrospectiva. No copies todo el Scrum.
 
-**Qué debe quedar:** puedan nombrar qué demuestra su evidencia.
+## 7. Prepara el borrador de Moodle
 
-**D4** · 00:16–00:22 · PÍLDORA DOCENTE 3/3
+Reúne enlaces profundos a:
 
-## Diario, Site personal y Site de equipo no son lo mismo
+- repositorio o código;
+- README y pruebas;
+- diario individual;
+- Scrum de equipo;
+- Site personal;
+- Site de equipo.
 
-**Qué haces:** Decide qué evidencia irá a cada lugar.
+Añade la identificación del equipo y una frase sobre tu aportación individual. La entrega oficial se completa en S215.
 
-**Qué debe quedar:** haya separación clara.
+## Errores frecuentes
 
-**D5** · 00:22–00:36 · ACTIVIDAD
+- Escribir solo «funciona».
+- Mostrar una salida sin indicar la entrada.
+- Enlazar una carpeta general en lugar del recurso concreto.
+- Duplicar diario y Scrum en los Sites.
+- Probar los enlaces con la misma cuenta propietaria.
+- Ocultar una limitación conocida.
 
-## Documenta H1
+## Autoevaluación
 
-Termina README.<br>
-Guarda evidencia de ejecución.<br>
-Actualiza diario.<br>
-Actualiza página H1 del Site personal.<br>
-Actualiza página H1 del Site de equipo.<br>
-Comprueba permisos y enlaces.
+Comprueba que puedes:
 
-**Qué haces:** Documenta y enlaza.
-
-**Qué debe quedar:** los enlaces sean recuperables.
-
-**D6** · 00:36–00:41 · PRUEBA DE USUARIO
-
-## Otro compañero intenta seguir tu README
-
-Sin explicaciones orales.<br>
-<br>
-Anota qué pregunta necesita hacerte.
-
-**Qué haces:** Prueba documentación ajena.
-
-**Qué debe quedar:** aparezca al menos una mejora.
-
-**D7** · 00:41–00:45 · CIERRE
-
-## Corrige una ambigüedad y verifica enlaces
-
-Todo enlace debe llevar a la evidencia concreta y ser accesible para el profesorado.
-
-**Qué haces:** Corrige y comprueba.
-
-**Qué debe quedar:** quede H1 listo para defensa.
-
-**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
-
-## Evidencia única antes de salir
-
-- conserva el código o la prueba en el lugar indicado por la sesión;
-- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
-- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
+- explicar el contenido mínimo del README;
+- convertir una captura aislada en evidencia verificable;
+- distinguir la función de cada espacio;
+- reproducir una prueba desde el README;
+- comprobar enlaces y permisos;
+- preparar un borrador completo de Moodle.
 
 ## Seguridad y uso de IA
 
-- Usa datos ficticios y no publiques credenciales ni información personal.
-- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
-
-## Cierre individual
-
-**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**
+Revisa código, capturas, historial y enlaces para eliminar datos personales, credenciales y tokens. Si una IA ayuda a redactar el README, verifica cada instrucción ejecutándola desde cero.

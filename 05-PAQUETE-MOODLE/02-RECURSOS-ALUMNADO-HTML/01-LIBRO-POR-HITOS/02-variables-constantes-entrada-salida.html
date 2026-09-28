@@ -33,14 +33,22 @@ pruebas, documentación, defensa y uso responsable de IA si procede.</p>
 <h2 id="2-conceptos-básicos-explicados">2. Conceptos básicos
 explicados</h2>
 <p>Una variable guarda un dato que puede cambiar. Una constante guarda
-un dato que no debería cambiar durante la ejecución. Java exige indicar
-el tipo: <code>String</code> para texto, <code>int</code> para enteros,
-<code>boolean</code> para verdadero/falso.</p>
+un dato que no debería cambiar durante la ejecución. Declarar es indicar
+tipo y nombre; inicializar es asignar el primer valor; una asignación
+posterior sustituye el valor anterior.</p>
+<p>Java tiene ocho tipos primitivos: <code>byte</code>,
+<code>short</code>, <code>int</code>, <code>long</code>,
+<code>float</code>, <code>double</code>, <code>char</code> y
+<code>boolean</code>. En H1 utilizarás sobre todo <code>int</code>,
+<code>double</code>, <code>char</code> y <code>boolean</code>.
+<code>String</code> no es primitivo: es una clase que representa texto.
+No necesitas estudiar todavía orientación a objetos, pero sí reconocer
+esta diferencia.</p>
 <p>La entrada permite que el usuario participe. Usaremos
 <code>Scanner</code> para leer texto desde teclado. La salida se realiza
 con <code>System.out.println</code> o <code>System.out.print</code>.
 Entrada y salida son la base de un asistente por consola.</p>
-<p>Cuando leemos con <code>scanner.nextLine()</code>, Java obtiene texto
+<p>Cuando leemos con <code>teclado.nextLine()</code>, Java obtiene texto
 aunque el usuario escriba un número. Si necesitamos calcular, tendremos
 que convertir ese texto a número con métodos como
 <code>Integer.parseInt</code>. Esta conversión puede fallar si el texto
@@ -48,27 +56,44 @@ no tiene forma de número.</p>
 <p>Los operadores permiten calcular y comparar: <code>+</code>,
 <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>,
 <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>,
-<code>&lt;=</code>, <code>==</code> y <code>!=</code>. En expresiones
-con varios operadores hay precedencia: por ejemplo, la multiplicación se
-calcula antes que la suma.</p>
+<code>&lt;=</code>, <code>==</code> y <code>!=</code>. Una expresión
+produce un valor y ese valor tiene un tipo. Por ejemplo,
+<code>5 / 2</code> produce el entero <code>2</code>, mientras que
+<code>5 / 2.0</code> produce el decimal <code>2.5</code>. En expresiones
+con varios operadores hay precedencia: <code>2 + 3 * 4</code> produce
+<code>14</code>, mientras que <code>(2 + 3) * 4</code> produce
+<code>20</code>.</p>
+<p>No confundas tres mecanismos de conversión:</p>
+<ul>
+<li><strong>parseo:</strong> parte de texto, como
+<code>Integer.parseInt("5")</code>;</li>
+<li><strong>conversión implícita:</strong> Java amplía automáticamente
+un valor, como de <code>int</code> a <code>double</code>;</li>
+<li><strong>casting:</strong> se fuerza el tipo de destino, como
+<code>(int) 8.9</code>, y puede perder información.</li>
+</ul>
+<p>Las comparaciones producen valores <code>boolean</code>. Esos valores
+pueden controlar un <code>if/else</code>, que debe probarse con una
+entrada para cada rama.</p>
 <h2 id="3-ejemplo-guiado-en-java">3. Ejemplo guiado en Java</h2>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> argumentos<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="bu">String</span> NOMBRE_ASISTENTE <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> teclado <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;¿Cómo te llamas? &quot;</span><span class="op">);</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> nombreUsuario <span class="op">=</span> teclado<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;. Soy &quot;</span> <span class="op">+</span> AGENT_NAME <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> nombreUsuario <span class="op">+</span> <span class="st">&quot;. Soy &quot;</span> <span class="op">+</span> NOMBRE_ASISTENTE <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        teclado<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="4-caso-práctico-minijarvis">4. Caso práctico MiniJarvis</h2>
 <p>MiniJarvis debe pedir el nombre del usuario y responder con un saludo
-personalizado. Después añade una variable <code>courseYear</code> y
+personalizado. Después añade una variable <code>anioCurso</code> y
 muestra el curso ficticio.</p>
 <p>Amplía el caso: si el usuario deja el nombre vacío, de momento solo
 observa qué ocurre. La validación llegará después.</p>
@@ -127,7 +152,7 @@ cómo corregirlos</h2>
 <li>¿Qué aporta una constante?</li>
 <li>¿Para qué sirve Scanner?</li>
 <li>¿Qué prueba manual puedes escribir para entrada/salida?</li>
-<li>¿Por qué <code>scanner.nextLine()</code> devuelve texto aunque
+<li>¿Por qué <code>teclado.nextLine()</code> devuelve texto aunque
 escribas un número?</li>
 <li>¿Qué puede ocurrir al usar <code>Integer.parseInt</code>?</li>
 </ol>
@@ -144,17 +169,17 @@ Uso de IA, si lo hubo, y cómo lo validé:</code></pre>
 <p>Cuando uses variables, pregúntate tres cosas: qué dato quiero
 guardar, qué tipo tiene y si cambiará durante la ejecución. El nombre de
 la variable debe explicar su intención. <code>n</code> dice poco;
-<code>userName</code> ayuda más. Una constante como
-<code>AGENT_NAME</code> evita escribir el mismo texto en varios lugares
-y comunica que ese valor no debe cambiar.</p>
-<p>Caso de estudio: añade <code>String favoriteTopic</code> y pregunta
-al usuario qué parte de programación quiere practicar. MiniJarvis debe
+<code>nombreUsuario</code> ayuda más. Una constante como
+<code>NOMBRE_ASISTENTE</code> evita escribir el mismo texto en varios
+lugares y comunica que ese valor no debe cambiar.</p>
+<p>Caso de estudio: añade <code>String temaFavorito</code> y pregunta al
+usuario qué parte de programación quiere practicar. MiniJarvis debe
 responder con una frase personalizada. Registra dos pruebas: una con
 texto normal y otra con entrada vacía. Todavía no tienes que resolver la
 entrada vacía, pero sí observarla.</p>
-<p>Caso de estudio de refuerzo: añade <code>int studyHours</code>. Debes
-demostrar en el portfolio una prueba con número válido y otra con texto
-no numérico. Si todavía no sabes controlar la excepción, al menos
+<p>Caso de estudio de refuerzo: añade <code>int horasEstudio</code>.
+Debes demostrar en el portfolio una prueba con número válido y otra con
+texto no numérico. Si todavía no sabes controlar la excepción, al menos
 explica qué error aparece y por qué.</p>
 
   </main>

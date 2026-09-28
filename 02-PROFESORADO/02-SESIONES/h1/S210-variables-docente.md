@@ -1,131 +1,225 @@
-# S210 — Guía docente
-
-## Variables: guardar datos con nombre y tipo
+# S210 - Planificar - Variables
 
 | Dato | Valor |
 |---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 2 periodos; checkpoint proyectable de 45 minutos y taller asociado |
-| Fase HEXA | Planificar — organizar el trabajo |
-| Agrupamiento | Individual con contraste por parejas o equipo cuando la práctica lo requiera |
-| Resultado observable | Planificar datos y comprender variable, tipo, nombre, declaración, inicialización y asignación. |
-| Evidencia mínima | Quede evidencia individual. |
+| Hito | H1 — Primer asistente ejecutable |
+| Duración prevista | 45 minutos |
+| Fase HEXA del hito | Planificar — organizar el trabajo |
 
-## Propósito
+> Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`. Selecciona y desarrolla los conceptos, ejemplos, actividades y evidencias útiles para esta sesión.
 
-Planificar datos y comprender variable, tipo, nombre, declaración, inicialización y asignación.
+## Qué vas a aprender
 
-El concepto se incorpora al Tema 1, pero solo pasa a `Main.java` cuando mejora el producto mínimo. Las demás prácticas se conservan como microejercicios defendibles.
+Al terminar, debes planificar datos: qué se guarda, con qué tipo, con qué nombre y dónde se usa.
 
-## Material imprescindible
+## Ideas y ejemplos
 
-- presentación de S210;
-- IntelliJ y JDK cuando haya práctica de código;
-- proyecto o microarchivo de prueba;
-- diario individual y tablero Scrum del equipo;
-- datos ficticios.
+Úsala antes de la tabla de datos y antes de implementar variables.
 
-## Secuencia de aula
+Una variable es una zona de memoria identificada por un nombre. El tipo indica qué clase de dato puede guardar. El valor puede cambiar. La variable no es lo mismo que su valor actual.
 
-| Tiempo / diap. | Tipo y actuación | Alumnado | Observa | Puerta de avance | Si hay retraso |
-|---|---|---|---|---|---|
-| 00:00–00:05 / D1 | PLANIFICAR: Provoca la necesidad de almacenar datos. | Detecta repetición. | Si proponen copiar/pegar en vez de guardar. | aparezca la idea de un único dato reutilizable. | 3 minutos. |
-| 00:05–00:11 / D2 | PÍLDORA DOCENTE 1/4: Usa la metáfora de casilla etiquetada y conecta con RAM de Tema 1 sin profundizar en binario. | Explica una variable con sus palabras. | Si dicen que variable y valor son exactamente lo mismo. | puedan distinguir variable/valor. | 5 minutos. |
-| 00:11–00:18 / D3 | PÍLDORA DOCENTE 2/4: Presenta el mapa completo; para uso inmediato céntrate en int, double, boolean, char y String. | Asocia datos a tipos. | String vs char; entero vs decimal. | clasifiquen ejemplos básicos. | muestra mapa y trabaja solo 5 tipos de uso inmediato. |
-| 00:18–00:23 / D4 | MICROPRÁCTICA: Pide respuesta y razón, no solo el nombre del tipo. | Clasifica. | Razonamiento sobre naturaleza del dato. | justifiquen al menos 4 casos. | 3 casos. |
-| 00:23–00:28 / D5 | PÍLDORA DOCENTE 3/4: Conecta con identificadores de S208 y legibilidad. | Renombra ejemplos pobres. | Nombres vagos. | produzcan nombres válidos y semánticos. | un ejemplo y una corrección. |
-| 00:28–00:33 / D6 | PÍLDORA DOCENTE 4/4: Explica que el tipo se escribe al declarar, no cada vez que cambia el valor. Diferencia = de igualdad matemática. | Predice valor antes/después. | Repetición del tipo en la asignación. | puedan señalar declaración/inicialización/asignación. | 4 minutos. |
-| 00:33–00:36 / D7 | PLANIFICACIÓN: Modela una fila y detente. | Planifica 3–5 datos. | Código sin plan. | cada dato tenga tipo/nombre/uso. | 3 datos. |
-| 00:36–00:42 / D8 | ACTIVIDAD: Circula y pregunta qué línea prueba el cambio. | Programa y prueba. | Variables no usadas y tipos incompatibles. | haya salida antes/después de una asignación. | haz 2 variables y una asignación. |
-| 00:42–00:45 / D9 | CIERRE: Pregunta sobre su propio código. | Explica. | Comprensión real de las partes. | quede evidencia individual. | una pregunta rápida a varias personas. |
+Empieza con el cambio de valor:
 
-## Qué debes explicar
+```java
+int horasEstudio = 4;
+horasEstudio = 5;
+```
 
-- **PÍLDORA DOCENTE 1/4:** Usa la metáfora de casilla etiquetada y conecta con RAM de Tema 1 sin profundizar en binario.
-- **PÍLDORA DOCENTE 2/4:** Presenta el mapa completo; para uso inmediato céntrate en int, double, boolean, char y String.
-- **PÍLDORA DOCENTE 3/4:** Conecta con identificadores de S208 y legibilidad.
-- **PÍLDORA DOCENTE 4/4:** Explica que el tipo se escribe al declarar, no cada vez que cambia el valor. Diferencia = de igualdad matemática.
+Di:
 
-## Ejemplo o demostración preparada
+La variable permanece; lo que cambia es el valor guardado. Primero `horasEstudio` vale 4 y después vale 5.
 
-**D1 · Un dato repetido, un problema —** Si el curso aparece en tres mensajes y después cambia el año, ¿cuántos sitios tendrías que modificar?
+Contrasta variable y valor:
 
-**D2 · Variable = dato + nombre + memoria —** IDEA: Una variable es una zona de memoria con un nombre que guarda un dato. \| EJEMPLO: int studyHours = 4;<br>
-<br>
-String userName = "Laura";
+```java
+String nombreUsuario = "Laura";
+```
 
-**D3 · Mapa de tipos que aparecen en Tema 1 —** ENTEROS: byte / short / int / long \| DECIMALES: float / double \| OTROS: char / boolean / String
+Pregunta:
 
-**D4 · Elige el tipo adecuado —** Nombre de usuario → ?<br>
-Horas de estudio → ?<br>
-Nota media → ?<br>
-Objetivo alcanzado → ?<br>
-Inicial → ?
+Qué es `nombreUsuario` y qué es `"Laura"`.
 
-**D5 · Nombres válidos y significativos —** MEJOR: userName<br>
-studyHours<br>
-averageScore \| EVITA: x<br>
-data1<br>
-1name<br>
-my name<br>
-class
+Muestra dos variables con el mismo valor:
 
-**D6 · Declarar, inicializar y asignar —** int studyHours = 4; // declara + inicializa<br>
-<br>
-studyHours = 5; // asigna otro valor
+```java
+int horasEstudio = 4;
+int horasPractica = 4;
+```
 
-**D7 · Antes del código: plan de datos —** Dato \| Tipo \| Nombre \| ¿Cambia? \| ¿Dónde se usa?
+Pregunta:
 
-**D8 · Implementa el plan y comprueba —** Crea variables, muéstralas, cambia una y vuelve a ejecutar.
+Hay una variable o dos. Qué pasaría si después cambia solo `horasEstudio`.
 
-**D9 · Microdefensa de una variable —** Señala tipo, nombre, valor inicial y una asignación posterior.
+Traza una variable que cambia:
 
-## Consigna que se entrega al alumnado
+```java
+int tareas = 2;
+System.out.println(tareas);
+tareas = 3;
+System.out.println(tareas);
+```
 
-1. Predice antes de ejecutar cuando haya código.
-2. Realiza la micropráctica o modificación prevista.
-3. Prueba el caso normal y, cuando exista una decisión o conversión, también el caso alternativo o erróneo.
-4. Conserva el código o resultado en el repositorio o espacio indicado.
-5. Registra una sola entrada en el diario individual; no crees un informe paralelo.
+Pregunta:
 
-## Qué observar mientras trabajan
+Predice la primera y la segunda salida.
 
-- Si proponen copiar/pegar en vez de guardar.
-- Si dicen que variable y valor son exactamente lo mismo.
-- String vs char; entero vs decimal.
-- Razonamiento sobre naturaleza del dato.
-- Nombres vagos.
-- Repetición del tipo en la asignación.
-- Código sin plan.
-- Variables no usadas y tipos incompatibles.
-- Comprensión real de las partes.
+Presenta cinco tipos de uso inmediato:
 
-## Criterios para considerar cerrada la sesión
+```java
+String nombreUsuario = "Laura";
+int horasEstudio = 4;
+double notaMedia = 7.5;
+boolean objetivoAlcanzado = true;
+char inicial = 'L';
+```
 
-- Aparezca la idea de un único dato reutilizable.
-- Puedan distinguir variable/valor.
-- Clasifiquen ejemplos básicos.
-- Justifiquen al menos 4 casos.
-- Produzcan nombres válidos y semánticos.
-- Puedan señalar declaración/inicialización/asignación.
-- Cada dato tenga tipo/nombre/uso.
-- Haya salida antes/después de una asignación.
-- Quede evidencia individual.
-- La persona puede señalar la evidencia y explicar qué demuestra.
+```text
+Nombre -> String
+Horas de estudio -> int
+Nota media -> double
+Objetivo alcanzado -> boolean
+Inicial -> char
+```
 
-## Seguridad y uso de IA
+### Mapa mínimo de tipos de Java
 
-- Trabajar con datos ficticios.
-- No publicar credenciales, tokens, claves ni información personal.
-- Si la IA interviene de forma sustantiva, registrar propuesta, cambios propios y validación; no aceptar código que no pueda defenderse.
+Java ofrece más tipos de los que necesitamos usar ahora:
 
-## Comprobación final
+```text
+Enteros   -> byte, short, int, long
+Decimales -> float, double
+Carácter  -> char
+Lógico    -> boolean
+```
 
-**¿Qué puedes señalar, explicar, predecir o modificar para demostrar el aprendizaje de esta sesión?**
+En H1 utilizaremos principalmente `int`, `double`, `char` y `boolean`. No es necesario memorizar todavía sus rangos; sí reconocer qué familia representa cada dato y elegir un tipo compatible con las operaciones previstas.
 
-## Anotación docente al terminar
+### Tipos primitivos y tipo de referencia
 
-- alumnado que necesita reentrada;
-- evidencia pendiente;
-- error común;
-- ajuste temporal necesario sin eliminar el núcleo conceptual.
+```text
+int, double, char, boolean -> tipos primitivos
+String                     -> tipo de referencia; String es una clase
+```
+
+En H1 basta con esta distinción inicial. No necesitamos adelantar memoria, identidad de objetos ni constructores para usar correctamente texto, `String` y `Scanner`.
+
+Pregunta de criterio:
+
+Un número de teléfono contiene dígitos. Lo guardarías como número si no vas a hacer cálculos matemáticos con él.
+
+Trabaja renombrado:
+
+```java
+int x = 4;
+// mejor:
+int horasEstudio = 4;
+
+String s = "MiniJarvis";
+// mejor:
+String nombreAsistente = "MiniJarvis";
+
+boolean b = true;
+// mejor:
+boolean objetivoAlcanzado = true;
+
+double n = 7.5;
+// mejor:
+double notaMedia = 7.5;
+```
+
+Dinámica rápida:
+
+Muestro solo el nombre de la variable. Decid qué dato esperáis encontrar. Si nadie puede responder, el nombre debe mejorar.
+
+Por último, separa declarar, inicializar y asignar:
+
+```java
+int horasEstudio;
+```
+
+```java
+int horasEstudio = 4;
+```
+
+```text
+int horasEstudio = 4
+tipo nombre valor inicial
+```
+
+```java
+horasEstudio = 5;
+```
+
+```java
+int horasEstudio;
+horasEstudio = 4;
+System.out.println(horasEstudio);
+horasEstudio = 5;
+System.out.println(horasEstudio);
+```
+
+Aclara:
+
+No se vuelve a escribir el tipo si se modifica la variable existente.
+
+Y corta esta confusión:
+
+```java
+int tareas = 2;
+tareas = 5;
+```
+
+Di:
+
+Esto no significa que 2 sea igual a 5. Significa: guarda ahora 5 en `tareas`.
+
+Error frecuente que debes cortar:
+
+`String` no sirve para todo. Elegimos el tipo según lo que necesitamos representar y hacer con el dato.
+
+Vocabulario imprescindible:
+
+- **Declaración:** introduce el tipo y el nombre, por ejemplo `int horasEstudio;`.
+- **Inicialización:** declara y proporciona el primer valor, por ejemplo `int horasEstudio = 4;`.
+- **Asignación posterior:** cambia el valor sin repetir el tipo, por ejemplo `horasEstudio = 5;`.
+- **lowerCamelCase:** convención para nombres como `nombreUsuario` o `horasEstudio`.
+
+## Actividad de la sesión
+
+Antes del código, haced la tabla de datos. Después implementad al menos tres variables, mostradlas por consola, cambiad una y volved a mostrarla para comprobar que entendéis la asignación.
+
+## Evidencia de la sesión
+
+Hoy sí quiero una evidencia individual: cada persona debe poder señalar una variable propia y explicar tipo, nombre, valor inicial y una asignación posterior.
+
+**Dónde y cómo conservar la evidencia:**
+
+- GitHub: código con variables usadas.
+- Diario individual: fila S210 con una variable explicada y prueba de salida.
+- Moodle: no se entrega todavía.
+
+Qué revisar:
+
+- Que no usen `x`, `dato1` o nombres sin significado.
+- Que no repitan valores fijos por todas partes.
+- Que sepan distinguir variable y valor.
+
+Modelo de uso del plan de datos:
+
+```text
+Dato: nombre ficticio
+Tipo: String
+Nombre: nombreUsuario
+Cambia: sí, lo escribe la persona usuaria
+Uso: personalizar el saludo
+
+Dato: horas de estudio
+Tipo: int
+Nombre: horasEstudio
+Cambia: sí
+Uso: calcular minutos y decidir si alcanza el objetivo
+```
+
+## Comprueba lo aprendido
+
+Cerramos Planificar con un plan de datos. La próxima sesión entraremos más fuerte en Ejecutar: constantes, literales y operaciones.

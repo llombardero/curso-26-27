@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidencia de ejecución H1 — MiniJarvis</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="evidencia-de-ejecución-h1--minijarvis">Evidencia de ejecución H1
+— MiniJarvis</h1>
+<blockquote>
+<p>No entregues este archivo por separado. Usa su contenido para
+completar <code>README.md</code>, que es la fuente canónica de ejecución
+y pruebas.</p>
+</blockquote>
+<h2 id="caso-mínimo">Caso mínimo</h2>
+<ul>
+<li>Comando o procedimiento de ejecución:
+<code>java -cp src Main</code></li>
+<li>Entrada:
+<pre><code>Nombre: Ana
+Número: 5</code></pre></li>
+<li>Salida esperada:
+<pre><code>Hola, Ana. Bienvenida a MiniJarvis.
+El doble de 5 es 10.</code></pre></li>
+<li>Salida obtenida:
+<pre><code>Hola, Ana. Bienvenida a MiniJarvis.
+El doble de 5 es 10.</code></pre></li>
+<li>Fecha y commit probado: 2026-10-15, commit <code>abc123def456</code>
+(tag <code>h1-entrega</code>)</li>
+</ul>
+<h2 id="caso-alternativo">Caso alternativo</h2>
+<ul>
+<li>Entrada o condición:
+<pre><code>Nombre: Carlos
+Número: -3</code></pre></li>
+<li>Predicción antes de ejecutar: El programa debe mostrar "El número no
+es positivo" porque -3 no es mayor que 0, por lo que se ejecuta la rama
+<code>else</code> del <code>if/else</code>.</li>
+<li>Resultado:
+<pre><code>Hola, Carlos. Bienvenido a MiniJarvis.
+El número no es positivo.</code></pre></li>
+<li>Explicación: La comparación <code>numero &gt; 0</code> evalúa a
+<code>false</code> cuando numero = -3. Por tanto, se ejecuta la rama
+<code>else</code> que imprime "El número no es positivo." en lugar de
+calcular y mostrar el doble.</li>
+</ul>
+<hr />
+<p>Una captura es opcional. El texto reproducible y el commit son
+obligatorios; nunca captures datos personales, rutas sensibles o
+credenciales.</p>
+
+  </main>
+</body>
+</html>

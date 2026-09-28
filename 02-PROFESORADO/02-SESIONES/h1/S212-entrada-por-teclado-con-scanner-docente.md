@@ -1,153 +1,231 @@
-# S212 — Guía docente
-
-## Scanner y conversiones
+# S212 - Ejecutar - Scanner y conversiones
 
 | Dato | Valor |
 |---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 3 periodos; checkpoint proyectable de 45 minutos y taller asociado |
-| Fase HEXA | Ejecutar — crear |
-| Agrupamiento | Individual con contraste por parejas o equipo cuando la práctica lo requiera |
-| Resultado observable | Leer entrada, convertir tipos y reconocer errores de conversión. |
-| Evidencia mínima | Quede diagnóstico. |
+| Hito | H1 — Primer asistente ejecutable |
+| Duración prevista | 45 minutos |
+| Fase HEXA del hito | Ejecutar — crear |
 
-## Propósito
+> Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`. Selecciona y desarrolla los conceptos, ejemplos, actividades y evidencias útiles para esta sesión.
 
-Leer entrada, convertir tipos y reconocer errores de conversión.
+## Qué vas a aprender
 
-El concepto se incorpora al Tema 1, pero solo pasa a `Main.java` cuando mejora el producto mínimo. Las demás prácticas se conservan como microejercicios defendibles.
+Al terminar, debes leer entrada, guardarla, convertir texto a número cuando haga falta y reconocer errores de conversión.
 
-## Material imprescindible
+## Ideas y ejemplos
 
-- presentación de S212;
-- IntelliJ y JDK cuando haya práctica de código;
-- proyecto o microarchivo de prueba;
-- diario individual y tablero Scrum del equipo;
-- datos ficticios.
+Úsala al pasar de datos escritos en código a datos introducidos por consola.
 
-## Secuencia de aula
+`Scanner` permite leer lo que una persona escribe. `nextLine()` devuelve siempre un `String`. Si queremos calcular con un número escrito por teclado, necesitamos parsear ese texto.
 
-| Tiempo / diap. | Tipo y actuación | Alumnado | Observa | Puerta de avance | Si hay retraso |
-|---|---|---|---|---|---|
-| 00:00–00:05 / D1 | MICROINVESTIGACIÓN: No expliques Scanner aún. Genera necesidad. | Propone formas de entrada. | Si distinguen entrada/salida. | aparezca “teclado/consola”. | 3 minutos. |
-| 00:05–00:11 / D2 | PÍLDORA DOCENTE 1/4: Explica import, lectura y variable destino. No introduzcas todo Scanner. | Señala qué devuelve y dónde se guarda. | Que sepan que nextLine devuelve String. | puedan verbalizar el flujo. | 5 minutos. |
-| 00:11–00:17 / D3 | ACTIVIDAD: Circula sin añadir teoría. | Programa y prueba. | Salida que no usa la variable leída. | la entrada afecte a la salida. | una ejecución basta. |
-| 00:17–00:20 / D4 | CONFLICTO: Plantea una operación con el texto y pregunta qué falta. | Distingue String/int. | Confusión por el aspecto visual de las cifras. | aparezca necesidad de convertir. | 2 minutos. |
-| 00:20–00:25 / D5 | PÍLDORA DOCENTE 2/4: Explica parseo como conversión desde String compatible. | Predice tipos resultantes. | Guardar el resultado del parseo. | puedan explicar para qué sirve parseInt. | prioriza parseInt y parseDouble. |
-| 00:25–00:29 / D6 | EXPERIMENTO: Ejecuta con dos entradas válidas. | Predice y prueba. | Orden del flujo. | comprendan la cadena completa. | una entrada válida. |
-| 00:29–00:33 / D7 | PÍLDORA DOCENTE 3/4: Presenta la idea pequeño→grande como en Tema 1, sin memorizar toda la jerarquía. | Identifica origen/destino. | Confundir con parseo. | distingan conversión numérica de String→número. | 2 minutos. |
-| 00:33–00:37 / D8 | PÍLDORA DOCENTE 4/4: Explica que no redondea en este ejemplo; pierde parte decimal. | Predice antes de ejecutar. | Interpretarlo como redondeo. | puedan explicar la pérdida. | 3 minutos. |
-| 00:37–00:40 / D9 | ERROR ÚTIL: Haz predecir compilación y ejecución. No introduzcas try-catch. | Observa el error en ejecución. | Diferencia compile-time/runtime. | puedan nombrar cuándo falla. | hazlo solo como demo. |
-| 00:40–00:43 / D10 | ACTIVIDAD: Pide evidencia concreta. | Documenta prueba. | Solo una captura sin contexto. | quede trazabilidad. | una entrada válida + explicación oral de inválida. |
-| 00:43–00:45 / D11 | CIERRE: Haz preguntas rápidas. | Responde sobre su código. | Confusiones para S213. | quede diagnóstico. | dos preguntas. |
+Empieza por el flujo pedir, leer y guardar creando una sola instancia reutilizable de `Scanner`:
 
-## Qué debes explicar
+```java
+import java.util.Scanner;
 
-- **PÍLDORA DOCENTE 1/4:** Explica import, lectura y variable destino. No introduzcas todo Scanner.
-- **PÍLDORA DOCENTE 2/4:** Explica parseo como conversión desde String compatible.
-- **PÍLDORA DOCENTE 3/4:** Presenta la idea pequeño→grande como en Tema 1, sin memorizar toda la jerarquía.
-- **PÍLDORA DOCENTE 4/4:** Explica que no redondea en este ejemplo; pierde parte decimal.
+public class Main {
+    public static void main(String[] argumentos) {
+        Scanner teclado = new Scanner(System.in);
 
-## Ejemplo o demostración preparada
+        System.out.print("Escribe un nombre ficticio: ");
+        String nombreUsuario = teclado.nextLine();
 
-**D1 · Hasta ahora los datos los decide quien programa —** ¿Cómo hacemos para que los escriba la persona que ejecuta MiniJarvis?
+        System.out.println("Hola, " + nombreUsuario);
+    }
+}
+```
 
-**D2 · Scanner: pedir → leer → guardar —** import java.util.Scanner;<br>
-<br>
-Scanner scanner = new Scanner(System.in);<br>
-String userName = scanner.nextLine();<br>
-scanner.close();
+Pregunta:
 
-**D3 · Pide un nombre y úsalo —** Ejecuta dos veces con nombres ficticios distintos.<br>
-<br>
-¿Qué cambia? ¿Qué no?
+Qué parte prepara la lectura, qué variable guarda el `Scanner` y qué devuelve `teclado.nextLine()`.
 
-**D4 · Tengo "5". ¿Tengo el número 5? —** "5" es texto si procede de nextLine().<br>
-5 es un entero.
+Una segunda lectura reutiliza la misma instancia:
 
-**D5 · Parsear texto a un tipo básico —** int hours = Integer.parseInt(text);<br>
-double score = Double.parseDouble(text);<br>
-boolean ok = Boolean.parseBoolean(text);
+```java
+System.out.print("Escribe las horas de estudio: ");
+String texto = teclado.nextLine();
+int horas = Integer.parseInt(texto);
+```
 
-**D6 · Leer → convertir → calcular —** Scanner scanner = new Scanner(System.in);<br>
-String text = scanner.nextLine();<br>
-int hours = Integer.parseInt(text);<br>
-int minutes = hours \* 60;<br>
-System.out.println(minutes);<br>
-scanner.close();
+La forma compacta siguiente puede leer una línea, pero no será el modelo de H1 porque oculta la reutilización del mismo `Scanner`:
 
-**D7 · Conversión implícita —** int whole = 7;<br>
-double wider = whole;<br>
-<br>
-// no hace falta casting
+```java
+String nombreUsuario = new Scanner(System.in).nextLine();
+```
 
-**D8 · Casting: forzar puede perder información —** double price = 12.75;<br>
-int wholePrice = (int) price;<br>
-// wholePrice vale 12
+Contrasta usar y no usar lo leído:
 
-**D9 · ¿Compila? ¿Y al ejecutar? —** String text = "hola";<br>
-int number = Integer.parseInt(text);
+```java
+String nombreUsuario = teclado.nextLine();
+System.out.println("Hola, " + nombreUsuario);
+```
 
-**D10 · Evidencia de conversión —** Guarda:<br>
-• una entrada válida<br>
-• resultado esperado<br>
-• resultado obtenido<br>
-• qué ocurre con una entrada no convertible
+```java
+String nombreUsuario = teclado.nextLine();
+System.out.println("Hola");
+```
 
-**D11 · Microdefensa de tipos —** ¿Qué devuelve nextLine()?<br>
-¿Por qué necesitamos parseInt?<br>
-¿Qué diferencia hay con un casting?
+Pregunta:
 
-## Consigna que se entrega al alumnado
+En cuál de los dos programas la entrada afecta al comportamiento observable.
 
-1. Predice antes de ejecutar cuando haya código.
-2. Realiza la micropráctica o modificación prevista.
-3. Prueba el caso normal y, cuando exista una decisión o conversión, también el caso alternativo o erróneo.
-4. Conserva el código o resultado en el repositorio o espacio indicado.
-5. Registra una sola entrada en el diario individual; no crees un informe paralelo.
+Dibuja el flujo en la pizarra:
 
-## Qué observar mientras trabajan
+```text
+TECLADO -> nextLine() -> String -> variable -> programa -> salida
+```
 
-- Si distinguen entrada/salida.
-- Que sepan que nextLine devuelve String.
-- Salida que no usa la variable leída.
-- Confusión por el aspecto visual de las cifras.
-- Guardar el resultado del parseo.
-- Orden del flujo.
-- Confundir con parseo.
-- Interpretarlo como redondeo.
-- Diferencia compile-time/runtime.
-- Solo una captura sin contexto.
-- Confusiones para S213.
+Después pasa a parsear texto:
 
-## Criterios para considerar cerrada la sesión
+```java
+String texto = "5";
+int horas = Integer.parseInt(texto);
+```
 
-- Aparezca “teclado/consola”.
-- Puedan verbalizar el flujo.
-- La entrada afecte a la salida.
-- Aparezca necesidad de convertir.
-- Puedan explicar para qué sirve parseInt.
-- Comprendan la cadena completa.
-- Distingan conversión numérica de String→número.
-- Puedan explicar la pérdida.
-- Puedan nombrar cuándo falla.
-- Quede trazabilidad.
-- Quede diagnóstico.
-- La persona puede señalar la evidencia y explicar qué demuestra.
+```java
+String texto = teclado.nextLine();
+int horas = Integer.parseInt(texto);
+int minutos = horas * 60;
+System.out.println(minutos);
+```
 
-## Seguridad y uso de IA
+Pregunta:
 
-- Trabajar con datos ficticios.
-- No publicar credenciales, tokens, claves ni información personal.
-- Si la IA interviene de forma sustantiva, registrar propuesta, cambios propios y validación; no aceptar código que no pueda defenderse.
+Para una entrada `2`, qué salida esperas.
 
-## Comprobación final
+Muestra otros parseos sin dedicarles el mismo tiempo:
 
-**¿Qué puedes señalar, explicar, predecir o modificar para demostrar el aprendizaje de esta sesión?**
+```java
+String texto = "7.5";
+double nota = Double.parseDouble(texto);
+```
 
-## Anotación docente al terminar
+```java
+boolean correcto = Boolean.parseBoolean(texto);
+```
 
-- alumnado que necesita reentrada;
-- evidencia pendiente;
-- error común;
-- ajuste temporal necesario sin eliminar el núcleo conceptual.
+Di:
+
+En H1 priorizamos `parseInt` y `parseDouble`. El boolean aparece solo como otro ejemplo de conversión.
+
+Explica conversión implícita:
+
+```java
+int entero = 7;
+double valorAmpliado = entero;
+```
+
+```text
+7 -> 7.0
+```
+
+```java
+int horas = 4;
+double horasDecimales = horas;
+```
+
+Pregunta:
+
+Se ha producido una conversión aunque no veamos casting escrito.
+
+Contrasta con parseo:
+
+```java
+String texto = "4";
+int horas = Integer.parseInt(texto);
+
+int otrasHoras = 4;
+double horasDecimales = otrasHoras;
+```
+
+Pregunta:
+
+En cuál partíamos de texto.
+
+Explica casting y pérdida de información:
+
+```java
+double precio = 12.75;
+int precioEntero = (int) precio;
+```
+
+```text
+precioEntero -> 12
+```
+
+```java
+double nota = 7.99;
+int notaEntera = (int) nota;
+```
+
+```text
+notaEntera -> 7
+```
+
+Caso revelador:
+
+```java
+double valor = 3.999;
+int resultado = (int) valor;
+```
+
+Pregunta:
+
+El resultado será 3 o 4. Por qué.
+
+Termina distinguiendo tres mecanismos:
+
+```text
+Texto a número: Integer.parseInt("5")
+Número compatible a tipo más amplio: double valorDecimal = 5;
+Conversión forzada: int valorEntero = (int) 5.8;
+```
+
+Pregunta al alumnado:
+
+Qué devuelve `nextLine`, qué guarda `nombreUsuario`, qué convierte `parseInt` y cuándo falla `Integer.parseInt("hola")`.
+
+Error frecuente que debes cortar:
+
+Que el texto contenga cifras no lo convierte automáticamente en número.
+
+Si `Integer.parseInt` o `Double.parseDouble` reciben un texto incompatible, el programa compila pero falla durante la ejecución con una **`NumberFormatException`**. En H1 basta con reconocer la causa, registrar la entrada que produjo el error y distinguirla de un error de compilación.
+
+## Actividad de la sesión
+
+Construid una prueba con entrada válida: por ejemplo horas como texto, conversión a `int`, cálculo de minutos y salida. Después probad una entrada no convertible y explicad cuándo falla: al compilar o al ejecutar.
+
+## Evidencia de la sesión
+
+Hoy la evidencia debe incluir una entrada válida, resultado esperado, resultado obtenido y explicación de qué ocurre con una entrada no convertible.
+
+**Dónde y cómo conservar la evidencia:**
+
+- GitHub: código con `Scanner` o ejercicio de conversión.
+- README puede ir recogiendo ejemplo, aunque se pedirá formalmente en S214.
+- Diario individual: fila S212 con prueba válida y error de conversión explicado.
+- Moodle: no se entrega todavía.
+
+Qué no aceptar:
+
+- Captura sin decir qué entrada se usó.
+- Código que lee una variable pero no la usa.
+- Decir `no funciona` sin distinguir compilación y ejecución.
+
+Modelo de uso de evidencia S212:
+
+```text
+Prueba: conversión de horas.
+Entrada válida: 5
+Salida esperada: 300 minutos.
+Salida obtenida: 300 minutos.
+Demuestra: el texto leído se convierte a int y se usa en una operación.
+
+Entrada no convertible: hola
+Resultado: error durante la ejecución al aplicar Integer.parseInt.
+Demuestra: compilar no garantiza que cualquier entrada sea convertible.
+```
+
+## Comprueba lo aprendido
+
+Hoy MiniJarvis ya no solo muestra datos escritos por quien programa. Ahora reacciona a una entrada. Pero si la entrada viene como texto, debemos decidir cuándo convertir y cómo comprobar el resultado.

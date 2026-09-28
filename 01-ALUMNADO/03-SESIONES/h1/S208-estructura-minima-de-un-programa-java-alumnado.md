@@ -1,136 +1,155 @@
-# S208 — La estructura mínima de un programa Java
+# S208 — Estructura mínima de un programa Java
 
-| Dato | Valor |
-|---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 2 periodos; esta ficha organiza el checkpoint de 45 minutos |
-| Fase HEXA | Investigar — aprender lo necesario |
-| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
+## Objetivo
 
-> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
+Reconocer la clase, el método `main`, las instrucciones y los delimitadores básicos de Java; identificar errores sencillos y utilizar nombres y comentarios que mejoren la lectura.
 
-**Objetivo:** Leer, reconstruir y depurar la estructura mínima; reconocer aspectos léxicos y comentarios.
+## 1. Clase, archivo y punto de entrada
 
-**D1** · 00:00–00:05 · INVESTIGAR
-
-## ¿Qué líneas hacen algo visible?
-
-public class Main {<br>
-public static void main(String\[\] args) {<br>
-System.out.println("Hola");<br>
-System.out.println("MiniJarvis arranca");<br>
-}<br>
+```java
+public class Main {
+    public static void main(String[] argumentos) {
+        System.out.println("Hola desde MiniJarvis");
+    }
 }
+```
 
-**Qué haces:** Señala y justifica.
+- `Main.java` es el nombre del archivo.
+- `Main` es la clase pública; debe coincidir con el nombre del archivo.
+- `main` es el método donde comienza la ejecución.
+- `String[] argumentos` permite recibir argumentos de línea de comandos, aunque H1 no los utiliza.
+- `System.out.println(...)` es una instrucción que muestra texto.
 
-**Qué debe quedar:** identifiquen println como instrucción visible.
+`Main` y `main` no son lo mismo: Java distingue mayúsculas y minúsculas.
 
-**D2** · 00:05–00:12 · PÍLDORA DOCENTE 1/4
+## 2. Orden de ejecución
 
-## Clase, archivo y main
+Las instrucciones de `main` se ejecutan de arriba abajo:
 
-**Qué haces:** Localiza cada parte en su proyecto.
+```java
+System.out.println("Primero");
+System.out.println("Después");
+System.out.println("Al final");
+```
 
-**Qué debe quedar:** puedan señalar ambas piezas.
+Predice la salida y cambia el orden de dos instrucciones para comprobar el efecto.
 
-**D3** · 00:12–00:18 · PÍLDORA DOCENTE 2/4
+## 3. Delimitadores que debes revisar
 
-## Java es preciso con la escritura
+- `{ }` delimitan bloques.
+- `( )` delimitan parámetros y expresiones.
+- `" "` delimitan textos.
+- `;` termina la mayoría de instrucciones.
 
-**Qué haces:** Busca los símbolos en el código.
+Compara:
 
-**Qué debe quedar:** puedan anticipar un error sencillo.
+```java
+System.out.println("Correcto");
+```
 
-**D4** · 00:18–00:23 · DIAGNÓSTICO
+```java
+System.out.println("Falta el punto y coma")
+```
 
-## ¿Compilará? Caso 1
+```java
+System.out.println("Falta cerrar el paréntesis";
+```
 
-public class Main {<br>
-public static void main(string\[\] args) {<br>
-System.out.println("Hola");<br>
-}<br>
-}
+```java
+System.out.println("Falta cerrar la comilla);
+```
 
-**Qué haces:** Predice y corrige.
+Los tres últimos fragmentos son incorrectos. Lee el primer error del compilador y señala el delimitador que falta.
 
-**Qué debe quedar:** expliquen por qué falla.
+## 4. Identificadores
 
-**D5** · 00:23–00:27 · DIAGNÓSTICO
+Un identificador es el nombre de una clase, variable o método. Puede contener letras, números, `_` y `$`, pero no puede empezar por un número ni ser una palabra reservada.
 
-## ¿Compilará? Caso 2
+Ejemplos válidos y claros:
 
-public class Main {<br>
-public static void main(String\[\] args) {<br>
-System.out.println("Hola")<br>
-}<br>
-}
+```java
+String nombreUsuario = "Laura";
+int horasEstudio = 4;
+String nombreAsistente = "MiniJarvis";
+```
 
-**Qué haces:** Predice y corrige.
+Ejemplos inválidos:
 
-**Qué debe quedar:** formulen la regla.
+```text
+1nombre         empieza por número
+horas estudio   contiene un espacio
+class           es una palabra reservada
+public          es una palabra reservada
+```
 
-**D6** · 00:27–00:32 · PÍLDORA DOCENTE 3/4
+Ejemplo válido pero poco claro:
 
-## Identificadores y palabras reservadas
+```java
+String x = "Laura";
+```
 
-**Qué haces:** Propone nombres válidos/invalidos.
+`nombreUsuario` comunica mejor la intención que `x`.
 
-**Qué debe quedar:** puedan justificar 3 casos.
+## 5. Comentarios útiles
 
-**D7** · 00:32–00:35 · PÍLDORA DOCENTE 4/4
+Los comentarios no se ejecutan. Deben explicar una intención o decisión que el código no muestra por sí solo.
 
-## Comentarios: explicar intención
+```java
+// Usamos un nombre ficticio para no publicar datos personales.
+String nombreUsuario = "Laura";
+```
 
-// Comentario de una línea<br>
-<br>
-/\* Comentario<br>
-de varias líneas \*/
+Comentario redundante:
 
-**Qué haces:** Escribe un comentario útil.
+```java
+// Muestra Hola.
+System.out.println("Hola");
+```
 
-**Qué debe quedar:** haya un comentario que aporte contexto.
+No comentes cada línea. Prefiere código legible y comentarios breves cuando aporten contexto.
 
-**D8** · 00:35–00:42 · ACTIVIDAD
+## 6. Actividad
 
-## Reconstruye el programa sin copiar
+1. Escribe el programa mínimo correcto.
+2. Predice y comprueba su salida.
+3. Provoca por separado un error de comillas, uno de paréntesis y uno de punto y coma.
+4. Para cada error, registra:
+   - cambio realizado;
+   - mensaje esencial del compilador;
+   - causa;
+   - corrección.
+5. Renombra dos identificadores vagos.
+6. Añade un comentario útil y elimina uno redundante.
 
-1\. Crea la estructura mínima.<br>
-2. Añade 2–3 mensajes.<br>
-3. Añade un comentario útil.<br>
-4. Ejecuta.<br>
-5. Corrige el primer error que aparezca.
+## Evidencia verificable
 
-**Qué haces:** Escribe y depura.
+Conserva el código correcto y una tabla breve:
 
-**Qué debe quedar:** cada persona logre ejecución.
+| Error provocado | Mensaje esencial | Causa | Corrección |
+|---|---|---|---|
+| Falta `;` | … | La instrucción no termina | Añadir `;` |
 
-**D9** · 00:42–00:45 · CIERRE
+La evidencia debe permitir localizar el código y comprobar que el programa vuelve a ejecutarse después de la corrección.
 
-## Microdefensa de sintaxis
+## Errores frecuentes
 
-Señala:<br>
-• dónde empieza la ejecución<br>
-• una regla que rompería la compilación<br>
-• un comentario útil
+- Confundir `Main` con `main`.
+- Escribir `string` en lugar de `String`.
+- Corregir una línea distinta de la que señala el primer error.
+- Usar una palabra reservada como nombre.
+- Añadir comentarios que solo repiten la instrucción.
 
-**Qué haces:** Defiende sobre su código.
+## Autoevaluación
 
-**Qué debe quedar:** quede diagnosticada la comprensión.
+Comprueba que puedes:
 
-**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
-
-## Evidencia única antes de salir
-
-- conserva el código o la prueba en el lugar indicado por la sesión;
-- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
-- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
+- localizar clase, `main` e instrucciones;
+- explicar por qué `Main.java` y `Main` deben coincidir;
+- predecir el orden de salida;
+- diagnosticar errores de delimitadores;
+- distinguir identificadores válidos, inválidos y poco claros;
+- justificar un comentario útil.
 
 ## Seguridad y uso de IA
 
-- Usa datos ficticios y no publiques credenciales ni información personal.
-- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
-
-## Cierre individual
-
-**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**
+Usa datos ficticios en ejemplos y capturas. Si una IA propone una corrección, identifica primero el error por tu cuenta y verifica la solución compilando y ejecutando.

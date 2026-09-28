@@ -1,140 +1,170 @@
-# S211 — Constantes, literales y operaciones
+# S211 — Constantes, literales y expresiones
 
-| Dato | Valor |
+## Objetivo
+
+Distinguir variables, constantes y literales; construir expresiones; predecir el tipo y el valor de sus resultados; y comprobar operaciones, precedencia y actualizaciones.
+
+## 1. Constantes con `final`
+
+Una constante representa un dato que no debe cambiar durante la ejecución.
+
+```java
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+final int ANIO_INICIO = 2026;
+```
+
+Por convención, sus nombres se escriben en mayúsculas con guiones bajos.
+
+Esto produce un error de compilación:
+
+```java
+final int MAX_INTENTOS = 3;
+MAX_INTENTOS = 4;
+```
+
+No todo valor repetido debe convertirse en constante. Debe tener un significado estable durante la ejecución.
+
+## 2. Literales
+
+Un literal es un valor escrito directamente en el código:
+
+```java
+int horas = 5;               // literal entero
+long poblacion = 8000000000L; // literal long
+float porcentaje = 82.5F;    // literal float
+double nota = 7.5;           // literal double
+char inicial = 'L';          // literal char
+String mensaje = "Hola";     // literal String
+boolean preparado = true;    // literal boolean
+```
+
+`'L'` es un carácter y usa comillas simples. `"L"` es un texto y usa comillas dobles.
+
+## 3. Una expresión produce un valor y un tipo
+
+Una expresión combina literales, variables y operadores:
+
+```java
+int minutos = 3 * 60;
+boolean suficiente = minutos >= 120;
+String resumen = "Minutos: " + minutos;
+```
+
+Resultados:
+
+- `3 * 60` produce el valor `180` de tipo `int`;
+- `minutos >= 120` produce `true` o `false` de tipo `boolean`;
+- `"Minutos: " + minutos` produce un `String`.
+
+Una expresión calculada pero no guardada, mostrada ni utilizada no produce un efecto observable.
+
+## 4. Operadores aritméticos
+
+| Operador | Operación |
 |---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 2 periodos; esta ficha organiza el checkpoint de 45 minutos |
-| Fase HEXA | Ejecutar — crear |
-| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
+| `+` | suma o concatenación |
+| `-` | resta |
+| `*` | multiplicación |
+| `/` | división |
+| `%` | resto |
 
-> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
+División entera y real:
 
-**Objetivo:** Aplicar constantes, literales y operaciones aritméticas con predicción y prueba.
+```java
+int cocienteEntero = 5 / 2;       // 2
+double cocienteReal = 5 / 2.0;    // 2.5
+```
 
-**D1** · 00:00–00:04 · EJECUTAR
+Si ambos operandos son enteros, el resultado también es entero y se descarta la parte decimal.
 
-## ¿Qué datos deberían cambiar?
+## 5. Precedencia y paréntesis
 
-Nombre del asistente · curso · horas de estudio · contador de tareas
+```java
+int resultadoA = 2 + 3 * 4;       // 14
+int resultadoB = (2 + 3) * 4;     // 20
+```
 
-**Qué haces:** Decide y justifica.
+La multiplicación se realiza antes que la suma. Los paréntesis cambian el orden y hacen explícita la intención.
 
-**Qué debe quedar:** aparezca necesidad de final.
+Predice también:
 
-**D2** · 00:04–00:09 · PÍLDORA DOCENTE 1/5
+```java
+int resultadoC = 8 * (4 + 2) - 3;
+```
 
-## Constantes con final
+## 6. El resto `%`
 
-final String ASSISTANT_NAME = "MiniJarvis";<br>
-final int START_YEAR = 2026;
+```java
+int caramelos = 10;
+int personas = 4;
+int restantes = caramelos % personas; // 2
+```
 
-**Qué haces:** Convierte un dato estable en constante.
+`%` no calcula porcentajes: devuelve el resto de la división entera.
 
-**Qué debe quedar:** distingan variable/constante.
+Otro uso:
 
-**D3** · 00:09–00:14 · PÍLDORA DOCENTE 2/5
+```java
+int numero = 8;
+int resto = numero % 2;
+```
 
-## Literal = valor escrito directamente
+Si `resto` vale `0`, el número es par.
 
-**Qué haces:** Identifica literales en su código.
+## 7. Actualizar una variable
 
-**Qué debe quedar:** reconozcan al menos cuatro tipos.
+```java
+int tareas = 3;
+tareas += 2; // 5
+tareas -= 1; // 4
+tareas++;    // 5
+tareas--;    // 4
+```
 
-**D4** · 00:14–00:21 · PÍLDORA DOCENTE 3/5
+Traza cada línea de arriba abajo. Los operadores compuestos modifican el valor existente.
 
-## Operadores aritméticos
+## 8. Actividad
 
-\+ suma<br>
-- resta<br>
-\* multiplicación<br>
-/ división o cociente<br>
-% resto
+Crea una micropráctica que incluya:
 
-**Qué haces:** Predice operaciones sencillas.
+- una constante;
+- una variable;
+- una expresión aritmética;
+- una actualización;
+- una salida que permita comprobar el resultado.
 
-**Qué debe quedar:** puedan construir una expresión básica.
+Antes de ejecutar, anota el valor y el tipo esperados de cada expresión. Prueba además `5 / 2`, `5 / 2.0`, `10 % 4`, `2 + 3 * 4` y `(2 + 3) * 4`.
 
-**D5** · 00:21–00:26 · EXPERIMENTO
+## Evidencia verificable
 
-## ¿Qué devuelve 5 / 2?
+Registra para cada prueba:
 
-**Qué haces:** Predice y verifica.
+| Expresión | Valor esperado | Tipo esperado | Resultado observado |
+|---|---:|---|---:|
+| `5 / 2` | 2 | `int` | … |
 
-**Qué debe quedar:** entiendan el papel de los tipos.
+Conserva el código y la ejecución en el repositorio o en el lugar indicado para las microprácticas.
 
-**D6** · 00:26–00:30 · PÍLDORA DOCENTE 4/5
+## Errores frecuentes
 
-## El resto %
+- Intentar reasignar una constante.
+- Confundir `%` con porcentaje.
+- Esperar `2.5` en una división `int / int`.
+- Confundir `'L'` con `"L"`.
+- Calcular un resultado sin usarlo.
+- Ignorar la precedencia o añadir paréntesis sin justificar su efecto.
 
-10 caramelos / 4 personas<br>
-<br>
-10 / 4 → 2 para cada una<br>
-10 % 4 → 2 sobran
+## Autoevaluación
 
-**Qué haces:** Propone un uso.
+Comprueba que puedes:
 
-**Qué debe quedar:** puedan explicar qué sobra.
-
-**D7** · 00:30–00:34 · EXPERIMENTO
-
-## Precedencia y paréntesis
-
-int result = 8 \* (4 + 2) - 3;<br>
-<br>
-// Predice antes de ejecutar
-
-**Qué haces:** Calcula y verifica.
-
-**Qué debe quedar:** justifiquen el resultado.
-
-**D8** · 00:34–00:37 · PÍLDORA DOCENTE 5/5
-
-## Actualizar sin reescribir todo
-
-tasks += 2;<br>
-tasks -= 1;<br>
-tasks++;<br>
-tasks--;
-
-**Qué haces:** Predice nuevos valores.
-
-**Qué debe quedar:** entiendan actualización.
-
-**D9** · 00:37–00:42 · ACTIVIDAD
-
-## Micropráctica: calcula y demuestra
-
-Usa una constante, una variable, una operación, una actualización y una salida que permita comprobar el resultado.
-
-**Qué haces:** Programa, predice, ejecuta.
-
-**Qué debe quedar:** haya resultado comprobado.
-
-**D10** · 00:42–00:45 · CIERRE
-
-## Dos predicciones antes de salir
-
-5 / 2 → ?<br>
-5 / 2.0 → ?<br>
-10 % 4 → ?
-
-**Qué haces:** Responde sin ejecutar primero.
-
-**Qué debe quedar:** quede diagnóstico.
-
-**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
-
-## Evidencia única antes de salir
-
-- conserva el código o la prueba en el lugar indicado por la sesión;
-- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
-- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
+- distinguir constante, variable y literal;
+- indicar el valor y el tipo de una expresión;
+- explicar la división entera;
+- predecir una expresión con precedencia;
+- explicar el resto;
+- trazar operadores compuestos e incrementos.
 
 ## Seguridad y uso de IA
 
-- Usa datos ficticios y no publiques credenciales ni información personal.
-- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
-
-## Cierre individual
-
-**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**
+No uses datos personales reales. Si una IA calcula una expresión, realiza primero tu propia predicción y verifica el resultado ejecutando el código.

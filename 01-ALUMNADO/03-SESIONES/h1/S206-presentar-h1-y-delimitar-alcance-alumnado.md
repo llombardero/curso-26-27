@@ -1,97 +1,123 @@
-# S206 — H1: qué vamos a construir y qué queda fuera
+# S206 — Presentar H1 y delimitar su alcance
 
-| Dato | Valor |
-|---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 2 periodos; esta ficha organiza el checkpoint de 45 minutos |
-| Fase HEXA | Activar — entender el reto |
-| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
+## Objetivo
 
-> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
+Comprender qué vas a construir en H1, distinguir lo imprescindible de lo opcional y justificar qué funciones quedan para hitos posteriores.
 
-**Objetivo:** Entender el reto, delimitar H1 y convertirlo en requisitos observables.
+## 1. El reto H1
 
-**D1** · 00:00–00:04 · ACTIVAR
+H1 consiste en crear una primera versión pequeña y ejecutable de MiniJarvis en Java. No será todavía un asistente completo: será un programa de consola que permita demostrar los fundamentos del Tema 1.
 
-## ¿Cuál es el MiniJarvis más pequeño que ya podemos demostrar?
+El producto mínimo debe:
 
-Un programa Java de consola pequeño, ejecutable y defendible.<br>
-<br>
-Todavía NO buscamos una IA completa.
+- arrancar desde `main`;
+- mostrar una presentación clara;
+- pedir al menos un dato ficticio mediante `Scanner`;
+- guardar datos en variables con tipos adecuados;
+- utilizar una constante con `final`;
+- realizar una operación sencilla;
+- mostrar una respuesta que combine texto y datos;
+- compilar y ejecutarse de forma repetible.
 
-**Qué haces:** Formula hipótesis y dudas sobre el producto.
+El menú, los bucles, la memoria, los ficheros, las clases propias complejas y la conexión con una IA real llegarán en hitos posteriores.
 
-**Qué debe quedar:** puedan describir H1 con una frase sencilla.
+## 2. Tres criterios para valorar un programa
 
-**D2** · 00:04–00:09 · ACTIVAR
+### Correcto
 
-## Mira primero el resultado
+Hace lo que se ha pedido y produce el resultado esperado. Un programa que compila, pero muestra una respuesta equivocada, no es correcto.
 
-Una salida posible. No es la única solución.<br>
-Hola, soy MiniJarvis.<br>
-¿Cómo te llamas? Laura<br>
-Encantado, Laura.<br>
-Estoy aprendiendo la base de Java.
+### Eficiente
 
-**Qué haces:** Identifica salida, entrada y datos que cambian.
+Resuelve el problema sin pasos o repeticiones innecesarias. En H1 no buscamos optimizaciones avanzadas: basta con evitar código duplicado y cálculos que no se usan.
 
-**Qué debe quedar:** aparezca la idea de datos fijos frente a cambiantes.
+### Mantenible
 
-**D3** · 00:09–00:15 · PÍLDORA DOCENTE 1/1
+Se puede leer y modificar con facilidad. Ayudan los nombres claros, la indentación coherente, las constantes para datos estables y los comentarios que explican decisiones no evidentes.
 
-## ¿Qué hace bueno a un primer programa?
+Ejemplo:
 
-**Qué haces:** Propone un ejemplo observable de cada criterio.
+```java
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+String nombreUsuario = "Laura";
+System.out.println("Hola, " + nombreUsuario + ". Soy " + NOMBRE_ASISTENTE + ".");
+```
 
-**Qué debe quedar:** puedan aplicar los tres criterios a un programa pequeño.
+Este fragmento usa nombres que explican la intención y evita repetir el nombre del asistente como un literal disperso.
 
-**D4** · 00:15–00:25 · ACTIVIDAD
+## 3. Clasifica el alcance
 
-## Tres cajas para ordenar ideas
+Coloca cada propuesta en una de estas categorías:
 
-**Qué haces:** Clasifica ideas y explica por qué.
+| Entra en H1 | Puede ser micropráctica | Queda para después |
+|---|---|---|
+| saludo inicial | conversión de texto a número | menú repetitivo |
+| nombre ficticio por teclado | comparación y `if/else` básico | memoria entre ejecuciones |
+| cálculo sencillo | prueba de entrada no convertible | lectura de ficheros |
+| salida clara | casting como ampliación | conexión con una API o IA real |
 
-**Qué debe quedar:** cada equipo tenga claro qué entra y qué no.
+Clasifica también estas ideas y justifica cada decisión:
 
-**D5** · 00:25–00:38 · ACTIVIDAD
+- calcular minutos a partir de horas;
+- recordar conversaciones anteriores;
+- mostrar si se alcanza un objetivo;
+- guardar información en un fichero;
+- ofrecer diez comandos distintos.
 
-## Convertid el reto en requisitos observables
+## 4. Define vuestro incremento
 
-Ejemplos de verbos útiles:<br>
-• muestra<br>
-• pide<br>
-• guarda<br>
-• calcula<br>
-• ejecuta<br>
-• explica<br>
-<br>
-Escribid 4–6 requisitos y 2–3 límites.
+Redactad una decisión de alcance con este formato:
 
-**Qué haces:** Redacta requisitos y restricciones del hito.
+```text
+Nuestro H1 hará:
+- ...
+- ...
 
-**Qué debe quedar:** cada requisito pueda comprobarse con una ejecución o explicación.
+No hará todavía:
+- ...
+- ...
 
-**D6** · 00:38–00:45 · CIERRE
+Lo dejamos fuera porque:
+- ...
+```
 
-## ¿Cómo demostrarás que H1 funciona?
+Ejemplo:
 
-**Qué haces:** Formula prueba y defensa breve.
+```text
+Nuestro H1 saludará, pedirá un nombre ficticio y unas horas de estudio,
+calculará los minutos y mostrará si se alcanza un objetivo.
+No tendrá menú ni memoria porque esas funciones necesitan contenidos de H2
+y de hitos posteriores.
+```
 
-**Qué debe quedar:** quede una evidencia y siguiente paso registrados.
+## 5. Evidencia verificable
 
-**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
+Conserva en el Scrum del equipo:
 
-## Evidencia única antes de salir
+- la lista de funciones que entran;
+- la lista de funciones que quedan fuera;
+- una justificación concreta;
+- el enlace a la tarea o decisión correspondiente.
 
-- conserva el código o la prueba en el lugar indicado por la sesión;
-- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
-- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
+No hace falta crear un documento paralelo. En tu diario individual registra solo tu aportación, un aprendizaje o un bloqueo significativo.
+
+## Errores frecuentes
+
+- Confundir «compila» con «cumple el reto».
+- Prometer memoria o inteligencia artificial que H1 no implementa.
+- Añadir demasiadas funciones antes de tener un programa mínimo ejecutable.
+- Escribir «lo dejamos para después» sin explicar por qué.
+
+## Autoevaluación
+
+Antes de cerrar la sesión, comprueba que puedes:
+
+- explicar H1 en una frase;
+- enumerar al menos cuatro elementos que sí entran;
+- identificar tres funciones que no pertenecen todavía a H1;
+- justificar una exclusión por los contenidos necesarios;
+- distinguir un programa correcto, eficiente y mantenible.
 
 ## Seguridad y uso de IA
 
-- Usa datos ficticios y no publiques credenciales ni información personal.
-- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
-
-## Cierre individual
-
-**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**
+Usa siempre datos ficticios. No publiques nombres reales, contraseñas, claves ni tokens. Si empleas IA de forma sustantiva, registra para qué la usaste, qué propuesta recibiste, qué cambiaste y cómo comprobaste el resultado.

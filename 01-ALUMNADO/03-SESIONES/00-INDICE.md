@@ -19,7 +19,7 @@
 | 210 | Variables y tipos | [Abrir](h1/S210-variables-alumnado) |
 | 211 | Constantes, literales y operaciones | [Abrir](h1/S211-constantes-alumnado) |
 | 212 | Scanner y conversiones | [Abrir](h1/S212-entrada-por-teclado-con-scanner-alumnado) |
-| 213 | Comparaciones, lógica y decisiones | [Abrir](h1/S213-limpieza-nombres-claros-y-simplicidad-alumnado) |
+| 213 | Comparaciones, lógica y decisiones | [Abrir](h1/S213-comparaciones-logica-y-decisiones-alumnado) |
 | 214 | Documentar, probar y comunicar H1 | [Abrir](h1/S214-readme-y-evidencia-de-ejecucion-alumnado) |
 | 215 | Defender y cerrar el Tema 1 | [Abrir](h1/S215-defensa-y-cierre-h1-alumnado) |
 | 216 | Presentar h2 desde h1 | [Abrir](h2/S216-presentar-h2-desde-h1-alumnado) |

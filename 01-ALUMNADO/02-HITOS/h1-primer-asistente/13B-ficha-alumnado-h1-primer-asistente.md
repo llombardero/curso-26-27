@@ -10,7 +10,7 @@ El producto principal será pequeño. Algunas ideas —conversiones, comparacion
 
 `Main.java` debe:
 
-1. iniciar en `public static void main(String[] args)`;
+1. iniciar en `public static void main(String[] argumentos)`;
 2. mostrar una presentación clara de MiniJarvis;
 3. pedir al menos un dato mediante `Scanner`;
 4. guardar datos en variables con tipos adecuados;
@@ -27,14 +27,14 @@ H1 no necesita menú, bucle de interacción, `switch`, colecciones, persistencia
 |---|---|---|
 | Entorno Java | distinguir código fuente, JDK, compilación, JVM y ejecución | proyecto ejecutable y explicación |
 | Estructura | localizar clase, método `main`, instrucciones, comentarios y errores básicos | `Main.java` y micropráctica |
-| Datos | declarar, inicializar, asignar y actualizar variables de tipos básicos | producto o micropráctica |
+| Datos | declarar, inicializar, asignar y actualizar variables; reconocer los ocho primitivos y distinguirlos de `String` | producto o micropráctica |
 | Constantes y literales | usar `final` y reconocer literales | producto o micropráctica |
-| Operaciones | predecir y comprobar operaciones y precedencia elemental | micropráctica |
-| Entrada y conversión | leer texto, convertirlo y explicar un error de conversión | micropráctica |
-| Comparaciones y lógica | obtener y combinar valores `boolean` | micropráctica |
-| Decisión básica | leer y probar un `if/else` con sus dos caminos | micropráctica |
+| Expresiones y operaciones | predecir valor y tipo del resultado; comprobar división, resto, precedencia y paréntesis | micropráctica |
+| Entrada y conversión | leer texto, parsearlo y explicar un error; reconocer conversión implícita y casting | producto o micropráctica |
+| Comparaciones y lógica | obtener valores `boolean`; leer `&&`, `||` y `!` | micropráctica |
+| Decisión básica | probar un `if/else` con sus dos caminos; reconocer anidamiento y ternario sencillos | micropráctica |
 
-En H2 aplicarás las decisiones a un menú, comandos, repetición, validación y depuración. En H1 solo necesitas comprender y probar la decisión básica.
+En H2 aplicarás las decisiones a un menú, comandos, repetición, validación y depuración. En H1, `if/else` y sus dos ramas forman el núcleo; conversión implícita, casting, combinaciones lógicas, anidamiento y ternario se trabajan como reconocimiento o ampliación cuando no formen parte del producto principal.
 
 ## 4. Recorrido de 24 periodos
 

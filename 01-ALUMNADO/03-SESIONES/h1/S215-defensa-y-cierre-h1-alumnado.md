@@ -1,95 +1,182 @@
-# S215 — Defensa y cierre del hito
+# S215 — Defensa y cierre de H1
 
-| Dato | Valor |
-|---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 2 periodos; esta ficha organiza el checkpoint de 45 minutos |
-| Fase HEXA | Comunicar — evaluar y reflexionar |
-| Registro de proceso | Una entrada en el diario individual al cerrar el checkpoint; no se crea un documento adicional |
+## Objetivo
 
-> El producto principal H1 sigue siendo pequeño. Las microprácticas demuestran el Tema 1 y pueden permanecer separadas de `Main.java`.
+Entregar H1 mediante enlaces verificables, defender el trabajo señalando y ejecutando código real, realizar una modificación pequeña y cerrar el hito con una reflexión y un siguiente paso.
 
-**Objetivo:** Demostrar comprensión individual, modificar algo pequeño y cerrar el ciclo HEXA con reflexión y mejora.
+## 1. Qué significa defender H1
 
-**D1** · 00:00–00:05 · COMUNICAR
+En la defensa debes poder:
 
-## La defensa no es recitar
+1. **señalar** dónde está el código;
+2. **explicar** qué hace y por qué;
+3. **ejecutar** el programa con datos ficticios;
+4. **predecir** una salida antes de verla;
+5. **modificar** una parte pequeña;
+6. **comprobar** que el cambio produce el resultado esperado.
 
-Vas a señalar, explicar, ejecutar y modificar una parte pequeña de tu propio H1.
+Memorizar definiciones no sustituye a localizar y demostrar el comportamiento en tu propio proyecto.
 
-**Qué haces:** Prepara proyecto y evidencias.
+## 2. Banco de preguntas
 
-**Qué debe quedar:** sepan qué se les pedirá.
+Prepárate para responder con el código abierto:
 
-**D2** · 00:05–00:10 · MODELO DOCENTE
+- ¿Dónde comienza la ejecución?
+- ¿Qué diferencia hay entre variable, constante y literal?
+- ¿Por qué elegiste cada tipo?
+- ¿Qué expresión realiza el cálculo principal?
+- ¿Qué devuelve `nextLine()`?
+- ¿Por qué necesitas `parseInt` o `parseDouble`?
+- ¿Qué ocurre con una entrada no convertible?
+- ¿Qué condición controla el `if/else`?
+- ¿Qué entradas prueban sus dos ramas?
+- ¿Qué parte pertenece al producto y cuál es una micropráctica?
+- ¿Qué limitación conocida conserva H1?
+- ¿Cómo validaste cualquier ayuda recibida de una IA?
 
-## Así es una respuesta defendible
+## 3. Ejecución preparada
 
-**Qué haces:** Observa criterios.
+Antes de defender:
 
-**Qué debe quedar:** entiendan el estándar.
+1. abre el repositorio y `Main.java`;
+2. comprueba el JDK;
+3. ejecuta una entrada válida;
+4. ejecuta los dos casos del `if/else`;
+5. localiza la evidencia de entrada no convertible;
+6. deja preparados README, commits y enlaces.
 
-**D3** · 00:10–00:30 · DEFENSAS
+No dependas de una captura si puedes ejecutar el programa en directo.
 
-## Ronda de defensa + ensayo por parejas
+## 4. Modificación pequeña
 
-Mientras una persona defiende, el resto:<br>
-• ensaya preguntas<br>
-• revisa el diario y la selección de evidencias del Site<br>
-• comprueba enlaces<br>
-• prepara una modificación pequeña
+Practica cambios como:
 
-**Qué haces:** Defiende o ensaya.
+- modificar un mensaje;
+- cambiar una constante;
+- añadir una variable y mostrarla;
+- cambiar un valor de prueba;
+- ajustar una condición;
+- añadir una salida que muestre un resultado.
 
-**Qué debe quedar:** haya evidencia individual suficiente o necesidad concreta de recuperación.
+Antes de ejecutar, predice el efecto. Después comprueba el resultado y explica si coincide.
 
-**D4** · 00:30–00:36 · MEJORA
+## 5. Entrega oficial en Moodle
 
-## Si aparece una laguna, se recupera la evidencia concreta
+Incluye enlaces profundos a:
 
-No hace falta repetir todo H1.<br>
-Investiga → corrige → prueba → vuelve a explicar.
+1. repositorio o carpeta de código;
+2. README con ejecución y pruebas;
+3. diario individual;
+4. Scrum de equipo;
+5. página H1 del Site personal;
+6. página H1 del Site de equipo;
+7. evidencia concreta adicional, solo si es necesaria.
 
-**Qué haces:** Mejora y vuelve a defender.
+Modelo:
 
-**Qué debe quedar:** la laguna quede identificada o recuperada.
+```text
+Equipo: Ada
+Integrantes: ...
 
-**D5** · 00:36–00:40 · CIERRE CONCEPTUAL
+Repositorio: https://...
+README y pruebas: https://...
+Scrum H1: https://...
+Diario individual: https://...
+Site personal H1: https://...
+Site de equipo H1: https://...
 
-## Reconstruye el hilo de Tema 1
+Aportación individual verificable:
+Implementé y probé la lectura de horas mediante Scanner; se puede comprobar
+en el commit ... y en la prueba ...
 
-dato → variable → operación/comparación → boolean → decisión → salida
+Permisos comprobados en ventana privada: sí.
+```
 
-**Qué haces:** Explica relaciones.
+Entrega inaceptable:
 
-**Qué debe quedar:** puedan narrar el flujo.
+```text
+Está todo en Drive.
+```
 
-**D6** · 00:40–00:45 · RETROSPECTIVA
+No permite localizar recursos, comprobar permisos ni identificar aportaciones.
 
-## Cierra HEXA: comunica y decide la siguiente mejora
+## 6. Lista final de comprobación
 
-1 cosa que ya haces solo<br>
-1 cosa que aún necesita apoyo<br>
-1 hábito de trabajo que mantendrás<br>
-1 siguiente mejora para H2
+### Producto
 
-**Qué haces:** Reflexiona y registra.
+- [ ] Compila y ejecuta.
+- [ ] Usa datos ficticios.
+- [ ] El alcance coincide con H1.
+- [ ] Las limitaciones están documentadas.
 
-**Qué debe quedar:** quede siguiente paso claro.
+### Pruebas
 
-**Cierre:** registra evidencia y una breve explicación de lo aprendido. Usa datos ficticios y no publiques credenciales ni información personal.
+- [ ] Hay entrada y salida reproducibles.
+- [ ] Se prueban las dos ramas de `if/else`.
+- [ ] La entrada no convertible está explicada.
+- [ ] Cada prueba indica qué demuestra.
 
-## Evidencia única antes de salir
+### Evidencias
 
-- conserva el código o la prueba en el lugar indicado por la sesión;
-- añade una sola entrada al diario individual con prueba, bloqueo y siguiente paso;
-- no copies la misma reflexión en otro documento; el Site personal seleccionará evidencias al cerrar H1.
+- [ ] El README está en la raíz.
+- [ ] Los enlaces son profundos.
+- [ ] Los permisos se han comprobado con otra sesión.
+- [ ] Diario, Scrum y Sites están actualizados sin duplicidad.
 
-## Seguridad y uso de IA
+### Defensa
 
-- Usa datos ficticios y no publiques credenciales ni información personal.
-- Si utilizas IA de forma sustantiva, registra propósito, propuesta, cambios propios y validación en el registro de IA del hito.
+- [ ] Puedo señalar, explicar, ejecutar, modificar y comprobar.
+- [ ] Puedo justificar mis tipos, operaciones y condición.
+- [ ] Puedo explicar y validar cualquier uso de IA.
 
-## Cierre individual
+## 7. Recuperación si falta algo
 
-**¿Qué puedes señalar, explicar y probar al terminar este checkpoint?**
+Si detectas una carencia:
+
+1. identifica el criterio concreto;
+2. realiza el cambio mínimo;
+3. ejecuta una prueba;
+4. actualiza la evidencia o el enlace;
+5. vuelve a comprobar permisos;
+6. registra el cambio en diario o Scrum solo si aporta información relevante.
+
+Evita crear documentos vacíos o evidencias duplicadas «por si acaso».
+
+## 8. Reflexión final
+
+Completa:
+
+```text
+Mi aportación principal fue...
+La evidencia que mejor la demuestra es...
+Ahora sé explicar...
+El bloqueo más importante fue...
+Lo resolví o lo abordaría...
+En H2 necesito mejorar...
+```
+
+La reflexión debe citar una evidencia concreta, no limitarse a «he aprendido Java».
+
+## Errores frecuentes
+
+- Explicar de memoria sin señalar el código.
+- Mostrar una sola rama del programa.
+- Realizar un cambio sin predecir ni comprobar su efecto.
+- Entregar enlaces generales o sin permisos.
+- Atribuirse una aportación que no puede verificarse.
+- Copiar la misma reflexión en diario, Site y Moodle.
+
+## Autoevaluación
+
+H1 está cerrado cuando puedes:
+
+- ejecutar el producto de forma repetible;
+- explicar variables, constantes, operaciones, entrada, conversión y decisiones;
+- demostrar pruebas y evidencias;
+- modificar una parte pequeña;
+- entregar enlaces accesibles;
+- justificar tu autoría y el uso de IA.
+
+## Seguridad
+
+Antes de entregar, busca y elimina contraseñas, tokens, claves, rutas personales y datos reales. Revisa también el historial y las capturas. Si detectas una credencial publicada, comunícalo y rótala; borrarla solo del último archivo no basta.

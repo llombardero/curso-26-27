@@ -11,121 +11,210 @@
     <nav class="topbar">Inicio alumnado</nav>
 <h1 id="s210--variables-guardar-datos-con-nombre-y-tipo">S210 —
 Variables: guardar datos con nombre y tipo</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Comprender la relación entre variable, tipo, nombre y valor;
+distinguir tipos primitivos de <code>String</code>; y planificar datos
+antes de incorporarlos al programa.</p>
+<h2 id="1-variable-valor-y-tipo">1. Variable, valor y tipo</h2>
+<p>Una variable es una zona de memoria identificada por un nombre. El
+tipo determina qué valores puede guardar y qué operaciones admite.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horasEstudio <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>horasEstudio<span class="op">);</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>horasEstudio <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>horasEstudio<span class="op">);</span></span></code></pre></div>
+<p>Traza:</p>
 <table>
 <thead>
 <tr class="header">
-<th>Dato</th>
-<th>Valor</th>
+<th>Momento</th>
+<th style="text-align: right;">Valor de <code>horasEstudio</code></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Hito</td>
-<td>H1 — Primer MiniJarvis</td>
+<td>Después de inicializar</td>
+<td style="text-align: right;">4</td>
 </tr>
 <tr class="even">
-<td>Duración</td>
-<td>2 periodos; esta ficha organiza el checkpoint de 45 minutos</td>
-</tr>
-<tr class="odd">
-<td>Fase HEXA</td>
-<td>Planificar — organizar el trabajo</td>
-</tr>
-<tr class="even">
-<td>Registro de proceso</td>
-<td>Una entrada en el diario individual al cerrar el checkpoint; no se
-crea un documento adicional</td>
+<td>Después de asignar de nuevo</td>
+<td style="text-align: right;">5</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>El producto principal H1 sigue siendo pequeño. Las microprácticas
-demuestran el Tema 1 y pueden permanecer separadas de
-<code>Main.java</code>.</p>
-</blockquote>
-<p><strong>Objetivo:</strong> Planificar datos y comprender variable,
-tipo, nombre, declaración, inicialización y asignación.</p>
-<p><strong>D1</strong> · 00:00–00:05 · PLANIFICAR</p>
-<h2 id="un-dato-repetido-un-problema">Un dato repetido, un problema</h2>
-<p>Si el curso aparece en tres mensajes y cambia el año… ¿cuántos sitios
-tendrías que modificar?</p>
-<p><strong>Qué haces:</strong> Detecta repetición.</p>
-<p><strong>Qué debe quedar:</strong> aparezca la idea de un único dato
-reutilizable.</p>
-<p><strong>D2</strong> · 00:05–00:11 · PÍLDORA DOCENTE 1/4</p>
-<h2 id="variable--dato--nombre--memoria">Variable = dato + nombre +
-memoria</h2>
-<p><strong>Qué haces:</strong> Explica una variable con sus
-palabras.</p>
-<p><strong>Qué debe quedar:</strong> puedan distinguir
-variable/valor.</p>
-<p><strong>D3</strong> · 00:11–00:18 · PÍLDORA DOCENTE 2/4</p>
-<h2 id="mapa-de-tipos-que-aparecen-en-tema-1">Mapa de tipos que aparecen
-en Tema 1</h2>
-<p><strong>Qué haces:</strong> Asocia datos a tipos.</p>
-<p><strong>Qué debe quedar:</strong> clasifiquen ejemplos básicos.</p>
-<p><strong>D4</strong> · 00:18–00:23 · MICROPRÁCTICA</p>
-<h2 id="elige-el-tipo-adecuado">Elige el tipo adecuado</h2>
-<p>Nombre de usuario → ?<br> Horas de estudio → ?<br> Nota media → ?<br>
-Objetivo alcanzado → ?<br> Inicial → ?</p>
-<p><strong>Qué haces:</strong> Clasifica.</p>
-<p><strong>Qué debe quedar:</strong> justifiquen al menos 4 casos.</p>
-<p><strong>D5</strong> · 00:23–00:28 · PÍLDORA DOCENTE 3/4</p>
-<h2 id="nombres-válidos-y-significativos">Nombres válidos y
-significativos</h2>
-<p><strong>Qué haces:</strong> Renombra ejemplos pobres.</p>
-<p><strong>Qué debe quedar:</strong> produzcan nombres válidos y
-semánticos.</p>
-<p><strong>D6</strong> · 00:28–00:33 · PÍLDORA DOCENTE 4/4</p>
-<h2 id="declarar-inicializar-y-asignar">Declarar, inicializar y
-asignar</h2>
-<p>int studyHours = 4; // declara + inicializa<br> <br> studyHours = 5;
-// asigna otro valor</p>
-<p><strong>Qué haces:</strong> Predice valor antes/después.</p>
-<p><strong>Qué debe quedar:</strong> puedan señalar
-declaración/inicialización/asignación.</p>
-<p><strong>D7</strong> · 00:33–00:36 · PLANIFICACIÓN</p>
-<h2 id="antes-del-código-plan-de-datos">Antes del código: plan de
-datos</h2>
-<p>Dato | Tipo | Nombre | ¿Cambia? | ¿Dónde se usa?</p>
-<p><strong>Qué haces:</strong> Planifica 3–5 datos.</p>
-<p><strong>Qué debe quedar:</strong> cada dato tenga
-tipo/nombre/uso.</p>
-<p><strong>D8</strong> · 00:36–00:42 · ACTIVIDAD</p>
-<h2 id="implementa-el-plan-y-comprueba">Implementa el plan y
-comprueba</h2>
-<p>Crea variables, muéstralas, cambia una y vuelve a ejecutar.</p>
-<p><strong>Qué haces:</strong> Programa y prueba.</p>
-<p><strong>Qué debe quedar:</strong> haya salida antes/después de una
-asignación.</p>
-<p><strong>D9</strong> · 00:42–00:45 · CIERRE</p>
-<h2 id="microdefensa-de-una-variable">Microdefensa de una variable</h2>
-<p>Señala tipo, nombre, valor inicial y una asignación posterior.</p>
-<p><strong>Qué haces:</strong> Explica.</p>
-<p><strong>Qué debe quedar:</strong> quede evidencia individual.</p>
-<p><strong>Cierre:</strong> registra evidencia y una breve explicación
-de lo aprendido. Usa datos ficticios y no publiques credenciales ni
-información personal.</p>
-<h2 id="evidencia-única-antes-de-salir">Evidencia única antes de
-salir</h2>
+<p>La segunda asignación sustituye el valor anterior. El signo
+<code>=</code> en Java asigna; no expresa una igualdad matemática.</p>
+<h2 id="2-mapa-de-tipos-primitivos">2. Mapa de tipos primitivos</h2>
+<p>Java tiene ocho tipos primitivos:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Uso habitual</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>byte</code></td>
+<td>enteros muy pequeños</td>
+<td><code>byte nivel = 3;</code></td>
+</tr>
+<tr class="even">
+<td><code>short</code></td>
+<td>enteros pequeños</td>
+<td><code>short dias = 180;</code></td>
+</tr>
+<tr class="odd">
+<td><code>int</code></td>
+<td>enteros de uso general</td>
+<td><code>int horasEstudio = 4;</code></td>
+</tr>
+<tr class="even">
+<td><code>long</code></td>
+<td>enteros muy grandes</td>
+<td><code>long poblacion = 8000000000L;</code></td>
+</tr>
+<tr class="odd">
+<td><code>float</code></td>
+<td>decimales con menor precisión</td>
+<td><code>float porcentaje = 82.5F;</code></td>
+</tr>
+<tr class="even">
+<td><code>double</code></td>
+<td>decimales de uso general</td>
+<td><code>double notaMedia = 7.5;</code></td>
+</tr>
+<tr class="odd">
+<td><code>char</code></td>
+<td>un carácter</td>
+<td><code>char inicial = 'L';</code></td>
+</tr>
+<tr class="even">
+<td><code>boolean</code></td>
+<td>verdadero o falso</td>
+<td><code>boolean objetivoAlcanzado = true;</code></td>
+</tr>
+</tbody>
+</table>
+<p>En H1 utilizarás sobre todo <code>int</code>, <code>double</code>,
+<code>boolean</code> y <code>char</code>. Debes reconocer los ocho, pero
+no memorizar sus rangos.</p>
+<h2 id="3-string-no-es-un-tipo-primitivo">3. <code>String</code> no es
+un tipo primitivo</h2>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreUsuario <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p><code>String</code> es una clase de Java que representa texto. Por
+eso empieza con mayúscula. En H1 basta con distinguir:</p>
 <ul>
-<li>conserva el código o la prueba en el lugar indicado por la
-sesión;</li>
-<li>añade una sola entrada al diario individual con prueba, bloqueo y
-siguiente paso;</li>
-<li>no copies la misma reflexión en otro documento; el Site personal
-seleccionará evidencias al cerrar H1.</li>
+<li>tipo primitivo: guarda un valor básico;</li>
+<li>tipo de referencia: permite trabajar con objetos, como los textos
+<code>String</code>.</li>
+</ul>
+<p>No necesitas estudiar todavía programación orientada a objetos.</p>
+<h2 id="4-el-tipo-depende-del-dato-no-de-su-apariencia">4. El tipo
+depende del dato, no de su apariencia</h2>
+<p>Un número de teléfono suele guardarse como <code>String</code>, no
+como <code>int</code>, porque no vamos a sumarlo y puede contener
+<code>+</code>, espacios o ceros iniciales.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> telefonoFicticio <span class="op">=</span> <span class="st">&quot;+34 000 000 000&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Pregúntate siempre qué valores necesitas representar y qué
+operaciones realizarás.</p>
+<h2 id="5-nombres-significativos">5. Nombres significativos</h2>
+<p>Poco claros:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> x <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> n <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>Más claros:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreUsuario <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horasEstudio <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>Usa <code>lowerCamelCase</code> para variables: la primera palabra
+comienza en minúscula y las siguientes en mayúscula.</p>
+<h2 id="6-declarar-inicializar-y-asignar">6. Declarar, inicializar y
+asignar</h2>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horasEstudio<span class="op">;</span>      <span class="co">// declaración</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>horasEstudio <span class="op">=</span> <span class="dv">4</span><span class="op">;</span>      <span class="co">// primera asignación o inicialización</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>horasEstudio <span class="op">=</span> <span class="dv">5</span><span class="op">;</span>      <span class="co">// nueva asignación</span></span></code></pre></div>
+<p>También puedes declarar e inicializar en una sola línea:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horasEstudio <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>Una variable local debe recibir un valor antes de usarse.</p>
+<h2 id="7-plan-de-datos">7. Plan de datos</h2>
+<p>Antes de programar, completa una tabla:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Dato</th>
+<th>Tipo</th>
+<th>Nombre</th>
+<th>¿Cambia?</th>
+<th>¿Dónde se usa?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>nombre ficticio</td>
+<td><code>String</code></td>
+<td><code>nombreUsuario</code></td>
+<td>sí</td>
+<td>saludo</td>
+</tr>
+<tr class="even">
+<td>horas de estudio</td>
+<td><code>int</code></td>
+<td><code>horasEstudio</code></td>
+<td>sí</td>
+<td>cálculo</td>
+</tr>
+<tr class="odd">
+<td>nombre del asistente</td>
+<td><code>String</code></td>
+<td><code>NOMBRE_ASISTENTE</code></td>
+<td>no</td>
+<td>presentación</td>
+</tr>
+</tbody>
+</table>
+<p>Añade al menos dos datos más y justifica el tipo elegido.</p>
+<h2 id="8-actividad">8. Actividad</h2>
+<ol type="1">
+<li>Implementa entre tres y cinco variables de tu plan.</li>
+<li>Muestra sus valores.</li>
+<li>Cambia una variable y vuelve a mostrarla.</li>
+<li>Explica la traza antes y después.</li>
+<li>Renombra cualquier identificador vago.</li>
+</ol>
+<h2 id="evidencia-verificable">Evidencia verificable</h2>
+<p>Conserva la tabla de planificación, el código y una ejecución que
+muestre el valor antes y después de una asignación. En tu diario
+registra qué decisión de tipo o nombre has tenido que justificar.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Confundir la variable con su valor actual.</li>
+<li>Usar <code>String</code> para todo sin pensar en las
+operaciones.</li>
+<li>Escribir otra vez el tipo al cambiar un valor.</li>
+<li>Usar una variable local antes de inicializarla.</li>
+<li>Elegir nombres válidos pero poco informativos.</li>
+</ul>
+<h2 id="autoevaluación">Autoevaluación</h2>
+<p>Comprueba que puedes:</p>
+<ul>
+<li>identificar tipo, nombre y valor;</li>
+<li>enumerar los ocho tipos primitivos;</li>
+<li>explicar por qué <code>String</code> no es primitivo;</li>
+<li>distinguir declaración, inicialización y asignación;</li>
+<li>justificar el tipo de un teléfono, una nota y una respuesta
+sí/no;</li>
+<li>explicar una traza de dos valores.</li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
-<ul>
-<li>Usa datos ficticios y no publiques credenciales ni información
-personal.</li>
-<li>Si utilizas IA de forma sustantiva, registra propósito, propuesta,
-cambios propios y validación en el registro de IA del hito.</li>
-</ul>
-<h2 id="cierre-individual">Cierre individual</h2>
-<p><strong>¿Qué puedes señalar, explicar y probar al terminar este
-checkpoint?</strong></p>
+<p>Usa nombres, teléfonos y demás datos ficticios. Si una IA propone
+nombres o tipos, comprueba que expresen la intención y permitan las
+operaciones necesarias.</p>
 
   </main>
 </body>

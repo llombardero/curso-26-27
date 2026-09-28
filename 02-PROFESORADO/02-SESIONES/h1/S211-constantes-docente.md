@@ -1,140 +1,222 @@
-# S211 — Guía docente
-
-## Constantes, literales y operaciones
+# S211 - Ejecutar - Constantes, literales y operaciones
 
 | Dato | Valor |
 |---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 2 periodos; checkpoint proyectable de 45 minutos y taller asociado |
-| Fase HEXA | Ejecutar — crear |
-| Agrupamiento | Individual con contraste por parejas o equipo cuando la práctica lo requiera |
-| Resultado observable | Aplicar constantes, literales y operaciones aritméticas con predicción y prueba. |
-| Evidencia mínima | Quede diagnóstico. |
+| Hito | H1 — Primer asistente ejecutable |
+| Duración prevista | 45 minutos |
+| Fase HEXA del hito | Ejecutar — crear |
 
-## Propósito
+> Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`. Selecciona y desarrolla los conceptos, ejemplos, actividades y evidencias útiles para esta sesión.
 
-Aplicar constantes, literales y operaciones aritméticas con predicción y prueba.
+## Qué vas a aprender
 
-El concepto se incorpora al Tema 1, pero solo pasa a `Main.java` cuando mejora el producto mínimo. Las demás prácticas se conservan como microejercicios defendibles.
+Al terminar, debes usar constantes, literales y operaciones aritméticas con predicción y prueba.
 
-## Material imprescindible
+## Ideas y ejemplos
 
-- presentación de S211;
-- IntelliJ y JDK cuando haya práctica de código;
-- proyecto o microarchivo de prueba;
-- diario individual y tablero Scrum del equipo;
-- datos ficticios.
+Úsala antes de introducir `final`, división entera, `%` y actualización.
 
-## Secuencia de aula
+Una constante representa un dato que no debe cambiar durante la ejecución. Un literal es un valor escrito directamente. Una operación produce un resultado, pero ese resultado se pierde si no lo guardamos, mostramos o usamos.
 
-| Tiempo / diap. | Tipo y actuación | Alumnado | Observa | Puerta de avance | Si hay retraso |
-|---|---|---|---|---|---|
-| 00:00–00:04 / D1 | EJECUTAR: Pide clasificar datos estables y cambiantes. | Decide y justifica. | Si confunden “dato fijo ahora” con constante semántica. | aparezca necesidad de final. | 3 minutos. |
-| 00:04–00:09 / D2 | PÍLDORA DOCENTE 1/5: Explica que no deben cambiar durante la ejecución y por qué dan intención al código. | Convierte un dato estable en constante. | Intentos de reasignar final. | distingan variable/constante. | 4 minutos. |
-| 00:09–00:14 / D3 | PÍLDORA DOCENTE 2/5: Introduce literales de forma práctica. | Identifica literales en su código. | Comillas simples/dobles. | reconozcan al menos cuatro tipos. | 3 minutos. |
-| 00:14–00:21 / D4 | PÍLDORA DOCENTE 3/5: Explica que una operación produce un resultado que debemos usar/guardar si queremos trabajar con él. | Predice operaciones sencillas. | Resultado calculado pero ignorado. | puedan construir una expresión básica. | prioriza + - * / %. |
-| 00:21–00:26 / D5 | EXPERIMENTO: Haz predicción antes de ejecutar. Explica cociente entero vs división real. | Predice y verifica. | Esperar 2.5 en int/int. | entiendan el papel de los tipos. | no suprimas; concepto nuclear. |
-| 00:26–00:30 / D6 | PÍLDORA DOCENTE 4/5: Aclara que % no significa porcentaje. | Propone un uso. | Confusión con porcentaje. | puedan explicar qué sobra. | 2 minutos. |
-| 00:30–00:34 / D7 | EXPERIMENTO: Haz resolver a mano. Conecta con precedencia matemática y paréntesis. | Calcula y verifica. | Orden de operaciones. | justifiquen el resultado. | un solo ejemplo. |
-| 00:34–00:37 / D8 | PÍLDORA DOCENTE 5/5: Relaciona con asignación de S210. | Predice nuevos valores. | Creer que crea una variable nueva. | entiendan actualización. | muestra += y ++; menciona equivalentes. |
-| 00:37–00:42 / D9 | ACTIVIDAD: Circula y pregunta qué entrada/datos usaron y qué esperaban. | Programa, predice, ejecuta. | División entera, % y precedencia. | haya resultado comprobado. | reduce a constante + división + salida. |
-| 00:42–00:45 / D10 | CIERRE: Recoge respuestas y registra errores comunes. | Responde sin ejecutar primero. | Conceptos que necesitan reentrada en S212. | quede diagnóstico. | igual. |
+Empieza con constantes y variables:
 
-## Qué debes explicar
+```java
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+final int ANIO_INICIO = 2026;
+```
 
-- **PÍLDORA DOCENTE 1/5:** Explica que no deben cambiar durante la ejecución y por qué dan intención al código.
-- **PÍLDORA DOCENTE 2/5:** Introduce literales de forma práctica.
-- **PÍLDORA DOCENTE 3/5:** Explica que una operación produce un resultado que debemos usar/guardar si queremos trabajar con él.
-- **PÍLDORA DOCENTE 4/5:** Aclara que % no significa porcentaje.
-- **PÍLDORA DOCENTE 5/5:** Relaciona con asignación de S210.
+Pregunta al alumnado:
 
-## Ejemplo o demostración preparada
+Esperamos que estos datos cambien durante la ejecución.
 
-**D1 · ¿Qué datos deberían cambiar? —** Nombre del asistente · curso · horas de estudio · contador de tareas
+Contrasta constante y variable:
 
-**D2 · Constantes con final —** final String ASSISTANT_NAME = "MiniJarvis";<br>
-final int START_YEAR = 2026;
+```java
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+int horasEstudio = 3;
+horasEstudio = 4;
+```
 
-**D3 · Literal = valor escrito directamente —** NÚMEROS: 5 / 3.5 \| TEXTO/CARÁCTER: "Hola" / 'A' \| LÓGICO: true / false
+Aclara:
 
-**D4 · Operadores aritméticos —** + suma<br>
-- resta<br>
-\* multiplicación<br>
-/ división o cociente<br>
-% resto
+Un dato puede empezar siempre igual y no ser constante si está pensado para cambiar.
 
-**D5 · ¿Qué devuelve 5 / 2? —** ENTEROS: int a = 5 / 2;<br>
-→ 2 \| CON DECIMAL: double b = 5 / 2.0;<br>
-→ 2.5
+```java
+int tareas = 0;
+```
 
-**D6 · El resto % —** 10 caramelos / 4 personas<br>
-<br>
-10 / 4 → 2 para cada una<br>
-10 % 4 → 2 sobran
+Presenta literales:
 
-**D7 · Precedencia y paréntesis —** int result = 8 \* (4 + 2) - 3;<br>
-<br>
-// Predice antes de ejecutar
+```text
+5
+3.5
+"Hola"
+'A'
+true
+false
+```
 
-**D8 · Actualizar sin reescribir todo —** tasks += 2;<br>
-tasks -= 1;<br>
-tasks++;<br>
-tasks--;
+Clasifica con ejemplos:
 
-**D9 · Micropráctica: calcula y demuestra —** Usa una constante, una variable, una operación, una actualización y una salida que permita comprobar el resultado.
+```java
+int horas = 5;
+double nota = 7.5;
+String mensaje = "Hola";
+char inicial = 'L';
+boolean terminada = false;
+```
 
-**D10 · Dos predicciones antes de salir —** 5 / 2 → ?<br>
-5 / 2.0 → ?<br>
-10 % 4 → ?
+Pregunta:
 
-## Consigna que se entrega al alumnado
+Qué diferencia hay entre `'L'` y `"L"`.
 
-1. Predice antes de ejecutar cuando haya código.
-2. Realiza la micropráctica o modificación prevista.
-3. Prueba el caso normal y, cuando exista una decisión o conversión, también el caso alternativo o erróneo.
-4. Conserva el código o resultado en el repositorio o espacio indicado.
-5. Registra una sola entrada en el diario individual; no crees un informe paralelo.
+### Una expresión produce un resultado
 
-## Qué observar mientras trabajan
+Una expresión combina valores, variables u operadores y produce un resultado que también tiene un tipo.
 
-- Si confunden “dato fijo ahora” con constante semántica.
-- Intentos de reasignar final.
-- Comillas simples/dobles.
-- Resultado calculado pero ignorado.
-- Esperar 2.5 en int/int.
-- Confusión con porcentaje.
-- Orden de operaciones.
-- Creer que crea una variable nueva.
-- División entera, % y precedencia.
-- Conceptos que necesitan reentrada en S212.
+```java
+3 + 2
+horas * 60
+horas >= 4
+tieneNombre && tieneObjetivo
+"Hola, " + nombreUsuario
+```
 
-## Criterios para considerar cerrada la sesión
+```text
+3 + 2                       -> int
+5 / 2.0                     -> double
+horas >= 4                  -> boolean
+"Hola, " + nombreUsuario    -> String
+```
 
-- Aparezca necesidad de final.
-- Distingan variable/constante.
-- Reconozcan al menos cuatro tipos.
-- Puedan construir una expresión básica.
-- Entiendan el papel de los tipos.
-- Puedan explicar qué sobra.
-- Justifiquen el resultado.
-- Entiendan actualización.
-- Haya resultado comprobado.
-- Quede diagnóstico.
-- La persona puede señalar la evidencia y explicar qué demuestra.
+Antes de ejecutar una expresión, predice su valor y su tipo. Después comprueba si el resultado observado coincide.
 
-## Seguridad y uso de IA
+Trabaja operaciones aritméticas:
 
-- Trabajar con datos ficticios.
-- No publicar credenciales, tokens, claves ni información personal.
-- Si la IA interviene de forma sustantiva, registrar propuesta, cambios propios y validación; no aceptar código que no pueda defenderse.
+```java
+int horasTotales = 3 + 2;
+```
 
-## Comprobación final
+```java
+int dias = 5;
+int horasPorDia = 2;
+int horasTotales = dias * horasPorDia;
+```
 
-**¿Qué puedes señalar, explicar, predecir o modificar para demostrar el aprendizaje de esta sesión?**
+```java
+int minutos = 4 * 60;
+System.out.println(minutos);
+```
 
-## Anotación docente al terminar
+Contrasta con resultado ignorado:
 
-- alumnado que necesita reentrada;
-- evidencia pendiente;
-- error común;
-- ajuste temporal necesario sin eliminar el núcleo conceptual.
+```java
+4 * 60;
+```
+
+Pregunta:
+
+Dónde queda guardado el resultado para utilizarlo después.
+
+Predice división entera y real:
+
+```java
+int divisionEntera = 5 / 2;
+double divisionReal = 5 / 2.0;
+```
+
+Pregunta:
+
+Qué vale `divisionEntera` y qué vale `divisionReal`.
+
+Compara también el efecto de los paréntesis:
+
+```java
+int resultadoSinParentesis = 2 + 3 * 4;      // 14
+int resultadoConParentesis = (2 + 3) * 4;    // 20
+double resultado = 10 + 6 / 2.0; // 13.0
+```
+
+Java aplica la precedencia de los operadores; no siempre evalúa simplemente de izquierda a derecha. Los paréntesis cambian o hacen explícito el orden de cálculo.
+
+Explica `%` como resto, no como porcentaje:
+
+```text
+10 / 4 -> 2
+10 % 4 -> 2
+
+8 % 2 -> 0
+9 % 2 -> 1
+
+17 / 5 -> 3
+17 % 5 -> 2
+```
+
+Di:
+
+Diez caramelos entre cuatro personas: dos para cada una y sobran dos. `%` expresa lo que sobra.
+
+Termina con actualización:
+
+```java
+int tareas = 3;
+tareas = tareas + 2;
+tareas += 2;
+tareas -= 1;
+tareas++;
+tareas--;
+```
+
+Traza paso a paso:
+
+```java
+int tareas = 2;
+tareas += 3;
+tareas--;
+tareas++;
+```
+
+Resultado esperado:
+
+```text
+2 -> 5 -> 4 -> 5
+```
+
+Error frecuente que debes cortar:
+
+`5 / 2` con enteros da `2`, no `2.5`.
+
+La **precedencia** determina qué operación se calcula antes. Multiplicación, división y resto tienen prioridad sobre suma y resta. Usa paréntesis cuando quieras cambiar ese orden o hacer explícita la intención.
+
+## Actividad de la sesión
+
+En vuestro MiniJarvis o en un ejercicio, usad una constante, una variable, una operación, una actualización y una salida que permita comprobar el resultado.
+
+## Evidencia de la sesión
+
+Conservad el ejercicio o el código integrado y registrad una predicción que haya sido confirmada o corregida.
+
+**Dónde y cómo conservar la evidencia:**
+
+- GitHub: código de ejercicio o `Main.java` actualizado.
+- Diario individual: predicción, resultado observado y explicación breve.
+- Moodle: no se entrega todavía.
+
+Qué debe contener:
+
+- Uso de `final`.
+- Una operación comprobable.
+- Evidencia de resultado.
+
+Modelo de uso de predicción S211:
+
+```text
+Predicción: si horas vale 5, minutos será 300.
+Código probado: int minutos = horas * 60;
+Resultado observado: la consola muestra 300.
+Explicación: la operación multiplica horas por 60 y guarda el resultado.
+```
+
+## Comprueba lo aprendido
+
+Una operación no está demostrada porque el código compile. Está demostrada cuando puedo predecir el resultado, ejecutarlo y explicar si coincide.

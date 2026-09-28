@@ -60,8 +60,8 @@ Un literal de texto se escribe entre comillas dobles. El operador `+` permite un
 ### Ejemplo 1 — Texto fijo y variable
 
 ```java
-String userName = "Laura";
-System.out.println("Hola, " + userName + ".");
+String nombreUsuario = "Laura";
+System.out.println("Hola, " + nombreUsuario + ".");
 ```
 
 Salida:
@@ -73,9 +73,9 @@ Hola, Laura.
 ### Ejemplo 2 — Varias piezas
 
 ```java
-String assistantName = "MiniJarvis";
+String nombreAsistente = "MiniJarvis";
 int version = 1;
-System.out.println("Soy " + assistantName + ", versión " + version + ".");
+System.out.println("Soy " + nombreAsistente + ", versión " + version + ".");
 ```
 
 Salida:
@@ -87,14 +87,14 @@ Soy MiniJarvis, versión 1.
 ### Ejemplo 3 — Espacios y signos
 
 ```java
-String userName = "Álex";
-System.out.println("Encantado," + userName);
+String nombreUsuario = "Álex";
+System.out.println("Encantado," + nombreUsuario);
 ```
 
 Produce `Encantado,Álex`. El programa funciona, pero el mensaje no está bien cuidado. La corrección es:
 
 ```java
-System.out.println("Encantado, " + userName + ".");
+System.out.println("Encantado, " + nombreUsuario + ".");
 ```
 
 ### Ejemplo 4 — Suma o concatenación

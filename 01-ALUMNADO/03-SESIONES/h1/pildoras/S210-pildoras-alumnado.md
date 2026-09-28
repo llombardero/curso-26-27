@@ -9,17 +9,17 @@ Una variable es una zona de memoria identificada por un nombre. Su valor puede c
 ### Ejemplo 1 — Entero
 
 ```java
-int studyHours = 4;
-System.out.println(studyHours);
+int horasEstudio = 4;
+System.out.println(horasEstudio);
 ```
 
-`studyHours` es la variable; `4` es el valor guardado en este momento.
+`horasEstudio` es la variable; `4` es el valor guardado en este momento.
 
 ### Ejemplo 2 — Texto
 
 ```java
-String userName = "Laura";
-System.out.println("Hola, " + userName);
+String nombreUsuario = "Laura";
+System.out.println("Hola, " + nombreUsuario);
 ```
 
 La variable evita repetir el nombre directamente en todos los mensajes.
@@ -27,9 +27,9 @@ La variable evita repetir el nombre directamente en todos los mensajes.
 ### Ejemplo 3 — El valor cambia
 
 ```java
-int completedTasks = 1;
-completedTasks = 2;
-System.out.println(completedTasks);
+int tareasCompletadas = 1;
+tareasCompletadas = 2;
+System.out.println(tareasCompletadas);
 ```
 
 La salida es `2`. La variable es la misma; ha cambiado su valor.
@@ -38,21 +38,25 @@ La salida es `2`. La variable es la misma; ha cambiado su valor.
 
 El tipo indica qué clase de dato puede guardar una variable.
 
+En estos ejemplos, `int`, `double`, `boolean` y `char` son **tipos primitivos**. `String` no es primitivo: es una clase de Java que utilizamos para representar texto. Para H1 no necesitas profundizar más, pero sí reconocer la diferencia.
+
+Los ocho tipos primitivos de Java son `byte`, `short`, `int`, `long`, `float`, `double`, `char` y `boolean`. En H1 trabajarás principalmente con los cuatro de los ejemplos siguientes; los demás debes reconocerlos, pero no memorizar sus rangos.
+
 ### Ejemplo 1 — Tipos de uso inmediato
 
 ```java
-int studyHours = 4;          // entero
-double averageScore = 7.5;   // decimal
-boolean goalReached = true;  // verdadero o falso
-char initial = 'L';          // un carácter
-String userName = "Laura";   // texto
+int horasEstudio = 4;          // entero
+double notaMedia = 7.5;   // decimal
+boolean objetivoAlcanzado = true;  // verdadero o falso
+char inicial = 'L';          // un carácter
+String nombreUsuario = "Laura";   // texto
 ```
 
 ### Ejemplo 2 — `char` y `String`
 
 ```java
-char initial = 'L';
-String name = "Laura";
+char inicial = 'L';
+String nombre = "Laura";
 ```
 
 `char` usa comillas simples y guarda un carácter. `String` usa comillas dobles y puede guardar una cadena de caracteres.
@@ -60,8 +64,8 @@ String name = "Laura";
 ### Ejemplo 3 — Entero y decimal
 
 ```java
-int sessions = 3;
-double duration = 1.5;
+int sesiones = 3;
+double duracion = 1.5;
 ```
 
 No elijas el tipo por el nombre de la variable, sino por los valores que necesitas representar.
@@ -80,24 +84,24 @@ int n = 4;
 Mejor:
 
 ```java
-String userName = "Laura";
-int studyHours = 4;
+String nombreUsuario = "Laura";
+int horasEstudio = 4;
 ```
 
 ### Ejemplo 2 — Nombres inválidos
 
 ```text
-1name      empieza por número
-my name    contiene un espacio
+1nombre         empieza por número
+horas estudio   contiene un espacio
 class      es palabra reservada
 ```
 
 ### Ejemplo 3 — Convención `lowerCamelCase`
 
 ```java
-String assistantName = "MiniJarvis";
-int completedTasks = 2;
-double averageScore = 8.25;
+String nombreAsistente = "MiniJarvis";
+int tareasCompletadas = 2;
+double notaMedia = 8.25;
 ```
 
 La primera palabra comienza en minúscula y las siguientes, en mayúscula.
@@ -111,21 +115,21 @@ La primera palabra comienza en minúscula y las siguientes, en mayúscula.
 ### Ejemplo 1 — Declarar y luego inicializar
 
 ```java
-int studyHours;  // declaración
-studyHours = 4;  // primera asignación: inicialización
+int horasEstudio;  // declaración
+horasEstudio = 4;  // primera asignación: inicialización
 ```
 
 ### Ejemplo 2 — Declarar e inicializar a la vez
 
 ```java
-int studyHours = 4;
+int horasEstudio = 4;
 ```
 
 ### Ejemplo 3 — Cambiar el valor
 
 ```java
-int studyHours = 4;
-studyHours = 5;
+int horasEstudio = 4;
+horasEstudio = 5;
 ```
 
 No se repite `int` en la segunda línea porque la variable ya estaba declarada.
@@ -133,11 +137,11 @@ No se repite `int` en la segunda línea porque la variable ya estaba declarada.
 ### Ejemplo 4 — `=` no significa igualdad matemática
 
 ```java
-int tasks = 2;
-tasks = tasks + 1;
+int tareas = 2;
+tareas = tareas + 1;
 ```
 
-Java calcula primero `tasks + 1` y guarda el resultado, `3`, en `tasks`.
+Java calcula primero `tareas + 1` y guarda el resultado, `3`, en `tareas`.
 
 ## Errores frecuentes
 

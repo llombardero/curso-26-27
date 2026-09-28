@@ -335,11 +335,11 @@ def test_h1_plans_cover_session_specific_learning_and_sources(generator):
     expected = {
         "206": ("H1 ahora", "requisitos observables", "Defiende el alcance"),
         "207": ("bytecode", "Primer programa ejecutable", "compilar y ejecutar"),
-        "208": ("Estructura mínima completa", "String message", "Reconstruye y depura"),
+        "208": ("Estructura mínima completa", "system.out.println", "Reconstruye y depura"),
         "209": ("Concatena texto", "Total: 23", "Diseña antes de programar"),
-        "210": ("Declarar, inicializar", "lowerCamelCase", "Microdefensa de una variable"),
+        "210": ("Declarar e inicializar", "lowerCamelCase", "Microdefensa de una variable"),
         "211": ("5 / 2.0", "10 % 4", "división entera y real"),
-        "212": ("Integer.parseInt", "NumberFormatException", "casting"),
+        "212": ("Integer.parseInt", "NumberFormatException", "Double.parseDouble"),
         "213": ("hours >= 4", "if / else", "ambas ramas"),
         "214": ("README mínimo", "enlace profundo", "permisos"),
         "215": ("señala", "investiga", "mejora concreta"),
@@ -353,6 +353,57 @@ def test_h1_plans_cover_session_specific_learning_and_sources(generator):
         assert "Tema 1" in combined or "Evidencias" in combined or "Defensa" in combined, number
         for fragment in fragments:
             assert fragment.lower() in combined.lower(), (number, fragment)
+
+
+def test_h1_source_slides_distinguish_book_pdf_and_project_sources(generator):
+    expected_book = {
+        "206": "Capítulo 00",
+        "207": "Capítulo 01",
+        "208": "Capítulo 01",
+        "209": "Capítulos 01-02",
+        "210": "Capítulo 02",
+        "211": "Capítulo 02",
+        "212": "Capítulo 02",
+        "213": "Capítulos 02-03",
+        "214": "Capítulos 00-02",
+        "215": "Capítulos 00-02",
+    }
+
+    for number, chapter in expected_book.items():
+        teacher, student = source_pair(number)
+        source = generator.plan_slides(generator.parse_session(teacher, student))[-1]
+
+        assert source.kind == "source", number
+        assert source.items[0].startswith(f"Libro por hitos · {chapter}"), number
+        assert source.items[1].startswith("PDF Tema 1 ·"), number
+        assert source.items[2].startswith("Proyecto MiniJarvis ·"), number
+        assert not any("no se copian errores" in item for item in source.items), number
+
+
+def test_h1_plan_applies_the_reviewed_learning_sequence(generator):
+    plans = {}
+    for number in range(206, 216):
+        teacher, student = source_pair(str(number))
+        plans[str(number)] = generator.plan_slides(generator.parse_session(teacher, student))
+
+    visible = {
+        number: " ".join(text for slide in plan for text in [slide.title, *slide.items])
+        for number, plan in plans.items()
+    }
+
+    assert "Correcto, eficiente y mantenible" in visible["206"]
+    assert "JDK del proyecto" in visible["207"]
+    assert "String message" not in visible["208"]
+    assert "/* comentario de bloque */" in visible["208"]
+    assert "print no salta de línea" in visible["209"]
+    assert "La entrada aparece en una salida" not in visible["209"]
+    assert "Declarar e inicializar en una línea" in visible["210"]
+    assert "primera asignación: inicialización" in visible["210"]
+    assert "tasks++" in visible["211"]
+    assert "Double.parseDouble" in visible["212"]
+    assert "Asignación condicional" not in visible["213"]
+    assert "anidamiento" not in visible["213"].lower()
+    assert "Rúbrica de la defensa" in visible["215"]
 
 
 def test_h1_plans_have_no_visible_markdown_escapes_or_generic_exit(generator):

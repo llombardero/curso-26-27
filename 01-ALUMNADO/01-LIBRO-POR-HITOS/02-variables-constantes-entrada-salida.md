@@ -29,13 +29,23 @@ Lee el concepto, ejecuta un ejemplo pequeño, aplícalo a MiniJarvis, documenta 
 
 ## 2. Conceptos básicos explicados
 
-Una variable guarda un dato que puede cambiar. Una constante guarda un dato que no debería cambiar durante la ejecución. Java exige indicar el tipo: `String` para texto, `int` para enteros, `boolean` para verdadero/falso.
+Una variable guarda un dato que puede cambiar. Una constante guarda un dato que no debería cambiar durante la ejecución. Declarar es indicar tipo y nombre; inicializar es asignar el primer valor; una asignación posterior sustituye el valor anterior.
+
+Java tiene ocho tipos primitivos: `byte`, `short`, `int`, `long`, `float`, `double`, `char` y `boolean`. En H1 utilizarás sobre todo `int`, `double`, `char` y `boolean`. `String` no es primitivo: es una clase que representa texto. No necesitas estudiar todavía orientación a objetos, pero sí reconocer esta diferencia.
 
 La entrada permite que el usuario participe. Usaremos `Scanner` para leer texto desde teclado. La salida se realiza con `System.out.println` o `System.out.print`. Entrada y salida son la base de un asistente por consola.
 
-Cuando leemos con `scanner.nextLine()`, Java obtiene texto aunque el usuario escriba un número. Si necesitamos calcular, tendremos que convertir ese texto a número con métodos como `Integer.parseInt`. Esta conversión puede fallar si el texto no tiene forma de número.
+Cuando leemos con `teclado.nextLine()`, Java obtiene texto aunque el usuario escriba un número. Si necesitamos calcular, tendremos que convertir ese texto a número con métodos como `Integer.parseInt`. Esta conversión puede fallar si el texto no tiene forma de número.
 
-Los operadores permiten calcular y comparar: `+`, `-`, `*`, `/`, `%`, `>`, `<`, `>=`, `<=`, `==` y `!=`. En expresiones con varios operadores hay precedencia: por ejemplo, la multiplicación se calcula antes que la suma.
+Los operadores permiten calcular y comparar: `+`, `-`, `*`, `/`, `%`, `>`, `<`, `>=`, `<=`, `==` y `!=`. Una expresión produce un valor y ese valor tiene un tipo. Por ejemplo, `5 / 2` produce el entero `2`, mientras que `5 / 2.0` produce el decimal `2.5`. En expresiones con varios operadores hay precedencia: `2 + 3 * 4` produce `14`, mientras que `(2 + 3) * 4` produce `20`.
+
+No confundas tres mecanismos de conversión:
+
+- **parseo:** parte de texto, como `Integer.parseInt("5")`;
+- **conversión implícita:** Java amplía automáticamente un valor, como de `int` a `double`;
+- **casting:** se fuerza el tipo de destino, como `(int) 8.9`, y puede perder información.
+
+Las comparaciones producen valores `boolean`. Esos valores pueden controlar un `if/else`, que debe probarse con una entrada para cada rama.
 
 ## 3. Ejemplo guiado en Java
 
@@ -43,21 +53,22 @@ Los operadores permiten calcular y comparar: `+`, `-`, `*`, `/`, `%`, `>`, `<`, 
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        final String AGENT_NAME = "MiniJarvis";
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] argumentos) {
+        final String NOMBRE_ASISTENTE = "MiniJarvis";
+        Scanner teclado = new Scanner(System.in);
 
         System.out.print("¿Cómo te llamas? ");
-        String userName = scanner.nextLine();
+        String nombreUsuario = teclado.nextLine();
 
-        System.out.println("Hola, " + userName + ". Soy " + AGENT_NAME + ".");
+        System.out.println("Hola, " + nombreUsuario + ". Soy " + NOMBRE_ASISTENTE + ".");
+        teclado.close();
     }
 }
 ```
 
 ## 4. Caso práctico MiniJarvis
 
-MiniJarvis debe pedir el nombre del usuario y responder con un saludo personalizado. Después añade una variable `courseYear` y muestra el curso ficticio.
+MiniJarvis debe pedir el nombre del usuario y responder con un saludo personalizado. Después añade una variable `anioCurso` y muestra el curso ficticio.
 
 Amplía el caso: si el usuario deja el nombre vacío, de momento solo observa qué ocurre. La validación llegará después.
 
@@ -89,7 +100,7 @@ Actualiza el README indicando que el programa requiere interacción por teclado.
 2. ¿Qué aporta una constante?
 3. ¿Para qué sirve Scanner?
 4. ¿Qué prueba manual puedes escribir para entrada/salida?
-5. ¿Por qué `scanner.nextLine()` devuelve texto aunque escribas un número?
+5. ¿Por qué `teclado.nextLine()` devuelve texto aunque escribas un número?
 6. ¿Qué puede ocurrir al usar `Integer.parseInt`?
 
 ## 8. Para tu portfolio
@@ -108,8 +119,8 @@ Uso de IA, si lo hubo, y cómo lo validé:
 
 ## 9. Estudio paso a paso
 
-Cuando uses variables, pregúntate tres cosas: qué dato quiero guardar, qué tipo tiene y si cambiará durante la ejecución. El nombre de la variable debe explicar su intención. `n` dice poco; `userName` ayuda más. Una constante como `AGENT_NAME` evita escribir el mismo texto en varios lugares y comunica que ese valor no debe cambiar.
+Cuando uses variables, pregúntate tres cosas: qué dato quiero guardar, qué tipo tiene y si cambiará durante la ejecución. El nombre de la variable debe explicar su intención. `n` dice poco; `nombreUsuario` ayuda más. Una constante como `NOMBRE_ASISTENTE` evita escribir el mismo texto en varios lugares y comunica que ese valor no debe cambiar.
 
-Caso de estudio: añade `String favoriteTopic` y pregunta al usuario qué parte de programación quiere practicar. MiniJarvis debe responder con una frase personalizada. Registra dos pruebas: una con texto normal y otra con entrada vacía. Todavía no tienes que resolver la entrada vacía, pero sí observarla.
+Caso de estudio: añade `String temaFavorito` y pregunta al usuario qué parte de programación quiere practicar. MiniJarvis debe responder con una frase personalizada. Registra dos pruebas: una con texto normal y otra con entrada vacía. Todavía no tienes que resolver la entrada vacía, pero sí observarla.
 
-Caso de estudio de refuerzo: añade `int studyHours`. Debes demostrar en el portfolio una prueba con número válido y otra con texto no numérico. Si todavía no sabes controlar la excepción, al menos explica qué error aparece y por qué.
+Caso de estudio de refuerzo: añade `int horasEstudio`. Debes demostrar en el portfolio una prueba con número válido y otra con texto no numérico. Si todavía no sabes controlar la excepción, al menos explica qué error aparece y por qué.

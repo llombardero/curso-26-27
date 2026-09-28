@@ -1,107 +1,121 @@
-# S215 — Guía docente
-
-## Defensa y cierre del hito
+# S215 - Comunicar - Defensa y cierre H1
 
 | Dato | Valor |
 |---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 2 periodos; checkpoint proyectable de 45 minutos y taller asociado |
-| Fase HEXA | Comunicar — evaluar y reflexionar |
-| Agrupamiento | Individual con contraste por parejas o equipo cuando la práctica lo requiera |
-| Resultado observable | Demostrar comprensión individual, modificar algo pequeño y cerrar el ciclo HEXA con reflexión y mejora. |
-| Evidencia mínima | Quede siguiente paso claro. |
+| Hito | H1 — Primer asistente ejecutable |
+| Duración prevista | 45 minutos |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 
-## Propósito
+> Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`. Selecciona y desarrolla los conceptos, ejemplos, actividades y evidencias útiles para esta sesión.
 
-Demostrar comprensión individual, modificar algo pequeño y cerrar el ciclo HEXA con reflexión y mejora.
+## Qué vas a aprender
 
-El concepto se incorpora al Tema 1, pero solo pasa a `Main.java` cuando mejora el producto mínimo. Las demás prácticas se conservan como microejercicios defendibles.
+Al terminar, debes defender individualmente, cerrar retrospectiva y realizar la entrega final en Moodle.
 
-## Material imprescindible
+## Cómo se defiende H1
 
-- presentación de S215;
-- IntelliJ y JDK cuando haya práctica de código;
-- proyecto o microarchivo de prueba;
-- diario individual y tablero Scrum del equipo;
-- datos ficticios.
+Una respuesta defendible tiene cuatro partes: señalo, explico, ejecuto y compruebo. Por ejemplo: `Esta línea lee el nombre`, `esta variable guarda el dato`, `si escribo Laura espero este saludo`, `lo ejecuto y compruebo que coincide`.
 
-## Secuencia de aula
+**Preguntas posibles:**
 
-| Tiempo / diap. | Tipo y actuación | Alumnado | Observa | Puerta de avance | Si hay retraso |
-|---|---|---|---|---|---|
-| 00:00–00:05 / D1 | COMUNICAR: Explica formato y reduce incertidumbre. | Prepara proyecto y evidencias. | Ansiedad o desconocimiento del formato. | sepan qué se les pedirá. | 4 minutos. |
-| 00:05–00:10 / D2 | MODELO DOCENTE: Haz una mini-defensa modelo con código neutro. Muestra respuesta suficiente y vaga. | Observa criterios. | Si creen que basta “lo hice así porque sí”. | entiendan el estándar. | 3 minutos. |
-| 00:10–00:30 / D3 | DEFENSAS: Realiza defensas rotativas y pide modificación/predicción. | Defiende o ensaya. | Autoría, comprensión, capacidad de predecir y corregir. | haya evidencia individual suficiente o necesidad concreta de recuperación. | prioriza defensa de quienes aún no tienen evidencia individual. |
-| 00:30–00:36 / D4 | MEJORA: Da oportunidad de corrección inmediata de una carencia pequeña. | Mejora y vuelve a defender. | Capacidad de aprender del feedback. | la laguna quede identificada o recuperada. | registra recuperación para otro momento. |
-| 00:36–00:40 / D5 | CIERRE CONCEPTUAL: Pide reconstrucción colectiva y conecta con lo aprendido. | Explica relaciones. | Conceptos aislados sin conexión. | puedan narrar el flujo. | 2 minutos. |
-| 00:40–00:45 / D6 | RETROSPECTIVA: Cierra el ciclo HEXA y pide registro individual. | Reflexiona y registra. | Reflexiones genéricas sin evidencia. | quede siguiente paso claro. | mantén siempre la retrospectiva aunque sea breve. |
+- Señala dónde empieza la ejecución.
+- Señala una variable y explica tipo, nombre y valor.
+- Señala una constante y explica por qué es constante.
+- Ejecuta con una entrada ficticia y predice la salida.
+- Explica una conversión.
+- Provoca o explica un error de conversión.
+- Señala una comparación.
+- Ejecuta un caso `true` y un caso `false`.
+- Explica qué queda fuera de H1 y por qué.
+- Cambia un mensaje o valor pequeño y predice el efecto.
 
-## Qué debes explicar
+## Entrega final de H1
 
-- Enmarca defensa y cierre del hito con un ejemplo observable y una comprobación.
+Ahora sí, preparad y realizad la entrega oficial de H1 en Moodle. Recordad: si no está en Moodle, no está entregado oficialmente.
 
-## Ejemplo o demostración preparada
+**Dónde se entrega:**
 
-**D1 · La defensa no es recitar —** Vas a señalar, explicar, ejecutar y modificar una parte pequeña de tu propio H1.
+- Tarea Moodle de H1.
 
-**D2 · Así es una respuesta defendible —** SEÑALA: “Esta línea lee el nombre” / “Esta variable guarda la edad” \| EXPLICA: tipo, decisión y efecto \| DEMUESTRA: ejecuta con una entrada y predice la salida
+**Cómo se entrega:**
 
-**D3 · Ronda de defensa + ensayo por parejas —** Mientras una persona defiende, el resto:<br>
-• ensaya preguntas<br>
-• revisa el diario y la selección de evidencias del Site<br>
-• comprueba enlaces<br>
-• prepara una modificación pequeña
+- Pegando enlaces profundos, no carpetas genéricas.
+- Incluyendo al menos:
+  - enlace al repositorio GitHub;
+  - enlace al README H1 o repositorio con README visible;
+  - enlace a la página H1 del Site personal;
+  - enlace a la página H1 del Site de equipo;
+  - enlace a evidencia concreta de ejecución si Moodle lo solicita;
+  - confirmación de permisos revisados.
 
-**D4 · Si aparece una laguna, se recupera la evidencia concreta —** No hace falta repetir todo H1.<br>
-Investiga → corrige → prueba → vuelve a explicar.
+```text
+Confirmo que los enlaces llevan a evidencias concretas de H1 y que he comprobado los permisos de acceso.
+```
 
-**D5 · Reconstruye el hilo de Tema 1 —** dato → variable → operación/comparación → boolean → decisión → salida
+Si Moodle permite texto de entrega, pide este formato:
 
-**D6 · Cierra HEXA: comunica y decide la siguiente mejora —** 1 cosa que ya haces solo<br>
-1 cosa que aún necesita apoyo<br>
-1 hábito de trabajo que mantendrás<br>
-1 siguiente mejora para H2
+```text
+Equipo:
+Integrantes:
 
-## Consigna que se entrega al alumnado
+Repositorio GitHub:
+README H1:
+Site personal H1:
+Site equipo H1:
+Evidencia de ejecución:
 
-1. Predice antes de ejecutar cuando haya código.
-2. Realiza la micropráctica o modificación prevista.
-3. Prueba el caso normal y, cuando exista una decisión o conversión, también el caso alternativo o erróneo.
-4. Conserva el código o resultado en el repositorio o espacio indicado.
-5. Registra una sola entrada en el diario individual; no crees un informe paralelo.
+Permisos comprobados: sí/no
+Observaciones o bloqueo pendiente:
+```
 
-## Qué observar mientras trabajan
+Modelo de uso de entrega Moodle ya rellenada:
 
-- Ansiedad o desconocimiento del formato.
-- Si creen que basta “lo hice así porque sí”.
-- Autoría, comprensión, capacidad de predecir y corregir.
-- Capacidad de aprender del feedback.
-- Conceptos aislados sin conexión.
-- Reflexiones genéricas sin evidencia.
+```text
+Equipo: Ada
+Integrantes: Nora, Luis, Marta, Amira
 
-## Criterios para considerar cerrada la sesión
+Repositorio GitHub: https://...
+README H1: https://...
+Site personal H1 - Nora: https://...
+Site personal H1 - Luis: https://...
+Site personal H1 - Marta: https://...
+Site personal H1 - Amira: https://...
+Site equipo H1: https://...
+Evidencia de ejecución: https://...
 
-- Sepan qué se les pedirá.
-- Entiendan el estándar.
-- Haya evidencia individual suficiente o necesidad concreta de recuperación.
-- La laguna quede identificada o recuperada.
-- Puedan narrar el flujo.
-- Quede siguiente paso claro.
-- La persona puede señalar la evidencia y explicar qué demuestra.
+Permisos comprobados: sí
+Observaciones: la entrada no convertible está documentada como error de ejecución; no usamos try-catch porque no pertenece a H1.
+```
 
-## Seguridad y uso de IA
+Modelo que no debes aceptar en Moodle:
 
-- Trabajar con datos ficticios.
-- No publicar credenciales, tokens, claves ni información personal.
-- Si la IA interviene de forma sustantiva, registrar propuesta, cambios propios y validación; no aceptar código que no pueda defenderse.
+```text
+Está todo en Drive.
+```
 
-## Comprobación final
+## Reflexión individual
 
-**¿Qué puedes señalar, explicar, predecir o modificar para demostrar el aprendizaje de esta sesión?**
+Cada persona escribe ahora la última entrada de diario de H1. Debe incluir: una cosa que ya puede hacer sola, una cosa que todavía necesita apoyo, una evidencia que lo demuestra y un siguiente paso para H2.
 
-## Anotación docente al terminar
+**Dónde y cómo conservar la evidencia:**
 
-- alumnado que necesita reentrada;
-- evidencia pendiente;
-- error común;
-- ajuste temporal necesario sin eliminar el núcleo conceptual.
+- Diario individual en Sheets.
+- Una fila final S215.
+- No hacer documento separado.
+
+Modelo de uso del diario final:
+
+```text
+Fecha: cierre H1
+Sesión: S215
+Objetivo: cerrar H1 y preparar H2.
+Acción realizada: defendí mi código, revisé enlaces y entregué en Moodle.
+Prueba y resultado: expliqué Scanner, parseInt y las dos ramas del if/else.
+Evidencia enlazada: enlace a README y prueba S213.
+Bloqueo: necesito practicar errores de entrada.
+Siguiente paso: en H2 probar comandos y depuración.
+```
+
+## Cierre de H1
+
+La sesión termina cuando cada persona puede señalar una parte del código, explicarla, ejecutarla y relacionarla con una evidencia entregada. Cerrad con esta pregunta: **¿qué evidencia demuestra mejor tu aprendizaje en H1 y qué mejorarás primero en H2?**

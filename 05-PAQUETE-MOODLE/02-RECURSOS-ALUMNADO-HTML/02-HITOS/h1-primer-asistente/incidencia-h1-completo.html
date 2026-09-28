@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incidencia H1 — registro completado (Ana García)</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="incidencia-h1--registro-completado-ana-garcía">Incidencia H1 —
+registro completado (Ana García)</h1>
+<p>Los bloqueos cotidianos se registran en el Diario individual o en
+Scrum. Completa una incidencia separada únicamente si el análisis del
+error demuestra un aprendizaje que no cabe en una fila.</p>
+<h2 id="reproducción">Reproducción</h2>
+<ul>
+<li><strong>Fecha y commit:</strong> 2026-10-08, commit
+<code>def456</code> (S211 — constantes y operaciones)</li>
+<li><strong>Qué esperaba:</strong> Que al declarar
+<code>final int DOBLE_FACTOR = 2;</code> y usar
+<code>int resultado = numero * DOBLE_FACTOR;</code>, el programa
+calculase correctamente el doble del número introducido.</li>
+<li><strong>Qué ocurrió:</strong> El compilador rechazó el código con el
+error:
+<pre><code>error: cannot assign a value to final variable DOBLE_FACTOR
+    DOBLE_FACTOR = 3;
+    ^</code></pre></li>
+<li><strong>Mensaje exacto, sin datos personales:</strong>
+<code>cannot assign a value to final variable DOBLE_FACTOR</code></li>
+<li><strong>Pasos mínimos para reproducir:</strong>
+<ol type="1">
+<li>Declarar <code>final int DOBLE_FACTOR = 2;</code></li>
+<li>Intentar reasignar <code>DOBLE_FACTOR = 3;</code> en una línea
+posterior</li>
+<li>Compilar → error</li>
+</ol></li>
+</ul>
+<h2 id="hipótesis-y-prueba">Hipótesis y prueba</h2>
+<ul>
+<li><strong>Hipótesis:</strong> Al usar <code>final</code>, la variable
+se convierte en constante y no se puede reasignar. El error indica que
+intenté cambiar el valor de una constante después de inicializarla.</li>
+<li><strong>Prueba mínima:</strong>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="dt">int</span> DOBLE_FACTOR <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>DOBLE_FACTOR <span class="op">=</span> <span class="dv">3</span><span class="op">;</span>  <span class="co">// Error de compilación</span></span></code></pre></div></li>
+<li><strong>Resultado:</strong> El compilador muestra
+<code>cannot assign a value to final variable DOBLE_FACTOR</code>.</li>
+<li><strong>Cambio aplicado:</strong> Eliminé la línea
+<code>DOBLE_FACTOR = 3;</code> y dejé solo la declaración inicial. El
+programa compiló y ejecutó correctamente.</li>
+<li><strong>Nueva comprobación:</strong>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="dt">int</span> DOBLE_FACTOR <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numero <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> resultado <span class="op">=</span> numero <span class="op">*</span> DOBLE_FACTOR<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;El doble de &quot;</span> <span class="op">+</span> numero <span class="op">+</span> <span class="st">&quot; es &quot;</span> <span class="op">+</span> resultado<span class="op">);</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Salida: El doble de 5 es 10</span></span></code></pre></div></li>
+</ul>
+<h2 id="enlaces">Enlaces</h2>
+<ul>
+<li><strong>Fila del diario o Scrum donde apareció:</strong> Diario
+S211, fila de "Error provocado y corregido"</li>
+<li><strong>Código o commit relacionado:</strong> <a
+href="https://github.com/ejemplo/minijarvis-h1/commit/def456">commit
+def456</a></li>
+<li><strong>Sección del README si afecta a una prueba
+entregada:</strong> Microprácticas → "Constantes, literales y
+operadores"</li>
+</ul>
+<h2 id="aprendizaje">Aprendizaje</h2>
+<p>Este error me enseñó que <code>final</code> no es solo una etiqueta
+decorativa: es una restricción del compilador. Una vez declarada con
+<code>final</code>, la variable se convierte en constante y no se puede
+modificar. Esto es útil para valores que nunca deben cambiar (como
+factores de cálculo, umbrales, o mensajes fijos), porque previene
+errores accidentales de reasignación.</p>
+
+  </main>
+</body>
+</html>

@@ -7,3 +7,6 @@ Minijarvis-presentaciones-sesiones.zip
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# Configuración local del editor
+.obsidian/

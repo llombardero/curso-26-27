@@ -18,6 +18,7 @@ Uso recomendado:
 - Completar solo los apartados aplicables al hito.
 - No borrar apartados importantes: si algo no aplica, escribir “No aplica en este hito” y justificar brevemente.
 - Para ver ejemplos completos de H1, consulta `16-ejemplos-entregables-h1`.
+- Para ver ejemplos de pruebas, depuracion, incidencia y defensa H2, consulta `17-ejemplos-entregables-h2`.
 
 ---
 

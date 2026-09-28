@@ -22,9 +22,10 @@ Edición final para Moodle — curso 2026/2027.
 | 210 | Variables y tipos | [Abrir](h1/S210-variables-docente.md) |
 | 211 | Constantes, literales y operaciones | [Abrir](h1/S211-constantes-docente.md) |
 | 212 | Scanner y conversiones | [Abrir](h1/S212-entrada-por-teclado-con-scanner-docente.md) |
-| 213 | Comparaciones, lógica y decisiones | [Abrir](h1/S213-limpieza-nombres-claros-y-simplicidad-docente.md) |
+| 213 | Comparaciones, lógica y decisiones | [Abrir](h1/S213-comparaciones-logica-y-decisiones-docente.md) |
 | 214 | Documentar, probar y comunicar H1 | [Abrir](h1/S214-readme-y-evidencia-de-ejecucion-docente.md) |
 | 215 | Defender y cerrar el Tema 1 | [Abrir](h1/S215-defensa-y-cierre-h1-docente.md) |
+| H2 | Guion docente completo del hito | [Abrir](h2/00-GUION-DOCENTE-H2-COMPLETO.md) |
 | 216 | Presentar h2 desde h1 | [Abrir](h2/S216-presentar-h2-desde-h1-docente.md) |
 | 217 | Diseno de comandos antes de programar | [Abrir](h2/S217-diseno-de-comandos-antes-de-programar-docente.md) |
 | 218 | Booleanos y variable de control | [Abrir](h2/S218-booleanos-y-variable-de-control-docente.md) |

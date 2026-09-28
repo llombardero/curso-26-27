@@ -27,7 +27,7 @@ Fecha: 2026-10-02
 Sesión: S212
 Hito: H1
 Objetivo: leer un nombre ficticio con Scanner y usarlo en la salida.
-Acción realizada: añadí Scanner, pedí un nombre, guardé nextLine() en userName y lo usé en un saludo.
+Acción realizada: añadí Scanner, pedí un nombre, guardé nextLine() en nombreUsuario y lo usé en un saludo.
 Prueba y resultado: ejecuté con el nombre ficticio Laura y la consola mostró "Hola, Laura.".
 Evidencia enlazada: enlace al commit o captura concreta donde se ve código y consola.
 Bloqueo: al principio leía el nombre, pero seguía mostrando un saludo fijo.
@@ -83,7 +83,7 @@ Tarea: Probar dos ramas del if/else
 Responsable: Amira
 Estado: en curso
 Bloqueo: solo está probado el caso true
-Siguiente paso: ejecutar con hours = 2 y registrar salida
+Siguiente paso: ejecutar con horas = 2 y registrar salida
 
 Decisión S209:
 Usaremos mensajes breves y claros. No diremos que MiniJarvis recuerda conversaciones porque H1 no tiene memoria.
@@ -135,31 +135,31 @@ Ejemplo de `Main.java` para H1:
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        final String ASSISTANT_NAME = "MiniJarvis";
-        final int MINIMUM_HOURS = 4;
+    public static void main(String[] argumentos) {
+        final String NOMBRE_ASISTENTE = "MiniJarvis";
+        final int HORAS_MINIMAS = 4;
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Hola, soy " + ASSISTANT_NAME + ".");
+        System.out.println("Hola, soy " + NOMBRE_ASISTENTE + ".");
         System.out.print("Escribe un nombre ficticio: ");
-        String userName = scanner.nextLine();
+        String nombreUsuario = teclado.nextLine();
 
         System.out.print("Horas de estudio de hoy: ");
-        String hoursText = scanner.nextLine();
-        int studyHours = Integer.parseInt(hoursText);
-        int studyMinutes = studyHours * 60;
+        String textoHoras = teclado.nextLine();
+        int horasEstudio = Integer.parseInt(textoHoras);
+        int minutosEstudio = horasEstudio * 60;
 
-        System.out.println("Encantado, " + userName + ".");
-        System.out.println("Minutos de estudio: " + studyMinutes);
+        System.out.println("Encantado, " + nombreUsuario + ".");
+        System.out.println("Minutos de estudio: " + minutosEstudio);
 
-        if (studyHours >= MINIMUM_HOURS) {
+        if (horasEstudio >= HORAS_MINIMAS) {
             System.out.println("Objetivo alcanzado.");
         } else {
             System.out.println("Objetivo pendiente.");
         }
 
-        scanner.close();
+        teclado.close();
     }
 }
 ```
@@ -283,7 +283,7 @@ Mi aportación individual:
 Me encargué de probar la entrada por teclado con Scanner y de registrar una prueba con entrada válida y otra no convertible.
 
 Decisión justificada:
-Usé el nombre `userName` en lugar de `x` porque permite entender que la variable guarda un nombre ficticio.
+Usé el nombre `nombreUsuario` en lugar de `x` porque permite entender que la variable guarda un nombre ficticio.
 
 Dificultad o cambio:
 Al principio pensaba que si escribía `5` en consola Java ya lo trataba como número. Después entendí que `nextLine()` devuelve texto y que necesitaba `Integer.parseInt`.
@@ -339,8 +339,8 @@ Guardamos microprácticas separadas cuando no formaban parte del Main final.
 Pruebas realizadas:
 Prueba de saludo con nombre ficticio.
 Prueba de cálculo de minutos.
-Prueba de hours = 5.
-Prueba de hours = 2.
+Prueba de horas = 5.
+Prueba de horas = 2.
 Prueba de entrada no convertible.
 
 Enlaces:

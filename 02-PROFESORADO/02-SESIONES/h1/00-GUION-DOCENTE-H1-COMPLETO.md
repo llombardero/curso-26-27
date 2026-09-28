@@ -36,8 +36,7 @@ El producto no debe incluir todavía:
 - clases propias adicionales complejas;
 - persistencia;
 - IA real;
-- datos personales reales;
-- claves, contraseñas, tokens o credenciales.
+- datos personales reales;P.- claves, contraseñas, tokens o credenciales.
 
 ## Modelo HEXA en H1
 
@@ -102,742 +101,6 @@ Regla que debes repetir muchas veces:
 
 > Una evidencia no es una captura suelta ni una carpeta general. Una evidencia debe permitir comprobar algo: qué entrada se usó, qué salida se obtuvo, dónde está el código o documento y qué demuestra.
 
-## Entregables oficiales de H1
-
-Estos son los entregables que debes pedir. No los pidas todos el primer día como si tuvieran que estar terminados; se van construyendo.
-
-### Entregable 1 - Diario individual
-
-Cuándo se pide:
-
-- S206 al final: primera entrada de objetivo, alcance y siguiente paso.
-- S207-S213 al final de cada sesión donde haya avance, prueba, bloqueo o decisión individual.
-- S214 antes de preparar Sites: revisar que el diario contiene las entradas mínimas.
-- S215 al cierre: retrospectiva individual final de H1.
-
-Dónde se entrega:
-
-- En el Sheet de diario individual de cada alumno o alumna.
-- En Moodle no se sube el diario completo; en la entrega final se pega el enlace profundo o enlace solicitado según la tarea Moodle.
-
-Cómo se entrega:
-
-- Una fila por checkpoint significativo.
-- Debe incluir fecha, sesión, objetivo, acción, prueba y resultado, evidencia enlazada, bloqueo si existe, uso de IA si existe y siguiente paso.
-
-Qué debes decir:
-
-> Ahora no quiero un informe largo. Quiero una fila útil en el diario. Si alguien la lee, debe entender qué intentabas hacer, qué hiciste, cómo lo comprobaste y cuál es tu siguiente paso.
-
-### Entregable 2 - Scrum de equipo
-
-Cuándo se pide:
-
-- S206: crear o actualizar backlog H1 y límites del reto.
-- S209: registrar decisión de mensajes de consola.
-- S210: registrar plan de datos.
-- S211-S213: registrar tareas de implementación, bloqueos y decisiones técnicas.
-- S214: completar review de evidencias y enlaces.
-- S215: completar retrospectiva del equipo.
-
-Dónde se entrega:
-
-- En el Sheet Scrum del equipo.
-- En Moodle se entrega el enlace profundo al Sheet Scrum o a la sección indicada, no capturas sueltas salvo que Moodle las pida expresamente.
-
-Cómo se entrega:
-
-- Tareas concretas, no frases vagas.
-- Cada tarea debe tener estado.
-- Las decisiones deben estar fechadas o vinculadas a la sesión.
-- Los bloqueos deben indicar quién puede desbloquearlos o cuál es el siguiente intento.
-
-Qué debes decir:
-
-> En Scrum no escribimos para decorar. Escribimos para que el equipo sepa qué hacer, qué está bloqueado y qué evidencia demuestra que algo está hecho.
-
-### Entregable 3 - Repositorio GitHub H1
-
-Cuándo se pide:
-
-- S207: primera ejecución guardada.
-- S208: estructura mínima funcionando.
-- S209-S213: evolución del producto y microprácticas.
-- S214: repositorio ordenado y README listo.
-- S215: versión final defendible.
-
-Dónde se entrega:
-
-- En GitHub.
-- En Moodle se entrega el enlace al repositorio y, si procede, enlace profundo a `Main.java`, README o commit concreto.
-
-Cómo se entrega:
-
-- Repositorio accesible al profesorado.
-- README en la raíz.
-- Código dentro de la estructura del proyecto.
-- Microprácticas conservadas si no se integran en `Main.java`, por ejemplo en una carpeta de prácticas o archivos separados acordados.
-- No subir credenciales ni datos personales reales.
-
-Qué debes decir:
-
-> GitHub es la fuente del código. Si algo es código, debe estar en el repositorio. Drive no es una segunda copia editable del proyecto.
-
-### Entregable 4 - README H1
-
-Cuándo se pide:
-
-- S214 se pide formalmente.
-- S215 debe estar terminado antes de defender.
-
-Dónde se entrega:
-
-- En la raíz del repositorio GitHub.
-- En Moodle se entrega el enlace al README o al repositorio que lo contiene.
-
-Cómo se entrega:
-
-- Debe explicar qué hace H1.
-- Debe explicar qué no hace todavía.
-- Debe explicar cómo ejecutar.
-- Debe incluir una transcripción o ejemplo real de entrada y salida.
-- Debe indicar pruebas o evidencias usadas.
-- Debe ser honesto: no promete H2.
-
-Qué debes decir:
-
-> El README es para una persona que no está sentada a vuestro lado. Si necesita que le expliquéis oralmente cómo ejecutar, el README todavía no está terminado.
-
-### Entregable 5 - Site personal H1
-
-Cuándo se pide:
-
-- S214 se empieza o se completa.
-- S215 se revisa antes de entrega final.
-
-Dónde se entrega:
-
-- En el Google Site personal de cada alumno o alumna.
-- En Moodle se entrega el enlace profundo a la página H1 del Site personal.
-
-Cómo se entrega:
-
-- Página H1 con reto en sus palabras.
-- Aportación individual.
-- Una decisión justificada.
-- Una dificultad o cambio.
-- Una evidencia concreta enlazada.
-- Qué demuestra esa evidencia.
-- Uso de IA y validación, si procede.
-- Mejora siguiente.
-
-Qué debes decir:
-
-> El Site personal no es copiar el diario. El diario cuenta el proceso completo. El Site selecciona una evidencia y explica por qué demuestra aprendizaje.
-
-### Entregable 6 - Site de equipo H1
-
-Cuándo se pide:
-
-- S214 se empieza o se completa.
-- S215 se revisa antes de entrega final.
-
-Dónde se entrega:
-
-- En el Google Site de equipo.
-- En Moodle se entrega el enlace profundo a la página H1 del Site de equipo.
-
-Cómo se entrega:
-
-- Reto H1 explicado por el equipo.
-- Incremento conseguido.
-- Decisiones principales.
-- Pruebas realizadas.
-- Enlaces a repositorio, README y Scrum.
-- Review breve.
-- Retrospectiva breve.
-
-Qué debes decir:
-
-> El Site de equipo comunica el incremento del equipo. No es el diario de una persona ni una carpeta de enlaces sin explicar.
-
-### Entregable 7 - Entrega final Moodle H1
-
-Cuándo se pide:
-
-- Se anuncia desde S206.
-- Se prepara en S214.
-- Se entrega al final de S215 o en el plazo Moodle que hayas definido.
-
-Dónde se entrega:
-
-- En la tarea Moodle de H1.
-
-Cómo se entrega:
-
-- Pegando enlaces profundos, no carpetas genéricas.
-- Enlace al repositorio GitHub.
-- Enlace al README o repositorio que lo contiene.
-- Enlace al Site personal H1.
-- Enlace al Site de equipo H1.
-- Enlace al Sheet Scrum del equipo o sección H1.
-- Enlace a evidencia o prueba concreta si la tarea Moodle lo pide.
-- Confirmación de permisos comprobados.
-
-Qué debes decir:
-
-> Moodle es el cierre oficial. Si no está en Moodle, no está entregado oficialmente, aunque exista en Drive o GitHub. Moodle no necesita que copiéis todo: necesita enlaces profundos correctos y comprobables.
-
-## Ejemplos modelo de uso de cada entregable
-
-Estos ejemplos no son entregables adicionales. Sirven para enseñar al alumnado qué aspecto tiene una evidencia útil. Puedes proyectarlos, leerlos o pegarlos como modelo en Moodle si lo necesitas.
-
-### Ejemplo 1 - Diario individual
-
-Uso correcto:
-
-```text
-Fecha: 2026-10-02
-Sesión: S212
-Hito: H1
-Objetivo: leer un nombre ficticio con Scanner y usarlo en la salida.
-Acción realizada: añadí Scanner, pedí un nombre, guardé nextLine() en userName y lo concatené en el saludo.
-Prueba y resultado: ejecuté con Laura y salió "Hola, Laura." como esperaba.
-Evidencia enlazada: enlace profundo al commit o captura concreta de código + consola.
-Bloqueo: al principio leía el nombre pero no usaba la variable.
-Uso de IA: no.
-Siguiente paso: convertir una entrada numérica con parseInt.
-```
-
-Uso incorrecto:
-
-```text
-Hoy hice Scanner. Funciona.
-```
-
-Qué debes explicar:
-
-> El diario no es una redacción larga ni una frase vacía. Es una fila que permite reconstruir qué intentaste, qué hiciste, cómo lo comprobaste y qué toca después.
-
-### Ejemplo 2 - Scrum de equipo
-
-Uso correcto:
-
-```text
-Backlog H1 - Equipo Ada
-
-Tarea: Definir alcance H1
-Responsable: equipo completo
-Estado: hecho
-Evidencia: decisión S206 en Scrum
-
-Tarea: Implementar saludo con nombre ficticio
-Responsable: Laura y Samir
-Estado: en curso
-Evidencia: pendiente de commit
-
-Tarea: Probar entrada no convertible en parseInt
-Responsable: Irene
-Estado: bloqueado
-Bloqueo: no distingue error de compilación y ejecución
-Siguiente intento: reproducir ejemplo S212 con el profesor o pareja
-
-Decisión S209: usaremos mensajes breves, sin prometer IA ni memoria.
-```
-
-Uso incorrecto:
-
-```text
-Hacer Java. Responsable: todos. Estado: más o menos.
-```
-
-Qué debes explicar:
-
-> Scrum debe permitir ver trabajo real. Una tarea buena se puede empezar, terminar, bloquear o comprobar. Si no se puede comprobar, está escrita demasiado vaga.
-
-### Ejemplo 3 - Repositorio GitHub H1
-
-Estructura suficiente para H1:
-
-```text
-minijarvis-h1/
-├── README.md
-├── src/
-│   └── Main.java
-└── practicas-h1/
-    ├── S208-estructura.java
-    ├── S211-operaciones.java
-    └── S213-if-else.java
-```
-
-Ejemplo de commit útil:
-
-```text
-S212: leer nombre ficticio con Scanner
-```
-
-Ejemplo de commit poco útil:
-
-```text
-cambios
-```
-
-Qué debes explicar:
-
-> GitHub debe permitir localizar el código que se defiende. Si una micropráctica no entra limpia en `Main.java`, puede conservarse separada, pero debe tener nombre y propósito.
-
-### Ejemplo 4 - README H1
-
-Modelo mínimo:
-
-```markdown
-# MiniJarvis H1
-
-## Qué hace
-
-MiniJarvis muestra un saludo, pide un nombre ficticio y responde por consola. También calcula minutos a partir de horas de estudio y muestra si el objetivo mínimo se ha alcanzado.
-
-## Límites de H1
-
-No incluye menú, bucle principal, memoria, ficheros, clases propias complejas ni IA real.
-
-## Cómo ejecutar
-
-1. Abrir el proyecto en IntelliJ.
-2. Abrir `src/Main.java`.
-3. Ejecutar el método `main`.
-4. Introducir datos ficticios cuando la consola los pida.
-
-## Ejemplo de ejecución
-
-Entrada usada: Laura, 5
-Salida esperada:
-
-Hola, soy MiniJarvis.
-Escribe un nombre ficticio: Laura
-Encantado, Laura.
-Horas de estudio: 5
-Minutos equivalentes: 300
-Objetivo alcanzado.
-
-## Pruebas
-
-Caso A: hours = 5 -> Objetivo alcanzado.
-Caso B: hours = 2 -> Objetivo pendiente.
-Entrada no convertible: "hola" en parseInt falla durante la ejecución.
-```
-
-Qué debes explicar:
-
-> El README describe el producto real. Si pone que MiniJarvis recuerda conversaciones, pero H1 no tiene memoria, el README está mal aunque suene bonito.
-
-### Ejemplo 5 - Site personal H1
-
-Modelo de contenido:
-
-```text
-Reto H1 con mis palabras:
-Construir una primera versión de MiniJarvis por consola, pequeña y defendible.
-
-Mi aportación individual:
-Implementé y probé la lectura del nombre ficticio con Scanner.
-
-Decisión justificada:
-Usé userName en lugar de x porque el nombre permite entender qué dato se guarda.
-
-Dificultad o cambio:
-Al principio pensaba que nextLine() devolvía un número si escribía cifras. Lo corregí usando parseInt.
-
-Evidencia seleccionada:
-Enlace profundo a prueba S212.
-
-Qué demuestra:
-Demuestra que entiendo el flujo pedir -> leer -> guardar -> usar y que sé explicar un error de conversión.
-
-Uso de IA:
-No usé IA / Usé IA para preguntar por el error, pero lo validé ejecutando una prueba propia.
-
-Mejora siguiente:
-En H2 necesito probar mejor las entradas no válidas.
-```
-
-Qué debes explicar:
-
-> El Site personal no debe contener todo. Debe seleccionar una evidencia y explicar por qué demuestra aprendizaje individual.
-
-### Ejemplo 6 - Site de equipo H1
-
-Modelo de contenido:
-
-```text
-Reto H1:
-Crear un MiniJarvis mínimo por consola con entrada, salida, datos y una decisión sencilla.
-
-Incremento conseguido:
-El programa saluda, pide un nombre ficticio, calcula minutos a partir de horas y muestra si se alcanza un objetivo.
-
-Decisiones del equipo:
-No incluimos menú ni memoria porque pertenecen a hitos posteriores.
-Elegimos mensajes claros y cortos para no prometer funciones inexistentes.
-
-Pruebas realizadas:
-Prueba de saludo con Laura.
-Prueba de hours = 5.
-Prueba de hours = 2.
-Prueba de entrada no convertible.
-
-Enlaces:
-Repositorio GitHub.
-README H1.
-Scrum H1.
-
-Review:
-El incremento cumple el alcance definido en S206.
-
-Retrospectiva:
-Funcionó revisar por parejas. Debemos actualizar Scrum antes y no después de programar.
-```
-
-Qué debes explicar:
-
-> El Site de equipo cuenta el incremento colectivo. No sustituye a la defensa individual ni al diario personal.
-
-### Ejemplo 7 - Entrega Moodle H1
-
-Texto modelo para pegar en Moodle:
-
-```text
-Equipo: Ada
-Integrantes: Laura, Samir, Irene
-
-Repositorio GitHub:
-https://...
-
-README H1:
-https://...
-
-Site personal H1 de Laura:
-https://...
-
-Site personal H1 de Samir:
-https://...
-
-Site personal H1 de Irene:
-https://...
-
-Site equipo H1:
-https://...
-
-Scrum equipo H1:
-https://...
-
-Evidencia de ejecución:
-https://...
-
-Permisos comprobados: sí
-Observaciones o bloqueo pendiente: ninguno / queda pendiente defender conversión de entrada no válida.
-```
-
-Uso incorrecto:
-
-```text
-Está todo en Drive.
-```
-
-Qué debes explicar:
-
-> Moodle es el índice oficial de entrega. No quiero una carpeta general ni una frase. Quiero enlaces profundos que me lleven directamente a lo que debo revisar.
-
-## Píldoras H1 integradas en el guion
-
-Estas píldoras proceden de `01-ALUMNADO/03-SESIONES/h1/pildoras/`. No sustituyen a los archivos completos del alumnado; son una versión docente integrada para saber cuándo usarlas y qué idea leer en voz alta.
-
-### Píldora S206 - Alcance y calidad de H1
-
-Cuándo usarla:
-
-- Durante S206, después de presentar el reto y antes de clasificar qué entra y qué queda fuera.
-
-Di en voz alta:
-
-> Un primer programa debe ser correcto, eficiente y mantenible. Correcto significa que hace lo pedido y podemos comprobarlo. Eficiente, en H1, no significa que vaya rapidísimo: significa que no añade complejidad innecesaria. Mantenible significa que se entiende y se puede modificar sin romperlo fácilmente.
-
-Ejemplo para proyectar:
-
-```java
-final String ASSISTANT_NAME = "MiniJarvis";
-String userName = "Laura";
-System.out.println("Hola, soy " + ASSISTANT_NAME + ".");
-System.out.println("Encantado, " + userName + ".");
-```
-
-Pregunta al alumnado:
-
-> Qué requisito demuestra cada línea visible, qué parte quitarías si no pertenece a H1 y qué nombre ayuda a entender el código.
-
-Error frecuente que debes cortar:
-
-> Compilar no basta para decir que es correcto. Falta comprobar comportamiento.
-
-### Píldora S207 - Del código a la consola
-
-Cuándo usarla:
-
-- Durante S207, antes de la primera ejecución y otra vez cuando aparezca el primer error.
-
-Di en voz alta:
-
-> El recorrido básico es código fuente, compilación, ejecución y consola. Escribir es modificar `Main.java`. Compilar es comprobar y traducir. Ejecutar es poner en marcha. La consola es donde observamos el resultado.
-
-Ejemplo para proyectar:
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("MiniJarvis arranca");
-    }
-}
-```
-
-Salida esperada:
-
-```text
-MiniJarvis arranca
-```
-
-Pregunta al alumnado:
-
-> Señala dónde está el código fuente, qué ocurre antes de la consola y cómo sabes que se ha ejecutado.
-
-Error frecuente que debes cortar:
-
-> No reescribas todo si falla. Lee el primer error y decide si es código o configuración.
-
-### Píldora S208 - Estructura y escritura de Java
-
-Cuándo usarla:
-
-- Durante S208, al explicar clase, archivo, `main`, delimitadores, identificadores y comentarios.
-
-Di en voz alta:
-
-> En estos primeros programas, el archivo se llama `Main.java`, la clase pública se llama `Main` y el método `main` es el punto de entrada. Java distingue mayúsculas y necesita delimitadores: punto y coma, llaves, paréntesis y comillas.
-
-Ejemplo para proyectar:
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        // Usamos un nombre ficticio para no publicar datos personales.
-        String userName = "Laura";
-        System.out.println("Hola, " + userName + ".");
-    }
-}
-```
-
-Pregunta al alumnado:
-
-> Señala clase, punto de entrada, una instrucción visible, un identificador y un comentario útil.
-
-Error frecuente que debes cortar:
-
-> `String` no es `string`. `Main` no es `main`. Las mayúsculas importan.
-
-### Píldora S209 - Mensajes claros y concatenación
-
-Cuándo usarla:
-
-- Durante S209, antes de abrir el IDE para obligar a idear la salida.
-
-Di en voz alta:
-
-> La consola también es una interfaz. Aunque sea texto, la persona usuaria debe entender qué ocurre, qué se le pide y qué resultado obtiene. Además, no debemos prometer funciones que H1 no tiene.
-
-Ejemplo para comparar:
-
-```text
-MJ v1
-ok
-```
-
-Frente a:
-
-```text
-Hola, soy MiniJarvis.
-Escribe un nombre ficticio: Laura
-Encantado, Laura.
-Fin de la primera prueba.
-```
-
-Ejemplo de concatenación:
-
-```java
-String userName = "Laura";
-System.out.println("Hola, " + userName + ".");
-```
-
-Pregunta al alumnado:
-
-> Qué salida ayuda más, qué dato cambia y dónde hacen falta espacios o signos.
-
-Error frecuente que debes cortar:
-
-> No escribáis `Puedo recordar todo` si H1 no tiene memoria.
-
-### Píldora S210 - Variables, tipos y nombres
-
-Cuándo usarla:
-
-- Durante S210, antes de la tabla de datos y antes de implementar variables.
-
-Di en voz alta:
-
-> Una variable es una zona de memoria identificada por un nombre. El tipo indica qué clase de dato puede guardar. El valor puede cambiar. La variable no es lo mismo que su valor actual.
-
-Ejemplo para proyectar:
-
-```java
-int studyHours = 4;
-String userName = "Laura";
-boolean goalReached = true;
-
-studyHours = 5;
-```
-
-Pregunta al alumnado:
-
-> Identifica tipo, nombre y valor. Qué variable ha cambiado y por qué no se repite `int` al asignar de nuevo.
-
-Error frecuente que debes cortar:
-
-> `String` no sirve para todo. Elegimos el tipo según lo que necesitamos representar y hacer con el dato.
-
-### Píldora S211 - Constantes, literales y operaciones
-
-Cuándo usarla:
-
-- Durante S211, antes de introducir `final`, división entera, `%` y actualización.
-
-Di en voz alta:
-
-> Una constante representa un dato que no debe cambiar durante la ejecución. Un literal es un valor escrito directamente. Una operación produce un resultado, pero ese resultado se pierde si no lo guardamos, mostramos o usamos.
-
-Ejemplo para proyectar:
-
-```java
-final String ASSISTANT_NAME = "MiniJarvis";
-int hours = 5;
-int minutes = hours * 60;
-int half = 5 / 2;
-int remaining = 10 % 4;
-```
-
-Pregunta al alumnado:
-
-> Predice `minutes`, `half` y `remaining`. Explica por qué `%` no significa porcentaje.
-
-Error frecuente que debes cortar:
-
-> `5 / 2` con enteros da `2`, no `2.5`.
-
-### Píldora S212 - Scanner y conversiones
-
-Cuándo usarla:
-
-- Durante S212, al pasar de datos escritos en código a datos introducidos por consola.
-
-Di en voz alta:
-
-> `Scanner` permite leer lo que una persona escribe. `nextLine()` devuelve siempre un `String`. Si queremos calcular con un número escrito por teclado, necesitamos parsear ese texto.
-
-Ejemplo para proyectar:
-
-```java
-import java.util.Scanner;
-
-Scanner scanner = new Scanner(System.in);
-System.out.print("Escribe un nombre ficticio: ");
-String userName = scanner.nextLine();
-System.out.println("Hola, " + userName + ".");
-scanner.close();
-```
-
-Ejemplo de parseo:
-
-```java
-String text = "5";
-int hours = Integer.parseInt(text);
-int minutes = hours * 60;
-```
-
-Pregunta al alumnado:
-
-> Qué devuelve `nextLine`, qué guarda `userName`, qué convierte `parseInt` y cuándo falla `Integer.parseInt("hola")`.
-
-Error frecuente que debes cortar:
-
-> Que el texto contenga cifras no lo convierte automáticamente en número.
-
-### Píldora S213 - Comparaciones, lógica y decisiones
-
-Cuándo usarla:
-
-- Durante S213, antes de `if/else` y antes de pedir las dos pruebas.
-
-Di en voz alta:
-
-> Una comparación produce un booleano: `true` o `false`. `=` asigna; `==` compara. `if` necesita una condición booleana. En H1 hacemos decisiones pequeñas; menús y decisiones encadenadas vendrán en H2.
-
-Ejemplo para proyectar:
-
-```java
-int hours = 5;
-boolean enough = hours >= 4;
-
-if (enough) {
-    System.out.println("Objetivo alcanzado");
-} else {
-    System.out.println("Objetivo pendiente");
-}
-```
-
-Pregunta al alumnado:
-
-> Qué pasa con `hours = 5`, qué pasa con `hours = 2`, qué rama se ejecuta y qué evidencia demuestra cada caso.
-
-Error frecuente que debes cortar:
-
-> Probar solo el caso `true` no demuestra el `else`.
-
-### Píldora S214 - README y evidencias
-
-Cuándo usarla:
-
-- Durante S214, antes de documentar y antes de preparar Moodle.
-
-Di en voz alta:
-
-> Documentar no significa copiar la misma información en muchos sitios. Cada espacio responde a una pregunta: README explica cómo ejecutar; diario cuenta el proceso personal; Site personal selecciona aprendizaje; Site de equipo comunica el incremento; Moodle recoge enlaces oficiales.
-
-Ejemplo de evidencia verificable:
-
-```text
-Prueba: saludo con nombre ficticio.
-Entrada usada: Laura.
-Salida esperada: Encantado, Laura.
-Salida obtenida: Encantado, Laura.
-Demuestra: la entrada leída se guarda y se usa en la salida.
-Enlace: archivo o captura concreta, no carpeta general.
-```
-
-Pregunta al alumnado:
-
-> Qué demuestra esta evidencia, dónde debería estar enlazada y por qué no basta con escribir `funciona`.
-
-Error frecuente que debes cortar:
-
-> No enlacéis carpetas generales. Enlazad la evidencia concreta.
-
 ## Rutina fija para cada sesión
 
 Usa esta rutina aunque la sesión cambie de contenido.
@@ -856,6 +119,17 @@ Usa esta rutina aunque la sesión cambie de contenido.
 Di en voz alta cuando haya código:
 
 > Antes de ejecutar, escribe o di qué esperas que ocurra. Programar no es pulsar ejecutar hasta que algo salga. Programar es predecir, ejecutar, comparar y corregir.
+
+Cuando utilices un ejemplo técnico, sigue esta secuencia breve:
+
+1. Proyecta el ejemplo.
+2. Pide una predicción antes de ejecutar.
+3. Ejecuta o simula el resultado.
+4. Pide explicar qué ha ocurrido.
+5. Cambia un único elemento.
+6. Vuelve a pedir predicción.
+
+Puedes convertir cualquier ejemplo en una de estas tarjetas rápidas de aula: proyecta y predice, error para localizar, modifica una línea, microdefensa, contraste de alternativas o traza del valor paso a paso.
 
 ## S206 - Activar - Presentar H1 y delimitar alcance
 
@@ -906,6 +180,31 @@ Di en voz alta:
 Di en voz alta:
 
 > En H1 sí entra: saludo, mensajes por consola, variables, constantes, entrada y salida, operaciones sencillas, comparación, una decisión básica y explicación. En H1 no entra: menús, bucles, memoria, ficheros, clases complejas, persistencia ni IA real. Eso llegará más adelante.
+
+### Explicación guiada: alcance y calidad de H1
+
+Úsala ahora, antes de que clasifiquen qué entra y qué queda fuera.
+
+Di en voz alta:
+
+> Un primer programa debe ser correcto, eficiente y mantenible. Correcto significa que hace lo pedido y podemos comprobarlo. Eficiente, en H1, no significa que vaya rapidísimo: significa que no añade complejidad innecesaria. Mantenible significa que se entiende y se puede modificar sin romperlo fácilmente.
+
+Ejemplo para proyectar:
+
+```java
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+String nombreUsuario = "Laura";
+System.out.println("Hola, soy " + NOMBRE_ASISTENTE + ".");
+System.out.println("Encantado, " + nombreUsuario + ".");
+```
+
+Pregunta al alumnado:
+
+> Qué requisito demuestra cada línea visible, qué parte quitarías si no pertenece a H1 y qué nombre ayuda a entender el código.
+
+Error frecuente que debes cortar:
+
+> Compilar no basta para decir que es correcto. Falta comprobar comportamiento.
 
 ### Investigación del alumnado
 
@@ -959,6 +258,29 @@ Dónde y cómo:
 - Formato: texto breve, fechado como S206.
 - No aceptar: frases como `hacer que funcione` sin comprobar.
 
+Modelo de uso del Scrum en S206:
+
+```text
+Backlog H1 - Equipo Ada
+
+Tarea: Definir alcance H1
+Responsable: equipo completo
+Estado: hecho
+Evidencia: decisión S206 en Scrum
+
+Decisión S206:
+En H1 entra saludo, entrada/salida, variables, constantes, una operación y una decisión sencilla.
+Queda fuera menú, memoria, ficheros e IA real.
+```
+
+Modelo que no debes aceptar:
+
+```text
+Tarea: hacer Java
+Responsable: todos
+Estado: más o menos
+```
+
 Pide también:
 
 > Cada persona debe crear una entrada de diario individual de S206.
@@ -968,6 +290,21 @@ Dónde y cómo:
 - Diario individual en Sheets.
 - Una fila con objetivo, decisión de alcance, evidencia enlazada si existe, bloqueo si existe y siguiente paso.
 - No se sube a Moodle hoy.
+
+Modelo de uso del diario en S206:
+
+```text
+Fecha: 2026-10-02
+Sesión: S206
+Hito: H1
+Objetivo: entender qué entra y qué queda fuera de H1.
+Acción realizada: clasifiqué propuestas del reto con mi equipo.
+Prueba y resultado: puedo explicar que H1 no tendrá menú ni memoria porque pertenecen a hitos posteriores.
+Evidencia enlazada: decisión S206 en Scrum del equipo.
+Bloqueo: ninguno.
+Uso de IA: no.
+Siguiente paso: crear y ejecutar el primer Main.java.
+```
 
 ### Cierre docente
 
@@ -1011,7 +348,7 @@ Demuestra lentamente:
 
 ```java
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] argumentos) {
         System.out.println("Hola, soy MiniJarvis.");
     }
 }
@@ -1020,6 +357,38 @@ public class Main {
 Mientras demuestras, di:
 
 > Mirad primero, no copiéis todavía. Señalo el archivo, señalo el botón de ejecución y señalo la consola. Ahora vamos a comprobar qué parte es código y qué parte es resultado.
+
+### Explicación guiada: del código a la consola
+
+Úsala antes de la primera ejecución y repítela cuando aparezca el primer error.
+
+Di en voz alta:
+
+> El recorrido básico es código fuente, compilación, ejecución y consola. Escribir es modificar `Main.java`. Compilar es comprobar y traducir. Ejecutar es poner en marcha. La consola es donde observamos el resultado.
+
+Ejemplo para proyectar:
+
+```java
+public class Main {
+    public static void main(String[] argumentos) {
+        System.out.println("MiniJarvis arranca");
+    }
+}
+```
+
+Salida esperada:
+
+```text
+MiniJarvis arranca
+```
+
+Pregunta al alumnado:
+
+> Señala dónde está el código fuente, qué ocurre antes de la consola y cómo sabes que se ha ejecutado.
+
+Error frecuente que debes cortar:
+
+> No reescribas todo si falla. Lee el primer error y decide si es código o configuración.
 
 ### Investigación del alumnado
 
@@ -1062,6 +431,22 @@ Dónde y cómo:
 - Scrum de equipo: marcar tarea `primera ejecución` como hecha o bloqueada.
 - Moodle: no se entrega todavía; se enlazará al final de H1.
 
+Modelo de uso de GitHub/evidencia en S207:
+
+```text
+Repositorio: minijarvis-h1
+Archivo: src/Main.java
+Commit útil: S207: primera ejecución por consola
+Evidencia: código con System.out.println y salida visible en consola.
+Frase de diario: Sé que se ha ejecutado porque la consola muestra el mensaje que predije.
+```
+
+Modelo de commit poco útil:
+
+```text
+cambios
+```
+
 Qué no aceptar:
 
 - Captura solo de consola sin código.
@@ -1102,17 +487,167 @@ Di en voz alta mientras proyectas código:
 
 > `public class Main` define la clase pública. En estos programas iniciales, el archivo se llama `Main.java` y la clase pública se llama `Main`. `main` es el punto de entrada: por ahí empieza la ejecución. `System.out.println` es una instrucción que produce salida visible. Las llaves delimitan bloques. El punto y coma cierra instrucciones.
 
-Código de referencia:
+### Explicación guiada: clase, archivo, escritura precisa, nombres y comentarios
+
+Usa esta explicación como una secuencia breve de ejemplos. No la conviertas en teoría larga: proyecta, pide predicción, corrige y haz que señalen el elemento exacto.
+
+Di en voz alta:
+
+> En estos primeros programas, el archivo se llama `Main.java`, la clase pública se llama `Main` y el método `main` es el punto de entrada. Java distingue mayúsculas y necesita delimitadores: punto y coma, llaves, paréntesis y comillas.
+
+Ejemplo para proyectar:
 
 ```java
 public class Main {
-    public static void main(String[] args) {
-        // Presenta la version actual.
+    public static void main(String[] argumentos) {
         System.out.println("Hola");
-        System.out.println("MiniJarvis arranca");
     }
 }
 ```
+
+Pregunta al alumnado:
+
+> Señala clase, punto de entrada, una instrucción visible, un identificador y un comentario útil.
+
+Error frecuente que debes cortar:
+
+> `String` no es `string`. `Main` no es `main`. Las mayúsculas importan.
+
+Contrasta ahora la relación archivo-clase con este caso:
+
+```java
+// Archivo: Main.java
+public class MiniJarvis {
+    public static void main(String[] argumentos) {
+        System.out.println("Hola");
+    }
+}
+```
+
+Pregunta:
+
+> Qué relación no se cumple aquí.
+
+Respuesta esperada:
+
+```text
+Main.java no coincide con public class MiniJarvis.
+```
+
+Aclara la diferencia entre `Main` y `main`:
+
+```java
+public class Main {
+    public static void main(String[] argumentos) {
+        System.out.println("MiniJarvis");
+    }
+}
+```
+
+Di:
+
+> `Main` es el nombre de la clase. `main` es el método donde comienza la ejecución.
+
+Haz una predicción de orden:
+
+```java
+public class Main {
+    public static void main(String[] argumentos) {
+        System.out.println("UNO");
+        System.out.println("DOS");
+    }
+}
+```
+
+Pregunta:
+
+> Aparecerá primero UNO o DOS. Explica por qué.
+
+Trabaja errores de escritura sin ejecutar primero:
+
+```java
+public static void main(string[] argumentos) {
+    System.out.println("Hola");
+}
+```
+
+```java
+System.out.println("Hola")
+System.out.println("MiniJarvis");
+```
+
+```java
+System.out.println("Hola);
+```
+
+```java
+System.out.println("Hola";
+```
+
+```java
+public class Main {
+    public static void main(String[] argumentos) {
+        System.out.println("Hola");
+}
+```
+
+Pide para cada caso:
+
+> Localiza el error, di qué delimitador o escritura falla y predice si compila.
+
+Después clasifica nombres. Proyecta solo los nombres, no el código completo:
+
+```text
+nombreUsuario       válido y claro
+horasEstudio     válido y claro
+nombreAsistente  válido y claro
+x              válido pero pobre
+a              válido pero pobre
+dato           válido pero pobre
+cosa           válido pero pobre
+1nombre        no válido
+nombre1        válido
+horas estudio  no válido
+horasEstudio     válido
+class          no válido
+public         no válido
+nombreClase      válido
+```
+
+Pregunta:
+
+> Sin ver el resto del programa, qué esperas que almacene cada nombre. Si nadie puede responder, probablemente el nombre sea mejorable.
+
+Termina con comentarios útiles. Contrasta:
+
+```java
+// Muestra Hola
+System.out.println("Hola");
+```
+
+```java
+// Primer mensaje que identifica al asistente
+System.out.println("Hola, soy MiniJarvis");
+```
+
+```java
+// Declara horasEstudio
+int horasEstudio = 4;
+
+// Valor inicial usado en la demostración
+int horasPractica = 4;
+```
+
+```java
+/*
+ * Primera versión de MiniJarvis.
+ * De momento solo muestra mensajes por consola.
+ */
+```
+
+Di:
+
+> Un comentario útil explica intención o contexto. Un comentario pobre repite lo que ya se lee en la instrucción.
 
 ### Investigación del alumnado
 
@@ -1159,6 +694,17 @@ Qué debe contener la evidencia:
 - Salida observada.
 - Explicación de una regla sintáctica.
 
+Modelo de uso de evidencia S208:
+
+```text
+Archivo: practicas-h1/S208-estructura-minima.java
+Prueba: estructura mínima ejecutada con dos mensajes.
+Error provocado: escribí string en lugar de String.
+Hipótesis: Java distingue mayúsculas.
+Corrección: cambié string por String.
+Resultado: compila y muestra los mensajes esperados.
+```
+
 ### Cierre docente
 
 Di en voz alta:
@@ -1195,16 +741,120 @@ Di en voz alta:
 
 > `System.out.println` no solo sirve para sacar texto. Sirve para comunicarse con la persona que ejecuta el programa. Un buen mensaje dice qué ocurre, qué se pide y qué resultado se obtiene. Además, si queremos mezclar texto fijo con datos, usamos concatenación.
 
-Ejemplo:
+### Explicación guiada: la consola como interfaz y concatenación
 
-```java
-String userName = "Laura";
-System.out.println("Hola, " + userName + ".");
+Úsala antes de abrir el IDE, para obligar a idear la salida.
+
+Di en voz alta:
+
+> La consola también es una interfaz. Aunque sea texto, la persona usuaria debe entender qué ocurre, qué se le pide y qué resultado obtiene. Además, no debemos prometer funciones que H1 no tiene.
+
+Compara estos mensajes con el alumnado:
+
+```text
+correcto
 ```
 
-Di:
+Frente a:
 
-> Aquí `+` no está sumando números. Está uniendo texto con el valor de una variable.
+```text
+MiniJarvis se ha iniciado correctamente.
+```
+
+```text
+Dato:
+```
+
+Frente a:
+
+```text
+Escribe tu nombre:
+```
+
+```text
+5
+```
+
+Frente a:
+
+```text
+Horas de estudio registradas: 5
+```
+
+```text
+String nombreUsuario initialized successfully.
+```
+
+Frente a:
+
+```text
+Hola, Laura.
+```
+
+```text
+Analizando tus datos con inteligencia artificial...
+```
+
+Frente a:
+
+```text
+Hola, soy MiniJarvis. Esta es mi primera versión por consola.
+```
+
+Pregunta al alumnado:
+
+> Qué salida ayuda más, qué dato cambia y dónde hacen falta espacios o signos.
+
+Error frecuente que debes cortar:
+
+> No escribáis `Puedo recordar todo` si H1 no tiene memoria.
+
+Di también:
+
+> El mensaje debe estar pensado para quien usa el programa, no para demostrarle que sabemos Java.
+
+Trabaja ahora literal de texto y concatenación con predicción:
+
+```java
+System.out.println("Hola");
+```
+
+Pregunta:
+
+> Qué parte ha escrito exactamente quien programa.
+
+```java
+String nombreUsuario = "Laura";
+System.out.println("Hola, " + nombreUsuario);
+```
+
+Salida esperada:
+
+```text
+Hola, Laura
+```
+
+```java
+String nombreUsuario = "Laura";
+String nombreAsistente = "MiniJarvis";
+System.out.println("Hola, " + nombreUsuario + ". Soy " + nombreAsistente + ".");
+```
+
+```java
+int horasEstudio = 4;
+System.out.println("Has estudiado " + horasEstudio + " horas.");
+```
+
+Predicción obligatoria:
+
+```java
+System.out.println(2 + 3);
+System.out.println("Resultado: " + 2 + 3);
+```
+
+Pregunta:
+
+> Predice ambas salidas antes de ejecutar y explica por qué el signo `+` no se comporta igual en las dos líneas.
 
 ### Investigación del alumnado
 
@@ -1251,6 +901,15 @@ Qué debe aparecer:
 - Por qué se elige.
 - Qué se cambió después de verlo ejecutado.
 
+Modelo de uso de decisión de mensajes:
+
+```text
+Decisión S209:
+Elegimos "Hola, soy MiniJarvis" y "Escribe un nombre ficticio" porque son claros y no piden datos personales reales.
+Descartamos "MJ v1 correcto" porque no explica qué ocurre.
+Después de ejecutar añadimos un punto final y un espacio tras la coma para mejorar la lectura.
+```
+
 ### Cierre docente
 
 Di en voz alta:
@@ -1287,16 +946,193 @@ Di en voz alta:
 
 > Una variable es una zona de memoria con nombre que guarda un dato. El tipo indica qué clase de dato puede guardar. El nombre debe ayudar a entender para qué sirve. En Java, declarar, inicializar y asignar no son exactamente lo mismo.
 
-Ejemplo:
+### Explicación guiada: variable, tipo, nombre y asignación
+
+Úsala antes de la tabla de datos y antes de implementar variables.
+
+Di en voz alta:
+
+> Una variable es una zona de memoria identificada por un nombre. El tipo indica qué clase de dato puede guardar. El valor puede cambiar. La variable no es lo mismo que su valor actual.
+
+Empieza con el cambio de valor:
 
 ```java
-int studyHours = 4; // declara e inicializa
-studyHours = 5;     // asigna otro valor
+int horasEstudio = 4;
+horasEstudio = 5;
 ```
 
 Di:
 
-> El tipo `int` se escribe al declarar. No se repite cada vez que cambia el valor.
+> La variable permanece; lo que cambia es el valor guardado. Primero `horasEstudio` vale 4 y después vale 5.
+
+Contrasta variable y valor:
+
+```java
+String nombreUsuario = "Laura";
+```
+
+Pregunta:
+
+> Qué es `nombreUsuario` y qué es `"Laura"`.
+
+Muestra dos variables con el mismo valor:
+
+```java
+int horasEstudio = 4;
+int horasPractica = 4;
+```
+
+Pregunta:
+
+> Hay una variable o dos. Qué pasaría si después cambia solo `horasEstudio`.
+
+Traza una variable que cambia:
+
+```java
+int tareas = 2;
+System.out.println(tareas);
+tareas = 3;
+System.out.println(tareas);
+```
+
+Pregunta:
+
+> Predice la primera y la segunda salida.
+
+Presenta cinco tipos de uso inmediato:
+
+```java
+String nombreUsuario = "Laura";
+int horasEstudio = 4;
+double notaMedia = 7.5;
+boolean objetivoAlcanzado = true;
+char inicial = 'L';
+```
+
+Pide completar oralmente:
+
+```text
+Nombre -> String
+Horas de estudio -> int
+Nota media -> double
+Objetivo alcanzado -> boolean
+Inicial -> char
+```
+
+### Microexplicación: mapa mínimo de tipos de Java
+
+No conviertas este momento en una tabla para memorizar. El objetivo es que el alumnado reconozca que Java ofrece varios tipos y que en H1 usaremos solo los más útiles para el reto.
+
+Proyecta:
+
+```text
+TIPOS PRIMITIVOS
+
+Enteros      -> byte, short, int, long
+Decimales    -> float, double
+Carácter     -> char
+Lógico       -> boolean
+
+En H1 usaremos principalmente:
+int, double, char y boolean.
+```
+
+Di en voz alta:
+
+> No tenéis que memorizar ahora rangos ni tamaños. Lo importante es reconocer que existen varios tipos y elegir uno coherente con el dato y con las operaciones que necesitaremos hacer.
+
+Haz una comprobación rápida:
+
+> Si quiero guardar una edad, una nota media, una inicial y si una tarea está terminada, qué tipo elegiríais para cada dato.
+
+### Microexplicación: tipo primitivo y tipo de referencia
+
+Añade después:
+
+```text
+int, double, char, boolean -> tipos primitivos
+String                     -> tipo de referencia; String es una clase
+```
+
+Di en voz alta:
+
+> En H1 nos basta con distinguir dos ideas. Los tipos como `int`, `double`, `char` o `boolean` son primitivos. `String`, en cambio, no es un tipo primitivo: es una clase que Java nos ofrece para trabajar con texto. En el tema siguiente entenderemos mejor qué significa trabajar con objetos y referencias.
+
+No profundices todavía en memoria, identidad de objetos ni constructores. La finalidad de esta distinción es preparar el uso de `String`, `Scanner` y las comparaciones posteriores sin adelantar RA2.
+
+Pregunta de criterio:
+
+> Un número de teléfono contiene dígitos. Lo guardarías como número si no vas a hacer cálculos matemáticos con él.
+
+Trabaja renombrado:
+
+```java
+int x = 4;
+// mejor:
+int horasEstudio = 4;
+
+String s = "MiniJarvis";
+// mejor:
+String nombreAsistente = "MiniJarvis";
+
+boolean b = true;
+// mejor:
+boolean objetivoAlcanzado = true;
+
+double n = 7.5;
+// mejor:
+double notaMedia = 7.5;
+```
+
+Dinámica rápida:
+
+> Muestro solo el nombre de la variable. Decid qué dato esperáis encontrar. Si nadie puede responder, el nombre debe mejorar.
+
+Por último, separa declarar, inicializar y asignar:
+
+```java
+int horasEstudio;
+```
+
+```java
+int horasEstudio = 4;
+```
+
+```text
+int horasEstudio = 4
+tipo nombre valor inicial
+```
+
+```java
+horasEstudio = 5;
+```
+
+```java
+int horasEstudio;
+horasEstudio = 4;
+System.out.println(horasEstudio);
+horasEstudio = 5;
+System.out.println(horasEstudio);
+```
+
+Aclara:
+
+> No se vuelve a escribir el tipo si se modifica la variable existente.
+
+Y corta esta confusión:
+
+```java
+int tareas = 2;
+tareas = 5;
+```
+
+Di:
+
+> Esto no significa que 2 sea igual a 5. Significa: guarda ahora 5 en `tareas`.
+
+Error frecuente que debes cortar:
+
+> `String` no sirve para todo. Elegimos el tipo según lo que necesitamos representar y hacer con el dato.
 
 ### Investigación del alumnado
 
@@ -1339,6 +1175,22 @@ Qué revisar:
 - Que no repitan valores fijos por todas partes.
 - Que sepan distinguir variable y valor.
 
+Modelo de uso del plan de datos:
+
+```text
+Dato: nombre ficticio
+Tipo: String
+Nombre: nombreUsuario
+Cambia: sí, lo escribe la persona usuaria
+Uso: personalizar el saludo
+
+Dato: horas de estudio
+Tipo: int
+Nombre: horasEstudio
+Cambia: sí
+Uso: calcular minutos y decidir si alcanza el objetivo
+```
+
 ### Cierre docente
 
 Di en voz alta:
@@ -1375,18 +1227,212 @@ Di en voz alta:
 
 > Una constante es un dato que no debe cambiar durante la ejecución. En Java usamos `final`. Un literal es un valor escrito directamente en el código, como `5`, `3.5`, `"Hola"`, `'A'`, `true` o `false`. Una operación produce un resultado; si queremos usarlo, debemos mostrarlo o guardarlo.
 
-Ejemplos:
+### Explicación guiada: constantes, literales, operaciones, resto y actualización
+
+Úsala antes de introducir `final`, división entera, `%` y actualización.
+
+Di en voz alta:
+
+> Una constante representa un dato que no debe cambiar durante la ejecución. Un literal es un valor escrito directamente. Una operación produce un resultado, pero ese resultado se pierde si no lo guardamos, mostramos o usamos.
+
+Empieza con constantes y variables:
 
 ```java
-final String ASSISTANT_NAME = "MiniJarvis";
-final int START_YEAR = 2026;
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+final int ANIO_INICIO = 2026;
+```
 
-int minutes = studyHours * 60;
+Pregunta al alumnado:
+
+> Esperamos que estos datos cambien durante la ejecución.
+
+Contrasta constante y variable:
+
+```java
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+int horasEstudio = 3;
+horasEstudio = 4;
+```
+
+Aclara:
+
+> Un dato puede empezar siempre igual y no ser constante si está pensado para cambiar.
+
+```java
+int tareas = 0;
+```
+
+Presenta literales:
+
+```text
+5
+3.5
+"Hola"
+'A'
+true
+false
+```
+
+Clasifica con ejemplos:
+
+```java
+int horas = 5;
+double nota = 7.5;
+String mensaje = "Hola";
+char inicial = 'L';
+boolean terminada = false;
+```
+
+Pregunta:
+
+> Qué diferencia hay entre `'L'` y `"L"`.
+
+### Microexplicación: una expresión produce un resultado
+
+Antes de seguir con las operaciones, fija explícitamente la palabra `expresión`.
+
+Proyecta:
+
+```java
+3 + 2
+horas * 60
+horas >= 4
+tieneNombre && tieneObjetivo
+"Hola, " + nombreUsuario
+```
+
+Di en voz alta:
+
+> Una expresión combina valores, variables u operadores y produce un resultado. Ese resultado también tiene un tipo. Entender qué resultado produce una expresión será más importante que memorizar símbolos.
+
+Relaciona cada expresión con su resultado:
+
+```text
+3 + 2                    -> int
+5 / 2.0                  -> double
+horas >= 4               -> boolean
+"Hola, " + nombreUsuario      -> String
+```
+
+Pregunta:
+
+> Antes de ejecutar, qué valor y qué tipo esperas que produzca cada expresión.
+
+Trabaja operaciones aritméticas:
+
+```java
+int horasTotales = 3 + 2;
+```
+
+```java
+int dias = 5;
+int horasPorDia = 2;
+int horasTotales = dias * horasPorDia;
+```
+
+```java
+int minutos = 4 * 60;
+System.out.println(minutos);
+```
+
+Contrasta con resultado ignorado:
+
+```java
+4 * 60;
+```
+
+Pregunta:
+
+> Dónde queda guardado el resultado para utilizarlo después.
+
+Predice división entera y real:
+
+```java
+int divisionEntera = 5 / 2;
+double divisionReal = 5 / 2.0;
+```
+
+Pregunta:
+
+> Qué vale `divisionEntera` y qué vale `divisionReal`.
+
+### Micropráctica: precedencia y paréntesis
+
+No pidas memorizar una tabla completa de precedencia. Trabaja solo la idea de que Java no siempre evalúa de izquierda a derecha y que los paréntesis permiten hacer explícito el orden que queremos.
+
+Proyecta y pide predicción antes de ejecutar:
+
+```java
+int resultadoSinParentesis = 2 + 3 * 4;
+int resultadoConParentesis = (2 + 3) * 4;
+```
+
+Pregunta:
+
+> Cuánto vale `resultadoSinParentesis`, cuánto vale `resultadoConParentesis` y qué han cambiado los paréntesis.
+
+Después añade:
+
+```java
+double resultado = 10 + 6 / 2.0;
+```
+
+Pide que expliquen qué operación se realiza primero.
+
+Di en voz alta:
+
+> Cuando varias operaciones aparecen en una expresión, existe un orden de precedencia. No necesitamos memorizar hoy toda la tabla. Sí necesitamos predecir el resultado y usar paréntesis cuando queramos hacer explícito el orden y mejorar la lectura.
+
+Regla práctica para H1:
+
+> Si dudas del orden o quien lee el código puede dudar, usa paréntesis y comprueba el resultado con una predicción.
+
+Explica `%` como resto, no como porcentaje:
+
+```text
+10 / 4 -> 2
+10 % 4 -> 2
+
+8 % 2 -> 0
+9 % 2 -> 1
+
+17 / 5 -> 3
+17 % 5 -> 2
 ```
 
 Di:
 
-> Cuidado con `5 / 2`. Si ambos son enteros, el resultado entero es `2`. Para obtener `2.5`, necesitamos un decimal, por ejemplo `5 / 2.0`.
+> Diez caramelos entre cuatro personas: dos para cada una y sobran dos. `%` expresa lo que sobra.
+
+Termina con actualización:
+
+```java
+int tareas = 3;
+tareas = tareas + 2;
+tareas += 2;
+tareas -= 1;
+tareas++;
+tareas--;
+```
+
+Traza paso a paso:
+
+```java
+int tareas = 2;
+tareas += 3;
+tareas--;
+tareas++;
+```
+
+Resultado esperado:
+
+```text
+2 -> 5 -> 4 -> 5
+```
+
+Error frecuente que debes cortar:
+
+> `5 / 2` con enteros da `2`, no `2.5`.
 
 ### Investigación del alumnado
 
@@ -1429,6 +1475,15 @@ Qué debe contener:
 - Una operación comprobable.
 - Evidencia de resultado.
 
+Modelo de uso de predicción S211:
+
+```text
+Predicción: si horas vale 5, minutos será 300.
+Código probado: int minutos = horas * 60;
+Resultado observado: la consola muestra 300.
+Explicación: la operación multiplica horas por 60 y guarda el resultado.
+```
+
 ### Cierre docente
 
 Di en voz alta:
@@ -1465,30 +1520,199 @@ Di en voz alta:
 
 > `Scanner` nos permite leer desde teclado. Para H1 usaremos una sola instancia sencilla. `nextLine()` devuelve texto, es decir, `String`. Si ese texto representa un número y queremos calcular, debemos convertirlo.
 
-Ejemplo:
+### Explicación guiada: pedir, leer, guardar, parsear, convertir y hacer casting
+
+Úsala al pasar de datos escritos en código a datos introducidos por consola.
+
+Di en voz alta:
+
+> `Scanner` permite leer lo que una persona escribe. `nextLine()` devuelve siempre un `String`. Si queremos calcular con un número escrito por teclado, necesitamos parsear ese texto.
+
+Empieza por el flujo pedir, leer y guardar creando una única instancia de `Scanner` que después pueda reutilizarse.
+
+Proyecta el programa completo para que se vea también el `import`:
 
 ```java
 import java.util.Scanner;
 
-Scanner scanner = new Scanner(System.in);
-System.out.print("Nombre ficticio: ");
-String userName = scanner.nextLine();
-System.out.println("Hola, " + userName + ".");
-scanner.close();
+public class Main {
+    public static void main(String[] argumentos) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Escribe un nombre ficticio: ");
+        String nombreUsuario = teclado.nextLine();
+
+        System.out.println("Hola, " + nombreUsuario);
+    }
+}
 ```
 
-Después:
+Señala sin adelantar todavía la POO:
+
+> `import java.util.Scanner` hace disponible la clase `Scanner`. Con `new Scanner(System.in)` usamos un objeto ya preparado de Java para leer desde teclado. Lo guardamos en la variable `teclado` y reutilizamos esa misma variable cada vez que necesitamos leer. En el tema siguiente entenderemos con más profundidad qué significan clase, objeto y constructor.
+
+Pregunta:
+
+> Qué parte prepara `Scanner`, qué variable lo guarda y qué devuelve `teclado.nextLine()`.
+
+Muestra una segunda lectura reutilizando el mismo `Scanner`:
 
 ```java
-String text = "5";
-int hours = Integer.parseInt(text);
-int minutes = hours * 60;
-System.out.println(minutes);
+System.out.print("Escribe las horas de estudio: ");
+String texto = teclado.nextLine();
+
+int horas = Integer.parseInt(texto);
+```
+
+Pregunta:
+
+> Hemos creado otro `Scanner` o hemos reutilizado el mismo.
+
+Como contraste, puedes mostrar esta forma compacta, pero aclara que no será el modelo de H1:
+
+```java
+String nombreUsuario = new Scanner(System.in).nextLine();
 ```
 
 Di:
 
-> `"5"` y `5` no son lo mismo para Java. El primero es texto; el segundo es un entero.
+> Esta forma puede leer una línea, pero oculta la idea que queremos practicar: crear una sola instancia y reutilizarla. En H1 escribiremos `Scanner teclado = new Scanner(System.in);` y leeremos con `teclado.nextLine()`.
+
+Contrasta usar y no usar lo leído:
+
+```java
+String nombreUsuario = teclado.nextLine();
+System.out.println("Hola, " + nombreUsuario);
+```
+
+```java
+String nombreUsuario = teclado.nextLine();
+System.out.println("Hola");
+```
+
+Pregunta:
+
+> En cuál de los dos programas la entrada afecta al comportamiento observable.
+
+Dibuja el flujo en la pizarra:
+
+```text
+TECLADO -> nextLine() -> String -> variable -> programa -> salida
+```
+
+Después pasa a parsear texto:
+
+```java
+String texto = "5";
+int horas = Integer.parseInt(texto);
+```
+
+```java
+String texto = new Scanner(System.in).nextLine();
+int horas = Integer.parseInt(texto);
+int minutos = horas * 60;
+System.out.println(minutos);
+```
+
+Pregunta:
+
+> Para una entrada `2`, qué salida esperas.
+
+Muestra otros parseos sin dedicarles el mismo tiempo:
+
+```java
+String texto = "7.5";
+double nota = Double.parseDouble(texto);
+```
+
+```java
+boolean correcto = Boolean.parseBoolean(texto);
+```
+
+Di:
+
+> En H1 priorizamos `parseInt` y `parseDouble`. El boolean aparece solo como otro ejemplo de conversión.
+
+Explica conversión implícita:
+
+```java
+int entero = 7;
+double valorAmpliado = entero;
+```
+
+```text
+7 -> 7.0
+```
+
+```java
+int horas = 4;
+double horasDecimales = horas;
+```
+
+Pregunta:
+
+> Se ha producido una conversión aunque no veamos casting escrito.
+
+Contrasta con parseo:
+
+```java
+String texto = "4";
+int horas = Integer.parseInt(texto);
+
+int otrasHoras = 4;
+double horasDecimales = otrasHoras;
+```
+
+Pregunta:
+
+> En cuál partíamos de texto.
+
+Explica casting y pérdida de información:
+
+```java
+double precio = 12.75;
+int precioEntero = (int) precio;
+```
+
+```text
+precioEntero -> 12
+```
+
+```java
+double nota = 7.99;
+int notaEntera = (int) nota;
+```
+
+```text
+notaEntera -> 7
+```
+
+Caso revelador:
+
+```java
+double valor = 3.999;
+int resultado = (int) valor;
+```
+
+Pregunta:
+
+> El resultado será 3 o 4. Por qué.
+
+Termina distinguiendo tres mecanismos:
+
+```text
+Texto a número: Integer.parseInt("5")
+Número compatible a tipo más amplio: double valorDecimal = 5;
+Conversión forzada: int valorEntero = (int) 5.8;
+```
+
+Pregunta al alumnado:
+
+> Qué devuelve `nextLine`, qué guarda `nombreUsuario`, qué convierte `parseInt` y cuándo falla `Integer.parseInt("hola")`.
+
+Error frecuente que debes cortar:
+
+> Que el texto contenga cifras no lo convierte automáticamente en número.
 
 ### Investigación del alumnado
 
@@ -1532,6 +1756,20 @@ Qué no aceptar:
 - Código que lee una variable pero no la usa.
 - Decir `no funciona` sin distinguir compilación y ejecución.
 
+Modelo de uso de evidencia S212:
+
+```text
+Prueba: conversión de horas.
+Entrada válida: 5
+Salida esperada: 300 minutos.
+Salida obtenida: 300 minutos.
+Demuestra: el texto leído se convierte a int y se usa en una operación.
+
+Entrada no convertible: hola
+Resultado: error durante la ejecución al aplicar Integer.parseInt.
+Demuestra: compilar no garantiza que cualquier entrada sea convertible.
+```
+
 ### Cierre docente
 
 Di en voz alta:
@@ -1567,29 +1805,271 @@ Di en voz alta:
 
 > Comparar no devuelve uno de los operandos. Devuelve un booleano: `true` o `false`. `=` asigna. `==` compara. Para números podemos usar `==`, `!=`, `<`, `<=`, `>` y `>=`. En H1 no vamos a usar `==` para comparar textos.
 
-Ejemplo:
+### Explicación guiada: comparadores, lógica, decisiones y elección de valor
 
-```java
-int hours = 5;
-boolean enough = hours >= 4;
-System.out.println(hours == 5); // true
-System.out.println(hours != 5); // false
-System.out.println(enough);     // true
+Úsala antes de `if/else` y antes de pedir las dos pruebas.
+
+Di en voz alta:
+
+> Una comparación produce un booleano: `true` o `false`. `=` asigna; `==` compara. `if` necesita una condición booleana. En H1 hacemos decisiones pequeñas; menús y decisiones encadenadas vendrán en H2.
+
+Empieza con comparadores:
+
+```text
+5 > 3 -> true
+2 < 1 -> false
+5 == 5 -> true
+5 == 4 -> false
+5 != 4 -> true
 ```
 
-Después:
+Pregunta:
+
+> `5 > 3` devuelve 5, devuelve 3 o devuelve una respuesta lógica.
+
+Contrasta asignar y comparar:
 
 ```java
-if (hours >= 4) {
+int horas = 4;  // asignación
+horas == 4      // comparación: true o false
+```
+
+Trabaja límites:
+
+```java
+int horas = 4;
+horas > 4
+horas >= 4
+```
+
+Pregunta:
+
+> Predice ambas expresiones.
+
+Recuerda:
+
+> En esta sesión no usamos `==` para comparar `String`.
+
+Ahora introduce `&&`, `||` y `!` desde lenguaje natural:
+
+```java
+boolean puedeEmpezar = tieneNombre && tieneObjetivo;
+```
+
+Di:
+
+> MiniJarvis puede comenzar si tiene nombre y tiene objetivo.
+
+```java
+boolean necesitaAyuda = faltaConfiguracion || hayError;
+```
+
+Di:
+
+> Necesita ayuda si falta configuración o existe un error.
+
+```java
+boolean terminada = false;
+boolean pendiente = !terminada;
+```
+
+Resultado esperado:
+
+```text
+pendiente -> true
+```
+
+Traduce en ambos sentidos:
+
+```text
+Puede continuar si tiene nombre y objetivo -> tieneNombre && tieneObjetivo
+No hay error -> !hayError
+```
+
+Pasa del booleano a la decisión:
+
+```java
+int horas = 5;
+boolean suficiente = horas >= 4;
+
+if (suficiente) {
+    System.out.println("Objetivo alcanzado");
+}
+```
+
+Y después condición directa:
+
+```java
+if (horas >= 4) {
+    System.out.println("Objetivo alcanzado");
+}
+```
+
+Pregunta:
+
+> Qué produce `horas >= 4`.
+
+Contrasta con lo que no sirve:
+
+```java
+if (horas) {
+    System.out.println("Objetivo alcanzado");
+}
+```
+
+Pregunta:
+
+> `horas` contiene un `int`. La condición de `if` responde true/false.
+
+Ahora trabaja dos caminos:
+
+```java
+if (horas >= 4) {
     System.out.println("Objetivo alcanzado");
 } else {
     System.out.println("Objetivo pendiente");
 }
 ```
 
+Casos obligatorios:
+
+```text
+Caso A: horas = 5
+Caso B: horas = 2
+```
+
+Otro ejemplo cercano a MiniJarvis:
+
+```java
+if (tieneNombre) {
+    System.out.println("Nombre configurado");
+} else {
+    System.out.println("Falta configurar el nombre");
+}
+```
+
+Dato sencillo para validar:
+
+```java
+if (horasEstudio >= 0) {
+    System.out.println("Dato aceptado");
+} else {
+    System.out.println("Las horas no pueden ser negativas");
+}
+```
+
+Predicción antes de ejecutar:
+
+```java
+int nota = 5;
+if (nota >= 5) {
+    System.out.println("Superado");
+} else {
+    System.out.println("Pendiente");
+}
+```
+
+Pregunta:
+
+> Qué bloque se ejecutará. Cambia `nota` a 4 y vuelve a predecir.
+
+Reconoce un `if` anidado sin profundizar:
+
+```java
+if (tieneNombre) {
+    if (tieneObjetivo) {
+        System.out.println("MiniJarvis está preparado");
+    }
+}
+```
+
+Pregunta:
+
+> Qué condición se comprueba primero y cuándo se llega a comprobar `tieneObjetivo`.
+
+Otro anidado:
+
+```java
+if (horas >= 4) {
+    if (tareas >= 2) {
+        System.out.println("Objetivo completo");
+    }
+}
+```
+
+Explica oralmente:
+
+```text
+horas >= 4?
+  si -> tareas >= 2?
+          si -> mensaje
+```
+
 Di:
 
-> Un `if` necesita una expresión booleana. `if (hours)` no vale, porque `hours` es un `int`, no una condición.
+> Aquí basta con reconocer y leer la idea. No vamos a convertir H1 en una sesión de condicionales complejos.
+
+Por último, muestra la asignación condicional `?:` como elección sencilla de valor:
+
+```java
+String mensaje;
+if (horas >= 4) {
+    mensaje = "Objetivo alcanzado";
+} else {
+    mensaje = "Objetivo pendiente";
+}
+```
+
+Misma elección con `?:`:
+
+```java
+String mensaje = horas >= 4
+        ? "Objetivo alcanzado"
+        : "Objetivo pendiente";
+```
+
+Despieza:
+
+```text
+horas >= 4 -> condición
+"Objetivo alcanzado" -> valor si true
+"Objetivo pendiente" -> valor si false
+```
+
+Más ejemplos para leer, no para complicar:
+
+```java
+String estado = tareas > 0
+        ? "Hay tareas"
+        : "No hay tareas";
+
+String resultado = nota >= 5
+        ? "Superado"
+        : "Pendiente";
+```
+
+Predicción:
+
+```java
+int horas = 2;
+String mensaje = horas >= 4
+        ? "Objetivo alcanzado"
+        : "Objetivo pendiente";
+```
+
+Pregunta:
+
+> Qué valor termina almacenado en `mensaje`.
+
+Pregunta al alumnado:
+
+> Qué pasa con `horas = 5`, qué pasa con `horas = 2`, qué rama se ejecuta y qué evidencia demuestra cada caso.
+
+Error frecuente que debes cortar:
+
+> Probar solo el caso `true` no demuestra el `else`.
+
+No presentes `?:` como sustituto de cualquier `if`. En H1 solo interesa leer una elección sencilla de valor.
 
 ### Investigación del alumnado
 
@@ -1633,6 +2113,26 @@ Qué debe poder defender cada persona:
 - Qué significa `false`.
 - Qué rama se ejecuta en cada caso.
 - Qué mejora concreta hizo en el código o nombres.
+
+Modelo de uso de evidencia S213:
+
+```text
+Prueba de decisión if/else
+
+Condición: horasEstudio >= 4
+
+Caso A:
+Valor usado: horasEstudio = 5
+Salida esperada: Objetivo alcanzado.
+Salida obtenida: Objetivo alcanzado.
+Demuestra: se ejecuta la rama true.
+
+Caso B:
+Valor usado: horasEstudio = 2
+Salida esperada: Objetivo pendiente.
+Salida obtenida: Objetivo pendiente.
+Demuestra: se ejecuta la rama false.
+```
 
 ### Cierre docente
 
@@ -1692,6 +2192,33 @@ Di:
 
 > Una evidencia debe demostrar algo. No vale un enlace a una carpeta general. Quiero entrada usada, salida observada, enlace profundo y explicación de qué demuestra.
 
+### Explicación guiada: README, evidencias y enlaces
+
+Úsala antes de documentar y antes de preparar Moodle.
+
+Di en voz alta:
+
+> Documentar no significa copiar la misma información en muchos sitios. Cada espacio responde a una pregunta: README explica cómo ejecutar; diario cuenta el proceso personal; Site personal selecciona aprendizaje; Site de equipo comunica el incremento; Moodle recoge enlaces oficiales.
+
+Ejemplo de evidencia verificable:
+
+```text
+Prueba: saludo con nombre ficticio.
+Entrada usada: Laura.
+Salida esperada: Encantado, Laura.
+Salida obtenida: Encantado, Laura.
+Demuestra: la entrada leída se guarda y se usa en la salida.
+Enlace: archivo o captura concreta, no carpeta general.
+```
+
+Pregunta al alumnado:
+
+> Qué demuestra esta evidencia, dónde debería estar enlazada y por qué no basta con escribir `funciona`.
+
+Error frecuente que debes cortar:
+
+> No enlacéis carpetas generales. Enlazad la evidencia concreta.
+
 ### Investigación del alumnado
 
 Pide al alumnado:
@@ -1739,6 +2266,48 @@ Dónde y cómo:
 Di en voz alta:
 
 > Hoy no quiero que copiéis el diario en el Site. Quiero que seleccionéis. El diario contiene proceso. El Site personal contiene evidencia seleccionada y explicación. El Site de equipo comunica el incremento. Moodle cerrará la entrega oficial.
+
+Modelo de uso del README H1:
+
+```markdown
+# MiniJarvis H1
+
+## Qué hace
+MiniJarvis saluda, pide un nombre ficticio, calcula minutos a partir de horas y muestra si se alcanza un objetivo.
+
+## Límites de H1
+No incluye menú, memoria, ficheros ni IA real.
+
+## Cómo ejecutar
+1. Abrir el proyecto en IntelliJ.
+2. Ejecutar `Main.java`.
+3. Introducir datos ficticios.
+
+## Pruebas
+Caso A: horas = 5 -> Objetivo alcanzado.
+Caso B: horas = 2 -> Objetivo pendiente.
+Entrada no convertible: "hola" falla durante la ejecución con parseInt.
+```
+
+Modelo de uso del Site personal H1:
+
+```text
+Reto con mis palabras: construir una primera versión pequeña de MiniJarvis por consola.
+Mi aportación: probé Scanner y documenté una entrada no convertible.
+Evidencia seleccionada: enlace profundo a la prueba S212.
+Qué demuestra: entiendo el flujo pedir -> leer -> guardar -> convertir -> mostrar.
+Mejora siguiente: probar mejor entradas no válidas en H2.
+```
+
+Modelo de uso del Site de equipo H1:
+
+```text
+Incremento conseguido: MiniJarvis saluda, pide nombre, calcula minutos y decide si se alcanza un objetivo.
+Decisiones: no incluimos menú ni memoria porque no pertenecen a H1.
+Pruebas: saludo, conversión, caso true, caso false y entrada no convertible.
+Review: el incremento cumple el alcance de S206.
+Retrospectiva: debemos actualizar Scrum durante la sesión, no solo al final.
+```
 
 ### Comprobación de permisos
 
@@ -1871,6 +2440,32 @@ Permisos comprobados: sí/no
 Observaciones o bloqueo pendiente:
 ```
 
+Modelo de uso de entrega Moodle ya rellenada:
+
+```text
+Equipo: Ada
+Integrantes: Nora, Luis, Marta, Amira
+
+Repositorio GitHub: https://...
+README H1: https://...
+Site personal H1 - Nora: https://...
+Site personal H1 - Luis: https://...
+Site personal H1 - Marta: https://...
+Site personal H1 - Amira: https://...
+Site equipo H1: https://...
+Scrum equipo H1: https://...
+Evidencia de ejecución: https://...
+
+Permisos comprobados: sí
+Observaciones: la entrada no convertible está documentada como error de ejecución; no usamos try-catch porque no pertenece a H1.
+```
+
+Modelo que no debes aceptar en Moodle:
+
+```text
+Está todo en Drive.
+```
+
 ### Diario individual final
 
 Pide explícitamente:
@@ -1883,6 +2478,19 @@ Dónde y cómo:
 - Una fila final S215.
 - No hacer documento separado.
 
+Modelo de uso del diario final:
+
+```text
+Fecha: cierre H1
+Sesión: S215
+Objetivo: cerrar H1 y preparar H2.
+Acción realizada: defendí mi código, revisé enlaces y entregué en Moodle.
+Prueba y resultado: expliqué Scanner, parseInt y las dos ramas del if/else.
+Evidencia enlazada: enlace a README y prueba S213.
+Bloqueo: necesito practicar errores de entrada.
+Siguiente paso: en H2 probar comandos y depuración.
+```
+
 ### Retrospectiva de equipo
 
 Pide explícitamente:
@@ -1893,6 +2501,15 @@ Dónde y cómo:
 
 - Sheet Scrum de equipo, sección retrospectiva.
 - Enlace desde Moodle si la tarea lo pide.
+
+Modelo de uso de retrospectiva de equipo:
+
+```text
+Qué funcionó: revisar por parejas antes de entregar.
+Qué no funcionó: actualizamos Scrum demasiado tarde.
+Qué mantendremos en H2: predicción antes de ejecutar.
+Qué cambiaremos en H2: registrar bloqueos en cuanto aparezcan.
+```
 
 ### Si alguien no puede defender
 

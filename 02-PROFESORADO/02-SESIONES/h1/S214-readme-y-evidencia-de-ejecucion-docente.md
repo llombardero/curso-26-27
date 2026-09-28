@@ -1,118 +1,117 @@
-# S214 — Guía docente
-
-## README, evidencia y Site
+# S214 - Comunicar - README, evidencia y Site
 
 | Dato | Valor |
 |---|---|
-| Hito | H1 — Primer MiniJarvis |
-| Duración | 3 periodos; checkpoint proyectable de 45 minutos y taller asociado |
-| Fase HEXA | Comunicar — evaluar y reflexionar |
-| Agrupamiento | Individual con contraste por parejas o equipo cuando la práctica lo requiera |
-| Resultado observable | Documentar H1 y seleccionar evidencias verificables sin duplicar el diario. |
-| Evidencia mínima | Quede H1 listo para defensa. |
+| Hito | H1 — Primer asistente ejecutable |
+| Duración prevista | 45 minutos |
+| Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 
-## Propósito
+> Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`. Selecciona y desarrolla los conceptos, ejemplos, actividades y evidencias útiles para esta sesión.
 
-Documentar H1 y seleccionar evidencias verificables sin duplicar el diario.
+## Qué vas a aprender
 
-El concepto se incorpora al Tema 1, pero solo pasa a `Main.java` cuando mejora el producto mínimo. Las demás prácticas se conservan como microejercicios defendibles.
+Al terminar, debes documentar H1 con un README reproducible, seleccionar evidencias verificables y comprobar permisos y enlaces profundos antes de preparar la entrega.
 
-## Material imprescindible
+## Ideas y ejemplos
 
-- presentación de S214;
-- IntelliJ y JDK cuando haya práctica de código;
-- proyecto o microarchivo de prueba;
-- diario individual y tablero Scrum del equipo;
-- datos ficticios.
+Úsala antes de documentar y antes de preparar Moodle.
 
-## Secuencia de aula
+Documentar no significa copiar la misma información en muchos sitios. Cada espacio responde a una pregunta: README explica cómo ejecutar; diario cuenta el proceso personal; Site personal selecciona aprendizaje; Site de equipo comunica el incremento; Moodle recoge enlaces oficiales.
 
-| Tiempo / diap. | Tipo y actuación | Alumnado | Observa | Puerta de avance | Si hay retraso |
-|---|---|---|---|---|---|
-| 00:00–00:05 / D1 | COMUNICAR: Plantea la prueba de usuario de la documentación. | Evalúa qué falta. | Documentación entendida como trámite. | identifiquen una carencia. | 3 minutos. |
-| 00:05–00:11 / D2 | PÍLDORA DOCENTE 1/3: Explica estructura mínima sin inventar secciones nuevas ajenas a las plantillas. | Compara con su README. | README que promete más de H1. | sepan qué apartados faltan. | 5 minutos. |
-| 00:11–00:16 / D3 | PÍLDORA DOCENTE 2/3: Explica trazabilidad y enlace profundo. | Mejora un ejemplo débil. | Capturas sin contexto. | puedan nombrar qué demuestra su evidencia. | 4 minutos. |
-| 00:16–00:22 / D4 | PÍLDORA DOCENTE 3/3: Explica funciones y privacidad. El Site no es copia del diario. | Decide qué evidencia irá a cada lugar. | Duplicación indiscriminada. | haya separación clara. | no suprimas; es clave para Drive/Sites. |
-| 00:22–00:36 / D5 | ACTIVIDAD: Circula por mesas y pide a una persona explicar un enlace concreto. | Documenta y enlaza. | Datos personales, credenciales, enlaces rotos, evidencia sin contexto. | los enlaces sean recuperables. | prioriza README + evidencia + diario; Site puede rematarse después si está planificado. |
-| 00:36–00:41 / D6 | PRUEBA DE USUARIO: Organiza intercambio. | Prueba documentación ajena. | Ambigüedades reales. | aparezca al menos una mejora. | haz revisión por parejas de 3 minutos. |
-| 00:41–00:45 / D7 | CIERRE: Cierra con privacidad y accesibilidad de enlaces. | Corrige y comprueba. | Enlaces a carpeta raíz. | quede H1 listo para defensa. | verificación rápida de enlaces esenciales. |
+Ejemplo de evidencia verificable:
 
-## Qué debes explicar
+```text
+Prueba: saludo con nombre ficticio.
+Entrada usada: Laura.
+Salida esperada: Encantado, Laura.
+Salida obtenida: Encantado, Laura.
+Demuestra: la entrada leída se guarda y se usa en la salida.
+Enlace: archivo o captura concreta, no carpeta general.
+```
 
-- **PÍLDORA DOCENTE 1/3:** Explica estructura mínima sin inventar secciones nuevas ajenas a las plantillas.
-- **PÍLDORA DOCENTE 2/3:** Explica trazabilidad y enlace profundo.
-- **PÍLDORA DOCENTE 3/3:** Explica funciones y privacidad. El Site no es copia del diario.
+Pregunta al alumnado:
 
-## Ejemplo o demostración preparada
+Qué demuestra esta evidencia, dónde debería estar enlazada y por qué no basta con escribir `funciona`.
 
-**D1 · ¿Podría otra persona entender tu proyecto sin ti? —** README + evidencia + enlaces claros convierten “funciona” en algo verificable.
+Error frecuente que debes cortar:
 
-**D2 · README mínimo de H1 —** QUÉ HACE: alcance real / y limitaciones \| CÓMO EJECUTAR: pasos suficientes / para reproducir \| EJEMPLO: entrada + salida / verificables
+No enlacéis carpetas generales. Enlazad la evidencia concreta.
 
-**D3 · Una evidencia debe demostrar algo —** DÉBIL: “Funciona.”<br>
-<br>
-Enlace a una carpeta general. \| VERIFICABLE: entrada usada<br>
-salida observada<br>
-enlace profundo<br>
-qué demuestra
+## Actividad de la sesión
 
-**D4 · Diario, Site personal y Site de equipo no son lo mismo —** DIARIO: Proceso individual: / objetivo, acción, prueba, bloqueo, siguiente paso. \| SITE PERSONAL: Selección razonada de evidencias + qué demuestran. \| SITE EQUIPO: Reto, decisiones, pruebas, review y retrospectiva.
+Revisad el README, preparad una evidencia de ejecución con entrada, salida esperada y salida obtenida, y comprobad desde una cuenta no propietaria que los enlaces profundos abren el recurso correcto.
 
-**D5 · Documenta H1 —** Termina README.<br>
-Guarda evidencia de ejecución.<br>
-Actualiza diario.<br>
-Actualiza página H1 del Site personal.<br>
-Actualiza página H1 del Site de equipo.<br>
-Comprueba permisos y enlaces.
+## Evidencia de la sesión
 
-**D6 · Otro compañero intenta seguir tu README —** Sin explicaciones orales.<br>
-<br>
-Anota qué pregunta necesita hacerte.
+1. README H1.
+2. Evidencia de ejecución.
+3. Diario individual revisado.
+5. Site personal H1 iniciado o terminado.
+6. Site de equipo H1 iniciado o terminado.
+7. Borrador de entrega Moodle con enlaces.
 
-**D7 · Corrige una ambigüedad y verifica enlaces —** Todo enlace debe llevar a la evidencia concreta y ser accesible para el profesorado.
+**Dónde y cómo conservar la evidencia:**
 
-## Consigna que se entrega al alumnado
+- README: raíz del repositorio GitHub.
+- Evidencia de ejecución: README, repositorio o Drive con enlace profundo; debe indicar entrada, salida esperada, salida obtenida y qué demuestra.
+- Diario individual: Sheet personal, no documento aparte.
+- Site personal: página H1 del Site personal.
+- Site de equipo: página H1 del Site de equipo.
+- Moodle: todavía puede quedar como borrador si S215 es el cierre oficial, salvo que hayas configurado plazo de entrega en S214.
 
-1. Predice antes de ejecutar cuando haya código.
-2. Realiza la micropráctica o modificación prevista.
-3. Prueba el caso normal y, cuando exista una decisión o conversión, también el caso alternativo o erróneo.
-4. Conserva el código o resultado en el repositorio o espacio indicado.
-5. Registra una sola entrada en el diario individual; no crees un informe paralelo.
+Hoy no quiero que copiéis el diario en el Site. Quiero que seleccionéis. El diario contiene proceso. El Site personal contiene evidencia seleccionada y explicación. El Site de equipo comunica el incremento. Moodle cerrará la entrega oficial.
 
-## Qué observar mientras trabajan
+Modelo de uso del README H1:
 
-- Documentación entendida como trámite.
-- README que promete más de H1.
-- Capturas sin contexto.
-- Duplicación indiscriminada.
-- Datos personales, credenciales, enlaces rotos, evidencia sin contexto.
-- Ambigüedades reales.
-- Enlaces a carpeta raíz.
+```markdown
+# MiniJarvis H1
 
-## Criterios para considerar cerrada la sesión
+## Qué hace
+MiniJarvis saluda, pide un nombre ficticio, calcula minutos a partir de horas y muestra si se alcanza un objetivo.
 
-- Identifiquen una carencia.
-- Sepan qué apartados faltan.
-- Puedan nombrar qué demuestra su evidencia.
-- Haya separación clara.
-- Los enlaces sean recuperables.
-- Aparezca al menos una mejora.
-- Quede H1 listo para defensa.
-- La persona puede señalar la evidencia y explicar qué demuestra.
+## Límites de H1
+No incluye menú, memoria, ficheros ni IA real.
 
-## Seguridad y uso de IA
+## Cómo ejecutar
+1. Abrir el proyecto en IntelliJ.
+2. Ejecutar `Main.java`.
+3. Introducir datos ficticios.
 
-- Trabajar con datos ficticios.
-- No publicar credenciales, tokens, claves ni información personal.
-- Si la IA interviene de forma sustantiva, registrar propuesta, cambios propios y validación; no aceptar código que no pueda defenderse.
+## Pruebas
+Caso A: horas = 5 -> Objetivo alcanzado.
+Caso B: horas = 2 -> Objetivo pendiente.
+Entrada no convertible: "hola" falla durante la ejecución con parseInt.
+```
 
-## Comprobación final
+Modelo de uso del Site personal H1:
 
-**¿Qué puedes señalar, explicar, predecir o modificar para demostrar el aprendizaje de esta sesión?**
+```text
+Reto con mis palabras: construir una primera versión pequeña de MiniJarvis por consola.
+Mi aportación: probé Scanner y documenté una entrada no convertible.
+Evidencia seleccionada: enlace profundo a la prueba S212.
+Qué demuestra: entiendo el flujo pedir -> leer -> guardar -> convertir -> mostrar.
+Mejora siguiente: probar mejor entradas no válidas en H2.
+```
 
-## Anotación docente al terminar
+Modelo de uso del Site de equipo H1:
 
-- alumnado que necesita reentrada;
-- evidencia pendiente;
-- error común;
-- ajuste temporal necesario sin eliminar el núcleo conceptual.
+```text
+Incremento conseguido: MiniJarvis saluda, pide nombre, calcula minutos y decide si se alcanza un objetivo.
+Decisiones: no incluimos menú ni memoria porque no pertenecen a H1.
+Pruebas: saludo, conversión, caso true, caso false y entrada no convertible.
+Review: el incremento cumple el alcance de S206.
+```
+
+## Permisos y privacidad
+
+Antes de decir que está entregado, comprobad permisos. Un enlace que solo abre el propietario no es una entrega válida.
+
+Cómo comprobar:
+
+- Abrir enlace en ventana privada o con cuenta no propietaria si es posible.
+- Pedir a una pareja que abra el enlace.
+- Confirmar que lleva al archivo o página concreta, no a la carpeta raíz.
+
+## Comprueba lo aprendido
+
+Mañana o en la siguiente sesión defenderéis. Defender no es recitar el README. Defender es señalar, ejecutar, predecir, modificar una parte pequeña y explicar qué demuestra vuestra evidencia.

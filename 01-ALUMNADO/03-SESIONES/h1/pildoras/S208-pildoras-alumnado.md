@@ -14,7 +14,7 @@ En estos primeros programas:
 
 ```java
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] argumentos) {
         System.out.println("Hola");
     }
 }
@@ -28,7 +28,7 @@ Si el archivo se llama `Assistant.java`, la clase pública debe coincidir:
 
 ```java
 public class Assistant {
-    public static void main(String[] args) {
+    public static void main(String[] argumentos) {
         System.out.println("Asistente preparado");
     }
 }
@@ -47,13 +47,13 @@ Java distingue mayúsculas y minúsculas y necesita delimitadores como `;`, `{}`
 Correcto:
 
 ```java
-String message = "Hola";
+String mensaje = "Hola";
 ```
 
 Incorrecto:
 
 ```java
-string message = "Hola";
+string mensaje = "Hola";
 ```
 
 `String` empieza por mayúscula.
@@ -93,18 +93,18 @@ Un identificador es un nombre que damos a elementos del programa.
 ### Ejemplo 1 — Nombres válidos y útiles
 
 ```java
-String userName = "Laura";
-int studyHours = 4;
-String assistantName = "MiniJarvis";
+String nombreUsuario = "Laura";
+int horasEstudio = 4;
+String nombreAsistente = "MiniJarvis";
 ```
 
 ### Ejemplo 2 — Nombres inválidos
 
 ```text
-1name      empieza por número
-my name    contiene un espacio
-class      es una palabra reservada
-public     es una palabra reservada
+1nombre         empieza por número
+horas estudio   contiene un espacio
+class           es una palabra reservada
+public          es una palabra reservada
 ```
 
 ### Ejemplo 3 — Válido pero poco claro
@@ -113,7 +113,7 @@ public     es una palabra reservada
 String x = "Laura";
 ```
 
-Compila, pero `userName` comunica mejor la intención.
+Compila, pero `nombreUsuario` comunica mejor la intención.
 
 ## 4. Comentarios: explicar intención
 
@@ -123,7 +123,7 @@ Los comentarios no se ejecutan. Sirven para aportar contexto que el código por 
 
 ```java
 // Usamos un nombre ficticio para no publicar datos personales.
-String userName = "Laura";
+String nombreUsuario = "Laura";
 ```
 
 ### Ejemplo 2 — Comentario redundante

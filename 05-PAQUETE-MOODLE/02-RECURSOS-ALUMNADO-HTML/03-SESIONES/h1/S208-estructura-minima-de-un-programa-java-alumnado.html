@@ -3,130 +3,158 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>S208 — La estructura mínima de un programa Java</title>
+  <title>S208 — Estructura mínima de un programa Java</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
     <nav class="topbar">Inicio alumnado</nav>
-<h1 id="s208--la-estructura-mínima-de-un-programa-java">S208 — La
-estructura mínima de un programa Java</h1>
+<h1 id="s208--estructura-mínima-de-un-programa-java">S208 — Estructura
+mínima de un programa Java</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Reconocer la clase, el método <code>main</code>, las instrucciones y
+los delimitadores básicos de Java; identificar errores sencillos y
+utilizar nombres y comentarios que mejoren la lectura.</p>
+<h2 id="1-clase-archivo-y-punto-de-entrada">1. Clase, archivo y punto de
+entrada</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> argumentos<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola desde MiniJarvis&quot;</span><span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li><code>Main.java</code> es el nombre del archivo.</li>
+<li><code>Main</code> es la clase pública; debe coincidir con el nombre
+del archivo.</li>
+<li><code>main</code> es el método donde comienza la ejecución.</li>
+<li><code>String[] argumentos</code> permite recibir argumentos de línea
+de comandos, aunque H1 no los utiliza.</li>
+<li><code>System.out.println(...)</code> es una instrucción que muestra
+texto.</li>
+</ul>
+<p><code>Main</code> y <code>main</code> no son lo mismo: Java distingue
+mayúsculas y minúsculas.</p>
+<h2 id="2-orden-de-ejecución">2. Orden de ejecución</h2>
+<p>Las instrucciones de <code>main</code> se ejecutan de arriba
+abajo:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Primero&quot;</span><span class="op">);</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Después&quot;</span><span class="op">);</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Al final&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Predice la salida y cambia el orden de dos instrucciones para
+comprobar el efecto.</p>
+<h2 id="3-delimitadores-que-debes-revisar">3. Delimitadores que debes
+revisar</h2>
+<ul>
+<li><code>{ }</code> delimitan bloques.</li>
+<li><code>( )</code> delimitan parámetros y expresiones.</li>
+<li><code>" "</code> delimitan textos.</li>
+<li><code>;</code> termina la mayoría de instrucciones.</li>
+</ul>
+<p>Compara:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Correcto&quot;</span><span class="op">);</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Falta el punto y coma&quot;</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Falta cerrar el paréntesis&quot;</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Falta cerrar la comilla);</span></span></code></pre></div>
+<p>Los tres últimos fragmentos son incorrectos. Lee el primer error del
+compilador y señala el delimitador que falta.</p>
+<h2 id="4-identificadores">4. Identificadores</h2>
+<p>Un identificador es el nombre de una clase, variable o método. Puede
+contener letras, números, <code>_</code> y <code>$</code>, pero no puede
+empezar por un número ni ser una palabra reservada.</p>
+<p>Ejemplos válidos y claros:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreUsuario <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> horasEstudio <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreAsistente <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Ejemplos inválidos:</p>
+<pre class="text"><code>1nombre         empieza por número
+horas estudio   contiene un espacio
+class           es una palabra reservada
+public          es una palabra reservada</code></pre>
+<p>Ejemplo válido pero poco claro:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> x <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p><code>nombreUsuario</code> comunica mejor la intención que
+<code>x</code>.</p>
+<h2 id="5-comentarios-útiles">5. Comentarios útiles</h2>
+<p>Los comentarios no se ejecutan. Deben explicar una intención o
+decisión que el código no muestra por sí solo.</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Usamos un nombre ficticio para no publicar datos personales.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombreUsuario <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Comentario redundante:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Muestra Hola.</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>No comentes cada línea. Prefiere código legible y comentarios breves
+cuando aporten contexto.</p>
+<h2 id="6-actividad">6. Actividad</h2>
+<ol type="1">
+<li>Escribe el programa mínimo correcto.</li>
+<li>Predice y comprueba su salida.</li>
+<li>Provoca por separado un error de comillas, uno de paréntesis y uno
+de punto y coma.</li>
+<li>Para cada error, registra:
+<ul>
+<li>cambio realizado;</li>
+<li>mensaje esencial del compilador;</li>
+<li>causa;</li>
+<li>corrección.</li>
+</ul></li>
+<li>Renombra dos identificadores vagos.</li>
+<li>Añade un comentario útil y elimina uno redundante.</li>
+</ol>
+<h2 id="evidencia-verificable">Evidencia verificable</h2>
+<p>Conserva el código correcto y una tabla breve:</p>
 <table>
 <thead>
 <tr class="header">
-<th>Dato</th>
-<th>Valor</th>
+<th>Error provocado</th>
+<th>Mensaje esencial</th>
+<th>Causa</th>
+<th>Corrección</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Hito</td>
-<td>H1 — Primer MiniJarvis</td>
-</tr>
-<tr class="even">
-<td>Duración</td>
-<td>2 periodos; esta ficha organiza el checkpoint de 45 minutos</td>
-</tr>
-<tr class="odd">
-<td>Fase HEXA</td>
-<td>Investigar — aprender lo necesario</td>
-</tr>
-<tr class="even">
-<td>Registro de proceso</td>
-<td>Una entrada en el diario individual al cerrar el checkpoint; no se
-crea un documento adicional</td>
+<td>Falta <code>;</code></td>
+<td>…</td>
+<td>La instrucción no termina</td>
+<td>Añadir <code>;</code></td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>El producto principal H1 sigue siendo pequeño. Las microprácticas
-demuestran el Tema 1 y pueden permanecer separadas de
-<code>Main.java</code>.</p>
-</blockquote>
-<p><strong>Objetivo:</strong> Leer, reconstruir y depurar la estructura
-mínima; reconocer aspectos léxicos y comentarios.</p>
-<p><strong>D1</strong> · 00:00–00:05 · INVESTIGAR</p>
-<h2 id="qué-líneas-hacen-algo-visible">¿Qué líneas hacen algo
-visible?</h2>
-<p>public class Main {<br> public static void main(String[] args) {<br>
-System.out.println("Hola");<br> System.out.println("MiniJarvis
-arranca");<br> }<br> }</p>
-<p><strong>Qué haces:</strong> Señala y justifica.</p>
-<p><strong>Qué debe quedar:</strong> identifiquen println como
-instrucción visible.</p>
-<p><strong>D2</strong> · 00:05–00:12 · PÍLDORA DOCENTE 1/4</p>
-<h2 id="clase-archivo-y-main">Clase, archivo y main</h2>
-<p><strong>Qué haces:</strong> Localiza cada parte en su proyecto.</p>
-<p><strong>Qué debe quedar:</strong> puedan señalar ambas piezas.</p>
-<p><strong>D3</strong> · 00:12–00:18 · PÍLDORA DOCENTE 2/4</p>
-<h2 id="java-es-preciso-con-la-escritura">Java es preciso con la
-escritura</h2>
-<p><strong>Qué haces:</strong> Busca los símbolos en el código.</p>
-<p><strong>Qué debe quedar:</strong> puedan anticipar un error
-sencillo.</p>
-<p><strong>D4</strong> · 00:18–00:23 · DIAGNÓSTICO</p>
-<h2 id="compilará-caso-1">¿Compilará? Caso 1</h2>
-<p>public class Main {<br> public static void main(string[] args) {<br>
-System.out.println("Hola");<br> }<br> }</p>
-<p><strong>Qué haces:</strong> Predice y corrige.</p>
-<p><strong>Qué debe quedar:</strong> expliquen por qué falla.</p>
-<p><strong>D5</strong> · 00:23–00:27 · DIAGNÓSTICO</p>
-<h2 id="compilará-caso-2">¿Compilará? Caso 2</h2>
-<p>public class Main {<br> public static void main(String[] args) {<br>
-System.out.println("Hola")<br> }<br> }</p>
-<p><strong>Qué haces:</strong> Predice y corrige.</p>
-<p><strong>Qué debe quedar:</strong> formulen la regla.</p>
-<p><strong>D6</strong> · 00:27–00:32 · PÍLDORA DOCENTE 3/4</p>
-<h2 id="identificadores-y-palabras-reservadas">Identificadores y
-palabras reservadas</h2>
-<p><strong>Qué haces:</strong> Propone nombres válidos/invalidos.</p>
-<p><strong>Qué debe quedar:</strong> puedan justificar 3 casos.</p>
-<p><strong>D7</strong> · 00:32–00:35 · PÍLDORA DOCENTE 4/4</p>
-<h2 id="comentarios-explicar-intención">Comentarios: explicar
-intención</h2>
-<p>// Comentario de una línea<br> <br> /* Comentario<br> de varias
-líneas */</p>
-<p><strong>Qué haces:</strong> Escribe un comentario útil.</p>
-<p><strong>Qué debe quedar:</strong> haya un comentario que aporte
-contexto.</p>
-<p><strong>D8</strong> · 00:35–00:42 · ACTIVIDAD</p>
-<h2 id="reconstruye-el-programa-sin-copiar">Reconstruye el programa sin
-copiar</h2>
-<p>1. Crea la estructura mínima.<br> 2. Añade 2–3 mensajes.<br> 3. Añade
-un comentario útil.<br> 4. Ejecuta.<br> 5. Corrige el primer error que
-aparezca.</p>
-<p><strong>Qué haces:</strong> Escribe y depura.</p>
-<p><strong>Qué debe quedar:</strong> cada persona logre ejecución.</p>
-<p><strong>D9</strong> · 00:42–00:45 · CIERRE</p>
-<h2 id="microdefensa-de-sintaxis">Microdefensa de sintaxis</h2>
-<p>Señala:<br> • dónde empieza la ejecución<br> • una regla que rompería
-la compilación<br> • un comentario útil</p>
-<p><strong>Qué haces:</strong> Defiende sobre su código.</p>
-<p><strong>Qué debe quedar:</strong> quede diagnosticada la
-comprensión.</p>
-<p><strong>Cierre:</strong> registra evidencia y una breve explicación
-de lo aprendido. Usa datos ficticios y no publiques credenciales ni
-información personal.</p>
-<h2 id="evidencia-única-antes-de-salir">Evidencia única antes de
-salir</h2>
+<p>La evidencia debe permitir localizar el código y comprobar que el
+programa vuelve a ejecutarse después de la corrección.</p>
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li>conserva el código o la prueba en el lugar indicado por la
-sesión;</li>
-<li>añade una sola entrada al diario individual con prueba, bloqueo y
-siguiente paso;</li>
-<li>no copies la misma reflexión en otro documento; el Site personal
-seleccionará evidencias al cerrar H1.</li>
+<li>Confundir <code>Main</code> con <code>main</code>.</li>
+<li>Escribir <code>string</code> en lugar de <code>String</code>.</li>
+<li>Corregir una línea distinta de la que señala el primer error.</li>
+<li>Usar una palabra reservada como nombre.</li>
+<li>Añadir comentarios que solo repiten la instrucción.</li>
+</ul>
+<h2 id="autoevaluación">Autoevaluación</h2>
+<p>Comprueba que puedes:</p>
+<ul>
+<li>localizar clase, <code>main</code> e instrucciones;</li>
+<li>explicar por qué <code>Main.java</code> y <code>Main</code> deben
+coincidir;</li>
+<li>predecir el orden de salida;</li>
+<li>diagnosticar errores de delimitadores;</li>
+<li>distinguir identificadores válidos, inválidos y poco claros;</li>
+<li>justificar un comentario útil.</li>
 </ul>
 <h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
-<ul>
-<li>Usa datos ficticios y no publiques credenciales ni información
-personal.</li>
-<li>Si utilizas IA de forma sustantiva, registra propósito, propuesta,
-cambios propios y validación en el registro de IA del hito.</li>
-</ul>
-<h2 id="cierre-individual">Cierre individual</h2>
-<p><strong>¿Qué puedes señalar, explicar y probar al terminar este
-checkpoint?</strong></p>
+<p>Usa datos ficticios en ejemplos y capturas. Si una IA propone una
+corrección, identifica primero el error por tu cuenta y verifica la
+solución compilando y ejecutando.</p>
 
   </main>
 </body>

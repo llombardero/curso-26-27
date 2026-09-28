@@ -25,8 +25,8 @@ Es correcto porque la salida permite comprobar el requisito. En cambio, un progr
 Para H1 basta con pedir un nombre y responder. No necesitamos todavía un menú, un bucle, una base de datos ni una conexión con una IA real.
 
 ```java
-String userName = "Laura";
-System.out.println("Encantado, " + userName + ".");
+String nombreUsuario = "Laura";
+System.out.println("Encantado, " + nombreUsuario + ".");
 ```
 
 Esta solución es adecuada al alcance. Añadir cinco clases y veinte opciones que nadie ha pedido produciría más código que mantener, pero no demostraría mejor el objetivo de H1.
@@ -34,8 +34,8 @@ Esta solución es adecuada al alcance. Añadir cinco clases y veinte opciones qu
 ### Ejemplo 3 — Mantenible
 
 ```java
-String userName = "Laura";
-System.out.println("Encantado, " + userName + ".");
+String nombreUsuario = "Laura";
+System.out.println("Encantado, " + nombreUsuario + ".");
 ```
 
 Se entiende mejor que:
@@ -45,15 +45,15 @@ String x = "Laura";
 System.out.println("Encantado, " + x + ".");
 ```
 
-Los dos ejemplos producen la misma salida, pero `userName` explica qué dato se guarda.
+Los dos ejemplos producen la misma salida, pero `nombreUsuario` explica qué dato se guarda.
 
 ### Ejemplo 4 — Los tres criterios juntos
 
 ```java
-final String ASSISTANT_NAME = "MiniJarvis";
-String userName = "Álex";
-System.out.println("Hola, soy " + ASSISTANT_NAME + ".");
-System.out.println("Encantado, " + userName + ".");
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+String nombreUsuario = "Álex";
+System.out.println("Hola, soy " + NOMBRE_ASISTENTE + ".");
+System.out.println("Encantado, " + nombreUsuario + ".");
 ```
 
 - Es correcto si esos son los mensajes pedidos.

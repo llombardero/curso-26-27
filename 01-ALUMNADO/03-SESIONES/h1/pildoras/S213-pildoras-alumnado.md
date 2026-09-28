@@ -9,9 +9,9 @@ Una comparación no devuelve uno de los valores comparados: devuelve `true` o `f
 ### Ejemplo 1 — Igual y distinto
 
 ```java
-int hours = 4;
-System.out.println(hours == 4); // true
-System.out.println(hours != 4); // false
+int horas = 4;
+System.out.println(horas == 4); // true
+System.out.println(horas != 4); // false
 ```
 
 `=` asigna un valor; `==` compara valores.
@@ -19,17 +19,17 @@ System.out.println(hours != 4); // false
 ### Ejemplo 2 — Orden
 
 ```java
-int hours = 5;
-System.out.println(hours > 3);  // true
-System.out.println(hours <= 4); // false
+int horas = 5;
+System.out.println(horas > 3);  // true
+System.out.println(horas <= 4); // false
 ```
 
 ### Ejemplo 3 — Guardar el resultado
 
 ```java
-int hours = 5;
-boolean enough = hours >= 4;
-System.out.println(enough); // true
+int horas = 5;
+boolean suficiente = horas >= 4;
+System.out.println(suficiente); // true
 ```
 
 ### Ejemplo 4 — Texto
@@ -45,33 +45,33 @@ En Tema 1 no usamos `==` para comparar el contenido de dos `String`. Basta con r
 ### Ejemplo 1 — AND
 
 ```java
-boolean hasName = true;
-boolean hasGoal = true;
-boolean canStart = hasName && hasGoal; // true
+boolean tieneNombre = true;
+boolean tieneObjetivo = true;
+boolean puedeEmpezar = tieneNombre && tieneObjetivo; // true
 ```
 
-Si `hasGoal` fuese `false`, `canStart` sería `false`.
+Si `tieneObjetivo` fuese `false`, `puedeEmpezar` sería `false`.
 
 ### Ejemplo 2 — OR
 
 ```java
-boolean hasQuestion = false;
-boolean hasError = true;
-boolean needsHelp = hasQuestion || hasError; // true
+boolean tienePregunta = false;
+boolean hayError = true;
+boolean necesitaAyuda = tienePregunta || hayError; // true
 ```
 
 ### Ejemplo 3 — NOT
 
 ```java
-boolean finished = false;
-boolean pending = !finished; // true
+boolean terminada = false;
+boolean pendiente = !terminada; // true
 ```
 
 ### Ejemplo 4 — Expresión combinada y legible
 
 ```java
-boolean canStart = hasName && hasGoal;
-boolean needsHelp = !canStart || hasError;
+boolean puedeEmpezar = tieneNombre && tieneObjetivo;
+boolean necesitaAyuda = !puedeEmpezar || hayError;
 ```
 
 Primero explica cada parte con palabras: «Necesita ayuda si no puede empezar o si tiene un error».
@@ -83,8 +83,8 @@ Primero explica cada parte con palabras: «Necesita ayuda si no puede empezar o 
 ### Ejemplo 1 — Variable booleana
 
 ```java
-boolean ready = true;
-if (ready) {
+boolean preparado = true;
+if (preparado) {
     System.out.println("Empezamos");
 }
 ```
@@ -92,8 +92,8 @@ if (ready) {
 ### Ejemplo 2 — Comparación directa
 
 ```java
-int hours = 5;
-if (hours >= 4) {
+int horas = 5;
+if (horas >= 4) {
     System.out.println("Objetivo alcanzado");
 }
 ```
@@ -101,8 +101,8 @@ if (hours >= 4) {
 ### Ejemplo 3 — Lo que no sirve como condición
 
 ```java
-int hours = 5;
-// if (hours) { ... }  // incorrecto: hours es int, no boolean
+int horas = 5;
+// if (horas) { ... }  // incorrecto: horas es int, no boolean
 ```
 
 ## 4. `if / else`: dos caminos
@@ -112,19 +112,19 @@ Si la condición es `true`, se ejecuta el bloque `if`; si es `false`, el bloque 
 ### Ejemplo 1 — Horas de estudio
 
 ```java
-if (hours >= 4) {
+if (horas >= 4) {
     System.out.println("Objetivo alcanzado");
 } else {
     System.out.println("Objetivo pendiente");
 }
 ```
 
-Prueba `hours = 5` y `hours = 2`.
+Prueba `horas = 5` y `horas = 2`.
 
 ### Ejemplo 2 — Preparación
 
 ```java
-if (ready) {
+if (preparado) {
     System.out.println("MiniJarvis está preparado");
 } else {
     System.out.println("Falta completar la preparación");
@@ -142,20 +142,20 @@ Un `if` puede contener otra decisión. En H1 solo necesitas leer la estructura, 
 ### Ejemplo 1 — Primera condición y condición interior
 
 ```java
-if (hasName) {
-    if (hasGoal) {
+if (tieneNombre) {
+    if (tieneObjetivo) {
         System.out.println("Datos completos");
     }
 }
 ```
 
-Primero se comprueba `hasName`. Solo si es `true` se comprueba `hasGoal`.
+Primero se comprueba `tieneNombre`. Solo si es `true` se comprueba `tieneObjetivo`.
 
 ### Ejemplo 2 — Rama exterior
 
 ```java
-if (ready) {
-    if (hasError) {
+if (preparado) {
+    if (hayError) {
         System.out.println("Revisa el error");
     } else {
         System.out.println("Puedes continuar");
@@ -180,7 +180,7 @@ condición ? valor_si_true : valor_si_false
 ### Ejemplo 1 — Mensaje
 
 ```java
-String message = hours >= 4
+String mensaje = horas >= 4
         ? "Objetivo alcanzado"
         : "Objetivo pendiente";
 ```
@@ -188,13 +188,13 @@ String message = hours >= 4
 ### Ejemplo 2 — Estado
 
 ```java
-String status = ready ? "Preparado" : "Pendiente";
+String estado = preparado ? "Preparado" : "Pendiente";
 ```
 
 ### Ejemplo 3 — Valor numérico
 
 ```java
-int points = goalReached ? 1 : 0;
+int puntos = objetivoAlcanzado ? 1 : 0;
 ```
 
 ### Ejemplo 4 — Cuándo preferir `if / else`
@@ -204,7 +204,7 @@ Si cada camino necesita varias instrucciones, `if / else` suele ser más claro. 
 ## Errores frecuentes
 
 - Usar `=` cuando se quería comparar con `==`.
-- Escribir `if (hours)` cuando `hours` es `int`.
+- Escribir `if (horas)` cuando `horas` es `int`.
 - Memorizar `&&`, `||` y `!` sin traducir la expresión a palabras.
 - Probar solo la rama que produce `true`.
 - Comparar el contenido de `String` con `==`.

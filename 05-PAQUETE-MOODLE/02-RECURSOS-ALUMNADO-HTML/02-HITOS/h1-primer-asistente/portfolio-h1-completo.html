@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi aportación verificable — H1 (Ana García)</title>
+  <link rel="stylesheet" href="../../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="mi-aportación-verificable--h1-ana-garcía">Mi aportación
+verificable — H1 (Ana García)</h1>
+<h2 id="mi-aportación-verificable">Mi aportación verificable</h2>
+<ul>
+<li><strong>Qué hice yo:</strong> Diseñé el flujo principal del
+programa: estructura de la clase, constantes, variables, lectura de
+entrada, cálculo del doble, y la lógica <code>if/else</code> para
+decidir la salida según si el número es positivo o no. Escribí el código
+de <code>Main.java</code> desde cero, hice los commits de cada sesión
+(S207 a S213), y redacté la sección de decisiones técnicas del
+README.</li>
+<li><strong>Resultado observable:</strong> El programa lee un nombre y
+un número, calcula el doble del número y muestra un mensaje diferente si
+el número es positivo o negativo. Funciona correctamente con entradas
+válidas.</li>
+<li><strong>Enlace profundo al commit, prueba o fila Scrum:</strong>
+<ul>
+<li>Commit S207 (primera ejecución): <a
+href="https://github.com/ejemplo/minijarvis-h1/commit/abc123">abc123</a></li>
+<li>Commit S211 (constante final): <a
+href="https://github.com/ejemplo/minijarvis-h1/commit/def456">def456</a></li>
+<li>Commit S213 (if/else): <a
+href="https://github.com/ejemplo/minijarvis-h1/commit/ghi789">ghi789</a></li>
+<li>Fila Scrum S210 (plan de datos): <a
+href="https://sheets.example.com/scrum-h1#S210">Scrum S210</a></li>
+</ul></li>
+</ul>
+<h2 id="concepto-del-tema-1">Concepto del Tema 1</h2>
+<ul>
+<li><strong>Concepto que ahora puedo explicar:</strong> La diferencia
+entre variable y constante. Una variable puede cambiar su valor durante
+la ejecución (<code>int numero = 5; numero = 10;</code>), mientras que
+una constante declarada con <code>final</code> no puede reasignarse
+(<code>final String SALUDO = "Hola";</code>).</li>
+<li><strong>Ejemplo propio:</strong>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> SALUDO <span class="op">=</span> <span class="st">&quot;Hola&quot;</span><span class="op">;</span>  <span class="co">// No se puede cambiar</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nombre <span class="op">=</span> <span class="st">&quot;Ana&quot;</span><span class="op">;</span>         <span class="co">// Se puede cambiar: nombre = &quot;Carlos&quot;;</span></span></code></pre></div></li>
+<li><strong>Error o confusión que resolví:</strong> Al principio
+confundía <code>final</code> con <code>static</code>.
+<code>static</code> significa que pertenece a la clase;
+<code>final</code> significa que no se puede reasignar. Pueden
+combinarse (<code>static final</code>) pero son conceptos
+independientes. Lo aclaré en la fila S211 del diario.</li>
+</ul>
+<h2 id="prueba-seleccionada">Prueba seleccionada</h2>
+<ul>
+<li><strong>Entrada o caso:</strong> Nombre = "Ana", Número = 5</li>
+<li><strong>Resultado esperado:</strong>
+<pre><code>Hola, Ana. Bienvenida a MiniJarvis.
+El doble de 5 es 10.</code></pre></li>
+<li><strong>Resultado obtenido:</strong>
+<pre><code>Hola, Ana. Bienvenida a MiniJarvis.
+El doble de 5 es 10.</code></pre></li>
+<li><strong>Qué demuestra:</strong> Que el programa lee entrada por
+teclado, almacena datos en variables, realiza una operación aritmética
+(<code>numero * 2</code>), y ejecuta la rama <code>if</code> cuando la
+condición <code>numero &gt; 0</code> es <code>true</code>.</li>
+<li><strong>Enlace a README, código o diario:</strong>
+<ul>
+<li>README: <a
+href="https://github.com/ejemplo/minijarvis-h1/blob/h1-entrega/README.md#ejemplo-reproducible">Ejemplo
+reproducible</a></li>
+<li>Código: <a
+href="https://github.com/ejemplo/minijarvis-h1/blob/ghi789/src/Main.java#L20-L24">Main.java
+línea 20-24</a></li>
+<li>Diario: <a href="https://sheets.example.com/diario-h1#S213">Fila
+S213</a></li>
+</ul></li>
+</ul>
+<h2 id="decisión-o-bloqueo-significativo">Decisión o bloqueo
+significativo</h2>
+<ul>
+<li><strong>Qué ocurrió:</strong> En S209, discutimos si el mensaje de
+saludo debía ser <code>"Bienvenido, " + nombre</code> o
+<code>"Hola, " + nombre</code>. Mi compañara Carlos prefería
+"Bienvenido" por ser más formal.</li>
+<li><strong>Qué predije o decidí:</strong> Propuse "Hola" porque es más
+cercano, no asume género, y se alinea con la idea de un asistente
+amigable. Argumenté que en un asistente de consola, la cercanía importa
+más que la formalidad.</li>
+<li><strong>Qué prueba hice:</strong> Probamos ambos mensajes ejecutando
+el programa con cada versión. Ambos funcionan igual; la diferencia es
+puramente estética y de tono.</li>
+<li><strong>Enlace a las filas del diario; no copies aquí el registro
+completo:</strong>
+<ul>
+<li>Diario S209: <a
+href="https://sheets.example.com/diario-h1#S209">Fila de decisión de
+mensaje</a></li>
+<li>Scrum S209: <a
+href="https://sheets.example.com/scrum-h1#S209">Decisión
+registrada</a></li>
+</ul></li>
+</ul>
+<h2 id="ia-solo-si-fue-relevante">IA, solo si fue relevante</h2>
+<ul>
+<li><strong>Enlace a la fila del diario donde registré petición, cambio
+y validación:</strong>
+<ul>
+<li>Diario S210: <a href="https://sheets.example.com/diario-h1#S210">Uso
+de IA para entender tipos</a></li>
+</ul></li>
+<li><strong>Qué parte puedo defender sin ayuda:</strong>
+<ul>
+<li>Puedo explicar por qué <code>String</code> se usa para texto y
+<code>int</code> para números.</li>
+<li>Puedo justificar por qué elegí <code>nombre</code> como variable en
+lugar de <code>x</code> o <code>dato1</code>.</li>
+<li>Puedo ejecutar el programa, modificar una entrada y predecir el
+resultado.</li>
+</ul></li>
+</ul>
+<h2 id="próximo-paso">Próximo paso</h2>
+<ul>
+<li><strong>Mejora concreta para H2:</strong> Implementar un menú con
+bucle <code>while</code> para que el usuario pueda hacer varias
+consultas sin reiniciar el programa.</li>
+</ul>
+<h2 id="comprobación">Comprobación</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />He seleccionado
+evidencias, no copiado el diario.</label></li>
+<li><label><input type="checkbox" checked="" />Todos los enlaces son
+profundos y abren con permisos restringidos.</label></li>
+<li><label><input type="checkbox" checked="" />No aparecen secretos,
+datos personales ni calificaciones.</label></li>
+<li><label><input type="checkbox" checked="" />Puedo ejecutar, explicar
+y modificar la parte enlazada.</label></li>
+</ul>
+
+  </main>
+</body>
+</html>

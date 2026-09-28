@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplos de entregables H2</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">Inicio alumnado</nav>
+<h1 id="ejemplos-de-entregables-h2">Ejemplos de entregables H2</h1>
+<h2 id="para-que-sirve-este-documento">Para que sirve este
+documento</h2>
+<p>Este documento muestra ejemplos breves de como pueden quedar las
+evidencias de H2.</p>
+<p>No copies los ejemplos literalmente. Usalos como modelo de claridad.
+Tus entregables deben hablar de tu codigo, tus comandos, tus pruebas, tu
+depuracion y tus decisiones reales.</p>
+<p>Regla principal:</p>
+<blockquote>
+<p>En H2 no basta con que el menu funcione una vez. Debes demostrar que
+se repite, decide, sale de forma controlada, gestiona errores y puede
+depurarse.</p>
+</blockquote>
+<h2 id="1-ejemplo-de-readme-h2">1. Ejemplo de README H2</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># MiniJarvis H2 - Agente con decisiones y depuracion</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Que hace</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>MiniJarvis H2 es un programa de consola que muestra comandos, lee ordenes y se repite hasta escribir <span class="in">`salir`</span>.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comandos disponibles</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`ayuda`</span>: muestra comandos disponibles.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`saluda`</span>: saluda al usuario.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`estado`</span>: muestra el estado actual del agente.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`salir`</span>: termina el programa.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>cualquier otro texto: muestra un mensaje de comando desconocido.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Como ejecutar</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Abrir el proyecto en IntelliJ.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Ejecutar <span class="in">`Main.java`</span>.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Escribir comandos en la consola.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejemplo de ejecucion</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="in">Hola, soy MiniJarvis H2.</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="in">Comandos: ayuda, saluda, estado, salir</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="in">&gt; estado</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="in">Estoy funcionando en modo H2, sin memoria todavia.</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="in">&gt; inventa</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="in">No entiendo ese comando. Escribe ayuda.</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="in">&gt; salir</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="in">Hasta pronto.</span></span></code></pre></div>
+<h2 id="limites-de-h2">Limites de H2</h2>
+<ul>
+<li>No guarda memoria todavia.</li>
+<li>No usa ficheros.</li>
+<li>No conecta con IA real.</li>
+<li>No usa datos personales reales.</li>
+</ul>
+<pre><code>
+Ejemplo demasiado pobre:
+
+```text
+Hemos hecho un menu y funciona.</code></pre>
+<p>Por que no sirve:</p>
+<ul>
+<li>No dice que comandos existen.</li>
+<li>No muestra como se ejecuta.</li>
+<li>No incluye entrada y salida real.</li>
+</ul>
+<h2 id="2-ejemplo-de-pruebas-h2">2. Ejemplo de pruebas H2</h2>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Pruebas H2</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Caso <span class="pp">|</span> Entrada <span class="pp">|</span> Esperado <span class="pp">|</span> Obtenido <span class="pp">|</span> Resultado <span class="pp">|</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Ayuda <span class="pp">|</span> <span class="in">`ayuda`</span> <span class="pp">|</span> Muestra ayuda, saluda, estado y salir <span class="pp">|</span> Muestra los cuatro comandos <span class="pp">|</span> PASA <span class="pp">|</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Estado <span class="pp">|</span> <span class="in">`estado`</span> <span class="pp">|</span> Muestra estado H2 sin memoria <span class="pp">|</span> Muestra &quot;modo H2, sin memoria todavia&quot; <span class="pp">|</span> PASA <span class="pp">|</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Desconocido <span class="pp">|</span> <span class="in">`inventa`</span> <span class="pp">|</span> Mensaje de comando desconocido <span class="pp">|</span> &quot;No entiendo ese comando. Escribe ayuda.&quot; <span class="pp">|</span> PASA <span class="pp">|</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Salir <span class="pp">|</span> <span class="in">`salir`</span> <span class="pp">|</span> Termina el bucle <span class="pp">|</span> Muestra despedida y termina <span class="pp">|</span> PASA <span class="pp">|</span></span></code></pre></div>
+<p>Ejemplo demasiado pobre:</p>
+<pre class="text"><code>He probado ayuda y salir.</code></pre>
+<p>Por que no sirve:</p>
+<ul>
+<li>No incluye salida esperada.</li>
+<li>No incluye salida obtenida.</li>
+<li>No permite comprobar si paso o fallo.</li>
+</ul>
+<h2 id="3-ejemplo-de-depuracion-h2">3. Ejemplo de depuracion H2</h2>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Depuracion H2</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Breakpoint usado</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Linea despues de leer el comando:</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">```java</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> command <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span></code></pre></div>
+<h2 id="variables-observadas">Variables observadas</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Valor observado</th>
+<th>Que demuestra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>command</code></td>
+<td><code>estado</code></td>
+<td>El texto se lee correctamente desde consola.</td>
+</tr>
+<tr class="even">
+<td><code>running</code></td>
+<td><code>true</code></td>
+<td>El programa debe seguir tras <code>estado</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion">Conclusion</h2>
+<p>El comando <code>estado</code> entra en la rama correcta y no cambia
+<code>running</code>, por eso el menu vuelve a aparecer.</p>
+<pre><code>
+Ejemplo demasiado pobre:
+
+```text
+Puse un breakpoint.</code></pre>
+<p>Por que no sirve:</p>
+<ul>
+<li>No dice donde.</li>
+<li>No indica variables.</li>
+<li>No explica que se aprendio.</li>
+</ul>
+<h2 id="4-ejemplo-de-incidencia-h2">4. Ejemplo de incidencia H2</h2>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Incidencia H2</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sintoma</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>Al escribir <span class="in">`salir`</span>, el programa mostraba &quot;Hasta pronto&quot;, pero volvia a mostrar <span class="in">`&gt;`</span>.</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Como reproducir</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Ejecutar <span class="in">`Main.java`</span>.</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Escribir <span class="in">`salir`</span>.</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Observar que el programa no termina.</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Esperado</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>El programa debe terminar.</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Obtenido</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>El programa sigue dentro del bucle.</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Causa</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>La rama <span class="in">`salir`</span> imprimia el mensaje, pero no cambiaba <span class="in">`running`</span> a <span class="in">`false`</span>.</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Correccion</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="in">```java</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>command<span class="op">.</span><span class="fu">equals</span><span class="op">(</span><span class="st">&quot;salir&quot;</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    running <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hasta pronto.&quot;</span><span class="op">);</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="verificacion">Verificacion</h2>
+<p>Tras corregirlo, ejecute <code>estado</code> y despues
+<code>salir</code>. El programa mostro despedida y termino.</p>
+<pre><code>
+## 5. Ejemplo de comparacion Java-Python H2
+
+```markdown
+# Comparacion Java-Python H2
+
+## Idea comparada
+
+Repetir el menu hasta escribir `salir`.
+
+## Java
+
+```java
+boolean running = true;
+while (running) {
+    String command = scanner.nextLine();
+    if (command.equals(&quot;salir&quot;)) {
+        running = false;
+    }
+}</code></pre>
+<h2 id="python">Python</h2>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>running <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> running:</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    command <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;&gt; &quot;</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> command <span class="op">==</span> <span class="st">&quot;salir&quot;</span>:</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        running <span class="op">=</span> <span class="va">False</span></span></code></pre></div>
+<h2 id="diferencias-que-entiendo">Diferencias que entiendo</h2>
+<ul>
+<li>Java declara el tipo de <code>running</code>; Python no lo escribe
+explicitamente.</li>
+<li>Java usa <code>scanner.nextLine()</code> para leer; Python usa
+<code>input()</code>.</li>
+<li>Java compara texto con <code>.equals()</code>; Python puede usar
+<code>==</code> para esta comparacion.</li>
+</ul>
+<pre><code>
+## 6. Ejemplo de defensa H2
+
+```markdown
+# Defensa H2
+
+## Pregunta: donde se repite el programa?
+
+Se repite dentro del `while (running)`. Mientras `running` vale `true`, el programa vuelve a mostrar el prompt y lee otro comando.
+
+## Pregunta: como termina?
+
+Termina cuando el comando es `salir`, porque esa rama cambia `running` a `false`.
+
+## Pregunta: que prueba demuestra el comando desconocido?
+
+La prueba `inventa` demuestra que el ultimo `else` responde con un mensaje controlado en lugar de quedarse sin salida.
+
+## Pregunta: que depuraste?
+
+Puse un breakpoint despues de leer `command` y observe que al escribir `estado`, `command` tenia valor `estado` y `running` seguia en `true`.</code></pre>
+<h2 id="7-checklist-h2-antes-de-entregar">7. Checklist H2 antes de
+entregar</h2>
+<pre class="text"><code>[ ] El programa se ejecuta.
+[ ] El menu se repite.
+[ ] Existe ayuda.
+[ ] Existe saluda.
+[ ] Existe estado.
+[ ] Existe salir.
+[ ] Hay comando desconocido controlado.
+[ ] Hay pruebas con esperado y obtenido.
+[ ] Hay depuracion con breakpoint.
+[ ] Hay incidencia documentada.
+[ ] Hay comparacion Java-Python.
+[ ] Hay README actualizado.
+[ ] Hay registro IA si procede.
+[ ] Puedo defender mi parte sin leer una respuesta generica.</code></pre>
+
+  </main>
+</body>
+</html>
