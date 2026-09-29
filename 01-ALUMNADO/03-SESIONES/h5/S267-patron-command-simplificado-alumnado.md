@@ -4,7 +4,7 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Relacionar un problema real del diseño de herramientas con la idea de Command y decidir si conviene usarla. | `docs/registro-patron-h5.md` con problema, alternativa simple, decisión, semejanza o diferencia respecto a Command y riesgo de sobreingeniería. |
+| Relacionar un problema real del diseño de herramientas con la idea de Command y decidir si conviene usarla. | `README, sección `Patrón usado o descartado`` con problema, alternativa simple, decisión, semejanza o diferencia respecto a Command y riesgo de sobreingeniería. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H5.
@@ -26,7 +26,7 @@
 
 ## Registro de patrón
 
-Completa `docs/registro-patron-h5.md`:
+Completa `README, sección `Patrón usado o descartado``:
 
 ```markdown
 # Registro de patrón H5
@@ -48,14 +48,6 @@ Completa `docs/registro-patron-h5.md`:
 ## Decisión final y justificación
 ```
 
-## Evidencia mínima antes de salir
-
-- [ ] He nombrado el problema antes que el patrón.
-- [ ] He relacionado la decisión con código real del proyecto.
-- [ ] He explicado una semejanza y una diferencia respecto a Command.
-- [ ] He identificado un riesgo de complicar innecesariamente el diseño.
-- [ ] He decidido mantener, simplificar o descartar el patrón.
-- [ ] Puedo defender la decisión sin limitarme a repetir una definición.
 
 ## Seguridad y uso de IA
 
@@ -72,8 +64,8 @@ Completa `docs/registro-patron-h5.md`:
 3. Compara una solución simple con otra más compleja.
 4. Si no existe un problema concreto, justifica por qué no conviene forzar el patrón.
 
-## Cierre
+## Comprobación práctica
 
 Responde sin copiar: **¿Qué problema real resuelve aquí la idea de Command y qué parte sería sobreingeniería?**
 
-La sesión está completada cuando la evidencia existe, está vinculada al proyecto y puedes defender la decisión.
+Comprueba que la decisión queda en el README o en Scrum y que puedes defenderla; no crees un informe paralelo.

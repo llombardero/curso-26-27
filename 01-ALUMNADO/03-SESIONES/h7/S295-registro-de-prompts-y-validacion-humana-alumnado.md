@@ -4,7 +4,7 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Trazar y validar respuestas. | `docs/registro-prompts-h7` y validación humana. |
+| Trazar y validar respuestas. | README, sección «Trazabilidad y validación humana» y validación humana. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H7.
@@ -22,27 +22,10 @@
 4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
 5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
 
-## Registro breve
+## Comprobación práctica
 
-**Qué intento conseguir:**  
-................................................................................
+Comprueba **el resultado observable de la actividad** en su fuente canónica y prepárate para explicarlo. Registra en diario o Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA significativo.
 
-**Decisión o hipótesis que probaré:**  
-................................................................................
-
-**Prueba que he realizado y resultado:**  
-................................................................................
-
-**Bloqueo encontrado y siguiente paso:**  
-................................................................................
-
-## Evidencia mínima antes de salir
-
-- [ ] He producido o actualizado: **`docs/registro-prompts-h7` y validación humana.**
-- [ ] Puedo señalar dónde está.
-- [ ] Puedo explicar una decisión tomada.
-- [ ] Puedo mostrar una prueba o comprobación.
-- [ ] He registrado mi aportación individual si el trabajo era de equipo.
 
 ## Seguridad y uso de IA
 

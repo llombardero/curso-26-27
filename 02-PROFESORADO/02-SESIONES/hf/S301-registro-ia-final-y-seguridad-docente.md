@@ -35,7 +35,7 @@ Guion breve sugerido:
 | Tiempo | Acción |
 |---|---|
 | 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
-| 5–13 min | Explicación breve: El registro IA final protege autoría, seguridad y aprendizaje. |
+| 5–13 min | Explicación breve: La trazabilidad significativa de IA en diario/Scrum protege autoría, seguridad y aprendizaje; no requiere un documento final separado. |
 | 13–18 min | Demostración o ejemplo: Revisar un registro incompleto y corregirlo. |
 | 18–35 min | Trabajo del alumnado: Revisar registros IA de todos los hitos y completar faltantes. |
 | 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |

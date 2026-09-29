@@ -136,9 +136,9 @@ Laura entregaría:
 h2-menu-depuracion/
 ├── README.md
 ├── src/Main.java
-├── docs/pruebas-h2.md
-├── docs/depuracion-h2.md
-├── docs/incidencia-h2.md
+├── README, sección `Pruebas H2`
+├── README, sección `Depuración H2`
+├── README, sección `Depuración H2`
 ├── docs/comparacion-java-python-h2.md
 └── docs/registro-ia.md
 ```
@@ -185,7 +185,7 @@ Laura entregaría:
 h3-memoria-colecciones/
 ├── README.md
 ├── src/
-├── docs/pruebas-memoria-h3.md
+├── README, sección `Pruebas de memoria`
 ├── docs/decision-coleccion.md
 ├── docs/comparacion-java-python-h3.md
 ├── docs/portfolio-h3.md

@@ -133,31 +133,12 @@ userName
 
 ```text
 h1-primer-asistente/
-├── README
-├── src/
-│   └── Main.java
-└── docs/
-    ├── evidencia-ejecucion-h1
-    ├── portfolio-h1
-    ├── registro-ia      # solo si has usado IA
-    ├── defensa-h1
-    ├── incidencia-h1    # si aparece una incidencia importante
-    └── vocabulario-h1   # si lo pide el profesor/a
+├── README.md
+└── src/
+    └── Main.java
 ```
 
-Si todavía no se usa carpeta `docs/`, el profesor/a indicará el formato alternativo.
-
-Plantillas específicas disponibles en este paquete H1:
-
-```text
-plantillas/README-h1-plantilla
-plantillas/evidencia-ejecucion-h1-plantilla
-plantillas/portfolio-h1-plantilla
-plantillas/registro-ia-h1-plantilla
-plantillas/defensa-h1-plantilla
-plantillas/incidencia-h1-plantilla
-plantillas/vocabulario-h1-plantilla
-```
+El README integra ejecución, pruebas y límites. El diario recoge solo aprendizaje individual significativo; Scrum conserva backlog, decisiones, review y retrospectiva. La defensa comprueba autoría sin generar un informe paralelo.
 
 ---
 
@@ -212,13 +193,7 @@ No puedes usar IA para:
 - ocultar que la has usado;
 - entregar código que no puedes explicar.
 
-Si usas IA para la entrega, regístralo en:
-
-```text
-docs/registro-ia
-```
-
-Debes poder explicar:
+Si usas IA de forma significativa para la entrega, deja una entrada en el diario o Scrum que permita explicar:
 
 ```text
 Qué pediste.

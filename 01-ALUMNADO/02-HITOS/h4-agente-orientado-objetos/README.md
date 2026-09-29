@@ -1,13 +1,13 @@
-# H4 - Agente orientado a objetos
+# H4 — Agente orientado a objetos
 
-## Objetivo
+## Evidencia que debe sobrevivir
 
-Reorganizar MiniJarvis con clases, objetos y responsabilidades claras.
+Código OO, diagrama de clases y relación diagrama-código en README. El diagrama de comportamiento es práctica coordinada opcional de Entornos, no entrega obligatoria de Programación.
 
-## Para completar el hito
+## Regla común
 
-El código y los diagramas deben coincidir, y cada integrante debe poder defender las decisiones principales.
+La ficha guía el aprendizaje; no hay un documento nuevo por sesión. Pruebas, decisiones e incidencias se integran en su fuente canónica. La comparación Java-Python se conserva como actividad y se registra en diario/portfolio cuando aporte valor. La defensa individual permanece.
 
-## Entrega
+## HEXA
 
-Consulta en Moodle la tarea del hito, los criterios visibles y las instrucciones de entrega digital. Comprueba los permisos y asegúrate de que puedes explicar lo entregado.
+Activar se acredita con la reformulación del reto; Investigar con aprendizaje/prueba significativa; Idear con una decisión; Planificar con backlog/terminado; Ejecutar con producto, código, pruebas y README; Comunicar con demo, review, retrospectiva y defensa. Una evidencia puede cubrir varias fases.

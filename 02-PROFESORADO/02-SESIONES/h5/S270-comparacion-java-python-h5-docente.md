@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Comparar interfaz, herencia, composición y duck typing. |
-| Evidencia mínima | `docs/comparacion-java-python-h5.md`. |
+| Evidencia mínima | diario individual, como comparación seleccionable. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/comparacion-java-python-h5.md`.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: diario individual, como comparación seleccionable.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -49,7 +49,7 @@ Interfaz Java frente a clase Python con método esperado.
 
 Comparar herramienta Java/Python.
 
-Producto o evidencia que debe quedar: **`docs/comparacion-java-python-h5.md`.**
+Producto o evidencia que debe quedar: **diario individual, como comparación seleccionable.**
 
 ## Qué observar mientras trabajan
 

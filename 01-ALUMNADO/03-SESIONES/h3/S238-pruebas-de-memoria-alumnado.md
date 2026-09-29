@@ -17,31 +17,14 @@
 
 1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
 2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Completar `docs/pruebas-memoria-h3`.**
+3. Realiza esta tarea: **Completar README, sección «Pruebas».**
 4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
 5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
 
-## Registro breve
+## Comprobación práctica
 
-**Qué intento conseguir:**  
-................................................................................
+Comprueba **el resultado observable de la actividad** en su fuente canónica y prepárate para explicarlo. Registra en diario o Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA significativo.
 
-**Decisión o hipótesis que probaré:**  
-................................................................................
-
-**Prueba que he realizado y resultado:**  
-................................................................................
-
-**Bloqueo encontrado y siguiente paso:**  
-................................................................................
-
-## Evidencia mínima antes de salir
-
-- [ ] He producido o actualizado: **Plan de pruebas H3 ejecutado.**
-- [ ] Puedo señalar dónde está.
-- [ ] Puedo explicar una decisión tomada.
-- [ ] Puedo mostrar una prueba o comprobación.
-- [ ] He registrado mi aportación individual si el trabajo era de equipo.
 
 ## Seguridad y uso de IA
 

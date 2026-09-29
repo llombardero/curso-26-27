@@ -349,7 +349,7 @@ Este refuerzo puede hacerse como laboratorio breve antes de cerrar H2.
 | Foco | Comprobar comportamiento antes de entregar. |
 | Explicar | Caso de prueba, entrada, resultado esperado, resultado obtenido e incidencia. |
 | Actividad | Crear plan de pruebas para todos los comandos. |
-| Evidencia | `docs/pruebas-h2.md`. |
+| Evidencia | `README, sección `Pruebas H2``. |
 | Cierre | Ejecutar al menos un caso delante de otro equipo. |
 
 ### Sesión 225 — Depuración con breakpoint
@@ -360,7 +360,7 @@ Este refuerzo puede hacerse como laboratorio breve antes de cerrar H2.
 | Foco | Observar el programa mientras se ejecuta. |
 | Explicar | Breakpoint, variables observadas y ejecución paso a paso. |
 | Actividad | Poner breakpoint tras leer `command` y observar `command`, `running`, `userName`. |
-| Evidencia | `docs/depuracion-h2.md` con captura o descripción. |
+| Evidencia | `README, sección `Depuración H2`` con captura o descripción. |
 | Cierre | Pregunta: ¿qué valor tenía `command` antes de entrar en el condicional? |
 
 ### Sesión 226 — Incidencias y corrección de errores
@@ -371,7 +371,7 @@ Este refuerzo puede hacerse como laboratorio breve antes de cerrar H2.
 | Foco | Documentar un fallo real y su solución. |
 | Explicar | Una incidencia no es un fracaso; es evidencia de aprendizaje. |
 | Actividad | Registrar un error encontrado, causa, solución y prueba posterior. |
-| Evidencia | `docs/incidencia-h2.md`. |
+| Evidencia | `README, sección `Depuración H2``. |
 | Cierre | Compartir una incidencia útil con la clase. |
 
 ### Sesión 227 — Comparación Java-Python H2
@@ -454,7 +454,7 @@ Este refuerzo debe realizarse antes de la defensa H3, aunque no obligue a cambia
 | Foco | Asegurar cobertura completa del Tema 4. |
 | Explicar | Diferencia entre array y `ArrayList`; genéricos; clases envoltorio como `Integer`; `Set` para evitar repetidos; lista mutable e inmutable. |
 | Actividad | Crear un array con tres comandos conocidos, comparar sus limitaciones con `ArrayList`, y usar `Set<String>` para detectar recuerdos repetidos o justificar por qué no se incorpora al diseño final. |
-| Evidencia | `docs/justificacion-coleccion-h3.md` ampliado con array vs lista, uso o descarte de `Set`, y decisión sobre mutabilidad. |
+| Evidencia | `README, sección `Colección y justificación`` ampliado con array vs lista, uso o descarte de `Set`, y decisión sobre mutabilidad. |
 | Cierre | Pregunta: ¿qué estructura usarías si no quieres repetidos? |
 
 ### Sesión 233 — Crear comando `recuerda`
@@ -519,7 +519,7 @@ Este refuerzo debe realizarse antes de la defensa H3, aunque no obligue a cambia
 | Hito | H3 |
 | Foco | Validar comportamiento de colecciones. |
 | Explicar | Pruebas específicas de memoria: guardar, listar, vacío, repetidos y entradas inválidas. |
-| Actividad | Completar `docs/pruebas-memoria-h3.md`. |
+| Actividad | Completar `README, sección `Pruebas de memoria``. |
 | Evidencia | Plan de pruebas H3 ejecutado. |
 | Cierre | Cada equipo muestra un caso que falló y fue corregido. |
 
@@ -680,7 +680,7 @@ Este refuerzo puede incorporarse durante las sesiones 245-256.
 | Foco | Evitar UML inventado. |
 | Explicar | Todo elemento del diagrama debe poder localizarse en el código o justificarse como diseño pendiente. |
 | Actividad | Completar relación diagrama-código. |
-| Evidencia | `docs/relacion-diagrama-codigo-h4.md`. |
+| Evidencia | `README, sección `Relación diagrama-código``. |
 | Cierre | Señalar una relación del diagrama en el código real. |
 
 ### Sesión 252 — Diagrama de comportamiento
@@ -860,7 +860,7 @@ Este refuerzo puede incorporarse durante las sesiones 245-256.
 | Foco | Nombrar el patrón solo si el diseño lo justifica. |
 | Explicar | Command: encapsular una acción como objeto. |
 | Actividad | Comparar herramientas del proyecto con idea del patrón Command. |
-| Evidencia | `docs/registro-patron-h5.md`: usar o descartar patrón. |
+| Evidencia | `README, sección `Patrón usado o descartado``: usar o descartar patrón. |
 | Cierre | Pregunta: ¿qué problema resuelve aquí? |
 
 ### Bloque H5 — Conceptos avanzados de clases sin sobrecargar el diseño
@@ -1081,7 +1081,7 @@ Este refuerzo debe conectarse con la persistencia real del hito.
 | Foco | Asegurar excepciones propias, `throws` e invariantes de estado. |
 | Explicar | Diferencia entre lanzar y capturar; excepción propia `MemoryStorageException` o `PersistenceException`; checked/runtime según nivel; invariante de memoria válida. |
 | Actividad | Crear una excepción propia para errores de carga/guardado o documentar por qué se usa una excepción estándar; asegurar que `Memory` no guarda recuerdos nulos/vacíos ni expone su lista interna modificable. |
-| Evidencia | Código o decisión técnica en `docs/incidencia-h6.md`/`docs/seguridad-h6.md` con prueba de error controlado. |
+| Evidencia | Código o decisión técnica en `README, sección `Incidencias H6``/`README, sección `Seguridad`` con prueba de error controlado. |
 | Cierre | Pregunta: ¿qué invariante debe mantener siempre `Memory`? |
 
 ### Sesión 285 — Logs e historial
@@ -1103,7 +1103,7 @@ Este refuerzo debe conectarse con la persistencia real del hito.
 | Foco | Evitar secretos y datos personales. |
 | Explicar | No subir `.env` real, tokens, claves ni datos personales. |
 | Actividad | Revisar repositorio y ficheros de ejemplo. |
-| Evidencia | `docs/seguridad-h6.md`. |
+| Evidencia | `README, sección `Seguridad``. |
 | Cierre | Checklist de seguridad pasado. |
 
 ### Sesión 287 — README reproducible
@@ -1125,7 +1125,7 @@ Este refuerzo debe conectarse con la persistencia real del hito.
 | Foco | Verificar guardar y cargar. |
 | Explicar | La prueba clave de persistencia exige segunda ejecución. |
 | Actividad | Completar pruebas: guardar, cerrar, abrir, consultar, fichero vacío y error. |
-| Evidencia | `docs/pruebas-persistencia-h6.md`. |
+| Evidencia | `README, sección `Pruebas de persistencia``. |
 | Cierre | Ejecutar prueba completa delante del docente o de otro equipo. |
 
 ### Sesión 289 — Comparación Java-Python H6
@@ -1184,7 +1184,7 @@ Este refuerzo debe conectarse con la persistencia real del hito.
 | Foco | Definir uso limitado y seguro de IA. |
 | Explicar | No enviar datos personales, secretos ni información sensible. |
 | Actividad | Diseñar caso: sugerencia de estudio o explicación breve. |
-| Evidencia | `docs/riesgos-ia-h7.md` inicial. |
+| Evidencia | `README, sección `Riesgos y validación`` inicial. |
 | Cierre | Revisar qué datos recibe la IA o simulación. |
 
 ### Sesión 294 — Implementar simulación o integración

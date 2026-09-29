@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Mejorar estructura sin cambiar comportamiento. |
-| Evidencia mínima | `docs/informe-refactorizacion-h5.md` inicial. |
+| Evidencia mínima | README, sección «Refactorización» inicial. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/informe-refactorizacion-h5.md` inicial.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: README, sección «Refactorización» inicial.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -49,7 +49,7 @@ Extraer método o renombrar variable y ejecutar pruebas.
 
 Refactor pequeño documentado.
 
-Producto o evidencia que debe quedar: **`docs/informe-refactorizacion-h5.md` inicial.**
+Producto o evidencia que debe quedar: **README, sección «Refactorización» inicial.**
 
 ## Qué observar mientras trabajan
 

@@ -42,22 +42,13 @@ También crearéis un historial simple y revisaréis seguridad: nada de secretos
 
 ```text
 h6-persistente-trazable/
-├── README
+├── README.md
 ├── src/
-├── data/
-│   └── recuerdos.txt
-├── logs/
-│   └── historial.log
-└── docs/
-    ├── pruebas-persistencia-h6
-    ├── seguridad-h6
-    ├── logs-historial-h6
-    ├── incidencia-h6
-    ├── comparacion-java-python-h6
-    ├── portfolio-h6
-    ├── registro-ia
-    └── defensa-h6
+├── data/        # solo datos ficticios necesarios
+└── logs/        # anonimizados; sin secretos
 ```
+
+El README integra pruebas de persistencia, seguridad, logs, incidencias y reproducción. No hay portfolio H6 ni registro IA separado; diario/Scrum se actualizan solo si el uso fue significativo.
 
 ---
 

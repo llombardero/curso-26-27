@@ -157,10 +157,10 @@ logs/historial.log
 | Código persistente | Equipo/individual | `src/*.java` | No aplica. |
 | README reproducible | Equipo | `README.md` | `plantillas/README-h6-plantilla.md` |
 | Ficheros de ejemplo | Equipo | `data/`, `logs/` | No aplica. |
-| Pruebas de persistencia | Equipo | `docs/pruebas-persistencia-h6.md` | `plantillas/pruebas-persistencia-h6-plantilla.md` |
-| Seguridad | Equipo | `docs/seguridad-h6.md` | `plantillas/seguridad-h6-plantilla.md` |
-| Logs/historial | Equipo | `docs/logs-historial-h6.md` | `plantillas/logs-historial-h6-plantilla.md` |
-| Incidencia | Si procede | `docs/incidencia-h6.md` | `plantillas/incidencia-h6-plantilla.md` |
+| Pruebas de persistencia | Equipo | `README, sección `Pruebas de persistencia`` | `plantillas/pruebas-persistencia-h6-plantilla.md` |
+| Seguridad | Equipo | `README, sección `Seguridad`` | `plantillas/seguridad-h6-plantilla.md` |
+| Logs/historial | Equipo | `README, sección `Logs e historial`` | `plantillas/logs-historial-h6-plantilla.md` |
+| Incidencia | Si procede | `README, sección `Incidencias H6`` | `plantillas/incidencia-h6-plantilla.md` |
 | Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h6.md` | `plantillas/comparacion-java-python-h6-plantilla.md` |
 | Portfolio H6 | Individual | `docs/portfolio-h6.md` | `plantillas/portfolio-h6-plantilla.md` |
 | Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h6-plantilla.md` |

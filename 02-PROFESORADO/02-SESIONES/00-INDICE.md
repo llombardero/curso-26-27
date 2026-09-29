@@ -48,7 +48,7 @@ Edición final para Moodle — curso 2026/2027.
 | 237 | Comando estado con memoria | [Abrir](h3/S237-comando-estado-con-memoria-docente.md) |
 | 238 | Pruebas de memoria | [Abrir](h3/S238-pruebas-de-memoria-docente.md) |
 | 239 | Comparacion java python h3 | [Abrir](h3/S239-comparacion-java-python-h3-docente.md) |
-| 240 | Portfolio y defensa h3 | [Abrir](h3/S240-portfolio-y-defensa-h3-docente.md) |
+| 240 | Portfolio y defensa h3 | [Abrir](h3/S240-seleccion-c1-y-defensa-h3-docente.md) |
 | 242 | Presentar h4 por que necesitamos poo | [Abrir](h4/S242-presentar-h4-por-que-necesitamos-poo-docente.md) |
 | 243 | Clase y objeto | [Abrir](h4/S243-clase-y-objeto-docente.md) |
 | 244 | Atributos y metodos | [Abrir](h4/S244-atributos-y-metodos-docente.md) |
@@ -63,7 +63,7 @@ Edición final para Moodle — curso 2026/2027.
 | 253 | Revision de responsabilidades | [Abrir](h4/S253-revision-de-responsabilidades-docente.md) |
 | 254 | Comparacion java python h4 | [Abrir](h4/S254-comparacion-java-python-h4-docente.md) |
 | 255 | Pruebas de regresion h4 | [Abrir](h4/S255-pruebas-de-regresion-h4-docente.md) |
-| 256 | Readme portfolio y registro ia h4 | [Abrir](h4/S256-readme-portfolio-y-registro-ia-h4-docente.md) |
+| 256 | Readme portfolio y registro ia h4 | [Abrir](h4/S256-readme-y-revision-tecnica-h4-docente.md) |
 | 257 | Defensa h4 | [Abrir](h4/S257-defensa-h4-docente.md) |
 | 258 | Presentar h5 anadir sin romper | [Abrir](h5/S258-presentar-h5-anadir-sin-romper-docente.md) |
 | 259 | Clean code i nombres y duplicacion | [Abrir](h5/S259-clean-code-i-nombres-y-duplicacion-docente.md) |
@@ -80,7 +80,7 @@ Edición final para Moodle — curso 2026/2027.
 | 270 | Comparacion java python h5 | [Abrir](h5/S270-comparacion-java-python-h5-docente.md) |
 | 271 | Pruebas tras refactorizacion | [Abrir](h5/S271-pruebas-tras-refactorizacion-docente.md) |
 | 272 | Readme y documentacion tecnica h5 | [Abrir](h5/S272-readme-y-documentacion-tecnica-h5-docente.md) |
-| 273 | Portfolio y registro ia h5 | [Abrir](h5/S273-portfolio-y-registro-ia-h5-docente.md) |
+| 273 | Portfolio y registro ia h5 | [Abrir](h5/S273-seleccion-c2-y-revision-ia-h4-h5-docente.md) |
 | 274 | Demo y defensa h5 | [Abrir](h5/S274-demo-y-defensa-h5-docente.md) |
 | 279 | Presentar h6 memoria persistente | [Abrir](h6/S279-presentar-h6-memoria-persistente-docente.md) |
 | 280 | Formato de fichero | [Abrir](h6/S280-formato-de-fichero-docente.md) |
@@ -93,7 +93,7 @@ Edición final para Moodle — curso 2026/2027.
 | 287 | Readme reproducible | [Abrir](h6/S287-readme-reproducible-docente.md) |
 | 288 | Pruebas de persistencia | [Abrir](h6/S288-pruebas-de-persistencia-docente.md) |
 | 289 | Comparacion java python h6 | [Abrir](h6/S289-comparacion-java-python-h6-docente.md) |
-| 290 | Portfolio y registro ia h6 | [Abrir](h6/S290-portfolio-y-registro-ia-h6-docente.md) |
+| 290 | Portfolio y registro ia h6 | [Abrir](h6/S290-trazabilidad-y-seguridad-h6-docente.md) |
 | 291 | Demo y defensa h6 | [Abrir](h6/S291-demo-y-defensa-h6-docente.md) |
 | 292 | Decidir alcance h7 | [Abrir](h7/S292-decidir-alcance-h7-docente.md) |
 | 293 | Caso de uso ia y seguridad de prompts | [Abrir](h7/S293-caso-de-uso-ia-y-seguridad-de-prompts-docente.md) |

@@ -4,7 +4,7 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Cubrir conceptos del Tema 3 que no siempre aparecen en el menú principal. | Archivo breve `docs/refuerzo-bucles-h2` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia. |
+| Cubrir conceptos del Tema 3 que no siempre aparecen en el menú principal. | Archivo breve README, sección «Decisiones y comprobación» o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H2.
@@ -21,27 +21,10 @@
 4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
 5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
 
-## Registro breve
+## Comprobación práctica
 
-**Qué intento conseguir:**  
-................................................................................
+Comprueba **el resultado observable de la actividad** en su fuente canónica y prepárate para explicarlo. Registra en diario o Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA significativo.
 
-**Decisión o hipótesis que probaré:**  
-................................................................................
-
-**Prueba que he realizado y resultado:**  
-................................................................................
-
-**Bloqueo encontrado y siguiente paso:**  
-................................................................................
-
-## Evidencia mínima antes de salir
-
-- [ ] He producido o actualizado: **Archivo breve `docs/refuerzo-bucles-h2` o apartado en pruebas H2 con código, explicación y una pregunta de eficiencia.**
-- [ ] Puedo señalar dónde está.
-- [ ] Puedo explicar una decisión tomada.
-- [ ] Puedo mostrar una prueba o comprobación.
-- [ ] He registrado mi aportación individual si el trabajo era de equipo.
 
 ## Seguridad y uso de IA
 

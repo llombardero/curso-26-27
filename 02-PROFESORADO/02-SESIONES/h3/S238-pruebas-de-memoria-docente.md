@@ -37,7 +37,7 @@ Guion breve sugerido:
 | 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
 | 5–13 min | Explicación breve: Hay que probar memoria vacía, guardar, listar y casos raros. |
 | 13–18 min | Demostración o ejemplo: Tabla de prueba para `recuerda` y `memoria`. |
-| 18–35 min | Trabajo del alumnado: Completar `docs/pruebas-memoria-h3.md`. |
+| 18–35 min | Trabajo del alumnado: Completar `README, sección `Pruebas de memoria``. |
 | 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |
 | 40–45 min | Cierre: Cada equipo muestra un caso que falló y fue corregido. |
 

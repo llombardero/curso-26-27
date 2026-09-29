@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Definir uso limitado y seguro de IA. |
-| Evidencia mínima | `docs/riesgos-ia-h7.md` inicial. |
+| Evidencia mínima | `README, sección `Riesgos y validación`` inicial. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/riesgos-ia-h7.md` inicial.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: `README, sección `Riesgos y validación`` inicial.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -51,7 +51,7 @@ Prompt seguro e inseguro.
 
 Diseñar caso de uso y riesgos.
 
-Producto o evidencia que debe quedar: **`docs/riesgos-ia-h7.md` inicial.**
+Producto o evidencia que debe quedar: **`README, sección `Riesgos y validación`` inicial.**
 
 ## Qué observar mientras trabajan
 

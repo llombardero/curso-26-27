@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Revisar código de forma constructiva. |
-| Evidencia mínima | `docs/revision-codigo-h5.md`. |
+| Evidencia mínima | PR o revisión de código en GitHub. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/revision-codigo-h5.md`.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: PR o revisión de código en GitHub.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -49,7 +49,7 @@ Comentario útil frente a comentario vago.
 
 Revisión cruzada con checklist.
 
-Producto o evidencia que debe quedar: **`docs/revision-codigo-h5.md`.**
+Producto o evidencia que debe quedar: **PR o revisión de código en GitHub.**
 
 ## Qué observar mientras trabajan
 

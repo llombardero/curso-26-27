@@ -1,13 +1,13 @@
-# H5 - Agente extensible, código limpio y patrones
+# H5 — Extensibilidad, clean code y patrones
 
-## Objetivo
+## Evidencia que debe sobrevivir
 
-Mejorar MiniJarvis para añadir herramientas o comandos sin romper el diseño.
+Código, historial/PR, tests y README con refactorización y patrón usado o descartado.
 
-## Para completar el hito
+## Regla común
 
-Debes mostrar la refactorización, pruebas, revisión de código y una decisión razonada sobre el patrón utilizado o descartado.
+La ficha guía el aprendizaje; no hay un documento nuevo por sesión. Pruebas, decisiones e incidencias se integran en su fuente canónica. La comparación Java-Python se conserva como actividad y se registra en diario/portfolio cuando aporte valor. La defensa individual permanece.
 
-## Entrega
+## HEXA
 
-Consulta en Moodle la tarea del hito, los criterios visibles y las instrucciones de entrega digital. Comprueba los permisos y asegúrate de que puedes explicar lo entregado.
+Activar se acredita con la reformulación del reto; Investigar con aprendizaje/prueba significativa; Idear con una decisión; Planificar con backlog/terminado; Ejecutar con producto, código, pruebas y README; Comunicar con demo, review, retrospectiva y defensa. Una evidencia puede cubrir varias fases.

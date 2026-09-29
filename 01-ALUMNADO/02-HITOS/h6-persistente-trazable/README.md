@@ -1,13 +1,13 @@
-# H6 - Persistencia y trazabilidad
+# H6 — Persistencia y trazabilidad
 
-## Objetivo
+## Evidencia que debe sobrevivir
 
-Conservar memoria e historial entre ejecuciones mediante ficheros y tratamiento seguro de errores.
+Código, tests, datos ficticios, configuración segura, logs anonimizados y README reproducible con persistencia y seguridad.
 
-## Para completar el hito
+## Regla común
 
-Debes demostrar el funcionamiento en dos ejecuciones, documentar pruebas y evitar secretos o datos personales.
+La ficha guía el aprendizaje; no hay un documento nuevo por sesión. Pruebas, decisiones e incidencias se integran en su fuente canónica. La comparación Java-Python se conserva como actividad y se registra en diario/portfolio cuando aporte valor. La defensa individual permanece.
 
-## Entrega
+## HEXA
 
-Consulta en Moodle la tarea del hito, los criterios visibles y las instrucciones de entrega digital. Comprueba los permisos y asegúrate de que puedes explicar lo entregado.
+Activar se acredita con la reformulación del reto; Investigar con aprendizaje/prueba significativa; Idear con una decisión; Planificar con backlog/terminado; Ejecutar con producto, código, pruebas y README; Comunicar con demo, review, retrospectiva y defensa. Una evidencia puede cubrir varias fases.

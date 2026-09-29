@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Representar diseño en UML básico. |
-| Evidencia mínima | `docs/diagrama-clases-h4.md` versión inicial. |
+| Evidencia mínima | README, junto al código y al diagrama de clases versión inicial. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/diagrama-clases-h4.md` versión inicial.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: README, junto al código y al diagrama de clases versión inicial.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -50,7 +50,7 @@ Caja con nombre, atributos y métodos.
 
 Dibujar `Main`, `Agent`, `Memory`.
 
-Producto o evidencia que debe quedar: **`docs/diagrama-clases-h4.md` versión inicial.**
+Producto o evidencia que debe quedar: **README, junto al código y al diagrama de clases versión inicial.**
 
 ## Qué observar mientras trabajan
 

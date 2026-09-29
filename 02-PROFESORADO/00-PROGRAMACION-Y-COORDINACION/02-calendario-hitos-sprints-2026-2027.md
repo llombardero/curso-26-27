@@ -371,7 +371,7 @@ Entregables:
 | Entregable | Responsable | Formato |
 |---|---|---|
 | Código Java con menú | Equipo | GitHub. |
-| Plan de pruebas manuales | Equipo | `docs/pruebas-h2.md`. |
+| Plan de pruebas manuales | Equipo | `README, sección `Pruebas H2``. |
 | Informe de depuración | Individual/equipo | Capturas o explicación de breakpoints. |
 | Comparación Java ↔ Python | Individual, casa | Markdown + código Python si procede. |
 | Registro de IA | Individual | Markdown. |
@@ -392,7 +392,7 @@ Entornos de Desarrollo:
 
 Entregables clave para Entornos:
 
-- `docs/pruebas-h2.md`.
+- `README, sección `Pruebas H2``.
 - Informe de depuración.
 - Registro de incidencia con síntoma, causa, solución y verificación.
 

@@ -107,10 +107,10 @@ Repositorio o ubicación:
 
 | Ítem | Sí | Parcial | No | Observaciones |
 |---|---|---|---|---|
-| Incluye `docs/pruebas-h2.md` | | | | |
+| Incluye `README, sección `Pruebas H2`` | | | | |
 | Prueba comandos principales | | | | |
 | Incluye esperado/obtenido | | | | |
-| Incluye `docs/depuracion-h2.md` | | | | |
+| Incluye `README, sección `Depuración H2`` | | | | |
 | Usa breakpoint | | | | |
 | Observa al menos una variable | | | | |
 | Documenta incidencia si apareció | | | | |

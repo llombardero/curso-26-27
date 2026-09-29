@@ -42,23 +42,16 @@ No se trata de hacer el código “más complicado”, sino más claro, mantenib
 
 ```text
 h5-extensible-clean-code-patrones/
-├── README
-├── src/
-│   ├── Main.java
-│   ├── Agent.java
-│   ├── Memory.java
-│   ├── Tool.java
-│   └── herramientas...
-└── docs/
-    ├── informe-refactorizacion-h5
-    ├── evidencia-git-h5
-    ├── revision-codigo-h5
-    ├── registro-patron-h5
-    ├── comparacion-java-python-h5
-    ├── portfolio-h5
-    ├── registro-ia
-    └── defensa-h5
+├── README.md
+└── src/
+    ├── Main.java
+    ├── Agent.java
+    ├── Memory.java
+    ├── Tool.java
+    └── herramientas...
 ```
+
+GitHub conserva commits/PR y código; el README resume la refactorización y el patrón usado o descartado. C2 selecciona H4-H5 en Sites. No se generan informes paralelos de Git, patrón, comparación, portfolio o defensa.
 
 ---
 

@@ -79,7 +79,7 @@ Cada entregable debe indicar explícitamente qué debe entregar el alumnado, en 
 |---|---|---|---|
 | H0 | Tablero Scrum inicial, contrato de equipo y retrospectiva de la torre de papel. | Foto o captura del tablero, Markdown/PDF breve, Moodle o GitHub. | Revisión de roles, backlog, acuerdos y retrospectiva. |
 | H1 | Proyecto IntelliJ configurado, repositorio GitHub inicial y README de ejecución. | Repositorio GitHub + README.md + captura de ejecución. | Se clona/abre el proyecto, se ejecuta y se comprueba la estructura. |
-| H2 | Plan de pruebas manuales, informe de depuración e incidencias del agente con menú. | `docs/pruebas-h2.md`, capturas de breakpoints, checklist. | Se reproducen casos de prueba y se pregunta por el proceso de depuración. |
+| H2 | Plan de pruebas manuales, informe de depuración e incidencias del agente con menú. | `README, sección `Pruebas H2``, capturas de breakpoints, checklist. | Se reproducen casos de prueba y se pregunta por el proceso de depuración. |
 | H3 | Pruebas de memoria temporal y documentación de casos límite. | Tests si procede, checklist, README actualizado. | Se comprueba que la memoria añade, lista, busca y gestiona errores. |
 | H4 | Diagrama de clases y al menos un diagrama de comportamiento del agente. | PlantUML, Mermaid, draw.io exportado o imagen + fuente editable. | Se contrasta diagrama contra código y se defiende una relación/clase. |
 | H5 | Evidencia de GitHub colaborativo, refactorización y revisión de código. | Ramas/commits/pull request o registro equivalente; informe breve. | Se revisa historial, cambios antes/después y justificación técnica. |

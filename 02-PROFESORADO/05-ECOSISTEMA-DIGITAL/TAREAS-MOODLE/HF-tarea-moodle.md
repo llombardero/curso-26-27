@@ -1,35 +1,11 @@
-# Tarea Moodle — HF: Cierre, demo, defensa y mejora
+# Tarea Moodle — HF
 
-## Configuración docente
+## Entrega oficial
 
-- Modalidad: Individual y equipo, en actividades separadas.
-- Grupos separados para la entrega de equipo.
-- Rúbrica: usar la del hito y conservar separadas Programación y Entornos.
-- Finalización: envío realizado y, cuando proceda, defensa completada.
+1. Release o tag `hf-final`.
+2. Site personal final.
+3. Site de equipo final.
+4. Defensa individual.
+5. Recuperación concreta solo para quien la necesite.
 
-## Evidencias solicitadas
-
-Portfolio final; demo; defensa; registro IA final; autoevaluación; recuperación o mejora si procede.
-
-## Campos de entrega
-
-1. URL de la página HF del Site personal.
-2. URL de la página HF del Site del equipo.
-3. URL profunda al Sheet Scrum o evidencia concreta.
-4. URL de Drive solo cuando la evidencia no pertenezca a GitHub.
-5. URL de GitHub y tag/commit desde H1.
-6. Aportación individual breve.
-7. PDF/XLSX de cierre cuando se indique.
-
-## Versión
-
-Release o tag `hf-final`.
-
-## Comprobación docente antes de abrir
-
-- probar vista de estudiante;
-- comprobar grupo y agrupamiento;
-- comprobar acceso restringido;
-- impedir adjuntar credenciales o datos personales;
-- fijar fecha de cierre y procedimiento de entrega tardía;
-- mantener ejemplos de Laura ocultos hasta el intento propio.
+El README/release conserva el producto; los Sites sintetizan; diario y Scrum conservan el proceso. No se transcribe de nuevo la IA del curso ni se generan portfolio, demo, defensa o plan de mejora en Markdown separados.

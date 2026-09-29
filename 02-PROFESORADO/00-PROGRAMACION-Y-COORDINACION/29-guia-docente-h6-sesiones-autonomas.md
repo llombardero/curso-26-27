@@ -1162,7 +1162,7 @@ Demostrar con evidencias que los recuerdos persisten entre dos ejecuciones del p
 
 ## Resultado esperado
 
-Documento `docs/pruebas-persistencia-h6.md` con prueba reproducible:
+Documento `README, sección `Pruebas de persistencia`` con prueba reproducible:
 
 ```text
 Ejecución 1: guardar recuerdo.
@@ -1331,7 +1331,7 @@ Identificar riesgos de seguridad básicos al guardar ficheros y documentar qué 
 
 ## Resultado esperado
 
-Documento `docs/seguridad-h6.md` y `.gitignore` revisado con entradas como:
+Documento `README, sección `Seguridad`` y `.gitignore` revisado con entradas como:
 
 ```text
 .env
@@ -1679,9 +1679,9 @@ Documentos actualizados:
 
 ```text
 - docs/comparacion-java-python-h6.md;
-- docs/pruebas-persistencia-h6.md;
-- docs/seguridad-h6.md;
-- docs/logs-historial-h6.md;
+- README, sección `Pruebas de persistencia`;
+- README, sección `Seguridad`;
+- README, sección `Logs e historial`;
 - docs/portfolio-h6.md;
 - docs/registro-ia.md si procede.
 ```

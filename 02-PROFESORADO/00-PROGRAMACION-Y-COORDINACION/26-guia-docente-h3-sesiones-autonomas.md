@@ -122,8 +122,8 @@ Propuesta de 10 sesiones de 45 minutos.
 | H3-S4 | Comando recuerda | Guardar un recuerdo. |
 | H3-S5 | Comando memoria | Consultar recuerdos. |
 | H3-S6 | Casos límite | Memoria vacía y entrada vacía. |
-| H3-S7 | Pruebas de memoria | `docs/pruebas-memoria-h3.md`. |
-| H3-S8 | Justificación de colección | `docs/justificacion-coleccion-h3.md`. |
+| H3-S7 | Pruebas de memoria | `README, sección `Pruebas de memoria``. |
+| H3-S8 | Justificación de colección | `README, sección `Colección y justificación``. |
 | H3-S9 | Comparación Java ↔ Python y documentación | Comparación + portfolio/registro IA. |
 | H3-S10 | Defensa, revisión y cierre C1 | H3 validado. |
 
@@ -638,7 +638,7 @@ Documentar pruebas de memoria con casos normales y casos límite.
 
 ## Resultado esperado
 
-Documento `docs/pruebas-memoria-h3.md` o equivalente.
+Documento `README, sección `Pruebas de memoria`` o equivalente.
 
 ## Tabla mínima
 
@@ -705,7 +705,7 @@ Justificar por qué se ha usado `ArrayList` u otra colección.
 
 ## Resultado esperado
 
-Documento `docs/justificacion-coleccion-h3.md` o equivalente.
+Documento `README, sección `Colección y justificación`` o equivalente.
 
 ## Guion docente
 

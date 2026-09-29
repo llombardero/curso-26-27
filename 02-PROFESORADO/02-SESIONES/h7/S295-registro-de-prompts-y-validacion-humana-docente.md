@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Trazar y validar respuestas. |
-| Evidencia mínima | `docs/registro-prompts-h7.md` y validación humana. |
+| Evidencia mínima | README, sección «Trazabilidad y validación humana» y validación humana. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/registro-prompts-h7.md` y validación humana.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: README, sección «Trazabilidad y validación humana» y validación humana.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -50,7 +50,7 @@ Registro: prompt, respuesta, aceptación, modificación, verificación.
 
 Completar registro y validación.
 
-Producto o evidencia que debe quedar: **`docs/registro-prompts-h7.md` y validación humana.**
+Producto o evidencia que debe quedar: **README, sección «Trazabilidad y validación humana» y validación humana.**
 
 ## Qué observar mientras trabajan
 

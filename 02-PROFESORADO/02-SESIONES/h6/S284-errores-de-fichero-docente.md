@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Asegurar excepciones propias, `throws` e invariantes de estado. |
-| Evidencia mínima | Código o decisión técnica en `docs/incidencia-h6.md`/`docs/seguridad-h6.md` con prueba de error controlado. |
+| Evidencia mínima | Código o decisión técnica en `README, sección `Incidencias H6``/`README, sección `Seguridad`` con prueba de error controlado. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Código o decisión técnica en `docs/incidencia-h6.md`/`docs/seguridad-h6.md` con prueba de error controlado.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: Código o decisión técnica en `README, sección `Incidencias H6``/`README, sección `Seguridad`` con prueba de error controlado.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -50,7 +50,7 @@ Ejecutar sin carpeta `data` y corregir con `createDirectories`.
 
 Documentar y controlar un error.
 
-Producto o evidencia que debe quedar: **Código o decisión técnica en `docs/incidencia-h6.md`/`docs/seguridad-h6.md` con prueba de error controlado.**
+Producto o evidencia que debe quedar: **Código o decisión técnica en `README, sección `Incidencias H6``/`README, sección `Seguridad`` con prueba de error controlado.**
 
 ## Qué observar mientras trabajan
 

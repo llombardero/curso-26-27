@@ -1,13 +1,13 @@
-# H0 - Equipo, Scrum y torre de papel
+# H0 — Equipo, Scrum y torre de papel
 
-## Objetivo
+## Evidencia que debe sobrevivir
 
-Vivir un sprint breve, construir una torre de papel y trasladar lo aprendido a la organización de MiniJarvis.
+HADA privada y ticket final individual; backlog, acuerdos, dos pruebas de torre, review y retrospectiva; fotografía no-code si se necesita.
 
-## Para completar el hito
+## Regla común
 
-Completa la ficha del reto, registra el trabajo del equipo y revisa en Moodle las instrucciones de entrega de H0.
+La ficha guía el aprendizaje; no hay un documento nuevo por sesión. Pruebas, decisiones e incidencias se integran en su fuente canónica. La comparación Java-Python se conserva como actividad y se registra en diario/portfolio cuando aporte valor. La defensa individual permanece.
 
-## Entrega
+## HEXA
 
-Consulta en Moodle la tarea del hito, los criterios visibles y las instrucciones de entrega digital. Comprueba los permisos y asegúrate de que puedes explicar lo entregado.
+Activar se acredita con la reformulación del reto; Investigar con aprendizaje/prueba significativa; Idear con una decisión; Planificar con backlog/terminado; Ejecutar con producto, código, pruebas y README; Comunicar con demo, review, retrospectiva y defensa. Una evidencia puede cubrir varias fases.

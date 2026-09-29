@@ -53,20 +53,14 @@ El objetivo es dejar de tener todo en `Main` y repartir responsabilidades entre 
 
 ```text
 h4-agente-orientado-objetos/
-├── README
-├── src/
-│   ├── Main.java
-│   ├── Agent.java
-│   └── Memory.java
-└── docs/
-    ├── diagrama-clases-h4
-    ├── diagrama-comportamiento-h4
-    ├── relacion-diagrama-codigo-h4
-    ├── comparacion-java-python-h4
-    ├── portfolio-h4
-    ├── registro-ia
-    └── defensa-h4
+├── README.md
+└── src/
+    ├── Main.java
+    ├── Agent.java
+    └── Memory.java
 ```
+
+El diagrama de clases y su relación con el código se integran en el repositorio/README. El diagrama de comportamiento es práctica coordinada opcional de Entornos, no una entrega obligatoria de Programación. No hay portfolio ni registro IA separados por hito.
 
 ---
 

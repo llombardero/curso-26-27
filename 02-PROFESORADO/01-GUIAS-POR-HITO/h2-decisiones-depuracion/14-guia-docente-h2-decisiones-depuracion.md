@@ -163,9 +163,9 @@ RA principales:
 
 Evidencias:
 
-- `docs/pruebas-h2.md`;
-- `docs/depuracion-h2.md`;
-- `docs/incidencia-h2.md`;
+- `README, sección `Pruebas H2``;
+- `README, sección `Depuración H2``;
+- `README, sección `Depuración H2``;
 - evidencia de ejecución;
 - defensa corta.
 
@@ -333,9 +333,9 @@ Preguntas:
 | Código Java con menú | Equipo/individual según decisión docente | `src/Main.java` | No aplica. |
 | README H2 | Equipo/individual | `README.md` | `plantillas/README-h2-plantilla.md` |
 | Evidencia de ejecución | Equipo/individual | `docs/evidencia-ejecucion-h2.md` | `plantillas/evidencia-ejecucion-h2-plantilla.md` |
-| Plan de pruebas | Equipo | `docs/pruebas-h2.md` | `plantillas/pruebas-h2-plantilla.md` |
-| Informe de depuración | Individual/equipo | `docs/depuracion-h2.md` | `plantillas/depuracion-h2-plantilla.md` |
-| Incidencia | Equipo/individual | `docs/incidencia-h2.md` | `plantillas/incidencia-h2-plantilla.md` |
+| Plan de pruebas | Equipo | `README, sección `Pruebas H2`` | `plantillas/pruebas-h2-plantilla.md` |
+| Informe de depuración | Individual/equipo | `README, sección `Depuración H2`` | `plantillas/depuracion-h2-plantilla.md` |
+| Incidencia | Equipo/individual | `README, sección `Depuración H2`` | `plantillas/incidencia-h2-plantilla.md` |
 | Comparación Java ↔ Python | Individual, casa | `docs/comparacion-java-python-h2.md` | `plantillas/comparacion-java-python-h2-plantilla.md` |
 | Registro IA | Individual | `docs/registro-ia.md` | `plantillas/registro-ia-h2-plantilla.md` |
 | Defensa H2 | Individual | `docs/defensa-h2.md` | `plantillas/defensa-h2-plantilla.md` |

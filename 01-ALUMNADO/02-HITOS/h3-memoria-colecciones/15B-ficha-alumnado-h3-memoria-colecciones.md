@@ -56,19 +56,12 @@ El agente deberá recordar información durante la ejecución, por ejemplo mensa
 
 ```text
 h3-memoria-colecciones/
-├── README
-├── src/
-│   └── Main.java
-└── docs/
-    ├── evidencia-ejecucion-h3
-    ├── pruebas-memoria-h3
-    ├── justificacion-coleccion-h3
-    ├── incidencia-h3
-    ├── comparacion-java-python-h3
-    ├── portfolio-h3
-    ├── registro-ia
-    └── defensa-h3
+├── README.md
+└── src/
+    └── Main.java
 ```
+
+El README integra pruebas de memoria, elección de colección, casos límite e incidencias relevantes. GitHub conserva el código; C1 selecciona H1-H3 en Sites. Diario, Scrum e IA se actualizan solo cuando hay algo significativo.
 
 ---
 

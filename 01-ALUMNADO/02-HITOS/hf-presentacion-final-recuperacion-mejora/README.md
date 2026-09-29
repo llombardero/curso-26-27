@@ -1,13 +1,13 @@
-# HF - Presentación final, recuperación y mejora
+# HF — Presentación final, recuperación y mejora
 
-## Objetivo
+## Evidencia que debe sobrevivir
 
-Seleccionar evidencias, demostrar la evolución de MiniJarvis y defender el aprendizaje individual.
+Release/README = producto; Sites = selección final; diario/Scrum = proceso; demo y defensa = comunicación y autoría. La recuperación solo existe para quien la necesite.
 
-## Para completar el hito
+## Regla común
 
-Prepara el portfolio, la demostración, la defensa y, si corresponde, una recuperación o mejora específica.
+La ficha guía el aprendizaje; no hay un documento nuevo por sesión. Pruebas, decisiones e incidencias se integran en su fuente canónica. La comparación Java-Python se conserva como actividad y se registra en diario/portfolio cuando aporte valor. La defensa individual permanece.
 
-## Entrega
+## HEXA
 
-Consulta en Moodle la tarea del hito, los criterios visibles y las instrucciones de entrega digital. Comprueba los permisos y asegúrate de que puedes explicar lo entregado.
+Activar se acredita con la reformulación del reto; Investigar con aprendizaje/prueba significativa; Idear con una decisión; Planificar con backlog/terminado; Ejecutar con producto, código, pruebas y README; Comunicar con demo, review, retrospectiva y defensa. Una evidencia puede cubrir varias fases.

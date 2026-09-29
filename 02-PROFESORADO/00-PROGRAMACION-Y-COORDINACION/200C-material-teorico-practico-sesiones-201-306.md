@@ -541,7 +541,7 @@ Explicación docente: Un array tiene tamaño fijo; `ArrayList` crece; `Set` evit
 
 Demostración: Array `String[] commands`, `ArrayList<String> memories`, `Set<String> uniqueMemories` y `HashMap<String, String> preferences`.
 
-Práctica: Ampliar `docs/justificacion-coleccion-h3.md` comparando array, lista, set y mapa. Decidir si `Set` entra en MiniJarvis o queda como criterio de mejora.
+Práctica: Ampliar `README, sección `Colección y justificación`` comparando array, lista, set y mapa. Decidir si `Set` entra en MiniJarvis o queda como criterio de mejora.
 
 Comprobación: ¿Qué estructura elegirías para no guardar dos veces el mismo recuerdo?
 

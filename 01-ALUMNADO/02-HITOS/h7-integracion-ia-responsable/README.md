@@ -1,13 +1,13 @@
-# H7 - Integración responsable de IA
+# H7 — Integración responsable de IA
 
-## Objetivo
+## Evidencia que debe sobrevivir
 
-Integrar o simular una ayuda de IA con límites, registro y validación humana.
+Código/configuración sin secretos y README con prompts o entradas, riesgos, validación humana, cambios y límites; diario/Scrum cuando proceda.
 
-## Para completar el hito
+## Regla común
 
-La integración real solo se realiza si está autorizada. Nunca se suben claves, tokens ni datos personales.
+La ficha guía el aprendizaje; no hay un documento nuevo por sesión. Pruebas, decisiones e incidencias se integran en su fuente canónica. La comparación Java-Python se conserva como actividad y se registra en diario/portfolio cuando aporte valor. La defensa individual permanece.
 
-## Entrega
+## HEXA
 
-Consulta en Moodle la tarea del hito, los criterios visibles y las instrucciones de entrega digital. Comprueba los permisos y asegúrate de que puedes explicar lo entregado.
+Activar se acredita con la reformulación del reto; Investigar con aprendizaje/prueba significativa; Idear con una decisión; Planificar con backlog/terminado; Ejecutar con producto, código, pruebas y README; Comunicar con demo, review, retrospectiva y defensa. Una evidencia puede cubrir varias fases.

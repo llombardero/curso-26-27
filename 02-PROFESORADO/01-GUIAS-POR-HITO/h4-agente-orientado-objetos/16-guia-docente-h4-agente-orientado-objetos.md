@@ -172,7 +172,7 @@ Preferir pocas clases claras antes que muchas clases decorativas.
 | README H4 | Equipo/individual | `README.md` | `plantillas/README-h4-plantilla.md` |
 | Diagrama de clases | Equipo | `docs/diagrama-clases-h4.md` | `plantillas/diagrama-clases-h4-plantilla.md` |
 | Diagrama de comportamiento | Equipo | `docs/diagrama-comportamiento-h4.md` | `plantillas/diagrama-comportamiento-h4-plantilla.md` |
-| Relación diagrama-código | Equipo | `docs/relacion-diagrama-codigo-h4.md` | `plantillas/relacion-diagrama-codigo-h4-plantilla.md` |
+| Relación diagrama-código | Equipo | `README, sección `Relación diagrama-código`` | `plantillas/relacion-diagrama-codigo-h4-plantilla.md` |
 | Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h4.md` | `plantillas/comparacion-java-python-h4-plantilla.md` |
 | Portfolio H4 | Individual | `docs/portfolio-h4.md` | `plantillas/portfolio-h4-plantilla.md` |
 | Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h4-plantilla.md` |

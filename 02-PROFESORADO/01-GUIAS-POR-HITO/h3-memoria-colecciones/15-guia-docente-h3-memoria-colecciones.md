@@ -160,8 +160,8 @@ RA principales:
 
 Evidencias:
 
-- `docs/pruebas-memoria-h3.md`;
-- `docs/incidencia-h3.md` si procede;
+- `README, sección `Pruebas de memoria``;
+- `README, sección `Incidencias H3`` si procede;
 - README actualizado;
 - comparación Java ↔ Python.
 
@@ -220,9 +220,9 @@ Tengo 1 recuerdo en memoria temporal.
 | Código con memoria temporal | Equipo/individual | `src/Main.java` | No aplica. |
 | README H3 | Equipo/individual | `README.md` | `plantillas/README-h3-plantilla.md` |
 | Evidencia de ejecución | Equipo/individual | `docs/evidencia-ejecucion-h3.md` | `plantillas/evidencia-ejecucion-h3-plantilla.md` |
-| Pruebas de memoria | Equipo | `docs/pruebas-memoria-h3.md` | `plantillas/pruebas-memoria-h3-plantilla.md` |
-| Justificación de colección | Individual/equipo | `docs/justificacion-coleccion-h3.md` | `plantillas/justificacion-coleccion-h3-plantilla.md` |
-| Incidencia | Si procede | `docs/incidencia-h3.md` | `plantillas/incidencia-h3-plantilla.md` |
+| Pruebas de memoria | Equipo | `README, sección `Pruebas de memoria`` | `plantillas/pruebas-memoria-h3-plantilla.md` |
+| Justificación de colección | Individual/equipo | `README, sección `Colección y justificación`` | `plantillas/justificacion-coleccion-h3-plantilla.md` |
+| Incidencia | Si procede | `README, sección `Incidencias H3`` | `plantillas/incidencia-h3-plantilla.md` |
 | Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h3.md` | `plantillas/comparacion-java-python-h3-plantilla.md` |
 | Portfolio H3 | Individual | `docs/portfolio-h3.md` | `plantillas/portfolio-h3-plantilla.md` |
 | Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h3-plantilla.md` |

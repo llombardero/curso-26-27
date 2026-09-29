@@ -1544,7 +1544,7 @@ Conectar explícitamente diagramas y código, y comparar la POO básica de Java 
 Dos evidencias:
 
 ```text
-1. docs/relacion-diagrama-codigo-h4.md
+1. README, sección `Relación diagrama-código`
 2. docs/comparacion-java-python-h4.md
 ```
 

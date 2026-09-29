@@ -1,30 +1,11 @@
-# Diario y portfolio individual
+# Diario individual y portfolio
 
-## Son instrumentos diferentes
+## Diario: registro significativo
 
-- El diario registra el proceso cuando hay un avance, una prueba, un bloqueo o una decisión.
-- El portfolio selecciona al cierre de cada hito las evidencias que mejor demuestran tu aprendizaje.
+No existe una fila obligatoria por sesión. Como referencia flexible, en cada hito registra aproximadamente tres momentos: cierre de investigación, aprendizaje técnico o prueba de ejecución y reflexión/defensa. Añade otra entrada solo ante un bloqueo útil, decisión importante, error valioso, uso significativo de IA o recuperación.
 
-## Entrada mínima de diario
+Columnas: fecha; hito/fase; objetivo o acción; prueba y resultado; enlace; aprendizaje, decisión, bloqueo o siguiente paso; uso de IA y validación solo si procede. Si no hubo IA o bloqueo, deja el campo vacío.
 
-1. Fecha, sesión e hito.
-2. Objetivo.
-3. Acción realizada.
-4. Prueba y resultado.
-5. Evidencia enlazada.
-6. Bloqueo, si existe.
-7. Uso de IA y validación, si procede.
-8. Siguiente paso.
+## Portfolio
 
-## Página de cada hito en el Site personal
-
-- reto con tus palabras;
-- aportación individual;
-- decisión justificada;
-- dificultad o cambio;
-- evidencia concreta;
-- aprendizaje;
-- uso de IA y validación;
-- mejora siguiente.
-
-Un portfolio no copia todas las actividades: selecciona evidencias localizables, comprobables y defendibles.
+El Site personal selecciona, enlaza y explica aprendizajes en C1 (H1-H3), C2 (H4-H5) y HF (H6-H7 y evolución global). No copia el diario ni crea `portfolio.md` por hito.

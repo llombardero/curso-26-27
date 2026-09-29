@@ -1,13 +1,13 @@
-# H1 - Primer asistente básico
+# H1 — Primer asistente básico
 
-## Objetivo
+## Evidencia que debe sobrevivir
 
-Crear una primera versión sencilla de MiniJarvis por consola en Java.
+Código Java inicial, ejecución, pruebas y README; backlog/decisiones, diario significativo y defensa.
 
-## Para completar el hito
+## Regla común
 
-El programa debe ejecutarse, incluir un README básico y poder explicarse. Todavía no incluye menú, bucles, memoria ni IA real.
+La ficha guía el aprendizaje; no hay un documento nuevo por sesión. Pruebas, decisiones e incidencias se integran en su fuente canónica. La comparación Java-Python se conserva como actividad y se registra en diario/portfolio cuando aporte valor. La defensa individual permanece.
 
-## Entrega
+## HEXA
 
-Consulta en Moodle la tarea del hito, los criterios visibles y las instrucciones de entrega digital. Comprueba los permisos y asegúrate de que puedes explicar lo entregado.
+Activar se acredita con la reformulación del reto; Investigar con aprendizaje/prueba significativa; Idear con una decisión; Planificar con backlog/terminado; Ejecutar con producto, código, pruebas y README; Comunicar con demo, review, retrospectiva y defensa. Una evidencia puede cubrir varias fases.

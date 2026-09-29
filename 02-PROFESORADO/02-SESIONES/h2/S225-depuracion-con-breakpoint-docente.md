@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Observar el programa mientras se ejecuta. |
-| Evidencia mínima | `docs/depuracion-h2.md` con captura o descripción. |
+| Evidencia mínima | `README, sección `Depuración H2`` con captura o descripción. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/depuracion-h2.md` con captura o descripción.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: `README, sección `Depuración H2`` con captura o descripción.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -49,7 +49,7 @@ Breakpoint después de leer `command`.
 
 Observar `command`, `running` y `userName`.
 
-Producto o evidencia que debe quedar: **`docs/depuracion-h2.md` con captura o descripción.**
+Producto o evidencia que debe quedar: **`README, sección `Depuración H2`` con captura o descripción.**
 
 ## Qué observar mientras trabajan
 

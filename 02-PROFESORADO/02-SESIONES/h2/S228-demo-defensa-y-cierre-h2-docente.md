@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Validar menú, pruebas y depuración. |
-| Evidencia mínima | Defensa H2, README actualizado y registro IA si procede. |
+| Evidencia mínima | Defensa H2 y README actualizado; diario/Scrum solo si el uso de IA fue significativo. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Defensa H2, README actualizado y registro IA si procede.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: Defensa H2 y README actualizado; diario/Scrum solo si el uso de IA fue significativo.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -50,7 +50,7 @@ Defensa modelo modificando un comando en directo.
 
 Demo y defensa.
 
-Producto o evidencia que debe quedar: **Defensa H2, README actualizado y registro IA si procede.**
+Producto o evidencia que debe quedar: **Defensa H2 y README actualizado; diario/Scrum solo si el uso de IA fue significativo.**
 
 ## Qué observar mientras trabajan
 

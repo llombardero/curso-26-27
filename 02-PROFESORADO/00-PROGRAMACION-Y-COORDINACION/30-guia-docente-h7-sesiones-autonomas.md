@@ -1058,7 +1058,7 @@ Documentos:
 
 ```text
 docs/registro-prompts-h7.md
-docs/riesgos-ia-h7.md
+README, sección `Riesgos y validación`
 docs/configuracion-segura-h7.md
 ```
 
@@ -1215,7 +1215,7 @@ Formalizar cómo se valida una respuesta de IA y comparar una integración/simul
 Documentos:
 
 ```text
-docs/validacion-humana-h7.md
+README, sección `Riesgos y validación`
 docs/comparacion-java-python-h7.md
 docs/portfolio-h7.md
 ```

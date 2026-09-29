@@ -6,28 +6,24 @@
 
 ## 1. Qué vas a hacer
 
-Vas a cerrar tu proyecto MiniJarvis preparando:
+Vas a cerrar MiniJarvis con un producto integrado, una selección final y una defensa:
 
-- portfolio final;
-- demo final;
-- defensa individual;
-- recuperación si tienes aprendizajes pendientes;
-- registro IA final.
+- release o tag final y README reproducible;
+- Site personal y Site de equipo;
+- demo y defensa individual;
+- recuperación concreta solo si tienes una carencia pendiente.
 
 ---
 
 ## 2. Qué debes entregar
 
-```text
-hf-presentacion-final-recuperacion-mejora/
-├── portfolio-final
-├── demo-final
-├── defensa-final
-├── recuperacion-especifica       # solo si procede
-├── registro-ia-final
-├── autoevaluacion-final
-└── plan-mejora-final             # si procede
-```
+1. Release o tag `hf-final` del repositorio.
+2. Site personal final.
+3. Site de equipo final.
+4. Defensa individual.
+5. Evidencia de recuperación únicamente si te corresponde.
+
+No crees ficheros Markdown paralelos para demo, defensa, IA, autoevaluación o plan de mejora. El README conserva el producto; Sites sintetizan; diario y Scrum conservan el proceso.
 
 ---
 

@@ -1247,7 +1247,7 @@ Comprender que un patrón de diseño debe responder a un problema real, y regist
 
 ## Resultado esperado
 
-Documento `docs/registro-patron-h5.md` con:
+Documento `README, sección `Patrón usado o descartado`` con:
 
 ```text
 - problema de diseño;

@@ -8,7 +8,7 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Relacionar un problema real del diseño de herramientas con la idea de Command y decidir si conviene usarla sin sobreingeniería. |
-| Evidencia mínima | `docs/registro-patron-h5.md` con problema, alternativa simple, decisión, semejanza o diferencia respecto a Command y riesgo de sobreingeniería. |
+| Evidencia mínima | `README, sección `Patrón usado o descartado`` con problema, alternativa simple, decisión, semejanza o diferencia respecto a Command y riesgo de sobreingeniería. |
 
 > El patrón no es una meta ni una palabra que haya que introducir obligatoriamente. La decisión válida puede ser conservar `Tool` y sus clases concretas sin implementar un Command completo.
 
@@ -16,7 +16,7 @@
 
 - [ ] Tener disponible una versión del proyecto con varias clases que implementen `Tool`.
 - [ ] Preparar un ejemplo mínimo de acción encapsulada en un objeto.
-- [ ] Comprobar que la plantilla `docs/registro-patron-h5.md` está disponible.
+- [ ] Comprobar que la sección «Patrón usado o descartado» del README está prevista.
 - [ ] Reservar los últimos 8 minutos para justificar la decisión y cerrar.
 
 ## Material imprescindible
@@ -56,7 +56,7 @@ Límite: no añadimos infraestructura que el proyecto no necesita.
 
 ## Consigna que se entrega al alumnado
 
-Completa `docs/registro-patron-h5.md` con:
+Completa `README, sección `Patrón usado o descartado`` con:
 
 1. el problema de diseño observado;
 2. una alternativa simple;
@@ -86,7 +86,7 @@ Pregunta de control: **¿Qué problema real resuelve aquí la idea de Command y 
 
 Criterio para cerrar la sesión:
 
-- [ ] Existe `docs/registro-patron-h5.md`.
+- [ ] Existe `README, sección `Patrón usado o descartado``.
 - [ ] La decisión está vinculada a un problema observable.
 - [ ] Se distingue Command simplificado de una implementación completa.
 - [ ] La persona puede defender por qué mantiene o descarta el patrón.

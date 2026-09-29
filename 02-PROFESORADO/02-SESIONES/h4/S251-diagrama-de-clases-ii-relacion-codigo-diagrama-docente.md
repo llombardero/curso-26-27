@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Evitar UML inventado. |
-| Evidencia mínima | `docs/relacion-diagrama-codigo-h4.md`. |
+| Evidencia mínima | `README, sección `Relación diagrama-código``. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/relacion-diagrama-codigo-h4.md`.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: `README, sección `Relación diagrama-código``.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -50,7 +50,7 @@ Señala un atributo del diagrama y localízalo en Java.
 
 Completar documento relación diagrama-código.
 
-Producto o evidencia que debe quedar: **`docs/relacion-diagrama-codigo-h4.md`.**
+Producto o evidencia que debe quedar: **`README, sección `Relación diagrama-código``.**
 
 ## Qué observar mientras trabajan
 

@@ -1,45 +1,5 @@
-# H6 — Entrega digital
+# Entrega digital — H6
 
-## Resultado del hito
+Tag `h6-entrega` o commit estable; confirmar diario/Scrum.
 
-Persistencia y trazabilidad.
-
-## Ubicación autorizada
-
-| Elemento | Ubicación principal |
-|---|---|
-| Código y README | GitHub desde H1 |
-| Evidencias no-code | Carpeta `H6` del equipo en Drive |
-| Proceso de equipo | Sheet Scrum |
-| Reflexión individual | Diario individual y Site personal |
-| Síntesis del incremento | Site del equipo |
-| Entrega, fecha y feedback | Moodle |
-
-## Evidencias
-
-Código; persistencia; logs anonimizados; seguridad; pruebas; incidencia; portfolio y defensa.
-
-## Versión evaluada
-
-Tag o commit `h6-entrega`.
-
-## Entrega en Moodle
-
-- enlace profundo a la página `H6` del Site personal;
-- enlace profundo a la página `H6` del Site del equipo;
-- enlace a la pestaña o evidencia concreta del Sheet Scrum;
-- enlace a la carpeta `H6` de Drive cuando sea necesario;
-- enlace al repositorio y tag/commit desde H1;
-- aportación individual breve;
-- PDF/XLSX solicitado para congelar documentos vivos.
-
-## Comprobación previa
-
-- [ ] Los enlaces abren con una cuenta no propietaria autorizada.
-- [ ] El acceso general está restringido.
-- [ ] No hay credenciales ni datos personales.
-- [ ] El código está solo en GitHub.
-- [ ] La versión evaluada queda identificada.
-- [ ] Puedo explicar y defender lo entregado.
-
-Consulta `../../00-EMPIEZA-AQUI/10-ecosistema-digital-y-entregas`.
+Moodle no solicita de nuevo enlaces estables, copias del README, capturas rutinarias, registro IA separado ni exportaciones PDF/XLSX. La evidencia no-code se añade solo si realmente existe y no tiene mejor ubicación.

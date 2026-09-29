@@ -66,31 +66,12 @@ Eso se trabajará en hitos posteriores.
 
 ```text
 h2-decisiones-depuracion/
-├── README
-├── src/
-│   └── Main.java
-└── docs/
-    ├── evidencia-ejecucion-h2
-    ├── pruebas-h2
-    ├── depuracion-h2
-    ├── incidencia-h2
-    ├── comparacion-java-python-h2
-    ├── registro-ia
-    └── defensa-h2
+├── README.md
+└── src/
+    └── Main.java
 ```
 
-Plantillas disponibles:
-
-```text
-plantillas/README-h2-plantilla
-plantillas/evidencia-ejecucion-h2-plantilla
-plantillas/pruebas-h2-plantilla
-plantillas/depuracion-h2-plantilla
-plantillas/incidencia-h2-plantilla
-plantillas/comparacion-java-python-h2-plantilla
-plantillas/registro-ia-h2-plantilla
-plantillas/defensa-h2-plantilla
-```
+Código, pruebas y depuración se conservan en el repositorio y en secciones breves del README. La comparación Java-Python puede seleccionarse en diario/portfolio si aporta valor; no crea un informe separado. Incidencias e IA se registran solo cuando son significativas.
 
 ---
 

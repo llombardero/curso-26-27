@@ -8,14 +8,14 @@
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Explicar un flujo real del agente. |
-| Evidencia mínima | `docs/diagrama-comportamiento-h4.md`. |
+| Evidencia mínima | actividad opcional coordinada con Entornos (sin entrega obligatoria de Programación). |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: `docs/diagrama-comportamiento-h4.md`.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: actividad opcional coordinada con Entornos (sin entrega obligatoria de Programación).
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -50,7 +50,7 @@ Flujo del comando `recuerda`: usuario → Agent → Memory → respuesta.
 
 Dibujar flujo de un comando.
 
-Producto o evidencia que debe quedar: **`docs/diagrama-comportamiento-h4.md`.**
+Producto o evidencia que debe quedar: **actividad opcional coordinada con Entornos (sin entrega obligatoria de Programación).**
 
 ## Qué observar mientras trabajan
 

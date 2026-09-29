@@ -1,13 +1,13 @@
-# H2 - Decisiones y depuración
+# H2 — Decisiones y depuración
 
-## Objetivo
+## Evidencia que debe sobrevivir
 
-Convertir MiniJarvis en un programa interactivo con menú, decisiones, repetición y salida controlada.
+Código, tests/tabla de pruebas y depuración compacta en README; breakpoint, variable, hipótesis, corrección y resultado.
 
-## Para completar el hito
+## Regla común
 
-Debes aportar código funcional, pruebas, una evidencia de depuración y una explicación defendible.
+La ficha guía el aprendizaje; no hay un documento nuevo por sesión. Pruebas, decisiones e incidencias se integran en su fuente canónica. La comparación Java-Python se conserva como actividad y se registra en diario/portfolio cuando aporte valor. La defensa individual permanece.
 
-## Entrega
+## HEXA
 
-Consulta en Moodle la tarea del hito, los criterios visibles y las instrucciones de entrega digital. Comprueba los permisos y asegúrate de que puedes explicar lo entregado.
+Activar se acredita con la reformulación del reto; Investigar con aprendizaje/prueba significativa; Idear con una decisión; Planificar con backlog/terminado; Ejecutar con producto, código, pruebas y README; Comunicar con demo, review, retrospectiva y defensa. Una evidencia puede cubrir varias fases.

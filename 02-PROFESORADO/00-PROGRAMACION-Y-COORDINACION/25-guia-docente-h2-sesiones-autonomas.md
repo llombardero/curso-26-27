@@ -121,8 +121,8 @@ Propuesta de 9 sesiones de 45 minutos.
 | H2-S3 | if/else y equals | Comandos básicos reconocidos. |
 | H2-S4 | comando desconocido y normalización | Entrada robusta básica. |
 | H2-S5 | integración del menú completo | MiniJarvis H2 funcional. |
-| H2-S6 | pruebas manuales | `docs/pruebas-h2.md`. |
-| H2-S7 | depuración con breakpoint | `docs/depuracion-h2.md`. |
+| H2-S6 | pruebas manuales | `README, sección `Pruebas H2``. |
+| H2-S7 | depuración con breakpoint | `README, sección `Depuración H2``. |
 | H2-S8 | comparación Java ↔ Python y documentación | Comparación + README/registro IA. |
 | H2-S9 | defensa, revisión y recuperación | H2 validado. |
 
@@ -572,7 +572,7 @@ Documentar pruebas manuales con resultado esperado y obtenido.
 
 ## Resultado esperado
 
-Documento `docs/pruebas-h2.md` o equivalente.
+Documento `README, sección `Pruebas H2`` o equivalente.
 
 ## Guion docente
 
@@ -638,7 +638,7 @@ Usar un breakpoint para observar variables durante la ejecución.
 
 ## Resultado esperado
 
-Documento `docs/depuracion-h2.md` o evidencia equivalente.
+Documento `README, sección `Depuración H2`` o evidencia equivalente.
 
 ## Guion docente
 
