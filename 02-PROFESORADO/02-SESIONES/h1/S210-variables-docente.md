@@ -5,6 +5,7 @@
 | Hito | H1 — Primer asistente ejecutable |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Planificar — organizar el trabajo |
+| Modalidad de trabajo | **INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL** |
 
 > Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`. Selecciona y desarrolla los conceptos, ejemplos, actividades y evidencias útiles para esta sesión.
 
@@ -186,23 +187,81 @@ Vocabulario imprescindible:
 
 ## Actividad de la sesión
 
-Antes del código, haced la tabla de datos. Después implementad al menos tres variables, mostradlas por consola, cambiad una y volved a mostrarla para comprobar que entendéis la asignación.
+### Comprender, predecir y practicar — INDIVIDUAL
 
-## Evidencia de la sesión
+Antes de integrar nada en el producto de equipo, cada persona propone qué datos necesita MiniJarvis y razona para cada uno:
 
-Hoy sí quiero una evidencia individual: cada persona debe poder señalar una variable propia y explicar tipo, nombre, valor inicial y una asignación posterior.
+- qué representa;
+- qué tipo usaría;
+- qué nombre significativo tendría;
+- qué valor inicial podría tener.
 
-**Dónde y cómo conservar la evidencia:**
+Debe aplicar los conceptos trabajados previamente en la sesión: variable frente a valor, elección del tipo según el dato y su uso, nombres significativos, declaración, inicialización y asignación posterior.
 
-- GitHub: código con variables usadas.
-- Diario individual: fila S210 con una variable explicada y prueba de salida.
-- Moodle: no se entrega todavía.
+Después realiza una micropráctica propia: declara e inicializa al menos una variable, predice qué ocurrirá al reasignarla, modifica su valor, ejecuta y comprueba el resultado frente a su predicción.
 
-Qué revisar:
+Esta micropráctica garantiza práctica individual antes de integrar en equipo. No es un nuevo entregable, no se sube a Moodle, Drive o Site y no obliga a crear una fila de diario.
 
-- Que no usen `x`, `dato1` o nombres sin significado.
-- Que no repitan valores fijos por todas partes.
-- Que sepan distinguir variable y valor.
+### Contrastar y planificar — EQUIPO
+
+El equipo compara las propuestas individuales y acuerda su plan de datos. Antes del código, hace la tabla de datos y decide:
+
+- datos necesarios;
+- tipos;
+- nombres;
+- valores iniciales;
+- uso previsto.
+
+### Integrar en MiniJarvis — EQUIPO
+
+Sobre el incremento compartido, el equipo:
+
+- incorpora al menos tres variables acordadas;
+- las utiliza realmente;
+- muestra sus valores por consola cuando procede;
+- modifica posteriormente al menos una;
+- predice el resultado antes de ejecutar y después lo comprueba.
+
+Así se conserva la secuencia de la actividad: implementar al menos tres variables, mostrarlas por consola, cambiar una y volver a mostrarla para comprobar que se entiende la asignación.
+
+### Comprobar comprensión — INDIVIDUAL
+
+Cualquier integrante debe poder señalar una variable del incremento compartido y explicar:
+
+- qué representa;
+- cuál es su tipo;
+- cuál es su nombre;
+- cuál fue su valor inicial;
+- dónde cambia;
+- qué ocurre cuando cambia;
+- por qué se eligió ese tipo y ese nombre.
+
+Si se le pide, debe poder modificar esa variable, predecir el efecto y comprobarlo mediante la ejecución.
+
+Estos momentos organizan el trabajo de la sesión. No se convierten en documentos ni formularios adicionales.
+
+## Evidencia que permanece
+
+- **Equipo — GitHub:** código del incremento con variables, tipos y nombres significativos, al menos una reasignación y ejecución comprobada.
+- **Equipo — Scrum:** solo si aparece una decisión, un cambio de planificación o un bloqueo real.
+- **Individual — Diario:** solo si existe un aprendizaje, error, bloqueo, decisión o uso relevante de IA que merezca conservarse.
+- **README:** no requiere actualización específica en S210.
+- **Moodle / Drive / Site:** no hay entrega o actualización específica en S210.
+
+## Observación docente
+
+Durante la actividad y la comprobación individual, revisa de forma observable:
+
+- que el alumnado distingue la variable de su valor actual, incluso cuando dos variables contienen el mismo valor;
+- que selecciona el tipo según el dato que representa y el uso u operaciones previstos;
+- que emplea nombres significativos y puede justificar qué esperaría encontrar otra persona al leerlos;
+- que distingue declaración, inicialización y asignación posterior;
+- que comprende la reasignación como cambio del valor guardado, sin confundirla con una igualdad matemática;
+- que predice las salidas antes de ejecutar;
+- que ejecuta y comprueba el resultado frente a su predicción;
+- que cualquier integrante puede explicar individualmente las decisiones tomadas por el equipo.
+
+Comprueba además que no usen `x`, `dato1` o nombres sin significado y que no repitan valores fijos por todas partes.
 
 Modelo de uso del plan de datos:
 
@@ -219,6 +278,16 @@ Nombre: horasEstudio
 Cambia: sí
 Uso: calcular minutos y decidir si alcanza el objetivo
 ```
+
+## Andamiaje ante bloqueos
+
+No reemplaces el razonamiento del alumnado por una solución completa. Utiliza la ayuda mínima que corresponda:
+
+- **Confusión entre variable y valor:** vuelve al ejemplo de dos variables con el mismo valor y pregunta qué permanece y qué podría cambiar por separado.
+- **Duda sobre el tipo:** pregunta qué representa el dato y qué operaciones se harán con él.
+- **Nombres pobres:** pregunta qué esperaría encontrar otra persona al leer el nombre sin ver el valor.
+- **Repetición del tipo al reasignar:** vuelve al contraste entre declaración y asignación posterior.
+- **Ejecución sin razonamiento:** pide una predicción concreta antes de permitir la ejecución y contrástala después con el resultado.
 
 ## Comprueba lo aprendido
 
