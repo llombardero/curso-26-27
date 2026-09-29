@@ -70,8 +70,8 @@ Cada equipo debe usar su Sheet Scrum. En H1 deben aparecer como mínimo:
 - estado: pendiente, en curso, hecho, bloqueado;
 - decisiones del equipo;
 - bloqueos;
-- evidencias enlazadas;
-- mini-review y retrospectiva final.
+- enlaces a evidencias solo cuando ayuden a gestionar una tarea, decisión o bloqueo real;
+- review y retrospectiva final.
 
 Roles recomendados para H1:
 
@@ -90,13 +90,12 @@ Di en voz alta al inicio de cada sesión:
 
 Usa siempre estos espacios. No crees entregables duplicados si la información ya está en su fuente correcta.
 
-- Moodle: entrega final de enlaces y recepción de feedback.
+- Moodle: una única entrega oficial de H1 en S215; S206-S213 no generan entregas Moodle individuales y S214 prepara el cierre.
 - GitHub: código, README, historial y microprácticas si se guardan como archivos.
-- Diario individual en Sheets: proceso personal, avance, prueba, bloqueo, uso de IA y siguiente paso.
-- Scrum de equipo en Sheets: backlog, tareas, decisiones, bloqueos, review, retrospectiva y enlaces de evidencias de equipo.
-- Site personal: selección razonada de evidencias individuales al cierre del hito.
-- Site de equipo: comunicación del incremento del equipo al cierre del hito.
-- Drive: evidencias no código y recursos de equipo, siempre con enlaces profundos.
+- Diario individual en Sheets: aprendizaje individual significativo, como un error relevante, un bloqueo, una decisión personal, una diferencia entre predicción y resultado, un uso relevante de IA o un siguiente paso especialmente significativo. No se completa una fila por sesión.
+- Scrum de equipo en Sheets: backlog, tareas reales, estados, decisiones, cambios, bloqueos, review y retrospectiva. No se actualiza solo porque termine una sesión.
+- Drive: solo evidencia no-code excepcional que no tenga una fuente más natural, siempre con enlaces profundos.
+- Portfolio: el aprendizaje individual y el incremento de H1 podrán seleccionarse posteriormente durante C1. No se crea ahora una página Site H1 obligatoria.
 
 Regla que debes repetir muchas veces:
 
@@ -113,9 +112,9 @@ Usa esta rutina aunque la sesión cambie de contenido.
 5. Pide predicción antes de ejecutar código.
 6. Haz trabajar individualmente cuando la comprensión deba ser personal.
 7. Haz contrastar por parejas cuando convenga detectar errores.
-8. Haz trabajar en equipo cuando haya decisión, backlog, README, Site o reparto.
+8. Haz trabajar en equipo cuando haya decisión, backlog, README o reparto.
 9. Pide evidencia concreta.
-10. Cierra con diario, Scrum o entrega según corresponda.
+10. Cierra conservando solo la evidencia que corresponda: técnica en GitHub/README, aprendizaje individual significativo en el diario y trabajo real de equipo en Scrum.
 
 Di en voz alta cuando haya código:
 
@@ -134,13 +133,15 @@ Puedes convertir cualquier ejemplo en una de estas tarjetas rápidas de aula: pr
 
 ## S206 - Activar - Presentar H1 y delimitar alcance
 
+**Modalidad:** **INDIVIDUAL → EQUIPO**
+
 ### Objetivo de la sesión
 
 El alumnado debe entender qué es H1, qué entra, qué no entra y cómo se demostrará el avance.
 
 ### Antes de empezar
 
-Ten abierta la presentación S206. Ten localizable Moodle, el Sheet Scrum de equipos y el diario individual.
+Ten abierta la presentación S206 y localizable el Sheet Scrum de los equipos.
 
 ### Apertura docente
 
@@ -164,13 +165,12 @@ Trabajo en grupo:
 - Cada equipo asigna roles H1, aunque sean provisionales.
 - El responsable de backlog escribe las tareas.
 
-Entrega en esta sesión:
+Organización del trabajo:
 
 - Qué: primeras tareas de backlog H1 y roles provisionales.
 - Cuándo: durante los primeros 10 minutos.
 - Dónde: Sheet Scrum del equipo.
 - Cómo: filas concretas con tarea, responsable o pareja responsable, estado inicial y sesión S206.
-- Moodle: no se entrega todavía en Moodle; se entregará enlace al Scrum al cierre de H1.
 
 ### Explicación docente
 
@@ -247,7 +247,7 @@ Trabajo en grupo:
 - Cada equipo clasifica.
 - Cada equipo justifica dos decisiones.
 
-### Entrega de S206
+### Registro del trabajo de S206
 
 Pide explícitamente:
 
@@ -282,30 +282,7 @@ Responsable: todos
 Estado: más o menos
 ```
 
-Pide también:
-
-> Cada persona debe crear una entrada de diario individual de S206.
-
-Dónde y cómo:
-
-- Diario individual en Sheets.
-- Una fila con objetivo, decisión de alcance, evidencia enlazada si existe, bloqueo si existe y siguiente paso.
-- No se sube a Moodle hoy.
-
-Modelo de uso del diario en S206:
-
-```text
-Fecha: 2026-10-02
-Sesión: S206
-Hito: H1
-Objetivo: entender qué entra y qué queda fuera de H1.
-Acción realizada: clasifiqué propuestas del reto con mi equipo.
-Prueba y resultado: puedo explicar que H1 no tendrá menú ni memoria porque pertenecen a hitos posteriores.
-Evidencia enlazada: decisión S206 en Scrum del equipo.
-Bloqueo: ninguno.
-Uso de IA: no.
-Siguiente paso: crear y ejecutar el primer Main.java.
-```
+El alcance y las decisiones del equipo ya quedan en Scrum. No pidas una entrada individual por haber terminado S206. El diario solo se utiliza si una persona necesita conservar un aprendizaje, una duda, un bloqueo o una decisión individual significativa.
 
 ### Cierre docente
 
@@ -314,6 +291,8 @@ Di en voz alta:
 > Cerramos Activar. Para avanzar, cada equipo debe poder explicar qué va a construir y qué no va a construir. Mañana o en la siguiente sesión investigaremos cómo se pasa de escribir código a verlo ejecutarse en consola.
 
 ## S207 - Investigar - Entorno Java, IntelliJ, proyecto y ejecución
+
+**Modalidad:** **INDIVIDUAL → PAREJAS**
 
 ### Objetivo de la sesión
 
@@ -329,15 +308,14 @@ Di en voz alta:
 
 Pide al alumnado:
 
-> Equipos, abrid Scrum y añadid o actualizad estas tareas: `crear o abrir proyecto Java`, `localizar Main.java`, `ejecutar primer mensaje`, `guardar evidencia de ejecución`.
+> Equipos, abrid Scrum y añadid o actualizad estas tareas si forman parte de vuestro trabajo real: `crear o abrir proyecto Java`, `localizar Main.java` y `ejecutar primer mensaje`.
 
-Entrega en esta sesión:
+Organización del trabajo:
 
 - Qué: tareas técnicas iniciales actualizadas.
 - Cuándo: primeros 5 minutos.
 - Dónde: Sheet Scrum del equipo.
 - Cómo: estado claro de cada tarea.
-- Moodle: todavía no.
 
 ### Explicación docente
 
@@ -418,19 +396,17 @@ Después pide:
 
 > Ahora romped algo a propósito: quitad un punto y coma o una comilla. Antes de corregir, leed el error. No borréis todo. Localizad el primer lugar donde el IDE os da información.
 
-### Entrega de S207
+### Evidencia técnica de S207
 
 Pide explícitamente:
 
-> Guardad una evidencia de primera ejecución. Debe verse o quedar localizable el código y la salida. Añadid una frase: `Sé que se ha ejecutado porque...`.
+> Dejad localizable en GitHub el código de la primera ejecución. Antes de darla por válida, ejecutadlo y explicad oralmente a vuestra pareja cómo sabéis que se ha ejecutado.
 
 Dónde y cómo:
 
-- GitHub o espacio de trabajo acordado: código del primer `Main.java`.
-- Drive si se usa captura puntual: captura con código y consola, no solo consola.
-- Diario individual: enlace a la evidencia y frase explicativa.
-- Scrum de equipo: marcar tarea `primera ejecución` como hecha o bloqueada.
-- Moodle: no se entrega todavía; se enlazará al final de H1.
+- GitHub: código del primer `Main.java`.
+- Comprobación reproducible: ejecutar el código y contrastar la salida con la predicción.
+- Scrum de equipo: marcar la tarea `primera ejecución` como hecha o bloqueada.
 
 Modelo de uso de GitHub/evidencia en S207:
 
@@ -439,7 +415,6 @@ Repositorio: minijarvis-h1
 Archivo: src/Main.java
 Commit útil: S207: primera ejecución por consola
 Evidencia: código con System.out.println y salida visible en consola.
-Frase de diario: Sé que se ha ejecutado porque la consola muestra el mensaje que predije.
 ```
 
 Modelo de commit poco útil:
@@ -450,7 +425,7 @@ cambios
 
 Qué no aceptar:
 
-- Captura solo de consola sin código.
+- Una imagen aislada de la consola sin código reproducible.
 - Frase `funciona` sin explicación.
 
 ### Cierre docente
@@ -460,6 +435,8 @@ Di en voz alta:
 > Hoy no hemos aprendido solo a pulsar ejecutar. Hemos aprendido el recorrido: escribir, compilar, ejecutar y observar. Si algo falla, primero leemos el error y formulamos una hipótesis.
 
 ## S208 - Investigar - Estructura mínima de un programa Java
+
+**Modalidad:** **INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL**
 
 ### Objetivo de la sesión
 
@@ -676,18 +653,17 @@ Recuerda:
 
 > Un comentario útil no repite lo obvio. No escribimos `// imprime hola` encima de `println("Hola")`. Escribimos contexto o intención.
 
-### Entrega de S208
+### Evidencia técnica y comprobación de S208
 
 Pide explícitamente:
 
-> Antes de terminar, cada persona debe conservar una evidencia de estructura mínima funcionando y una nota del error que ha provocado y corregido.
+> Antes de terminar, cada persona debe poder mostrar la estructura mínima funcionando y explicar el error que ha provocado y corregido.
 
 Dónde y cómo:
 
 - GitHub: código actualizado o micropráctica de estructura.
-- Diario individual: fila S208 con error provocado, hipótesis, corrección y resultado.
-- Scrum: si el equipo detecta un error común, registrarlo como decisión o aprendizaje técnico.
-- Moodle: no se entrega todavía.
+- Diario individual: solo si el error ha producido un aprendizaje significativo que la persona necesite conservar.
+- Scrum: si el error revela una decisión o un bloqueo real del equipo, registrarlo donde corresponda.
 
 Qué debe contener la evidencia:
 
@@ -714,6 +690,8 @@ Di en voz alta:
 
 ## S209 - Idear - Salida por pantalla y mensajes del asistente
 
+**Modalidad:** **PAREJAS → EQUIPO**
+
 ### Objetivo de la sesión
 
 El alumnado debe idear mensajes claros antes de programarlos y usar literales y concatenación cuando sea necesario.
@@ -730,7 +708,7 @@ Pide al alumnado:
 
 > En Scrum, añadid una tarea de equipo: `decidir mensajes de H1`. Esa tarea no está hecha hasta que tengáis al menos dos alternativas y una razón para elegir una.
 
-Entrega en esta sesión:
+Organización del trabajo:
 
 - Qué: decisión de mensajes de consola.
 - Dónde: Sheet Scrum, sección decisiones o backlog.
@@ -883,7 +861,7 @@ Después:
 
 > Programad la salida elegida. Ejecutadla. Pedid a otra persona que lea solo la consola y os diga si entiende qué hace MiniJarvis.
 
-### Entrega de S209
+### Conservación del trabajo de S209
 
 Pide explícitamente:
 
@@ -893,8 +871,7 @@ Dónde y cómo:
 
 - Scrum de equipo: decisión de mensajes con motivo.
 - GitHub: código con mensajes implementados.
-- Diario individual: fila breve si la persona ha cambiado o defendido una decisión.
-- Moodle: no se entrega todavía.
+- Diario individual: solo si cambiar o defender la decisión ha producido un aprendizaje individual significativo.
 
 Qué debe aparecer:
 
@@ -919,6 +896,8 @@ Di en voz alta:
 
 ## S210 - Planificar - Variables
 
+**Modalidad:** **INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL**
+
 ### Objetivo de la sesión
 
 El alumnado debe planificar datos: qué se guarda, con qué tipo, con qué nombre y dónde se usa.
@@ -933,13 +912,13 @@ Di en voz alta:
 
 Pide al alumnado:
 
-> En Scrum, añadid una tarea: `planificar datos de H1`. No la marquéis como hecha hasta tener una tabla con dato, tipo, nombre, si cambia y dónde se usa.
+> Si `planificar datos de H1` es una tarea real del equipo, creadla o actualizadla en Scrum y no la marquéis como hecha hasta tener una tabla con dato, tipo, nombre, si cambia y dónde se usa.
 
-Entrega en esta sesión:
+Dónde queda el plan:
 
-- Qué: plan de datos H1.
-- Dónde: Scrum de equipo o documento enlazado desde Scrum.
-- Cómo: tabla breve con dato, tipo, nombre, cambia si/no y uso.
+- En la propia planificación o junto al código, donde resulte técnicamente útil.
+- En Scrum solo queda la tarea, decisión, cambio o bloqueo real; no se crea un documento paralelo por obligación.
+- La tabla incluye dato, tipo, nombre, cambia sí/no y uso.
 
 ### Explicación docente
 
@@ -1135,40 +1114,42 @@ Error frecuente que debes cortar:
 
 > `String` no sirve para todo. Elegimos el tipo según lo que necesitamos representar y hacer con el dato.
 
-### Investigación del alumnado
+### Comprender, predecir y practicar — INDIVIDUAL
 
 Pide al alumnado:
 
 > Individualmente, clasificad estos datos: nombre de usuario, horas de estudio, nota media, objetivo alcanzado e inicial. Decid qué tipo usaríais y por qué.
 
-Trabajo individual:
+Cada persona:
 
-- Elegir tipos.
-- Proponer nombres.
+- elige tipos;
+- propone nombres significativos;
+- razona qué representa cada dato, qué valor inicial podría tener y si cambiará;
+- realiza una micropráctica propia: declara e inicializa al menos una variable, predice qué ocurrirá al reasignarla, modifica su valor, ejecuta y compara el resultado con su predicción.
 
-Trabajo en grupo:
+La micropráctica garantiza práctica individual antes de integrar en equipo. No es un nuevo entregable y no obliga a crear una entrada de diario.
 
-- Unificar plan de datos.
-- Corregir nombres vagos.
+### Contrastar y planificar — EQUIPO
 
-### Actividad central
+El equipo compara las propuestas individuales, corrige nombres vagos y acuerda el plan de datos. Antes del código, completa la tabla con dato, tipo, nombre, valor inicial, si cambia y dónde se usa.
+
+El plan queda en la propia planificación de trabajo o junto al código cuando resulte técnicamente útil. Solo se registra en Scrum si corresponde a una tarea, decisión, cambio o bloqueo real; no necesita un documento paralelo.
+
+### Integrar en MiniJarvis — EQUIPO
 
 Pide al alumnado:
 
-> Antes del código, haced la tabla de datos. Después implementad al menos tres variables, mostradlas por consola, cambiad una y volved a mostrarla para comprobar que entendéis la asignación.
+> Después del plan de datos, implementad al menos tres variables en el incremento compartido, usadlas realmente, mostradlas por consola cuando proceda, cambiad una y volved a mostrarla para comprobar que entendéis la asignación.
 
-### Entrega de S210
+El código y su evolución técnica quedan en GitHub.
+
+### Comprobar comprensión — INDIVIDUAL
 
 Pide explícitamente:
 
-> Hoy sí quiero una evidencia individual: cada persona debe poder señalar una variable propia y explicar tipo, nombre, valor inicial y una asignación posterior.
+> Cada persona debe poder señalar una variable del incremento compartido y explicar tipo, nombre, valor inicial y una asignación posterior. Si se solicita, debe modificarla, predecir el efecto, ejecutar y comprobar el resultado.
 
-Dónde y cómo:
-
-- Scrum o documento del equipo: plan de datos.
-- GitHub: código con variables usadas.
-- Diario individual: fila S210 con una variable explicada y prueba de salida.
-- Moodle: no se entrega todavía.
+Esta comprobación es individual, pero no genera una evidencia administrativa adicional. El diario solo se utiliza si la práctica ha producido un aprendizaje, error, bloqueo, decisión o siguiente paso significativo.
 
 Qué revisar:
 
@@ -1200,6 +1181,8 @@ Di en voz alta:
 
 ## S211 - Ejecutar - Constantes, literales y operaciones
 
+**Modalidad:** **INDIVIDUAL → PAREJAS**
+
 ### Objetivo de la sesión
 
 El alumnado debe usar constantes, literales y operaciones aritméticas con predicción y prueba.
@@ -1214,7 +1197,7 @@ Di en voz alta:
 
 Pide al alumnado:
 
-> En Scrum, añadid tareas concretas: `añadir constante`, `añadir operación`, `probar resultado`, `registrar error o aprendizaje`.
+> En Scrum, cread o actualizad tareas como `añadir constante`, `añadir operación` o `probar resultado` solo cuando representen trabajo real del equipo. Un error o aprendizaje individual no se convierte automáticamente en tarea Scrum.
 
 Dónde y cómo:
 
@@ -1457,18 +1440,17 @@ Pide al alumnado:
 
 > En vuestro MiniJarvis o en una micropráctica, usad una constante, una variable, una operación, una actualización y una salida que permita comprobar el resultado.
 
-### Entrega de S211
+### Evidencia técnica y reflexión de S211
 
 Pide explícitamente:
 
-> Conservad la micropráctica o el código integrado y registrad una predicción que haya sido confirmada o corregida.
+> Conservad en GitHub la micropráctica o el código integrado y explicad una predicción que haya sido confirmada o corregida.
 
 Dónde y cómo:
 
 - GitHub: código de micropráctica o `Main.java` actualizado.
-- Diario individual: predicción, resultado observado y explicación breve.
-- Scrum: marcar tareas de constante/operación/prueba.
-- Moodle: no se entrega todavía.
+- Diario individual: solo si la diferencia entre predicción y resultado ha producido un aprendizaje significativo.
+- Scrum: actualizar únicamente tareas reales de constante, operación o prueba.
 
 Qué debe contener:
 
@@ -1493,6 +1475,8 @@ Di en voz alta:
 
 ## S212 - Ejecutar - Scanner y conversiones
 
+**Modalidad:** **INDIVIDUAL → PAREJAS**
+
 ### Objetivo de la sesión
 
 El alumnado debe leer entrada, guardarla, convertir texto a número cuando haga falta y reconocer errores de conversión.
@@ -1509,7 +1493,7 @@ Pide al alumnado:
 
 > En Scrum, añadid tareas: `leer nombre ficticio`, `usar entrada en salida`, `leer número como texto`, `convertir y calcular`, `probar entrada no válida`.
 
-Entrega en esta sesión:
+Organización del trabajo:
 
 - Qué: tareas de entrada y conversión.
 - Dónde: Sheet Scrum.
@@ -1737,23 +1721,22 @@ Pide al alumnado:
 
 > Construid una prueba con entrada válida: por ejemplo horas como texto, conversión a `int`, cálculo de minutos y salida. Después probad una entrada no convertible y explicad cuándo falla: al compilar o al ejecutar.
 
-### Entrega de S212
+### Evidencia técnica de S212
 
 Pide explícitamente:
 
-> Hoy la evidencia debe incluir una entrada válida, resultado esperado, resultado obtenido y explicación de qué ocurre con una entrada no convertible.
+> La prueba debe incluir una entrada válida, resultado esperado, resultado obtenido y explicación de qué ocurre con una entrada no convertible.
 
 Dónde y cómo:
 
-- GitHub: código con `Scanner` o micropráctica de conversión.
-- README puede ir recogiendo ejemplo, aunque se pedirá formalmente en S214.
-- Diario individual: fila S212 con prueba válida y error de conversión explicado.
-- Scrum: tarea de entrada/conversión actualizada.
-- Moodle: no se entrega todavía.
+- GitHub: código con `Scanner` o micropráctica de conversión y pruebas reproducibles.
+- README: puede documentarse antes si resulta útil, pero su consolidación formal ocurre en S214.
+- Diario individual: solo si la conversión o el error han producido un aprendizaje o bloqueo significativo.
+- Scrum: actualizar la tarea de entrada o conversión únicamente si su estado, planificación o bloqueo ha cambiado.
 
 Qué no aceptar:
 
-- Captura sin decir qué entrada se usó.
+- Una prueba que no indique qué entrada se usó.
 - Código que lee una variable pero no la usa.
 - Decir `no funciona` sin distinguir compilación y ejecución.
 
@@ -1779,6 +1762,8 @@ Di en voz alta:
 
 ## S213 - Ejecutar - Comparaciones, lógica y decisiones
 
+**Modalidad:** **INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL**
+
 ### Objetivo de la sesión
 
 El alumnado debe construir booleanos, combinar condiciones y usar una decisión `if/else` con dos ramas probadas.
@@ -1793,12 +1778,12 @@ Di en voz alta:
 
 Pide al alumnado:
 
-> En Scrum, añadid tareas: `crear comparación`, `guardar boolean`, `implementar if/else`, `probar caso true`, `probar caso false`, `registrar mejora`.
+> En Scrum, cread o actualizad tareas como `crear comparación`, `guardar boolean`, `implementar if/else`, `probar caso true` o `probar caso false` únicamente cuando representen trabajo real del equipo. Registrad una mejora solo si existe una decisión o cambio concreto.
 
 Dónde y cómo:
 
-- Sheet Scrum.
-- Cada prueba debe enlazar o describir la evidencia.
+- Sheet Scrum para tareas, estados, decisiones o bloqueos reales.
+- GitHub para el código y los casos de prueba reproducibles.
 
 ### Explicación docente
 
@@ -2094,18 +2079,17 @@ Pide al alumnado:
 
 > Construid una práctica defendible: dato, comparación, boolean, `if/else` y salida. Debéis probar dos casos: uno que entre por `if` y otro que entre por `else`.
 
-### Entrega de S213
+### Evidencia técnica y comprobación individual de S213
 
 Pide explícitamente:
 
-> La evidencia de hoy debe demostrar dos ramas. No basta con probar el caso favorable.
+> La prueba debe demostrar dos ramas. No basta con probar el caso favorable. Cada persona debe poder explicar y comprobar ambos recorridos.
 
 Dónde y cómo:
 
-- GitHub: código con comparación e `if/else`.
-- Diario individual: caso A, salida esperada, salida obtenida; caso B, salida esperada, salida obtenida.
-- Scrum: marcar pruebas true/false y registrar mejora concreta.
-- Moodle: no se entrega todavía.
+- GitHub: código con comparación e `if/else` y casos reproducibles.
+- Diario individual: solo si la diferencia entre predicción y resultado, el error o la mejora han producido aprendizaje significativo.
+- Scrum: actualizar pruebas o mejora únicamente cuando sean tareas, decisiones o cambios reales del equipo.
 
 Qué debe poder defender cada persona:
 
@@ -2141,11 +2125,13 @@ Di en voz alta:
 
 > H1 ya tiene una decisión pequeña. Si hoy alguien solo puede decir `funciona`, todavía no basta. Debe poder señalar la condición, explicar las dos ramas y demostrar que ambas se han probado.
 
-## S214 - Comunicar - README, evidencia y Site
+## S214 - Comunicar - README, evidencias y preparación del cierre
+
+**Modalidad:** **INDIVIDUAL → EQUIPO → PAREJAS**
 
 ### Objetivo de la sesión
 
-El alumnado debe documentar H1, seleccionar evidencias verificables, preparar Sites y comprobar enlaces sin duplicar diario ni Scrum.
+El alumnado debe consolidar el README de H1, localizar evidencias técnicas verificables y preparar enlaces y permisos para el cierre, sin duplicar diario ni Scrum.
 
 ### Apertura docente
 
@@ -2157,12 +2143,13 @@ Di en voz alta:
 
 Pide al alumnado:
 
-> En Scrum, añadid tareas de cierre: `terminar README`, `seleccionar evidencia personal`, `actualizar Site personal`, `actualizar Site equipo`, `comprobar enlaces`, `preparar entrega Moodle`.
+> En Scrum, cread o actualizad únicamente las tareas de cierre que sean trabajo real del equipo, como `terminar README`, `comprobar pruebas`, `comprobar enlaces` o `preparar entrega Moodle`. No añadáis tareas para completar el tablero si no existe trabajo, cambio o bloqueo real.
 
-Entrega en esta sesión:
+Registro durante la sesión:
 
-- Qué: tablero Scrum de cierre actualizado.
-- Dónde: Sheet Scrum.
+- Las tareas reales conservan su estado y responsable en Scrum.
+- Las decisiones, cambios y bloqueos se registran cuando ocurren.
+- Scrum no constituye una evidencia independiente por el mero hecho de acabar S214.
 
 ### Explicación docente
 
@@ -2199,7 +2186,7 @@ Di:
 
 Di en voz alta:
 
-> Documentar no significa copiar la misma información en muchos sitios. Cada espacio responde a una pregunta: README explica cómo ejecutar; diario cuenta el proceso personal; Site personal selecciona aprendizaje; Site de equipo comunica el incremento; Moodle recoge enlaces oficiales.
+> Documentar no significa copiar la misma información en muchos sitios. Cada espacio responde a una pregunta: GitHub conserva el código y su evolución; README explica qué hace el incremento, sus límites, cómo ejecutarlo y cómo comprobarlo; el diario conserva solo aprendizaje personal significativo; Scrum conserva trabajo y decisiones reales del equipo; Moodle recogerá en S215 los enlaces oficiales. El aprendizaje y el incremento de H1 podrán seleccionarse posteriormente para el portfolio durante C1.
 
 Ejemplo de evidencia verificable:
 
@@ -2209,7 +2196,7 @@ Entrada usada: Laura.
 Salida esperada: Encantado, Laura.
 Salida obtenida: Encantado, Laura.
 Demuestra: la entrada leída se guarda y se usa en la salida.
-Enlace: archivo o captura concreta, no carpeta general.
+Enlace: archivo, prueba o sección concreta del repositorio, no carpeta general.
 ```
 
 Pregunta al alumnado:
@@ -2226,47 +2213,39 @@ Pide al alumnado:
 
 > Revisad vuestro propio material y localizad una evidencia fuerte y una evidencia débil. Investigad por qué una sirve para defender y la otra no.
 
-Trabajo individual:
+Trabajo individual — **INDIVIDUAL**:
 
-- Elegir evidencia para Site personal.
-- Revisar diario.
+- Localizar una evidencia técnica fuerte y otra débil.
 - Comprobar que puede explicar su aportación.
+- Revisar si existe un aprendizaje personal significativo que deba conservarse en el diario; no completar el diario por obligación.
 
-Trabajo en equipo:
+Trabajo en equipo — **EQUIPO**:
 
 - Completar README.
-- Actualizar Site de equipo.
-- Preparar enlaces Moodle.
+- Localizar en GitHub el código y las pruebas reproducibles.
+- Preparar los enlaces que se entregarán oficialmente en Moodle durante S215.
+- Comprobar que las decisiones o bloqueos reales están en Scrum, sin forzar una actualización.
 
-Trabajo por parejas:
+Trabajo por parejas — **PAREJAS**:
 
 - Una persona intenta seguir el README de otra sin explicación oral.
+- Revisar enlaces y permisos con otra persona.
 
-### Entrega de S214
+### Preparación del cierre en S214
 
 Pide explícitamente, en este orden:
 
-1. README H1.
-2. Evidencia de ejecución.
-3. Diario individual revisado.
-4. Scrum de equipo actualizado.
-5. Site personal H1 iniciado o terminado.
-6. Site de equipo H1 iniciado o terminado.
-7. Borrador de entrega Moodle con enlaces.
+1. Consolidar el README H1 en la raíz del repositorio GitHub.
+2. Comprobar que el código y las pruebas son reproducibles y están localizables desde GitHub/README.
+3. Preparar enlaces profundos para la entrega oficial.
+4. Comprobar permisos.
+5. Dejar S215 preparado para la defensa y la entrega oficial Moodle.
 
-Dónde y cómo:
-
-- README: raíz del repositorio GitHub.
-- Evidencia de ejecución: README, repositorio o Drive con enlace profundo; debe indicar entrada, salida esperada, salida obtenida y qué demuestra.
-- Diario individual: Sheet personal, no documento aparte.
-- Scrum: Sheet de equipo.
-- Site personal: página H1 del Site personal.
-- Site de equipo: página H1 del Site de equipo.
-- Moodle: todavía puede quedar como borrador si S215 es el cierre oficial, salvo que hayas configurado plazo de entrega en S214.
+No se crea una evidencia separada de ejecución si el código, las pruebas y su explicación ya son localizables desde GitHub/README. Drive solo se utiliza ante una evidencia no-code excepcional sin una fuente más natural. S214 no realiza la entrega oficial de Moodle.
 
 Di en voz alta:
 
-> Hoy no quiero que copiéis el diario en el Site. Quiero que seleccionéis. El diario contiene proceso. El Site personal contiene evidencia seleccionada y explicación. El Site de equipo comunica el incremento. Moodle cerrará la entrega oficial.
+> Hoy no vamos a copiar la misma información en varios soportes ni a entregar todavía. Vamos a consolidar el README, localizar el código y las pruebas, comprobar enlaces y permisos, y dejar preparado el cierre oficial de S215. El aprendizaje y el incremento de H1 podrán seleccionarse posteriormente para el portfolio durante C1.
 
 Modelo de uso del README H1:
 
@@ -2290,31 +2269,35 @@ Caso B: hours = 2 -> Objetivo pendiente.
 Entrada no convertible: "hola" falla durante la ejecución con parseInt.
 ```
 
-Modelo de uso del Site personal H1:
+### Proyección posterior hacia C1 — no se produce ahora
+
+No se crea una página de portfolio durante H1. Cuando llegue C1, cada persona podrá seleccionar aprendizajes como estos:
 
 ```text
 Reto con mis palabras: construir una primera versión pequeña de MiniJarvis por consola.
 Mi aportación: probé Scanner y documenté una entrada no convertible.
-Evidencia seleccionada: enlace profundo a la prueba S212.
+Evidencia seleccionable: enlace profundo a la prueba S212.
 Qué demuestra: entiendo el flujo pedir -> leer -> guardar -> convertir -> mostrar.
 Mejora siguiente: probar mejor entradas no válidas en H2.
 ```
 
-Modelo de uso del Site de equipo H1:
+El equipo también podrá seleccionar posteriormente una síntesis del incremento:
 
 ```text
 Incremento conseguido: MiniJarvis saluda, pide nombre, calcula minutos y decide si se alcanza un objetivo.
 Decisiones: no incluimos menú ni memoria porque no pertenecen a H1.
 Pruebas: saludo, conversión, caso true, caso false y entrada no convertible.
 Review: el incremento cumple el alcance de S206.
-Retrospectiva: debemos actualizar Scrum durante la sesión, no solo al final.
+Retrospectiva: debemos actualizar Scrum cuando exista un cambio real, no reconstruirlo al final.
 ```
+
+Estos textos preservan la reflexión y la selección razonada, pero no son entregables de S214 ni S215.
 
 ### Comprobación de permisos
 
 Pide al alumnado:
 
-> Antes de decir que está entregado, comprobad permisos. Un enlace que solo abre el propietario no es una entrega válida.
+> Antes de preparar la entrega oficial de S215, comprobad permisos. Un enlace que solo abre el propietario no será una entrega válida.
 
 Cómo comprobar:
 
@@ -2329,6 +2312,8 @@ Di en voz alta:
 > Mañana o en la siguiente sesión defenderéis. Defender no es recitar el README. Defender es señalar, ejecutar, predecir, modificar una parte pequeña y explicar qué demuestra vuestra evidencia.
 
 ## S215 - Comunicar - Defensa y cierre H1
+
+**Modalidad combinada:** defensa **INDIVIDUAL**; ensayo y revisión por **PAREJAS**; review, retrospectiva y entrega en **EQUIPO**.
 
 ### Objetivo de la sesión
 
@@ -2346,7 +2331,7 @@ Pide al alumnado:
 
 > En Scrum, abrid la sección de review y retrospectiva. Durante la sesión vais a registrar qué incremento habéis conseguido, qué queda pendiente, qué bloqueo apareció y qué mejoraréis en H2.
 
-Entrega en esta sesión:
+Organización del trabajo:
 
 - Qué: review y retrospectiva H1 de equipo.
 - Dónde: Sheet Scrum de equipo.
@@ -2379,22 +2364,20 @@ Pide al resto:
 
 > Mientras hago defensas, los demás hacéis tres cosas: comprobáis enlaces, termináis retrospectiva y ensayáis por parejas una pregunta de defensa. Nadie está parado.
 
-Trabajo individual:
+Trabajo individual — **INDIVIDUAL**:
 
 - Defensa individual.
-- Retrospectiva personal en diario.
-- Comprobación de Site personal.
+- Reflexión personal; solo se conserva en el diario si contiene un aprendizaje, dificultad, decisión o siguiente paso significativo.
 
-Trabajo por parejas:
+Trabajo por parejas — **PAREJAS**:
 
 - Ensayo de defensa.
-- Revisión cruzada de enlaces.
+- Revisión cruzada de enlaces y permisos.
 
-Trabajo en equipo:
+Trabajo en equipo — **EQUIPO**:
 
 - Review y retrospectiva Scrum.
-- Site de equipo.
-- Entrega Moodle.
+- Entrega oficial Moodle H1.
 
 ### Entrega final de S215
 
@@ -2412,11 +2395,10 @@ Cómo se entrega:
 - Incluyendo al menos:
   - enlace al repositorio GitHub;
   - enlace al README H1 o repositorio con README visible;
-  - enlace a la página H1 del Site personal;
-  - enlace a la página H1 del Site de equipo;
-  - enlace al Sheet Scrum del equipo o sección H1;
-  - enlace a evidencia concreta de ejecución si Moodle lo solicita;
+  - enlace al Sheet Scrum del equipo o sección H1 cuando forme parte del cierre;
   - confirmación de permisos revisados.
+
+El código, las pruebas y la explicación técnica deben quedar localizables desde GitHub/README. No se crea para Moodle una captura, un documento ni una evidencia adicional si esa información ya está localizada.
 
 Pide al alumnado que escriba en Moodle una mini declaración:
 
@@ -2432,10 +2414,7 @@ Integrantes:
 
 Repositorio GitHub:
 README H1:
-Site personal H1:
-Site equipo H1:
-Scrum equipo H1:
-Evidencia de ejecución:
+Scrum equipo H1, si corresponde:
 
 Permisos comprobados: sí/no
 Observaciones o bloqueo pendiente:
@@ -2449,16 +2428,10 @@ Integrantes: Nora, Luis, Marta, Amira
 
 Repositorio GitHub: https://...
 README H1: https://...
-Site personal H1 - Nora: https://...
-Site personal H1 - Luis: https://...
-Site personal H1 - Marta: https://...
-Site personal H1 - Amira: https://...
-Site equipo H1: https://...
 Scrum equipo H1: https://...
-Evidencia de ejecución: https://...
 
 Permisos comprobados: sí
-Observaciones: la entrada no convertible está documentada como error de ejecución; no usamos try-catch porque no pertenece a H1.
+Observaciones: la entrada no convertible está documentada y es reproducible desde el README; no usamos try-catch porque no pertenece a H1.
 ```
 
 Modelo que no debes aceptar en Moodle:
@@ -2467,19 +2440,15 @@ Modelo que no debes aceptar en Moodle:
 Está todo en Drive.
 ```
 
-### Diario individual final
+### Reflexión individual final
 
-Pide explícitamente:
+Pide al alumnado que piense:
 
-> Cada persona escribe ahora la última entrada de diario de H1. Debe incluir: una cosa que ya puede hacer sola, una cosa que todavía necesita apoyo, una evidencia que lo demuestra y un siguiente paso para H2.
+> Identifica una cosa que ya puedes hacer sin ayuda, una cosa para la que todavía necesitas apoyo, una evidencia que lo demuestra y un siguiente paso para H2.
 
-Dónde y cómo:
+La reflexión forma parte del cierre individual. Solo se conserva en el diario cuando contiene aprendizaje significativo; no se obliga a crear una entrada S215 ni un documento separado.
 
-- Diario individual en Sheets.
-- Una fila final S215.
-- No hacer documento separado.
-
-Modelo de uso del diario final:
+Modelo de una reflexión significativa que sí podría conservarse en el diario:
 
 ```text
 Fecha: cierre H1
@@ -2538,12 +2507,10 @@ Antes de cerrar H1, comprueba:
 
 - Cada equipo tiene repositorio accesible.
 - Cada equipo tiene README H1.
-- Cada equipo tiene Scrum con backlog, decisiones, review y retrospectiva.
-- Cada persona tiene diario con entradas relevantes.
+- Cada equipo tiene Scrum con backlog, decisiones, review y retrospectiva reales.
+- El diario de cada persona contiene solo las entradas relevantes que hayan sido necesarias.
 - Cada persona puede defender al menos una parte técnica.
-- Existe Site personal H1 o página H1 actualizada.
-- Existe Site de equipo H1 o página H1 actualizada.
-- Moodle contiene enlaces profundos.
+- Moodle contiene los enlaces profundos de la entrega oficial H1.
 - Los permisos funcionan.
 - No hay datos personales reales ni credenciales.
 - No se ha convertido H1 en H2 con menús, bucles o funciones fuera de alcance.
@@ -2562,9 +2529,9 @@ Cuando quieren hacer más de la cuenta:
 
 > Esa idea puede ser buena, pero no pertenece a H1. La registramos como más adelante y protegemos el alcance actual.
 
-Cuando no saben qué escribir en diario:
+Cuando dudan si algo merece conservarse en el diario:
 
-> Escribe una frase para cada punto: objetivo, acción, prueba, resultado y siguiente paso. Si hubo bloqueo, escríbelo. Si usaste IA, escribe qué preguntaste y cómo validaste.
+> No escribas por completar una fila. Si hubo un aprendizaje, una diferencia relevante entre predicción y resultado, un error, un bloqueo, una decisión personal, un uso relevante de IA o un siguiente paso significativo, explica qué ocurrió y qué aprendiste. Si no ocurrió nada relevante, no hay nada que registrar.
 
 Cuando el equipo no actualiza Scrum:
 
@@ -2582,27 +2549,27 @@ Cuando una defensa es vaga:
 
 - No des una solución completa para copiar.
 - No aceptes evidencias sin explicación.
-- No conviertas el Site en copia del diario.
+- No crees durante H1 una página de portfolio obligatoria; la selección se hará posteriormente en C1.
 - No conviertas Moodle en almacén duplicado de todo.
-- No pidas informes extra si el diario, Scrum, GitHub, Sites y Moodle ya cubren la evidencia.
+- No pidas informes extra si el diario, Scrum, GitHub/README y Moodle ya cubren la evidencia.
 - No metas contenidos fuertes de H2 por adelantar.
 - No evalúes solo que compile.
 - No permitas código que la persona no pueda explicar.
 
-## Resumen de entregas por sesión
+## Resumen de actividad, evidencia y modalidad por sesión
 
-| Sesión | Qué se pide | Dónde se entrega | Cómo se entrega | Moodle |
-|---|---|---|---|---|
-| S206 | Alcance H1, límites, backlog inicial, diario inicial | Scrum y diario | Texto breve con tareas, decisiones y siguiente paso | No todavía |
-| S207 | Primera ejecución | GitHub/Drive, diario, Scrum | Código + salida + frase explicativa | No todavía |
-| S208 | Estructura mínima y error corregido | GitHub, diario, Scrum | Código + regla sintáctica + corrección | No todavía |
-| S209 | Decisión de mensajes | Scrum, GitHub, diario si procede | Alternativas, decisión, código ejecutado | No todavía |
-| S210 | Plan de datos y variables | Scrum/documento enlazado, GitHub, diario | Tabla de datos + código + microdefensa | No todavía |
-| S211 | Constante, operación y predicción | GitHub, diario, Scrum | Código + predicción + resultado | No todavía |
-| S212 | Entrada y conversión | GitHub, diario, Scrum | Entrada válida, resultado y error de conversión | No todavía |
-| S213 | Comparación e if/else con dos ramas | GitHub, diario, Scrum | Caso true, caso false y mejora | No todavía |
-| S214 | README, evidencias, Sites, enlaces | GitHub, diario, Scrum, Sites | README + evidencias profundas + permisos | Borrador o entrega si se decide |
-| S215 | Defensa, retrospectiva y entrega final | Moodle, diario, Scrum, Sites, GitHub | Enlaces profundos, defensa y cierre | Sí, entrega oficial |
+| Sesión | Actividad pedagógica principal | Evidencia que persiste y fuente canónica | Modalidad |
+|---|---|---|---|
+| S206 | Delimitar alcance, clasificar requisitos y crear backlog inicial | Alcance, tareas y decisiones reales en Scrum | INDIVIDUAL → EQUIPO |
+| S207 | Comprender código, compilación, ejecución y consola | Código de la primera ejecución en GitHub; estado o bloqueo real en Scrum | INDIVIDUAL → PAREJAS |
+| S208 | Reconstruir estructura mínima, provocar y corregir un error | Código o micropráctica en GitHub; diario solo ante aprendizaje significativo | INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL |
+| S209 | Diseñar, contrastar e implementar mensajes | Decisión real en Scrum y código en GitHub | PAREJAS → EQUIPO |
+| S210 | Practicar variables, planificar datos e integrarlos en MiniJarvis | Código en GitHub; planificación junto al trabajo; diario/Scrum solo cuando corresponda | INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL |
+| S211 | Predecir y comprobar constantes, literales y operaciones | Código o micropráctica en GitHub; reflexión solo si produjo aprendizaje significativo | INDIVIDUAL → PAREJAS |
+| S212 | Leer, convertir y probar entradas válidas y no convertibles | Código y pruebas reproducibles en GitHub; README opcional hasta su consolidación en S214 | INDIVIDUAL → PAREJAS |
+| S213 | Construir y probar las dos ramas de una decisión | Código y casos reproducibles en GitHub; comprobación individual de comprensión | INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL |
+| S214 | Consolidar README, localizar pruebas, preparar enlaces y comprobar permisos | README y pruebas en GitHub; no hay entrega oficial Moodle | INDIVIDUAL → EQUIPO → PAREJAS |
+| S215 | Defender, revisar, hacer retrospectiva y cerrar H1 | Defensa individual; review/retrospectiva en Scrum; entrega oficial en Moodle con enlaces a GitHub/README | INDIVIDUAL + PAREJAS + EQUIPO |
 
 ## Cierre para el profesor
 
