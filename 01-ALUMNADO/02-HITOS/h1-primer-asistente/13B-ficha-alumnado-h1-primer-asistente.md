@@ -2,7 +2,7 @@
 
 ## Ficha para el alumnado
 
-Curso: 1.º DAW — Programación + Entornos de Desarrollo
+Curso: 1.º DAW — Programación
 
 Proyecto anual:
 

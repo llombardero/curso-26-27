@@ -1217,7 +1217,7 @@ Documentos:
 ```text
 README, sección `Riesgos y validación`
 docs/comparacion-java-python-h7.md
-docs/portfolio-h7.md
+Site personal final, actualizado únicamente en HF
 ```
 
 ## Guion docente

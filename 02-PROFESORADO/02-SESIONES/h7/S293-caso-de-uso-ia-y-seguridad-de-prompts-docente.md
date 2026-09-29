@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H7 |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Definir uso limitado y seguro de IA. |
 | Evidencia mínima | `README, sección `Riesgos y validación`` inicial. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Primero, individualmente, cada persona prepara su respuesta o prueba. Después, el equipo contrasta las aportaciones y acuerda el resultado compartido.
 
 ## Antes de entrar en clase
 

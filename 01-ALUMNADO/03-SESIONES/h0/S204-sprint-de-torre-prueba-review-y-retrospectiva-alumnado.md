@@ -8,6 +8,13 @@
 
 **Tiempo previsto:** 90 minutos.  
 **Hito:** H0.
+**Modalidad:** Equipo → comprobación individual.
+
+---
+
+## Organización del trabajo
+
+El equipo construye, prueba y revisa la torre y su backlog. Después, cada persona identifica su aportación y explica una decisión o aprendizaje sin apoyo del resto.
 
 ---
 

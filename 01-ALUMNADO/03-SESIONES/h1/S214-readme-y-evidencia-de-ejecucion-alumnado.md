@@ -4,10 +4,11 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Documentar cómo ejecutar H1. | README H1 y documento/captura de ejecución. |
+| Documentar cómo ejecutar H1. | README de H1 actualizado y versión `h1-entrega` comprobada en el repositorio. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H1.
+**Modalidad:** Equipo.
 
 ## Material que necesitas
 

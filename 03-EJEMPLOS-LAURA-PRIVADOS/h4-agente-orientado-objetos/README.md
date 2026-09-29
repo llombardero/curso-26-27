@@ -1,82 +1,34 @@
 # H4 — Agente orientado a objetos
 
-Alumna: Laura García Martín  
-Equipo: Equipo Ada
+> Ejemplo privado de Laura. Mostrar solo después del intento propio del alumnado.
 
----
+## Objetivo
 
-## Clases principales
+Separar responsabilidades mediante objetos.
 
-| Clase | Responsabilidad |
-|---|---|
-| Main | Arranca el programa y crea el agente. |
-| Agent | Gestiona interacción, comandos y flujo principal. |
-| Memory | Guarda y muestra recuerdos temporales. |
+## Arquitectura de evidencias
 
----
+Versión estable: `h4-entrega`. El repositorio y su README son la evidencia técnica canónica.
 
-## Cómo ejecutar
+- Diario individual evolutivo: `../FUENTES-CURSO/01-Diario-individual-MiniJarvis.xlsx`.
+- Scrum de equipo evolutivo: `../FUENTES-CURSO/02-Scrum-equipo-MiniJarvis.xlsx`.
+- Entrega Moodle mínima: `../ENTREGAS-MOODLE/H4-entrega.md`.
 
-```bash
-javac src/*.java
-java -cp src Main
+## Diseño de clases [EQUIPO]
+
+```mermaid
+classDiagram
+  Main --> Agent
+  Agent --> Memory
 ```
 
----
+El diagrama de clases forma parte del README. El diagrama de comportamiento es práctica coordinada opcional de Entornos, no entrega obligatoria de Programación.
 
-## Qué cambia respecto a H3
+## Decisión y resultado
 
-```text
-En H3 casi toda la lógica estaba en Main. En H4 Main solo arranca el programa, Agent gestiona el menú y Memory se encarga de los recuerdos.
-```
+- Decisión: Main inicia, Agent coordina y Memory conserva recuerdos.
+- Resultado probado: El comportamiento anterior se conserva con un diseño más claro.
 
-## Respuesta de Laura — cobertura de conceptos de Programación
+## Defensa de Laura [INDIVIDUAL]
 
-Relación con `32-lista-conceptos-programacion-por-tema.md`:
-
-```text
-H4 trabaja principalmente: Temas 2 y 5.
-Foco de aprendizaje: orientación a objetos y separación de responsabilidades.
-```
-
-Conceptos que Laura debe saber defender en este hito:
-
-- clase
-- objeto
-- atributo
-- método
-- constructor
-- referencia
-- estado
-- comportamiento
-- responsabilidad
-- private/public
-- this
-- diagrama de clases
-- diagrama de comportamiento
-- Javadoc como ampliación
-- excepción básica
-
-Respuesta modelo de Laura:
-
-> En H4 explico por qué Main era demasiado grande y cómo Agent y Memory reparten responsabilidades con atributos privados y métodos públicos.
-
-Evidencia que Laura debe señalar:
-
-- una parte concreta del código o documento donde aparezca el concepto;
-- una prueba, ejecución, captura o explicación que demuestre que no lo ha copiado sin entender;
-- una mejora razonable que podría hacer si tuviera más tiempo.
-
-
-
-## Evidencias digitales correspondientes a la entrega
-
-La carpeta `evidencias-digitales` muestra cómo se presenta este hito en los cinco documentos comunes del curso:
-
-1. `01-Diario-individual-MiniJarvis.xlsx`.
-2. `02-Scrum-equipo-MiniJarvis.xlsx`.
-3. `03-Site-personal-estructura.md`.
-4. `04-Site-equipo-estructura.md`.
-5. `05-Entrega-enlaces-Moodle.md`.
-
-Los archivos de código y la carpeta `docs` contienen las evidencias técnicas originales. Los cinco documentos anteriores las seleccionan, explican y entregan; no las sustituyen.
+Laura localiza su aportación, reproduce una prueba y explica una decisión sin apoyarse en una plantilla de defensa separada.

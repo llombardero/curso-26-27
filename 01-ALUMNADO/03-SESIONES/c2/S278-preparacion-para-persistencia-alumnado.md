@@ -8,6 +8,7 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** C2.
+**Modalidad:** Equipo.
 
 ## Material que necesitas
 

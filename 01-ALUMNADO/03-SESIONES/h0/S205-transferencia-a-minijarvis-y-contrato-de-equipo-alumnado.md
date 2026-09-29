@@ -8,6 +8,13 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H0.
+**Modalidad:** Individual → puesta en común en equipo.
+
+---
+
+## Organización del trabajo
+
+Primero completa la reflexión individual; después acordad el contrato en equipo y termina con un cierre individual.
 
 ---
 

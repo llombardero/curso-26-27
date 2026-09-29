@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H2 |
+| Modalidad | Individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Observar el programa mientras se ejecuta. |
 | Evidencia mínima | `README, sección `Depuración H2`` con captura o descripción. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Cada persona realiza la actividad y responde por su propia evidencia.
 
 ## Antes de entrar en clase
 

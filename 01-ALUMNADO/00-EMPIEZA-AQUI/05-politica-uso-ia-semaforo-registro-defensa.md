@@ -1,6 +1,6 @@
 # Política de uso de IA — Semáforo, registro y defensa
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 ---
 
@@ -152,7 +152,7 @@ Todo entregable evaluable que use IA debe incluir un registro.
 Nombre recomendado:
 
 ```text
-docs/registro-ia
+diario individual o Scrum, según autoría
 ```
 
 ### Plantilla
@@ -371,7 +371,7 @@ Confirmo que:
 - he revisado el resultado;
 - puedo explicar el código o documento entregado;
 - no he incluido datos personales ni secretos;
-- he registrado los usos relevantes en `docs/registro-ia`.
+- he registrado los usos relevantes en `diario individual o Scrum, según autoría`.
 ```
 
 ---

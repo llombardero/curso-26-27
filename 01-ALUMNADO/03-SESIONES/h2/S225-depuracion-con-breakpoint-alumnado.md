@@ -8,6 +8,7 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H2.
+**Modalidad:** Individual.
 
 ## Material que necesitas
 

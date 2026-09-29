@@ -8,12 +8,17 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H5.
+**Modalidad:** Parejas.
 
 ## Material que necesitas
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto H5 accesible.
 - Pizarra o una hoja reutilizable para comparar alternativas.
 - Datos ficticios; no utilices contraseñas, tokens, claves API ni datos personales reales.
+
+## Organización del trabajo
+
+Trabajad por parejas para contrastar el patrón; al terminar, identificad quién integra la decisión acordada en el README del equipo.
 
 ## Trabajo de hoy
 

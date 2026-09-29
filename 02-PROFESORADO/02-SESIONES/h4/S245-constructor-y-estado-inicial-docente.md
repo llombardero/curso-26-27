@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H4 |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Asegurar conceptos del Tema 5 relacionados con programación básica de clases. |
 | Evidencia mínima | Código con constructores sobrecargados y apartado en README/portfolio explicando cuándo se usa cada uno. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Primero, individualmente, cada persona prepara su respuesta o prueba. Después, el equipo contrasta las aportaciones y acuerda el resultado compartido.
 
 ## Antes de entrar en clase
 

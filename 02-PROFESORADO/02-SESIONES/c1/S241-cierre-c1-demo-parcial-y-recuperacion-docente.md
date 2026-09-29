@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | C1 |
+| Modalidad | Equipo → comprobación individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Consolidar H1-H3 antes de POO. |
 | Evidencia mínima | Checklist C1 con RA pendientes y plan de mejora. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o demuestra el resultado compartido. Después, cada persona comprueba, modifica o explica una parte sin apoyo del resto.
 
 ## Antes de entrar en clase
 

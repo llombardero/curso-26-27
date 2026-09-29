@@ -8,11 +8,16 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H1.
+**Modalidad:** Individual → puesta en común en equipo.
 
 ## Material que necesitas
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
 - Datos ficticios de prueba. No se usarán contraseñas, tokens, claves API ni datos personales reales.
+
+## Organización del trabajo
+
+Primero, individualmente, cada persona prepara su respuesta o prueba. Después, el equipo contrasta las aportaciones y acuerda el resultado compartido.
 
 ## Trabajo de hoy
 

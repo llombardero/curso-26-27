@@ -5,17 +5,22 @@
 | Dato | Valor |
 |---|---|
 | Hito | H1 |
+| Modalidad | Equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Documentar cómo ejecutar H1. |
-| Evidencia mínima | README H1 y documento/captura de ejecución. |
+| Evidencia mínima | README de H1 actualizado y versión `h1-entrega` comprobada en el repositorio. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o modifica una evidencia compartida y deja identificables las aportaciones.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: README H1 y documento/captura de ejecución.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: README de H1 actualizado y versión `h1-entrega` comprobada en el repositorio.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -49,7 +54,7 @@ Modelo mínimo: qué hace, cómo ejecutar, ejemplo de salida, limitaciones.
 
 Crear README H1.
 
-Producto o evidencia que debe quedar: **README H1 y documento/captura de ejecución.**
+Producto o evidencia que debe quedar: **README de H1 actualizado y versión `h1-entrega` comprobada en el repositorio.**
 
 ## Qué observar mientras trabajan
 

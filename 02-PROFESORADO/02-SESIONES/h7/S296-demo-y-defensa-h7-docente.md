@@ -5,17 +5,22 @@
 | Dato | Valor |
 |---|---|
 | Hito | H7 |
+| Modalidad | Equipo → comprobación individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Defender límites, seguridad y funcionamiento. |
-| Evidencia mínima | Defensa H7 y configuración segura. |
+| Evidencia mínima | Versión `h7-entrega` demostrada y límites de seguridad defendidos individualmente. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o demuestra el resultado compartido. Después, cada persona comprueba, modifica o explica una parte sin apoyo del resto.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Defensa H7 y configuración segura.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: Versión `h7-entrega` demostrada y límites de seguridad defendidos individualmente.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -51,7 +56,7 @@ Preguntas de defensa IA.
 
 Demo y defensa.
 
-Producto o evidencia que debe quedar: **Defensa H7 y configuración segura.**
+Producto o evidencia que debe quedar: **Versión `h7-entrega` demostrada y límites de seguridad defendidos individualmente.**
 
 ## Qué observar mientras trabajan
 

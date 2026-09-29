@@ -1,77 +1,21 @@
-# H2 — Agente con decisiones y depuración
+# Guía por hito — H2
 
-Paquete específico del hito H2.
+## Uso
 
-Objetivo:
+Esta carpeta orienta la docencia del hito. La evidencia técnica canónica vive en GitHub/README desde H1; diario y Scrum son fuentes evolutivas; Moodle registra la versión evaluada y Drive solo conserva evidencia no-code excepcional.
 
-```text
-Convertir MiniJarvis H1 en un agente con menú, comandos básicos, repetición, entradas no válidas, pruebas manuales y primera depuración guiada.
-```
+## Archivos docentes
 
-Documentos principales:
+- `14-guia-docente-h2-decisiones-depuracion.md`
+- `14C-checklist-correccion-h2.md`
 
-```text
-14-guia-docente-h2-decisiones-depuracion.md
-14B-ficha-alumnado-h2-decisiones-depuracion.md
-14C-checklist-correccion-h2.md
-```
+## Evidencias canónicas de H2
 
-Plantillas locales:
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Código, pruebas y depuración | Equipo/parejas | Repositorio y `README.md` |
+| Incidencia significativa | Equipo | Sección de depuración del README |
+| Versión evaluada | Equipo | Tag `h2-entrega` o commit estable |
+| Comprensión | Individual | Defensa breve |
 
-```text
-plantillas/README-h2-plantilla.md
-plantillas/pruebas-h2-plantilla.md
-plantillas/depuracion-h2-plantilla.md
-plantillas/incidencia-h2-plantilla.md
-plantillas/comparacion-java-python-h2-plantilla.md
-plantillas/registro-ia-h2-plantilla.md
-plantillas/defensa-h2-plantilla.md
-plantillas/evidencia-ejecucion-h2-plantilla.md
-```
-
-Restricción didáctica clave:
-
-```text
-H2 introduce menú, selección, repetición, entradas no válidas, pruebas y depuración. Todavía no debe introducir memoria con colecciones, persistencia, clases propias avanzadas, arquitectura extensible ni IA real.
-```
-
-## Cobertura curricular de Programación
-
-Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.md`.
-
-```text
-Hito: H2
-Temas de referencia: Temas 1 y 3
-Foco: decisiones, menú, repetición y depuración
-```
-
-Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias del alumnado:
-
-- if/else
-- boolean
-- comparaciones
-- switch
-- enhanced switch como ampliación
-- while
-- do-while como comparación
-- for
-- condición de salida
-- bucle infinito
-- break/continue si procede
-- pruebas manuales
-- error de compilación
-- error lógico
-- eficiencia básica
-
-Refuerzo obligatorio de cobertura:
-
-```text
-Antes de cerrar H2 debe existir una comparación breve entre while, do-while y for, aunque el menú principal se mantenga con while.
-También debe aparecer una explicación inicial de eficiencia en bucles.
-```
-
-Criterio docente de cierre:
-
-- El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
-- Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
-- La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.

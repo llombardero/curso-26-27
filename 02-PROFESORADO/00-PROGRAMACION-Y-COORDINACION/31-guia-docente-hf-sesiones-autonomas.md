@@ -216,7 +216,7 @@ salir
 ## Evidencias alternativas
 ```
 
-Plantilla de defensa individual:
+Guion de ensayo de la defensa individual:
 
 ```markdown
 # Defensa final — MiniJarvis

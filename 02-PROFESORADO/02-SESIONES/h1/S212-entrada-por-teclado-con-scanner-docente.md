@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H1 |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Asegurar conceptos del Tema 1 que no aparecen de forma natural en el saludo inicial. |
 | Evidencia mínima | Código o ejercicio corto con entrada numérica, cálculo, comparación y prueba con dato válido e inválido. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Primero, individualmente, cada persona prepara su respuesta o prueba. Después, el equipo contrasta las aportaciones y acuerda el resultado compartido.
 
 ## Antes de entrar en clase
 

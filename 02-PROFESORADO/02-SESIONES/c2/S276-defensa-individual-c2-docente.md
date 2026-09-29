@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | C2 |
+| Modalidad | Individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Verificar comprensión individual. |
 | Evidencia mínima | Registro de defensa individual. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+La preparación puede revisarse con el equipo, pero la defensa y cualquier modificación solicitada son individuales.
 
 ## Antes de entrar en clase
 

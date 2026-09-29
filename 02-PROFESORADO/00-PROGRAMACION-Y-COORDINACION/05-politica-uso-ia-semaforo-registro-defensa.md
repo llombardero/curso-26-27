@@ -161,7 +161,7 @@ Todo entregable evaluable que use IA debe incluir un registro.
 Nombre recomendado:
 
 ```text
-docs/registro-ia.md
+diario individual o Scrum, según autoría
 ```
 
 ### Plantilla
@@ -380,7 +380,7 @@ Confirmo que:
 - he revisado el resultado;
 - puedo explicar el código o documento entregado;
 - no he incluido datos personales ni secretos;
-- he registrado los usos relevantes en `docs/registro-ia.md`.
+- he registrado los usos relevantes en el diario individual o en Scrum, según autoría.
 ```
 
 ---

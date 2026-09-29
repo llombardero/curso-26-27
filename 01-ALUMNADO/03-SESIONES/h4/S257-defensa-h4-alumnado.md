@@ -4,16 +4,21 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Validar comprensión de POO. | Defensa H4. |
+| Validar comprensión de POO. | Versión `h4-entrega` demostrada y decisión de diseño defendida individualmente. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H4.
+**Modalidad:** Individual.
 
 ## Material que necesitas
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
 - Pizarra o una hoja reutilizable para bosquejar antes de modificar el proyecto.
 - Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+
+## Organización del trabajo
+
+La preparación puede revisarse con el equipo, pero la defensa y cualquier modificación solicitada son individuales.
 
 ## Trabajo de hoy
 

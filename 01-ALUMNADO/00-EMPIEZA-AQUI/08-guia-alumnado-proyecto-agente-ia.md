@@ -1,6 +1,6 @@
 # Guía del alumnado — Proyecto Agente IA
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 ---
 
@@ -31,7 +31,7 @@ Al final del curso, el proyecto podrá tener:
 - uso de Git/GitHub;
 - diagramas;
 - persistencia en ficheros o base de conocimiento simple;
-- registro de uso de IA;
+- uso significativo de IA en diario o Scrum;
 - defensa individual;
 - integración real con Gemini/Jarvis o simulación robusta, si el grupo llega preparado.
 
@@ -123,8 +123,8 @@ Normalmente el equipo entregará:
 
 Cada persona deberá entregar o defender evidencias propias, por ejemplo:
 
-- portfolio individual;
-- registro de uso de IA;
+- selección periódica en el Site personal;
+- uso significativo de IA en diario o Scrum;
 - comparación Java ↔ Python;
 - reflexión de aprendizaje;
 - defensa de una parte del código;
@@ -225,7 +225,7 @@ Si usas IA en una entrega evaluable, debes registrarlo.
 Archivo recomendado:
 
 ```text
-docs/registro-ia
+diario individual o Scrum, según autoría
 ```
 
 El registro debe explicar:
@@ -354,9 +354,9 @@ Ejemplo para H2:
 
 ```text
 docs/pruebas-h2
-docs/depuracion-h2
-docs/registro-ia
-docs/comparacion-java-python-h2
+README, sección de depuración H2
+diario individual o Scrum, según autoría
+diario o Site del checkpoint, si se selecciona
 ```
 
 ### 7.2. Qué hacer si un apartado no aplica
@@ -451,8 +451,8 @@ Antes de entregar un hito, revisad:
 [ ] El código corresponde al nivel del hito.
 [ ] Hay pruebas o checklist si se piden.
 [ ] Hay evidencias de depuración, incidencias o decisiones si corresponden.
-[ ] El portfolio individual está actualizado si se pide.
-[ ] El registro de IA existe si se ha usado IA.
+[ ] El selección periódica en el Site personal está actualizado si se pide.
+[ ] El uso significativo de IA está en diario o Scrum, según autoría.
 [ ] No hay datos personales ni secretos.
 [ ] Cada integrante sabe qué parte puede defender.
 [ ] La entrega está subida o preparada en el lugar indicado.

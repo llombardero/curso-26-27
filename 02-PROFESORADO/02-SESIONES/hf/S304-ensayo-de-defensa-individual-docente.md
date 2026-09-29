@@ -5,17 +5,22 @@
 | Dato | Valor |
 |---|---|
 | Hito | HF |
+| Modalidad | Parejas |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Preparar defensa final sin memorizar. |
-| Evidencia mínima | Plantilla de defensa final. |
+| Evidencia mínima | Ensayo individual con producto, prueba observable y decisión explicada. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Ensayad por parejas, alternando defensa y preguntas; cada persona termina identificando sus propias mejoras antes de la defensa evaluativa.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Plantilla de defensa final.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: Ensayo individual con producto, prueba observable y decisión explicada.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -50,7 +55,7 @@ Simulación de pregunta inesperada sobre código.
 
 Defensa por parejas con preguntas cruzadas.
 
-Producto o evidencia que debe quedar: **Plantilla de defensa final.**
+Producto o evidencia que debe quedar: **Ensayo individual con producto, prueba observable y decisión explicada.**
 
 ## Qué observar mientras trabajan
 

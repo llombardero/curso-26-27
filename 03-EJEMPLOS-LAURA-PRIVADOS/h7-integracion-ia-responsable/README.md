@@ -1,88 +1,28 @@
-# H7 — Integración IA responsable o simulación robusta
+# H7 — Integración responsable de IA
 
-Alumna: Laura García Martín  
-Equipo: Equipo Ada
+> Ejemplo privado de Laura. Mostrar solo después del intento propio del alumnado.
 
----
+## Objetivo
 
-## Tipo
+Incorporar una ayuda simulada con límites y validación humana.
 
-```text
-[x] Simulación robusta
-[ ] Integración real autorizada
-```
+## Arquitectura de evidencias
 
-No se usa API real ni clave secreta.
+Versión estable: `h7-entrega`. El repositorio y su README son la evidencia técnica canónica.
 
----
+- Diario individual evolutivo: `../FUENTES-CURSO/01-Diario-individual-MiniJarvis.xlsx`.
+- Scrum de equipo evolutivo: `../FUENTES-CURSO/02-Scrum-equipo-MiniJarvis.xlsx`.
+- Entrega Moodle mínima: `../ENTREGAS-MOODLE/H7-entrega.md`.
 
-## Cómo ejecutar
+## IA responsable [EQUIPO]
 
-```bash
-javac src/*.java
-java -cp src Main
-```
+La integración es simulada o autorizada, rechaza datos sensibles y presenta las respuestas como propuestas. El registro relevante se mantiene en diario o Scrum, no en un archivo paralelo.
 
----
+## Decisión y resultado
 
-## Caso de uso
+- Decisión: Toda respuesta se presenta como propuesta y requiere validación humana.
+- Resultado probado: La simulación rechaza datos sensibles y registra la validación.
 
-```text
-Pedir una sugerencia breve de estudio o explicación conceptual sin enviar datos personales ni secretos.
-```
+## Defensa de Laura [INDIVIDUAL]
 
----
-
-## Seguridad
-
-```text
-.env real prohibido.
-.env.example permitido.
-No se introducen contraseñas, tokens, API keys, DNI ni teléfonos reales.
-```
-
-## Respuesta de Laura — cobertura de conceptos de Programación
-
-Relación con `32-lista-conceptos-programacion-por-tema.md`:
-
-```text
-H7 trabaja principalmente: Temas 5, 6 y 7.
-Foco de aprendizaje: IA responsable, abstracción y mejora funcional opcional.
-```
-
-Conceptos que Laura debe saber defender en este hito:
-
-- record AiResponse
-- enum para niveles de riesgo
-- interfaz AiAssistant como ampliación
-- polimorfismo
-- Strategy como patrón opcional
-- Optional para respuesta bloqueada o ausente
-- lambdas como ampliación
-- streams para analizar registros
-- funciones puras en PromptSafety
-- validación humana
-
-Respuesta modelo de Laura:
-
-> En H7 defiendo que la IA no es magia: filtro prompts, registro usos, bloqueo datos sensibles y valido humanamente cualquier respuesta.
-
-Evidencia que Laura debe señalar:
-
-- una parte concreta del código o documento donde aparezca el concepto;
-- una prueba, ejecución, captura o explicación que demuestre que no lo ha copiado sin entender;
-- una mejora razonable que podría hacer si tuviera más tiempo.
-
-
-
-## Evidencias digitales correspondientes a la entrega
-
-La carpeta `evidencias-digitales` muestra cómo se presenta este hito en los cinco documentos comunes del curso:
-
-1. `01-Diario-individual-MiniJarvis.xlsx`.
-2. `02-Scrum-equipo-MiniJarvis.xlsx`.
-3. `03-Site-personal-estructura.md`.
-4. `04-Site-equipo-estructura.md`.
-5. `05-Entrega-enlaces-Moodle.md`.
-
-Los archivos de código y la carpeta `docs` contienen las evidencias técnicas originales. Los cinco documentos anteriores las seleccionan, explican y entregan; no las sustituyen.
+Laura localiza su aportación, reproduce una prueba y explica una decisión sin apoyarse en una plantilla de defensa separada.

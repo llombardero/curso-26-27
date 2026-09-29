@@ -405,7 +405,7 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
         "Momento HEXA",
         "Momento HEXA del hito",
     )
-    grouping = value_for(meta, "Agrupamiento")
+    grouping = value_for(meta, "Modalidad") or value_for(meta, "Agrupamiento")
 
     materials_body = section(teacher, r"Material imprescindible") or section(teacher, r"Material", levels=(3,))
     materials = list_items(materials_body)
@@ -970,7 +970,7 @@ def render_title(prs: Presentation, session: Session, spec: SlideSpec) -> None:
         add_text(slide, Inches(0.78), Inches(4.72), Inches(11.2), Inches(0.55), f"Fase HEXA: {session.moment}", 19, WHITE)
     if session.grouping:
         add_text(slide, Inches(0.78), Inches(5.43), Inches(11.2), Inches(0.65), session.grouping, 17, RGBColor(210, 217, 228))
-    add_text(slide, Inches(0.78), Inches(6.86), Inches(11.6), Inches(0.22), "MINIJARVIS · PROGRAMACIÓN + ENTORNOS DE DESARROLLO", 10, RGBColor(160, 170, 185), True)
+    add_text(slide, Inches(0.78), Inches(6.86), Inches(11.6), Inches(0.22), "MINIJARVIS · PROGRAMACIÓN", 10, RGBColor(160, 170, 185), True)
 
 
 def render_outcome(prs: Presentation, session: Session, spec: SlideSpec) -> None:

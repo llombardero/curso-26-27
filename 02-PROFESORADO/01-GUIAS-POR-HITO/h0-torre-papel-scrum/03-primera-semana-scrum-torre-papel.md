@@ -37,7 +37,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 Calendario de referencia: `02-calendario-hitos-sprints-2026-2027.md`

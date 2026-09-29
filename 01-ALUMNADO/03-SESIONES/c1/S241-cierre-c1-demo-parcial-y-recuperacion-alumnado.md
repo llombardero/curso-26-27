@@ -8,12 +8,17 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** C1.
+**Modalidad:** Equipo → comprobación individual.
 
 ## Material que necesitas
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
 - Pizarra o una hoja reutilizable para bosquejar antes de modificar el proyecto.
 - Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+
+## Organización del trabajo
+
+El equipo produce o demuestra el resultado compartido. Después, cada persona comprueba, modifica o explica una parte sin apoyo del resto.
 
 ## Trabajo de hoy
 

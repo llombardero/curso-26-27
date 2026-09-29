@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H1 |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Activar — entender el reto |
 | Resultado de hoy | Comprender el producto mínimo H1. |
 | Evidencia mínima | Lista de requisitos H1 y lista de restricciones. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Primero, individualmente, cada persona prepara su respuesta o prueba. Después, el equipo contrasta las aportaciones y acuerda el resultado compartido.
 
 ## Antes de entrar en clase
 

@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | HF |
+| Modalidad | Individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Recuperar RA técnicos pendientes. |
 | Evidencia mínima | Evidencia de recuperación específica. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Cada persona realiza la actividad y responde por su propia evidencia.
 
 ## Antes de entrar en clase
 

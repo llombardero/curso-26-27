@@ -5,6 +5,7 @@
 | Dato | Decisión para esta sesión |
 |---|---|
 | Hito | H0 — Formación y prueba de equipos Scrum mediante la torre de papel |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración | 45 minutos |
 | Fase HEXA del hito | Fase 0 — Equipos + Idear — proponer soluciones + Planificar — organizar el trabajo |
 | Agrupamiento | Equipos provisionales de tres o cuatro preparados por el docente |

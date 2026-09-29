@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H1 |
+| Modalidad | Equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Idear — proponer soluciones |
 | Resultado de hoy | Usar `System.out.println` y construir salida legible. |
 | Evidencia mínima | Programa que muestra saludo, propósito y curso. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o modifica una evidencia compartida y deja identificables las aportaciones.
 
 ## Antes de entrar en clase
 

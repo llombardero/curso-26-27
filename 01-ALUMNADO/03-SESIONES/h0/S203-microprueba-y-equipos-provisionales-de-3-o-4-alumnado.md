@@ -8,6 +8,13 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H0.
+**Modalidad:** Individual → puesta en común en equipo.
+
+---
+
+## Organización del trabajo
+
+Primero cada persona formula su aportación; después el equipo acuerda funciones y backlog.
 
 ---
 

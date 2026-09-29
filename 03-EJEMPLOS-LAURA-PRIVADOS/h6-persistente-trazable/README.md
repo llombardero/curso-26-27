@@ -1,95 +1,28 @@
-# H6 — Agente persistente y trazable
+# H6 — Persistencia y trazabilidad
 
-Alumna: Laura García Martín  
-Equipo: Equipo Ada
+> Ejemplo privado de Laura. Mostrar solo después del intento propio del alumnado.
 
----
+## Objetivo
 
-## Cómo ejecutar desde cero
+Conservar memoria e historial entre ejecuciones.
 
-```bash
-javac src/*.java
-java -cp src Main
-```
+## Arquitectura de evidencias
 
-El programa crea las carpetas si faltan:
+Versión estable: `h6-entrega`. El repositorio y su README son la evidencia técnica canónica.
 
-```text
-data/
-logs/
-```
+- Diario individual evolutivo: `../FUENTES-CURSO/01-Diario-individual-MiniJarvis.xlsx`.
+- Scrum de equipo evolutivo: `../FUENTES-CURSO/02-Scrum-equipo-MiniJarvis.xlsx`.
+- Entrega Moodle mínima: `../ENTREGAS-MOODLE/H6-entrega.md`.
 
----
+## Persistencia, errores y seguridad [EQUIPO]
 
-## Ficheros usados
+Las rutas son relativas, los fallos se controlan sin ocultarlos y los logs usan datos ficticios. La prueba guarda un recuerdo, reinicia el programa y verifica su recuperación.
 
-```text
-data/recuerdos.txt
-logs/historial.log
-```
+## Decisión y resultado
 
-`data/recuerdos.txt` guarda recuerdos ficticios.  
-`logs/historial.log` registra eventos técnicos simples.
+- Decisión: Se usaron rutas relativas, errores controlados y datos ficticios.
+- Resultado probado: La memoria persiste y los errores de fichero dejan un estado seguro.
 
----
+## Defensa de Laura [INDIVIDUAL]
 
-## Seguridad
-
-```text
-No se usan credenciales reales.
-No se sube .env real.
-No se guardan datos personales reales.
-```
-
-## Respuesta de Laura — cobertura de conceptos de Programación
-
-Relación con `32-lista-conceptos-programacion-por-tema.md`:
-
-```text
-H6 trabaja principalmente: Temas 5, 6 y puente hacia Tema 8.
-Foco de aprendizaje: persistencia, logs, errores, invariantes, excepciones y trazabilidad.
-```
-
-Conceptos que Laura debe saber defender en este hito:
-
-- clases responsables: `PersistentMemory`, `HistoryLog` o equivalentes;
-- excepciones checked y runtime;
-- diferencia entre lanzar, capturar y declarar con `throws`;
-- excepción propia de persistencia si el equipo la implementa, o justificación si usa una estándar;
-- validación de entradas e invariantes de `Memory`;
-- no exponer una lista interna modificable;
-- ficheros, rutas relativas y creación de carpetas;
-- logs técnicos sin secretos ni datos personales reales;
-- Repository como idea inicial u opción de mejora;
-- prueba de dos ejecuciones para demostrar persistencia;
-- trazabilidad mediante pruebas, incidencia y README reproducible.
-
-Respuesta modelo de Laura:
-
-> En H6 explico cómo demuestro persistencia cerrando y abriendo el programa. También puedo defender qué ocurre cuando falla un fichero: sé distinguir entre una excepción que se lanza, una que se captura y una que se declara con `throws`. Si usamos una excepción propia como `MemoryStorageException`, explico qué error del dominio representa; si no la usamos, justifico por qué una excepción estándar era suficiente para nuestro nivel.
-
-Evidencia que Laura debe señalar:
-
-- código o pseudocódigo de carga/guardado con `Path`/`Files` o equivalente;
-- prueba con dos ejecuciones: guardar, cerrar, abrir y consultar;
-- documento de seguridad indicando qué no debe entrar en logs;
-- incidencia H6 o prueba de error controlado de fichero;
-- explicación de un invariante: por ejemplo, no guardar recuerdos vacíos ni permitir modificar la memoria interna desde fuera.
-
-Pregunta de defensa aconsejada:
-
-> Si falla la lectura de `data/recuerdos.txt`, ¿qué ve la persona usuaria, qué se registra y qué excepción se lanza o captura?
-
-
-
-## Evidencias digitales correspondientes a la entrega
-
-La carpeta `evidencias-digitales` muestra cómo se presenta este hito en los cinco documentos comunes del curso:
-
-1. `01-Diario-individual-MiniJarvis.xlsx`.
-2. `02-Scrum-equipo-MiniJarvis.xlsx`.
-3. `03-Site-personal-estructura.md`.
-4. `04-Site-equipo-estructura.md`.
-5. `05-Entrega-enlaces-Moodle.md`.
-
-Los archivos de código y la carpeta `docs` contienen las evidencias técnicas originales. Los cinco documentos anteriores las seleccionan, explican y entregan; no las sustituyen.
+Laura localiza su aportación, reproduce una prueba y explica una decisión sin apoyarse en una plantilla de defensa separada.

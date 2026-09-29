@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H6 |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Asegurar excepciones propias, `throws` e invariantes de estado. |
 | Evidencia mínima | Código o decisión técnica en `README, sección `Incidencias H6``/`README, sección `Seguridad`` con prueba de error controlado. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Primero, individualmente, cada persona prepara su respuesta o prueba. Después, el equipo contrasta las aportaciones y acuerda el resultado compartido.
 
 ## Antes de entrar en clase
 

@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H6 |
+| Modalidad | Equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Activar — entender el reto |
 | Resultado de hoy | Comprender persistencia. |
 | Evidencia mínima | Necesidad documentada de persistencia. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o modifica una evidencia compartida y deja identificables las aportaciones.
 
 ## Antes de entrar en clase
 

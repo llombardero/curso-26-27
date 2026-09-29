@@ -222,7 +222,7 @@ Este refuerzo puede integrarse entre las sesiones 212 y 214 o usarse como recupe
 | Foco | Documentar cómo ejecutar H1. |
 | Explicar | README mínimo: qué hace, cómo se ejecuta, ejemplo de salida y limitaciones. |
 | Actividad | Crear `README.md` y evidencia de ejecución. |
-| Evidencia | README H1 y documento/captura de ejecución. |
+| Evidencia | README H1 y versión `h1-entrega` comprobada en el repositorio. |
 | Cierre | Intercambio: otro equipo intenta entender el README. |
 
 ### Sesión 215 — Defensa y cierre H1
@@ -233,7 +233,7 @@ Este refuerzo puede integrarse entre las sesiones 212 y 214 o usarse como recupe
 | Foco | Validar comprensión individual. |
 | Explicar | Cómo se defiende una entrega técnica breve. |
 | Actividad | Defensa: `main`, variable, constante, `Scanner`, ejecución y límites de H1. |
-| Evidencia | Plantilla de defensa H1 y portfolio individual. |
+| Evidencia | Versión `h1-entrega` defendida y siguiente mejora individual identificada. |
 | Cierre | Decidir qué debe mejorar cada alumno antes de H2. |
 
 ---
@@ -1309,7 +1309,7 @@ Este refuerzo debe conectarse con la persistencia real del hito.
 | Foco | Preparar defensa final sin memorizar. |
 | Explicar | Defender es razonar sobre código, decisiones, errores y aprendizaje. |
 | Actividad | Simulación de preguntas por parejas o tríos. |
-| Evidencia | Plantilla de defensa final. |
+| Evidencia | Ensayo individual con producto, prueba observable y decisión explicada. |
 | Cierre | Cada alumno anota tres preguntas que debe preparar mejor. |
 
 ### Sesión 305 — Presentaciones finales

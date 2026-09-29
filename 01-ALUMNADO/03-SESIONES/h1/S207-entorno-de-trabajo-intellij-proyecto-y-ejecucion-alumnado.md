@@ -4,10 +4,11 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Crear y ejecutar un proyecto Java mínimo. | Captura o documento de primera ejecución. |
+| Crear y ejecutar un proyecto Java mínimo. | Proyecto Java mínimo ejecutado y localizado en el repositorio del equipo. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H1.
+**Modalidad:** Individual.
 
 ## Material que necesitas
 

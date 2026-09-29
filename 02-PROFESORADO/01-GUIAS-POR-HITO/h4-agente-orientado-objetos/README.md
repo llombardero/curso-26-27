@@ -1,80 +1,21 @@
-# H4 — Agente orientado a objetos
+# Guía por hito — H4
 
-Paquete específico del hito H4.
+## Uso
 
-Objetivo:
+Esta carpeta orienta la docencia del hito. La evidencia técnica canónica vive en GitHub/README desde H1; diario y Scrum son fuentes evolutivas; Moodle registra la versión evaluada y Drive solo conserva evidencia no-code excepcional.
 
-```text
-Rediseñar MiniJarvis usando clases propias con responsabilidades claras, diagramas UML y defensa de diseño.
-```
+## Archivos docentes
 
-Documentos principales:
+- `16-guia-docente-h4-agente-orientado-objetos.md`
+- `16C-checklist-correccion-h4.md`
 
-```text
-16-guia-docente-h4-agente-orientado-objetos.md
-16B-ficha-alumnado-h4-agente-orientado-objetos.md
-16C-checklist-correccion-h4.md
-```
+## Evidencias canónicas de H4
 
-Plantillas locales:
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Código orientado a objetos | Equipo/parejas | Repositorio |
+| Diagrama de clases y relación con código | Equipo | `README.md` |
+| Diagrama de comportamiento | Coordinación con Entornos | Práctica opcional; no entrega obligatoria de Programación |
+| Versión evaluada | Equipo | Tag `h4-entrega` o commit estable |
 
-```text
-plantillas/README-h4-plantilla.md
-plantillas/diagrama-clases-h4-plantilla.md
-plantillas/diagrama-comportamiento-h4-plantilla.md
-plantillas/relacion-diagrama-codigo-h4-plantilla.md
-plantillas/comparacion-java-python-h4-plantilla.md
-plantillas/portfolio-h4-plantilla.md
-plantillas/registro-ia-h4-plantilla.md
-plantillas/defensa-h4-plantilla.md
-```
-
-Restricción didáctica clave:
-
-```text
-H4 introduce clases, atributos, métodos, constructores y visibilidad. Todavía no debe forzar patrones, plugins, arquitectura hexagonal, persistencia ni IA real.
-```
-
-## Cobertura curricular de Programación
-
-Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.md`.
-
-```text
-Hito: H4
-Temas de referencia: Temas 2 y 5
-Foco: orientación a objetos y separación de responsabilidades
-```
-
-Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias del alumnado:
-
-- clase
-- objeto
-- atributo
-- método
-- constructor
-- referencia
-- estado
-- comportamiento
-- responsabilidad
-- private/public
-- this
-- constructor por defecto
-- constructor con parámetros
-- sobrecarga de constructores
-- diagrama de clases
-- diagrama de comportamiento
-- Javadoc como ampliación
-- excepción básica
-
-Refuerzo obligatorio de cobertura:
-
-```text
-Memory debe mostrar al menos un constructor claro y, si el ritmo lo permite, sobrecarga de constructores.
-Debe haber Javadoc mínimo en una clase y dos métodos públicos o una justificación si se deja como recuperación.
-```
-
-Criterio docente de cierre:
-
-- El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
-- Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
-- La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.

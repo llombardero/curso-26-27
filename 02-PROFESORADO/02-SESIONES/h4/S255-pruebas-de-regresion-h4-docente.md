@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H4 |
+| Modalidad | Equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Asegurar que refactorizar a clases no rompió comportamiento. |
 | Evidencia mínima | Checklist de pruebas H4. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o modifica una evidencia compartida y deja identificables las aportaciones.
 
 ## Antes de entrar en clase
 

@@ -1,133 +1,34 @@
 # H0 — Torre de papel y Scrum
 
-Alumna: Laura García Martín  
-Equipo: Equipo Ada  
-Módulos: Programación + Entornos de Desarrollo  
-Curso: 1.º DAW — 2026/2027
+> Ejemplo privado de Laura. Mostrar solo después del intento propio del alumnado.
 
----
+## Objetivo
 
-## 1. Qué entrega este hito
+Organizar un sprint y comprobar una torre estable.
 
-Este entregable recoge las evidencias de la actividad H0: torre de papel y primera experiencia Scrum.
+## Arquitectura de evidencias
 
-Incluye:
+H0 no exige GitHub, tag ni Sites.
 
-- roles del equipo;
-- backlog de la torre;
-- review del resultado;
-- retrospectiva;
-- glosario Scrum mínimo;
-- primera conexión con el proyecto MiniJarvis.
+- Diario individual evolutivo: `../FUENTES-CURSO/01-Diario-individual-MiniJarvis.xlsx`.
+- Scrum de equipo evolutivo: `../FUENTES-CURSO/02-Scrum-equipo-MiniJarvis.xlsx`.
+- Entrega Moodle mínima: `../ENTREGAS-MOODLE/H0-entrega.md`.
 
-La actividad no consistía solo en construir una torre alta. El objetivo era aprender a organizar el trabajo, repartir responsabilidades, revisar el resultado y pensar mejoras para el siguiente sprint.
+## Proceso de equipo [EQUIPO]
 
----
+- Backlog: diseñar base, construir, medir estabilidad, revisar y mejorar.
+- Definición de terminado: torre autoportante y prueba registrada.
+- Retrospectiva: ensanchar la base antes de aumentar altura.
 
-## 2. Archivos entregados
+## Aportación de Laura [INDIVIDUAL]
 
-```text
-h0-torre-papel/
-├── README.md
-└── docs/
-    ├── contrato-equipo.md
-    ├── backlog-torre-papel.md
-    ├── review-torre-papel.md
-    ├── retrospectiva-h0.md
-    ├── glosario-scrum.md
-    └── primer-backlog-minijarvis.md
-```
+Laura documentó la prueba y puede explicar el cambio de diseño. H0 no usa GitHub, tags ni Sites; la fotografía no-code se conserva en Drive solo si aporta evidencia.
 
----
+## Decisión y resultado
 
-## 3. Resumen de la actividad
+- Decisión: La base inicial era estrecha; el equipo decidió ensancharla antes de ganar altura.
+- Resultado probado: Torre estable durante 10 segundos, backlog y retrospectiva actualizados.
 
-Construimos una torre usando papel y cinta limitada.
+## Defensa de Laura [INDIVIDUAL]
 
-Nuestra torre se mantuvo en pie durante 10 segundos, aunque no fue la más alta de la clase.
-
-Lo más importante que aprendimos fue que empezar a construir sin planificar bien nos hizo perder tiempo. Cuando organizamos tareas y roles, trabajamos mejor.
-
----
-
-## 4. Relación con Entornos de Desarrollo
-
-Esta actividad nos ayuda a entender:
-
-- qué es un sprint;
-- qué es un backlog;
-- por qué conviene dividir el trabajo en tareas pequeñas;
-- qué significa hacer una review;
-- para qué sirve una retrospectiva;
-- cómo se puede aplicar Scrum al proyecto MiniJarvis.
-
----
-
-## 5. Relación con Programación
-
-Todavía no hemos programado código Java en este hito.
-
-Pero hemos empezado a trabajar habilidades que necesitaremos en Programación:
-
-- resolver problemas paso a paso;
-- probar si una solución funciona;
-- corregir errores;
-- explicar decisiones;
-- trabajar en equipo;
-- preparar una versión pequeña antes de intentar algo más grande.
-
----
-
-## 6. Qué puedo defender individualmente
-
-Puedo explicar:
-
-- qué rol tuve en el equipo;
-- qué tareas aparecieron en nuestro backlog;
-- qué salió bien y qué salió mal;
-- qué cambiaríamos en un segundo sprint;
-- cómo se relaciona la torre de papel con MiniJarvis;
-- qué significa backlog, sprint, review y retrospectiva.
-
-## Respuesta de Laura — cobertura de conceptos de Programación
-
-Relación con `32-lista-conceptos-programacion-por-tema.md`:
-
-```text
-H0 trabaja principalmente: base transversal de Entornos; no introduce todavía conceptos técnicos de Programación evaluables.
-Foco de aprendizaje: preparación metodológica: Scrum de aula, evidencias, roles, comunicación técnica y primer backlog de MiniJarvis.
-```
-
-Conceptos que Laura debe saber defender en este hito:
-
-- problema
-- requisito
-- backlog
-- evidencia
-- review
-- retrospectiva
-- defensa oral
-
-Respuesta modelo de Laura:
-
-> En H0 explico cómo organizamos el trabajo y cómo aprendí a convertir una idea en tareas pequeñas antes de programar.
-
-Evidencia que Laura debe señalar:
-
-- una parte concreta del código o documento donde aparezca el concepto;
-- una prueba, ejecución, captura o explicación que demuestre que no lo ha copiado sin entender;
-- una mejora razonable que podría hacer si tuviera más tiempo.
-
-
-
-## Evidencias digitales correspondientes a la entrega
-
-La carpeta `evidencias-digitales` muestra cómo se presenta este hito en los cinco documentos comunes del curso:
-
-1. `01-Diario-individual-MiniJarvis.xlsx`.
-2. `02-Scrum-equipo-MiniJarvis.xlsx`.
-3. `03-Site-personal-estructura.md`.
-4. `04-Site-equipo-estructura.md`.
-5. `05-Entrega-enlaces-Moodle.md`.
-
-Los archivos de código y la carpeta `docs` contienen las evidencias técnicas originales. Los cinco documentos anteriores las seleccionan, explican y entregan; no las sustituyen.
+Laura localiza su aportación, reproduce una prueba y explica una decisión sin apoyarse en una plantilla de defensa separada.

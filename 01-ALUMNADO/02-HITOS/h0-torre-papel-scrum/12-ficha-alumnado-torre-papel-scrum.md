@@ -17,7 +17,7 @@ Todas las personas pueden diseñar, construir, comprobar y explicar. La responsa
 
 ## Ficha para el alumnado
 
-Curso: 1.º DAW — Programación + Entornos de Desarrollo
+Curso: 1.º DAW — Programación
 
 Proyecto anual:
 

@@ -1682,8 +1682,8 @@ Documentos actualizados:
 - README, sección `Pruebas de persistencia`;
 - README, sección `Seguridad`;
 - README, sección `Logs e historial`;
-- docs/portfolio-h6.md;
-- docs/registro-ia.md si procede.
+- README y versión estable de H6;
+- diario individual o Scrum si hubo un uso de IA significativo.
 ```
 
 ## Guion docente

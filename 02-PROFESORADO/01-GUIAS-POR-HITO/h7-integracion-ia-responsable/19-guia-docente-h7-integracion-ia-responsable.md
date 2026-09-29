@@ -37,7 +37,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -153,19 +153,16 @@ Pedir a MiniJarvis una sugerencia breve de estudio o explicación conceptual, si
 
 ---
 
-## 7. Entregables H7
+## Evidencias canónicas de H7
 
-| Entregable | Responsable | Formato | Plantilla local |
-|---|---|---|---|
-| Integración/simulación IA | Equipo/individual | `src/*.java` | No aplica. |
-| README H7 | Equipo | `README.md` | `plantillas/README-h7-plantilla.md` |
-| Registro de prompts | Individual/equipo | `docs/registro-prompts-h7.md` | `plantillas/registro-prompts-h7-plantilla.md` |
-| Riesgos IA | Equipo | `README, sección `Riesgos y validación`` | `plantillas/riesgos-ia-h7-plantilla.md` |
-| Configuración segura | Equipo | `docs/configuracion-segura-h7.md` | `plantillas/configuracion-segura-h7-plantilla.md` |
-| Validación humana | Individual/equipo | `README, sección `Riesgos y validación`` | `plantillas/validacion-humana-h7-plantilla.md` |
-| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h7.md` | `plantillas/comparacion-java-python-h7-plantilla.md` |
-| Portfolio H7 | Individual | `docs/portfolio-h7.md` | `plantillas/portfolio-h7-plantilla.md` |
-| Defensa H7 | Individual | `docs/defensa-h7.md` | `plantillas/defensa-h7-plantilla.md` |
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Integración o simulación segura | Equipo/parejas | Repositorio |
+| Riesgos, validación y límites | Equipo | Código, configuración segura y `README.md` |
+| Uso relevante de IA | Individual/equipo | Diario o Scrum, según autoría |
+| Versión evaluada | Equipo | Tag `h7-entrega` o commit estable |
+
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.
 
 ---
 

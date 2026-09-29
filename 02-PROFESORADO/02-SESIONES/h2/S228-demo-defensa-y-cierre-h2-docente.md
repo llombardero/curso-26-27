@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H2 |
+| Modalidad | Equipo → comprobación individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Validar menú, pruebas y depuración. |
 | Evidencia mínima | Defensa H2 y README actualizado; diario/Scrum solo si el uso de IA fue significativo. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o demuestra el resultado compartido. Después, cada persona comprueba, modifica o explica una parte sin apoyo del resto.
 
 ## Antes de entrar en clase
 

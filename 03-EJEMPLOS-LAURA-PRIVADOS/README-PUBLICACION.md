@@ -1,17 +1,13 @@
 # Ejemplos de Laura — publicación diferida
 
-Edición final para Moodle — curso 2026/2027.
+Material docente privado. Cada ejemplo se muestra solo después del intento propio del alumnado o cuando existe una primera versión defendible.
 
-Estos modelos se mantienen ocultos al iniciar cada reto. Se muestran después del intento propio del alumnado o cuando ya existe una primera versión defendible. Su finalidad es comparar, revisar, mejorar y preparar la defensa; no son plantillas para copiar.
+## Modelo canónico
 
-## Correspondencia con las entregas
+- `FUENTES-CURSO/`: un diario individual y un Scrum de equipo, evolutivos durante todo el curso.
+- cada hito: código y un README técnico integrado; no hay `docs/` paralelos.
+- `ENTREGAS-MOODLE/`: una entrega mínima por hito, alineada con las tareas reales.
+- `PORTFOLIOS-PERIODICOS/`: Sites únicamente en C1, C2 y HF.
+- las marcas `[INDIVIDUAL]`, `[EQUIPO]` y `[EQUIPO → COMPROBACIÓN INDIVIDUAL]` distinguen autoría y producto compartido.
 
-Cada hito contiene una carpeta `evidencias-digitales` con los mismos cinco documentos que se solicitan al alumnado:
-
-1. `01-Diario-individual-MiniJarvis.xlsx`.
-2. `02-Scrum-equipo-MiniJarvis.xlsx`.
-3. `03-Site-personal-estructura.md`.
-4. `04-Site-equipo-estructura.md`.
-5. `05-Entrega-enlaces-Moodle.md`.
-
-El código y los documentos técnicos de cada hito siguen siendo las evidencias originales. Los cinco documentos comunes muestran cómo registrar, seleccionar, comunicar y entregar esas evidencias.
+Los ejemplos ayudan a interpretar criterios y preparar la defensa; no son plantillas para copiar ni se incluyen en el paquete Moodle del alumnado.

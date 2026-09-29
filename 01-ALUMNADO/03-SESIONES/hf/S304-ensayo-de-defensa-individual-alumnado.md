@@ -4,15 +4,20 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Preparar defensa final sin memorizar. | Plantilla de defensa final. |
+| Preparar defensa final sin memorizar. | Ensayo individual con producto, prueba observable y decisión explicada. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** HF.
+**Modalidad:** Parejas.
 
 ## Material que necesitas
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
 - Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+
+## Organización del trabajo
+
+Ensayad por parejas, alternando defensa y preguntas; cada persona termina identificando sus propias mejoras antes de la defensa evaluativa.
 
 ## Trabajo de hoy
 

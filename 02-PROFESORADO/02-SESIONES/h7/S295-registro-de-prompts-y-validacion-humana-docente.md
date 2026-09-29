@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H7 |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Trazar y validar respuestas. |
 | Evidencia mínima | README, sección «Trazabilidad y validación humana» y validación humana. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Primero, individualmente, cada persona prepara su respuesta o prueba. Después, el equipo contrasta las aportaciones y acuerda el resultado compartido.
 
 ## Antes de entrar en clase
 

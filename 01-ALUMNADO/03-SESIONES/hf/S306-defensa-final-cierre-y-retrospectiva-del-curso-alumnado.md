@@ -8,12 +8,17 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** HF.
+**Modalidad:** Individual.
 
 ## Material que necesitas
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
 - Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
 - Datos ficticios de prueba. No se usarán contraseñas, tokens, claves API ni datos personales reales.
+
+## Organización del trabajo
+
+La demostración puede usar el producto del equipo, pero la defensa final y cualquier modificación solicitada son individuales.
 
 ## Trabajo de hoy
 

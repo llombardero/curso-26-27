@@ -37,7 +37,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -59,7 +59,7 @@ HF no introduce un hito técnico nuevo. Sirve para cerrar, defender, recuperar y
 Objetivos:
 
 - presentar la evolución de MiniJarvis;
-- revisar el portfolio final;
+- revisar la selección final de Sites y repositorio;
 - hacer demo final si procede;
 - realizar defensa individual;
 - recuperar RA pendientes;
@@ -77,17 +77,16 @@ Fechas orientativas:
 
 ---
 
-## 3. Entregables HF
+## Evidencias canónicas de HF
 
-| Entregable | Responsable | Formato | Plantilla local |
-|---|---|---|---|
-| Portfolio final | Individual | Markdown/GitHub/mixto | `plantillas/portfolio-final-plantilla.md` |
-| Demo final | Equipo | Ejecución + presentación | `plantillas/demo-final-plantilla.md` |
-| Defensa final | Individual | Oral + preparación | `plantillas/defensa-final-plantilla.md` |
-| Recuperación específica | Individual si procede | Según RA pendiente | `plantillas/recuperacion-especifica-plantilla.md` |
-| Registro IA final | Individual | Markdown | `plantillas/registro-ia-final-plantilla.md` |
-| Autoevaluación final | Individual | Markdown | `plantillas/autoevaluacion-final-plantilla.md` |
-| Plan de mejora final | Individual si procede | Markdown | `plantillas/plan-mejora-final-plantilla.md` |
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Producto final | Equipo | Release o tag `hf-final` |
+| Selección y comunicación | Individual/equipo | Site personal y Site de equipo |
+| Acreditación | Individual | Defensa con prueba observable |
+| Recuperación | Individual, si procede | Solo evidencia concreta pendiente |
+
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.
 
 ---
 
@@ -95,7 +94,7 @@ Fechas orientativas:
 
 | Momento | Acción | Evidencia |
 |---|---|---|
-| 1 | Revisión de portfolio | Índice H0-H7 y evidencias clave. |
+| 1 | Revisión de Sites y repositorio | Evolución H1-H7 y evidencias clave. |
 | 2 | Demo final | Ejecución y explicación del producto. |
 | 3 | Defensa individual | Comprensión técnica y aportación. |
 | 4 | Recuperación | Evidencias focalizadas por RA pendiente. |
@@ -107,7 +106,7 @@ Fechas orientativas:
 
 El cierre es válido si:
 
-- el portfolio permite seguir la evolución del proyecto;
+- los Sites y el repositorio permiten seguir la evolución del proyecto;
 - la demo muestra una versión defendible de MiniJarvis;
 - la persona puede explicar su aportación;
 - las evidencias cubren RA/CE pendientes;
@@ -150,7 +149,7 @@ Foco: cierre, defensa, recuperación y ampliación final
 
 Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias del alumnado:
 
-- portfolio
+- selección de evidencias en Sites
 - defensa
 - recuperación por concepto
 - lambdas

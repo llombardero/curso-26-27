@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H1 |
+| Modalidad | Individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Entender clase `Main` y método `main`. |
 | Evidencia mínima | Código que compila con varios mensajes por pantalla. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Cada persona realiza la actividad y responde por su propia evidencia.
 
 ## Antes de entrar en clase
 

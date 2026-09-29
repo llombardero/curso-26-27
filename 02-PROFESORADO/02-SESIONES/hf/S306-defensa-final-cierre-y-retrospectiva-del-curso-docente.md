@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | HF |
+| Modalidad | Individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Cerrar aprendizaje y evaluación. |
 | Evidencia mínima | Defensa final, autoevaluación y retrospectiva. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+La demostración puede usar el producto del equipo, pero la defensa final y cualquier modificación solicitada son individuales.
 
 ## Antes de entrar en clase
 

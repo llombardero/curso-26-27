@@ -8,10 +8,15 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H0.
+**Modalidad:** Individual → puesta en común en equipo.
 
 ## Material que necesitas
 
 - Esta ficha, en papel o en formato digital, y un medio para escribir.
+
+## Organización del trabajo
+
+Primero, individualmente, interpreta el itinerario; después contrasta por parejas y finalmente participa en la puesta en común del equipo.
 
 ## Trabajo de hoy
 

@@ -1,6 +1,6 @@
 # Presentación para el alumnado — Proyecto Agente IA
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Documento breve para presentar el proyecto al inicio del curso.
 
@@ -122,8 +122,8 @@ El equipo podrá entregar:
 
 Cada alumno/a podrá entregar o defender:
 
-- portfolio individual;
-- registro de uso de IA;
+- selección periódica en el Site personal;
+- uso significativo de IA en diario o Scrum;
 - comparación Java ↔ Python;
 - explicación de una parte del código;
 - reflexión sobre lo aprendido;
@@ -178,7 +178,7 @@ La IA no puede aprender por ti.
 Si usas IA en una entrega evaluable, tendrás que registrarlo en:
 
 ```text
-docs/registro-ia
+diario individual o Scrum, según autoría
 ```
 
 Y tendrás que poder explicar:

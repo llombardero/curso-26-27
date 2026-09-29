@@ -8,11 +8,16 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H2.
+**Modalidad:** Equipo → comprobación individual.
 
 ## Material que necesitas
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
 - Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+
+## Organización del trabajo
+
+El equipo produce o demuestra el resultado compartido. Después, cada persona comprueba, modifica o explica una parte sin apoyo del resto.
 
 ## Trabajo de hoy
 

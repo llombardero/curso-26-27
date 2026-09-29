@@ -37,7 +37,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -150,21 +150,16 @@ logs/historial.log
 
 ---
 
-## 7. Entregables H6
+## Evidencias canónicas de H6
 
-| Entregable | Responsable | Formato | Plantilla local |
-|---|---|---|---|
-| Código persistente | Equipo/individual | `src/*.java` | No aplica. |
-| README reproducible | Equipo | `README.md` | `plantillas/README-h6-plantilla.md` |
-| Ficheros de ejemplo | Equipo | `data/`, `logs/` | No aplica. |
-| Pruebas de persistencia | Equipo | `README, sección `Pruebas de persistencia`` | `plantillas/pruebas-persistencia-h6-plantilla.md` |
-| Seguridad | Equipo | `README, sección `Seguridad`` | `plantillas/seguridad-h6-plantilla.md` |
-| Logs/historial | Equipo | `README, sección `Logs e historial`` | `plantillas/logs-historial-h6-plantilla.md` |
-| Incidencia | Si procede | `README, sección `Incidencias H6`` | `plantillas/incidencia-h6-plantilla.md` |
-| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h6.md` | `plantillas/comparacion-java-python-h6-plantilla.md` |
-| Portfolio H6 | Individual | `docs/portfolio-h6.md` | `plantillas/portfolio-h6-plantilla.md` |
-| Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h6-plantilla.md` |
-| Defensa H6 | Individual | `docs/defensa-h6.md` | `plantillas/defensa-h6-plantilla.md` |
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Código, datos ficticios y pruebas | Equipo/parejas | Repositorio |
+| Persistencia, logs, errores y seguridad | Equipo | `README.md` |
+| Versión evaluada | Equipo | Tag `h6-entrega` o commit estable |
+| Comprensión | Individual | Defensa breve |
+
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.
 
 ---
 

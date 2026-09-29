@@ -1,82 +1,21 @@
-# H5 — Agente extensible, clean code y patrones iniciales
+# Guía por hito — H5
 
-Paquete específico del hito H5.
+## Uso
 
-Objetivo:
+Esta carpeta orienta la docencia del hito. La evidencia técnica canónica vive en GitHub/README desde H1; diario y Scrum son fuentes evolutivas; Moodle registra la versión evaluada y Drive solo conserva evidencia no-code excepcional.
 
-```text
-Convertir MiniJarvis en un agente más extensible mediante herramientas/comandos internos, refactorización documentada, revisión de código y decisión razonada sobre patrones.
-```
+## Archivos docentes
 
-Documentos principales:
+- `17-guia-docente-h5-extensible-clean-code-patrones.md`
+- `17C-checklist-correccion-h5.md`
 
-```text
-17-guia-docente-h5-extensible-clean-code-patrones.md
-17B-ficha-alumnado-h5-extensible-clean-code-patrones.md
-17C-checklist-correccion-h5.md
-```
+## Evidencias canónicas de H5
 
-Plantillas locales:
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Código y pruebas de regresión | Equipo/parejas | Repositorio |
+| Refactorización, revisión y patrón | Equipo | README, historial y PR/revisión |
+| Versión evaluada | Equipo | Tag `h5-entrega` o commit estable |
+| Selección C2 | Individual y equipo | Sites C2; no portfolio por hito |
 
-```text
-plantillas/README-h5-plantilla.md
-plantillas/informe-refactorizacion-h5-plantilla.md
-plantillas/evidencia-git-h5-plantilla.md
-plantillas/revision-codigo-h5-plantilla.md
-plantillas/registro-patron-h5-plantilla.md
-plantillas/comparacion-java-python-h5-plantilla.md
-plantillas/portfolio-h5-plantilla.md
-plantillas/registro-ia-h5-plantilla.md
-plantillas/defensa-h5-plantilla.md
-```
-
-Restricción didáctica clave:
-
-```text
-H5 introduce extensibilidad y refactorización. Un patrón solo se usa si resuelve un problema real y se puede defender. No se debe forzar arquitectura compleja, plugins reales, persistencia ni IA real.
-```
-
-## Cobertura curricular de Programación
-
-Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.md`.
-
-```text
-Hito: H5
-Temas de referencia: Temas 5 y 6
-Foco: interfaces, extensibilidad, pruebas y primer patrón
-```
-
-Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias del alumnado:
-
-- test unitario
-- aserto
-- TDD
-- interfaz
-- implementación
-- método default como ampliación
-- excepciones
-- recursividad como comparación
-- métodos estáticos
-- records como ampliación
-- enum
-- polimorfismo por interfaz
-- Command simplificado
-- @Override
-- toString
-- Comparable o Comparator como ampliación guiada
-- herencia, super, protected y clase abstracta como comparación técnica
-- clean code
-- refactorización segura
-
-Refuerzo obligatorio de cobertura:
-
-```text
-H5 debe incluir un laboratorio de POO avanzada: enum, record opcional, @Override, toString y comparación entre interface Tool y una posible clase abstracta BaseTool.
-No es obligatorio mantener herencia en el diseño final si la defensa justifica que interfaz/composición es más simple.
-```
-
-Criterio docente de cierre:
-
-- El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
-- Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
-- La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.

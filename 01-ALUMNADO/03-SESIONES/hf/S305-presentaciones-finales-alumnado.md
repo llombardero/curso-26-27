@@ -8,6 +8,7 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** HF.
+**Modalidad:** Equipo.
 
 ## Material que necesitas
 

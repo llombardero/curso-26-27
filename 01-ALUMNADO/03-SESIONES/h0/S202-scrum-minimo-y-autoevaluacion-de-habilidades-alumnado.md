@@ -8,6 +8,7 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H0.
+**Modalidad:** Individual.
 
 ---
 

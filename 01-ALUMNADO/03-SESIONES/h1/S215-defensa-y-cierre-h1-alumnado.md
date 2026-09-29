@@ -4,15 +4,20 @@
 
 | Hoy vas a… | Debe quedar… |
 |---|---|
-| Validar comprensión individual. | Plantilla de defensa H1 y portfolio individual. |
+| Validar comprensión individual. | Versión `h1-entrega` defendida y siguiente mejora individual identificada. |
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H1.
+**Modalidad:** Equipo → comprobación individual.
 
 ## Material que necesitas
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
 - Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+
+## Organización del trabajo
+
+El equipo produce o demuestra el resultado compartido. Después, cada persona comprueba, modifica o explica una parte sin apoyo del resto.
 
 ## Trabajo de hoy
 

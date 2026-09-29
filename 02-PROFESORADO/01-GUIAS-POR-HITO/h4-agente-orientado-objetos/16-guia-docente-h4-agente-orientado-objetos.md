@@ -37,7 +37,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -164,19 +164,16 @@ Preferir pocas clases claras antes que muchas clases decorativas.
 
 ---
 
-## 7. Entregables H4
+## Evidencias canónicas de H4
 
-| Entregable | Responsable | Formato | Plantilla local |
-|---|---|---|---|
-| Código Java OO | Equipo/individual | `src/*.java` | No aplica. |
-| README H4 | Equipo/individual | `README.md` | `plantillas/README-h4-plantilla.md` |
-| Diagrama de clases | Equipo | `docs/diagrama-clases-h4.md` | `plantillas/diagrama-clases-h4-plantilla.md` |
-| Diagrama de comportamiento | Equipo | `docs/diagrama-comportamiento-h4.md` | `plantillas/diagrama-comportamiento-h4-plantilla.md` |
-| Relación diagrama-código | Equipo | `README, sección `Relación diagrama-código`` | `plantillas/relacion-diagrama-codigo-h4-plantilla.md` |
-| Comparación Java ↔ Python | Individual | `docs/comparacion-java-python-h4.md` | `plantillas/comparacion-java-python-h4-plantilla.md` |
-| Portfolio H4 | Individual | `docs/portfolio-h4.md` | `plantillas/portfolio-h4-plantilla.md` |
-| Registro IA | Individual/equipo | `docs/registro-ia.md` | `plantillas/registro-ia-h4-plantilla.md` |
-| Defensa H4 | Individual | `docs/defensa-h4.md` | `plantillas/defensa-h4-plantilla.md` |
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Código orientado a objetos | Equipo/parejas | Repositorio |
+| Diagrama de clases y relación con código | Equipo | `README.md` |
+| Diagrama de comportamiento | Coordinación con Entornos | Práctica opcional; no entrega obligatoria de Programación |
+| Versión evaluada | Equipo | Tag `h4-entrega` o commit estable |
+
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.
 
 ---
 

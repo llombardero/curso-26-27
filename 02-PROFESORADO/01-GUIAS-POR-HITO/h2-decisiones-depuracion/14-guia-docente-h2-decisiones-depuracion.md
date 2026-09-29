@@ -37,7 +37,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -326,19 +326,16 @@ Preguntas:
 
 ---
 
-## 9. Entregables H2
+## Evidencias canónicas de H2
 
-| Entregable | Responsable | Formato | Plantilla local |
-|---|---|---|---|
-| Código Java con menú | Equipo/individual según decisión docente | `src/Main.java` | No aplica. |
-| README H2 | Equipo/individual | `README.md` | `plantillas/README-h2-plantilla.md` |
-| Evidencia de ejecución | Equipo/individual | `docs/evidencia-ejecucion-h2.md` | `plantillas/evidencia-ejecucion-h2-plantilla.md` |
-| Plan de pruebas | Equipo | `README, sección `Pruebas H2`` | `plantillas/pruebas-h2-plantilla.md` |
-| Informe de depuración | Individual/equipo | `README, sección `Depuración H2`` | `plantillas/depuracion-h2-plantilla.md` |
-| Incidencia | Equipo/individual | `README, sección `Depuración H2`` | `plantillas/incidencia-h2-plantilla.md` |
-| Comparación Java ↔ Python | Individual, casa | `docs/comparacion-java-python-h2.md` | `plantillas/comparacion-java-python-h2-plantilla.md` |
-| Registro IA | Individual | `docs/registro-ia.md` | `plantillas/registro-ia-h2-plantilla.md` |
-| Defensa H2 | Individual | `docs/defensa-h2.md` | `plantillas/defensa-h2-plantilla.md` |
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Código, pruebas y depuración | Equipo/parejas | Repositorio y `README.md` |
+| Incidencia significativa | Equipo | Sección de depuración del README |
+| Versión evaluada | Equipo | Tag `h2-entrega` o commit estable |
+| Comprensión | Individual | Defensa breve |
+
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.
 
 ---
 

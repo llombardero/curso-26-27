@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H1 |
+| Modalidad | Equipo → comprobación individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Mejorar legibilidad sin añadir complejidad. |
 | Evidencia mínima | Código H1 limpio, simple y ejecutable. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o demuestra el resultado compartido. Después, cada persona comprueba, modifica o explica una parte sin apoyo del resto.
 
 ## Antes de entrar en clase
 

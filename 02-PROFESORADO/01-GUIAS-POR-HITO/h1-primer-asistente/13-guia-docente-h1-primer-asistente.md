@@ -37,7 +37,7 @@ Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecuta
 <!-- HEXA-CICLO-COMPLETO-POR-HITO:END -->
 
 
-## Programación + Entornos de Desarrollo — 1.º DAW — Curso 2026/2027
+## Programación — 1.º DAW — Curso 2026/2027
 
 Edición final para Moodle — septiembre de 2026
 
@@ -501,28 +501,16 @@ Preguntas esenciales:
 
 ---
 
-## 9. Entregables H1
+## Evidencias canónicas de H1
 
-| Entregable | Responsable | Formato | Plantilla local |
-|---|---|---|---|
-| Código Java básico | Individual o equipo, según decisión docente | `src/Main.java` | No aplica. |
-| README de ejecución | Equipo o individual | `README.md` | `plantillas/README-h1-plantilla.md` |
-| Evidencia de ejecución | Equipo o individual | `docs/evidencia-ejecucion-h1.md` | `plantillas/evidencia-ejecucion-h1-plantilla.md` |
-| Portfolio H1 | Individual | `docs/portfolio-h1.md` | `plantillas/portfolio-h1-plantilla.md` |
-| Registro de IA, si se usa | Individual | `docs/registro-ia.md` | `plantillas/registro-ia-h1-plantilla.md` |
-| Defensa H1 | Individual | `docs/defensa-h1.md` | `plantillas/defensa-h1-plantilla.md` |
-| Incidencia, si aparece | Individual/equipo | `docs/incidencia-h1.md` | `plantillas/incidencia-h1-plantilla.md` |
-| Vocabulario H1, si se pide | Individual | `docs/vocabulario-h1.md` | `plantillas/vocabulario-h1-plantilla.md` |
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Código, pruebas e historial | Equipo con defensa individual | Repositorio GitHub |
+| Ejecución, decisiones e incidencias | Equipo | Secciones breves del `README.md` |
+| Versión evaluada | Equipo | Tag `h1-entrega` o commit estable |
+| Aprendizaje o IA significativa | Individual | Diario evolutivo; solo si procede |
 
-Recomendación:
-
-Si el trabajo se hace en equipo, mantener defensa individual obligatoria para evitar que una evidencia grupal oculte falta de comprensión.
-
-Carpeta de plantillas específicas del hito:
-
-```text
-plantillas/
-```
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.
 
 ---
 

@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H6 |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Documentar trazabilidad y seguridad del incremento H6. |
 | Evidencia mínima | README H6 reproducible; diario/Scrum actualizado solo si el uso de IA fue significativo. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Primero, individualmente, cada persona prepara su respuesta o prueba. Después, el equipo contrasta las aportaciones y acuerda el resultado compartido.
 
 ## Antes de entrar en clase
 

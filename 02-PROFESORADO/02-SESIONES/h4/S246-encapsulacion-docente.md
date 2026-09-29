@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H4 |
+| Modalidad | Equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Proteger datos internos. |
 | Evidencia mínima | Código sin acceso directo innecesario a atributos. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o modifica una evidencia compartida y deja identificables las aportaciones.
 
 ## Antes de entrar en clase
 

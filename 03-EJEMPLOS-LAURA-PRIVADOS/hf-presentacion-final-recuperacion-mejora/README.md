@@ -1,14 +1,28 @@
-# HF - Presentación final, recuperación y mejora
+# HF — Presentación final, recuperación y mejora
 
+> Ejemplo privado de Laura. Mostrar solo después del intento propio del alumnado.
 
-## Evidencias digitales correspondientes a la entrega
+## Objetivo
 
-La carpeta `evidencias-digitales` muestra cómo se presenta este hito en los cinco documentos comunes del curso:
+Demostrar la evolución de MiniJarvis y defender decisiones.
 
-1. `01-Diario-individual-MiniJarvis.xlsx`.
-2. `02-Scrum-equipo-MiniJarvis.xlsx`.
-3. `03-Site-personal-estructura.md`.
-4. `04-Site-equipo-estructura.md`.
-5. `05-Entrega-enlaces-Moodle.md`.
+## Arquitectura de evidencias
 
-Los archivos de código y la carpeta `docs` contienen las evidencias técnicas originales. Los cinco documentos anteriores las seleccionan, explican y entregan; no las sustituyen.
+Versión estable: `hf-final`. El repositorio y su README son la evidencia técnica canónica.
+
+- Diario individual evolutivo: `../FUENTES-CURSO/01-Diario-individual-MiniJarvis.xlsx`.
+- Scrum de equipo evolutivo: `../FUENTES-CURSO/02-Scrum-equipo-MiniJarvis.xlsx`.
+- Entrega Moodle mínima: `../ENTREGAS-MOODLE/HF-entrega.md`.
+
+## Demostración final [EQUIPO → COMPROBACIÓN INDIVIDUAL]
+
+La demo parte de un entorno limpio, usa `hf-final` y recorre una prueba representativa. Laura defiende una decisión propia, localiza el artefacto, muestra la prueba y explica una mejora. La recuperación se limita a evidencias concretas no superadas.
+
+## Decisión y resultado
+
+- Decisión: Cada afirmación se enlaza con una versión estable y una prueba observable.
+- Resultado probado: La demostración es reproducible y Laura explica su aportación.
+
+## Defensa de Laura [INDIVIDUAL]
+
+Laura localiza su aportación, reproduce una prueba y explica una decisión sin apoyarse en una plantilla de defensa separada.

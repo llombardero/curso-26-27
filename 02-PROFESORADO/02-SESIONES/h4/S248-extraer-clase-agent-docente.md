@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H4 |
+| Modalidad | Equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Planificar — organizar el trabajo |
 | Resultado de hoy | Sacar flujo principal de `Main`. |
 | Evidencia mínima | `Main` queda reducido a crear y lanzar el agente. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o modifica una evidencia compartida y deja identificables las aportaciones.
 
 ## Antes de entrar en clase
 

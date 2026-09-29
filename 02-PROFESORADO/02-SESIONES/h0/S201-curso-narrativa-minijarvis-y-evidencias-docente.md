@@ -5,6 +5,7 @@
 | Dato | Decisión para esta sesión |
 |---|---|
 | Hito | H0 — Bootcamp inicial de trabajo por proyectos y Scrum |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración | 45 minutos |
 | Fase HEXA del hito | Activar — entender el reto |
 | Agrupamiento | Trabajo individual, contraste por parejas y puesta en común |

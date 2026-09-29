@@ -5,17 +5,22 @@
 | Dato | Valor |
 |---|---|
 | Hito | H1 |
+| Modalidad | Equipo → comprobación individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Validar comprensión individual. |
-| Evidencia mínima | Plantilla de defensa H1 y portfolio individual. |
+| Evidencia mínima | Versión `h1-entrega` defendida y siguiente mejora individual identificada. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+El equipo produce o demuestra el resultado compartido. Después, cada persona comprueba, modifica o explica una parte sin apoyo del resto.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Plantilla de defensa H1 y portfolio individual.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: Versión `h1-entrega` defendida y siguiente mejora individual identificada.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -50,7 +55,7 @@ Preguntas modelo: qué es `main`, qué es una variable, qué hace `Scanner`.
 
 Defensa por parejas antes de defensa docente.
 
-Producto o evidencia que debe quedar: **Plantilla de defensa H1 y portfolio individual.**
+Producto o evidencia que debe quedar: **Versión `h1-entrega` defendida y siguiente mejora individual identificada.**
 
 ## Qué observar mientras trabajan
 

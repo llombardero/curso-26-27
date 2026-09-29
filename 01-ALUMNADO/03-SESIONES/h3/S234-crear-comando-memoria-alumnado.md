@@ -8,6 +8,7 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H3.
+**Modalidad:** Equipo.
 
 ## Material que necesitas
 

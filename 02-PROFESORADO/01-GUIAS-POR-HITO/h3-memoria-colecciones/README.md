@@ -1,77 +1,21 @@
-# H3 — Agente con memoria en colecciones
+# Guía por hito — H3
 
-Paquete específico del hito H3.
+## Uso
 
-Objetivo:
+Esta carpeta orienta la docencia del hito. La evidencia técnica canónica vive en GitHub/README desde H1; diario y Scrum son fuentes evolutivas; Moodle registra la versión evaluada y Drive solo conserva evidencia no-code excepcional.
 
-```text
-Añadir memoria temporal a MiniJarvis usando colecciones Java y documentar pruebas, casos límite y justificación de la estructura elegida.
-```
+## Archivos docentes
 
-Documentos principales:
+- `15-guia-docente-h3-memoria-colecciones.md`
+- `15C-checklist-correccion-h3.md`
 
-```text
-15-guia-docente-h3-memoria-colecciones.md
-15B-ficha-alumnado-h3-memoria-colecciones.md
-15C-checklist-correccion-h3.md
-```
+## Evidencias canónicas de H3
 
-Plantillas locales:
+| Evidencia canónica | Autoría | Fuente |
+|---|---|---|
+| Código y casos límite | Equipo/parejas | Repositorio |
+| Colección, justificación y pruebas | Equipo | `README.md` |
+| Versión evaluada | Equipo | Tag `h3-entrega` o commit estable |
+| Selección C1 | Individual y equipo | Sites C1; no portfolio por hito |
 
-```text
-plantillas/README-h3-plantilla.md
-plantillas/evidencia-ejecucion-h3-plantilla.md
-plantillas/pruebas-memoria-h3-plantilla.md
-plantillas/justificacion-coleccion-h3-plantilla.md
-plantillas/incidencia-h3-plantilla.md
-plantillas/comparacion-java-python-h3-plantilla.md
-plantillas/portfolio-h3-plantilla.md
-plantillas/registro-ia-h3-plantilla.md
-plantillas/defensa-h3-plantilla.md
-```
-
-Restricción didáctica clave:
-
-```text
-H3 introduce memoria temporal con colecciones. Todavía no debe introducir persistencia en ficheros, bases de datos, arquitectura OO completa, patrones de diseño ni IA real.
-```
-
-## Cobertura curricular de Programación
-
-Este hito queda alineado con el mapa `32-lista-conceptos-programacion-por-tema.md`.
-
-```text
-Hito: H3
-Temas de referencia: Tema 4
-Foco: memoria temporal con estructuras de datos
-```
-
-Conceptos que deben trabajarse o, como mínimo, quedar conectados con evidencias del alumnado:
-
-- colección
-- genéricos
-- List
-- ArrayList
-- índice
-- recorrido
-- for mejorado
-- mutabilidad
-- inmutabilidad
-- clases envoltorio
-- array
-- tabla como ampliación
-- Set para evitar repetidos
-- Map para preferencias por clave
-
-Refuerzo obligatorio de cobertura:
-
-```text
-La defensa H3 debe incluir una comparación array vs ArrayList y una decisión explícita sobre Set para recuerdos repetidos.
-Map puede trabajarse como preferencias por clave o como mini-reto separado.
-```
-
-Criterio docente de cierre:
-
-- El alumnado no solo entrega el producto; debe poder señalar dónde aparece cada concepto en su código, README, pruebas o defensa.
-- Si un concepto se marca como ampliación, no penaliza al alumnado que alcance el mínimo, pero sí orienta mejora, recuperación o enriquecimiento.
-- La defensa debe incluir al menos una pregunta de comprensión sobre los conceptos nuevos del hito.
+No se crean plantillas, portfolios, registros IA, defensas ni capturas rutinarias por hito. Moodle recibe la versión evaluada y la confirmación de diario/Scrum; Drive se reserva para evidencia no-code excepcional. La defensa individual acredita comprensión sin generar otro documento.

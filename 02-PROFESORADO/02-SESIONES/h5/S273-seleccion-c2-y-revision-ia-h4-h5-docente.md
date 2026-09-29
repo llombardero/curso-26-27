@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H5 |
+| Modalidad | Individual → puesta en común en equipo |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Seleccionar aprendizaje H4-H5 y revisar el uso de IA. |
 | Evidencia mínima | Selección H4-H5 para C2; diario/Scrum actualizado solo si el uso de IA fue significativo. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Primero, individualmente, cada persona prepara su respuesta o prueba. Después, el equipo contrasta las aportaciones y acuerda el resultado compartido.
 
 ## Antes de entrar en clase
 

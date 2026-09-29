@@ -8,6 +8,7 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** H5.
+**Modalidad:** Individual.
 
 ## Material que necesitas
 

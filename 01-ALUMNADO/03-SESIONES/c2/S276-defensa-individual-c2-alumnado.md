@@ -8,11 +8,16 @@
 
 **Tiempo previsto:** 45 minutos.  
 **Hito:** C2.
+**Modalidad:** Individual.
 
 ## Material que necesitas
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
 - Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+
+## Organización del trabajo
+
+La preparación puede revisarse con el equipo, pero la defensa y cualquier modificación solicitada son individuales.
 
 ## Trabajo de hoy
 

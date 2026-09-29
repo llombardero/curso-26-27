@@ -67,8 +67,21 @@ def test_html_y_presentaciones_sin_derivados_huerfanos():
     assert html == markdown | {Path("LEEME-ALUMNADO.html")}
     pptx = sorted((PROFESORADO / "03-PRESENTACIONES/POR-SESION").rglob("S*-presentacion.pptx"))
     assert len(pptx) == 106
+    student_by_code = {
+        re.search(r"S\d{3}", source.name).group(0): source
+        for source in (ALUMNADO / "03-SESIONES").rglob("S*-alumnado.md")
+    }
     for path in pptx:
-        assert len(Presentation(path).slides) >= 7
+        presentation = Presentation(path)
+        assert len(presentation.slides) >= 7
+        code = re.search(r"S\d{3}", path.name).group(0)
+        source = student_by_code[code].read_text(encoding="utf-8")
+        mode = re.search(r"\*\*Modalidad:\*\* (.+?)\.", source).group(1)
+        slide_text = "\n".join(
+            shape.text for slide in presentation.slides for shape in slide.shapes if hasattr(shape, "text")
+        )
+        assert mode in slide_text
+        assert "MINIJARVIS · PROGRAMACIÓN + ENTORNOS DE DESARROLLO" not in slide_text
 
 
 def test_zips_validos_y_sin_temporales():
@@ -78,3 +91,118 @@ def test_zips_validos_y_sin_temporales():
         with ZipFile(archive) as zf:
             assert zf.testzip() is None
             assert not any(re.search(r"(^|/)(__pycache__|\.obsidian)(/|$)|\.pyc$", name) for name in zf.namelist())
+
+
+def test_modalidad_explicita_y_coherente_en_106_parejas():
+    allowed = {
+        "Individual", "Equipo", "Parejas",
+        "Individual → puesta en común en equipo",
+        "Equipo → comprobación individual",
+    }
+    counts = {value: 0 for value in allowed}
+    students = sorted((ALUMNADO / "03-SESIONES").rglob("S*-alumnado.md"))
+    assert len(students) == 106
+    for student in students:
+        number = re.search(r"S(\d{3})", student.name).group(1)
+        teacher = PROFESORADO / "02-SESIONES" / student.relative_to(ALUMNADO / "03-SESIONES")
+        teacher = teacher.with_name(teacher.name.replace("-alumnado.md", "-docente.md"))
+        student_text = student.read_text(encoding="utf-8")
+        teacher_text = teacher.read_text(encoding="utf-8")
+        match = re.search(r"\*\*Modalidad:\*\* (.+?)\.", student_text)
+        assert match, student
+        mode = match.group(1)
+        assert mode in allowed
+        assert f"| Modalidad | {mode} |" in teacher_text
+        counts[mode] += 1
+        if "→" in mode:
+            assert "## Organización del trabajo" in student_text
+    assert counts == {
+        "Individual": 23,
+        "Equipo": 51,
+        "Parejas": 2,
+        "Individual → puesta en común en equipo": 18,
+        "Equipo → comprobación individual": 12,
+    }
+
+
+def test_modalidades_criticas_y_defensas():
+    expected = {
+        "S204": "Equipo → comprobación individual",
+        "S215": "Equipo → comprobación individual",
+        "S240": "Equipo → comprobación individual",
+        "S257": "Individual",
+        "S274": "Equipo → comprobación individual",
+        "S291": "Equipo → comprobación individual",
+        "S296": "Equipo → comprobación individual",
+        "S304": "Parejas",
+        "S306": "Individual",
+    }
+    for path in (ALUMNADO / "03-SESIONES").rglob("S*-alumnado.md"):
+        code = re.search(r"S\d{3}", path.name).group(0)
+        if code in expected:
+            assert f"**Modalidad:** {expected[code]}." in path.read_text(encoding="utf-8")
+
+
+def test_laura_usa_fuentes_evolutivas_y_sin_docs_por_hito():
+    laura = ROOT / "03-EJEMPLOS-LAURA-PRIVADOS"
+    assert not list(laura.rglob("docs"))
+    assert not list(laura.rglob("evidencias-digitales"))
+    assert {p.name for p in (laura / "FUENTES-CURSO").iterdir()} == {
+        "01-Diario-individual-MiniJarvis.xlsx",
+        "02-Scrum-equipo-MiniJarvis.xlsx",
+    }
+    assert len(list((laura / "ENTREGAS-MOODLE").glob("*.md"))) == 9
+    assert len(list((laura / "PORTFOLIOS-PERIODICOS").glob("*.md"))) == 6
+    assert len(list(laura.rglob("*Site*"))) == 0
+    for hito in [p for p in laura.iterdir() if p.is_dir() and p.name.startswith("h")]:
+        assert (hito / "README.md").is_file()
+        text = (hito / "README.md").read_text(encoding="utf-8")
+        assert "## Defensa de Laura [INDIVIDUAL]" in text
+        assert "Programación + Entornos" not in text
+
+
+def test_entregas_laura_replican_el_contrato_moodle_minimo():
+    examples = ROOT / "03-EJEMPLOS-LAURA-PRIVADOS/ENTREGAS-MOODLE"
+    h0 = (examples / "H0-entrega.md").read_text(encoding="utf-8")
+    assert "No se entrega GitHub, tag ni Site" in h0
+    for number in range(1, 8):
+        code = f"H{number}"
+        text = (examples / f"{code}-entrega.md").read_text(encoding="utf-8")
+        assert f"`h{number}-entrega`" in text
+        assert "diario y Scrum actualizados" in text
+        assert "Site personal" not in text
+        assert "`PDF adjunto`" not in text
+        assert "`XLSX adjunto`" not in text
+    final = (examples / "HF-entrega.md").read_text(encoding="utf-8")
+    assert "`hf-final`" in final and "Site personal final" in final and "Site de equipo final" in final
+
+
+def test_fuentes_sin_modelo_documental_obsoleto():
+    roots = [
+        ALUMNADO / "00-EMPIEZA-AQUI",
+        ALUMNADO / "03-SESIONES",
+        PROFESORADO / "01-GUIAS-POR-HITO",
+        PROFESORADO / "02-SESIONES",
+    ]
+    forbidden = [
+        "docs/portfolio-h", "plantillas/portfolio-h", "plantillas/defensa-h",
+        "docs/registro-ia", "Plantilla de defensa H1",
+        "documento/captura de ejecución",
+    ]
+    for base in roots:
+        for path in base.rglob("*.md"):
+            text = path.read_text(encoding="utf-8")
+            for marker in forbidden:
+                assert marker not in text, f"{marker}: {path}"
+
+
+def test_guias_github_y_drive_declaran_fuentes_canonicas():
+    start = ALUMNADO / "00-EMPIEZA-AQUI"
+    github = (start / "15-guia-basica-github-alumnado.md").read_text(encoding="utf-8")
+    drive = (start / "14-guia-basica-drive-alumnado.md").read_text(encoding="utf-8")
+    assert "Código, README, historial y versión evaluada" in github
+    assert "GitHub será el lugar principal del código desde H1" in github
+    assert "espacio operativo excepcional" in drive
+    assert "02_EVIDENCIAS_NO_CODE" in drive
+    assert "capturas de ejecución rutinarias" in drive
+    assert "subcarpeta de hito solo cuando exista" in drive

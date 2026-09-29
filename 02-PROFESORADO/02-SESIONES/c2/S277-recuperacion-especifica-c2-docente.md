@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | C2 |
+| Modalidad | Individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear → Comunicar — evaluar y reflexionar |
 | Resultado de hoy | Recuperar evidencias incompletas. |
 | Evidencia mínima | Evidencia de recuperación. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Cada persona realiza la actividad y responde por su propia evidencia.
 
 ## Antes de entrar en clase
 

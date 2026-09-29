@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H3 |
+| Modalidad | Individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Asegurar cobertura completa del Tema 4. |
 | Evidencia mínima | `README, sección `Colección y justificación`` ampliado con array vs lista, uso o descarte de `Set`, y decisión sobre mutabilidad. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Cada persona realiza la actividad y responde por su propia evidencia.
 
 ## Antes de entrar en clase
 

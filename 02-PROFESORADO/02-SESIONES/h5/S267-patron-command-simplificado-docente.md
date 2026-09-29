@@ -5,12 +5,17 @@
 | Dato | Valor |
 |---|---|
 | Hito | H5 |
+| Modalidad | Parejas |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Ejecutar — crear |
 | Resultado de hoy | Relacionar un problema real del diseño de herramientas con la idea de Command y decidir si conviene usarla sin sobreingeniería. |
 | Evidencia mínima | `README, sección `Patrón usado o descartado`` con problema, alternativa simple, decisión, semejanza o diferencia respecto a Command y riesgo de sobreingeniería. |
 
 > El patrón no es una meta ni una palabra que haya que introducir obligatoriamente. La decisión válida puede ser conservar `Tool` y sus clases concretas sin implementar un Command completo.
+
+## Organización de la modalidad
+
+Trabajad por parejas para contrastar el patrón; al terminar, identificad quién integra la decisión acordada en el README del equipo.
 
 ## Antes de entrar en clase
 

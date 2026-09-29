@@ -1576,8 +1576,8 @@ Documentos actualizados:
 ```text
 - docs/comparacion-java-python-h5.md;
 - docs/informe-refactorizacion-h5.md;
-- docs/portfolio-h5.md;
-- docs/registro-ia.md si procede.
+- Site personal de C2, solo al cerrar el checkpoint;
+- diario individual o Scrum si hubo un uso de IA significativo.
 ```
 
 ## Guion docente

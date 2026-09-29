@@ -86,10 +86,10 @@ Documento para uso docente.
 |---|---|---|---|---|
 | README actualizado | | | | |
 | Pruebas de memoria | | | | |
-| Evidencia de ejecución | | | | |
+| Ejecución y pruebas en README | | | | |
 | Incidencia si procede | | | | |
 | Comparación Java ↔ Python | | | | |
-| Portfolio H3 | | | | |
+| Selección C1 en Sites | | | | |
 
 ---
 

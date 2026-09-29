@@ -56,6 +56,54 @@ def zip_errors():
             if bad: errors.append(f'{p.name}: {bad}')
     return errors
 
+def semantic_errors():
+    errors=[]
+    student=ROOT/'01-ALUMNADO/03-SESIONES'
+    teacher=ROOT/'02-PROFESORADO/02-SESIONES'
+    allowed={
+      'Individual','Equipo','Parejas',
+      'Individual → puesta en común en equipo',
+      'Equipo → comprobación individual',
+    }
+    counts=defaultdict(int)
+    sessions=sorted(student.rglob('S*-alumnado.md'))
+    if len(sessions)!=106: errors.append(f'sesiones alumnado: {len(sessions)}')
+    for path in sessions:
+        text=path.read_text(encoding='utf-8')
+        match=re.search(r'\*\*Modalidad:\*\* (.+?)\.',text)
+        if not match or match.group(1) not in allowed:
+            errors.append(f'modalidad inválida: {path.relative_to(ROOT)}')
+            continue
+        mode=match.group(1); counts[mode]+=1
+        relative=path.relative_to(student)
+        pair=teacher/relative.with_name(relative.name.replace('-alumnado.md','-docente.md'))
+        if not pair.is_file() or f'| Modalidad | {mode} |' not in pair.read_text(encoding='utf-8'):
+            errors.append(f'pareja docente incoherente: {path.name}')
+        if '→' in mode and '## Organización del trabajo' not in text:
+            errors.append(f'transición no explicada: {path.name}')
+    expected={'Individual':23,'Equipo':51,'Parejas':2,'Individual → puesta en común en equipo':18,'Equipo → comprobación individual':12}
+    if dict(counts)!=expected: errors.append(f'distribución de modalidades: {dict(counts)}')
+
+    laura=ROOT/'03-EJEMPLOS-LAURA-PRIVADOS'
+    if list(laura.rglob('docs')) or list(laura.rglob('evidencias-digitales')):
+        errors.append('Laura conserva carpetas documentales antiguas')
+    if len(list((laura/'FUENTES-CURSO').glob('*.xlsx')))!=2:
+        errors.append('Laura no tiene exactamente dos fuentes evolutivas')
+    if len(list((laura/'ENTREGAS-MOODLE').glob('*.md')))!=9:
+        errors.append('Laura no tiene nueve entregas Moodle mínimas')
+    if len(list((laura/'PORTFOLIOS-PERIODICOS').glob('*.md')))!=6:
+        errors.append('Laura no limita Sites a C1, C2 y HF')
+
+    forbidden=('docs/portfolio-h','plantillas/portfolio-h','plantillas/defensa-h','docs/registro-ia','documento/captura de ejecución')
+    scopes=(ROOT/'01-ALUMNADO/00-EMPIEZA-AQUI',student,ROOT/'02-PROFESORADO/01-GUIAS-POR-HITO',teacher)
+    for base in scopes:
+        for path in base.rglob('*.md'):
+            text=path.read_text(encoding='utf-8')
+            for marker in forbidden:
+                if marker in text: errors.append(f'{marker}: {path.relative_to(ROOT)}')
+    return errors
+
+
 def main():
     current=curricular_tokens_current(); baseline=curricular_tokens_head()
     report={
@@ -71,6 +119,7 @@ def main():
       'secret_hits': secrets(),
       'zip_errors': zip_errors(),
       'zip_count': len(list(ROOT.glob('Minijarvis-*.zip'))),
+      'semantic_errors': semantic_errors(),
       'private_example_files_in_moodle': [str(p.relative_to(ROOT)) for p in (ROOT/'05-PAQUETE-MOODLE').rglob('*') if p.is_file() and 'laura' in p.name.lower()],
     }
     print(json.dumps(report,ensure_ascii=False,indent=2))
@@ -81,6 +130,7 @@ def main():
     if not report['curricular_tokens_preserved']: failed.append('no se preservó el conjunto RA/CE')
     if report['secret_hits']: failed.append('posibles secretos')
     if report['zip_errors'] or report['zip_count']!=7: failed.append('ZIP inválidos o incompletos')
+    if report['semantic_errors']: failed.append('hay incoherencias semánticas')
     if report['private_example_files_in_moodle']: failed.append('ejemplos privados en Moodle')
     raise SystemExit('; '.join(failed) if failed else 0)
 if __name__=='__main__': main()

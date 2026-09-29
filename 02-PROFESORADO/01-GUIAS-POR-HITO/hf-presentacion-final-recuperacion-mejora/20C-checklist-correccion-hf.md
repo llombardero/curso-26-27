@@ -61,7 +61,7 @@ Documento para uso docente.
 | Reflexión individual | | | | |
 | Evidencias de Programación | | | | |
 | Evidencias de Entornos | | | | |
-| Registro IA final | | | | |
+| Uso significativo de IA trazado en diario o Scrum | | | | |
 
 ---
 

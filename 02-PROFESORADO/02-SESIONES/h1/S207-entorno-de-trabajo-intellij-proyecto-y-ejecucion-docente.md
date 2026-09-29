@@ -5,17 +5,22 @@
 | Dato | Valor |
 |---|---|
 | Hito | H1 |
+| Modalidad | Individual |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Investigar — aprender lo necesario |
 | Resultado de hoy | Crear y ejecutar un proyecto Java mínimo. |
-| Evidencia mínima | Captura o documento de primera ejecución. |
+| Evidencia mínima | Proyecto Java mínimo ejecutado y localizado en el repositorio del equipo. |
 
 > Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+
+## Organización de la modalidad
+
+Cada persona realiza la actividad y responde por su propia evidencia.
 
 ## Antes de entrar en clase
 
 - [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Captura o documento de primera ejecución.
+- [ ] Comprobar que la evidencia mínima que se pedirá es: Proyecto Java mínimo ejecutado y localizado en el repositorio del equipo.
 - [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
 
 ## Material imprescindible
@@ -49,7 +54,7 @@ Crear proyecto y ejecutar `System.out.println("Hola")`.
 
 Cada alumno crea y ejecuta su primer proyecto.
 
-Producto o evidencia que debe quedar: **Captura o documento de primera ejecución.**
+Producto o evidencia que debe quedar: **Proyecto Java mínimo ejecutado y localizado en el repositorio del equipo.**
 
 ## Qué observar mientras trabajan
 
