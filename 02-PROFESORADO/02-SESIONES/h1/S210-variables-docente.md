@@ -1,88 +1,225 @@
-# Sesión 210 — Guía operativa del profesorado
-
-## Variables
+# S210 - Planificar - Variables
 
 | Dato | Valor |
 |---|---|
-| Hito | H1 |
-| Modalidad | Individual |
+| Hito | H1 — Primer asistente ejecutable |
 | Duración prevista | 45 minutos |
 | Fase HEXA del hito | Planificar — organizar el trabajo |
-| Resultado de hoy | Guardar datos en variables. |
-| Evidencia mínima | Código con variable usada correctamente. |
 
-> Esta es una guía de uso inmediato. Incluye únicamente lo necesario para preparar, impartir y cerrar esta sesión.
+> Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`. Selecciona y desarrolla los conceptos, ejemplos, actividades y evidencias útiles para esta sesión.
 
-## Organización de la modalidad
+## Qué vas a aprender
 
-Cada persona realiza la actividad y responde por su propia evidencia.
+Al terminar, debes planificar datos: qué se guarda, con qué tipo, con qué nombre y dónde se usa.
 
-## Antes de entrar en clase
+## Ideas y ejemplos
 
-- [ ] Abrir o probar antes de clase el entorno y el proyecto que utilizará el alumnado; preparar una alternativa en pareja si falla un equipo.
-- [ ] Comprobar que la evidencia mínima que se pedirá es: Código con variable usada correctamente.
-- [ ] Dejar visible el objetivo y reservar los últimos 8 minutos para comprobar y cerrar.
+Úsala antes de la tabla de datos y antes de implementar variables.
 
-## Material imprescindible
+Una variable es una zona de memoria identificada por un nombre. El tipo indica qué clase de dato puede guardar. El valor puede cambiar. La variable no es lo mismo que su valor actual.
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
+Empieza con el cambio de valor:
 
-## Qué debes explicar
+```java
+int horasEstudio = 4;
+horasEstudio = 5;
+```
 
-Tipo, nombre, valor y uso de una variable `String`.
+Di:
 
-Guion breve sugerido:
+La variable permanece; lo que cambia es el valor guardado. Primero `horasEstudio` vale 4 y después vale 5.
 
-> Hoy necesitamos comprender y practicar lo justo para producir una evidencia verificable. Primero observaremos un ejemplo, después trabajaréis y al final cada persona deberá poder explicar qué hizo y cómo sabe que funciona.
+Contrasta variable y valor:
 
-## Secuencia de aula
+```java
+String nombreUsuario = "Laura";
+```
 
-| Tiempo | Acción |
-|---|---|
-| 0–5 min | Presentar objetivo, producto y evidencia de hoy. |
-| 5–13 min | Explicación breve: Una variable guarda un dato que puede usarse varias veces. |
-| 13–18 min | Demostración o ejemplo: Cambia el valor de `userName` y muestra cómo afecta a varios mensajes. |
-| 18–35 min | Trabajo del alumnado: Crear variable `userName` con un valor fijo y usarla en varios mensajes. |
-| 35–40 min | Comprobar la evidencia con una explicación o prueba breve. |
-| 40–45 min | Cierre: Pregunta: ¿qué cambia si modifico el valor de la variable? |
+Pregunta:
 
-## Ejemplo o demostración preparada
+Qué es `nombreUsuario` y qué es `"Laura"`.
 
-Cambia el valor de `userName` y muestra cómo afecta a varios mensajes.
+Muestra dos variables con el mismo valor:
 
-## Consigna que se entrega al alumnado
+```java
+int horasEstudio = 4;
+int horasPractica = 4;
+```
 
-Crear y usar `userName`.
+Pregunta:
 
-Producto o evidencia que debe quedar: **Código con variable usada correctamente.**
+Hay una variable o dos. Qué pasaría si después cambia solo `horasEstudio`.
 
-## Qué observar mientras trabajan
+Traza una variable que cambia:
 
-- [ ] Pueden explicar qué están intentando conseguir.
-- [ ] Registran una decisión, prueba o bloqueo; no muestran solo el resultado final.
-- [ ] Todas las personas pueden describir su aportación.
-- [ ] Comprueban el producto con un criterio observable.
-- [ ] No usan datos personales, credenciales ni respuestas de ejemplo antes del intento propio.
+```java
+int tareas = 2;
+System.out.println(tareas);
+tareas = 3;
+System.out.println(tareas);
+```
 
-## Si aparece un bloqueo
+Pregunta:
 
-No entregues la solución completa. Pide que localicen el error, predigan el resultado y hagan una prueba mínima. Solo después muestra una pista concreta.
+Predice la primera y la segunda salida.
 
-## Comprobación final
+Presenta cinco tipos de uso inmediato:
 
-Pregunta de control: **¿Qué partes tiene una declaración de variable?**
+```java
+String nombreUsuario = "Laura";
+int horasEstudio = 4;
+double notaMedia = 7.5;
+boolean objetivoAlcanzado = true;
+char inicial = 'L';
+```
 
-Criterio para cerrar la sesión:
+```text
+Nombre -> String
+Horas de estudio -> int
+Nota media -> double
+Objetivo alcanzado -> boolean
+Inicial -> char
+```
 
-- [ ] Existe la evidencia mínima.
-- [ ] Al menos una persona puede demostrarla y otra puede explicarla.
-- [ ] El bloqueo pendiente queda escrito con un siguiente paso concreto.
+### Mapa mínimo de tipos de Java
 
-## Al terminar
+Java ofrece más tipos de los que necesitamos usar ahora:
 
-Anota solo lo operativo:
+```text
+Enteros   -> byte, short, int, long
+Decimales -> float, double
+Carácter  -> char
+Lógico    -> boolean
+```
 
-- alumnado que necesita apoyo en la siguiente sesión;
-- evidencia pendiente;
-- error común que conviene retomar;
-- ajuste de tiempo necesario.
+En H1 utilizaremos principalmente `int`, `double`, `char` y `boolean`. No es necesario memorizar todavía sus rangos; sí reconocer qué familia representa cada dato y elegir un tipo compatible con las operaciones previstas.
+
+### Tipos primitivos y tipo de referencia
+
+```text
+int, double, char, boolean -> tipos primitivos
+String                     -> tipo de referencia; String es una clase
+```
+
+En H1 basta con esta distinción inicial. No necesitamos adelantar memoria, identidad de objetos ni constructores para usar correctamente texto, `String` y `Scanner`.
+
+Pregunta de criterio:
+
+Un número de teléfono contiene dígitos. Lo guardarías como número si no vas a hacer cálculos matemáticos con él.
+
+Trabaja renombrado:
+
+```java
+int x = 4;
+// mejor:
+int horasEstudio = 4;
+
+String s = "MiniJarvis";
+// mejor:
+String nombreAsistente = "MiniJarvis";
+
+boolean b = true;
+// mejor:
+boolean objetivoAlcanzado = true;
+
+double n = 7.5;
+// mejor:
+double notaMedia = 7.5;
+```
+
+Dinámica rápida:
+
+Muestro solo el nombre de la variable. Decid qué dato esperáis encontrar. Si nadie puede responder, el nombre debe mejorar.
+
+Por último, separa declarar, inicializar y asignar:
+
+```java
+int horasEstudio;
+```
+
+```java
+int horasEstudio = 4;
+```
+
+```text
+int horasEstudio = 4
+tipo nombre valor inicial
+```
+
+```java
+horasEstudio = 5;
+```
+
+```java
+int horasEstudio;
+horasEstudio = 4;
+System.out.println(horasEstudio);
+horasEstudio = 5;
+System.out.println(horasEstudio);
+```
+
+Aclara:
+
+No se vuelve a escribir el tipo si se modifica la variable existente.
+
+Y corta esta confusión:
+
+```java
+int tareas = 2;
+tareas = 5;
+```
+
+Di:
+
+Esto no significa que 2 sea igual a 5. Significa: guarda ahora 5 en `tareas`.
+
+Error frecuente que debes cortar:
+
+`String` no sirve para todo. Elegimos el tipo según lo que necesitamos representar y hacer con el dato.
+
+Vocabulario imprescindible:
+
+- **Declaración:** introduce el tipo y el nombre, por ejemplo `int horasEstudio;`.
+- **Inicialización:** declara y proporciona el primer valor, por ejemplo `int horasEstudio = 4;`.
+- **Asignación posterior:** cambia el valor sin repetir el tipo, por ejemplo `horasEstudio = 5;`.
+- **lowerCamelCase:** convención para nombres como `nombreUsuario` o `horasEstudio`.
+
+## Actividad de la sesión
+
+Antes del código, haced la tabla de datos. Después implementad al menos tres variables, mostradlas por consola, cambiad una y volved a mostrarla para comprobar que entendéis la asignación.
+
+## Evidencia de la sesión
+
+Hoy sí quiero una evidencia individual: cada persona debe poder señalar una variable propia y explicar tipo, nombre, valor inicial y una asignación posterior.
+
+**Dónde y cómo conservar la evidencia:**
+
+- GitHub: código con variables usadas.
+- Diario individual: fila S210 con una variable explicada y prueba de salida.
+- Moodle: no se entrega todavía.
+
+Qué revisar:
+
+- Que no usen `x`, `dato1` o nombres sin significado.
+- Que no repitan valores fijos por todas partes.
+- Que sepan distinguir variable y valor.
+
+Modelo de uso del plan de datos:
+
+```text
+Dato: nombre ficticio
+Tipo: String
+Nombre: nombreUsuario
+Cambia: sí, lo escribe la persona usuaria
+Uso: personalizar el saludo
+
+Dato: horas de estudio
+Tipo: int
+Nombre: horasEstudio
+Cambia: sí
+Uso: calcular minutos y decidir si alcanza el objetivo
+```
+
+## Comprueba lo aprendido
+
+Cerramos Planificar con un plan de datos. La próxima sesión entraremos más fuerte en Ejecutar: constantes, literales y operaciones.
