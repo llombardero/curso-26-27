@@ -60,6 +60,18 @@ COLORS = {
 class TimelineBlock:
     time: str
     action: str
+    modality: str = ""
+    slide_reference: str = ""
+    details: dict[str, str] = field(default_factory=dict)
+
+
+@dataclass
+class SemanticBlock:
+    heading: str
+    content: str
+    source: str = "teacher"
+    role: str = "core"
+    signals: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -84,6 +96,8 @@ class Session:
     close_question: str
     teacher_source: Path
     student_source: Path
+    semantic_blocks: dict[str, list[SemanticBlock]] = field(default_factory=dict)
+    field_sources: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass
@@ -297,16 +311,168 @@ def value_for(meta: dict[str, str], *keys: str) -> str:
     return ""
 
 
+SEMANTIC_CATEGORIES = (
+    "concepts",
+    "explanations",
+    "examples",
+    "counterexamples",
+    "questions",
+    "predictions",
+    "common_errors",
+    "scaffolding",
+    "student_activity",
+    "individual_check",
+    "evidence",
+    "scrum",
+    "review",
+    "retrospective",
+    "defense",
+    "moodle_delivery",
+    "security",
+    "closure",
+    "other",
+)
+
+
+def primary_session_title(text: str, fallback: str) -> tuple[str, str]:
+    """Obtiene el tema canónico y conserva compatibilidad con guías antiguas."""
+    match = re.search(r"^#\s+S\d{3}\s*[—-]\s*(.+?)\s*$", text, flags=re.MULTILINE)
+    if match:
+        return clean(match.group(1)), "teacher"
+    headings = re.findall(r"^##\s+(.+)$", text, flags=re.MULTILINE)
+    if headings:
+        return clean(headings[0]), "teacher"
+    return fallback, "generated_default"
+
+
+def heading_blocks(text: str) -> list[tuple[str, str]]:
+    """Conserva todos los apartados docentes, incluidos los no clasificados."""
+    headings = list(re.finditer(r"^(#{2,6})\s+(.+?)\s*$", text, flags=re.MULTILINE))
+    blocks: list[tuple[str, str]] = []
+    for index, match in enumerate(headings):
+        level = len(match.group(1))
+        end = len(text)
+        for candidate in headings[index + 1 :]:
+            if len(candidate.group(1)) <= level:
+                end = candidate.start()
+                break
+        blocks.append((clean(match.group(2)), text[match.end() : end].strip()))
+    return blocks
+
+
+def semantic_role(heading: str, content: str) -> tuple[str, list[str]]:
+    lowered = f"{heading}\n{content}".lower()
+    signals = [
+        signal
+        for signal in (
+            "sin profundizar",
+            "para leer",
+            "no para complicar",
+            "elección limitada",
+            "de forma introductoria",
+            "basta con reconocer",
+        )
+        if signal in lowered
+    ]
+    return ("recognition" if signals else "core"), signals
+
+
+def semantic_categories(heading: str, content: str) -> list[str]:
+    """Clasifica por intención sin descartar encabezados desconocidos."""
+    title = heading.lower()
+    combined = f"{heading}\n{content}".lower()
+    categories: list[str] = []
+    rules = (
+        ("retrospective", r"retrospectiva"),
+        ("review", r"\breview\b"),
+        ("moodle_delivery", r"moodle|entrega oficial"),
+        ("defense", r"defensa|microdefensa|ensayo y revisión por parejas"),
+        ("questions", r"pregunta|comprueba lo aprendido|banco de preguntas"),
+        ("predictions", r"predic|antes de ejecutar"),
+        ("common_errors", r"errores? frecuentes|error de compilación|error de ejecución"),
+        ("scaffolding", r"andamiaje|bloqueo|recuperación"),
+        ("scrum", r"scrum"),
+        ("security", r"seguridad|uso de ia|datos personales|credenciales"),
+        ("individual_check", r"comprobación individual|reflexión individual"),
+        ("evidence", r"evidencia|observación docente|criterios? de cierre"),
+        ("student_activity", r"actividad|secuencia de trabajo|práctica|trabajo del alumnado|consolidación"),
+        ("counterexamples", r"contraejemplo|contraste|no funciona|incorrect"),
+        ("examples", r"ejemplo|demostración|modelo pedagógico"),
+        ("closure", r"cierre|al terminar|transición a"),
+        (
+            "concepts",
+            r"ideas y ejemplos|alcance técnico|calidad de un primer programa|qué vas a aprender|"
+            r"comparacion|boolean|operadores?|if/else|anidad|ternario|scanner|parse|casting|"
+            r"readme|prueba reproducible|reglas|distinción|qué debes explicar",
+        ),
+        ("explanations", r"finalidad|apertura docente|qué debe comunicar|qué convierte|arquitectura"),
+    )
+    for category, pattern in rules:
+        if re.search(pattern, title, flags=re.IGNORECASE):
+            categories.append(category)
+    if "moodle" in combined and "moodle_delivery" not in categories:
+        categories.append("moodle_delivery")
+    if "scrum" in combined and "scrum" not in categories:
+        categories.append("scrum")
+    if not categories:
+        categories.append("other")
+    return categories
+
+
+def parse_semantic_blocks(teacher_text: str, student_text: str) -> dict[str, list[SemanticBlock]]:
+    result = {category: [] for category in SEMANTIC_CATEGORIES}
+    for heading, content in heading_blocks(teacher_text):
+        role, signals = semantic_role(heading, content)
+        block = SemanticBlock(heading, content, "teacher", role, signals)
+        for category in semantic_categories(heading, content):
+            result[category].append(block)
+    if not result["security"]:
+        student_security = section(student_text, r"Seguridad y uso de IA")
+        if student_security:
+            result["security"].append(
+                SemanticBlock("Seguridad y uso de IA", student_security, "student_fallback")
+            )
+    return result
+
+
+def first_teacher_statement(text: str, title_pattern: str) -> str:
+    lines = meaningful_lines(section(text, title_pattern), 1)
+    return lines[0] if lines else ""
+
+
 def parse_markdown_timeline(text: str) -> list[TimelineBlock]:
-    body = section(text, r"Secuencia de aula")
+    body = section(
+        text,
+        r"(?:Secuencia de aula|Temporalización orientativa|Organización simultánea de los 45 minutos)",
+    )
     timeline: list[TimelineBlock] = []
     if body:
+        headers: list[str] = []
         for line in body.splitlines():
             if not line.strip().startswith("|"):
                 continue
             cells = [clean(cell) for cell in line.strip().strip("|").split("|")]
-            if len(cells) >= 2 and re.search(r"\d", cells[0]) and not re.fullmatch(r"[-: ]+", cells[0]):
-                timeline.append(TimelineBlock(cells[0], cells[1]))
+            if len(cells) < 2 or any(re.fullmatch(r"[-: ]+", cell) for cell in cells):
+                continue
+            if not headers and not re.search(r"\d", cells[0]):
+                headers = cells
+                continue
+            if not re.search(r"\d", cells[0]):
+                continue
+            details = {
+                (headers[index] if index < len(headers) else f"columna_{index + 1}"): value
+                for index, value in enumerate(cells[2:], start=2)
+                if value
+            }
+            modality = next(
+                (value for key, value in details.items() if re.search(r"modalidad|agrupamiento", key, re.I)),
+                "",
+            )
+            slide_reference = next(
+                (value for key, value in details.items() if re.search(r"diapositiva|slide", key, re.I)),
+                "",
+            )
+            timeline.append(TimelineBlock(cells[0], cells[1], modality, slide_reference, details))
     if timeline:
         return timeline
 
@@ -347,11 +513,14 @@ def parse_markdown_timeline(text: str) -> list[TimelineBlock]:
     return timeline
 
 
-def extract_question(teacher_text: str, student_text: str) -> str:
-    for source, heading in (
-        (student_text, r"Cierre(?: individual)?"),
-        (teacher_text, r"Comprobación final"),
-    ):
+def extract_question(teacher_text: str, student_text: str, teacher_first: bool = False) -> str:
+    teacher_candidate = (
+        teacher_text,
+        r"(?:Comprobación final|Comprueba lo aprendido|Comprobación y cierre|Cierre(?: de H1)?)",
+    )
+    student_candidate = (student_text, r"Cierre(?: individual)?")
+    candidates = (teacher_candidate, student_candidate) if teacher_first else (student_candidate, teacher_candidate)
+    for source, heading in candidates:
         body = section(source, heading)
         bold = re.search(r"\*\*(.+?)\*\*", body, flags=re.DOTALL)
         if bold:
@@ -386,15 +555,30 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
 
     number_match = re.search(r"S(\d{3})", teacher_path.name)
     number = number_match.group(1) if number_match else "000"
-    headings = re.findall(r"^##\s+(.+)$", teacher, flags=re.MULTILINE)
-    topic = clean(headings[0]) if headings else teacher_path.stem
+    topic, topic_source = primary_session_title(teacher, teacher_path.stem)
+    semantic_blocks = parse_semantic_blocks(teacher, student)
+    field_sources: dict[str, str] = {"topic": topic_source}
 
     objective = value_for(meta, "Producto principal", "Resultado observable", "Resultado de hoy")
     if not objective:
+        objective = first_teacher_statement(teacher, r"(?:Finalidad de la sesión|Finalidad del cierre|Qué vas a aprender)")
+    if objective:
+        field_sources["objective"] = "teacher"
+    elif student_objective:
         objective = student_objective
+        field_sources["objective"] = "student_fallback"
+    else:
+        field_sources["objective"] = "generated_default"
     evidence = value_for(meta, "Evidencia individual", "Evidencia mínima")
     if not evidence:
+        evidence = first_teacher_statement(teacher, r"(?:Evidencia que permanece|Evidencia de cierre|Al terminar)")
+    if evidence:
+        field_sources["evidence"] = "teacher"
+    elif student_evidence:
         evidence = student_evidence
+        field_sources["evidence"] = "student_fallback"
+    else:
+        field_sources["evidence"] = "generated_default"
 
     duration = value_for(meta, "Duración", "Duración prevista")
     hito = value_for(meta, "Hito") or teacher_path.parent.name.upper()
@@ -405,12 +589,29 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
         "Momento HEXA",
         "Momento HEXA del hito",
     )
-    grouping = value_for(meta, "Modalidad") or value_for(meta, "Agrupamiento")
+    grouping = value_for(
+        meta,
+        "Modalidad",
+        "Modalidad de trabajo",
+        "Modalidad combinada",
+        "Agrupamiento",
+    )
+    field_sources.update(
+        {
+            "duration": "teacher" if duration else "generated_default",
+            "hito": "teacher" if value_for(meta, "Hito") else "generated_default",
+            "moment": "teacher" if moment else "generated_default",
+            "grouping": "teacher" if grouping else "generated_default",
+        }
+    )
 
     materials_body = section(teacher, r"Material imprescindible") or section(teacher, r"Material", levels=(3,))
     materials = list_items(materials_body)
     if not materials:
         materials = list_items(section(student, r"Material(?: que necesitas| disponible)"))
+    field_sources["materials"] = (
+        "teacher" if materials_body else "student_fallback" if materials else "generated_default"
+    )
 
     key_bodies: list[str] = []
     for key_heading in (
@@ -424,50 +625,92 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
         body = section(teacher, key_heading)
         if body and body not in key_bodies:
             key_bodies.append(body)
+    if not key_bodies:
+        key_bodies = [block.content for block in semantic_blocks["concepts"] if block.content]
     key_concepts = semantic_items("\n\n".join(key_bodies), 24)
+    field_sources["key_concepts"] = "teacher" if key_concepts else "generated_default"
 
     example_body = section(teacher, r"Ejemplo o demostración preparada")
     if not example_body:
         example_body = section(teacher, r"Preparación de la pizarra", levels=(3,))
+    if not example_body:
+        example_body = "\n\n".join(block.content for block in semantic_blocks["examples"])
     example = semantic_items(example_body, 8)
+    field_sources["example"] = "teacher" if example else "generated_default"
 
     timeline = parse_markdown_timeline(teacher)
+    field_sources["timeline"] = "teacher" if timeline else "generated_default"
 
     activity_bodies = [section(teacher, r"Consigna que se entrega al alumnado")]
-    for activity_heading in (
-        r"Trabajo de hoy",
-        r"Acuerdo de funciones",
-        r"Regla de participación",
-        r"Reto que prepararemos",
-        r"Backlog inicial de la torre",
-        r"Definición de terminado y bloqueo",
-        r"Defensa breve del diseño del equipo",
-        r"Cierre individual",
-    ):
-        body = section(student, activity_heading)
-        if body:
-            activity_bodies.append(body)
+    if not any(activity_bodies):
+        activity_bodies.extend(block.content for block in semantic_blocks["student_activity"])
+    teacher_activity = any(activity_bodies)
+    student_activity = False
+    if not teacher_activity:
+        for activity_heading in (
+            r"Trabajo de hoy",
+            r"Acuerdo de funciones",
+            r"Regla de participación",
+            r"Reto que prepararemos",
+            r"Backlog inicial de la torre",
+            r"Definición de terminado y bloqueo",
+            r"Defensa breve del diseño del equipo",
+            r"Cierre individual",
+        ):
+            body = section(student, activity_heading)
+            if body:
+                activity_bodies.append(body)
+                student_activity = True
     activity = semantic_items("\n\n".join(body for body in activity_bodies if body), 36)
     if not activity:
         activity = [block.action for block in timeline if re.search(r"equipo|completar|crear|decidir|trabajo|backlog|defensa", block.action, re.I)]
+    field_sources["activity"] = (
+        "teacher" if teacher_activity else "student_fallback" if student_activity else "generated_default"
+    )
 
-    observe = list_items(section(teacher, r"Qué observar mientras trabajan"))
+    observe = list_items(
+        section(teacher, r"(?:Qué observar mientras trabajan|Observación docente)")
+    )
     checklist = list_items(section(teacher, r"Criterios? (?:de cierre|para considerar cerrada la sesión)"))
     if not checklist:
         checklist = list_items(section(student, r"Evidencia mínima antes de salir"))
     if not checklist:
         checklist = observe
+    teacher_checklist = bool(
+        observe
+        or list_items(section(teacher, r"Criterios? (?:de cierre|para considerar cerrada la sesión)"))
+    )
+    field_sources["checklist"] = (
+        "teacher" if teacher_checklist else "student_fallback" if checklist else "generated_default"
+    )
 
-    safety = list_items(section(student, r"Seguridad y uso de IA"))
+    teacher_safety = "\n\n".join(block.content for block in semantic_blocks["security"] if block.source == "teacher")
+    safety = list_items(teacher_safety)
+    if not safety:
+        safety = list_items(section(student, r"Seguridad y uso de IA"))
+    student_safety = bool(safety)
     if not safety:
         safety = [item for item in materials if re.search(r"datos|contraseñas|tokens|claves|personales", item, re.I)]
     if not safety:
         candidate_rules = list_items(section(student, r"Reglas de esta sesión"))
         safety = [item for item in candidate_rules if re.search(r"publicar|puntuaciones|datos|consentimiento|particip", item, re.I)]
+    field_sources["safety"] = (
+        "teacher" if teacher_safety else "student_fallback" if student_safety else "generated_default"
+    )
 
-    closure_body = section(teacher, r"Comprobación final") or section(teacher, r"Criterios? de cierre")
+    closure_body = (
+        section(teacher, r"(?:Comprobación final|Comprueba lo aprendido|Comprobación y cierre|Cierre(?: de H1)?)")
+        or section(teacher, r"Criterios? de cierre")
+        or "\n\n".join(block.content for block in semantic_blocks["closure"])
+    )
     closure = meaningful_lines(closure_body, 10)
-    close_question = extract_question(teacher, student)
+    teacher_first = teacher_path.parent.name == "h1"
+    close_question = extract_question(teacher, student, teacher_first=teacher_first)
+    field_sources["closure"] = "teacher" if closure else "generated_default"
+    teacher_question = extract_question(teacher, "", teacher_first=True)
+    field_sources["close_question"] = (
+        "teacher" if teacher_question else "student_fallback" if close_question else "generated_default"
+    )
 
     return Session(
         number=number,
@@ -490,6 +733,8 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
         close_question=close_question,
         teacher_source=teacher_path,
         student_source=student_path,
+        semantic_blocks=semantic_blocks,
+        field_sources=field_sources,
     )
 
 
