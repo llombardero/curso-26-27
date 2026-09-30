@@ -24,10 +24,10 @@ Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra
 | Fase | Sesiones de referencia | Puerta de salida |
 |---|---|---|
 | 1 — Activar | S206 | Reto comprendido y criterios visibles. |
-| 2 — Investigar | S207–S208 y S212 | Conocimientos necesarios contrastados. |
+| 2 — Investigar | S207–S208 | Conocimientos necesarios contrastados. |
 | 3 — Idear | S209 | Solución seleccionada y argumentada. |
 | 4 — Planificar | S210 | Plan, responsabilidades y comprobaciones visibles. |
-| 5 — Ejecutar | S211 y S213 | Producto construido, probado y mejorado. |
+| 5 — Ejecutar | S211–S212–S213 | Producto construido, probado y mejorado. |
 | 6 — Comunicar | S214–S215 | Defensa, evaluación, reflexión y mejora. |
 
 **Expediente HEXA mínimo del hito:** ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa.

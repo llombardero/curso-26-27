@@ -7,7 +7,17 @@
 | Fase HEXA del hito | Planificar — organizar el trabajo |
 | Modalidad de trabajo | **INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL** |
 
-> Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`. Selecciona y desarrolla los conceptos, ejemplos, actividades y evidencias útiles para esta sesión.
+## Temporalización orientativa
+
+| Tiempo | Acción |
+|---|---|
+| 0–5 min | Presentar la finalidad: planificar datos antes de código. |
+| 5–15 min | Explicar variable frente a valor, tipos de uso y renombrado. |
+| 15–23 min | Declarar, inicializar y asignar; vocabulario imprescindible. |
+| 23–31 min | Actividad individual: comprender, predecir y practicar variables. |
+| 31–37 min | Contrastar y planificar en equipo: tabla de datos acordada. |
+| 37–41 min | Integrar variables en MiniJarvis y ejecutar con reasignación. |
+| 41–45 min | Comprobar comprensión individual y cerrar. |
 
 ## Qué vas a aprender
 
