@@ -490,3 +490,186 @@ def test_all_special_h0_guides_have_real_timeline_and_concepts(generator):
         assert session.timeline, number
         assert session.key_concepts, number
         assert generator.validate_session(session).errors == [], number
+
+
+def test_clean_preserves_java_operators_and_removes_real_html(generator):
+    text = "2 < 1 -> false\n5 > 3 -> true\nhoras >= 4\n5 != 4"
+    assert generator.clean(text) == "2 < 1 -> false 5 > 3 -> true horas >= 4 5 != 4"
+    assert generator.clean('<strong>Java</strong><br /> <span class="nota">dato</span>') == "Java dato"
+
+
+def test_timeline_respects_markdown_pipe_escaping(generator):
+    text = "## Temporalización orientativa\n\n| Tiempo | Acción | Modalidad |\n|---|---|---|\n| 0–5 min | Traducir &&, \\|\\| y ! entre lenguaje natural y Java | INDIVIDUAL |"
+    block = generator.parse_markdown_timeline(text)[0]
+    assert block.action == "Traducir &&, || y ! entre lenguaje natural y Java"
+    assert block.details == {"Modalidad": "INDIVIDUAL"}
+    assert block.modality == "INDIVIDUAL"
+    assert generator.markdown_table_cells(r"| A | B \| C | D |") == ["A", "B | C", "D"]
+    assert generator.markdown_table_cells(r"| A || B |") == ["A", "", "B"]
+    assert generator.markdown_table_cells(r"| A \|\| B |") == ["A || B"]
+    assert generator.markdown_table_cells(r"| A \\| B |") == ["A \\", "B"]
+
+
+@pytest.mark.parametrize("fence", ["```", "```markdown", "```java", "~~~", "~~~~markdown"])
+def test_headings_ignore_fenced_content_but_keep_the_complete_example(generator, fence):
+    closing = fence[:len(fence) - len(fence.lstrip("`~"))]
+    text = f"## Modelo de README\n\n{fence}\n# MiniJarvis\n## Ejecución\n## Pruebas\n{closing}\n\n## Prueba externa\nActúa."
+    blocks = generator.heading_blocks(text)
+    assert [heading for heading, _ in blocks] == ["Modelo de README", "Prueba externa"]
+    assert "## Pruebas" in blocks[0][1]
+    assert "## Pruebas" in generator.section(text, "Modelo de README")
+
+
+def unit_text(unit):
+    return "\n".join([*unit.visible_content, *unit.presenter_content])
+
+
+def test_s212_units_preserve_numeric_chains_and_local_recognition(generator):
+    session = generator.parse_session(*source_pair("212"))
+    units = generator.build_pedagogical_units(session)
+    for method, target in (("Integer.parseInt", "int horas"), ("Double.parseDouble", "double nota")):
+        matching = [unit for unit in units if method in unit_text(unit) and target in unit_text(unit)]
+        assert matching
+        assert any(unit.role == "core" and "String" in "\n".join(unit.visible_content) for unit in matching)
+    boolean = [unit for unit in units if "Boolean.parseBoolean" in unit_text(unit)]
+    assert boolean and all(unit.role == "recognition" for unit in boolean)
+    assert any("(int) valor" in unit_text(unit) and "3.999" in unit_text(unit)
+               and "predicción" in unit_text(unit) and "no redondea" in unit_text(unit)
+               and "pierde" in unit_text(unit) for unit in units)
+    assert all(unit.source_refs for unit in units)
+    assert all(unit.items is unit.visible_content for unit in units)
+
+
+def test_s213_units_preserve_branches_predictions_and_recognition(generator):
+    units = generator.build_pedagogical_units(generator.parse_session(*source_pair("213")))
+    visible = "\n".join(text for unit in units for text in unit.visible_content)
+    assert "2 < 1 -> false" in visible
+    assert all(operator in visible for operator in ("&&", "||", "!"))
+    branch_units = [unit for unit in units if "if (horas >= 4)" in unit_text(unit) and "else" in unit_text(unit)]
+    assert any(unit.relations.get("branches") == ("condition", "true", "false") for unit in branch_units)
+    assert any("prediction_cycle" in unit.relations for unit in branch_units)
+    for heading in ("Lectura introductoria de decisiones anidadas", "Operador ternario como elección sencilla"):
+        assert any(unit.role == "recognition" and unit.visible_content and unit.source_refs[0].heading == heading for unit in units)
+    question_unit = next(unit for unit in units if unit.source_refs[0].heading == "Comprueba lo aprendido")
+    assert "¿Qué condición se evalúa" in "\n".join(question_unit.visible_content)
+    assert question_unit.relations.get("question_context")
+
+
+def test_s214_units_preserve_readme_and_complete_reproducible_test(generator):
+    session = generator.parse_session(*source_pair("214"))
+    units = generator.build_pedagogical_units(session)
+    assert not any(unit.source_refs[0].heading in {"Ejecución", "Pruebas", "Límites de H1", "Cómo ejecutar"} for unit in units)
+    readme = [unit for unit in units if unit.source_refs[0].heading == "Modelo pedagógico de README"]
+    assert len(readme) == 1 and "## Cómo ejecutar" in unit_text(readme[0])
+    tests = [unit for unit in units if "Entrada usada: Laura" in unit_text(unit)]
+    assert len(tests) == 1
+    assert all(token in unit_text(tests[0]) for token in ("Salida esperada:", "Salida obtenida:", "Demuestra:"))
+    assert tests[0].relations.get("reproducible_test") == ("input", "expected", "obtained", "meaning")
+
+
+def test_s215_units_preserve_simultaneous_timeline(generator):
+    session = generator.parse_session(*source_pair("215"))
+    units = generator.build_pedagogical_units(session)
+    for index, block in enumerate(session.timeline):
+        matching = [unit for unit in units if index in unit.timeline_refs and unit.function == "timeline"]
+        assert len(matching) == 1
+        unit = matching[0]
+        assert block.action in unit_text(unit)
+        assert all(value in unit_text(unit) for value in block.details.values())
+        assert "simultaneous" in unit.relations
+        assert unit.modality == session.grouping
+
+
+def test_units_deduplicate_parent_child_and_associate_support_without_projecting_other(generator):
+    session = generator.parse_session(*source_pair("212"))
+    text = """## Ideas y ejemplos
+### Scanner
+Pide un dato ficticio.
+
+```java
+Scanner teclado = new Scanner(System.in);
+
+String nombre = teclado.nextLine();
+```
+
+¿Dónde almacenas lo leído con Scanner?
+
+## Errores frecuentes
+No crear otro Scanner para cada lectura.
+
+## Andamiaje
+Pregunta dónde se reutiliza Scanner.
+
+## Nota desconocida
+No hay entrega Moodle. No eliminar esta condición.
+"""
+    session.semantic_blocks = generator.parse_semantic_blocks(text, "")
+    session.timeline = []
+    units = generator.build_pedagogical_units(session)
+    learning = next(unit for unit in units if unit.source_refs[0].heading == "Scanner")
+    assert sum(unit_text(unit).count("Scanner teclado =") for unit in units) == 1
+    assert "Scanner teclado = new Scanner(System.in);\n\nString nombre = teclado.nextLine();" in unit_text(learning)
+    assert any(ref.heading == "Ideas y ejemplos" for ref in learning.source_refs)
+    for function in ("common_error", "scaffolding"):
+        support = next(unit for unit in units if unit.function == function)
+        assert not support.visible_content and support.presenter_content
+        assert learning.unit_id in support.relations["supports"]
+    other = next(unit for unit in units if unit.source_refs[0].heading == "Nota desconocida")
+    assert other.role == "unknown" and not other.visible_content
+    assert "No hay entrega Moodle" in unit_text(other)
+
+
+def test_s215_full_question_bank_is_presenter_content(generator):
+    units = generator.build_pedagogical_units(generator.parse_session(*source_pair("215")))
+    bank = [unit for unit in units if any(ref.heading == "Banco de preguntas para seleccionar" for ref in unit.source_refs)]
+    assert bank and all(unit.presenter_content and not unit.visible_content for unit in bank)
+    assert all(token in "\n".join(unit_text(unit) for unit in bank) for token in ("main", "nextLine", "constante", "rama"))
+
+
+def test_mixed_learning_outcome_has_local_roles(generator):
+    session = generator.parse_session(*source_pair("213"))
+    units = generator.build_pedagogical_units(session)
+    outcome = [unit for unit in units if unit.source_refs[0].heading == "Qué vas a aprender"]
+    assert any(unit.role == "core" and "if/else" in unit_text(unit) for unit in outcome)
+    assert any(unit.role == "recognition" and "ternario" in unit_text(unit) for unit in outcome)
+
+
+def test_units_preserve_all_session_code_and_timeline_without_slide_planning(generator):
+    import re
+
+    sessions = generator.collect_sessions(None)
+    assert len(sessions) == 106
+    for session in sessions:
+        units = generator.build_pedagogical_units(session)
+        assert units, session.number
+        assert all(unit.source_refs and unit.modality == session.grouping
+                   for unit in units if unit.function != "timeline"), session.number
+        content = "\n".join(unit_text(unit) for unit in units)
+        teacher = session.teacher_source.read_text(encoding="utf-8")
+        codes = re.findall(r"(?ms)^ {0,3}(`{3,}|~{3,})[^\n]*\n(.*?)^ {0,3}\1[ \t]*$", teacher)
+        for _, code in codes:
+            assert code.strip() in content, (session.number, code)
+        structural = {heading for heading, _ in generator.heading_blocks(teacher)}
+        assert all(ref.heading in structural for unit in units for ref in unit.source_refs
+                   if ref.source == "teacher" and ref.block_index is not None), session.number
+        for index, block in enumerate(session.timeline):
+            intervals = [unit for unit in units if unit.function == "timeline" and unit.timeline_refs == [index]]
+            assert len(intervals) == 1, session.number
+            assert block.action in unit_text(intervals[0]), session.number
+            assert all(value in unit_text(intervals[0]) for value in block.details.values()), session.number
+            assert intervals[0].modality == (block.modality or session.grouping), session.number
+
+
+def test_s215_recovery_supports_the_individual_defense(generator):
+    units = generator.build_pedagogical_units(generator.parse_session(*source_pair("215")))
+    defense = next(unit for unit in units if unit.source_refs[0].heading == "Defensa práctica individual")
+    for heading in ("Recuperación ante una defensa insuficiente", "Andamiaje durante la defensa"):
+        support = next(unit for unit in units if unit.source_refs[0].heading == heading)
+        assert defense.unit_id in support.relations.get("supports", ())
+
+
+def test_timeline_units_also_preserve_simultaneous_organization_instructions(generator):
+    units = generator.build_pedagogical_units(generator.parse_session(*source_pair("215")))
+    content = "\n".join(unit_text(unit) for unit in units)
+    assert "No organices la sesión como una única actividad" in content
+    assert "Distribuye funciones dentro de cada equipo" in content

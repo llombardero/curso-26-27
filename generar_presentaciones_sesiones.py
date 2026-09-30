@@ -15,6 +15,7 @@ import tempfile
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
+from typing import Literal
 
 from pptx import Presentation
 from pptx.dml.color import RGBColor
@@ -72,6 +73,34 @@ class SemanticBlock:
     source: str = "teacher"
     role: str = "core"
     signals: list[str] = field(default_factory=list)
+    source_index: int | None = None
+
+
+@dataclass(frozen=True)
+class SourceRef:
+    source: str
+    heading: str
+    block_index: int | None
+    fragment: int = 0
+
+
+@dataclass
+class PedagogicalUnit:
+    """Atomic reasoning context; content is not chunked for slide capacity."""
+    unit_id: str
+    source_refs: list[SourceRef]
+    function: str
+    role: Literal["core", "recognition", "unknown"]
+    visible_content: list[str] = field(default_factory=list)
+    presenter_content: list[str] = field(default_factory=list)
+    modality: str = ""
+    timeline_refs: list[int] = field(default_factory=list)
+    relations: dict[str, tuple[str, ...]] = field(default_factory=dict)
+
+    @property
+    def items(self) -> list[str]:
+        """Legacy projection, not a second mutable copy of the content."""
+        return self.visible_content
 
 
 @dataclass
@@ -126,7 +155,13 @@ GENERIC_MARKERS = {
 def clean(text: str) -> str:
     text = re.sub(r"\[([^]]+)]\([^)]*\)", r"\1", text)
     text = text.replace("**", "").replace("__", "").replace("`", "")
-    text = re.sub(r"<[^>]+>", "", text)
+    # A comparison is not an HTML tag: require a tag name and valid attributes.
+    text = re.sub(
+        r"</?[A-Za-z][A-Za-z0-9:-]*(?:\s+[A-Za-z_:][\w:.-]*"
+        r"(?:\s*=\s*(?:\"[^\"]*\"|'[^']*'|[^\s<>]+))?)*\s*/?>",
+        "",
+        text,
+    )
     text = re.sub(r"\s+", " ", text).strip()
     return text.replace(".,", ",").replace(";,", ";")
 
@@ -147,24 +182,40 @@ def heading_pattern(title_pattern: str) -> str:
     return rf"(?:\d+(?:\.\d+)*[.)]?\s+)?(?:{title_pattern})"
 
 
+def markdown_headings(text: str) -> list[re.Match[str]]:
+    """Return structural headings, never headings inside fenced examples."""
+    headings: list[re.Match[str]] = []
+    fence = ""
+    offset = 0
+    for line in text.splitlines(keepends=True):
+        marker = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line.rstrip("\r\n"))
+        if fence:
+            if marker and marker.group(1)[0] == fence[0] and len(marker.group(1)) >= len(fence) and not marker.group(2).strip():
+                fence = ""
+        elif marker:
+            fence = marker.group(1)
+        else:
+            heading = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE).match(text, offset)
+            if heading:
+                headings.append(heading)
+        offset += len(line)
+    return headings
+
+
 def section(text: str, title_pattern: str, levels: tuple[int, ...] = (2, 3)) -> str:
     """Devuelve una sección Markdown aunque el título tenga prefijo numérico."""
-    lines = text.splitlines()
+    headings = markdown_headings(text)
     title_re = re.compile(rf"^{heading_pattern(title_pattern)}", flags=re.IGNORECASE)
-    for index, line in enumerate(lines):
-        match = re.match(r"^(#{1,6})\s+(.+)$", line)
-        if not match:
-            continue
+    for index, match in enumerate(headings):
         level = len(match.group(1))
         if level not in levels or not title_re.search(match.group(2)):
             continue
-        body: list[str] = []
-        for candidate in lines[index + 1 :]:
-            next_heading = re.match(r"^(#{1,6})\s+", candidate)
-            if next_heading and len(next_heading.group(1)) <= level:
+        end = len(text)
+        for candidate in headings[index + 1 :]:
+            if len(candidate.group(1)) <= level:
+                end = candidate.start()
                 break
-            body.append(candidate)
-        return "\n".join(body).strip()
+        return text[match.end() : end].strip()
     return ""
 
 
@@ -347,10 +398,12 @@ def primary_session_title(text: str, fallback: str) -> tuple[str, str]:
 
 def heading_blocks(text: str) -> list[tuple[str, str]]:
     """Conserva todos los apartados docentes, incluidos los no clasificados."""
-    headings = list(re.finditer(r"^(#{2,6})\s+(.+?)\s*$", text, flags=re.MULTILINE))
+    headings = markdown_headings(text)
     blocks: list[tuple[str, str]] = []
     for index, match in enumerate(headings):
         level = len(match.group(1))
+        if level < 2:
+            continue
         end = len(text)
         for candidate in headings[index + 1 :]:
             if len(candidate.group(1)) <= level:
@@ -421,9 +474,9 @@ def semantic_categories(heading: str, content: str) -> list[str]:
 
 def parse_semantic_blocks(teacher_text: str, student_text: str) -> dict[str, list[SemanticBlock]]:
     result = {category: [] for category in SEMANTIC_CATEGORIES}
-    for heading, content in heading_blocks(teacher_text):
+    for source_index, (heading, content) in enumerate(heading_blocks(teacher_text)):
         role, signals = semantic_role(heading, content)
-        block = SemanticBlock(heading, content, "teacher", role, signals)
+        block = SemanticBlock(heading, content, "teacher", role, signals, source_index)
         for category in semantic_categories(heading, content):
             result[category].append(block)
     if not result["security"]:
@@ -435,9 +488,212 @@ def parse_semantic_blocks(teacher_text: str, student_text: str) -> dict[str, lis
     return result
 
 
+def pedagogical_paragraphs(content: str) -> list[str]:
+    """Keep fenced programs and paragraphs intact, including blank code lines."""
+    paragraphs: list[str] = []
+    current: list[str] = []
+    fence = ""
+    for line in content.splitlines():
+        marker = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
+        if marker:
+            if not fence:
+                fence = marker.group(1)
+            elif marker.group(1)[0] == fence[0] and len(marker.group(1)) >= len(fence) and not marker.group(2).strip():
+                fence = ""
+        if not line.strip() and not fence:
+            if current:
+                paragraphs.append("\n".join(current).strip())
+                current = []
+        else:
+            current.append(line)
+    if current:
+        paragraphs.append("\n".join(current).strip())
+    return paragraphs
+
+
+def pedagogical_function(heading: str, categories: set[str]) -> str:
+    """Classify purpose, including useful learning sections labelled 'other'."""
+    title = heading.lower()
+    for function, pattern in (
+        ("preparation", r"antes de entrar|material imprescindible"),
+        ("continuity", r"^al terminar$"),
+        ("observation", r"observación docente"),
+        ("scaffolding", r"andamiaje|recuperación"),
+        ("common_error", r"errores frecuentes"),
+        ("question_bank", r"banco de preguntas"),
+        ("moodle_delivery", r"moodle|contenido de la entrega|entrega oficial"),
+        ("review", r"\breview\b"),
+        ("retrospective", r"retrospectiva"),
+        ("individual_check", r"comprueba|comprobar comprensión|reflexión individual"),
+        ("defense", r"defensa práctica|defensa individual|microdefensa"),
+        ("timeline", r"temporalización|organización simultánea|secuencia de aula"),
+        ("activity", r"individual|parejas|equipo|actividad|secuencia de trabajo"),
+        ("concept", r"compar|boolean|operador|condici|casting|conversión|parse|leer|pedir|reutilizar|validación|enlace|permiso|qué hace|qué límites|cómo se ejecuta|qué pruebas"),
+    ):
+        if re.search(pattern, title):
+            return function
+    if "other" in categories:
+        return "other"
+    for category in ("review", "retrospective", "defense", "examples", "counterexamples", "predictions", "concepts", "explanations", "questions", "evidence", "security", "closure"):
+        if category in categories:
+            return category
+    return "other"
+
+
+def pedagogical_relations(content: str) -> dict[str, tuple[str, ...]]:
+    """Name reasoning chains actually present in the atomic source context."""
+    lowered = content.lower()
+    relations: dict[str, tuple[str, ...]] = {}
+    if re.search(r"\bif\s*\(", content) and re.search(r"\belse\b", content):
+        relations["branches"] = ("condition", "true", "false")
+    if "predi" in lowered and "ejecut" in lowered and "contrast" in lowered:
+        relations["prediction_cycle"] = ("prediction", "execution", "contrast")
+    if all(word in lowered for word in ("entrada", "esperad", "obtenid")) and re.search(r"demuestra|significado", lowered):
+        relations["reproducible_test"] = ("input", "expected", "obtained", "meaning")
+    if "¿" in content:
+        relations["question_context"] = ("context", "question")
+    if re.search(r"contraejemplo|contrasta.*fragmentos|contrasta con", lowered):
+        relations["contrast"] = ("example", "counterexample")
+    return relations
+
+
+def build_pedagogical_units(session: Session) -> list[PedagogicalUnit]:
+    """Extract source-based units without planning slides or inventing content."""
+    blocks: dict[tuple[str, str, str], tuple[SemanticBlock, set[str]]] = {}
+    for category, members in session.semantic_blocks.items():
+        for block in members:
+            key = (block.source, block.heading, block.content)
+            if key not in blocks:
+                blocks[key] = (block, set())
+            blocks[key][1].add(category)
+    ordered = sorted(blocks.values(), key=lambda entry: (
+        entry[0].source != "teacher",
+        entry[0].source_index if entry[0].source_index is not None else len(blocks),
+    ))
+    units: list[PedagogicalUnit] = []
+    for block, categories in ordered:
+        # The parser retains parent content; children own their subsections here.
+        children = markdown_headings(block.content)
+        content = block.content[:children[0].start()].strip() if children else block.content.strip()
+        if not content:
+            continue
+        function = pedagogical_function(block.heading, categories)
+        ancestors = [parent for parent, _ in ordered
+                     if parent.source == block.source and parent is not block
+                     and block.content and block.content in parent.content]
+        if any(re.search(r"banco de preguntas", parent.heading, re.I) for parent in ancestors):
+            function = "question_bank"
+        paragraphs = pedagogical_paragraphs(content)
+        if function == "timeline":
+            # Replace only table rows; keep the instructions surrounding them.
+            paragraphs = [paragraph for paragraph in paragraphs
+                          if not all(line.strip().startswith("|") for line in paragraph.splitlines())]
+            if not paragraphs:
+                continue
+            function = "timeline_context"
+        # A mixed outcome may explicitly introduce recognition in its last clause.
+        if re.search(r"qué vas a aprender", block.heading, re.I):
+            paragraphs = [part for paragraph in paragraphs
+                          for part in re.split(r"(?<=\.)\s+(?=También\b)", paragraph)]
+        # Explicit secondary examples start a locally weighted fragment.
+        split = next((i for i, paragraph in enumerate(paragraphs)
+                      if re.match(r"Como ejemplo secundario", paragraph, re.I)
+                      or (i > 0 and paragraph.startswith("También") and semantic_role("", paragraph)[1])), None)
+        fragments = [paragraphs] if split is None else [paragraphs[:split], paragraphs[split:]]
+        for fragment_index, fragment in enumerate(fragments):
+            if not fragment:
+                continue
+            text = "\n\n".join(fragment)
+            _, signals = semantic_role(block.heading if split is None else "", text)
+            local_role: Literal["core", "recognition", "unknown"] = (
+                "recognition" if signals or (split is not None and fragment_index == 1)
+                else "unknown" if function == "other" else "core"
+            )
+            presenter_only = function in {"preparation", "continuity", "observation", "scaffolding", "common_error", "question_bank", "other", "timeline_context"}
+            visible: list[str] = []
+            presenter: list[str] = []
+            for paragraph in fragment:
+                if presenter_only or re.match(r"(?:Di en voz alta|Proyecta|Muestra|Explica oralmente|Recorre el código|No proporciones)\b", paragraph):
+                    presenter.append(paragraph)
+                else:
+                    visible.append(paragraph)
+            refs = [SourceRef(block.source, block.heading, block.source_index, fragment_index)]
+            for parent, _ in ordered:
+                if parent.source == block.source and parent is not block and block.content and block.content in parent.content:
+                    ref = SourceRef(parent.source, parent.heading, parent.source_index)
+                    if ref not in refs:
+                        refs.append(ref)
+            units.append(PedagogicalUnit(
+                f"unit-{len(units)}", refs, function, local_role, visible, presenter,
+                session.grouping, relations=pedagogical_relations(text),
+            ))
+    timeline_sources = [SourceRef(block.source, block.heading, block.source_index)
+                        for block, categories in ordered
+                        if pedagogical_function(block.heading, categories) == "timeline"]
+    for index, block in enumerate(session.timeline):
+        refs = timeline_sources or [SourceRef("teacher", "TimelineBlock", None, index)]
+        content = [f"{block.time} — {block.action}",
+                   *[f"{key}: {value}" for key, value in block.details.items()]]
+        relations = {}
+        parallel = tuple(key for key in block.details if re.search(r"paralel|alumnado|equipo", key, re.I))
+        if parallel:
+            relations["simultaneous"] = ("action", *parallel)
+        units.append(PedagogicalUnit(
+            f"unit-{len(units)}", list(refs), "timeline", "core", content,
+            modality=block.modality or session.grouping, timeline_refs=[index], relations=relations,
+        ))
+    for support in units:
+        if support.function not in {"common_error", "scaffolding"}:
+            continue
+        topics = pedagogical_topics("\n".join(support.presenter_content))
+        defense_support = any(re.search(r"defensa", ref.heading, re.I) for ref in support.source_refs)
+        targets = tuple(unit.unit_id for unit in units
+                        if unit.visible_content and unit.function != "timeline"
+                        and ((defense_support and unit.function == "defense")
+                             or topics & pedagogical_topics("\n".join(unit.visible_content))))
+        if targets:
+            support.relations["supports"] = targets
+    return units
+
+
+def pedagogical_topics(content: str) -> set[str]:
+    """Explicit technical anchors for support links; no inferred curriculum role."""
+    return {topic.lower() for topic in re.findall(
+        r"\b(?:Scanner|nextLine|parseInt|parseDouble|casting|parseo|if|else|ternario|"
+        r"README|NumberFormatException|anidad\w*|comparaci\w*|condici\w*|rama\w*|"
+        r"permis\w*|enlace\w*)\b", content, re.I,
+    )}
+
+
 def first_teacher_statement(text: str, title_pattern: str) -> str:
     lines = meaningful_lines(section(text, title_pattern), 1)
     return lines[0] if lines else ""
+
+
+def markdown_table_cells(line: str) -> list[str]:
+    """Split Markdown delimiters, decoding escaped pipes only inside cells."""
+    cells: list[str] = []
+    current = ""
+    index = 0
+    line = line.strip()
+    while index < len(line):
+        char = line[index]
+        if char == "\\" and index + 1 < len(line) and line[index + 1] in "\\|":
+            current += line[index + 1]
+            index += 2
+            continue
+        if char == "|":
+            cells.append(current.strip())
+            current = ""
+        else:
+            current += char
+        index += 1
+    cells.append(current.strip())
+    if line.startswith("|"):
+        cells.pop(0)
+    if cells and not cells[-1] and line.endswith("|"):
+        cells.pop()
+    return cells
 
 
 def parse_markdown_timeline(text: str) -> list[TimelineBlock]:
@@ -451,7 +707,7 @@ def parse_markdown_timeline(text: str) -> list[TimelineBlock]:
         for line in body.splitlines():
             if not line.strip().startswith("|"):
                 continue
-            cells = [clean(cell) for cell in line.strip().strip("|").split("|")]
+            cells = [clean(cell) for cell in markdown_table_cells(line)]
             if len(cells) < 2 or any(re.fullmatch(r"[-: ]+", cell) for cell in cells):
                 continue
             if not headers and not re.search(r"\d", cells[0]):
