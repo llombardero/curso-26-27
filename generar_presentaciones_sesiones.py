@@ -648,7 +648,7 @@ def build_pedagogical_units(session: Session) -> list[PedagogicalUnit]:
             visible: list[str] = []
             presenter: list[str] = []
             for paragraph in fragment:
-                if presenter_only or re.match(r"(?:Di en voz alta|Proyecta|Muestra|Explica oralmente|Recorre el código|No proporciones)\b", paragraph):
+                if presenter_only or re.match(r"(?:Di en voz alta|Proyecta|Muestra|Explica oralmente|Recorre el código|No proporciones|No (?:lo |la |los |las )?presentes)\b", paragraph):
                     presenter.append(paragraph)
                 else:
                     visible.append(paragraph)
@@ -677,6 +677,7 @@ def build_pedagogical_units(session: Session) -> list[PedagogicalUnit]:
             f"unit-{len(units)}", list(refs), "timeline", "core", content,
             modality=block.modality or session.grouping, timeline_refs=[index], relations=relations,
         ))
+    units = scope_recognition_checks(units)
     for support in units:
         if support.function not in {"common_error", "scaffolding"}:
             continue
@@ -688,16 +689,112 @@ def build_pedagogical_units(session: Session) -> list[PedagogicalUnit]:
                              or topics & pedagogical_topics("\n".join(unit.visible_content))))
         if targets:
             support.relations["supports"] = targets
+    timeline_indices = {unit.unit_id: semantic_timeline_index(session, unit) for unit in units
+                        if semantic_projection(unit)[0] and unit.function not in {"timeline", "security", "evidence"}}
+    families: dict[str, list[PedagogicalUnit]] = {}
+    for unit in units:
+        if unit.source_refs[1:] and unit.function not in {"activity", "individual_check"}:
+            parent = unit.source_refs[-1].heading
+            if not re.search(r"ideas y ejemplos|secuencia de trabajo|actividad central", parent, re.I):
+                families.setdefault(parent, []).append(unit)
+    for family in families.values():
+        parent_heading = family[0].source_refs[-1].heading
+        parent = next((unit for unit in units if unit.source_refs[0].heading == parent_heading), None)
+        parent_anchor = timeline_indices.get(parent.unit_id) if parent else None
+        parent_text = "\n".join(parent.visible_content + parent.presenter_content).lower() if parent else ""
+        if isinstance(parent_anchor, int) and all(unit.source_refs[0].heading.lower() in parent_text for unit in family):
+            # Explicitly enumerated criteria support their parent's explanation;
+            # mentioning execution in a criterion does not make it a new activity.
+            for unit in family:
+                timeline_indices[unit.unit_id] = parent_anchor
+        anchors = [anchor for unit in family if isinstance(anchor := timeline_indices.get(unit.unit_id), int)]
+        if anchors:
+            for unit in family:
+                if timeline_indices.get(unit.unit_id) is None:
+                    timeline_indices[unit.unit_id] = min(anchors)
+    for unit in units:
+        anchor = timeline_indices.get(unit.unit_id)
+        if anchor is not None:
+            unit.timeline_refs = [anchor]
+        texts = [block.action + " " + " ".join(block.details.values()) for block in session.timeline]
+        if unit.function == "defense":
+            # The source explicitly continues individual defenses during the
+            # parallel activities, rather than granting one exclusive time slot.
+            defenses = [i for i, text in enumerate(texts) if re.search(r"defensas?\b", text, re.I)]
+            if defenses:
+                unit.timeline_refs = defenses
+        if unit.function == "moodle_delivery" and any("Permisos comprobados:" in text and "Equipo:" in text
+                                                       for text in unit.visible_content):
+            # The canonical fields are prepared and submitted, using the same
+            # support in both explicitly named source intervals.
+            deliveries = [i for i, text in enumerate(texts)
+                          if re.search(r"prepar\w* la entrega|realiza\w* la entrega|envi\w*", text, re.I)]
+            if deliveries:
+                unit.timeline_refs = deliveries
     return units
 
 
 def pedagogical_topics(content: str) -> set[str]:
     """Explicit technical anchors for support links; no inferred curriculum role."""
-    return {topic.lower() for topic in re.findall(
+    return {"anidad" if topic.lower().startswith("anidad") else topic.lower() for topic in re.findall(
         r"\b(?:Scanner|nextLine|parseInt|parseDouble|casting|parseo|if|else|ternario|"
         r"README|NumberFormatException|anidad\w*|comparaci\w*|condici\w*|rama\w*|"
         r"permis\w*|enlace\w*)\b", content, re.I,
     )}
+
+
+def scope_recognition_checks(units: list[PedagogicalUnit]) -> list[PedagogicalUnit]:
+    """Carry explicit local recognition scope into checks, not an entire question.
+
+    Split only list boundaries; a mixed question remains intact and links to the
+    recognition context instead of promoting its secondary topic to core.
+    """
+    core_topics = set().union(*(pedagogical_topics(unit.source_refs[0].heading) for unit in units
+                               if unit.role == "core" and unit.function not in {"individual_check", "closure"}))
+    seeds = [(unit, pedagogical_topics(unit.source_refs[0].heading) - core_topics) for unit in units
+             if unit.role == "recognition"]
+    result: list[PedagogicalUnit] = []
+    links: list[tuple[PedagogicalUnit, list[PedagogicalUnit]]] = []
+    for unit in units:
+        if unit.function not in {"individual_check", "closure"} or unit.role != "core":
+            result.append(unit)
+            continue
+        groups: list[tuple[Literal["core", "recognition", "unknown"], list[str]]] = []
+        for paragraph in unit.visible_content:
+            lines = paragraph.splitlines()
+            parts = lines if lines and all(line.startswith("- ") for line in lines) else [paragraph]
+            for part in parts:
+                matched = any(topics & pedagogical_topics(part) for _, topics in seeds)
+                role: Literal["core", "recognition", "unknown"] = "recognition" if part.startswith("- ") and matched else "core"
+                if groups and groups[-1][0] == role:
+                    groups[-1][1].append(part)
+                else:
+                    groups.append((role, [part]))
+        if len(groups) <= 1:
+            if groups:
+                unit.role = groups[0][0]
+            fragments = [unit]
+        else:
+            fragments = []
+            for index, (role, paragraphs) in enumerate(groups):
+                ref = unit.source_refs[0]
+                refs = [SourceRef(ref.source, ref.heading, ref.block_index, index), *unit.source_refs[1:]]
+                fragments.append(PedagogicalUnit(
+                    "", refs, unit.function, role, paragraphs,
+                    list(unit.presenter_content) if index == 0 else [], unit.modality,
+                    list(unit.timeline_refs), pedagogical_relations("\n".join(paragraphs)),
+                ))
+        for fragment in fragments:
+            topics = pedagogical_topics("\n".join(fragment.visible_content))
+            matched_seeds = [seed for seed, anchors in seeds if anchors & topics]
+            if matched_seeds:
+                links.append((fragment, matched_seeds))
+            result.append(fragment)
+    for index, unit in enumerate(result):
+        unit.unit_id = f"unit-{index}"
+    for unit, contexts in links:
+        unit.relations["recognition_context"] = tuple(context.unit_id for context in contexts)
+    return result
 
 
 def first_teacher_statement(text: str, title_pattern: str) -> str:
@@ -1325,10 +1422,17 @@ def semantic_projection(unit: PedagogicalUnit) -> tuple[list[str], list[str], st
             return models, list(unit.presenter_content), "Modelo de actuación compartido; observación completa para el docente"
     if unit.function == "other" and (learning_parent or re.search(r"consola.*interfaz|mapa mínimo.*tipos", heading, re.I)
                                       or any("```java" in text for text in unit.presenter_content)):
-        paragraphs = [*unit.visible_content, *unit.presenter_content]
+        paragraphs = list(unit.visible_content)
         visible, presenter = [], []
         for paragraph in paragraphs:
-            if re.match(r"(?:Proyecta|Presenta|No presentes|Aclara|Muestra)\b", paragraph) and "```" not in paragraph and "¿" not in paragraph:
+            if re.match(r"(?:Proyecta|Presenta|No (?:lo |la |los |las )?presentes|Aclara|Muestra)\b", paragraph) and "```" not in paragraph and "¿" not in paragraph:
+                presenter.append(paragraph)
+            else:
+                visible.append(paragraph)
+        # Unknown learning sections are initially presenter-only. Recover their
+        # learning paragraphs, but never recover an explicit delivery instruction.
+        for paragraph in unit.presenter_content:
+            if re.match(r"(?:Di en voz alta|Proyecta|Presenta|No (?:lo |la |los |las )?presentes|Aclara|Muestra|Explica oralmente|Recorre el código|No proporciones)\b", paragraph):
                 presenter.append(paragraph)
             else:
                 visible.append(paragraph)
@@ -1379,35 +1483,76 @@ def semantic_is_closure(unit: PedagogicalUnit) -> bool:
 
 def semantic_timeline_index(session: Session, unit: PedagogicalUnit) -> int | None:
     """Align explicit heading anchors to actions; preserve source order on ties."""
+    if semantic_is_closure(unit) and session.timeline:
+        return len(session.timeline) - 1
+    title = unit.source_refs[0].heading
+    if session.timeline and re.search(r"^(?:finalidad|apertura docente|qué vas a aprender)\b", title, re.I):
+        return 0
     def tokens(text: str) -> set[str]:
         normalized = "".join(char for char in unicodedata.normalize("NFD", text.lower()) if not unicodedata.combining(char))
-        excluded = {"antes", "despues", "individual", "parejas", "equipo", "trabajo", "ejemplos", "programa", "java", "datos", "forma", "misma", "comprender", "comprensión", "comprension", "comprobar", "comprobacion", "predecir", "probar", "comparar", "contrastar", "leer", "convertir"}
+        excluded = {"antes", "despues", "individual", "parejas", "equipo", "trabajo", "ejemplos", "programa", "java", "datos", "forma", "misma", "comprender", "comprensión", "comprension", "comprobar", "comprobacion", "predecir", "probar", "comparar", "contrastar", "leer", "convertir", "cierre", "cerrar", "pedir", "guardar", "utilizar"}
         return {word[:5] for word in re.findall(r"[a-z]+", normalized) if len(word) >= 4 and word not in excluded}
-    title = unit.source_refs[0].heading
     heading = tokens(title)
+    if not heading and unit.function in {"concept", "concepts", "examples"}:
+        introduction = next((text for text in unit.visible_content if not text.startswith("```")), "")
+        heading = tokens(introduction)
     parallel = any(re.search(r"paralel|alumnado|equipo", key, re.I) for block in session.timeline for key in block.details)
     texts = [block.action + (" " + " ".join(block.details.values()) if parallel else "") for block in session.timeline]
     actions = [tokens(text) for text in texts]
     activity = unit.function in {"activity", "individual_check", "defense", "review", "retrospective", "moodle_delivery"}
     modality = re.search(r"individual|parejas|equipo", title, re.I)
+    modality_slots = {
+        index for index, text in enumerate(texts)
+        if unit.function == "activity" and not parallel and modality
+        and modality.group().lower() in text.lower()
+        and ("comprobación individual" not in text.lower() or bool(heading & actions[index]))
+    }
+    if modality_slots:
+        substantive = {index for index in modality_slots if not re.match(r"presentar|abrir|explicar el protocolo", texts[index], re.I)}
+        modality_slots = substantive or modality_slots
+        # An explicit source action (e.g. revisar claridad) is stronger than a
+        # generic mention of the same working modality elsewhere in the clock.
+        matches = [len(heading & action) for action in actions]
+        strongest = max(matches, default=0)
+        unique = matches.count(strongest) == 1
+        rare = unique and any(sum(token in action for action in actions) == 1
+                              for token in heading & actions[matches.index(strongest)])
+        if unique and matches.index(strongest) > 0 and (strongest >= 2 or strongest == 1 and rare):
+            modality_slots = {matches.index(max(matches))}
+    delivery_slots = {index for index, text in enumerate(texts)
+                      if unit.function == "moodle_delivery"
+                      and re.search(r"realiza\w* la entrega|envi\w*|entregar", text, re.I)}
     scores: list[float] = []
     for index, action in enumerate(actions):
         text = texts[index].lower()
+        if delivery_slots and index not in delivery_slots:
+            scores.append(0)
+            continue
+        if modality_slots and index not in modality_slots:
+            # Una modalidad explícita de práctica prevalece sobre un verbo
+            # incidental de explicación; no imponer fases al trabajo paralelo.
+            scores.append(0)
+            continue
         practical = bool(re.search(r"práctic|micropráctica|por parejas|en parejas|individual|consolidar|integrar|intercambiar|implementar|construir", text))
-        if not activity and not parallel and re.search(r"^presentar|^corregir", text):
+        if not activity and not parallel and ((index == 0 and re.search(r"^presentar", text)) or re.search(r"^corregir", text)):
             # An opening mention or later correction is not the instruction's slot.
             scores.append(0)
             continue
-        if not activity and practical and "guiad" not in text and not parallel:
+        specific = any(sum(token in candidate for candidate in actions) == 1 for token in heading & action)
+        if not activity and practical and "guiad" not in text and not parallel and not specific:
             scores.append(0)
             continue
-        if unit.function == "activity" and "comprobación individual" in text:
+        if unit.function == "activity" and "comprobación individual" in text and index not in modality_slots:
             scores.append(0)
             continue
         score = sum(1 / sum(token in candidate for candidate in actions) for token in heading & action)
         if activity and modality and modality.group().lower() in text:
             score += 0.5
         if unit.function == "individual_check" and re.search(r"comprobación individual|comprobar comprensión|comprobar.*cerrar", text):
+            score += 3
+        if unit.function == "activity" and modality_slots and "comprobación individual" in text:
+            score += 3
+        if index in delivery_slots:
             score += 3
         scores.append(score)
     if not scores or max(scores) == 0:
@@ -1418,20 +1563,8 @@ def semantic_timeline_index(session: Session, unit: PedagogicalUnit) -> int | No
 def plan_slides_semantic(session: Session) -> list[SlideSpec]:
     units = build_pedagogical_units(session)
     concurrent = any("simultaneous" in unit.relations for unit in units if unit.function == "timeline")
-    timeline_indices = {unit.unit_id: semantic_timeline_index(session, unit) for unit in units
-                        if semantic_projection(unit)[0] and unit.function not in {"timeline", "security", "evidence"}}
-    # A meaningful parent describes one context: do not scatter its sibling stages.
-    families: dict[str, list[PedagogicalUnit]] = {}
-    for unit in units:
-        if unit.source_refs[1:] and unit.function not in {"activity", "individual_check"}:
-            parent = unit.source_refs[-1].heading
-            if not re.search(r"ideas y ejemplos|secuencia de trabajo|actividad central", parent, re.I):
-                families.setdefault(parent, []).append(unit)
-    for family in families.values():
-        anchors = [anchor for unit in family if isinstance(anchor := timeline_indices.get(unit.unit_id), int)]
-        if anchors:
-            for unit in family:
-                timeline_indices[unit.unit_id] = min(anchors)
+    timeline_indices = {unit.unit_id: unit.timeline_refs[0] for unit in units
+                        if unit.timeline_refs and unit.function != "timeline"}
     ranked: list[tuple[int, int, PedagogicalUnit]] = []
     previous_index = 0
     for index, unit in enumerate(units):
@@ -1477,9 +1610,7 @@ def plan_slides_semantic(session: Session) -> list[SlideSpec]:
             target = slides[-1]
             previous_key = key
         attach_semantic_unit(target, unit, visible, presenter, reason)
-        anchor = timeline_indices.get(unit.unit_id)
-        if anchor is not None:
-            target.timeline_refs = sorted(set([*target.timeline_refs, anchor]))
+
     for unit, visible, presenter, reason in contexts:
         heading = unit.source_refs[0].heading
         target = next(slide for slide in slides if any(any(ref.heading == heading for ref in child.source_refs[1:])
@@ -2004,11 +2135,16 @@ def build_presentation(session: Session, target: Path) -> int:
     prs.slide_width = SLIDE_W
     prs.slide_height = SLIDE_H
     plan = plan_slides(session)
-    for spec in plan:
-        RENDERERS[spec.kind](prs, session, spec)
+    if session.folder.lower() in SEMANTIC_PLANNER_HITOS:
+        from render_presentaciones_semanticas import render_semantic_presentation
+
+        render_semantic_presentation(prs, session, plan)
+    else:
+        for spec in plan:
+            RENDERERS[spec.kind](prs, session, spec)
     target.parent.mkdir(parents=True, exist_ok=True)
     prs.save(target)
-    return len(plan)
+    return len(prs.slides)
 
 
 def target_for(session: Session, output_root: Path) -> Path:

@@ -706,6 +706,31 @@ def visible_location(plan, heading):
                 and "visible" in slide.unit_dispositions[unit.unit_id].channels for unit in slide.pedagogical_units))
 
 
+def test_activity_modality_beats_an_incidental_explanatory_verb(generator):
+    from types import SimpleNamespace
+
+    session = SimpleNamespace(timeline=[
+        generator.TimelineBlock("0–3 min", "Explicar el ejemplo."),
+        generator.TimelineBlock("3–6 min", "Práctica individual: construir y probar."),
+        generator.TimelineBlock("6–9 min", "Práctica por parejas: contrastar los resultados."),
+    ])
+    unit = generator.PedagogicalUnit("activity", [generator.SourceRef("teacher", "Comparar, probar y explicar — PAREJAS", 0)],
+                                     "activity", "core")
+    assert generator.semantic_timeline_index(session, unit) == 2
+
+
+def test_s212_individual_attempt_precedes_pairs_and_uses_the_source_intervals(generator):
+    session = generator.parse_session(*source_pair("212"))
+    plan = generator.plan_slides(session)
+    individual = visible_location(plan, "Leer, convertir, predecir y probar — INDIVIDUAL")
+    pairs = visible_location(plan, "Comparar, probar y explicar — PAREJAS")
+    assert individual < pairs
+    assert plan[individual].timeline_refs == [2]
+    assert plan[pairs].timeline_refs == [3]
+    assert session.timeline[2].time == "12–22 min"
+    assert session.timeline[3].time == "22–30 min"
+
+
 def test_semantic_timeline_orders_real_actions_not_incidental_verbs(generator):
     plan = generator.plan_slides(generator.parse_session(*source_pair("212")))
     assert visible_location(plan, "Pedir, leer, guardar y utilizar") <= visible_location(plan, "Parsear texto para obtener un número")
@@ -963,3 +988,141 @@ def test_density_diagnoses_a_unit_silently_cut_after_projection(generator):
     code = next(text for text in unit.visible_content if text.startswith("```java"))
     slide.visible_content[slide.visible_content.index(code)] = code.split("else")[0]
     assert any("partida" in error for error in generator.plan_density_errors(plan))
+
+
+def test_teacher_delivery_instructions_stay_presenter_only_in_learning_context(generator):
+    session = generator.parse_session(*source_pair("213"))
+    instruction = "No lo presentes como una lista para memorizar. Para cada expresión, pide al alumnado que lea la relación en lenguaje natural y prediga el resultado."
+    plan = generator.plan_slides(session)
+    slide = plan[visible_location(plan, "Comparaciones y resultados booleanos")]
+    assert instruction not in slide.visible_content
+    assert instruction in slide.presenter_content
+    unit = next(unit for unit in slide.pedagogical_units if unit.source_refs[0].heading == "Comparaciones y resultados booleanos")
+    assert instruction in unit.presenter_content
+
+
+@pytest.mark.parametrize("number,heading,expected", [
+    ("214", "Localización y comprensión — INDIVIDUAL", [2]),
+    ("215", "Contenido de la entrega", [3, 4]),
+    ("215", "Comprobación de enlaces y permisos", [3]),
+    ("215", "Entrega oficial Moodle y evidencias que permanecen", [4]),
+])
+def test_responsible_timeline_anchors_belong_to_the_unit_not_its_mixed_slide(generator, number, heading, expected):
+    session = generator.parse_session(*source_pair(number))
+    plan = generator.plan_slides(session)
+    slide = plan[visible_location(plan, heading)]
+    unit = next(unit for unit in slide.pedagogical_units if unit.source_refs[0].heading == heading)
+    assert unit.timeline_refs == expected
+    assert set(expected) <= set(slide.timeline_refs)
+    # The lexical primary remains one source action; shared supports may also
+    # include an explicitly preceding preparation action.
+    assert generator.semantic_timeline_index(session, unit) in expected
+
+
+def test_individual_check_keeps_secondary_reading_roles_local(generator):
+    session = generator.parse_session(*source_pair("213"))
+    plan = generator.plan_slides(session)
+    members = [unit for slide in plan for unit in slide.pedagogical_units
+               if unit.source_refs[0].heading == "Comprobar comprensión — INDIVIDUAL"]
+    for text in ("- reconocer el flujo de un `if` anidado sencillo;",
+                 "- explicar cuándo el ternario resulta adecuado y cuándo conviene volver a `if/else`."):
+        unit = next(unit for unit in members if text in "\n".join(unit.visible_content))
+        assert unit.role == "recognition"
+        assert unit.relations["recognition_context"]
+        assert unit.timeline_refs == [7]
+    core = next(unit for unit in members if "- explicar la condición de un `if`;" in "\n".join(unit.visible_content))
+    assert core.role == "core"
+    assert len({unit.source_refs[0].fragment for unit in members}) == len(members)
+
+
+def test_mixed_closing_question_preserves_context_and_links_recognition_without_promoting_it(generator):
+    session = generator.parse_session(*source_pair("212"))
+    plan = generator.plan_slides(session)
+    closing = next(unit for slide in plan for unit in slide.pedagogical_units
+                   if unit.source_refs[0].heading == "Comprueba lo aprendido")
+    question = next(text for text in closing.visible_content if text.startswith("> ¿"))
+    assert question in session.teacher_source.read_text(encoding="utf-8")
+    assert closing.role == "core"
+    seeds = {unit.unit_id: unit for slide in plan for unit in slide.pedagogical_units}
+    scoped = [seeds[unit_id] for unit_id in closing.relations["recognition_context"]]
+    assert any(unit.role == "recognition" and "NumberFormatException" in unit.source_refs[0].heading for unit in scoped)
+
+
+def test_single_secondary_check_inherits_only_explicit_source_scope(generator):
+    seed = generator.PedagogicalUnit("seed", [generator.SourceRef("teacher", "Decisión anidada", 0)],
+                                    "concept", "recognition", ["Leer sin profundizar."])
+    check = generator.PedagogicalUnit("check", [generator.SourceRef("teacher", "Comprueba", 1)],
+                                     "individual_check", "core", ["- reconocer el recorrido anidado."])
+    units = generator.scope_recognition_checks([seed, check])
+    assert units[1].role == "recognition"
+    assert units[1].relations["recognition_context"] == (units[0].unit_id,)
+    assert units[1].visible_content == ["- reconocer el recorrido anidado."]
+
+
+@pytest.mark.parametrize("number", [str(number) for number in range(206, 216)])
+def test_owned_source_content_survives_role_fragmentation_and_channel_moves(generator, number):
+    from collections import Counter
+
+    session = generator.parse_session(*source_pair(number))
+    units = generator.build_pedagogical_units(session)
+    for index, (heading, body) in enumerate(generator.heading_blocks(session.teacher_source.read_text(encoding="utf-8"))):
+        children = generator.markdown_headings(body)
+        owned = body[:children[0].start()].strip() if children else body.strip()
+        members = [unit for unit in units if unit.source_refs[0].source == "teacher"
+                   and unit.source_refs[0].block_index == index]
+        if not owned or any(unit.function in {"timeline", "timeline_context"} for unit in members):
+            continue  # Source tables have the separate TimelineBlock contract.
+        actual = "\n".join(text for unit in members for text in [*unit.visible_content, *unit.presenter_content])
+        # Channels may move paragraphs; their source tokens must neither vanish nor duplicate.
+        assert Counter(owned.split()) == Counter(actual.split()), (number, heading)
+@pytest.mark.parametrize("number", ["206", "212", "213", "214", "215"])
+def test_source_closure_has_the_final_clock_anchor(number):
+    module = load_module()
+    session = module.parse_session(*source_pair(number))
+    closures = [u for u in module.build_pedagogical_units(session) if module.semantic_is_closure(u)]
+    assert closures
+    assert all(u.timeline_refs == [len(session.timeline) - 1] for u in closures)
+
+
+def test_later_presentation_and_clear_source_activity_are_not_opening_or_modality_fallback():
+    module = load_module()
+    session = module.parse_session(*source_pair("213"))
+    units = module.build_pedagogical_units(session)
+    ternary = next(u for u in units if u.source_refs[0].heading == "Operador ternario como elección sencilla")
+    clarity = next(u for u in units if u.source_refs[0].heading == "Revisar claridad y simplicidad — PAREJAS")
+    validation = next(u for u in units if u.source_refs[0].heading == "Validación sencilla de datos")
+    assert ternary.timeline_refs == [5], "Presentar el ternario es el intervalo 29–31, no la apertura"
+    assert clarity.timeline_refs == [8], "Revisar claridad está explícito en el cierre 43–45"
+    assert validation.timeline_refs == [3], "La explicación apoya la práctica central 18–27"
+
+
+def test_source_registration_and_delivery_template_keep_their_real_intervals():
+    module = load_module()
+    scope = module.parse_session(*source_pair("206"))
+    scrum = next(u for u in module.build_pedagogical_units(scope) if u.source_refs[0].heading == "Acuerdo y Scrum del equipo")
+    assert scrum.timeline_refs == [5]
+    defense = module.parse_session(*source_pair("215"))
+    units = module.build_pedagogical_units(defense)
+    template = next(u for u in units if u.source_refs[0].heading == "Contenido de la entrega")
+    assert template.timeline_refs == [3, 4], "Preparar y después entregar usan el mismo soporte"
+    central = next(u for u in units if u.function == "defense")
+    assert central.timeline_refs == [1, 2, 3, 4], "Las defensas continúan durante el trabajo paralelo"
+
+
+def test_enumerated_source_criteria_share_the_parent_instruction_interval():
+    module = load_module()
+    session = module.parse_session(*source_pair("214"))
+    headings = {"Qué hace", "Qué límites tiene", "Cómo se ejecuta", "Qué pruebas demuestran que funciona"}
+    criteria = [u for u in module.build_pedagogical_units(session) if u.source_refs[0].heading in headings]
+    assert len(criteria) == 4
+    assert all(u.timeline_refs == [1] for u in criteria)
+
+
+def test_scanner_explanation_is_not_moved_after_its_reuse_contrast():
+    module = load_module()
+    session = module.parse_session(*source_pair("212"))
+    units = module.build_pedagogical_units(session)
+    creation = next(u for u in units if any('Scanner teclado = new Scanner(System.in);' in text
+                                           for text in u.visible_content))
+    reuse = next(u for u in units if u.source_refs[0].heading == "Reutilizar la misma instancia")
+    assert creation.timeline_refs == reuse.timeline_refs == [1]
