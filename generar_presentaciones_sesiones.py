@@ -12,6 +12,7 @@ import argparse
 import re
 import shutil
 import tempfile
+import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
@@ -129,12 +130,46 @@ class Session:
     field_sources: dict[str, str] = field(default_factory=dict)
 
 
-@dataclass
+@dataclass(frozen=True)
+class UnitDisposition:
+    state: Literal["visible", "presenter", "merged", "deferred", "ignored_with_reason"]
+    reason: str
+    channels: tuple[str, ...] = ()
+
+
+@dataclass(init=False)
 class SlideSpec:
     kind: str
     title: str
-    items: list[str] = field(default_factory=list)
-    subtitle: str = ""
+    visible_content: list[str]
+    subtitle: str
+    presenter_content: list[str]
+    source_refs: list[SourceRef]
+    pedagogical_units: list[PedagogicalUnit]
+    timeline_refs: list[int]
+    relations: dict[str, object]
+    unit_dispositions: dict[str, UnitDisposition]
+    representation_needs: list[str]
+
+    def __init__(self, kind: str, title: str, items: list[str] | None = None, subtitle: str = "", *,
+                 visible_content: list[str] | None = None):
+        if items is not None and visible_content is not None:
+            raise ValueError("Use items or visible_content, not two content stores")
+        self.kind = kind
+        self.title = title
+        self.visible_content = visible_content if visible_content is not None else items if items is not None else []
+        self.subtitle = subtitle
+        self.presenter_content = []
+        self.source_refs = []
+        self.pedagogical_units = []
+        self.timeline_refs = []
+        self.relations = {}
+        self.unit_dispositions = {}
+        self.representation_needs = []
+
+    @property
+    def items(self) -> list[str]:
+        return self.visible_content
 
 
 @dataclass
@@ -1265,7 +1300,285 @@ def disciplinary_visuals(session: Session) -> list[SlideSpec]:
     return visuals
 
 
+SEMANTIC_PLANNER_HITOS = {"h1"}
+
+
 def plan_slides(session: Session) -> list[SlideSpec]:
+    if session.folder.lower() in SEMANTIC_PLANNER_HITOS:
+        return plan_slides_semantic(session)
+    return plan_slides_legacy(session)
+
+
+def semantic_projection(unit: PedagogicalUnit) -> tuple[list[str], list[str], str]:
+    """Recover learning context without upgrading an unknown curricular role."""
+    heading = unit.source_refs[0].heading
+    if heading == "Apertura docente":
+        return [], [*unit.visible_content, *unit.presenter_content], "Apertura oral docente"
+    if unit.function in {"timeline", "timeline_context"}:
+        return [], [*unit.visible_content, *unit.presenter_content], "Ritmo y relaciones temporales, no slide por intervalo"
+    learning_parent = any(re.search(r"ideas y ejemplos|calidad de un primer programa|recorrido|jdk, ide|defensa práctica", ref.heading, re.I)
+                          for ref in unit.source_refs)
+    if unit.function == "observation":
+        models = [text for index, text in enumerate(unit.presenter_content) if text.startswith("```")
+                  and index > 0 and unit.presenter_content[index - 1].startswith("Modelo")]
+        if models:
+            return models, list(unit.presenter_content), "Modelo de actuación compartido; observación completa para el docente"
+    if unit.function == "other" and (learning_parent or re.search(r"consola.*interfaz|mapa mínimo.*tipos", heading, re.I)
+                                      or any("```java" in text for text in unit.presenter_content)):
+        paragraphs = [*unit.visible_content, *unit.presenter_content]
+        visible, presenter = [], []
+        for paragraph in paragraphs:
+            if re.match(r"(?:Proyecta|Presenta|No presentes|Aclara|Muestra)\b", paragraph) and "```" not in paragraph and "¿" not in paragraph:
+                presenter.append(paragraph)
+            else:
+                visible.append(paragraph)
+        return visible, presenter, "Contexto de aprendizaje explícito en la fuente; rol local conservado"
+    return list(unit.visible_content), list(unit.presenter_content), "Destino funcional de la unidad"
+
+
+def attach_semantic_unit(slide: SlideSpec, unit: PedagogicalUnit, visible: list[str], presenter: list[str], reason: str) -> None:
+    if any("¿" in text and "?" in text for text in visible):
+        labels = [text for text in visible if re.fullmatch(r"Pregunta[^?\n]*:", text)]
+        visible = [text for text in visible if text not in labels]
+        presenter = [*presenter, *labels]
+    for text in visible:
+        if text not in slide.visible_content:
+            slide.visible_content.append(text)
+    for text in presenter:
+        if text not in slide.presenter_content:
+            slide.presenter_content.append(text)
+    slide.pedagogical_units.append(unit)
+    for ref in unit.source_refs:
+        if ref not in slide.source_refs:
+            slide.source_refs.append(ref)
+    slide.timeline_refs = sorted(set(slide.timeline_refs + unit.timeline_refs))
+    slide.relations["unit_relations"] = {member.unit_id: member.relations for member in slide.pedagogical_units}
+    slide.relations["roles"] = {member.unit_id: member.role for member in slide.pedagogical_units}
+    channels = tuple(channel for channel, content in (("visible", visible), ("presenter", presenter)) if content)
+    slide.unit_dispositions[unit.unit_id] = UnitDisposition("visible" if visible else "presenter" if presenter else "ignored_with_reason", reason, channels)
+
+
+def semantic_group_key(unit: PedagogicalUnit) -> str:
+    heading = unit.source_refs[0].heading
+    parents = [ref.heading for ref in unit.source_refs[1:]]
+    if semantic_is_closure(unit):
+        return "closure"
+    if any(re.search(r"defensa práctica|entrega oficial", ref.heading, re.I) for ref in unit.source_refs):
+        return next(ref.heading for ref in reversed(unit.source_refs) if re.search(r"defensa práctica|entrega oficial", ref.heading, re.I))
+    if unit.function in {"activity", "individual_check", "review", "retrospective", "moodle_delivery", "defense"}:
+        modality = re.search(r"INDIVIDUAL|PAREJAS|EQUIPO", heading, re.I)
+        return f"{unit.function}:{modality.group().upper() if modality else heading}"
+    return parents[-1] if parents else "learning"
+
+
+def semantic_is_closure(unit: PedagogicalUnit) -> bool:
+    if any(re.search(r"errores? sintácticos", ref.heading, re.I) for ref in unit.source_refs):
+        return False
+    return unit.function == "closure" or bool(re.search(r"comprueba lo aprendido", unit.source_refs[0].heading, re.I))
+
+
+def semantic_timeline_index(session: Session, unit: PedagogicalUnit) -> int | None:
+    """Align explicit heading anchors to actions; preserve source order on ties."""
+    def tokens(text: str) -> set[str]:
+        normalized = "".join(char for char in unicodedata.normalize("NFD", text.lower()) if not unicodedata.combining(char))
+        excluded = {"antes", "despues", "individual", "parejas", "equipo", "trabajo", "ejemplos", "programa", "java", "datos", "forma", "misma", "comprender", "comprensión", "comprension", "comprobar", "comprobacion", "predecir", "probar", "comparar", "contrastar", "leer", "convertir"}
+        return {word[:5] for word in re.findall(r"[a-z]+", normalized) if len(word) >= 4 and word not in excluded}
+    title = unit.source_refs[0].heading
+    heading = tokens(title)
+    parallel = any(re.search(r"paralel|alumnado|equipo", key, re.I) for block in session.timeline for key in block.details)
+    texts = [block.action + (" " + " ".join(block.details.values()) if parallel else "") for block in session.timeline]
+    actions = [tokens(text) for text in texts]
+    activity = unit.function in {"activity", "individual_check", "defense", "review", "retrospective", "moodle_delivery"}
+    modality = re.search(r"individual|parejas|equipo", title, re.I)
+    scores: list[float] = []
+    for index, action in enumerate(actions):
+        text = texts[index].lower()
+        practical = bool(re.search(r"práctic|micropráctica|por parejas|en parejas|individual|consolidar|integrar|intercambiar|implementar|construir", text))
+        if not activity and not parallel and re.search(r"^presentar|^corregir", text):
+            # An opening mention or later correction is not the instruction's slot.
+            scores.append(0)
+            continue
+        if not activity and practical and "guiad" not in text and not parallel:
+            scores.append(0)
+            continue
+        if unit.function == "activity" and "comprobación individual" in text:
+            scores.append(0)
+            continue
+        score = sum(1 / sum(token in candidate for candidate in actions) for token in heading & action)
+        if activity and modality and modality.group().lower() in text:
+            score += 0.5
+        if unit.function == "individual_check" and re.search(r"comprobación individual|comprobar comprensión|comprobar.*cerrar", text):
+            score += 3
+        scores.append(score)
+    if not scores or max(scores) == 0:
+        return None
+    return max(range(len(scores)), key=lambda index: scores[index])
+
+
+def plan_slides_semantic(session: Session) -> list[SlideSpec]:
+    units = build_pedagogical_units(session)
+    concurrent = any("simultaneous" in unit.relations for unit in units if unit.function == "timeline")
+    timeline_indices = {unit.unit_id: semantic_timeline_index(session, unit) for unit in units
+                        if semantic_projection(unit)[0] and unit.function not in {"timeline", "security", "evidence"}}
+    # A meaningful parent describes one context: do not scatter its sibling stages.
+    families: dict[str, list[PedagogicalUnit]] = {}
+    for unit in units:
+        if unit.source_refs[1:] and unit.function not in {"activity", "individual_check"}:
+            parent = unit.source_refs[-1].heading
+            if not re.search(r"ideas y ejemplos|secuencia de trabajo|actividad central", parent, re.I):
+                families.setdefault(parent, []).append(unit)
+    for family in families.values():
+        anchors = [anchor for unit in family if isinstance(anchor := timeline_indices.get(unit.unit_id), int)]
+        if anchors:
+            for unit in family:
+                timeline_indices[unit.unit_id] = min(anchors)
+    ranked: list[tuple[int, int, PedagogicalUnit]] = []
+    previous_index = 0
+    for index, unit in enumerate(units):
+        anchor = timeline_indices.get(unit.unit_id)
+        if anchor is not None:
+            previous_index = anchor
+        rank = previous_index
+        if semantic_is_closure(unit):
+            rank = len(session.timeline) + 1
+        if concurrent:
+            rank = index
+        ranked.append((rank, index, unit))
+    ordered = [unit for _, _, unit in sorted(ranked, key=lambda entry: entry[:2])]
+    slides = [SlideSpec("title", session.topic, [], f"{session.hito} · {session.duration}")]
+    slides[0].relations["modality"] = session.grouping
+    pending: list[tuple[PedagogicalUnit, list[str], str]] = []
+    contexts: list[tuple[PedagogicalUnit, list[str], list[str], str]] = []
+    previous_key = ""
+    for unit in ordered:
+        visible, presenter, reason = semantic_projection(unit)
+        heading = unit.source_refs[0].heading
+        if not visible:
+            pending.append((unit, presenter, reason))
+            continue
+        children = [child for child in units if any(ref.heading == heading for ref in child.source_refs[1:])
+                    and semantic_projection(child)[0]]
+        if children and not any("```java" in text for text in visible):
+            contexts.append((unit, visible, presenter, "Contexto unido a una subsección de la misma unidad documental"))
+            continue
+        if re.search(r"^finalidad|^qué vas a aprender", heading, re.I):
+            target = slides[0]
+        elif unit.function in {"security", "evidence", "observation"}:
+            target = next((slide for slide in reversed(slides) if slide.kind == "activity"
+                           and (unit.function != "observation" or "plan" in slide.title.lower())), slides[-1])
+        else:
+            key = semantic_group_key(unit)
+            capacity = sum(len(text) for text in slides[-1].visible_content) + sum(map(len, visible))
+            merge = slides[-1].kind != "title" and ((key == previous_key and capacity <= 2000) or unit.role == "recognition")
+            if not merge:
+                # 'focus' is the existing mixed-context renderer slot, not a category.
+                kind = "closure" if semantic_is_closure(unit) else "activity" if unit.function in {"activity", "individual_check", "review", "retrospective", "moodle_delivery", "defense"} else "focus"
+                slides.append(SlideSpec(kind, heading, [], "1" if kind in {"activity", "focus"} else ""))
+            target = slides[-1]
+            previous_key = key
+        attach_semantic_unit(target, unit, visible, presenter, reason)
+        anchor = timeline_indices.get(unit.unit_id)
+        if anchor is not None:
+            target.timeline_refs = sorted(set([*target.timeline_refs, anchor]))
+    for unit, visible, presenter, reason in contexts:
+        heading = unit.source_refs[0].heading
+        target = next(slide for slide in slides if any(any(ref.heading == heading for ref in child.source_refs[1:])
+                      and "visible" in slide.unit_dispositions[child.unit_id].channels for child in slide.pedagogical_units))
+        previous = list(target.visible_content)
+        attach_semantic_unit(target, unit, visible, presenter, reason)
+        target.visible_content[:] = [text for text in target.visible_content if text not in previous] + previous
+    for unit, presenter, reason in pending:
+        support_ids = unit.relations.get("supports", ())
+        target = next((slide for slide in slides if any(member.unit_id in support_ids for member in slide.pedagogical_units)), slides[0])
+        visible = []
+        if unit.function == "question_bank":
+            target = next((slide for slide in slides if any(member.function == "defense" for member in slide.pedagogical_units)), slides[0])
+            sample = next((line for paragraph in presenter for line in paragraph.splitlines() if line.startswith("- ")), None)
+            if sample:
+                visible = [sample]
+                samples = target.relations.get("question_samples", {})
+                if isinstance(samples, dict):
+                    samples[unit.unit_id] = sample
+                    target.relations["question_samples"] = samples
+                reason = "Muestra visible de esta familia; banco completo conservado para el docente"
+        elif unit.function == "scaffolding" and re.search(r"recuperación.*defensa", unit.source_refs[0].heading, re.I):
+            visible = [unit.source_refs[0].heading + "\n" + "\n\n".join(presenter[:2])]
+            reason = "Recuperación compartida; seguimiento detallado reservado al docente"
+        if unit.function == "continuity":
+            target = slides[-1]
+        attach_semantic_unit(target, unit, visible, presenter, reason)
+    if concurrent:
+        lanes = {
+            "DOCENTE": tuple(unit.unit_id for unit in units if unit.function in {"timeline", "defense"}),
+            "PAREJAS": tuple(unit.unit_id for unit in units if re.search(r"parejas", unit.source_refs[0].heading, re.I) and unit.function == "activity"),
+            "EQUIPO": tuple(unit.unit_id for unit in units if unit.function in {"review", "retrospective", "moodle_delivery"}),
+        }
+        slides[0].relations["concurrency"] = {
+            "lanes": lanes,
+            "intervals": [{"time": block.time, "teacher": block.action, "details": dict(block.details)} for block in session.timeline],
+        }
+        for slide in slides[1:]:
+            slide.relations["schedule"] = "shared_closure" if slide.kind == "closure" else "concurrent_support"
+    for slide in slides:
+        if slide.kind == "closure":
+            question = next((text for text in slide.visible_content if text.startswith("> ¿")), None)
+            if question:
+                slide.visible_content.remove(question)
+                slide.visible_content.append(question)
+        visible_ids = [key for key, value in slide.unit_dispositions.items() if "visible" in value.channels]
+        if len(visible_ids) > 1:
+            for key in visible_ids:
+                value = slide.unit_dispositions[key]
+                slide.unit_dispositions[key] = UnitDisposition("merged", value.reason, value.channels)
+        if sum(map(len, slide.visible_content)) > 2000:
+            slide.representation_needs.append("Representación especial de unidades completas; no truncar")
+    if len(slides) > 15:
+        raise ValueError(f"S{session.number}: {len(slides)} slides; requiere revisión pedagógica, no recorte automático")
+    return slides
+
+
+def plan_density_errors(plan: list[SlideSpec]) -> list[str]:
+    """Validate context, residues and repetition, not a universal bullet count."""
+    errors: list[str] = []
+    signatures: set[tuple[str, ...]] = set()
+    boilerplate = ("lee el objetivo", "atiende el ejemplo", "atiende al ejemplo", "realiza esta tarea", "no basta con decir")
+    cognitive = r"comprueb|comprobar|explic|predi|ejecut|constru|contrast|clasific|decid|localiz|modific|implement|revis|devuelve|produce|permite|demuestra|prueb|prob|registr|document|señal|acuerd|resultado|entrada|caso|practic|aportación|mantener|ofrecer"
+    for index, slide in enumerate(plan, 1):
+        if slide.kind == "title":
+            continue
+        texts = [text.strip() for text in slide.items if text.strip()]
+        signature = tuple(clean(text) for text in texts)
+        if not texts:
+            errors.append(f"Slide {index}: vacía")
+        elif signature in signatures:
+            errors.append(f"Slide {index}: contenido visible duplicado")
+        signatures.add(signature)
+        if any(clean(text).lower().startswith(boilerplate) for text in texts):
+            errors.append(f"Slide {index}: boilerplate")
+        if texts and all(re.fullmatch(r"(?:Pregunta[^?\n]*|Tiempo previsto|Actividad|Evidencia|Objetivo|Secuencia|Conceptos|Ejemplo):", text, re.I) for text in texts):
+            errors.append(f"Slide {index}: etiquetas sin contenido")
+        if len(texts) == 1 and not ("```" in texts[0] or "→" in texts[0] or "->" in texts[0]
+                                   or "?" in texts[0] or re.search(cognitive, texts[0], re.I)):
+            errors.append(f"Slide {index}: fragmento sin acción o contexto suficiente")
+        for unit in slide.pedagogical_units:
+            disposition = slide.unit_dispositions.get(unit.unit_id)
+            if disposition is None or not disposition.reason:
+                errors.append(f"Slide {index}: unidad {unit.unit_id} sin disposición justificada")
+            preserved = "\n".join([*slide.visible_content, *slide.presenter_content])
+            if any(text not in preserved for text in [*unit.visible_content, *unit.presenter_content]):
+                errors.append(f"Slide {index}: unidad {unit.unit_id} partida o contenido perdido")
+    return errors
+
+
+def unit_coverage(session: Session, plan: list[SlideSpec]) -> dict[str, int]:
+    expected = {unit.unit_id for unit in build_pedagogical_units(session)}
+    dispositions = {key: value for slide in plan for key, value in slide.unit_dispositions.items()}
+    counts = {state: sum(value.state == state for key, value in dispositions.items() if key in expected)
+              for state in ("visible", "presenter", "merged", "deferred", "ignored_with_reason")}
+    return {"total": len(expected), **counts, "sin_disposicion": len(expected - dispositions.keys())}
+
+
+def plan_slides_legacy(session: Session) -> list[SlideSpec]:
     """Construye un plan variable según el contenido real de la sesión."""
     slides = [SlideSpec("title", session.topic, [], f"{session.hito} · {session.duration}")]
 

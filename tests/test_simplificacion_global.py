@@ -4,6 +4,9 @@ from zipfile import ZipFile
 
 from openpyxl import load_workbook
 from pptx import Presentation
+import pytest
+
+from test_generar_presentaciones_sesiones import load_module, source_pair
 
 ROOT = Path(__file__).resolve().parents[1]
 ALUMNADO = ROOT / "01-ALUMNADO"
@@ -93,7 +96,25 @@ def test_zips_validos_y_sin_temporales():
             assert not any(re.search(r"(^|/)(__pycache__|\.obsidian)(/|$)|\.pyc$", name) for name in zf.namelist())
 
 
-def test_modalidad_explicita_y_coherente_en_106_parejas():
+@pytest.fixture(scope="module")
+def session_parser():
+    return load_module()
+
+
+def assert_explicit_grouping(session):
+    assert session.grouping.strip(), f"S{session.number}: modalidad ausente tras parseo"
+    assert session.field_sources["grouping"] == "teacher", f"S{session.number}: modalidad no declarada en la guía"
+    modes = {mode.upper() for mode in re.findall(r"\b(?:individual|parejas|equipo)\b", session.grouping, re.I)}
+    assert modes, f"S{session.number}: agrupamiento no comprensible"
+    if session.folder == "h1":
+        # La guía canónica desarrolla las fases; las fichas conservan un resumen legacy.
+        required = {mode for blocks in session.semantic_blocks.values() for block in blocks
+                    for mode in re.findall(r"\b(?:INDIVIDUAL|PAREJAS|EQUIPO)\b", block.heading)}
+        assert required <= modes, f"S{session.number}: agrupamiento perdido: {required - modes}"
+    return modes
+
+
+def test_modalidad_explicita_y_coherente_en_106_parejas(session_parser):
     allowed = {
         "Individual", "Equipo", "Parejas",
         "Individual → puesta en común en equipo",
@@ -107,12 +128,15 @@ def test_modalidad_explicita_y_coherente_en_106_parejas():
         teacher = PROFESORADO / "02-SESIONES" / student.relative_to(ALUMNADO / "03-SESIONES")
         teacher = teacher.with_name(teacher.name.replace("-alumnado.md", "-docente.md"))
         student_text = student.read_text(encoding="utf-8")
-        teacher_text = teacher.read_text(encoding="utf-8")
+
         match = re.search(r"\*\*Modalidad:\*\* (.+?)\.", student_text)
         assert match, student
         mode = match.group(1)
         assert mode in allowed
-        assert f"| Modalidad | {mode} |" in teacher_text
+        session = session_parser.parse_session(teacher, student)
+        assert_explicit_grouping(session)
+        if session.folder != "h1":
+            assert session.grouping == mode, number
         counts[mode] += 1
         if "→" in mode:
             assert "## Organización del trabajo" in student_text
@@ -123,6 +147,50 @@ def test_modalidad_explicita_y_coherente_en_106_parejas():
         "Individual → puesta en común en equipo": 18,
         "Equipo → comprobación individual": 12,
     }
+
+
+@pytest.mark.parametrize("number, expected", [
+    ("206", "INDIVIDUAL → EQUIPO"),
+    ("210", "INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL"),
+    ("213", "INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL"),
+    ("215", "Defensa INDIVIDUAL; ensayo y revisión por PAREJAS; review, retrospectiva y entrega en EQUIPO"),
+])
+def test_modalidad_canonica_h1_conserva_sus_fases(session_parser, number, expected):
+    session = session_parser.parse_session(*source_pair(number))
+    assert_explicit_grouping(session)
+    assert session.grouping == expected
+
+
+@pytest.mark.parametrize("label", ["Modalidad", "Modalidad de trabajo", "Modalidad combinada", "Agrupamiento"])
+def test_contrato_modalidad_admite_etiquetas_del_parser(session_parser, tmp_path, label):
+    teacher, student = source_pair("206")
+    text = teacher.read_text(encoding="utf-8").replace("| Modalidad de trabajo |", f"| {label} |")
+    copy = tmp_path / "h1" / teacher.name
+    copy.parent.mkdir()
+    copy.write_text(text, encoding="utf-8")
+    session = session_parser.parse_session(copy, student)
+    assert assert_explicit_grouping(session) == {"INDIVIDUAL", "EQUIPO"}
+
+
+@pytest.mark.parametrize("row", ["", "| Modalidad de trabajo | |", "| Modalidad de trabajo | ** ** |"])
+def test_contrato_modalidad_rechaza_declaracion_ausente_o_vacia(session_parser, tmp_path, row):
+    teacher, student = source_pair("206")
+    text = teacher.read_text(encoding="utf-8").replace("| Modalidad de trabajo | **INDIVIDUAL → EQUIPO** |", row)
+    copy = tmp_path / "h1" / teacher.name
+    copy.parent.mkdir()
+    copy.write_text(text, encoding="utf-8")
+    session = session_parser.parse_session(copy, student)
+    with pytest.raises(AssertionError, match="modalidad ausente|modalidad no declarada"):
+        assert_explicit_grouping(session)
+
+
+@pytest.mark.parametrize("grouping", ["", "INDIVIDUAL", "sin agrupamiento definido"])
+def test_contrato_modalidad_detecta_perdida_en_el_modelo(session_parser, grouping):
+    from dataclasses import replace
+
+    session = session_parser.parse_session(*source_pair("213"))
+    with pytest.raises(AssertionError, match="modalidad ausente|agrupamiento perdido|agrupamiento no comprensible"):
+        assert_explicit_grouping(replace(session, grouping=grouping))
 
 
 def test_modalidades_criticas_y_defensas():

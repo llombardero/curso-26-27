@@ -432,16 +432,13 @@ def test_full_collection_avoids_sparse_and_template_only_slides(generator):
     for session in sessions:
         plan = generator.plan_slides(session)
         assert len(plan) <= 15, session.number
-        assert all(
-            len(slide.items) != 1
-            for slide in plan
-            if slide.kind in {"timeline", "activity", "evidence"}
-        ), session.number
+        density_scope = [slide for slide in plan if slide.kind in {"timeline", "activity", "evidence"}]
+        assert generator.plan_density_errors(density_scope) == [], (session.number, generator.plan_density_errors(density_scope))
         for slide in plan:
             if slide.kind == "activity":
                 assert not any(item.startswith(boilerplate) for item in slide.items), session.number
 
-    # TODO Fase 2: S212 se excluye temporalmente porque el parser semántico restaurado expone más contenido del que plan_slides puede representar actualmente. Debe reincorporarse cuando el planner use semantic_blocks.
+    # Contextos integrados, incluida S212: no se excluye ninguna sesión H1.
     for number in ("212", "232", "245", "290", "304"):
         teacher, student = source_pair(number)
         kinds = [slide.kind for slide in generator.plan_slides(generator.parse_session(teacher, student))]
@@ -673,3 +670,296 @@ def test_timeline_units_also_preserve_simultaneous_organization_instructions(gen
     content = "\n".join(unit_text(unit) for unit in units)
     assert "No organices la sesión como una única actividad" in content
     assert "Distribuye funciones dentro de cada equipo" in content
+
+
+def test_semantic_dispatch_is_explicit_and_slide_items_are_one_projection(generator):
+    session = generator.parse_session(*source_pair("206"))
+    plan = generator.plan_slides(session)
+    assert generator.SEMANTIC_PLANNER_HITOS == {"h1"}
+    assert plan == generator.plan_slides_semantic(session)
+    assert any(slide.pedagogical_units for slide in plan)
+    assert all(slide.items is slide.visible_content for slide in plan)
+    assert generator.plan_slides(generator.parse_session(*source_pair("203"))) == generator.plan_slides_legacy(generator.parse_session(*source_pair("203")))
+    diagnostics = generator.unit_coverage(session, plan)
+    assert diagnostics["sin_disposicion"] == 0
+    assert diagnostics["total"] == len(generator.build_pedagogical_units(session))
+    assert len(plan) <= 15
+
+
+def test_semantic_s212_keeps_practice_before_mechanism_contrast(generator):
+    session = generator.parse_session(*source_pair("212"))
+    plan = generator.plan_slides(session)
+    def location(heading):
+        return next(index for index, slide in enumerate(plan) if any(unit.source_refs[0].heading == heading
+                    and "visible" in slide.unit_dispositions[unit.unit_id].channels for unit in slide.pedagogical_units))
+    assert location("Leer, convertir, predecir y probar — INDIVIDUAL") < location("Conversión implícita")
+    assert location("Comparar, probar y explicar — PAREJAS") < location("Casting y pérdida de información")
+    assert plan[location("Conversión implícita")].timeline_refs
+    casting = next(unit for unit in generator.build_pedagogical_units(session) if unit.source_refs[0].heading == "Casting y pérdida de información")
+    slide = plan[location("Casting y pérdida de información")]
+    assert all(text in slide.items for text in casting.visible_content if text != "Pregunta:")
+    assert "Pregunta:" in slide.presenter_content and "Pregunta:" not in slide.items
+
+
+def visible_location(plan, heading):
+    return next(index for index, slide in enumerate(plan) if any(unit.source_refs[0].heading == heading
+                and "visible" in slide.unit_dispositions[unit.unit_id].channels for unit in slide.pedagogical_units))
+
+
+def test_semantic_timeline_orders_real_actions_not_incidental_verbs(generator):
+    plan = generator.plan_slides(generator.parse_session(*source_pair("212")))
+    assert visible_location(plan, "Pedir, leer, guardar y utilizar") <= visible_location(plan, "Parsear texto para obtener un número")
+    assert visible_location(plan, "Parsear texto para obtener un número") <= visible_location(plan, "Leer, convertir, predecir y probar — INDIVIDUAL")
+    plan = generator.plan_slides(generator.parse_session(*source_pair("206")))
+    assert visible_location(plan, "Activación — INDIVIDUAL") < visible_location(plan, "Actividad de clasificación — EQUIPO")
+    plan = generator.plan_slides(generator.parse_session(*source_pair("214")))
+    assert visible_location(plan, "Consolidación — EQUIPO") < visible_location(plan, "Comprobación externa — PAREJAS")
+    plan = generator.plan_slides(generator.parse_session(*source_pair("213")))
+    assert visible_location(plan, "Comprender, traducir y predecir — INDIVIDUAL") < visible_location(plan, "Contrastar, implementar y probar — PAREJAS")
+    assert visible_location(plan, "Contrastar, implementar y probar — PAREJAS") < visible_location(plan, "Comprobar comprensión — INDIVIDUAL")
+
+
+def test_syntax_error_named_cierre_is_not_a_closure_slide(generator):
+    plan = generator.plan_slides(generator.parse_session(*source_pair("208")))
+    index = visible_location(plan, "Llave de cierre ausente")
+    assert plan[index].kind != "closure"
+    assert index < visible_location(plan, "Comparar, depurar y explicar — PAREJAS")
+
+
+def test_semantic_parent_context_is_merged_with_its_children(generator):
+    plan = generator.plan_slides(generator.parse_session(*source_pair("214")))
+    context = plan[visible_location(plan, "Actividad central")]
+    assert any(unit.source_refs[0].heading != "Actividad central" and any(ref.heading == "Actividad central" for ref in unit.source_refs[1:]) for unit in context.pedagogical_units)
+    plan = generator.plan_slides(generator.parse_session(*source_pair("215")))
+    assert visible_location(plan, "Defensa práctica individual") == visible_location(plan, "Protocolo básico")
+    assert visible_location(plan, "Entrega oficial Moodle y evidencias que permanecen") == visible_location(plan, "Contenido de la entrega")
+
+
+def test_s215_plan_preserves_parallel_lanes_and_a_traceable_bank_sample(generator):
+    session = generator.parse_session(*source_pair("215"))
+    plan = generator.plan_slides(session)
+    concurrency = plan[0].relations["concurrency"]
+    assert concurrency["intervals"] == [{"time":block.time, "teacher":block.action, "details":block.details} for block in session.timeline]
+    assert all(concurrency["lanes"][lane] for lane in ("DOCENTE", "PAREJAS", "EQUIPO"))
+    assert all(slide.relations.get("schedule") == "concurrent_support" for slide in plan[1:] if slide.kind != "closure")
+    bank = [unit for unit in generator.build_pedagogical_units(session) if unit.function == "question_bank"]
+    defense = plan[visible_location(plan, "Protocolo básico")]
+    presenter = "\n".join(text for slide in plan for text in slide.presenter_content)
+    assert all(text in presenter for unit in bank for text in unit.presenter_content)
+    samples = defense.relations["question_samples"]
+    assert len(samples) == 6
+    assert all(sample in defense.visible_content for sample in samples.values())
+    assert all(sample in unit_text(next(unit for unit in bank if unit.unit_id == unit_id)) for unit_id, sample in samples.items())
+    recovery = next(unit for unit in generator.build_pedagogical_units(session) if unit.source_refs[0].heading == "Recuperación ante una defensa insuficiente")
+    assert any("recuper" in text.lower() for text in defense.visible_content)
+    assert recovery.unit_id in defense.unit_dispositions
+
+
+@pytest.mark.parametrize("number", ["212", "213", "215"])
+def test_semantic_closure_prefers_the_complete_source_question(generator, number):
+    import re
+    session = generator.parse_session(*source_pair(number))
+    units = generator.build_pedagogical_units(session)
+    closing = next(unit for unit in units if unit.source_refs[0].heading in {"Comprueba lo aprendido", "Cierre de H1"})
+    question = next(text for text in closing.visible_content if text.startswith("> ¿"))
+    assert question in semantic_text(session, *session.semantic_blocks.keys())
+    plan = generator.plan_slides(session)
+    slide = plan[visible_location(plan, closing.source_refs[0].heading)]
+    assert slide.kind == "closure" and slide.items[-1] == question
+    assert not any(re.fullmatch(r"Pregunta[^?\n]*:", text) for text in slide.items)
+    assert all(text in "\n".join([*slide.items, *slide.presenter_content]) for text in closing.visible_content)
+
+
+@pytest.mark.parametrize("number", ["214", "215"])
+def test_internal_continuity_is_never_student_evidence(generator, number):
+    session = generator.parse_session(*source_pair(number))
+    plan = generator.plan_slides(session)
+    continuation = next(unit for unit in generator.build_pedagogical_units(session) if unit.function == "continuity")
+    locations = [slide for slide in plan if continuation.unit_id in slide.unit_dispositions]
+    assert len(locations) == 1
+    assert locations[0].unit_dispositions[continuation.unit_id].channels == ("presenter",)
+    assert all(text in locations[0].presenter_content for text in continuation.presenter_content)
+    assert not any(text in slide.items for slide in plan for text in continuation.presenter_content)
+
+
+def test_teaching_model_inside_observation_is_shared_not_hidden(generator):
+    session = generator.parse_session(*source_pair("210"))
+    unit = next(unit for unit in generator.build_pedagogical_units(session) if unit.function == "observation")
+    model = next(text for text in unit.presenter_content if text.startswith("```text"))
+    plan = generator.plan_slides(session)
+    assert model in "\n".join(text for slide in plan for text in slide.items)
+    target = next(slide for slide in plan if model in slide.items)
+    assert any("planificar" in member.source_refs[0].heading.lower() for member in target.pedagogical_units)
+    assert model in target.presenter_content
+
+
+def test_pedagogical_density_accepts_an_atomic_program_but_rejects_residues(generator):
+    valid = generator.SlideSpec("example", "Predice antes de ejecutar", ["```java\npublic class Main {\n    public static void main(String[] argumentos) {\n        System.out.println(2 < 1);\n    }\n}\n```"])
+    assert generator.plan_density_errors([valid]) == []
+    for text in ("Pregunta principal:", "La función creada.", "Lee el objetivo", "Atiende el ejemplo"):
+        assert generator.plan_density_errors([generator.SlideSpec("activity", "Actividad", [text])])
+    duplicate = generator.SlideSpec("example", valid.title, list(valid.items))
+    assert generator.plan_density_errors([valid, duplicate])
+
+
+@pytest.mark.parametrize("number", [str(number) for number in range(206, 216)])
+def test_every_h1_unit_has_one_destination_and_preserves_its_content(generator, number):
+    session = generator.parse_session(*source_pair(number))
+    units = generator.build_pedagogical_units(session)
+    plan = generator.plan_slides(session)
+    assert len(plan) <= 15
+    assert generator.plan_density_errors(plan) == []
+    assert generator.unit_coverage(session, plan)["sin_disposicion"] == 0
+    for unit in units:
+        locations = [slide for slide in plan if unit.unit_id in slide.unit_dispositions]
+        assert len(locations) == 1, unit.unit_id
+        slide = locations[0]
+        assert unit in slide.pedagogical_units
+        assert all(ref in slide.source_refs for ref in unit.source_refs)
+        assert slide.relations["roles"][unit.unit_id] == unit.role
+        disposition = slide.unit_dispositions[unit.unit_id]
+        assert disposition.reason
+        content = "\n".join([*slide.visible_content, *slide.presenter_content])
+        assert all(text in content for text in [*unit.visible_content, *unit.presenter_content]), (number, unit.source_refs[0].heading)
+    assert plan[0].relations["modality"] == session.grouping
+    assert {index for slide in plan for index in slide.timeline_refs} == set(range(len(session.timeline)))
+    # Missing disposition is observable, rather than silently counted as coverage.
+    del next(slide for slide in plan if units[0].unit_id in slide.unit_dispositions).unit_dispositions[units[0].unit_id]
+    assert generator.unit_coverage(session, plan)["sin_disposicion"] == 1
+
+
+def test_legacy_plans_match_the_clean_commit_for_all_non_adopted_hitos(generator):
+    import hashlib
+    import json
+    import subprocess
+    import types
+
+    baseline = types.ModuleType("baseline_planner_22a")
+    baseline.__file__ = str(MODULE_PATH)
+    sys.modules[baseline.__name__] = baseline
+    source = subprocess.check_output(["git", "show", "37ff8f1:generar_presentaciones_sesiones.py"], cwd=ROOT, text=True)
+    exec(compile(source, str(MODULE_PATH), "exec"), baseline.__dict__)
+    def signature(plan):
+        payload = [(slide.kind, slide.title, slide.items, slide.subtitle) for slide in plan]
+        return hashlib.sha256(json.dumps(payload, ensure_ascii=False).encode()).hexdigest()
+    sessions = generator.collect_sessions(None)
+    assert len(sessions) == 106
+    checked = 0
+    for session in sessions:
+        if session.folder != "h1":
+            expected = baseline.plan_slides(session)
+            assert signature(generator.plan_slides_legacy(session)) == signature(expected), session.number
+            assert signature(generator.plan_slides(session)) == signature(expected), session.number
+            checked += 1
+    assert checked == 96
+
+
+def test_oversize_atomic_program_is_flagged_not_split(generator, monkeypatch):
+    session = generator.parse_session(*source_pair("212"))
+    code = "```java\npublic class Main {\n    public static void main(String[] argumentos) {\n" + "        System.out.println(2 < 1);\n" * 100 + "    }\n}\n```"
+    unit = generator.PedagogicalUnit("complete-program", [generator.SourceRef("teacher", "Programa completo", 0)], "examples", "core", [code])
+    monkeypatch.setattr(generator, "build_pedagogical_units", lambda session: [unit])
+    plan = generator.plan_slides(session)
+    projected = [slide for slide in plan if code in slide.items]
+    assert len(projected) == 1 and projected[0].items == [code]
+    assert projected[0].representation_needs
+    assert generator.unit_coverage(session, plan)["sin_disposicion"] == 0
+
+
+def test_semantic_planner_refuses_more_than_fifteen_irreducible_slides(generator, monkeypatch):
+    session = generator.parse_session(*source_pair("212"))
+    units = [generator.PedagogicalUnit(str(index), [generator.SourceRef("teacher", f"Actividad {index} — INDIVIDUAL", index)], "activity", "core", ["Explica y comprueba este caso. " * 100]) for index in range(16)]
+    monkeypatch.setattr(generator, "build_pedagogical_units", lambda session: units)
+    with pytest.raises(ValueError, match="no recorte automático"):
+        generator.plan_slides(session)
+
+
+@pytest.mark.parametrize("number", ["206", "212", "213", "214", "215"])
+def test_critical_plan_contracts_bind_source_units_roles_and_destinations(generator, number):
+    session = generator.parse_session(*source_pair(number))
+    source = session.teacher_source.read_text(encoding="utf-8")
+    units = generator.build_pedagogical_units(session)
+    plan = generator.plan_slides(session)
+    visible = "\n".join(text for slide in plan for text in [slide.title, *slide.items])
+    def projected(heading):
+        unit = next(unit for unit in units if unit.source_refs[0].heading == heading)
+        slide = plan[visible_location(plan, heading)]
+        assert generator.heading_blocks(source)[unit.source_refs[0].block_index][0] == heading
+        assert any(block.heading == heading for blocks in session.semantic_blocks.values() for block in blocks)
+        assert unit in slide.pedagogical_units and unit.source_refs[0] in slide.source_refs
+        assert "visible" in slide.unit_dispositions[unit.unit_id].channels
+        return unit, slide
+    if number == "206":
+        criteria = [projected(heading) for heading in ("Correcto", "Eficiente", "Mantenible")]
+        assert all(slide is criteria[0][1] for _, slide in criteria)
+        classification, slide = projected("Actividad de clasificación — EQUIPO")
+        assert all(text in "\n".join(slide.items) for text in ("saludar", "entra en H1", "más adelante", "fuera del reto"))
+        projected("Acuerdo y Scrum del equipo")
+        assert not any(slide.kind == "evidence" for slide in plan)
+        assert session.grouping == "INDIVIDUAL → EQUIPO"
+    elif number == "212":
+        for heading, tokens in (("Pedir, leer, guardar y utilizar", ("import java.util.Scanner", "public class Main", "nextLine")),
+                                ("Parsear texto para obtener un número", ("String", "Integer.parseInt", "int horas")),
+                                ("parseDouble y parseBoolean", ("String", "Double.parseDouble", "double nota")),
+                                ("Error de ejecución: NumberFormatException", ("NumberFormatException", "compilación", "ejecución"))):
+            unit, slide = projected(heading)
+            assert all(token in "\n".join(slide.items) for token in tokens)
+            assert all(text in "\n".join([*slide.items, *slide.presenter_content]) for text in [*unit.items, *unit.presenter_content])
+        boolean = next(unit for unit in units if "Boolean.parseBoolean" in unit_text(unit))
+        slide = next(slide for slide in plan if boolean.unit_id in slide.unit_dispositions)
+        assert slide.relations["roles"][boolean.unit_id] == "recognition"
+        assert any(unit.role == "core" and "Double.parseDouble" in unit_text(unit) for unit in slide.pedagogical_units)
+    elif number == "213":
+        assert plan[0].title == "Comparaciones, lógica y decisiones"
+        assert "Limpieza, nombres claros y simplicidad" not in visible
+        assert "2 < 1 -> false" in visible and all(operator in visible for operator in ("&&", "||", "!"))
+        unit, slide = projected("Dos caminos con if/else")
+        assert slide.relations["unit_relations"][unit.unit_id]["branches"] == ("condition", "true", "false")
+        practice, slide = projected("Micropráctica defendible — PAREJAS")
+        assert all(token in "\n".join(slide.items) for token in ("rama true", "rama false", "Salida esperada", "Salida obtenida"))
+        for heading in ("Lectura introductoria de decisiones anidadas", "Operador ternario como elección sencilla"):
+            unit, slide = projected(heading)
+            assert unit.role == "recognition" and any(member.role == "core" for member in slide.pedagogical_units)
+    elif number == "214":
+        unit, slide = projected("Qué convierte una prueba en reproducible")
+        assert all(token in "\n".join(slide.items) for token in ("Entrada usada", "Salida esperada", "Salida obtenida", "Demuestra"))
+        assert slide.relations["unit_relations"][unit.unit_id]["reproducible_test"] == ("input", "expected", "obtained", "meaning")
+        projected("Modelo pedagógico de README")
+        projected("Comprobación externa — PAREJAS")
+        assert "S214 prepara enlaces, permisos y documentación; S215 realiza la entrega oficial de H1." in visible
+    else:
+        for heading in ("Protocolo básico", "Ensayo y revisión por parejas", "Review del incremento H1 — EQUIPO", "Retrospectiva H1 — EQUIPO", "Contenido de la entrega", "Comprobación de enlaces y permisos", "Cierre de H1"):
+            projected(heading)
+        assert plan[0].relations["concurrency"]
+
+
+@pytest.mark.parametrize("number,headings", [
+    ("207", ("1. Código fuente", "2. Compilación", "3. Ejecución", "4. Consola", "Programa mínimo y salida esperada")),
+    ("208", ("Programa mínimo: archivo, clase, método, instrucción y salida", "Main no es main", "Orden de ejecución")),
+    ("209", ("La consola como primera interfaz", "Literal textual", "El significado contextual de +")),
+    ("210", ("Mapa mínimo de tipos de Java", "Tipos primitivos y tipo de referencia")),
+    ("211", ("Constante frente a variable", "División entera y división real", "Actualizaciones y estado paso a paso")),
+])
+def test_other_h1_sessions_keep_their_disciplinary_learning(generator, number, headings):
+    plan = generator.plan_slides(generator.parse_session(*source_pair(number)))
+    assert all(visible_location(plan, heading) > 0 for heading in headings)
+    if number == "209":
+        assert visible_location(plan, "Diseño sin IDE — PAREJAS") < visible_location(plan, "Literal textual")
+    if number == "211":
+        assert visible_location(plan, "Predecir y construir — INDIVIDUAL") < visible_location(plan, "División entera y división real")
+
+
+def test_documentation_model_and_access_instructions_precede_external_reproduction(generator):
+    plan = generator.plan_slides(generator.parse_session(*source_pair("214")))
+    assert visible_location(plan, "Modelo pedagógico de README") <= visible_location(plan, "Qué convierte una prueba en reproducible")
+    assert visible_location(plan, "Enlace profundo y permiso útil") < visible_location(plan, "Comprobación externa — PAREJAS")
+
+
+def test_density_diagnoses_a_unit_silently_cut_after_projection(generator):
+    session = generator.parse_session(*source_pair("213"))
+    plan = generator.plan_slides(session)
+    unit = next(unit for unit in generator.build_pedagogical_units(session) if unit.source_refs[0].heading == "Dos caminos con if/else")
+    slide = plan[visible_location(plan, "Dos caminos con if/else")]
+    code = next(text for text in unit.visible_content if text.startswith("```java"))
+    slide.visible_content[slide.visible_content.index(code)] = code.split("else")[0]
+    assert any("partida" in error for error in generator.plan_density_errors(plan))
