@@ -69,6 +69,8 @@ def normalize_presentation_atom(atom, java_literals):
 
 def enrich(r, session, frames):
     """Derive legible, source-anchored views; retain full originals in notes."""
+    if frames and all(frame.relations.get('source_supports_enriched') for frame in frames):
+        return frames
     result = list(frames)
     # Sibling criteria must carry the same explicit README parent, not merely
     # coincidentally share titles or a session number.
@@ -220,12 +222,26 @@ def enrich(r, session, frames):
                 **relations.get('presentation_normalizations', {}), **changes,
             }
         normalized.append(replace(frame, atoms=atoms, relations=relations))
-    return normalized
+    fitted = []
+    for frame in normalized:
+        start = r.composition.frame_start(r, frame)
+        height = sum(r.composition.physical_height(r, atom, frame.recognition) + .1
+                     for atom in frame.atoms)
+        splittable = {
+            'concept', 'focus', 'code', 'prediction', 'linked_prediction', 'contrast',
+            'activity', 'check', 'closure', 'recognition', 'source_support', 'readme_support',
+        }
+        if frame.kind in splittable and start + height > 6.84:
+            fitted.extend(r.composition.conservative_partition(r, [frame]))
+        else:
+            fitted.append(frame)
+    return [replace(frame, relations={**frame.relations, 'source_supports_enriched': True})
+            for frame in fitted]
 
 
 def render_readme_support(r, prs, session, frame):
     slide = r.semantic_base(prs, session, frame)
-    y = 1.55
+    y = r.frame_content_top(frame, 1.55)
     for start in range(0, len(frame.atoms), 2):
         bottom = y
         for column, atom in enumerate(frame.atoms[start:start + 2]):
@@ -251,7 +267,7 @@ def render_source_support(r, prs, session, frame):
     lanes = [(frame.atoms, .7, 11.9)] if not columns else [
         ([frame.atoms[i] for i in indices], .7 + n * 6.15, 5.75)
         for n, indices in enumerate(columns)]
-    top = 1.55
+    top = r.frame_content_top(frame, 1.55)
     if columns:
         header = frame.atoms[0]
         height = r.rendered_height(header.text, 11.9, 24)

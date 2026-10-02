@@ -1,575 +1,322 @@
-# S213 — Comparaciones, lógica y decisiones
+# S213 — Limpieza, nombres claros y simplicidad
 
 | Dato | Valor |
 |---|---|
 | Hito | H1 — Primer asistente ejecutable |
 | Duración prevista | 45 minutos |
-| Fase HEXA del hito | Ejecutar — crear |
+| Fase HEXA del hito | Ejecutar — revisar y explicar |
 | Modalidad de trabajo | **INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL** |
 
-> Basada en `00-GUION-DOCENTE-H1-COMPLETO.md`.
+> Alineada con la ficha del alumnado y con la frontera curricular H1/H2.
 
 ## Qué vas a aprender
 
-Al terminar, debes construir expresiones booleanas, combinar condiciones y usar una decisión `if/else` con las dos ramas probadas. También debes leer una decisión anidada sencilla y reconocer el operador ternario como una elección limitada de valor.
+Al terminar, debes revisar el incremento H1 para mejorar sus nombres significativos, conservar solo comentarios útiles y aplicar simplicidad eliminando complejidad innecesaria. Debes comprobar que el código sigue funcionando y defender cada decisión de limpieza sin cambiar el comportamiento observable.
+
+## Contrato curricular de S213
+
+### Núcleo — core
+
+- nombres significativos para clases, variables y constantes;
+- comentarios útiles que explican intención o contexto, no lo obvio;
+- simplicidad y ausencia de complejidad innecesaria;
+- revisión, limpieza, ejecución y explicación del código H1.
+
+### Contexto para leer — recognition
+
+- expresiones simples ya presentes en el incremento H1;
+- comparación o resultado booleano solo cuando sea necesario para leer, explicar o renombrar código existente.
+
+Estos elementos se reconocen en contexto. No se amplía su dificultad ni se convierten en una práctica evaluable propia.
+
+### Fuera del alcance — out_of_scope
+
+- construir o dominar `if/else`;
+- decisiones anidadas;
+- operador ternario como técnica;
+- condiciones encadenadas;
+- menús;
+- control de flujo como contenido central.
+
+Su consolidación corresponde a H2. No se introduce material nuevo de H2 para compensar lo que queda fuera de S213.
 
 ## Antes de entrar en clase
 
-- [ ] Abrir y ejecutar el proyecto que utilizará el alumnado.
-- [ ] Preparar una alternativa en pareja si falla un equipo.
-- [ ] Dejar visibles dos valores de prueba que recorran ramas distintas.
-- [ ] Reservar los últimos minutos para una comprobación individual real.
-- [ ] Comprobar que el código inicial no adelanta menús, bucles ni decisiones complejas de H2.
+- [ ] Abrir y ejecutar el proyecto H1 que revisará el alumnado.
+- [ ] Preparar una copia o rama de trabajo recuperable.
+- [ ] Seleccionar un fragmento real con nombres mejorables, un comentario redundante o estructura innecesariamente complicada.
+- [ ] Comprobar que el ejemplo no exige aprender control de flujo nuevo.
+- [ ] Reservar los últimos minutos para una explicación individual.
 
 ## Material imprescindible
 
 - Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles.
 - Proyecto H1 accesible desde el repositorio del equipo.
-- Pizarra o espacio proyectable para predicciones, expresiones y recorridos.
+- Una forma reproducible de ejecutar el comportamiento antes y después de la limpieza.
 
 ## Apertura docente
 
 Di en voz alta:
 
-> Hoy MiniJarvis empieza a decidir algo muy pequeño. No haremos menús ni bucles. Hoy queremos entender que una comparación produce `true` o `false`, y que `if/else` usa ese resultado para elegir una rama.
+> Hoy no añadimos funcionalidades. Revisamos el código H1 para que otra persona pueda leerlo, ejecutarlo y explicar por qué cada línea sigue ahí.
 
-Aclara desde el principio:
+Aclara el límite:
 
-> Antes de ejecutar, predice qué ocurrirá y qué rama se recorrerá.
+> Limpiar no significa reescribir por gusto. Primero conservamos el comportamiento; después mejoramos nombres, comentarios y simplicidad con una razón comprobable.
 
 ## Temporalización orientativa
 
 | Tiempo | Acción |
 |---|---|
-| 0–5 min | Presentar la finalidad: una comparación produce un booleano y una decisión usa ese resultado. |
-| 5–12 min | Contrastar asignación/comparación, trabajar límites y predecir resultados. |
-| 12–18 min | Traducir `&&`, `\|\|` y `!` entre lenguaje natural y Java. |
-| 18–27 min | Practicar la decisión central con `if/else`, validación y dos ramas. |
-| 27–29 min | Leer de forma introductoria una decisión anidada, sin profundizar. |
-| 29–31 min | Presentar el ternario como elección sencilla y limitada de valor. |
-| 31–39 min | Implementar en parejas la micropráctica y probar las dos ramas. |
-| 39–43 min | Realizar la comprobación individual: señalar, predecir, modificar, ejecutar y explicar. |
-| 43–45 min | Revisar claridad y cerrar con el criterio de prueba reproducible. |
+| 0–5 min | Presentar el propósito y ejecutar el incremento H1 antes de modificarlo. |
+| 5–10 min | Detectar nombres vagos, comentarios redundantes y elementos difíciles de explicar. |
+| 10–17 min | Contrastar ejemplos de nombres y comentarios útiles. |
+| 17–25 min | Revisar individualmente el código H1 con la checklist. |
+| 25–34 min | Aplicar una limpieza mínima y volver a ejecutar. |
+| 34–40 min | Revisar en parejas la claridad y la conservación del comportamiento. |
+| 40–44 min | Comprobación individual: señalar, justificar y ejecutar una decisión. |
+| 44–45 min | Cerrar con una mejora concreta y una exclusión consciente. |
 
 ## Ideas y ejemplos
 
-### Comparaciones y resultados booleanos
+### Nombres que explican intención
 
-Una comparación no devuelve uno de los operandos. Produce un valor booleano: `true` o `false`.
+Contrasta nombres vagos con nombres que permiten anticipar el propósito:
 
-Empieza con comparadores:
+```java
+int x = 4;
+String s = "MiniJarvis";
+boolean b = true;
+```
+
+```java
+int horasEstudio = 4;
+String nombreAsistente = "MiniJarvis";
+boolean objetivoAlcanzado = true;
+```
+
+Pregunta:
+
+> ¿Qué versión permite explicar el dato sin buscar todas sus apariciones?
+
+No conviertas el ejercicio en una lista de nombres “correctos”. Un nombre debe ser coherente con lo que representa en ese programa.
+
+### Renombrar sin cambiar el comportamiento
+
+Trabaja una transformación pequeña y comprobable:
+
+```java
+final int MAX = 8;
+int h = 5;
+System.out.println(h + "/" + MAX);
+```
+
+```java
+final int MAX_HORAS = 8;
+int horasEstudio = 5;
+System.out.println(horasEstudio + "/" + MAX_HORAS);
+```
+
+Antes de editar, registra la salida. Después de renombrar, ejecuta otra vez y comprueba que la salida no cambia.
+
+### Comentarios útiles y comentarios redundantes
+
+Un comentario redundante repite la instrucción:
+
+```java
+// Muestra el nombre
+System.out.println(nombreAsistente);
+```
+
+Un comentario útil conserva una intención que no resulta obvia en la línea:
+
+```java
+// Se conserva este formato porque coincide con la evidencia del README.
+System.out.println("Asistente: " + nombreAsistente);
+```
+
+Pregunta:
+
+> Si eliminamos el comentario, ¿se pierde una decisión o solo una repetición?
+
+No añadas comentarios para compensar nombres confusos. Primero intenta que el código se explique mediante nombres y estructura.
+
+### Quitar adornos sin quitar significado
+
+Revisa elementos que no aportan al incremento H1:
+
+- variables intermedias que no aclaran ninguna idea;
+- mensajes duplicados;
+- comentarios que narran cada instrucción;
+- código antiguo comentado;
+- nombres distintos para la misma idea;
+- líneas que nadie puede justificar.
+
+Cada eliminación debe responder:
+
+1. ¿Qué aportaba esta línea?
+2. ¿Sigue existiendo el comportamiento necesario?
+3. ¿Cómo lo hemos comprobado?
+
+### Orden comprensible
+
+Sin introducir funciones o estructuras nuevas, comprueba que el flujo de lectura de H1 sea reconocible:
 
 ```text
-5 > 3 -> true
-2 < 1 -> false
-5 == 5 -> true
-5 == 4 -> false
-5 != 4 -> true
+datos configurados
+entrada, si la fuente H1 ya la utiliza
+operaciones simples
+salida observable
 ```
 
-Amplía oralmente el mapa:
+El orden no es una plantilla rígida. Debe permitir explicar el programa de arriba abajo sin saltos arbitrarios.
 
-- `>`: mayor que;
-- `<`: menor que;
-- `==`: igual a;
-- `!=`: distinto de;
-- `>=`: mayor o igual que;
-- `<=`: menor o igual que.
+### Leer expresiones existentes — PARA RECONOCER
 
-No lo presentes como una lista para memorizar. Para cada expresión, pide al alumnado que lea la relación en lenguaje natural y prediga el resultado.
-
-Pregunta:
-
-> ¿`5 > 3` devuelve 5, devuelve 3 o devuelve una respuesta lógica?
-
-### Asignar no es comparar
-
-Contrasta asignar y comparar:
+Puede aparecer una expresión ya presente en H1 para comprobar si el nombre conserva su significado:
 
 ```java
-int horas = 4;  // asignación
-horas == 4      // comparación: true o false
+int minutosEstudio = horasEstudio * 60;
+boolean tieneNombre = !nombreAsistente.isBlank();
 ```
 
-Di:
+La expresión o el booleano son contexto de lectura. La tarea consiste en explicar los nombres, la intención y la simplicidad del fragmento, no en construir condiciones nuevas.
 
-> `=` guarda o asigna un valor. `==` compara dos valores y produce `true` o `false`.
+### Evitar una falsa simplificación
 
-Pregunta:
+No aceptes una modificación solo porque reduce líneas. Una versión más corta puede ser más difícil de explicar.
 
-> En `int horas = 4`, ¿qué se guarda? En `horas == 4`, ¿qué resultado se produce?
+Criterio:
 
-Trabaja límites:
-
-```java
-int horas = 4;
-horas > 4
-horas >= 4
-```
-
-Pregunta:
-
-> Predice ambas expresiones. ¿Qué cambia exactamente cuando añadimos `=` al comparador?
-
-Recuerda:
-
-> En esta sesión no usamos `==` para comparar `String`.
-
-### Operadores lógicos desde el lenguaje natural
-
-Introduce `&&`, `||` y `!` partiendo de frases que puedan razonarse.
-
-```java
-boolean puedeEmpezar = tieneNombre && tieneObjetivo;
-```
-
-Di:
-
-> MiniJarvis puede comenzar si tiene nombre **y** tiene objetivo. Con `&&`, las dos condiciones deben cumplirse.
-
-```java
-boolean necesitaAyuda = faltaConfiguracion || hayError;
-```
-
-Di:
-
-> MiniJarvis necesita ayuda si falta configuración **o** existe un error. Con `||`, basta con que se cumpla al menos una condición.
-
-```java
-boolean terminada = false;
-boolean pendiente = !terminada;
-```
-
-Resultado esperado:
-
-```text
-pendiente -> true
-```
-
-Di:
-
-> `!` niega el valor booleano: si `terminada` es `false`, `!terminada` es `true`.
-
-Traduce en ambos sentidos:
-
-```text
-Puede continuar si tiene nombre y objetivo -> tieneNombre && tieneObjetivo
-No hay error -> !hayError
-```
-
-Pide más traducciones breves:
-
-- «Tiene nombre o tiene alias» → expresión con `||`.
-- `horas >= 4 && tareas >= 2` → frase en lenguaje natural.
-- `!hayError` → explicación sin símbolos.
-
-### Guardar una condición o usarla directamente
-
-Pasa del booleano a la decisión:
-
-```java
-int horas = 5;
-boolean suficiente = horas >= 4;
-
-if (suficiente) {
-    System.out.println("Objetivo alcanzado");
-}
-```
-
-Pregunta:
-
-> ¿Qué valor queda guardado en `suficiente`? ¿Qué necesita recibir `if`?
-
-Muestra después la condición directa:
-
-```java
-if (horas >= 4) {
-    System.out.println("Objetivo alcanzado");
-}
-```
-
-Pregunta:
-
-> ¿Qué produce `horas >= 4`? ¿Qué tienen en común las dos versiones?
-
-Aclara que ambas formas son válidas. Guardar la condición puede ayudar a nombrar una idea; usarla directamente puede ser suficiente cuando sigue siendo clara.
-
-### Un contraejemplo que no compila
-
-Contrasta con lo que no sirve:
-
-```java
-if (horas) {
-    System.out.println("Objetivo alcanzado");
-}
-```
-
-Pregunta:
-
-> `horas` contiene un `int`. ¿La condición de `if` responde `true` o `false`?
-
-Explica:
-
-> Java exige que la condición de `if` sea una expresión booleana. Un número entero no se interpreta automáticamente como verdadero o falso.
-
-### Dos caminos con `if/else`
-
-Ahora trabaja dos ramas:
-
-```java
-if (horas >= 4) {
-    System.out.println("Objetivo alcanzado");
-} else {
-    System.out.println("Objetivo pendiente");
-}
-```
-
-Casos obligatorios:
-
-```text
-Caso A: horas = 5
-Caso B: horas = 2
-```
-
-Antes de ejecutar cada caso, pide:
-
-1. valor de entrada;
-2. resultado previsto de la condición;
-3. rama prevista;
-4. salida prevista.
-
-Después de ejecutar, deben contrastar la predicción y explicar cualquier discrepancia.
-
-Otro ejemplo cercano a MiniJarvis:
-
-```java
-if (tieneNombre) {
-    System.out.println("Nombre configurado");
-} else {
-    System.out.println("Falta configurar el nombre");
-}
-```
-
-Pregunta:
-
-> ¿Qué tendría que valer `tieneNombre` para llegar a cada mensaje?
-
-### Validación sencilla de datos
-
-Presenta una comprobación de horas no negativas:
-
-```java
-if (horasEstudio >= 0) {
-    System.out.println("Dato aceptado");
-} else {
-    System.out.println("Las horas no pueden ser negativas");
-}
-```
-
-Pide tres predicciones:
-
-- `horasEstudio = 3`;
-- `horasEstudio = 0`;
-- `horasEstudio = -1`.
-
-Pregunta:
-
-> ¿Qué condición se comprueba? ¿Qué ocurre cuando se cumple? ¿Qué ocurre cuando no se cumple? ¿Por qué el cero pertenece al caso válido?
-
-### Predicción y modificación de valores
-
-```java
-int nota = 5;
-if (nota >= 5) {
-    System.out.println("Superado");
-} else {
-    System.out.println("Pendiente");
-}
-```
-
-Pregunta:
-
-> ¿Qué bloque se ejecutará? Cambia `nota` a 4 y vuelve a predecir antes de ejecutar.
-
-No aceptes que el alumnado modifique valores al azar hasta obtener otra salida. Debe anticipar el efecto del cambio.
-
-### Lectura introductoria de decisiones anidadas
-
-Reconoce un `if` anidado sin profundizar:
-
-```java
-if (tieneNombre) {
-    if (tieneObjetivo) {
-        System.out.println("MiniJarvis está preparado");
-    }
-}
-```
-
-Pregunta:
-
-> ¿Qué condición se comprueba primero? ¿Cuándo se llega a comprobar `tieneObjetivo`?
-
-Otro anidado:
-
-```java
-if (horas >= 4) {
-    if (tareas >= 2) {
-        System.out.println("Objetivo completo");
-    }
-}
-```
-
-Explica oralmente:
-
-```text
-horas >= 4?
-  sí -> tareas >= 2?
-          sí -> mensaje
-```
-
-Di:
-
-> Aquí basta con reconocer y leer la idea. No vamos a convertir H1 en una sesión de condicionales complejos.
-
-### Operador ternario como elección sencilla
-
-Muestra primero una elección de valor con `if/else`:
-
-```java
-String mensaje;
-if (horas >= 4) {
-    mensaje = "Objetivo alcanzado";
-} else {
-    mensaje = "Objetivo pendiente";
-}
-```
-
-Misma elección con `?:`:
-
-```java
-String mensaje = horas >= 4
-        ? "Objetivo alcanzado"
-        : "Objetivo pendiente";
-```
-
-Despieza:
-
-```text
-horas >= 4 -> condición
-"Objetivo alcanzado" -> valor si true
-"Objetivo pendiente" -> valor si false
-```
-
-Más ejemplos para leer, no para complicar:
-
-```java
-String estado = tareas > 0
-        ? "Hay tareas"
-        : "No hay tareas";
-
-String resultado = nota >= 5
-        ? "Superado"
-        : "Pendiente";
-```
-
-Predicción:
-
-```java
-int horas = 2;
-String mensaje = horas >= 4
-        ? "Objetivo alcanzado"
-        : "Objetivo pendiente";
-```
-
-Pregunta:
-
-> ¿Qué valor termina almacenado en `mensaje`?
-
-Advertencia expresa:
-
-> El operador ternario no es un sustituto general de `if`. En H1 solo interesa leer y usar una elección sencilla de valor. Si la lógica deja de ser clara, vuelve a `if/else`.
-
-### Errores frecuentes que debes cortar
-
-- Confundir asignación `=` con comparación `==`.
-- Creer que una comparación devuelve uno de los números en lugar de un booleano.
-- Usar un `int` directamente como condición.
-- Leer `&&` como si bastara una condición.
-- Leer `||` como si tuvieran que cumplirse todas.
-- Probar solo el caso `true` y afirmar que el `else` funciona.
-- Cambiar datos al azar sin predecir la rama.
-- Usar el ternario para ocultar una decisión que se entiende mejor con `if/else`.
+> La versión preferible conserva el comportamiento y permite justificar mejor sus nombres, comentarios y pasos.
 
 ## Secuencia de trabajo y modalidad
 
-### Comprender, traducir y predecir — INDIVIDUAL
+### Diagnosticar la limpieza — INDIVIDUAL
 
-Antes de hablar con otra persona, cada estudiante debe:
+Cada estudiante identifica en el código H1:
 
-- predecir comparaciones con `>`, `<`, `==`, `!=`, `>=` o `<=`;
-- distinguir una asignación de una comparación;
-- anticipar si una expresión será `true` o `false`;
-- traducir una condición entre lenguaje natural y Java;
-- completar o formular una decisión sencilla;
-- escribir la predicción de una salida sin ejecutar todavía.
+- un nombre que ya sea significativo;
+- un nombre que pueda mejorar;
+- un comentario útil o redundante;
+- una línea o elemento cuya necesidad deba justificarse;
+- una comprobación para demostrar que el comportamiento se conserva.
 
-### Contrastar, implementar y probar — PAREJAS
+No se modifica todavía el código.
 
-Las parejas:
+### Acordar cambios mínimos — PAREJAS
 
-- comparan predicciones y explican discrepancias;
-- contrastan expresiones lógicas;
-- implementan o revisan una decisión `if/else`;
-- ejecutan al menos un caso `true` y un caso `false`;
-- contrastan salida prevista y salida observada;
-- explican por qué se recorrió cada rama.
-
-No basta con que una persona escriba mientras la otra observa. Ambas deben poder señalar la condición y anticipar el recorrido.
-
-### Micropráctica defendible — PAREJAS
-
-Construid una práctica pequeña que incluya:
-
-- un dato;
-- al menos una comparación;
-- un resultado booleano guardado o utilizado directamente;
-- una decisión `if/else`;
-- una salida distinta por rama;
-- dos casos de prueba;
-- predicción, ejecución, contraste y explicación.
-
-La práctica puede integrarse en MiniJarvis o realizarse como micropráctica técnica dentro del repositorio.
-
-Secuencia mínima de comprobación:
+La pareja compara los diagnósticos y elige cambios concretos. Para cada cambio anota:
 
 ```text
-Predicción -> ejecución -> contraste -> explicación
+ANTES
+CAMBIO PROPUESTO
+MOTIVO
+COMPROBACIÓN
 ```
 
-Modelo para razonar durante la prueba:
+No se acepta “queda mejor” como motivo suficiente.
 
-```text
-Prueba de decisión if/else
-Condición: horasEstudio >= 4
+### Limpiar y ejecutar — PAREJAS
 
-Caso A:
-Valor usado: horasEstudio = 5
-Salida esperada: Objetivo alcanzado.
-Salida obtenida: Objetivo alcanzado.
-Demuestra: se ejecuta la rama true.
+Aplicad solo los cambios acordados:
 
-Caso B:
-Valor usado: horasEstudio = 2
-Salida esperada: Objetivo pendiente.
-Salida obtenida: Objetivo pendiente.
-Demuestra: se ejecuta la rama false.
-```
+1. ejecutad el estado anterior;
+2. realizad una modificación pequeña;
+3. ejecutad de nuevo;
+4. comparad el comportamiento observable;
+5. conservad o revertid el cambio según la evidencia.
+
+No añadáis funcionalidades nuevas durante esta revisión.
 
 ### Revisar claridad y simplicidad — PAREJAS
 
-Solo después de que la decisión funcione y ambas ramas estén comprobadas, revisad:
+Otra pareja comprueba:
 
-- nombres significativos;
-- orden comprensible;
-- comentarios que expliquen intención, no lo obvio;
-- ausencia de adornos innecesarios;
-- líneas o elementos que nadie sabe explicar.
+- si los nombres expresan lo que representan;
+- si los comentarios conservados aportan intención o contexto;
+- si existe complejidad innecesaria;
+- si cada integrante puede explicar las líneas modificadas;
+- si la evidencia demuestra que H1 sigue funcionando.
 
-Criterio de revisión:
-
-> Primero correcto y explicable; después más claro y simple.
-
-La limpieza es un criterio transversal de calidad. No sustituye comparaciones, booleanos, lógica, decisiones ni pruebas.
+La pareja revisora pregunta antes de proponer una reescritura.
 
 ### Comprobar comprensión — INDIVIDUAL
 
-Al terminar, cualquier persona debe poder, sin apoyo de la pareja:
+Cada persona debe poder:
 
-- señalar una comparación y explicar qué produce;
-- distinguir `=` de `==`;
-- interpretar `true` y `false`;
-- traducir una condición verbal a Java o a la inversa;
-- explicar la condición de un `if`;
-- predecir qué rama se ejecutará;
-- justificar por qué entra en esa rama;
-- modificar un valor y anticipar el efecto;
-- ejecutar y comprobar un caso;
-- explicar por qué se necesitan las dos pruebas;
-- reconocer el flujo de un `if` anidado sencillo;
-- explicar cuándo el ternario resulta adecuado y cuándo conviene volver a `if/else`.
+- señalar una mejora de nombre y justificarla;
+- distinguir un comentario útil de uno redundante;
+- explicar qué se simplificó y qué se conservó;
+- ejecutar una comprobación observable;
+- defender por qué no añadió una funcionalidad nueva.
 
-El producto compartido no sustituye la comprensión individual.
+Para reconocer:
+
+- leer una expresión simple o un booleano ya existente sin convertirlo en el núcleo de la explicación.
 
 ## Evidencia que permanece
 
-- **GitHub:** código con comparación, booleano, `if/else` y casos `true` y `false` reproducibles.
-- **Scrum:** solo si existe realmente una tarea, decisión, mejora, cambio o bloqueo del equipo. No se actualiza por el mero hecho de terminar S213.
-- **Diario individual:** solo si una discrepancia entre predicción y resultado, un error, una decisión o un bloqueo produjo aprendizaje individual significativo.
-- **README / Moodle / Drive / Site:** sin actualización o entrega específica en S213.
+- **GitHub:** incremento H1 limpio, simple, ejecutable y con cambios revisables.
+- **README:** solo se modifica si la limpieza cambia una explicación técnica que ya debía mantenerse allí.
+- **Scrum:** solo si existe una tarea, decisión, mejora o bloqueo real del equipo.
+- **Diario individual:** solo si la revisión produjo un aprendizaje o decisión significativa.
+- **Moodle / Drive / Site:** sin nueva entrega específica en S213.
 
-No se crean capturas rutinarias, formularios, documentos paralelos de pruebas ni registros separados de IA.
+No se crean capturas rutinarias, formularios ni documentos paralelos de limpieza.
 
 ## Observación docente
 
-Durante la práctica y la comprobación individual, observa específicamente:
+Observa específicamente:
 
-- que distingue `=` de `==` y puede decir si está asignando o comparando;
-- que comprende que una comparación produce un booleano;
-- que interpreta correctamente `true` y `false`;
-- que explica `&&`, `||` y `!` mediante condiciones concretas;
-- que traduce una condición verbal a Java y una expresión Java a lenguaje natural;
-- que identifica la condición de un `if`;
-- que predice la rama antes de ejecutar;
-- que prueba deliberadamente un caso `true` y otro `false`;
-- que contrasta la salida observada con su predicción;
-- que modifica un valor y anticipa el efecto sin ensayo aleatorio;
-- que puede explicar individualmente la decisión implementada;
-- que solo revisa nombres, comentarios y simplicidad después de obtener una decisión correcta y explicable.
-- que trabaja con datos ficticios y no introduce datos personales ni credenciales en el código o en las pruebas.
+- que el alumnado ejecuta antes y después de modificar;
+- que conserva el comportamiento del incremento;
+- que elige nombres vinculados a la intención real;
+- que no conserva comentarios redundantes por inercia;
+- que no elimina una línea que no comprende sin investigarla;
+- que evita reescrituras amplias sin evidencia;
+- que puede explicar individualmente una decisión de limpieza;
+- que las expresiones o booleanos existentes permanecen como contexto de lectura;
+- que no introduce `if/else`, anidados, ternarios, menús ni control de flujo como contenido nuevo.
 
 ## Andamiaje ante bloqueos
 
-No proporciones inmediatamente la solución completa. Utiliza la ayuda mínima necesaria:
+- **No sabe renombrar:** pregunta qué representa el dato y en qué unidad se expresa.
+- **Quiere comentarlo todo:** pide separar intención de repetición literal.
+- **Quiere borrar una línea que no entiende:** exige localizar primero su efecto observable.
+- **Hace muchos cambios a la vez:** vuelve a una modificación pequeña y una ejecución.
+- **La salida cambia:** compara el último cambio y decide si alteró el comportamiento.
+- **Propone una técnica de H2:** vuelve al objetivo de limpieza del código H1 existente.
+- **El código funciona pero no se entiende:** pide señalar el nombre, comentario u orden que dificulta explicarlo.
 
-- **Confunde `=` y `==`:** pregunta si pretende guardar un valor o comparar dos valores.
-- **No comprende `true` y `false`:** aísla únicamente la expresión booleana y pide que la evalúe sin el `if`.
-- **Falla con `&&`:** pide comprobar cada condición por separado y pregunta cuántas deben cumplirse.
-- **Falla con `||`:** pregunta cuántas condiciones necesitan cumplirse para que el resultado sea `true`.
-- **No entiende `!`:** parte de un valor booleano concreto y pregunta cuál es su negación.
-- **No sabe qué rama se ejecuta:** exige una predicción antes de permitir la ejecución.
-- **Modifica código al azar:** vuelve al valor de entrada y recorre la condición paso a paso.
-- **Solo prueba una rama:** pregunta qué valor obligaría al programa a seguir el otro camino.
-- **Se pierde en un `if` anidado:** recorre primero la condición exterior y pregunta si se llega a evaluar la interior.
-- **Usa el ternario para lógica compleja:** vuelve a `if/else` y compara cuál permite explicar mejor la decisión.
-- **El código funciona pero no se entiende:** pide señalar qué nombre, orden, comentario o adorno dificulta explicarlo, sin alterar todavía el comportamiento.
+No proporciones una solución completa. Devuelve la decisión a la intención del código y a la evidencia de ejecución.
 
 ## Comprueba lo aprendido
 
-Cierra con una comprobación individual breve. Pide señalar, predecir, modificar y ejecutar una parte de la decisión.
-
 Pregunta de control:
 
-> ¿Qué condición se evalúa, qué rama esperas con este valor y qué nuevo valor usarías para comprobar la otra rama?
+> ¿Qué nombre, comentario o elemento simplificaste, por qué mejora la lectura y qué ejecución demuestra que el comportamiento sigue siendo el mismo?
 
-Como revisión de claridad, pregunta también:
+Pregunta de límite:
 
-> ¿Qué línea de tu código no sabes explicar todavía?
+> ¿Qué cambio decidiste no hacer porque añadía complejidad o contenido propio de otro hito?
 
 Criterio para cerrar:
 
-- ambas ramas se han probado;
-- la predicción se ha contrastado con la ejecución;
-- existe una explicación individual suficiente de la condición y del recorrido.
+- existe al menos una mejora justificada;
+- el comportamiento H1 permanece comprobado;
+- no se ha añadido funcionalidad;
+- cada persona puede explicar una decisión y una exclusión.
 
 Di en voz alta:
 
-> H1 ya tiene una decisión pequeña. Si hoy alguien solo puede decir `funciona`, todavía no basta. Debe poder señalar la condición, explicar las dos ramas y demostrar que ambas se han probado.
+> Código limpio no significa código decorado ni código más corto. Significa código que cumple H1 y puede leerse, comprobarse y defenderse.
 
 ## Al terminar
 
 Anota solo lo operativo para preparar la siguiente intervención docente:
 
-- alumnado que necesita apoyo;
-- confusión frecuente que conviene retomar;
+- alumnado que necesita apoyo para explicar su código;
+- nombre, comentario o estructura que causó confusión frecuente;
 - bloqueo técnico pendiente y siguiente paso;
 - ajuste de tiempo necesario.

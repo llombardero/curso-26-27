@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+from dataclasses import replace
 import importlib.util
 from pathlib import Path
+import re
 import sys
 
 import pytest
@@ -29,6 +31,32 @@ def source_pair(number: str) -> tuple[Path, Path]:
     teacher = next((ROOT / "02-PROFESORADO" / "02-SESIONES").rglob(f"S{number}-*-docente.md"))
     student = next((ROOT / "01-ALUMNADO" / "03-SESIONES").rglob(f"S{number}-*-alumnado.md"))
     return teacher, student
+
+
+@pytest.mark.parametrize("number", [str(number) for number in range(206, 216)])
+def test_h1_keeps_literal_student_mode_separate_from_teacher_grouping(generator, number):
+    teacher, student = source_pair(number)
+    literal = re.search(
+        r"\*\*Modalidad:\*\* (.+?)\.", student.read_text(encoding="utf-8")
+    ).group(1)
+
+    session = generator.parse_session(teacher, student)
+
+    assert session.student_mode == literal
+    assert session.field_sources["student_mode"] == "student"
+
+
+@pytest.mark.parametrize("number, expected", [
+    ("206", "INDIVIDUAL → EQUIPO"),
+    ("210", "INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL"),
+    ("213", "INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL"),
+    ("215", "Defensa INDIVIDUAL; ensayo y revisión por PAREJAS; review, retrospectiva y entrega en EQUIPO"),
+])
+def test_h1_teacher_grouping_remains_canonical_when_student_mode_differs(generator, number, expected):
+    session = generator.parse_session(*source_pair(number))
+
+    assert session.grouping == expected
+    assert session.student_mode != session.grouping
 
 
 def semantic_text(session, *categories: str) -> str:
@@ -72,17 +100,19 @@ def test_parser_accepts_numbered_and_unnumbered_headings(generator):
     assert session.closure
 
 
-def test_restored_h1_title_comes_from_primary_heading_not_stale_student_title(generator):
+def test_s213_title_is_aligned_with_the_approved_clean_code_scope(generator):
     teacher, student = source_pair("213")
 
     session = generator.parse_session(teacher, student)
 
     assert session.number == "213"
-    assert session.topic == "Comparaciones, lógica y decisiones"
+    assert session.topic == "Limpieza, nombres claros y simplicidad"
     assert session.field_sources["topic"] == "teacher"
     assert session.field_sources["objective"] == "teacher"
-    assert session.topic != "Limpieza, nombres claros y simplicidad"
-    assert "Limpieza, nombres claros y simplicidad" not in session.objective
+    assert session.topic == student.read_text(encoding="utf-8").split("## ", 1)[1].splitlines()[0]
+    assert "nombres significativos" in session.objective
+    assert "comentarios útiles" in session.objective
+    assert "simplicidad" in session.objective
 
 
 def test_semantic_model_preserves_unknown_teacher_headings(generator):
@@ -168,29 +198,30 @@ def test_s212_semantic_contract_preserves_conversions(generator):
     assert session.field_sources["grouping"] == "teacher"
 
 
-def test_s213_semantic_contract_preserves_core_and_recognition_signals(generator):
+def test_s213_scope_contract_uses_existing_unit_roles_without_promoting_h2(generator):
     teacher, student = source_pair("213")
 
     session = generator.parse_session(teacher, student)
-    text = semantic_text(session, "concepts", "explanations", "examples", "predictions")
+    source = teacher.read_text(encoding="utf-8")
+    assert "## Contrato curricular de S213" in source
+    assert all(marker in source for marker in ("core", "recognition", "out_of_scope"))
 
-    for fragment in ("comparadores", "true", "false", "&&", "||", "!", "if/else"):
-        assert fragment in text
-    recognition_blocks = [
-        block
-        for block in session.semantic_blocks["concepts"]
-        if "anidad" in (block.heading + block.content).lower()
-        or "ternario" in (block.heading + block.content).lower()
-    ]
-    recognition = " ".join(
-        block.heading + " " + block.content + " " + " ".join(block.signals)
-        for block in recognition_blocks
+    units = generator.build_pedagogical_units(session)
+    core = "\n".join(unit_text(unit) for unit in units if unit.role == "core")
+    recognition = "\n".join(unit_text(unit) for unit in units if unit.role == "recognition")
+    excluded = [unit for unit in units if unit.role == "out_of_scope"]
+    assert all(fragment in core for fragment in (
+        "nombres significativos", "comentarios útiles", "simplicidad", "código H1",
+    ))
+    assert "expresiones simples" in recognition and ("comparación" in recognition or "boolean" in recognition)
+    assert excluded and all(not generator.semantic_projection(unit)[0] for unit in excluded)
+    projected_core = [unit for unit in units if unit.role == "core" and generator.semantic_projection(unit)[0]]
+    assert not any(unit.relations.get("branches") for unit in projected_core)
+    assert not any(
+        token in unit.source_refs[0].heading.lower()
+        for unit in projected_core
+        for token in ("if/else", "decisiones anidadas", "operador ternario", "condiciones encadenadas", "menús")
     )
-    assert "anidad" in recognition
-    assert "ternario" in recognition
-    assert "sin profundizar" in recognition
-    assert "limitad" in recognition
-    assert all(block.role == "recognition" for block in recognition_blocks)
 
 
 def test_s214_semantic_contract_preserves_reproducibility_and_delivery_preparation(generator):
@@ -303,6 +334,42 @@ def test_check_reports_fallbacks_and_truncation_as_errors(generator):
 
     assert report.errors == []
     assert report.warnings == []
+
+
+@pytest.mark.parametrize("number", [str(number) for number in range(206, 216)])
+def test_all_real_h1_sessions_pass_validation(generator, number):
+    session = generator.parse_session(*source_pair(number))
+
+    report = generator.validate_session(session)
+
+    assert report.errors == [], (number, report.errors)
+
+
+@pytest.mark.parametrize("number", ("207", "209"))
+def test_h1_semantic_learning_validates_without_legacy_key_concepts(generator, number):
+    session = generator.parse_session(*source_pair(number))
+
+    assert session.key_concepts == []
+    assert "Falta conceptos" not in generator.validate_session(session).errors
+
+
+def test_h1_without_semantic_learning_still_fails_concept_validation(generator):
+    session = generator.parse_session(*source_pair("207"))
+    empty_semantics = {category: [] for category in generator.SEMANTIC_CATEGORIES}
+    session = replace(session, semantic_blocks=empty_semantics, key_concepts=[])
+
+    report = generator.validate_session(session)
+
+    assert "Falta conceptos" in report.errors
+
+
+def test_legacy_session_still_requires_key_concepts(generator):
+    session = generator.parse_session(*source_pair("225"))
+    session = replace(session, key_concepts=[])
+
+    report = generator.validate_session(session)
+
+    assert "Falta conceptos" in report.errors
 
 
 def test_pilot_plans_exclude_teacher_template_noise_and_malformed_questions(generator):
@@ -537,18 +604,17 @@ def test_s212_units_preserve_numeric_chains_and_local_recognition(generator):
     assert all(unit.items is unit.visible_content for unit in units)
 
 
-def test_s213_units_preserve_branches_predictions_and_recognition(generator):
+def test_s213_units_preserve_clean_code_core_recognition_and_exclusions(generator):
     units = generator.build_pedagogical_units(generator.parse_session(*source_pair("213")))
-    visible = "\n".join(text for unit in units for text in unit.visible_content)
-    assert "2 < 1 -> false" in visible
-    assert all(operator in visible for operator in ("&&", "||", "!"))
-    branch_units = [unit for unit in units if "if (horas >= 4)" in unit_text(unit) and "else" in unit_text(unit)]
-    assert any(unit.relations.get("branches") == ("condition", "true", "false") for unit in branch_units)
-    assert any("prediction_cycle" in unit.relations for unit in branch_units)
-    for heading in ("Lectura introductoria de decisiones anidadas", "Operador ternario como elección sencilla"):
-        assert any(unit.role == "recognition" and unit.visible_content and unit.source_refs[0].heading == heading for unit in units)
+    core = "\n".join(unit_text(unit) for unit in units if unit.role == "core")
+    recognition = "\n".join(unit_text(unit) for unit in units if unit.role == "recognition")
+    excluded = [unit for unit in units if unit.role == "out_of_scope"]
+    assert all(text in core for text in ("nombres significativos", "comentarios útiles", "simplicidad", "código H1"))
+    assert all(text in recognition for text in ("expresiones simples", "comparación", "booleano"))
+    assert excluded and all(not unit.visible_content for unit in excluded)
+    assert not any(unit.relations.get("branches") for unit in units if unit.role == "core")
     question_unit = next(unit for unit in units if unit.source_refs[0].heading == "Comprueba lo aprendido")
-    assert "¿Qué condición se evalúa" in "\n".join(question_unit.visible_content)
+    assert "¿Qué nombre, comentario o elemento simplificaste" in "\n".join(question_unit.visible_content)
     assert question_unit.relations.get("question_context")
 
 
@@ -623,12 +689,14 @@ def test_s215_full_question_bank_is_presenter_content(generator):
     assert all(token in "\n".join(unit_text(unit) for unit in bank) for token in ("main", "nextLine", "constante", "rama"))
 
 
-def test_mixed_learning_outcome_has_local_roles(generator):
+def test_s213_learning_outcome_stays_in_the_clean_code_core(generator):
     session = generator.parse_session(*source_pair("213"))
     units = generator.build_pedagogical_units(session)
     outcome = [unit for unit in units if unit.source_refs[0].heading == "Qué vas a aprender"]
-    assert any(unit.role == "core" and "if/else" in unit_text(unit) for unit in outcome)
-    assert any(unit.role == "recognition" and "ternario" in unit_text(unit) for unit in outcome)
+    assert outcome and all(unit.role == "core" for unit in outcome)
+    text = "\n".join(unit_text(unit) for unit in outcome)
+    assert all(token in text for token in ("nombres significativos", "comentarios útiles", "simplicidad"))
+    assert "if/else" not in text and "ternario" not in text
 
 
 def test_units_preserve_all_session_code_and_timeline_without_slide_planning(generator):
@@ -740,8 +808,9 @@ def test_semantic_timeline_orders_real_actions_not_incidental_verbs(generator):
     plan = generator.plan_slides(generator.parse_session(*source_pair("214")))
     assert visible_location(plan, "Consolidación — EQUIPO") < visible_location(plan, "Comprobación externa — PAREJAS")
     plan = generator.plan_slides(generator.parse_session(*source_pair("213")))
-    assert visible_location(plan, "Comprender, traducir y predecir — INDIVIDUAL") < visible_location(plan, "Contrastar, implementar y probar — PAREJAS")
-    assert visible_location(plan, "Contrastar, implementar y probar — PAREJAS") < visible_location(plan, "Comprobar comprensión — INDIVIDUAL")
+    assert visible_location(plan, "Diagnosticar la limpieza — INDIVIDUAL") < visible_location(plan, "Acordar cambios mínimos — PAREJAS")
+    assert visible_location(plan, "Acordar cambios mínimos — PAREJAS") < visible_location(plan, "Revisar claridad y simplicidad — PAREJAS")
+    assert visible_location(plan, "Revisar claridad y simplicidad — PAREJAS") <= visible_location(plan, "Comprobar comprensión — INDIVIDUAL")
 
 
 def test_syntax_error_named_cierre_is_not_a_closure_slide(generator):
@@ -845,7 +914,11 @@ def test_every_h1_unit_has_one_destination_and_preserves_its_content(generator, 
         disposition = slide.unit_dispositions[unit.unit_id]
         assert disposition.reason
         content = "\n".join([*slide.visible_content, *slide.presenter_content])
-        assert all(text in content for text in [*unit.visible_content, *unit.presenter_content]), (number, unit.source_refs[0].heading)
+        if unit.role == "out_of_scope":
+            assert disposition.state == "ignored_with_reason"
+            assert not unit.visible_content
+        else:
+            assert all(text in content for text in [*unit.visible_content, *unit.presenter_content]), (number, unit.source_refs[0].heading)
     assert plan[0].relations["modality"] == session.grouping
     assert {index for slide in plan for index in slide.timeline_refs} == set(range(len(session.timeline)))
     # Missing disposition is observable, rather than silently counted as coverage.
@@ -935,16 +1008,17 @@ def test_critical_plan_contracts_bind_source_units_roles_and_destinations(genera
         assert slide.relations["roles"][boolean.unit_id] == "recognition"
         assert any(unit.role == "core" and "Double.parseDouble" in unit_text(unit) for unit in slide.pedagogical_units)
     elif number == "213":
-        assert plan[0].title == "Comparaciones, lógica y decisiones"
-        assert "Limpieza, nombres claros y simplicidad" not in visible
-        assert "2 < 1 -> false" in visible and all(operator in visible for operator in ("&&", "||", "!"))
-        unit, slide = projected("Dos caminos con if/else")
-        assert slide.relations["unit_relations"][unit.unit_id]["branches"] == ("condition", "true", "false")
-        practice, slide = projected("Micropráctica defendible — PAREJAS")
-        assert all(token in "\n".join(slide.items) for token in ("rama true", "rama false", "Salida esperada", "Salida obtenida"))
-        for heading in ("Lectura introductoria de decisiones anidadas", "Operador ternario como elección sencilla"):
-            unit, slide = projected(heading)
-            assert unit.role == "recognition" and any(member.role == "core" for member in slide.pedagogical_units)
+        assert plan[0].title == "Limpieza, nombres claros y simplicidad"
+        assert all(token in visible for token in ("nombres significativos", "comentarios útiles", "simplicidad"))
+        for heading in ("Nombres que explican intención", "Comentarios útiles y comentarios redundantes",
+                        "Limpiar y ejecutar — PAREJAS", "Revisar claridad y simplicidad — PAREJAS"):
+            projected(heading)
+        recognition, slide = projected("Leer expresiones existentes — PARA RECONOCER")
+        assert recognition.role == "recognition"
+        assert "if/else" not in visible and "operador ternario" not in visible
+        excluded = [unit for unit in units if unit.role == "out_of_scope"]
+        assert excluded and all(sum(unit.unit_id in slide.unit_dispositions for slide in plan) == 1
+                                for unit in excluded)
     elif number == "214":
         unit, slide = projected("Qué convierte una prueba en reproducible")
         assert all(token in "\n".join(slide.items) for token in ("Entrada usada", "Salida esperada", "Salida obtenida", "Demuestra"))
@@ -983,21 +1057,23 @@ def test_documentation_model_and_access_instructions_precede_external_reproducti
 def test_density_diagnoses_a_unit_silently_cut_after_projection(generator):
     session = generator.parse_session(*source_pair("213"))
     plan = generator.plan_slides(session)
-    unit = next(unit for unit in generator.build_pedagogical_units(session) if unit.source_refs[0].heading == "Dos caminos con if/else")
-    slide = plan[visible_location(plan, "Dos caminos con if/else")]
+    unit = next(unit for unit in generator.build_pedagogical_units(session)
+                if unit.source_refs[0].heading == "Renombrar sin cambiar el comportamiento"
+                and any(text.startswith("```java") for text in unit.visible_content))
+    slide = plan[visible_location(plan, "Renombrar sin cambiar el comportamiento")]
     code = next(text for text in unit.visible_content if text.startswith("```java"))
-    slide.visible_content[slide.visible_content.index(code)] = code.split("else")[0]
+    slide.visible_content[slide.visible_content.index(code)] = code.splitlines()[0]
     assert any("partida" in error for error in generator.plan_density_errors(plan))
 
 
 def test_teacher_delivery_instructions_stay_presenter_only_in_learning_context(generator):
     session = generator.parse_session(*source_pair("213"))
-    instruction = "No lo presentes como una lista para memorizar. Para cada expresión, pide al alumnado que lea la relación en lenguaje natural y prediga el resultado."
+    instruction = "No proporciones una solución completa. Devuelve la decisión a la intención del código y a la evidencia de ejecución."
     plan = generator.plan_slides(session)
-    slide = plan[visible_location(plan, "Comparaciones y resultados booleanos")]
+    slide = next(slide for slide in plan if instruction in slide.presenter_content)
     assert instruction not in slide.visible_content
     assert instruction in slide.presenter_content
-    unit = next(unit for unit in slide.pedagogical_units if unit.source_refs[0].heading == "Comparaciones y resultados booleanos")
+    unit = next(unit for unit in slide.pedagogical_units if unit.source_refs[0].heading == "Andamiaje ante bloqueos")
     assert instruction in unit.presenter_content
 
 
@@ -1024,13 +1100,10 @@ def test_individual_check_keeps_secondary_reading_roles_local(generator):
     plan = generator.plan_slides(session)
     members = [unit for slide in plan for unit in slide.pedagogical_units
                if unit.source_refs[0].heading == "Comprobar comprensión — INDIVIDUAL"]
-    for text in ("- reconocer el flujo de un `if` anidado sencillo;",
-                 "- explicar cuándo el ternario resulta adecuado y cuándo conviene volver a `if/else`."):
-        unit = next(unit for unit in members if text in "\n".join(unit.visible_content))
-        assert unit.role == "recognition"
-        assert unit.relations["recognition_context"]
-        assert unit.timeline_refs == [7]
-    core = next(unit for unit in members if "- explicar la condición de un `if`;" in "\n".join(unit.visible_content))
+    recognition = next(unit for unit in members if "- leer una expresión simple o un booleano" in "\n".join(unit.visible_content))
+    assert recognition.role == "recognition"
+    assert recognition.timeline_refs == [6]
+    core = next(unit for unit in members if "- señalar una mejora de nombre" in "\n".join(unit.visible_content))
     assert core.role == "core"
     assert len({unit.source_refs[0].fragment for unit in members}) == len(members)
 
@@ -1088,12 +1161,12 @@ def test_later_presentation_and_clear_source_activity_are_not_opening_or_modalit
     module = load_module()
     session = module.parse_session(*source_pair("213"))
     units = module.build_pedagogical_units(session)
-    ternary = next(u for u in units if u.source_refs[0].heading == "Operador ternario como elección sencilla")
+    recognition = next(u for u in units if u.source_refs[0].heading == "Leer expresiones existentes — PARA RECONOCER")
     clarity = next(u for u in units if u.source_refs[0].heading == "Revisar claridad y simplicidad — PAREJAS")
-    validation = next(u for u in units if u.source_refs[0].heading == "Validación sencilla de datos")
-    assert ternary.timeline_refs == [5], "Presentar el ternario es el intervalo 29–31, no la apertura"
-    assert clarity.timeline_refs == [8], "Revisar claridad está explícito en el cierre 43–45"
-    assert validation.timeline_refs == [3], "La explicación apoya la práctica central 18–27"
+    cleaning = next(u for u in units if u.source_refs[0].heading == "Limpiar y ejecutar — PAREJAS")
+    assert recognition.role == "recognition" and recognition.timeline_refs != [0]
+    assert clarity.timeline_refs == [5]
+    assert cleaning.timeline_refs == [4]
 
 
 def test_source_registration_and_delivery_template_keep_their_real_intervals():

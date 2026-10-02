@@ -43,7 +43,9 @@ def rendered_height(text, width=11.9, size=28):
     columns = max(1, math.floor((width - 0.24) * 72 / (size * 0.6)))
     lines = sum(max(1, len(textwrap.wrap(line, columns, replace_whitespace=False,
                                        drop_whitespace=False))) for line in text.split("\n"))
-    return lines * size * (1.15 if size == 22 else 1.10) / 72 + 0.18
+    # Code keeps its full 22 pt face; slightly tighter leading preserves complete
+    # source blocks inside the safe area without shrinking or truncating text.
+    return lines * size * (1.05 if size == 22 else 1.10) / 72 + 0.18
 
 
 def text_box(slide, name, text, x, y, width, height, *, size=28, color=INK, bold=False, code=False):
@@ -67,7 +69,7 @@ def text_box(slide, name, text, x, y, width, height, *, size=28, color=INK, bold
         paragraph.font.color.rgb = color
         paragraph.space_after = Pt(0)
         # A relative multiplier uses Office's font metrics, not size * multiplier.
-        paragraph.line_spacing = Pt(size * (1.15 if code else 1.10))
+        paragraph.line_spacing = Pt(size * (1.05 if code else 1.10))
         if code:
             # Hanging indent affects only visual wraps; editable source stays exact.
             indent = Pt(size * 0.6 * 2)
@@ -92,7 +94,10 @@ def render_semantic_title(prs, session, spec):
     text_box(slide, "Título", spec.title, 0.7, 1.65, 11.9, 1.8, size=40, color=WHITE, bold=True)
     if session.moment:
         text_box(slide, "Fase HEXA", f"Fase HEXA: {session.moment}", 0.7, 4.0, 11.9, 0.8, color=WHITE)
-    text_box(slide, "Modalidad", session.grouping, 0.7, 5.2, 11.9, 1.3, size=26, color=WHITE)
+    text_box(slide, "Modalidad del alumnado", f"Modalidad publicada: {session.student_mode}",
+             0.7, 5.05, 11.9, 0.55, size=22, color=WHITE, bold=True)
+    text_box(slide, "Organización docente", f"Organización docente: {session.grouping}",
+             0.7, 5.72, 11.9, 0.95, size=20, color=WHITE)
     return slide
 
 
@@ -401,6 +406,33 @@ def semantic_base(prs, session, frame):
     return slide
 
 
+def frame_content_top(frame, minimum=1.55, gap=0.14):
+    """Keep content below the physical line box of a wrapped semantic title."""
+    title_bottom = 0.76 + rendered_height(frame.title, 11.9, 30)
+    return max(minimum, title_bottom + gap)
+
+
+def validate_semantic_slide_geometry(slide):
+    """Reject a rendered semantic slide outside its title/footer safe area."""
+    chrome = {
+        "Código de sesión", "Título", "Fase HEXA", "Modalidad", "Contexto",
+        "Idea principal", "Sesión y procedencia",
+    }
+    content = [
+        shape for shape in slide.shapes
+        if shape.has_text_frame and shape.text.strip() and shape.name not in chrome
+    ]
+    failures = [shape for shape in content if shape.top + shape.height > Inches(6.84)]
+    if failures:
+        details = ", ".join(
+            f"{shape.name}={(shape.top + shape.height) / Inches(1):.3f}\"" for shape in failures
+        )
+        raise RepresentationError(f"Contenido fuera del límite 6.84\": {details}")
+    titles = [shape for shape in slide.shapes if shape.name == "Idea principal"]
+    if titles and content and titles[0].top + titles[0].height > min(shape.top for shape in content):
+        raise RepresentationError("El título invade la primera caja de contenido")
+
+
 def render_atom(slide, atom, y, recognition=False):
     size = 24 if recognition else 28
     if atom.kind == "cards":
@@ -459,7 +491,7 @@ def render_atom(slide, atom, y, recognition=False):
 
 def render_content(prs, session, frame):
     slide = semantic_base(prs, session, frame)
-    y = 1.55
+    y = frame_content_top(frame)
     for atom in frame.atoms:
         y += render_atom(slide, atom, y, frame.recognition) + 0.10
     if frame.kind == "concept":
@@ -486,12 +518,14 @@ def render_content(prs, session, frame):
 def render_classification(prs, session, frame):
     slide = semantic_base(prs, session, frame)
     info = frame.relations["classification"]
-    text_box(slide, "Acción de clasificación", "PROPUESTAS · sin asignar", 0.7, 1.6, 6.1, 0.5, size=24, bold=True)
+    top = frame_content_top(frame, 1.6)
+    shift = top - 1.6
+    text_box(slide, "Acción de clasificación", "PROPUESTAS · sin asignar", 0.7, top, 6.1, 0.5, size=24, bold=True)
     for i, proposal in enumerate(info["proposals"]):
-        text_box(slide, "Propuesta editable", proposal, 0.7, 2.3 + i * 0.44, 6.1, 0.43, size=24)
+        text_box(slide, "Propuesta editable", proposal, 0.7, 2.3 + shift + i * 0.44, 6.1, 0.43, size=24)
     for i, destination in enumerate(info["targets"]):
         x = 7.05 + i * 1.85
-        box = text_box(slide, "Destino de clasificación", destination, x, 2.2, 1.65, 4.3, size=24, bold=True)
+        box = text_box(slide, "Destino de clasificación", destination, x, 2.2 + shift, 1.65, 4.3, size=24, bold=True)
         box.line.color.rgb = ACCENT
     return slide
 
@@ -500,9 +534,11 @@ def render_prediction(prs, session, frame):
     slide = semantic_base(prs, session, frame)
     protocol = next((a.text for a in frame.atoms if a.kind == "code" and a.text.startswith("señalo →")), None)
     process = "Protocolo: " + protocol if protocol else "Proceso: PREDICE → EJECUTA → CONTRASTA"
+    top = frame_content_top(frame, 1.5)
+    header_height = max(0.5, rendered_height(process, 11.9, 24))
     text_box(slide, "Proceso de predicción", process,
-             0.7, 1.5, 11.9, 0.5, size=24, bold=True, color=ACCENT)
-    y = 2.30
+             0.7, top, 11.9, header_height, size=24, bold=True, color=ACCENT)
+    y = top + header_height + 0.30
     for atom in frame.atoms:
         y += render_atom(slide, atom, y) + 0.10
     return slide
@@ -510,9 +546,12 @@ def render_prediction(prs, session, frame):
 
 def render_activity(prs, session, frame):
     slide = semantic_base(prs, session, frame)
-    text_box(slide, "Acción", "QUÉ COMPROBAR" if frame.kind == "check" else "QUÉ HACER", 0.7, 1.5, 11.9, 0.4,
+    top = frame_content_top(frame, 1.5)
+    label = "QUÉ COMPROBAR" if frame.kind == "check" else "QUÉ HACER"
+    header_height = max(0.4, rendered_height(label, 11.9, 20))
+    text_box(slide, "Acción", label, 0.7, top, 11.9, header_height,
              size=20, color=ACCENT, bold=True)
-    y = 2.05
+    y = top + header_height + 0.15
     for atom in frame.atoms:
         y += render_atom(slide, atom, y, frame.recognition) + 0.10
     return slide
@@ -520,22 +559,24 @@ def render_activity(prs, session, frame):
 
 def render_parallel(prs, session, frame):
     slide = semantic_base(prs, session, frame)
-    text_box(slide, "Concurrencia", "AL MISMO TIEMPO · un reloj compartido", 0.7, 1.5, 11.9, 0.5, size=26, color=ACCENT, bold=True)
+    top = frame_content_top(frame, 1.5)
+    shift = top - 1.5
+    text_box(slide, "Concurrencia", "AL MISMO TIEMPO · un reloj compartido", 0.7, top, 11.9, 0.5, size=26, color=ACCENT, bold=True)
     concurrency = frame.relations["concurrency"]
     for i, lane in enumerate(("DOCENTE", "PAREJAS", "EQUIPO")):
         x = 0.7 + i * 4.1
-        text_box(slide, "Carril " + lane, lane, x, 2.15, 3.95, 0.5, size=26, bold=True)
+        text_box(slide, "Carril " + lane, lane, x, 2.15 + shift, 3.95, 0.5, size=26, bold=True)
         lane_units = [unit for unit in frame.units if unit.unit_id in concurrency["lanes"][lane] and unit.function != "timeline"]
         # El carril ya declara EQUIPO: no repetir ese sufijo en cada acción.
         labels = list(dict.fromkeys(re.sub(r"\s*[—–-]\s*EQUIPO$", "", unit.source_refs[0].heading)
                                     for unit in lane_units))
-        top = 2.85
+        top = 2.85 + shift
         for label in labels:
             height = rendered_height(label, 4.07, 24)
-            if top + height > 6.95:
+            if top + height > 6.84:
                 raise RepresentationError("Carril concurrente necesita otra vista; no reducir tipografía ni ocultar acciones")
             text_box(slide, "Actividad concurrente " + lane, label, x, top, 4.07, height, size=24)
-            top += height + 0.1
+            top += height + 0.09
     return slide
 
 
@@ -597,11 +638,23 @@ def presenter_notes(frame, timing, rendered):
         heading + "\n" + "\n\n".join(texts) for heading, texts in sections.items())
 
 
+def metadata_code_blocks(spec, frame):
+    """Inventory represented Java from its source blocks, not a lossy pair language."""
+    indices = sorted({index for atom in frame.atoms for index in atom.source_indices})
+    blocks = []
+    for index in indices:
+        fenced = fenced_body(spec.visible_content[index])
+        if fenced and fenced[0] == "java":
+            blocks.append(fenced[1])
+    return blocks
+
+
 def render_semantic_presentation(prs, session, plan):
     frames = expand_semantic_frames(session, plan)
     timings = allocate_slide_timings(session, frames)
     for frame, timing in zip(frames, timings):
         slide = SEMANTIC_LAYOUTS[frame.kind](prs, session, frame)
+        validate_semantic_slide_geometry(slide)
         spec = plan[frame.plan_index]
         rendered = "\n".join(shape.text for shape in slide.shapes if shape.has_text_frame)
         slide.notes_slide.notes_text_frame.text = presenter_notes(frame, timing, rendered)
@@ -618,8 +671,7 @@ def render_semantic_presentation(prs, session, plan):
             "relations": frame.relations, "timeline_refs": frame.timeline_refs,
             "composition": {"origin_slides": frame.origin_slides},
             "timing": asdict(timing),
-            "code_blocks": [atom.text for atom in frame.atoms if atom.kind == "code" and atom.language == "java" and not atom.reference]
-                           + [text for atom in frame.atoms if atom.kind == "pair" and atom.language == "java" for text in (atom.text, atom.alternative)],
+            "code_blocks": metadata_code_blocks(spec, frame),
             "representation_needs": [{"source_need": need, "status": "resolved", "resolution": "Vistas por unidad y fronteras fuente; código íntegro y tipografía fija"}
                                      for need in spec.representation_needs],
         })

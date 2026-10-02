@@ -28,9 +28,11 @@ def text(frame):
 
 def test_external_reader_and_no_oral_help_are_visible_with_steps():
     _, _, frames = prepared('214')
-    frame = next(f for f in frames if 'Comprobación externa' in f.title and 'abrir el enlace' in text(f))
-    assert 'sin explicación oral previa' in text(frame)
-    assert 'otra persona' in text(frame)
+    related = [f for f in frames if 'Comprobación externa' in f.title]
+    corpus = '\n'.join(text(frame) for frame in related)
+    assert 'abrir el enlace' in corpus
+    assert 'sin explicación oral previa' in corpus
+    assert 'otra persona' in corpus
 
 
 def test_reproducible_example_question_and_chain_share_view():
@@ -49,7 +51,8 @@ def test_prepare_deliver_boundary_is_prominent_exact_source():
 def test_scope_lists_have_explicit_source_markers_without_solving_proposals():
     _, _, before = prepared('206', False)
     _, _, after = prepared('206')
-    scopes = [f for f in after if f.title == 'Alcance técnico de H1' and any(a.kind == 'cards' for a in f.atoms)]
+    scopes = [f for f in after if f.title == 'Alcance técnico de H1']
+    assert any(any(a.kind == 'cards' for a in f.atoms) for f in scopes)
     assert any('No todo debe aparecer necesariamente dentro de un único Main.java' in text(f) for f in scopes)
     assert any('H1 recorre fundamentos suficientes' in note[2] for f in scopes for note in f.notes)
     assert any('Quedan fuera del alcance actual:' in text(f) for f in scopes)
@@ -102,15 +105,19 @@ def test_readme_four_identities_share_one_legible_support():
     r, session, frames = prepared('214')
     headings = {'Qué hace', 'Qué límites tiene', 'Cómo se ejecuta', 'Qué pruebas demuestran que funciona'}
     supports = [f for f in frames if headings & {u.source_refs[0].heading for u in f.units} and f.kind != 'title']
-    assert len(supports) == 1, 'Los cuatro criterios siguen aislados en pantallas'
-    frame = supports[0]
-    assert headings <= {u.source_refs[0].heading for u in frame.units}
-    assert 'Cada prueba debe indicar la entrada' in text(frame)
-    assert 'ejecutar el punto de entrada' in text(frame)
-    assert len(set(frame.origin_slides)) >= 5
+    assert 1 <= len(supports) <= 2, 'La zona segura puede partir el soporte, no aislar cada criterio'
+    assert headings <= {u.source_refs[0].heading for frame in supports for u in frame.units}
+    corpus = '\n'.join(text(frame) for frame in supports)
+    assert 'Cada prueba debe indicar la entrada' in corpus
+    assert 'ejecutar el punto de entrada' in corpus
+    assert len({origin for frame in supports for origin in frame.origin_slides}) >= 5
     helper = importlib.import_module('enriquecer_soportes_semanticos')
     deck = Presentation()
     deck.slide_width, deck.slide_height = Inches(13.333), Inches(7.5)
-    slide = helper.layouts(r)[frame.kind](deck, session, frame)
-    assert all(s.top + s.height <= Inches(6.84) for s in slide.shapes if s.name.startswith('Soporte '))
-    assert all(p.font.size.pt >= 24 for s in slide.shapes if s.name.startswith('Soporte ') for p in s.text_frame.paragraphs)
+    for frame in supports:
+        slide = ({**r.SEMANTIC_LAYOUTS, **helper.layouts(r)})[frame.kind](deck, session, frame)
+        assert all(s.top + s.height <= Inches(6.84) for s in slide.shapes
+                   if s.name.startswith(('Soporte ', 'Acción o criterio ')))
+        assert all(p.font.size.pt >= 24 for s in slide.shapes
+                   if s.name.startswith(('Soporte ', 'Acción o criterio '))
+                   for p in s.text_frame.paragraphs)

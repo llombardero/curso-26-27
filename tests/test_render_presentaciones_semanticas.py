@@ -26,6 +26,20 @@ def visible_text(slide):
     return "\n".join(shape.text for shape in slide.shapes if shape.has_text_frame)
 
 
+@pytest.mark.parametrize("number", [str(number) for number in range(206, 216)])
+def test_h1_pptx_projects_literal_student_mode(generator, tmp_path, number):
+    teacher, student = source_pair(number)
+    literal = re.search(
+        r"\*\*Modalidad:\*\* (.+?)\.", student.read_text(encoding="utf-8")
+    ).group(1)
+    target = tmp_path / f"S{number}.pptx"
+
+    generator.build_presentation(generator.parse_session(teacher, student), target)
+
+    deck_text = "\n".join(visible_text(slide) for slide in Presentation(target).slides)
+    assert literal in deck_text
+
+
 def test_semantic_title_is_not_overloaded_and_has_real_notes(generator, tmp_path):
     session = generator.parse_session(*source_pair("206"))
     target = tmp_path / "S206.pptx"
@@ -131,7 +145,7 @@ def normalized(text):
     return re.sub(r"\s+", " ", text).strip()
 
 
-@pytest.mark.parametrize("number", ["206", "209", "212", "213", "214", "215"])
+@pytest.mark.parametrize("number", ["206", "208", "209", "210", "211", "212", "213", "214", "215"])
 def test_artifact_conserves_plan_channels_code_and_every_unit(generator, tmp_path, number):
     import render_presentaciones_semanticas as renderer
 
@@ -180,7 +194,14 @@ def test_artifact_conserves_plan_channels_code_and_every_unit(generator, tmp_pat
                 assert any(source["sha256"] == __import__("hashlib").sha256(original.encode()).hexdigest()
                            for record in records for source in record["notes_sources"])
                 continue
-            assert normalized(original) in notes or normalized(original) in projected, (number, spec_index, original)
+            fenced = renderer.fenced_body(original)
+            body = fenced[1] if fenced else original
+            if normalized(body) not in notes and normalized(body) not in projected:
+                for fragment in body.splitlines():
+                    if fragment.strip():
+                        assert normalized(fragment) in notes or normalized(fragment) in projected, (
+                            number, spec_index, fragment,
+                        )
             if not any(original == text or original in text for text in spec.visible_content):
                 assert normalized(original) not in projected, (number, "presenter-only filtrado a proyección", original)
     actual_code = [body for record in records for body in record["code_blocks"]]
@@ -197,7 +218,7 @@ def test_artifact_conserves_plan_channels_code_and_every_unit(generator, tmp_pat
     assert sum(record["timing"]["seconds"] for record in records) == 2700
 
 
-@pytest.mark.parametrize("number", ["206", "212", "213", "214", "215"])
+@pytest.mark.parametrize("number", [str(number) for number in range(206, 216)])
 def test_semantic_shapes_stay_in_bounds_with_large_fonts_and_no_shrinking(generator, tmp_path, number):
     from pptx.enum.text import MSO_AUTO_SIZE
 
@@ -213,6 +234,19 @@ def test_semantic_shapes_stay_in_bounds_with_large_fonts_and_no_shrinking(genera
                 assert shape.text_frame.auto_size == MSO_AUTO_SIZE.NONE
                 for p in shape.text_frame.paragraphs:
                     assert p.font.size.pt >= (16 if shape.name == "Sesión y procedencia" else 20)
+        content = [shape for shape in slide.shapes if shape.has_text_frame and shape.text and shape.name not in {
+            "Código de sesión", "Título", "Fase HEXA", "Modalidad", "Contexto",
+            "Idea principal", "Sesión y procedencia",
+        }]
+        assert all(shape.top + shape.height <= Inches(6.84) for shape in content), [
+            (number, index + 1, shape.name, (shape.top + shape.height) / Inches(1))
+            for shape in content if shape.top + shape.height > Inches(6.84)
+        ]
+        titles = [shape for shape in slide.shapes if shape.name == "Idea principal"]
+        if titles and content:
+            assert titles[0].top + titles[0].height <= min(shape.top for shape in content), (
+                number, index + 1, titles[0].text,
+            )
         contents = [shape for shape in slide.shapes if shape.has_text_frame and shape.name not in
                     {"Código de sesión", "Título", "Fase HEXA", "Modalidad", "Contexto", "Idea principal", "Sesión y procedencia"}]
         for a in contents:
@@ -227,7 +261,7 @@ def test_relations_and_pilot_curriculum_survive_in_editable_projection(generator
     expected = {
         "206": ["Alcance", "Correcto", "Eficiente", "Mantenible", "Scrum"],
         "212": ["Scanner", "nextLine", "Integer.parseInt", "Double.parseDouble", "(int) valor", "3.999", "no redondea", "NumberFormatException", "Boolean.parseBoolean"],
-        "213": ["Comparaciones, lógica y decisiones", "&&", "||", "!", "if", "else", "anidad", "ternario"],
+        "213": ["Limpieza, nombres claros y simplicidad", "nombres significativos", "comentarios útiles", "simplicidad", "incremento H1"],
         "214": ["README", "Entrada", "esperad", "obtenid", "Demuestra", "permiso", "externa", "Moodle"],
         "215": ["Defensa", "recuperación", "parejas", "Review", "Retrospectiva", "Moodle"],
     }
@@ -248,27 +282,26 @@ def test_relations_and_pilot_curriculum_survive_in_editable_projection(generator
     assert {"contrast", "comparison"} & special
 
 
-def test_prediction_does_not_offer_a_resolved_test_before_execution(generator, tmp_path):
+def test_s213_does_not_promote_decision_protocols_to_projected_core(generator, tmp_path):
     session = generator.parse_session(*source_pair("213"))
     target = tmp_path / "S213.pptx"
     generator.build_presentation(session, target)
     deck = Presentation(target)
-    predictions = [slide for slide in deck.slides if metadata(slide)["layout"] == "prediction"]
-    assert predictions
-    assert all("Salida esperada:" not in visible_text(slide) for slide in predictions)
-    model = next(slide for slide in deck.slides if "Salida esperada:" in visible_text(slide))
-    assert metadata(model)["layout"] == "check"
+    visible = "\n".join(visible_text(slide) for slide in deck.slides).lower()
+    assert all(term not in visible for term in ("decisiones anidadas", "operador ternario", "condiciones encadenadas", "menús"))
+    assert not any(record == "core" for slide in deck.slides for unit, record in metadata(slide)["roles"].items()
+                   if any(term in visible_text(slide).lower() for term in ("if/else", "ternario", "anidad")))
 
 
-def test_recognition_can_compare_equivalent_forms_without_becoming_core(generator, tmp_path):
+def test_s213_simple_expressions_are_recognition_not_core(generator, tmp_path):
     session = generator.parse_session(*source_pair("213"))
     target = tmp_path / "S213.pptx"
     generator.build_presentation(session, target)
     deck = Presentation(target)
-    equivalents = [slide for slide in deck.slides if metadata(slide)["recognition"] and
-                   "if (horas >= 4)" in visible_text(slide) and '? "Objetivo alcanzado"' in visible_text(slide)]
-    assert equivalents
-    assert all("Para reconocer" in visible_text(slide) for slide in equivalents)
+    recognition = [slide for slide in deck.slides if metadata(slide)["recognition"] and
+                   "boolean tieneNombre" in visible_text(slide)]
+    assert recognition
+    assert all(set(metadata(slide)["roles"].values()) == {"recognition"} for slide in recognition)
 
 
 def test_parallel_long_delivery_label_keeps_three_lines_at_24pt(generator, tmp_path):
@@ -379,7 +412,7 @@ def test_content_panels_contain_explicit_line_boxes(generator, tmp_path, number)
             assert box.height / 12700 >= required - 0.1, (number, index, box.name, required)
 
 
-@pytest.mark.parametrize("number,slide_number", [("213", 23), ("215", 16)])
+@pytest.mark.parametrize("number,slide_number", [("215", 16)])
 def test_secondary_code_panel_starts_after_all_primary_lines(generator, tmp_path, number, slide_number):
     import textwrap
 
@@ -387,22 +420,21 @@ def test_secondary_code_panel_starts_after_all_primary_lines(generator, tmp_path
     generator.build_presentation(generator.parse_session(*source_pair(number)), target)
     # Sequence is now intentionally recomposed; retain the geometric regression
     # on the source content rather than on its obsolete physical slide number.
-    marker = 'String resultado = nota >= 5' if number == "213" else 'Observaciones o bloqueo pendiente:'
+    marker = 'Observaciones o bloqueo pendiente:'
     slide = next(s for s in Presentation(target).slides if marker in visible_text(s))
     boxes = [box for box in slide.shapes if box.name == "Código editable"]
     assert boxes
     if len(boxes) == 1:
         # Separating examples at source boundaries also removes the old masking
         # risk. The original final line must still remain inside the sole panel.
-        assert ': "Pendiente";' in boxes[0].text if number == "213" else marker in boxes[0].text
+        assert marker in boxes[0].text
         return
     primary, secondary = boxes[:2]
     tf = primary.text_frame
     columns = int((primary.width - tf.margin_left - tf.margin_right) / 12700 / (22 * 0.6))
     lines = sum(max(1, len(textwrap.wrap(p.text, columns, replace_whitespace=False,
                                       drop_whitespace=False))) for p in tf.paragraphs)
-    # Font glyph line boxes need more than point-size * 1.05 in the old renderer.
-    assert secondary.top / 12700 >= primary.top / 12700 + lines * 22 * 1.15 + 12
+    assert secondary.top / 12700 >= primary.top / 12700 + lines * 22 * 1.05 + 12
 
 
 @pytest.mark.parametrize("number,slide_number", [("214", 16), ("215", 10)])
@@ -464,18 +496,6 @@ def test_source_reserved_prediction_has_no_revelation_in_its_first_view(generato
                for s in slides[prediction + 1:])
 
 
-def test_prediction_question_precedes_its_boolean_reveal(generator, tmp_path):
-    target = tmp_path / "S213.pptx"
-    generator.build_presentation(generator.parse_session(*source_pair("213")), target)
-    slides = list(Presentation(target).slides)
-    question = next(i for i, slide in enumerate(slides)
-                    if "¿5 > 3 devuelve 5, devuelve 3 o devuelve una respuesta lógica?" in visible_text(slide))
-    reveal = next(i for i, slide in enumerate(slides) if "5 > 3 → true" in visible_text(slide))
-    assert question < reveal
-    assert metadata(slides[question])["relations"]["reveal_phase"] == "prediction"
-    assert metadata(slides[reveal])["relations"]["reveal_phase"] == "contrast"
-
-
 def test_casting_prediction_precedes_its_explanation(generator, tmp_path):
     target = tmp_path / "S212.pptx"
     generator.build_presentation(generator.parse_session(*source_pair("212")), target)
@@ -492,7 +512,6 @@ def test_casting_prediction_precedes_its_explanation(generator, tmp_path):
 def test_conceptual_arrows_are_not_rendered_as_java_code(generator, tmp_path):
     targets = {
         "212": ("String → parseo → número", "7 → 7.0", "precioEntero → 12", "notaEntera → 7"),
-        "213": ("pendiente → true",),
         "214": ("Caso A: horas = 5 → Objetivo alcanzado.", "Caso B: horas = 2 → Objetivo pendiente."),
     }
     for number, expected in targets.items():
@@ -532,28 +551,202 @@ def test_real_java_arrows_remain_code_during_conceptual_normalization():
     assert preserved == java and java_changes == {}
 
 
-def test_validation_cases_are_complete_java_at_22pt(generator, tmp_path):
-    target = tmp_path / "S213.pptx"
-    generator.build_presentation(generator.parse_session(*source_pair("213")), target)
-    slide = next(slide for slide in Presentation(target).slides if "Las horas no pueden ser negativas" in visible_text(slide))
-    expected = "horasEstudio = 3;\nhorasEstudio = 0;\nhorasEstudio = -1;"
-    cases = next(shape for shape in slide.shapes if shape.has_text_frame and expected == shape.text)
-    assert cases.name == "Código editable"
-    assert all(paragraph.font.size.pt == 22 for paragraph in cases.text_frame.paragraphs)
-    assert "horasEstudio = -1." not in visible_text(slide)
+def test_s211_renders_after_rejecting_stale_study_merge(generator, tmp_path):
+    target = tmp_path / "S211.pptx"
+
+    count = generator.build_presentation(generator.parse_session(*source_pair("211")), target)
+
+    deck = Presentation(target)
+    assert count == len(deck.slides)
+    visible = "\n".join(visible_text(slide) for slide in deck.slides)
+    notes = "\n".join(slide.notes_slide.notes_text_frame.text for slide in deck.slides)
+    assert "int horasTotales = 3 + 2;" in visible
+    assert "int dias = 5;\nint horasPorDia = 2;\nint horasTotales = dias * horasPorDia;" in visible
+    assert "¿Qué expresión se evalúa, qué resultado produce, qué tipo tiene y dónde queda guardado?" in visible + notes
+    assert "Pide predecir horasTotales antes de ejecutar" in visible + notes
 
 
-def test_reproducible_branch_outputs_match_java_literals(generator, tmp_path):
+def test_study_capacity_uses_post_normalization_atom_kind(generator):
+    import componer_presentaciones_semanticas as composition
+    import render_presentaciones_semanticas as renderer
+
+    unit = generator.PedagogicalUnit(
+        "unit-test", [generator.SourceRef("teacher", "Expresiones", 0)],
+        "concept", "core", ["Expresiones"],
+    )
+    frame = renderer.RenderFrame(0, "Expresiones", "code", [unit], [
+        renderer.RenderAtom(
+            "3 + 2\nhoras * 60\nhoras >= 4\ntieneNombre && tieneObjetivo\n\"Hola, \" + nombreUsuario",
+            (0,), "code", "java",
+        ),
+        renderer.RenderAtom(
+            "3 + 2                       -> int\n"
+            "5 / 2.0                     -> double\n"
+            "horas >= 4                  -> boolean\n"
+            "\"Hola, \" + nombreUsuario    -> String",
+            (1,), "code", "text",
+        ),
+        renderer.RenderAtom(
+            "Una expresión combina valores, variables u operadores y produce un resultado.",
+            (2,),
+        ),
+        renderer.RenderAtom(
+            "Antes de ejecutar, pregunta por el valor y el tipo esperado.",
+            (3,),
+        ),
+    ])
+
+    composed = composition.compose(renderer, None, [frame])
+
+    assert len(composed) == 2
+    assert {index for part in composed for atom in part.atoms for index in atom.source_indices} == {0, 1, 2, 3}
+    assert all(composition.frame_start(renderer, part) + sum(
+        composition.physical_height(renderer, atom, part.recognition) + .1 for atom in part.atoms
+    ) <= 6.84 for part in composed)
+
+
+def test_capacity_partition_preserves_pair_prefix_prose_and_every_source_index(generator):
+    import componer_presentaciones_semanticas as composition
+    import render_presentaciones_semanticas as renderer
+
+    unit = generator.PedagogicalUnit(
+        "unit-test", [generator.SourceRef("teacher", "Operar, almacenar y utilizar", 8)],
+        "concept", "core", ["contenido"],
+    )
+    pair = renderer.RenderAtom(
+        "int horasTotales = 3 + 2;", (6, 9), "pair", "java",
+        "int dias = 5;\nint horasPorDia = 2;\nint horasTotales = dias * horasPorDia;",
+    )
+    question = renderer.RenderAtom(
+        "¿Qué expresión se evalúa, qué resultado produce, qué tipo tiene y dónde queda guardado?", (7,),
+    )
+    support = renderer.RenderAtom(
+        "Pide predecir horasTotales antes de ejecutar y explicar qué representa cada operando.", (10,),
+    )
+    frames = [
+        renderer.RenderFrame(2, "Operar, almacenar y utilizar", "contrast", [unit], [pair, question, support]),
+        renderer.RenderFrame(2, "Operar, almacenar y utilizar", "code", [unit], [
+            renderer.RenderAtom("int minutos = 4 * 60;\nSystem.out.println(minutos);", (11,), "code", "java"),
+            renderer.RenderAtom("literales -> expresión -> resultado -> variable -> salida", (13,), "code", "text"),
+            renderer.RenderAtom("4 * 60;", (15,), "code", "java"),
+        ]),
+        renderer.RenderFrame(2, "Operar, almacenar y utilizar", "concept", [unit], [
+            renderer.RenderAtom("¿Dónde se guardaría el resultado y para qué se utilizaría?", (16,)),
+        ]),
+    ]
+
+    composed = composition.compose(renderer, None, frames)
+
+    atoms = [atom for frame in composed for atom in frame.atoms]
+    notes = "\n".join(text for frame in composed for _, _, text in frame.notes)
+    assert any(atom.kind == "pair" and atom.text == pair.text and atom.alternative == pair.alternative for atom in atoms)
+    assert set(index for atom in atoms for index in atom.source_indices) == {6, 7, 9, 10, 11, 13, 15, 16}
+    for expected in (question.text, support.text):
+        assert expected in "\n".join(atom.text for atom in atoms) or expected in notes
+
+
+def test_metadata_code_inventory_uses_both_pair_sides_and_preserves_repeated_java():
+    from types import SimpleNamespace
+    import render_presentaciones_semanticas as renderer
+
+    repeated = "int horas = 4;"
+    spec = SimpleNamespace(visible_content=[
+        f"```java\n{repeated}\n```",
+        "```text\nhoras -> dato\n```",
+        f"```java\n{repeated}\n```",
+        "```java\nSystem.out.println(horas);\n```",
+    ])
+    frame = renderer.RenderFrame(0, "Pares", "comparison", [], [
+        renderer.RenderAtom(repeated, (0, 1), "pair", "java", "horas -> dato"),
+        renderer.RenderAtom("horas -> dato", (1, 3), "pair", "text", "System.out.println(horas);"),
+        renderer.RenderAtom(repeated, (2,), "code", "java"),
+    ])
+
+    assert renderer.metadata_code_blocks(spec, frame) == [
+        repeated, repeated, "System.out.println(horas);",
+    ]
+
+
+def test_final_geometry_validation_fails_closed_on_footer_or_title_overlap(generator):
+    import render_presentaciones_semanticas as renderer
+
+    session = generator.parse_session(*source_pair("208"))
+    frame = renderer.RenderFrame(0, "Título breve", "concept", [])
+    deck = Presentation()
+    deck.slide_width, deck.slide_height = Inches(13.333), Inches(7.5)
+    slide = renderer.semantic_base(deck, session, frame)
+    renderer.text_box(slide, "Contenido", "Fuera", 0.7, 6.7, 11.9, 0.5)
+
+    with pytest.raises(renderer.RepresentationError, match="6.84"):
+        renderer.validate_semantic_slide_geometry(slide)
+
+
+def test_study_layout_keeps_fixed_code_and_reference_fonts(generator):
+    from pptx.enum.text import MSO_AUTO_SIZE
+    import componer_presentaciones_semanticas as composition
+    import render_presentaciones_semanticas as renderer
+
+    session = generator.parse_session(*source_pair("211"))
+    unit = generator.PedagogicalUnit(
+        "unit-test", [generator.SourceRef("teacher", "Expresiones", 0)],
+        "concept", "core", ["Expresiones"],
+    )
+    frame = renderer.RenderFrame(0, "Expresiones", "study", [unit], [
+        renderer.RenderAtom("int horas = 4;", (0,), "code", "java"),
+        renderer.RenderAtom("El resultado conserva su tipo.", (1,)),
+    ])
+    deck = Presentation()
+    deck.slide_width, deck.slide_height = Inches(13.333), Inches(7.5)
+
+    slide = composition.render_study(renderer, deck, session, frame)
+
+    code = next(shape for shape in slide.shapes if shape.name == "Código editable")
+    reference = next(shape for shape in slide.shapes if shape.name == "Referente o acción")
+    assert {paragraph.font.size.pt for paragraph in code.text_frame.paragraphs} == {22}
+    assert {paragraph.font.size.pt for paragraph in reference.text_frame.paragraphs} == {24}
+    assert code.text_frame.auto_size == reference.text_frame.auto_size == MSO_AUTO_SIZE.NONE
+    assert code.top + code.height <= Inches(6.84)
+    assert reference.top + reference.height <= Inches(6.84)
+
+
+def test_s211_content_boxes_stay_above_footer_without_shrinking(generator, tmp_path):
+    from pptx.enum.text import MSO_AUTO_SIZE
+
+    target = tmp_path / "S211.pptx"
+    generator.build_presentation(generator.parse_session(*source_pair("211")), target)
+    slides = list(Presentation(target).slides)
+    content = [shape for slide in slides for shape in slide.shapes
+               if shape.has_text_frame and shape.name in {
+                   "Código editable", "Referente o acción", "Contenido",
+               }]
+
+    assert content
+    assert all(shape.top + shape.height <= Inches(6.84) for shape in content)
+    assert all(shape.text_frame.auto_size == MSO_AUTO_SIZE.NONE for shape in content)
+    assert any(paragraph.font.size.pt == 28 for shape in content if shape.name == "Contenido"
+               for paragraph in shape.text_frame.paragraphs)
+
+
+def test_s213_cleaning_examples_remain_complete_java_at_22pt(generator, tmp_path):
     target = tmp_path / "S213.pptx"
     generator.build_presentation(generator.parse_session(*source_pair("213")), target)
     deck = Presentation(target)
-    evidence = next(slide for slide in deck.slides if "Prueba de decisión if/else" in visible_text(slide))
-    text = visible_text(evidence)
-    for literal in ("Objetivo alcanzado", "Objetivo pendiente"):
-        assert f"Salida esperada: {literal}" in text
-        assert f"Salida obtenida: {literal}" in text
-        assert f"Salida esperada: {literal}." not in text
-        assert f"Salida obtenida: {literal}." not in text
+    expected = "final int MAX_HORAS = 8;\nint horasEstudio = 5;\nSystem.out.println(horasEstudio + \"/\" + MAX_HORAS);"
+    cases = next(shape for slide in deck.slides for shape in slide.shapes
+                 if shape.has_text_frame and expected == shape.text)
+    assert cases.name in {"Código editable", "Contraste 2"}
+    assert all(paragraph.font.size.pt == 22 for paragraph in cases.text_frame.paragraphs)
+
+
+def test_s213_renaming_example_preserves_the_observable_output(generator, tmp_path):
+    target = tmp_path / "S213.pptx"
+    generator.build_presentation(generator.parse_session(*source_pair("213")), target)
+    deck = Presentation(target)
+    text = "\n".join(visible_text(slide) for slide in deck.slides)
+    assert "final int MAX = 8;" in text and "final int MAX_HORAS = 8;" in text
+    assert 'System.out.println(h + "/" + MAX);' in text
+    assert 'System.out.println(horasEstudio + "/" + MAX_HORAS);' in text
+    assert "Antes de editar, registra la salida" in text
 
 
 def test_initial_readme_model_marks_tests_as_incomplete(generator, tmp_path):
@@ -601,31 +794,28 @@ def test_scanner_explanation_cards_use_a_grid_wide_enough_for_every_line(generat
     assert len({shape.left for shape in cards}) == 2
 
 
-def test_comparison_and_prediction_protocol_keep_their_code_referent(generator, tmp_path):
+def test_s213_cleaning_protocol_keeps_its_code_referent(generator, tmp_path):
     target = tmp_path / "S213.pptx"
     generator.build_presentation(generator.parse_session(*source_pair("213")), target)
-    slides = list(Presentation(target).slides)
-    for index, slide in enumerate(slides):
-        text = visible_text(slide)
-        if "¿Qué tienen en común las dos versiones?" in text:
-            if "if (suficiente)" not in text:
-                assert "REFERENTE · las dos versiones de la pantalla anterior" in text
-                text += "\n" + visible_text(slides[index - 1])
-            assert "if (suficiente)" in text and "if (horas >= 4)" in text
-        if "rama prevista" in text:
-            assert "if (horas >= 4)" in text and "Caso A: horas = 5" in text
+    text = "\n".join(visible_text(slide) for slide in Presentation(target).slides)
+    assert "¿Qué versión permite explicar el dato sin buscar todas sus apariciones?" in text
+    assert "int x = 4;" in text and "int horasEstudio = 4;" in text
+    assert "No añadáis funcionalidades nuevas durante esta revisión." in text
 
 
-def test_java_comparisons_stack_when_a_quoted_literal_would_wrap(generator, tmp_path):
-    target = tmp_path / "S213.pptx"
-    generator.build_presentation(generator.parse_session(*source_pair("213")), target)
+def test_s211_java_pair_is_complete_when_capacity_requires_partition(generator, tmp_path):
+    target = tmp_path / "S211.pptx"
+    generator.build_presentation(generator.parse_session(*source_pair("211")), target)
     slides = [s for s in Presentation(target).slides if
-              metadata(s)["layout"] == "comparison" and "Objetivo alcanzado" in visible_text(s)]
-    assert len(slides) >= 2
+              metadata(s)["layout"] == "comparison" and "int horasTotales = 3 + 2;" in visible_text(s)]
+    assert slides
     for slide in slides:
         code = [shape for shape in slide.shapes if shape.name.startswith("Contraste ")]
         assert len(code) == 2
-        assert all(shape.width >= Inches(11.5) for shape in code)
+        assert any("int dias = 5;" in shape.text and "int horasTotales = dias * horasPorDia;" in shape.text
+                   for shape in code)
+        assert all(shape.top + shape.height <= Inches(6.84) for shape in code)
+        assert all(paragraph.font.size.pt == 22 for shape in code for paragraph in shape.text_frame.paragraphs)
 
 
 def test_saved_notes_have_no_empty_labels_or_algorithm_explanations(generator, tmp_path):
@@ -662,14 +852,15 @@ def test_deduplicated_notes_do_not_leave_orphan_labels(generator, tmp_path):
             assert all(label not in notes for label in labels), (number, slide_number, notes)
             if number == "214" and slide_number == 22:
                 label = "Como reflexión breve, sin crear una tarea adicional:"
-                assert label in notes and "¿Qué evidencia de H1" in notes.split(label, 1)[1]
+                all_notes = "\n".join(s.notes_slide.notes_text_frame.text for s in deck.slides)
+                assert label in all_notes and "¿Qué evidencia de H1" in all_notes.split(label, 1)[1]
 
 
 def test_closure_names_the_students_code_as_the_real_referent(generator, tmp_path):
     target = tmp_path / "S213.pptx"
     generator.build_presentation(generator.parse_session(*source_pair("213")), target)
-    slide = next(s for s in Presentation(target).slides if "con este valor" in visible_text(s))
-    assert "REFERENTE · tu código" in visible_text(slide)
+    slide = next(s for s in Presentation(target).slides if "¿Qué nombre, comentario o elemento simplificaste" in visible_text(s))
+    assert "comportamiento sigue siendo el mismo" in visible_text(slide)
 
 
 def test_brief_warning_stays_with_its_peer_protocol(generator, tmp_path):

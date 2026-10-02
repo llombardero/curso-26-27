@@ -22,7 +22,13 @@ def combine(parts, **changes):
     return replace(first, **fields)
 
 
+def presentation_atom(r, atom):
+    """Measure the physical atom kind produced by the normalization stage."""
+    return r.source_supports.normalize_presentation_atom(atom, set())[0]
+
+
 def physical_height(r, atom, recognition=False):
+    atom = presentation_atom(r, atom)
     if atom.kind == "cards":
         return r.cards_geometry(atom.text.splitlines(), rendered=True)[1]
     size = 22 if atom.kind == "code" or atom.language else 24 if recognition else 28
@@ -33,9 +39,95 @@ def physical_height(r, atom, recognition=False):
 
 
 def study_height(r, frame):
-    columns = ([a for a in frame.atoms if a.kind == "code"], [a for a in frame.atoms if a.kind != "code"])
+    atoms = [presentation_atom(r, atom) for atom in frame.atoms]
+    columns = ([a for a in atoms if a.kind == "code"], [a for a in atoms if a.kind != "code"])
     return max(sum(r.rendered_height(a.text, width, 22 if a.kind == "code" else 24) + 0.1 for a in atoms)
                for atoms, width in zip(columns, (7.25, 4.2)))
+
+
+def frame_start(r, frame):
+    """Physical top of the first atom after a possibly wrapped title/header."""
+    if frame.kind == "prediction":
+        top = r.frame_content_top(frame, 1.5)
+        header = max(0.5, r.rendered_height("Proceso: PREDICE → EJECUTA → CONTRASTA", 11.9, 24))
+        return top + header + 0.30
+    if frame.kind in {"check", "activity"}:
+        top = r.frame_content_top(frame, 1.5)
+        label = "QUÉ COMPROBAR" if frame.kind == "check" else "QUÉ HACER"
+        return top + max(0.4, r.rendered_height(label, 11.9, 20)) + 0.15
+    if frame.kind == "study":
+        return r.frame_content_top(frame, 2.05)
+    return r.frame_content_top(frame, 1.55)
+
+
+def fit_existing_part(r, frame):
+    """Select study for an original part only when its normalized atoms need it."""
+    start = frame_start(r, frame)
+    height = sum(physical_height(r, atom, frame.recognition) + 0.1 for atom in frame.atoms)
+    if (start + height > 6.84 and frame.kind in {"activity", "check"}
+            and all(atom.kind == "cards" for atom in frame.atoms)):
+        alternative = replace(frame, kind="focus")
+        if frame_start(r, alternative) + height <= 6.84:
+            return alternative
+    if (start + height > 6.84 and any(atom.kind == "code" for atom in frame.atoms)
+            and all(atom.kind != "pair" for atom in frame.atoms) and study_height(r, frame) <= 4.79):
+        return replace(frame, kind="study")
+    return frame
+
+
+def conservative_partition(r, parts):
+    """Split an oversized unit without dropping atoms, alternatives or provenance."""
+    merged = combine(parts)
+    unit = merged.units[0]
+
+    def candidate(atoms):
+        kind = "comparison" if any(atom.kind == "pair" for atom in atoms) else (
+            "linked_prediction" if "prediction_cycle" in unit.relations else
+            "focus" if parts[0].kind in {"source_support", "readme_support"} else parts[0].kind
+        )
+        relations = dict(merged.relations)
+        if kind == "focus":
+            relations.pop("support_columns", None)
+        return replace(merged, atoms=list(atoms), kind=kind, relations=relations)
+
+    def fits(frame):
+        pair = next((atom for atom in frame.atoms if atom.kind == "pair"), None)
+        if pair:
+            return comparison_height(r, frame) <= 6.84 - frame_start(r, frame)
+        start = frame_start(r, frame)
+        height = sum(physical_height(r, atom, frame.recognition) + 0.1 for atom in frame.atoms)
+        return start + height <= 6.84 or (
+            any(atom.kind == "code" for atom in frame.atoms)
+            and study_height(r, frame) <= 4.79
+        )
+
+    chunks = []
+    current = []
+    for atom in merged.atoms:
+        proposed = candidate([*current, atom])
+        if current and not fits(proposed):
+            chunks.append(candidate(current))
+            current = [atom]
+        else:
+            current.append(atom)
+    if current:
+        chunks.append(candidate(current))
+
+    result = []
+    for frame in chunks:
+        pair = next((atom for atom in frame.atoms if atom.kind == "pair"), None)
+        if pair and comparison_height(r, frame) <= 6.84 - frame_start(r, frame):
+            result.append(frame)
+            continue
+        fitted = fit_existing_part(r, frame)
+        start = frame_start(r, fitted)
+        height = sum(physical_height(r, atom, fitted.recognition) + 0.1 for atom in fitted.atoms)
+        if fitted.kind != "study" and start + height > 6.84:
+            raise r.RepresentationError(
+                f"{unit.unit_id} ({unit.source_refs[0].heading}): átomo indivisible no cabe; no se descarta"
+            )
+        result.append(fitted)
+    return result
 
 
 def quoted_literal_wrap_risk(r, atom, width=5.65):
@@ -112,7 +204,7 @@ def compose(r, session, frames):
                 atoms = [replace(local_warning, kind="boundary"), card] + [a for a in part.atoms
                                                                            if a not in [card, local_warning]]
                 candidate = replace(part, atoms=atoms)
-                if 1.55 + sum(physical_height(r, a, candidate.recognition) + 0.1
+                if frame_start(r, candidate) + sum(physical_height(r, a, candidate.recognition) + 0.1
                               for a in candidate.atoms) <= 6.84:
                     regrouped.append(candidate)
                     part_index += 1
@@ -121,7 +213,7 @@ def compose(r, session, frames):
                 atoms = [replace(warning, kind="boundary"), card] + [a for a in part.atoms
                                                                      if a not in boundaries + [card]]
                 candidate = combine([part, following], atoms=atoms)
-                if 1.55 + sum(physical_height(r, a, candidate.recognition) + 0.1
+                if frame_start(r, candidate) + sum(physical_height(r, a, candidate.recognition) + 0.1
                               for a in candidate.atoms) <= 6.84:
                     candidate.notes.append(("facilitation", part.title, boundaries[0].text))
                     regrouped.append(candidate)
@@ -141,7 +233,7 @@ def compose(r, session, frames):
                                source_indices=card.source_indices + tuple(i for a in warnings for i in a.source_indices))
             candidate = combine(parts, atoms=[expanded] + [a for a in merged.atoms if a not in cards + warnings],
                                 kind="linked_prediction" if first.kind == "prediction" else first.kind)
-            if 1.55 + sum(physical_height(r, a, candidate.recognition) + 0.1 for a in candidate.atoms) <= 6.84:
+            if frame_start(r, candidate) + sum(physical_height(r, a, candidate.recognition) + 0.1 for a in candidate.atoms) <= 6.84:
                 merged = candidate
             else:
                 boundaries = [a for a in merged.atoms if a.kind == "boundary"]
@@ -150,7 +242,7 @@ def compose(r, session, frames):
                     atoms = [warning, card] + [a for a in merged.atoms
                                                if a not in cards + warnings + boundaries]
                     candidate = combine(parts, atoms=atoms)
-                    if 1.55 + sum(physical_height(r, a, candidate.recognition) + 0.1
+                    if frame_start(r, candidate) + sum(physical_height(r, a, candidate.recognition) + 0.1
                                   for a in candidate.atoms) <= 6.84:
                         if boundaries:
                             candidate.notes.append(("facilitation", unit.source_refs[0].heading,
@@ -222,7 +314,7 @@ def compose(r, session, frames):
                 result.append(combine(parts, title="Antes de probar", kind="prediction", atoms=questions, relations=relations))
                 relations = {**merged.relations, "reveal_phase": "contrast"}
                 answer = combine(parts, atoms=answers, relations=relations)
-                if 1.55 + sum(physical_height(r, a, answer.recognition) + 0.1 for a in answers) > 6.84:
+                if frame_start(r, answer) + sum(physical_height(r, a, answer.recognition) + 0.1 for a in answers) > 6.84:
                     for part in parts:
                         remaining = [a for a in part.atoms if a not in questions]
                         if remaining:
@@ -247,7 +339,7 @@ def compose(r, session, frames):
                 merged = combine(parts, atoms=merged.atoms[boundary:])
                 parts = [merged]
                 codes = [a for a in merged.atoms if a.kind == "code" and a.language == "java"]
-            elif comparison_height(r, main) <= 5.29:
+            elif comparison_height(r, main) <= 6.84 - frame_start(r, main):
                 result.append(main)
                 merged = combine(parts, atoms=merged.atoms[boundary:])
                 parts = [merged]
@@ -263,10 +355,10 @@ def compose(r, session, frames):
                              if a.kind == "code" and a.language == "java"), None)
             if previous:
                 merged.atoms.insert(0, r.RenderAtom(previous.text, (), "code", "java", reference=True))
-        start = 2.3 if merged.kind == "prediction" else 2.05 if merged.kind in {"check", "activity"} else 1.55
+        start = frame_start(r, merged)
         height = sum(physical_height(r, a, merged.recognition) + 0.1 for a in merged.atoms)
         pair = next((a for a in merged.atoms if a.kind == "pair"), None)
-        if pair and java_pair_wrap_risk(pair) and stacked_comparison_height(r, merged) <= 5.29:
+        if pair and java_pair_wrap_risk(pair) and stacked_comparison_height(r, merged) <= 6.84 - start:
             relations = {**merged.relations, "comparison_layout": "stacked_with_context"}
             result.append(replace(merged, kind="comparison", relations=relations))
         elif pair and quoted_literal_wrap_risk(r, pair):
@@ -276,35 +368,14 @@ def compose(r, session, frames):
             if context:
                 reference = r.RenderAtom("REFERENTE · las dos versiones de la pantalla anterior", (), "boundary")
                 result.append(replace(merged, kind="concept", atoms=[reference, *context], relations=relations))
-        elif pair and comparison_height(r, merged) <= 5.29:
+        elif pair and comparison_height(r, merged) <= 6.84 - start:
             result.append(replace(merged, kind="comparison"))
         elif start + height <= 6.84:
             result.append(merged)
         elif any(a.kind == "code" for a in merged.atoms) and all(a.kind != "pair" for a in merged.atoms) and study_height(r, merged) <= 4.79:
             result.append(replace(merged, kind="study"))
         else:
-            # A single unit may contain several distinct examples. Reassemble
-            # each code + its protocol instead of preserving accidental chunks.
-            segments = []
-            for atom in merged.atoms:
-                if atom.kind == "code" and atom.language == "java":
-                    segments.append([])
-                if segments:
-                    segments[-1].append(atom)
-            if len(codes) > 1 and len(segments) > 1:
-                rebuilt = []
-                for segment in segments:
-                    note_atoms = [a for a in segment if a.text.startswith("Después de ejecutar, deben")]
-                    active = [a for a in segment if a not in note_atoms]
-                    candidate = combine(parts, atoms=active, kind="linked_prediction" if "prediction_cycle" in unit.relations else first.kind)
-                    candidate.notes += [("facilitation", unit.source_refs[0].heading, a.text) for a in note_atoms]
-                    if 1.55 + sum(physical_height(r, a, candidate.recognition) + 0.1 for a in active) > 6.84:
-                        rebuilt = []
-                        break
-                    rebuilt.append(candidate)
-                result.extend(rebuilt or parts)
-            else:
-                result.extend(parts)
+            result.extend(conservative_partition(r, parts))
         index = end
     index = 0
     while index < len(result):

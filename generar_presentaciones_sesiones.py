@@ -91,7 +91,7 @@ class PedagogicalUnit:
     unit_id: str
     source_refs: list[SourceRef]
     function: str
-    role: Literal["core", "recognition", "unknown"]
+    role: Literal["core", "recognition", "out_of_scope", "unknown"]
     visible_content: list[str] = field(default_factory=list)
     presenter_content: list[str] = field(default_factory=list)
     modality: str = ""
@@ -113,6 +113,7 @@ class Session:
     duration: str
     moment: str
     grouping: str
+    student_mode: str
     objective: str
     evidence: str
     materials: list[str]
@@ -459,6 +460,8 @@ def semantic_role(heading: str, content: str) -> tuple[str, list[str]]:
             "elección limitada",
             "de forma introductoria",
             "basta con reconocer",
+            "para reconocer",
+            "reconocer una expresión simple o un booleano",
         )
         if signal in lowered
     ]
@@ -483,7 +486,7 @@ def semantic_categories(heading: str, content: str) -> list[str]:
         ("security", r"seguridad|uso de ia|datos personales|credenciales"),
         ("individual_check", r"comprobación individual|reflexión individual"),
         ("evidence", r"evidencia|observación docente|criterios? de cierre"),
-        ("student_activity", r"actividad|secuencia de trabajo|práctica|trabajo del alumnado|consolidación"),
+        ("student_activity", r"actividad|secuencia de trabajo|práctica|trabajo del alumnado|consolidación|diagnosticar|acordar cambios|limpiar y ejecutar|revisar claridad"),
         ("counterexamples", r"contraejemplo|contraste|no funciona|incorrect"),
         ("examples", r"ejemplo|demostración|modelo pedagógico"),
         ("closure", r"cierre|al terminar|transición a"),
@@ -491,7 +494,9 @@ def semantic_categories(heading: str, content: str) -> list[str]:
             "concepts",
             r"ideas y ejemplos|alcance técnico|calidad de un primer programa|qué vas a aprender|"
             r"comparacion|boolean|operadores?|if/else|anidad|ternario|scanner|parse|casting|"
-            r"readme|prueba reproducible|reglas|distinción|qué debes explicar",
+            r"readme|prueba reproducible|reglas|distinción|qué debes explicar|nombres que explican|"
+            r"renombrar sin cambiar|comentarios útiles|quitar adornos|orden comprensible|"
+            r"leer expresiones|falsa simplificación",
         ),
         ("explanations", r"finalidad|apertura docente|qué debe comunicar|qué convierte|arquitectura"),
     )
@@ -633,6 +638,7 @@ def build_pedagogical_units(session: Session) -> list[PedagogicalUnit]:
         # Explicit secondary examples start a locally weighted fragment.
         split = next((i for i, paragraph in enumerate(paragraphs)
                       if re.match(r"Como ejemplo secundario", paragraph, re.I)
+                      or re.match(r"Para reconocer\s*:", paragraph, re.I)
                       or (i > 0 and paragraph.startswith("También") and semantic_role("", paragraph)[1])), None)
         fragments = [paragraphs] if split is None else [paragraphs[:split], paragraphs[split:]]
         for fragment_index, fragment in enumerate(fragments):
@@ -640,8 +646,9 @@ def build_pedagogical_units(session: Session) -> list[PedagogicalUnit]:
                 continue
             text = "\n\n".join(fragment)
             _, signals = semantic_role(block.heading if split is None else "", text)
-            local_role: Literal["core", "recognition", "unknown"] = (
-                "recognition" if signals or (split is not None and fragment_index == 1)
+            local_role: Literal["core", "recognition", "out_of_scope", "unknown"] = (
+                "out_of_scope" if re.search(r"fuera del alcance|out_of_scope", block.heading, re.I)
+                else "recognition" if signals or (split is not None and fragment_index == 1)
                 else "unknown" if function == "other" else "core"
             )
             presenter_only = function in {"preparation", "continuity", "observation", "scaffolding", "common_error", "question_bank", "other", "timeline_context"}
@@ -940,6 +947,8 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
     student = student_path.read_text(encoding="utf-8") if student_path.exists() else ""
     meta = metadata_table(teacher)
     student_objective, student_evidence = first_student_outcome(student)
+    student_mode_match = re.search(r"\*\*Modalidad:\*\* (.+?)\.", student)
+    student_mode = clean(student_mode_match.group(1)) if student_mode_match else ""
 
     number_match = re.search(r"S(\d{3})", teacher_path.name)
     number = number_match.group(1) if number_match else "000"
@@ -990,6 +999,7 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
             "hito": "teacher" if value_for(meta, "Hito") else "generated_default",
             "moment": "teacher" if moment else "generated_default",
             "grouping": "teacher" if grouping else "generated_default",
+            "student_mode": "student" if student_mode else "generated_default",
         }
     )
 
@@ -1108,6 +1118,7 @@ def parse_session(teacher_path: Path, student_path: Path | None = None) -> Sessi
         duration=duration,
         moment=moment,
         grouping=grouping,
+        student_mode=student_mode,
         objective=objective,
         evidence=evidence,
         materials=materials,
@@ -1409,6 +1420,8 @@ def plan_slides(session: Session) -> list[SlideSpec]:
 def semantic_projection(unit: PedagogicalUnit) -> tuple[list[str], list[str], str]:
     """Recover learning context without upgrading an unknown curricular role."""
     heading = unit.source_refs[0].heading
+    if unit.role == "out_of_scope":
+        return [], [], "Exclusión curricular explícita; se conserva como contrato fuente, no como contenido"
     if heading == "Apertura docente":
         return [], [*unit.visible_content, *unit.presenter_content], "Apertura oral docente"
     if unit.function in {"timeline", "timeline_context"}:
@@ -1786,8 +1799,46 @@ def plan_slides_legacy(session: Session) -> list[SlideSpec]:
     ]
 
 
+def has_semantic_learning_content(session: Session) -> bool:
+    """Comprueba aprendizaje proyectable sin contar metadatos ni tareas."""
+    non_learning_functions = {
+        "preparation",
+        "continuity",
+        "observation",
+        "scaffolding",
+        "common_error",
+        "question_bank",
+        "timeline",
+        "timeline_context",
+        "activity",
+        "individual_check",
+        "evidence",
+        "security",
+        "closure",
+        "review",
+        "retrospective",
+        "moodle_delivery",
+        "defense",
+    }
+    for unit in build_pedagogical_units(session):
+        heading = unit.source_refs[0].heading
+        if unit.function in non_learning_functions or re.search(
+            r"^(?:finalidad|qué vas a aprender|apertura docente)\b", heading, re.I
+        ):
+            continue
+        visible, _, _ = semantic_projection(unit)
+        if visible:
+            return True
+    return False
+
+
 def validate_session(session: Session) -> ValidationReport:
     report = ValidationReport(session.number)
+    concepts = (
+        has_semantic_learning_content(session)
+        if session.folder.lower() in SEMANTIC_PLANNER_HITOS
+        else bool(session.key_concepts)
+    )
     required = {
         "tema": session.topic,
         "hito": session.hito,
@@ -1795,7 +1846,7 @@ def validate_session(session: Session) -> ValidationReport:
         "objetivo": session.objective,
         "evidencia": session.evidence,
         "secuencia": session.timeline,
-        "conceptos": session.key_concepts,
+        "conceptos": concepts,
         "actividad": session.activity,
         "cierre": session.close_question or session.closure,
     }
