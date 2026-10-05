@@ -3,188 +3,415 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>H1 — Primer asistente básico</title>
+  <title>H1 — Primer asistente por consola</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
-<h1 id="h1--primer-asistente-básico">H1 — Primer asistente básico</h1>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
+<h1 id="h1--primer-asistente-por-consola">H1 — Primer asistente por
+consola</h1>
 <h2 id="ficha-para-el-alumnado">Ficha para el alumnado</h2>
-<p>Curso: 1.º DAW — Programación</p>
-<p>Proyecto anual:</p>
-<pre class="text"><code>MiniJarvis: construcción progresiva de un pequeño agente IA propio</code></pre>
+<p><strong>Curso:</strong> 1.º DAW — Programación</p>
+<p><strong>Proyecto anual:</strong></p>
+<pre class="text"><code>MiniJarvis: programa Java progresivo que crecerá por hitos durante el curso</code></pre>
 <hr />
 <h2 id="1-reto">1. Reto</h2>
-<p>Vas a crear la primera versión técnica de MiniJarvis.</p>
-<p>Será un programa Java muy sencillo que se ejecuta por consola.</p>
-<p>El programa debe:</p>
+<p>Vas a construir la primera versión técnica de MiniJarvis.</p>
+<p>Será un programa Java pequeño que se ejecutará por consola y que
+debes poder comprender completamente.</p>
+<p>Al terminar H1 debes ser capaz de:</p>
 <ul>
-<li>mostrar un saludo inicial;</li>
-<li>pedir tu nombre;</li>
-<li>guardar tu nombre en una variable;</li>
-<li>usar al menos una constante;</li>
-<li>mostrar varios mensajes relacionados con el proyecto;</li>
-<li>poder ejecutarse en IntelliJ;</li>
-<li>tener un README básico.</li>
+<li>localizar la estructura básica del programa;</li>
+<li>explicar dónde comienza la ejecución;</li>
+<li>mostrar mensajes por consola;</li>
+<li>utilizar variables, constantes y literales;</li>
+<li>recibir datos mediante <code>Scanner</code>;</li>
+<li>convertir una entrada textual a un valor numérico;</li>
+<li>realizar un cálculo sencillo;</li>
+<li>ejecutar y comprobar el programa;</li>
+<li>localizar y corregir errores básicos;</li>
+<li>explicar cómo se ejecuta y qué hace.</li>
 </ul>
+<p>El objetivo no es crear un asistente avanzado.</p>
+<p>El objetivo es construir una primera versión <strong>pequeña,
+ejecutable, comprobable y defendible</strong>.</p>
 <hr />
-<h2 id="2-muy-importante-qué-no-entra-todavía">2. Muy importante: qué NO
-entra todavía</h2>
-<p>En H1 todavía NO debes incluir:</p>
-<pre class="text"><code>[ ] Menú.
+<h2 id="2-qué-no-entra-todavía">2. Qué NO entra todavía</h2>
+<p>En H1 todavía no debes incorporar:</p>
+<pre class="text"><code>[ ] Menús.
 [ ] Bucles.
 [ ] switch.
 [ ] Memoria.
-[ ] Listas o mapas.
-[ ] Clases propias adicionales.
+[ ] Listas, sets o mapas.
+[ ] Varias clases propias.
 [ ] Ficheros.
-[ ] Conexión con Gemini, Jarvis u otra IA real.
-[ ] Patrones de diseño.</code></pre>
-<p>Esto se trabajará en hitos posteriores.</p>
-<p>En H1 buscamos una versión pequeña, clara y defendible.</p>
+[ ] Persistencia.
+[ ] Patrones de diseño.
+[ ] Conexiones con servicios externos.
+[ ] Gemini, Jarvis u otra IA real integrada en el programa.</code></pre>
+<p>Todo eso llegará cuando hayamos aprendido los conceptos
+necesarios.</p>
+<p>No mejores MiniJarvis adelantando técnicas que todavía no puedes
+explicar.</p>
 <hr />
-<h2 id="3-producto-esperado">3. Producto esperado</h2>
-<p>Ejemplo de ejecución orientativo:</p>
+<h2 id="3-resultado-observable">3. Resultado observable</h2>
+<p>Tu programa debe realizar un diálogo sencillo.</p>
+<p>Por ejemplo:</p>
 <pre class="text"><code>Hola, soy MiniJarvis.
 ¿Cómo te llamas? Laura
-Encantada, Laura.
-Este curso vamos a crear un pequeño agente IA.
-Curso de inicio: 2026.
-Primer objetivo: aprender la estructura básica de un programa Java.</code></pre>
-<p>Tu salida puede tener otros mensajes, pero debe mantener el nivel
-básico del hito.</p>
+Encantado de conocerte, Laura.
+¿Cuántas horas has practicado Programación? 4
+Si la próxima semana practicas una hora más, serán 5 horas.</code></pre>
+<p>La salida concreta puede ser diferente.</p>
+<p>Lo importante es que puedas explicar de dónde sale cada dato y cada
+mensaje.</p>
+<p>No necesitas todavía decidir si una cantidad es «buena» o «mala»,
+repetir preguntas ni ejecutar acciones diferentes según la
+respuesta.</p>
 <hr />
-<h2 id="4-pasos-de-trabajo">4. Pasos de trabajo</h2>
-<h3 id="paso-1--crear-proyecto">Paso 1 — Crear proyecto</h3>
-<pre class="text"><code>[ ] Crear un proyecto Java en IntelliJ.
-[ ] Crear la clase Main.
-[ ] Comprobar que el proyecto ejecuta.</code></pre>
-<h3 id="paso-2--primer-mensaje">Paso 2 — Primer mensaje</h3>
-<pre class="text"><code>[ ] Mostrar un saludo inicial con System.out.println.</code></pre>
-<h3 id="paso-3--constantes-y-variables">Paso 3 — Constantes y
-variables</h3>
-<pre class="text"><code>[ ] Crear una constante para el nombre del asistente.
-[ ] Crear al menos otra constante sencilla si procede.
-[ ] Usar nombres claros.</code></pre>
-<p>Ejemplos de nombres claros:</p>
-<pre class="text"><code>ASSISTANT_NAME
-COURSE_YEAR
-userName</code></pre>
-<h3 id="paso-4--entrada-por-teclado">Paso 4 — Entrada por teclado</h3>
-<pre class="text"><code>[ ] Usar Scanner.
-[ ] Pedir el nombre de la persona usuaria.
-[ ] Guardar el nombre en una variable.
-[ ] Usar esa variable en un mensaje.</code></pre>
-<h3 id="paso-5--mensajes-finales">Paso 5 — Mensajes finales</h3>
-<pre class="text"><code>[ ] Mostrar varios mensajes sobre el proyecto MiniJarvis.
-[ ] Comprobar que todo se entiende.
-[ ] Evitar añadir funciones que no son de H1.</code></pre>
-<h3 id="paso-6--readme">Paso 6 — README</h3>
-<pre class="text"><code>[ ] Explicar qué hace el programa.
-[ ] Explicar cómo se ejecuta.
-[ ] Añadir ejemplo de ejecución.
-[ ] Indicar qué no incluye todavía.</code></pre>
+<h2 id="4-cómo-trabajaremos-el-hito">4. Cómo trabajaremos el hito</h2>
+<p>H1 recorre un ciclo HEXA completo.</p>
+<h3 id="equipos--durante-todo-el-hito">Equipos — Durante todo el
+hito</h3>
+<p>El equipo mantiene organizado el trabajo, las tareas y las decisiones
+significativas.</p>
+<p>Cada persona debe poder explicar y modificar el código aunque el
+producto sea compartido.</p>
+<h3 id="activar--entender-el-reto">Activar — Entender el reto</h3>
+<p>Antes de programar debes tener claro:</p>
+<ul>
+<li>qué debe hacer esta primera versión;</li>
+<li>qué no debe hacer todavía;</li>
+<li>qué resultado podremos observar al ejecutarla.</li>
+</ul>
+<p>Pregunta clave:</p>
+<pre class="text"><code>¿Cuál es la versión más pequeña de MiniJarvis
+que podemos construir, comprobar y explicar?</code></pre>
+<h3 id="investigar--aprender-lo-necesario">Investigar — Aprender lo
+necesario</h3>
+<p>Trabajaremos progresivamente:</p>
+<ul>
+<li>proyecto Java;</li>
+<li><code>Main.java</code>;</li>
+<li>clase <code>Main</code>;</li>
+<li>método <code>main</code>;</li>
+<li>instrucciones;</li>
+<li>salida por consola;</li>
+<li>variables;</li>
+<li>tipos básicos;</li>
+<li>constantes y literales;</li>
+<li>operadores;</li>
+<li><code>Scanner</code>;</li>
+<li>entrada por teclado;</li>
+<li>conversión de texto a número;</li>
+<li>errores iniciales de compilación y ejecución.</li>
+</ul>
+<p>No necesitas estudiar contenidos de hitos posteriores para completar
+H1.</p>
+<h3 id="idear--decidir-tu-primera-versión">Idear — Decidir tu primera
+versión</h3>
+<p>Antes de escribir todo el programa, decide:</p>
+<ul>
+<li>qué saludo mostrará;</li>
+<li>qué datos preguntará;</li>
+<li>qué nombres tendrán las variables;</li>
+<li>qué dato será constante;</li>
+<li>qué cálculo sencillo realizará;</li>
+<li>qué mensajes formarán la salida.</li>
+</ul>
+<p>Mantén la solución pequeña.</p>
+<h3 id="planificar--organizar-el-trabajo">Planificar — Organizar el
+trabajo</h3>
+<p>Convierte lo anterior en tareas pequeñas.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>Crear proyecto.
+        ↓
+Conseguir que Main se ejecute.
+        ↓
+Mostrar mensajes.
+        ↓
+Añadir variables y constantes.
+        ↓
+Leer datos.
+        ↓
+Convertir un dato numérico.
+        ↓
+Realizar un cálculo.
+        ↓
+Comprobar.
+        ↓
+Limpiar el código.
+        ↓
+Completar README.
+        ↓
+Preparar demo y defensa.</code></pre>
+<p>El equipo mantiene las tareas en su Scrum.</p>
+<p>No necesitas crear otro documento para repetir esta
+planificación.</p>
+<h3 id="ejecutar--construir-y-comprobar">Ejecutar — Construir y
+comprobar</h3>
+<p>Implementa el programa de forma incremental.</p>
+<p>No escribas todo antes de ejecutarlo.</p>
+<p>Utiliza este ciclo:</p>
+<pre class="text"><code>cambio pequeño
+     ↓
+ejecución
+     ↓
+observación
+     ↓
+corrección si hace falta
+     ↓
+siguiente cambio</code></pre>
+<h3 id="comunicar--demostrar-lo-aprendido">Comunicar — Demostrar lo
+aprendido</h3>
+<p>Al cerrar H1 debes poder:</p>
+<ul>
+<li>ejecutar MiniJarvis;</li>
+<li>mostrar su funcionamiento;</li>
+<li>localizar las partes principales del código;</li>
+<li>explicar una variable y una constante;</li>
+<li>explicar cómo entra la información;</li>
+<li>explicar la conversión numérica;</li>
+<li>modificar una parte sencilla;</li>
+<li>explicar algún error que hayas encontrado y cómo lo resolviste.</li>
+</ul>
+<p>La defensa se realiza sobre el producto y sus evidencias reales.</p>
+<p>No necesitas crear un informe de defensa.</p>
 <hr />
-<h2 id="5-estructura-mínima-de-entrega">5. Estructura mínima de
-entrega</h2>
+<h2 id="5-producto-esperado">5. Producto esperado</h2>
+<p>La versión H1 debe contener como mínimo:</p>
 <pre class="text"><code>h1-primer-asistente/
 ├── README.md
 └── src/
     └── Main.java</code></pre>
-<p>El README integra ejecución, pruebas y límites. El diario recoge solo
-aprendizaje individual significativo; Scrum conserva backlog,
-decisiones, review y retrospectiva. La defensa comprueba autoría sin
-generar un informe paralelo.</p>
+<p><code>Main.java</code> debe incluir una solución adecuada al nivel
+del hito con:</p>
+<ul>
+<li>clase <code>Main</code>;</li>
+<li>método <code>main</code>;</li>
+<li>mensajes por consola;</li>
+<li>nombres claros;</li>
+<li>al menos una variable de texto;</li>
+<li>al menos una constante;</li>
+<li>uso de <code>Scanner</code>;</li>
+<li>entrada de texto;</li>
+<li>entrada que pueda convertirse a número;</li>
+<li>una conversión numérica;</li>
+<li>un cálculo sencillo;</li>
+<li>salida que muestre el resultado;</li>
+<li>comentarios útiles cuando aporten contexto, evitando comentar lo
+obvio.</li>
+</ul>
 <hr />
-<h2 id="6-readme-mínimo">6. README mínimo</h2>
-<p>Puedes usar esta estructura:</p>
-<div class="sourceCode" id="cb12"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># H1 — Primer asistente por consola</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Qué hace</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>Este programa muestra un saludo, pide el nombre del usuario y muestra mensajes iniciales del proyecto MiniJarvis.</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cómo ejecutar</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>Desde IntelliJ:</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Abrir el proyecto.</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Abrir <span class="in">`src/Main.java`</span>.</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Pulsar Run.</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejemplo de ejecución</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="in">Hola, soy MiniJarvis.</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="in">¿Cómo te llamas? Laura</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="in">Encantada, Laura.</span></span></code></pre></div>
-<h2 id="qué-no-incluye-todavía">Qué no incluye todavía</h2>
-<p>No incluye menú, bucles, memoria ni IA real.</p>
-<pre><code>
----
-
-## 7. Uso de IA en H1
-
-Puedes usar IA para:
-
-- preguntar qué es una variable;
-- preguntar qué es una constante;
-- pedir explicación de `Scanner`;
-- entender un error;
-- revisar la claridad del README.
-
-No puedes usar IA para:
-
-- generar el programa completo y entregarlo sin entender;
-- añadir cosas que no pertenecen a H1;
-- ocultar que la has usado;
-- entregar código que no puedes explicar.
-
-Si usas IA de forma significativa para la entrega, deja una entrada en el diario o Scrum que permita explicar:
-
-```text
-Qué pediste.
-Qué aceptaste.
-Qué cambiaste tú.
-Cómo comprobaste que funcionaba.
-Qué aprendiste.</code></pre>
+<h2 id="6-ruta-técnica">6. Ruta técnica</h2>
+<h3 id="paso-1--proyecto-ejecutable">Paso 1 — Proyecto ejecutable</h3>
+<pre class="text"><code>[ ] Crear o abrir el proyecto Java.
+[ ] Localizar src/Main.java.
+[ ] Comprobar que Main se ejecuta.</code></pre>
+<h3 id="paso-2--primera-salida">Paso 2 — Primera salida</h3>
+<pre class="text"><code>[ ] Mostrar un saludo.
+[ ] Mostrar varios mensajes en orden.
+[ ] Modificar uno y comprobar el cambio.</code></pre>
+<h3 id="paso-3--variables-y-constantes">Paso 3 — Variables y
+constantes</h3>
+<pre class="text"><code>[ ] Utilizar una variable con un nombre claro.
+[ ] Crear una constante para un dato que no debe cambiar.
+[ ] Reconocer los literales utilizados.</code></pre>
+<p>Ejemplos:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName<span class="op">;</span></span></code></pre></div>
+<h3 id="paso-4--entrada-por-teclado">Paso 4 — Entrada por teclado</h3>
+<pre class="text"><code>[ ] Crear un Scanner.
+[ ] Pedir el nombre.
+[ ] Guardarlo.
+[ ] Utilizarlo posteriormente en una salida.</code></pre>
+<h3 id="paso-5--entrada-numérica-y-cálculo">Paso 5 — Entrada numérica y
+cálculo</h3>
+<pre class="text"><code>[ ] Leer un número inicialmente como texto.
+[ ] Convertirlo a un tipo numérico.
+[ ] Realizar un cálculo sencillo.
+[ ] Mostrar el resultado.</code></pre>
+<p>No necesitas todavía tomar decisiones mediante <code>if</code>.</p>
+<h3 id="paso-6--limpieza">Paso 6 — Limpieza</h3>
+<p>Revisa:</p>
+<pre class="text"><code>[ ] Nombres claros.
+[ ] Indentación.
+[ ] Mensajes comprensibles.
+[ ] Comentarios útiles y no redundantes.
+[ ] Código que pertenece realmente a H1.</code></pre>
+<h3 id="paso-7--comprobación">Paso 7 — Comprobación</h3>
+<p>Ejecuta la versión completa al menos con:</p>
+<pre class="text"><code>un nombre
+otro nombre
+un número válido
+otro número válido
+una entrada no numérica para observar qué ocurre</code></pre>
+<p>En este momento no necesitas controlar todos los errores de
+entrada.</p>
+<p>Sí debes poder explicar qué ha ocurrido.</p>
 <hr />
-<h2 id="8-preguntas-de-defensa">8. Preguntas de defensa</h2>
-<p>Prepárate para responder:</p>
-<pre class="text"><code>¿Dónde empieza el programa?
-¿Qué variable guarda el nombre?
-¿Qué constante has usado?
-¿Qué hace Scanner?
-¿Qué diferencia hay entre print y println?
-¿Cómo se ejecuta desde IntelliJ?
-¿Por qué todavía no hay menú?
-¿Has usado IA? ¿Para qué?</code></pre>
+<h2 id="7-readme-del-hito">7. README del hito</h2>
+<p>El README permite volver posteriormente al proyecto y saber qué
+versión es y cómo utilizarla.</p>
+<p>Debe contener únicamente información útil.</p>
+<p>Una estructura suficiente es:</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># H1 — Primer asistente por consola</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Qué hace</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>Breve explicación de esta versión.</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cómo ejecutar</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>Pasos necesarios para ejecutar el programa.</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comprobación</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>Un ejemplo breve de entrada y salida que permita reconocer el funcionamiento.</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Límites de H1</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>Qué funcionalidades todavía no incorpora.</span></code></pre></div>
+<p>No necesitas añadir capturas de consola si el comportamiento puede
+reproducirse ejecutando el programa.</p>
 <hr />
-<h2 id="9-checklist-antes-de-entregar">9. Checklist antes de
-entregar</h2>
+<h2 id="8-criterios-de-aceptación">8. Criterios de aceptación</h2>
+<p>H1 está técnicamente preparado para su cierre cuando puedes demostrar
+que:</p>
 <pre class="text"><code>[ ] Existe src/Main.java.
-[ ] El programa se ejecuta.
-[ ] Hay una clase Main.
-[ ] Hay método main.
-[ ] El programa muestra un saludo.
-[ ] El programa pide el nombre.
-[ ] El nombre se guarda en una variable.
-[ ] Hay al menos una constante.
-[ ] Los nombres son claros.
-[ ] No hay menú, bucles, switch ni IA real.
-[ ] El README explica cómo ejecutar.
-[ ] Hay evidencia de ejecución.
-[ ] He registrado la IA si la he usado.
-[ ] Puedo explicar cada línea importante.</code></pre>
+[ ] La clase Main es reconocible.
+[ ] Existe el método main.
+[ ] El programa compila y se ejecuta.
+[ ] Muestra mensajes por consola.
+[ ] Recibe información mediante Scanner.
+[ ] Utiliza variables con nombres claros.
+[ ] Utiliza al menos una constante.
+[ ] Convierte una entrada textual a número.
+[ ] Realiza al menos un cálculo sencillo.
+[ ] El resultado puede comprobarse ejecutando el programa.
+[ ] El código se mantiene dentro del alcance de H1.
+[ ] El README explica qué hace y cómo se ejecuta.</code></pre>
+<p>Cumplir la lista no sustituye comprender el programa.</p>
 <hr />
-<h2 id="10-idea-clave">10. Idea clave</h2>
-<p>En H1 no buscamos un agente avanzado.</p>
-<p>Buscamos una primera versión pequeña que puedas entender
-completamente.</p>
-<p>Frase clave:</p>
-<pre class="text"><code>Si puedo ejecutarlo, explicarlo y defenderlo, voy por buen camino.</code></pre>
+<h2 id="9-uso-de-ia-en-h1">9. Uso de IA en H1</h2>
+<p>La IA puede ayudarte a aprender, por ejemplo, para:</p>
+<ul>
+<li>pedir una explicación de un concepto;</li>
+<li>entender un mensaje de error;</li>
+<li>comparar dos fragmentos;</li>
+<li>revisar la claridad de una explicación;</li>
+<li>formular preguntas sobre código que ya estás estudiando.</li>
+</ul>
+<p>No debes utilizarla para sustituir tu aprendizaje.</p>
+<p>No es válido:</p>
+<ul>
+<li>generar el programa completo y entregarlo sin comprenderlo;</li>
+<li>incorporar técnicas que todavía no has estudiado;</li>
+<li>aceptar código sin probarlo;</li>
+<li>presentar como propio algo que no puedes explicar o modificar.</li>
+</ul>
+<p>Si la IA ha tenido una <strong>intervención significativa</strong> en
+el producto evaluable, deja una anotación breve en la fuente
+correspondiente:</p>
+<ul>
+<li>diario individual, si afecta principalmente a tu aprendizaje o
+trabajo;</li>
+<li>Scrum, si forma parte de una decisión significativa del equipo.</li>
+</ul>
+<p>Debes poder explicar:</p>
+<pre class="text"><code>qué necesitabas
+qué aportó la IA
+qué aceptaste, modificaste o descartaste
+cómo comprobaste el resultado</code></pre>
+<p>No necesitas registrar consultas triviales.</p>
+<p>Nunca introduzcas datos personales, contraseñas, tokens, claves API
+ni otros secretos.</p>
+<hr />
+<h2 id="10-defensa">10. Defensa</h2>
+<p>La defensa se realiza sobre tu MiniJarvis.</p>
+<p>Prepárate para cuestiones como:</p>
+<pre class="text"><code>¿Dónde empieza la ejecución?
+¿Qué representa Main?
+¿Qué hace esta instrucción?
+¿Qué variable almacena el nombre?
+¿Por qué este dato es una constante?
+¿Qué hace Scanner?
+¿Qué devuelve nextLine()?
+¿Por qué necesitas convertir este texto?
+¿Qué cálculo estás realizando?
+¿Qué ocurre si escribes texto donde esperabas un número?
+¿Cómo ejecutas esta versión?
+¿Por qué todavía no hay menú ni bucles?</code></pre>
+<p>También se te puede pedir una pequeña modificación.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>cambia un mensaje
+cambia el cálculo
+renombra una variable
+localiza una constante
+explica el resultado antes de ejecutar</code></pre>
+<p>La finalidad es comprobar comprensión y autoría, no memorizar
+respuestas.</p>
+<hr />
+<h2 id="11-checklist-final">11. Checklist final</h2>
+<p>Antes de cerrar H1 comprueba:</p>
+<pre class="text"><code>[ ] Puedo ejecutar la versión que voy a presentar.
+[ ] Puedo mostrar su resultado directamente.
+[ ] Puedo localizar Main y main.
+[ ] Puedo explicar mis variables.
+[ ] Puedo explicar mis constantes.
+[ ] Puedo explicar cómo entra la información.
+[ ] Puedo explicar la conversión numérica.
+[ ] Puedo explicar el cálculo.
+[ ] Puedo modificar una parte sencilla.
+[ ] No he adelantado contenidos de otros hitos.
+[ ] El README permite saber qué hace y cómo ejecutar esta versión.
+[ ] Si la IA tuvo una intervención significativa, está reflejada en diario o Scrum.
+[ ] Puedo explicar el código importante sin depender de una respuesta generada.</code></pre>
+<hr />
+<h2 id="12-qué-conservar">12. Qué conservar</h2>
+<p>La fuente principal de la evidencia técnica es el propio
+proyecto.</p>
+<p>Conserva:</p>
+<ul>
+<li>código y versiones en el repositorio;</li>
+<li>instrucciones de ejecución, límites y decisiones técnicas necesarias
+en el README;</li>
+<li>tareas, decisiones y bloqueos significativos de equipo en
+Scrum;</li>
+<li>aprendizajes individuales significativos en el diario.</li>
+</ul>
+<p>No necesitas crear para H1:</p>
+<ul>
+<li>un informe de ejecución;</li>
+<li>capturas rutinarias;</li>
+<li>una tabla independiente de pruebas;</li>
+<li>un documento de defensa;</li>
+<li>un registro independiente de IA;</li>
+<li>un portfolio específico del hito.</li>
+</ul>
+<p>La versión evaluada se identificará mediante el mecanismo de entrega
+indicado para el hito.</p>
+<hr />
+<h2 id="13-idea-clave">13. Idea clave</h2>
+<p>H1 no pretende impresionar por su complejidad.</p>
+<p>Pretende establecer una forma de trabajar que repetiremos durante el
+curso:</p>
+<pre class="text"><code>comprender
+    ↓
+construir
+    ↓
+ejecutar
+    ↓
+comprobar
+    ↓
+explicar
+    ↓
+mejorar</code></pre>
+<p>Una primera versión pequeña que puedes ejecutar, modificar y explicar
+es la base sobre la que crecerá MiniJarvis.</p>
 
   </main>
 </body>

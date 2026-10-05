@@ -8,7 +8,7 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="sesión-212--ficha-de-trabajo-del-alumnado">Sesión 212 — Ficha de
 trabajo del alumnado</h1>
 <h2 id="entrada-por-teclado-con-scanner">Entrada por teclado con
@@ -17,75 +17,323 @@ Scanner</h2>
 <thead>
 <tr class="header">
 <th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Al terminar debes poder…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Asegurar conceptos del Tema 1 que no aparecen de forma natural en el
-saludo inicial.</td>
-<td>Código o ejercicio corto con entrada numérica, cálculo, comparación
-y prueba con dato válido e inválido.</td>
+<td>Recibir datos desde teclado, convertir texto a número y utilizarlos
+en expresiones sencillas.</td>
+<td>Pedir un nombre y un dato numérico, almacenarlos, realizar un
+cálculo y comprobar una comparación sin utilizar todavía estructuras de
+decisión.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1. <strong>Modalidad:</strong> Individual →
-puesta en común en equipo.</p>
+<p><strong>Tiempo previsto:</strong> 45 minutos. <strong>Hito:</strong>
+H1. <strong>Fase HEXA:</strong> Ejecutar. <strong>Modalidad:</strong>
+Individual → puesta en común en equipo.</p>
+<hr />
 <h2 id="material-que-necesitas">Material que necesitas</h2>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
+<li>Un ordenador con JDK e IntelliJ disponibles.</li>
+<li>El proyecto H1.</li>
+<li>El capítulo 02 del libro como referencia.</li>
 </ul>
-<h2 id="organización-del-trabajo">Organización del trabajo</h2>
-<p>Primero, individualmente, cada persona prepara su respuesta o prueba.
-Después, el equipo contrasta las aportaciones y acuerda el resultado
-compartido.</p>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
-<ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>MiniJarvis pregunta cuántas horas se han
-estudiado esta semana, convierte la entrada a número y muestra una
-recomendación sencilla.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
-</ol>
-<h2 id="comprobación-práctica">Comprobación práctica</h2>
-<p>Comprueba <strong>el resultado observable de la actividad</strong> en
-su fuente canónica y prepárate para explicarlo. Registra en diario o
-Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA
-significativo.</p>
-<h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
+<p>Utiliza datos ficticios para las pruebas.</p>
+<hr />
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>Hasta ahora <code>userName</code> tenía un valor escrito directamente
+en el código:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Hoy MiniJarvis empezará a recibir información durante la
+ejecución.</p>
+<p>Para leer desde teclado utilizaremos <code>Scanner</code>.</p>
+<hr />
+<h2 id="2-importa-scanner">2. Importa Scanner</h2>
+<p>Antes de utilizar <code>Scanner</code>, añade al principio del
+archivo:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span></code></pre></div>
+<p>Después, dentro de <code>main</code>, crea un objeto:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span></code></pre></div>
+<p>Aunque todavía no hayamos estudiado en profundidad clases, objetos y
+constructores, puedes reconocer que estamos utilizando una clase que
+Java ya proporciona.</p>
+<p>Por ahora debes saber para qué la usamos:</p>
+<pre class="text"><code>teclado
+   ↓
+Scanner
+   ↓
+programa</code></pre>
+<hr />
+<h2 id="3-pide-el-nombre">3. Pide el nombre</h2>
+<p>Puedes mostrar una pregunta con:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;¿Cómo te llamas? &quot;</span><span class="op">);</span></span></code></pre></div>
+<p>y leer la respuesta mediante:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span></code></pre></div>
+<p>Después utiliza la variable:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Ejecuta varias veces con nombres ficticios diferentes.</p>
+<p>Comprueba que ya no necesitas cambiar el código para modificar el
+nombre.</p>
+<hr />
+<h2 id="4-print-y-println">4. <code>print</code> y
+<code>println</code></h2>
+<p>Compara:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;¿Cómo te llamas? &quot;</span><span class="op">);</span></span></code></pre></div>
+<p>con:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;¿Cómo te llamas?&quot;</span><span class="op">);</span></span></code></pre></div>
+<p><code>println</code> pasa a una nueva línea después de mostrar el
+texto.</p>
+<p><code>print</code> no lo hace.</p>
+<p>Prueba ambas versiones y observa la diferencia en la consola.</p>
+<p>Decide cuál resulta más adecuada para formular la pregunta.</p>
+<hr />
+<h2 id="5-leer-un-número-como-texto">5. Leer un número como texto</h2>
+<p>Ahora MiniJarvis preguntará:</p>
+<pre class="text"><code>¿Cuántas horas has practicado Programación?</code></pre>
+<p>Utiliza:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;¿Cuántas horas has practicado Programación? &quot;</span><span class="op">);</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> hoursText <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span></code></pre></div>
+<p>Aunque escribas:</p>
+<pre class="text"><code>4</code></pre>
+<p><code>nextLine()</code> devuelve texto.</p>
+<p>En este momento:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>hoursText</span></code></pre></div>
+<p>es un <code>String</code>.</p>
+<hr />
+<h2 id="6-convertir-texto-a-número">6. Convertir texto a número</h2>
+<p>Para realizar cálculos necesitamos convertir ese texto.</p>
+<p>Utiliza:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>hoursText<span class="op">);</span></span></code></pre></div>
+<p>Ahora podemos distinguir:</p>
+<pre class="text"><code>&quot;4&quot;   → texto
+ 4    → número entero</code></pre>
+<p>La variable:</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>hoursText</span></code></pre></div>
+<p>almacena texto.</p>
+<p>La variable:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>studyHours</span></code></pre></div>
+<p>almacena un entero.</p>
+<hr />
+<h2 id="7-realiza-un-cálculo-sencillo">7. Realiza un cálculo
+sencillo</h2>
+<p>Utiliza el número convertido para calcular un nuevo valor.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> nextWeekGoal <span class="op">=</span> studyHours <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span></code></pre></div>
+<p>Después muestra el resultado:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Si la próxima semana practicas una hora más, serán &quot;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> nextWeekGoal</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> <span class="st">&quot; horas.&quot;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="op">);</span></span></code></pre></div>
+<p>Antes de ejecutar con:</p>
+<pre class="text"><code>4</code></pre>
+<p>predice qué resultado aparecerá.</p>
+<p>Después compruébalo.</p>
+<p>Prueba también con otro número.</p>
+<hr />
+<h2 id="8-comprueba-una-comparación">8. Comprueba una comparación</h2>
+<p>Una comparación puede producir un valor <code>boolean</code>.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> enoughPractice <span class="op">=</span> studyHours <span class="op">&gt;=</span> <span class="dv">3</span><span class="op">;</span></span></code></pre></div>
+<p>Muestra el resultado:</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>enoughPractice<span class="op">);</span></span></code></pre></div>
+<p>Prueba con:</p>
+<pre class="text"><code>4</code></pre>
+<p>y después con:</p>
+<pre class="text"><code>2</code></pre>
+<p>Antes de cada ejecución, predice si aparecerá:</p>
+<pre class="text"><code>true</code></pre>
+<p>o:</p>
+<pre class="text"><code>false</code></pre>
+<p>Hoy solo observamos el resultado de la comparación.</p>
+<p><strong>No utilizamos todavía ese resultado para decidir qué
+instrucciones ejecutar.</strong></p>
+<p>Eso llegará en H2.</p>
+<hr />
+<h2 id="9-integra-el-diálogo-de-h1">9. Integra el diálogo de H1</h2>
+<p>Tu programa puede quedar conceptualmente así:</p>
+<pre class="text"><code>presentación
+     ↓
+preguntar nombre
+     ↓
+leer nombre
+     ↓
+saludar
+     ↓
+preguntar horas
+     ↓
+leer texto
+     ↓
+convertir a número
+     ↓
+realizar cálculo
+     ↓
+mostrar resultado</code></pre>
+<p>Un ejemplo orientativo de ejecución:</p>
+<pre class="text"><code>Hola, soy MiniJarvis.
+¿Cómo te llamas? Laura
+Hola, Laura.
+¿Cuántas horas has practicado Programación? 4
+Si la próxima semana practicas una hora más, serán 5 horas.</code></pre>
+<p>Tu redacción puede ser diferente.</p>
+<hr />
+<h2 id="10-prueba-con-varios-datos-válidos">10. Prueba con varios datos
+válidos</h2>
+<p>Realiza al menos estas comprobaciones.</p>
+<h3 id="prueba-a">Prueba A</h3>
+<pre class="text"><code>Nombre: Laura
+Horas: 4</code></pre>
+<p>Predice el resultado del cálculo antes de ejecutar.</p>
+<h3 id="prueba-b">Prueba B</h3>
+<p>Utiliza otro nombre ficticio y otro número.</p>
+<p>Comprueba que:</p>
 <ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
+<li>cambia el saludo;</li>
+<li>cambia el cálculo;</li>
+<li>no has dejado esos valores escritos directamente en los
+mensajes.</li>
 </ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
+<hr />
+<h2 id="11-prueba-con-una-entrada-no-numérica">11. Prueba con una
+entrada no numérica</h2>
+<p>Cuando MiniJarvis pregunte las horas, escribe:</p>
+<pre class="text"><code>cuatro</code></pre>
+<p>Observa qué ocurre al ejecutar:</p>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>hoursText<span class="op">);</span></span></code></pre></div>
+<p>No necesitas controlar todavía este error.</p>
+<p>No añadas <code>try/catch</code> si aún no lo has estudiado.</p>
+<p>En este momento debes poder explicar:</p>
+<pre class="text"><code>qué dato recibió el programa
+qué conversión intentó realizar
+por qué no pudo obtener un int</code></pre>
+<hr />
+<h2 id="12-qué-no-hacemos-todavía">12. Qué NO hacemos todavía</h2>
+<p>En S212 no necesitas:</p>
+<pre class="text"><code>[ ] usar if;
+[ ] mostrar mensajes distintos según las horas;
+[ ] repetir la pregunta cuando hay un error;
+[ ] construir un menú;
+[ ] utilizar bucles;
+[ ] controlar excepciones;</code></pre>
+<p>No adelantes H2 para hacer que el programa parezca más completo.</p>
+<p>El objetivo es comprender cada paso de H1.</p>
+<hr />
+<h2 id="13-resultado-observable">13. Resultado observable</h2>
+<p>Al terminar debes poder demostrar directamente:</p>
+<pre class="text"><code>[ ] He importado Scanner.
+[ ] He creado un Scanner asociado a System.in.
+[ ] Pido un nombre.
+[ ] Leo el nombre con nextLine().
+[ ] Utilizo el nombre en una salida.
+[ ] Pido un dato numérico.
+[ ] Leo inicialmente ese dato como texto.
+[ ] Convierto el texto mediante Integer.parseInt().
+[ ] Realizo un cálculo sencillo.
+[ ] Muestro el resultado.
+[ ] Puedo realizar una comparación y obtener un boolean.
+[ ] He probado al menos dos entradas numéricas válidas.
+[ ] He observado qué ocurre con una entrada no numérica.
+[ ] No he utilizado todavía estructuras de decisión ni repetición.</code></pre>
+<p>La propia ejecución permite comprobar el comportamiento.</p>
+<p>No necesitas capturas ni una tabla independiente de pruebas.</p>
+<hr />
+<h2 id="14-fuente-canónica">14. Fuente canónica</h2>
+<p>El resultado técnico permanece en el proyecto H1.</p>
+<p>No crees:</p>
+<ul>
+<li>capturas rutinarias de la consola;</li>
+<li>una tabla independiente de entradas y salidas;</li>
+<li>un informe sobre <code>Scanner</code>;</li>
+<li>un informe sobre conversiones;</li>
+<li>una ficha específica del error observado;</li>
+<li>una copia del código en otro documento.</li>
+</ul>
+<p>Si aparece un aprendizaje individual especialmente significativo,
+puede anotarse brevemente en el diario.</p>
+<p>Si surge una decisión o bloqueo relevante para el equipo, puede
+registrarse en Scrum.</p>
+<hr />
+<h2 id="15-uso-de-ia">15. Uso de IA</h2>
+<p>Antes de consultar una IA, intenta identificar:</p>
+<pre class="text"><code>qué has introducido
+qué tipo tiene ahora
+qué tipo necesitas
+qué operación estás intentando realizar
+qué resultado esperabas
+qué ocurrió realmente</code></pre>
+<p>Puedes utilizar IA para:</p>
+<ul>
+<li>comprender qué hace <code>Scanner</code>;</li>
+<li>comprender <code>nextLine()</code>;</li>
+<li>entender <code>Integer.parseInt</code>;</li>
+<li>interpretar el error producido por una entrada no numérica;</li>
+<li>revisar una explicación que ya hayas razonado.</li>
+</ul>
+<p>No utilices IA para añadir <code>if</code>, bucles, excepciones u
+otras soluciones que todavía no has estudiado.</p>
+<p>Si su intervención es significativa, deja una anotación breve en la
+fuente correspondiente.</p>
+<p>No es necesario registrar consultas triviales.</p>
+<p>Nunca introduzcas datos personales, contraseñas, tokens ni claves
+API.</p>
+<hr />
+<h2 id="16-si-te-bloqueas">16. Si te bloqueas</h2>
+<p>Antes de pedir ayuda, responde:</p>
+<pre class="text"><code>¿Qué pregunta muestra el programa?
+
+¿Qué he escrito en la consola?
+
+¿En qué variable se ha guardado?
+
+¿Qué tipo tiene esa variable?
+
+¿Estoy intentando convertirla?
+
+¿Qué esperaba obtener?
+
+¿Qué ha ocurrido realmente?</code></pre>
+<p>Después formula una pregunta concreta.</p>
+<p>Cambia una sola cosa cada vez.</p>
+<hr />
+<h2 id="17-cierre">17. Cierre</h2>
+<p>Sobre tu propio programa, explica:</p>
 <ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
+<li>para qué utilizas <code>Scanner</code>;</li>
+<li>qué hace <code>nextLine()</code>;</li>
+<li>por qué el nombre puede guardarse directamente en un
+<code>String</code>;</li>
+<li>por qué las horas necesitan convertirse para realizar cálculos;</li>
+<li>qué hace <code>Integer.parseInt</code>;</li>
+<li>qué cálculo has realizado;</li>
+<li>qué produce una comparación como
+<code>studyHours &gt;= 3</code>;</li>
+<li>qué ocurre si introduces <code>cuatro</code>;</li>
+<li>por qué todavía no utilizamos <code>if</code> para mostrar una
+recomendación.</li>
 </ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Pregunta: ¿por qué
-<code>scanner.nextLine()</code> devuelve texto aunque escribas un
-número?</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>La sesión está completada cuando puedes introducir datos diferentes,
+comprobar cómo cambian los resultados y explicar el recorrido desde la
+entrada por teclado hasta la salida por consola.</p>
 
   </main>
 </body>

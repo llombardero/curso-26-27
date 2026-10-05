@@ -8,7 +8,7 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="sesión-209--ficha-de-trabajo-del-alumnado">Sesión 209 — Ficha de
 trabajo del alumnado</h1>
 <h2 id="salida-por-pantalla-y-mensajes-del-asistente">Salida por
@@ -17,71 +17,200 @@ pantalla y mensajes del asistente</h2>
 <thead>
 <tr class="header">
 <th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Al terminar debes poder…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Usar <code>System.out.println</code> y construir salida
-legible.</td>
-<td>Programa que muestra saludo, propósito y curso.</td>
+<td>Utilizar <code>System.out.println</code> para construir una salida
+clara y ordenada.</td>
+<td>Diseñar, implementar y revisar una primera presentación por consola
+de MiniJarvis.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1. <strong>Modalidad:</strong> Equipo.</p>
+<p><strong>Tiempo previsto:</strong> 45 minutos. <strong>Hito:</strong>
+H1. <strong>Fase HEXA:</strong> Idear. <strong>Modalidad:</strong>
+Equipo.</p>
+<hr />
 <h2 id="material-que-necesitas">Material que necesitas</h2>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
-<li>Pizarra o una hoja reutilizable para bosquejar antes de modificar el
-proyecto.</li>
-<li>Proyector solo si habrá demostración colectiva; la defensa puede
-realizarse directamente en el equipo.</li>
+<li>Un ordenador con JDK e IntelliJ disponibles.</li>
+<li>El proyecto H1.</li>
+<li>El capítulo 01 del libro como referencia.</li>
+<li>Pizarra, papel reutilizable o espacio temporal para bosquejar los
+mensajes antes de modificar el código.</li>
 </ul>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
-<ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Diseñar el primer guion de presentación
-de MiniJarvis.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
-</ol>
-<h2 id="comprobación-práctica">Comprobación práctica</h2>
-<p>Comprueba <strong>el resultado observable de la actividad</strong> en
-su fuente canónica y prepárate para explicarlo. Registra en diario o
-Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA
-significativo.</p>
-<h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
+<p>No necesitas crear un documento nuevo para conservar el bosquejo.</p>
+<hr />
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>Hasta ahora MiniJarvis ya puede ejecutar instrucciones.</p>
+<p>Hoy vamos a trabajar cómo se presenta por consola.</p>
+<p>Una primera versión puede limitarse a mostrar mensajes fijos.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>Hola.
+Soy MiniJarvis.
+Esta es mi primera versión.
+Estoy aprendiendo a comunicarme por consola.</code></pre>
+<p>Todavía no necesitamos:</p>
 <ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
+<li>pedir datos;</li>
+<li>utilizar variables;</li>
+<li>tomar decisiones;</li>
+<li>repetir acciones;</li>
+<li>conectar una IA real.</li>
 </ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
+<hr />
+<h2 id="2-una-instrucción-produce-una-salida">2. Una instrucción produce
+una salida</h2>
+<p>Observa:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>La instrucción contiene el mensaje que aparecerá en la consola.</p>
+<p>Si añadimos varias:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola.&quot;</span><span class="op">);</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Soy MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Esta es mi primera versión.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>se ejecutarán en orden.</p>
+<p>Antes de probarlo, predice la salida.</p>
+<p>Después ejecútalo y comprueba si coincide.</p>
+<hr />
+<h2 id="3-diseña-el-primer-guion">3. Diseña el primer guion</h2>
+<p>Antes de modificar el programa, el equipo debe decidir qué mensajes
+necesita esta primera presentación.</p>
+<p>El guion debe ser breve.</p>
+<p>Puede incluir:</p>
+<pre class="text"><code>saludo
+nombre del programa
+qué versión es
+qué puede hacer ahora
+qué aprenderá más adelante</code></pre>
+<p>No escribáis todavía código.</p>
+<p>Primero decidid qué debería leer una persona usuaria.</p>
+<hr />
+<h2 id="4-revisa-el-guion">4. Revisa el guion</h2>
+<p>Comprobad vuestro diseño con estas preguntas:</p>
+<pre class="text"><code>¿Se entiende quién habla?
+
+¿Los mensajes aparecen en un orden lógico?
+
+¿Hay información repetida?
+
+¿Algún mensaje promete algo que MiniJarvis todavía no puede hacer?
+
+¿Una persona que no conoce el proyecto entendería esta primera salida?</code></pre>
+<p>El objetivo no es hacer muchos mensajes.</p>
+<p>El objetivo es que los que existan sean útiles y comprensibles.</p>
+<hr />
+<h2 id="5-llévalo-al-programa">5. Llévalo al programa</h2>
+<p>Convierte cada mensaje necesario en una instrucción.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola.&quot;</span><span class="op">);</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Soy MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Esta es mi primera versión.&quot;</span><span class="op">);</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Ejecuta después de introducir los cambios.</p>
+<p>Comprueba el resultado directamente en la consola.</p>
+<hr />
+<h2 id="6-cambia-el-orden">6. Cambia el orden</h2>
+<p>Elige dos mensajes e intercambia sus instrucciones.</p>
+<p>Antes de ejecutar, predice:</p>
+<pre class="text"><code>¿Qué cambiará?
+
+¿Qué permanecerá igual?</code></pre>
+<p>Ejecuta.</p>
+<p>Comprueba tu predicción.</p>
+<p>Después decide qué orden comunica mejor la idea.</p>
+<p>No se trata solo de que el programa funcione.</p>
+<p>También debe resultar comprensible.</p>
+<hr />
+<h2 id="7-mejora-un-mensaje">7. Mejora un mensaje</h2>
+<p>Elige un mensaje de vuestro programa que pueda expresarse mejor.</p>
+<p>Por ejemplo, compara:</p>
+<pre class="text"><code>Programa iniciado.</code></pre>
+<p>con:</p>
+<pre class="text"><code>Hola. Soy MiniJarvis.</code></pre>
+<p>No hay una única frase correcta.</p>
+<p>Debéis poder justificar por qué una redacción resulta más adecuada
+para esta primera versión.</p>
+<p>Modificad únicamente el mensaje elegido y volved a ejecutar.</p>
+<hr />
+<h2 id="8-resultado-observable">8. Resultado observable</h2>
+<p>Al terminar la sesión debéis poder mostrar directamente una salida
+que:</p>
+<pre class="text"><code>[ ] presenta MiniJarvis;
+[ ] utiliza varias instrucciones println;
+[ ] aparece en el orden previsto;
+[ ] resulta comprensible;
+[ ] no promete funciones que todavía no existen;
+[ ] puede modificarse y volver a comprobarse ejecutando el programa.</code></pre>
+<p>La consola es la comprobación principal.</p>
+<p>No necesitáis una captura de pantalla ni un informe adicional.</p>
+<hr />
+<h2 id="9-fuente-canónica">9. Fuente canónica</h2>
+<p>El resultado técnico queda en el proyecto H1.</p>
+<p>Si el equipo toma una decisión significativa sobre cómo debe
+presentarse MiniJarvis, puede conservarla en Scrum si resulta útil para
+el trabajo posterior.</p>
+<p>No creéis:</p>
+<ul>
+<li>un documento separado con los mensajes;</li>
+<li>una captura de la consola;</li>
+<li>un informe de la sesión;</li>
+<li>una copia del código fuera del repositorio.</li>
+</ul>
+<hr />
+<h2 id="10-uso-de-ia">10. Uso de IA</h2>
+<p>Primero diseñad y revisad vuestro propio guion.</p>
+<p>La IA puede utilizarse para:</p>
+<ul>
+<li>aclarar qué hace <code>System.out.println</code>;</li>
+<li>comprender un error;</li>
+<li>revisar si un mensaje resulta claro.</li>
+</ul>
+<p>No la utilicéis para sustituir la decisión del equipo sobre cómo debe
+presentarse esta primera versión.</p>
+<p>Si su intervención es significativa, registradla en la fuente
+correspondiente:</p>
+<ul>
+<li>diario individual, si afecta principalmente a un aprendizaje
+personal;</li>
+<li>Scrum, si afecta a una decisión significativa del equipo.</li>
+</ul>
+<p>No es necesario registrar consultas triviales.</p>
+<p>Nunca introduzcáis datos personales, contraseñas, tokens ni claves
+API.</p>
+<hr />
+<h2 id="11-si-os-bloqueáis">11. Si os bloqueáis</h2>
+<p>Antes de pedir ayuda, comprobad:</p>
+<pre class="text"><code>¿Qué mensaje esperábamos ver?
+
+¿Qué aparece realmente?
+
+¿En qué orden están las instrucciones?
+
+¿Hemos guardado el último cambio?
+
+¿Estamos ejecutando la versión correcta?</code></pre>
+<p>Cambiad una sola cosa cada vez.</p>
+<hr />
+<h2 id="12-cierre">12. Cierre</h2>
+<p>Ejecutad vuestra versión y responded:</p>
 <ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
+<li>¿qué instrucción produce cada mensaje?</li>
+<li>¿por qué habéis elegido ese orden?</li>
+<li>¿qué mensaje habéis mejorado?</li>
+<li>¿qué capacidad de MiniJarvis habéis evitado prometer porque todavía
+no existe?</li>
 </ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Revisar si la salida es comprensible
-para una persona usuaria.</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>La sesión está completada cuando el equipo puede ejecutar la
+presentación de MiniJarvis, explicar el orden de los mensajes y
+modificar uno de ellos justificando el cambio.</p>
 
   </main>
 </body>

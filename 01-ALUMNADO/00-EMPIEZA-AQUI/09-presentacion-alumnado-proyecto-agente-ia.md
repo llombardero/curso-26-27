@@ -14,7 +14,7 @@ Guía completa relacionada:
 
 ## 1. Bienvenida al proyecto
 
-Este curso vamos a aprender Programación y Entornos de Desarrollo construyendo un proyecto común:
+Este curso vamos a aprender Programación construyendo un proyecto común:
 
 ```text
 MiniJarvis: un pequeño agente IA propio
@@ -102,43 +102,41 @@ Sí se espera que el equipo aprenda a organizarse, detectar errores, corregirlos
 
 ## 4. Qué tendrás que entregar
 
-Habrá entregas de equipo y entregas individuales.
+No tendrás que crear un documento nuevo para cada actividad.
 
-### Entregas de equipo
+El objetivo es que las evidencias estén donde se producen y puedan comprobarse.
 
-El equipo podrá entregar:
+### Evidencias de equipo
 
-- código Java;
-- repositorio GitHub o entrega equivalente;
+Según el hito, podrán quedar:
+
+- código y versión estable en GitHub;
 - README;
 - pruebas;
-- incidencias;
-- diagramas;
-- informes de depuración;
-- decisiones técnicas;
-- demo del proyecto.
+- diagramas cuando correspondan;
+- Scrum cuando haya tareas, decisiones, bloqueos o retrospectiva relevantes;
+- demo o ejecución comprobable del producto.
 
-### Entregas individuales
+### Evidencias individuales
 
-Cada alumno/a podrá entregar o defender:
+Cada alumno o alumna podrá demostrar su aprendizaje mediante:
 
-- selección periódica en el Site personal;
-- uso significativo de IA en diario o Scrum;
-- comparación Java ↔ Python;
+- diario cuando exista un aprendizaje o aportación significativa;
+- selección de evidencias en el Site personal en C1, C2 y HF;
+- comparación Java ↔ Python integrada en diario o portfolio cuando aporte valor;
 - explicación de una parte del código;
-- reflexión sobre lo aprendido;
-- defensa oral;
+- defensa oral o técnica;
 - recuperación específica si hace falta.
 
-Una entrega no consiste solo en subir archivos.
+Una entrega no consiste en acumular archivos.
 
-Una entrega válida debe permitir comprobar:
+Debe permitir comprobar:
 
-```text
-Funciona.
-Está documentada.
-La puedes explicar.
-```
+- que funciona;
+- que existe trazabilidad suficiente;
+- que puedes explicarlo.
+
+Moodle recibe la versión evaluada y las confirmaciones necesarias. No vuelvas a subir información que ya está disponible mediante los enlaces estables.
 
 ---
 
@@ -175,84 +173,69 @@ La IA puede ayudarte a aprender.
 La IA no puede aprender por ti.
 ```
 
-Si usas IA en una entrega evaluable, tendrás que registrarlo en:
+Si la IA influye de forma significativa en una actividad o producto evaluable, deja una nota breve:
 
-```text
-diario individual o Scrum, según autoría
-```
+- en el diario individual, si el uso y el aprendizaje son personales;
+- en Scrum, si corresponde a una decisión o trabajo del equipo.
 
-Y tendrás que poder explicar:
+Debes poder explicar:
 
-- qué pediste;
-- qué te respondió;
-- qué aceptaste;
-- qué cambiaste tú;
-- cómo lo comprobaste;
-- qué aprendiste.
+- para qué utilizaste la IA;
+- qué aportó;
+- qué aceptaste, modificaste o descartaste;
+- cómo comprobaste el resultado.
+
+No necesitas crear un registro de IA independiente ni anotar consultas triviales que no hayan influido de forma significativa en el trabajo.
 
 ---
 
 ## 6. Cómo se evaluará
 
-El proyecto servirá para evaluar evidencias de dos módulos:
+MiniJarvis organiza buena parte del trabajo del módulo de Programación, pero la evaluación corresponde a los Resultados de Aprendizaje y Criterios de Evaluación propios del módulo.
 
-- Programación;
-- Entornos de Desarrollo.
-
-Aunque el proyecto sea común, cada módulo se evaluará por separado.
-
-Se valorará:
+Se valorará, según el hito:
 
 - que el código funcione;
-- que el nivel sea adecuado al hito;
-- que el código sea claro;
-- que haya pruebas o comprobaciones;
-- que el README explique cómo ejecutar;
-- que el trabajo esté documentado;
-- que haya trazabilidad en Git/GitHub cuando corresponda;
-- que el uso de IA esté declarado;
-- que cada persona pueda defender lo que entrega.
+- que el nivel sea adecuado a lo trabajado hasta ese momento;
+- que el código sea claro y comprensible;
+- que las pruebas o comprobaciones necesarias se hayan realizado;
+- que el README permita comprender y ejecutar el producto;
+- que exista trazabilidad suficiente del trabajo cuando corresponda;
+- que el uso significativo de IA pueda explicarse y verificarse;
+- que cada persona pueda localizar, ejecutar, modificar y defender su aportación.
+
+El trabajo en equipo no sustituye la demostración individual del aprendizaje.
 
 Importante:
 
-```text
-Si una entrega parece buena pero no puedes explicarla, la evidencia no está completa.
-```
+Si una entrega parece correcta pero no puedes explicar, comprobar o modificar lo que has hecho, la evidencia individual no está completa.
 
 ---
 
-## 7. Cómo usar las plantillas
+## 7. Cómo conservar las evidencias
 
-Tendrás plantillas para no empezar cada documento desde cero.
+No tendrás que rellenar una plantilla diferente para cada prueba, incidencia, decisión o defensa.
 
-Estarán en:
+Utiliza la fuente que corresponda:
 
-```text
-plantillas/
-```
-
-Y también explicadas en:
-
-```text
-07-plantillas-entregables
-```
-
-Algunas plantillas importantes serán:
-
-| Plantilla | Para qué sirve |
+| Resultado | Dónde queda |
 |---|---|
-| `README-plantilla` | Explicar qué hace el proyecto y cómo se ejecuta. |
-| `portfolio-plantilla` | Explicar qué has hecho y qué has aprendido. |
-| `registro-ia-plantilla` | Registrar el uso de IA. |
-| `pruebas-plantilla` | Documentar pruebas. |
-| `depuracion-plantilla` | Explicar cómo se ha investigado un error. |
-| `incidencia-plantilla` | Registrar un problema detectado. |
-| `retrospectiva-plantilla` | Revisar el trabajo del equipo. |
-| `defensa-individual-plantilla` | Preparar la defensa. |
+| Código y pruebas técnicas | GitHub |
+| Instrucciones de ejecución | README |
+| Trabajo y decisiones del equipo | Scrum |
+| Aprendizaje individual significativo | Diario |
+| Uso significativo de IA | Diario o Scrum, según autoría |
+| Comparación Java ↔ Python | Diario o portfolio cuando aporte valor |
+| Selección periódica de evidencias | Site en C1, C2 y HF |
+| Defensa | Sobre el producto real, sin documento escrito paralelo |
+| Evidencia no-code excepcional | Drive |
+| Entrega oficial | Moodle |
 
-No todos los hitos usarán todas las plantillas.
+Regla sencilla:
 
-En cada hito se indicará cuáles hacen falta.
+**Si la evidencia ya existe y puede comprobarse, no la copies a otro documento.**
+
+El documento `07-plantillas-entregables` sirve para orientar dónde debe quedar cada evidencia, no para obligarte a crear archivos adicionales.
 
 ---
 
@@ -292,17 +275,19 @@ Sé qué he construido, sé cómo funciona, sé cómo lo he comprobado y puedo m
 
 Antes de entregar, revisa:
 
-```text
-[ ] El proyecto se puede abrir o ejecutar.
-[ ] El README explica cómo funciona.
-[ ] El código corresponde al nivel del hito.
-[ ] Hay pruebas o comprobaciones si se piden.
-[ ] He documentado errores o decisiones importantes.
-[ ] He registrado el uso de IA si la he usado.
-[ ] No he incluido datos personales ni secretos.
-[ ] Sé qué parte puedo defender.
-[ ] La entrega está subida donde corresponde.
-```
+- el proyecto se puede abrir, revisar o ejecutar;
+- el README contiene la información necesaria;
+- el código corresponde al nivel del hito;
+- las pruebas o comprobaciones solicitadas pueden reproducirse;
+- Scrum está actualizado si hubo decisiones o bloqueos significativos;
+- el diario recoge aprendizajes o aportaciones individuales significativas;
+- el uso significativo de IA está reflejado en diario o Scrum, según autoría;
+- el Site está actualizado solo cuando corresponde a C1, C2 o HF;
+- no hay datos personales, contraseñas, tokens ni otros secretos;
+- sabes localizar, ejecutar y explicar tu aportación;
+- Moodle contiene únicamente lo necesario para identificar la versión evaluada y confirmar las fuentes estables.
+
+Esta lista sirve para revisar el trabajo. No tienes que rellenarla ni entregarla como documento.
 
 ---
 

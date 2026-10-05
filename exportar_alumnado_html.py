@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import html
 import os
 import re
@@ -111,16 +112,34 @@ def relative_css_path(html_path: Path) -> str:
     return os.path.relpath(TARGET / CSS_FILE, html_path.parent).replace(os.sep, "/")
 
 
-def remove_internal_document_links(text: str) -> str:
-    pattern = re.compile(
-        r'<a\s+href="(?!https?://|mailto:|#)[^"]+"[^>]*>(.*?)</a>',
-        re.IGNORECASE | re.DOTALL,
-    )
-    return pattern.sub(r"\1", text)
+def rewrite_internal_links(text: str) -> str:
+    """Conserva enlaces locales y adapta enlaces Markdown a HTML."""
+
+    pattern = re.compile(r'href="([^"]+)"', re.IGNORECASE)
+
+    def replace(match: re.Match[str]) -> str:
+        href = match.group(1)
+
+        if re.match(r"^(?:https?://|mailto:|#)", href, re.IGNORECASE):
+            return match.group(0)
+
+        href = re.sub(
+            r"\.md(?=([?#]|$))",
+            ".html",
+            href,
+            flags=re.IGNORECASE,
+        )
+        return f'href="{href}"'
+
+    return pattern.sub(replace, text)
 
 
 def wrap_html(title: str, body: str, html_path: Path) -> str:
     css = relative_css_path(html_path)
+    home = os.path.relpath(
+        TARGET / "LEEME-ALUMNADO.html",
+        html_path.parent,
+    ).replace(os.sep, "/")
     escaped_title = html.escape(title or "MiniJarvis")
     return f"""<!doctype html>
 <html lang="es">
@@ -132,7 +151,7 @@ def wrap_html(title: str, body: str, html_path: Path) -> str:
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="{home}">Inicio alumnado</a></nav>
 {body}
   </main>
 </body>
@@ -158,7 +177,7 @@ def export_markdown(path: Path) -> None:
         capture_output=True,
         text=True,
     )
-    body = remove_internal_document_links(result.stdout)
+    body = rewrite_internal_links(result.stdout)
     out.write_text(wrap_html(markdown_title(path), body, out), encoding="utf-8")
 
 
@@ -169,17 +188,141 @@ def copy_asset(path: Path) -> None:
     shutil.copy2(path, out)
 
 
-def main() -> None:
+def include_in_scope(path: Path, scope: str) -> bool:
+    """Decide qué fuentes se exportan en una generación parcial."""
+
+    if scope == "all":
+        return True
+
+    rel = path.relative_to(SOURCE)
+    parts = rel.parts
+
+    # Archivos situados directamente en la raíz de alumnado.
+    if len(parts) == 1:
+        return True
+
+    # Documentación común del curso.
+    if parts[0] == "00-EMPIEZA-AQUI":
+        return True
+
+    # Plantillas y recursos globales.
+    if parts[0] == "04-PLANTILLAS-GLOBALES":
+        return True
+
+    # Libro necesario para H1.
+    if parts[0] == "01-LIBRO-POR-HITOS":
+        return rel.name in {
+            "README.md",
+            "00-como-usar-este-libro.md",
+            "01-primeros-programas-java.md",
+            "02-variables-constantes-entrada-salida.md",
+        }
+
+    # Material específico del hito H1.
+    if parts[:2] == ("02-HITOS", "h1-primer-asistente"):
+        return True
+
+    # Índice de sesiones y sesiones H1.
+    if parts[0] == "03-SESIONES":
+        if rel.name == "00-INDICE.md":
+            return False
+        return len(parts) >= 2 and parts[1] == "h1"
+
+    return False
+
+
+def write_h1_session_index() -> None:
+    """Genera un índice navegable solo con las sesiones incluidas en H1."""
+
+    source_dir = SOURCE / "03-SESIONES" / "h1"
+    out = TARGET / "03-SESIONES" / "00-INDICE.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+
+    items = []
+
+    for source in sorted(source_dir.glob("*.md")):
+        target_name = source.with_suffix(".html").name
+        title = html.escape(markdown_title(source))
+        items.append(
+            f'<li><a href="h1/{target_name}">{title}</a></li>'
+        )
+
+    body = """
+<h1>Sesiones de H1 — Primer asistente</h1>
+<p>Este índice pertenece a la exportación piloto global + H1.</p>
+<p>Incluye únicamente las sesiones de H1 que forman parte de este alcance validado.</p>
+<ol>
+""" + "\n".join(items) + """
+</ol>
+"""
+
+    out.write_text(
+        wrap_html(
+            "Sesiones H1 — Primer asistente",
+            body.strip(),
+            out,
+        ),
+        encoding="utf-8",
+    )
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Exporta materiales de alumnado a HTML."
+    )
+    parser.add_argument(
+        "--scope",
+        choices=("all", "h1"),
+        default="all",
+        help=(
+            "all: exportación completa; "
+            "h1: piloto con documentación global y H1."
+        ),
+    )
+    return parser.parse_args()
+
+
+def main(scope: str = "all") -> None:
     if not SOURCE.exists():
         raise SystemExit(f"No existe la carpeta fuente: {SOURCE}")
 
-    if TARGET.exists():
-        shutil.rmtree(TARGET)
-    TARGET.mkdir(parents=True)
+    if scope == "all":
+        if TARGET.exists():
+            shutil.rmtree(TARGET)
+        TARGET.mkdir(parents=True)
+    else:
+        # La exportación piloto H1 no debe borrar H0 ni H2-HF.
+        TARGET.mkdir(parents=True, exist_ok=True)
+
+        # Directorios completos pertenecientes al alcance global + H1.
+        for relative in (
+            "00-EMPIEZA-AQUI",
+            "04-PLANTILLAS-GLOBALES",
+            "02-HITOS/h1-primer-asistente",
+            "03-SESIONES/h1",
+        ):
+            target = TARGET / relative
+            if target.exists():
+                shutil.rmtree(target)
+
+        # Archivos concretos del libro incluidos en el piloto.
+        for relative in (
+            "01-LIBRO-POR-HITOS/README.html",
+            "01-LIBRO-POR-HITOS/00-como-usar-este-libro.html",
+            "01-LIBRO-POR-HITOS/01-primeros-programas-java.html",
+            "01-LIBRO-POR-HITOS/02-variables-constantes-entrada-salida.html",
+            "03-SESIONES/00-INDICE.html",
+        ):
+            target = TARGET / relative
+            if target.exists():
+                target.unlink()
+
     (TARGET / CSS_FILE).write_text(CSS + "\n", encoding="utf-8")
 
     for path in sorted(SOURCE.rglob("*")):
         if path.is_dir():
+            continue
+        if not include_in_scope(path, scope):
             continue
         if path.suffix.lower() == ".md":
             export_markdown(path)
@@ -206,6 +349,10 @@ def main() -> None:
         encoding="utf-8",
     )
 
+    if scope == "h1":
+        write_h1_session_index()
+
 
 if __name__ == "__main__":
-    main()
+    args = parse_args()
+    main(args.scope)

@@ -8,7 +8,7 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="sesión-210--ficha-de-trabajo-del-alumnado">Sesión 210 — Ficha de
 trabajo del alumnado</h1>
 <h2 id="variables">Variables</h2>
@@ -16,66 +16,317 @@ trabajo del alumnado</h1>
 <thead>
 <tr class="header">
 <th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Al terminar debes poder…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Guardar datos en variables.</td>
-<td>Código con variable usada correctamente.</td>
+<td>Guardar y modificar datos mediante variables.</td>
+<td>Declarar, inicializar, utilizar y cambiar variables sencillas
+explicando qué representa cada parte.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1. <strong>Modalidad:</strong> Individual.</p>
+<p><strong>Tiempo previsto:</strong> 45 minutos. <strong>Hito:</strong>
+H1. <strong>Fase HEXA:</strong> Planificar. <strong>Modalidad:</strong>
+Individual.</p>
+<hr />
 <h2 id="material-que-necesitas">Material que necesitas</h2>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
+<li>Un ordenador con JDK e IntelliJ disponibles.</li>
+<li>El proyecto H1.</li>
+<li>El capítulo 02 del libro como referencia.</li>
 </ul>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
+<p>Utiliza únicamente datos ficticios en los ejemplos.</p>
+<hr />
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>Hasta ahora los mensajes de MiniJarvis estaban escritos directamente
+en el código.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, Laura.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Si queremos que un dato pueda cambiar sin reescribir todos los
+mensajes, necesitamos guardarlo.</p>
+<p>Podemos utilizar una variable:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>y después:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<hr />
+<h2 id="2-qué-representa-una-variable">2. Qué representa una
+variable</h2>
+<p>Observa:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Podemos distinguir:</p>
+<pre class="text"><code>String      userName      &quot;Laura&quot;
+  ↓            ↓             ↓
+tipo         nombre         valor</code></pre>
+<p>En esta instrucción estamos declarando e inicializando una
+variable.</p>
+<p>La variable se llama:</p>
+<pre class="text"><code>userName</code></pre>
+<p>y en este momento contiene:</p>
+<pre class="text"><code>Laura</code></pre>
+<hr />
+<h2 id="3-declarar-inicializar-y-asignar">3. Declarar, inicializar y
+asignar</h2>
+<p>Estas acciones están relacionadas, pero no son exactamente lo
+mismo.</p>
+<h3 id="declarar">Declarar</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName<span class="op">;</span></span></code></pre></div>
+<p>Aquí indicamos que existirá una variable llamada
+<code>userName</code> de tipo <code>String</code>.</p>
+<h3 id="inicializar">Inicializar</h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Le damos un primer valor.</p>
+<h3 id="declarar-e-inicializar-a-la-vez">Declarar e inicializar a la
+vez</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Es una forma habitual de hacerlo cuando ya conocemos el valor
+inicial.</p>
+<h3 id="cambiar-el-valor">Cambiar el valor</h3>
+<p>Más adelante podemos escribir:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>userName <span class="op">=</span> <span class="st">&quot;Álex&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>No estamos creando otra variable.</p>
+<p>Estamos asignando un nuevo valor a la que ya existe.</p>
+<hr />
+<h2 id="4-predice-antes-de-ejecutar">4. Predice antes de ejecutar</h2>
+<p>Observa:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>userName<span class="op">);</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>userName <span class="op">=</span> <span class="st">&quot;Álex&quot;</span><span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>userName<span class="op">);</span></span></code></pre></div>
+<p>Antes de ejecutarlo, responde:</p>
+<pre class="text"><code>¿Qué mostrará la primera salida?
+
+¿Qué mostrará la segunda?
+
+¿Se han creado una o dos variables?</code></pre>
+<p>Después ejecútalo y comprueba tu predicción.</p>
+<hr />
+<h2 id="5-utiliza-una-variable-varias-veces">5. Utiliza una variable
+varias veces</h2>
+<p>Añade a tu programa una variable:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Utilízala en varios mensajes.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>userName <span class="op">+</span> <span class="st">&quot;, estás utilizando MiniJarvis.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Ejecuta.</p>
+<p>Después cambia únicamente:</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Laura&quot;</span></span></code></pre></div>
+<p>por otro nombre ficticio.</p>
+<p>Vuelve a ejecutar.</p>
+<p>Comprueba qué mensajes cambian sin haber tenido que modificar cada
+texto por separado.</p>
+<hr />
+<h2 id="6-elige-nombres-claros">6. Elige nombres claros</h2>
+<p>Compara:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> n <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>con:</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Ambos nombres pueden funcionar técnicamente.</p>
+<p>Pero uno comunica mejor la intención del dato.</p>
+<p>Revisa los nombres de tus variables con estas preguntas:</p>
+<pre class="text"><code>¿Puedo saber qué representa sin buscar por todo el programa?
+
+¿Describe el dato?
+
+¿Es suficientemente concreto?
+
+¿Mantiene una forma de escribir coherente?</code></pre>
+<p>En estos primeros programas utiliza nombres sencillos y
+descriptivos.</p>
+<hr />
+<h2 id="7-otros-tipos-de-datos">7. Otros tipos de datos</h2>
+<p>No todos los datos son texto.</p>
+<p>Observa:</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> average <span class="op">=</span> <span class="fl">7.5</span><span class="op">;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> active <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> initial <span class="op">=</span> <span class="ch">&#39;L&#39;</span><span class="op">;</span></span></code></pre></div>
+<p>Cada variable almacena un tipo de información diferente.</p>
+<p>Relaciona:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Dato</th>
+<th>Tipo razonable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>nombre de una persona</td>
+<td><code>String</code></td>
+</tr>
+<tr class="even">
+<td>número entero de horas</td>
+<td><code>int</code></td>
+</tr>
+<tr class="odd">
+<td>valor con decimales</td>
+<td><code>double</code></td>
+</tr>
+<tr class="even">
+<td>verdadero o falso</td>
+<td><code>boolean</code></td>
+</tr>
+<tr class="odd">
+<td>un único carácter</td>
+<td><code>char</code></td>
+</tr>
+</tbody>
+</table>
+<p>No necesitas utilizar todos estos tipos en MiniJarvis hoy.</p>
+<p>Sí debes reconocer que elegir el tipo depende del dato que queremos
+guardar.</p>
+<hr />
+<h2 id="8-practica-la-elección-del-tipo">8. Practica la elección del
+tipo</h2>
+<p>Decide qué tipo utilizarías para:</p>
+<pre class="text"><code>nombre del usuario
+edad
+nota media
+programa activo o no
+inicial de un nombre
+número de intentos</code></pre>
+<p>Justifica al menos dos elecciones.</p>
+<p>No basta con escribir el nombre del tipo.</p>
+<p>Explica qué característica del dato te lleva a elegirlo.</p>
+<hr />
+<h2 id="9-variable-y-literal">9. Variable y literal</h2>
+<p>Observa:</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Aquí:</p>
+<pre class="text"><code>userName</code></pre>
+<p>es el nombre de una variable.</p>
+<p>Mientras que:</p>
+<pre class="text"><code>&quot;Laura&quot;</code></pre>
+<p>es un valor escrito directamente en el código.</p>
+<p>Ese valor es un literal.</p>
+<p>Otro ejemplo:</p>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p><code>4</code> es un literal entero.</p>
+<p>Por ahora lo importante es distinguir:</p>
+<pre class="text"><code>variable → tiene nombre y puede almacenar un valor
+
+literal → valor escrito directamente en el código</code></pre>
+<hr />
+<h2 id="10-llévalo-a-minijarvis">10. Llévalo a MiniJarvis</h2>
+<p>En tu versión H1:</p>
 <ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Crear variable <code>userName</code> con
-un valor fijo y usarla en varios mensajes.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
+<li>crea una variable <code>userName</code> con un nombre ficticio;</li>
+<li>utilízala al menos en dos mensajes;</li>
+<li>ejecuta;</li>
+<li>cambia su valor;</li>
+<li>vuelve a ejecutar;</li>
+<li>comprueba qué ha cambiado.</li>
 </ol>
-<h2 id="comprobación-práctica">Comprobación práctica</h2>
-<p>Comprueba <strong>el resultado observable de la actividad</strong> en
-su fuente canónica y prepárate para explicarlo. Registra en diario o
-Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA
-significativo.</p>
-<h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
+<p>Por ahora el valor seguirá escrito directamente en el código.</p>
+<p>En una sesión posterior aprenderemos a recibirlo desde el
+teclado.</p>
+<p>No adelantes todavía <code>Scanner</code>.</p>
+<hr />
+<h2 id="11-resultado-observable">11. Resultado observable</h2>
+<p>Al terminar debes poder demostrar directamente:</p>
+<pre class="text"><code>[ ] Tengo al menos una variable en el programa.
+[ ] Puedo señalar su tipo.
+[ ] Puedo señalar su nombre.
+[ ] Puedo señalar su valor actual.
+[ ] Sé distinguir declarar, inicializar y asignar.
+[ ] Puedo modificar el valor de una variable.
+[ ] Puedo utilizar una variable en varios mensajes.
+[ ] Utilizo nombres comprensibles.
+[ ] Reconozco varios tipos básicos.
+[ ] Distingo variable y literal.</code></pre>
+<p>La comprobación se realiza sobre el propio programa.</p>
+<p>No necesitas capturas ni una ficha adicional.</p>
+<hr />
+<h2 id="12-fuente-canónica">12. Fuente canónica</h2>
+<p>El código de esta sesión permanece en el proyecto H1.</p>
+<p>No crees:</p>
 <ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
+<li>una captura del código;</li>
+<li>una tabla independiente de variables;</li>
+<li>un informe de la sesión;</li>
+<li>una copia del programa en otro documento.</li>
 </ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
+<p>Si aparece un aprendizaje individual especialmente significativo,
+puede anotarse brevemente en el diario.</p>
+<p>Si aparece un bloqueo técnico relevante para el equipo, puede
+registrarse en Scrum.</p>
+<hr />
+<h2 id="13-uso-de-ia">13. Uso de IA</h2>
+<p>Primero intenta identificar por ti mismo:</p>
+<pre class="text"><code>qué dato necesito guardar
+qué tipo tiene
+qué nombre lo describe
+qué valor contiene</code></pre>
+<p>Puedes utilizar IA para:</p>
+<ul>
+<li>pedir una explicación de una variable;</li>
+<li>entender un error de tipos;</li>
+<li>comparar dos nombres de variables;</li>
+<li>revisar una predicción que ya hayas razonado.</li>
+</ul>
+<p>No la utilices para sustituir la lectura y modificación de tu propio
+código.</p>
+<p>Si su intervención es significativa, deja una anotación breve en la
+fuente correspondiente.</p>
+<p>No es necesario registrar consultas triviales.</p>
+<p>Nunca introduzcas datos personales, contraseñas, tokens ni claves
+API.</p>
+<hr />
+<h2 id="14-si-te-bloqueas">14. Si te bloqueas</h2>
+<p>Antes de pedir ayuda, señala:</p>
+<pre class="text"><code>¿Qué dato quiero guardar?
+
+¿Qué tipo estoy utilizando?
+
+¿Cómo se llama la variable?
+
+¿Qué valor tiene ahora?
+
+¿Qué esperaba que apareciera?
+
+¿Qué aparece realmente?</code></pre>
+<p>Después formula una pregunta concreta.</p>
+<p>Cambia una sola cosa cada vez.</p>
+<hr />
+<h2 id="15-cierre">15. Cierre</h2>
+<p>Sobre tu propio programa, explica:</p>
 <ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
+<li>qué variable has creado;</li>
+<li>qué significa su tipo;</li>
+<li>por qué has elegido ese nombre;</li>
+<li>qué valor contiene;</li>
+<li>en qué mensajes se utiliza;</li>
+<li>qué ocurre al cambiar su valor;</li>
+<li>cuál es la diferencia entre la variable y el literal que
+contiene.</li>
 </ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Pregunta: ¿qué cambia si modifico el
-valor de la variable?</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>La sesión está completada cuando puedes modificar el valor de una
+variable, volver a ejecutar MiniJarvis y explicar por qué cambia la
+salida.</p>
 
   </main>
 </body>

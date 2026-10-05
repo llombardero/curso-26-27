@@ -8,76 +8,341 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="sesión-214--ficha-de-trabajo-del-alumnado">Sesión 214 — Ficha de
 trabajo del alumnado</h1>
-<h2 id="readme-y-evidencia-de-ejecución">README y evidencia de
-ejecución</h2>
+<h2 id="readme-y-ejecución-reproducible">README y ejecución
+reproducible</h2>
 <table>
 <thead>
 <tr class="header">
 <th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Al terminar debes poder…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Documentar cómo ejecutar H1.</td>
-<td>README de H1 actualizado y versión <code>h1-entrega</code>
-comprobada en el repositorio.</td>
+<td>Documentar la versión H1 para que otra persona pueda entenderla y
+ejecutarla.</td>
+<td>Tener un README útil, una versión estable de H1 comprobada y una
+ejecución reproducible por otra persona.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1. <strong>Modalidad:</strong> Equipo.</p>
+<p><strong>Tiempo previsto:</strong> 45 minutos. <strong>Hito:</strong>
+H1. <strong>Fase HEXA:</strong> Comunicar. <strong>Modalidad:</strong>
+Equipo → comprobación cruzada.</p>
+<hr />
 <h2 id="material-que-necesitas">Material que necesitas</h2>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
+<li>Un ordenador con JDK e IntelliJ disponibles.</li>
+<li>El proyecto H1 funcionando.</li>
+<li>El <code>README.md</code> del proyecto.</li>
+<li>La ficha de H1 como referencia para comprobar su alcance.</li>
 </ul>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
-<ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Crear <code>README</code> y evidencia de
-ejecución.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
-</ol>
-<h2 id="comprobación-práctica">Comprobación práctica</h2>
-<p>Comprueba <strong>el resultado observable de la actividad</strong> en
-su fuente canónica y prepárate para explicarlo. Registra en diario o
-Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA
-significativo.</p>
-<h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
+<hr />
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>Un programa no queda preparado para compartirlo solo porque funcione
+en el ordenador de quien lo ha creado.</p>
+<p>Otra persona debería poder:</p>
+<pre class="text"><code>localizar el proyecto
+       ↓
+entender qué versión es
+       ↓
+saber qué hace
+       ↓
+ejecutarlo
+       ↓
+comprobar su comportamiento
+       ↓
+reconocer sus límites</code></pre>
+<p>El README sirve para facilitar ese recorrido.</p>
+<p>No es un informe de todo lo que habéis hecho durante el hito.</p>
+<hr />
+<h2 id="2-qué-debe-resolver-el-readme">2. Qué debe resolver el
+README</h2>
+<p>Una persona que llegue por primera vez al proyecto debería poder
+responder leyendo el README:</p>
+<pre class="text"><code>¿Qué es este proyecto?
+
+¿Qué hace esta versión?
+
+¿Cómo se ejecuta?
+
+¿Cómo puedo comprobar que funciona?
+
+¿Qué todavía no hace?</code></pre>
+<p>Si una información no ayuda a entender, ejecutar o comprobar el
+proyecto, probablemente no necesita estar en el README de H1.</p>
+<hr />
+<h2 id="3-estructura-mínima-suficiente">3. Estructura mínima
+suficiente</h2>
+<p>Una estructura adecuada para H1 es:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># H1 — Primer asistente por consola</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Qué hace</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Breve explicación de esta versión de MiniJarvis.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cómo ejecutar</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>Pasos necesarios para abrir y ejecutar el programa.</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comprobación</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>Un ejemplo breve de entrada y salida que permita reconocer que funciona.</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Límites de H1</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>Funciones que todavía no incorpora esta versión.</span></code></pre></div>
+<p>Podéis adaptar los títulos si el contenido sigue siendo claro.</p>
+<p>No añadáis apartados únicamente para hacer el README más largo.</p>
+<hr />
+<h2 id="4-describe-qué-hace-realmente">4. Describe qué hace
+realmente</h2>
+<p>La descripción debe corresponder con el programa actual.</p>
+<p>Por ejemplo, una versión H1 puede indicar que MiniJarvis:</p>
 <ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
+<li>se ejecuta por consola;</li>
+<li>muestra una presentación;</li>
+<li>pide un nombre;</li>
+<li>utiliza el dato introducido;</li>
+<li>solicita un valor numérico;</li>
+<li>convierte texto a número;</li>
+<li>realiza un cálculo sencillo;</li>
+<li>muestra resultados.</li>
 </ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
+<p>No describáis funciones que todavía no existen.</p>
+<p>Evita frases como:</p>
+<pre class="text"><code>MiniJarvis es una inteligencia artificial completa.
+
+MiniJarvis aprende del usuario.
+
+MiniJarvis recuerda conversaciones.</code></pre>
+<p>si vuestra versión H1 no hace esas cosas.</p>
+<hr />
+<h2 id="5-explica-cómo-ejecutarlo">5. Explica cómo ejecutarlo</h2>
+<p>El README debe permitir localizar y arrancar el programa.</p>
+<p>Una explicación desde IntelliJ puede ser tan sencilla como:</p>
+<pre class="text"><code>1. Abrir el proyecto.
+2. Localizar src/Main.java.
+3. Ejecutar la clase Main.
+4. Introducir los datos solicitados en la consola.</code></pre>
+<p>Si vuestro proyecto permite además una ejecución por terminal y ya
+sabéis utilizarla, podéis documentarla.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">javac</span> src/Main.java</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-cp</span> src Main</span></code></pre></div>
+<p>No incluyáis instrucciones que no hayáis comprobado.</p>
+<hr />
+<h2 id="6-añade-una-comprobación-reproducible">6. Añade una comprobación
+reproducible</h2>
+<p>No basta con escribir:</p>
+<pre class="text"><code>El programa funciona.</code></pre>
+<p>Incluid un ejemplo pequeño que permita reconocer el comportamiento
+esperado.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>Hola, soy MiniJarvis.
+¿Cómo te llamas? Laura
+Hola, Laura.
+¿Cuántas horas has practicado Programación? 4
+Si la próxima semana practicas una hora más, serán 5 horas.</code></pre>
+<p>El ejemplo debe coincidir con vuestra versión real.</p>
+<p>No tiene que ser idéntico al de esta ficha.</p>
+<hr />
+<h2 id="7-explica-los-límites-de-h1">7. Explica los límites de H1</h2>
+<p>El README también debe evitar crear expectativas falsas.</p>
+<p>Podéis indicar que esta versión todavía no incorpora, por
+ejemplo:</p>
+<pre class="text"><code>menús
+bucles
+memoria persistente
+varias clases propias
+servicios externos
+IA real</code></pre>
+<p>No hace falta enumerar todo el curso futuro.</p>
+<p>Incluid únicamente los límites que ayuden a entender esta
+versión.</p>
+<hr />
+<h2 id="8-comprueba-primero-vuestra-propia-versión">8. Comprueba primero
+vuestra propia versión</h2>
+<p>Antes del intercambio con otro equipo:</p>
 <ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
+<li>guardad todos los cambios;</li>
+<li>comprobad que estáis trabajando sobre la versión correcta;</li>
+<li>ejecutad MiniJarvis;</li>
+<li>utilizad datos ficticios;</li>
+<li>comprobad que la ejecución coincide con lo explicado en el
+README.</li>
 </ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Intercambio: otro equipo intenta
-entender el README.</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>Realizad, al menos:</p>
+<pre class="text"><code>una ejecución con un nombre ficticio
+otra ejecución con otro nombre
+una entrada numérica válida
+otra entrada numérica válida diferente</code></pre>
+<p>Podéis observar también una entrada no numérica si forma parte de la
+comprobación realizada en S212.</p>
+<p>No necesitáis controlar todavía ese error.</p>
+<hr />
+<h2 id="9-intercambio-otra-persona-prueba-vuestro-readme">9.
+Intercambio: otra persona prueba vuestro README</h2>
+<p>Ahora viene la prueba importante.</p>
+<p>Otro equipo debe intentar ejecutar vuestra versión siguiendo el
+README.</p>
+<p>Durante el primer intento:</p>
+<p><strong>no expliquéis oralmente los pasos que faltan.</strong></p>
+<p>Observad.</p>
+<p>La otra persona debe intentar:</p>
+<pre class="text"><code>localizar Main.java
+ejecutar el programa
+introducir datos
+reconocer el resultado esperado
+identificar qué hace H1
+identificar qué todavía no hace</code></pre>
+<p>Si necesita una explicación que no aparece en el README, habéis
+encontrado una posible mejora.</p>
+<hr />
+<h2 id="10-mejorad-únicamente-lo-necesario">10. Mejorad únicamente lo
+necesario</h2>
+<p>Después del intercambio, preguntad al otro equipo:</p>
+<pre class="text"><code>¿Qué parte se entendió bien?
+
+¿Dónde dudaste?
+
+¿Qué instrucción faltaba?
+
+¿Había información innecesaria?
+
+¿La ejecución coincidió con el ejemplo?</code></pre>
+<p>Modificad el README únicamente cuando la observación revele una
+mejora útil.</p>
+<p>Después de modificarlo, comprobad de nuevo el resultado.</p>
+<hr />
+<h2 id="11-readme-no-significa-duplicar-evidencias">11. README no
+significa duplicar evidencias</h2>
+<p>El README puede incluir:</p>
+<ul>
+<li>qué hace la versión;</li>
+<li>cómo ejecutarla;</li>
+<li>una comprobación breve;</li>
+<li>límites relevantes;</li>
+<li>alguna decisión técnica necesaria para comprenderla.</li>
+</ul>
+<p>No necesita contener:</p>
+<ul>
+<li>una copia completa del código;</li>
+<li>capturas rutinarias de la consola;</li>
+<li>un diario de cada sesión;</li>
+<li>una tabla separada de todas las pruebas;</li>
+<li>el contenido del Scrum;</li>
+<li>una defensa escrita;</li>
+<li>un registro independiente de IA;</li>
+<li>una copia de documentos ya conservados en otra fuente.</li>
+</ul>
+<p>La ejecución reproducible es más útil que una captura rutinaria.</p>
+<hr />
+<h2 id="12-identifica-la-versión-que-se-va-a-presentar">12. Identifica
+la versión que se va a presentar</h2>
+<p>Antes de cerrar la sesión debéis saber qué versión concreta de H1
+vais a presentar.</p>
+<p>La versión debe:</p>
+<pre class="text"><code>compilar
+ejecutarse
+corresponder con el README
+estar dentro del alcance de H1
+ser localizable en el repositorio</code></pre>
+<p>Según el mecanismo de entrega utilizado, podrá identificarse
+mediante:</p>
+<pre class="text"><code>un tag de entrega, como h1-entrega
+
+o
+
+un commit estable claramente identificable</code></pre>
+<p>No necesitáis crear dos mecanismos distintos.</p>
+<p>Lo importante es que pueda localizarse exactamente la versión
+evaluada.</p>
+<hr />
+<h2 id="13-resultado-observable">13. Resultado observable</h2>
+<p>Al terminar debéis poder demostrar:</p>
+<pre class="text"><code>[ ] Existe un README del proyecto.
+[ ] Explica brevemente qué hace H1.
+[ ] Permite saber cómo ejecutar el programa.
+[ ] Incluye una comprobación breve y reproducible.
+[ ] Describe límites relevantes de esta versión.
+[ ] Lo escrito coincide con el programa real.
+[ ] Otra persona ha intentado seguir el README.
+[ ] Hemos corregido únicamente las instrucciones que lo necesitaban.
+[ ] MiniJarvis sigue compilando y ejecutándose.
+[ ] Podemos identificar la versión estable que se va a presentar.</code></pre>
+<p>No necesitáis una captura como prueba rutinaria de ejecución.</p>
+<p>La comprobación consiste en poder volver a ejecutar la versión
+indicada.</p>
+<hr />
+<h2 id="14-fuente-canónica">14. Fuente canónica</h2>
+<p>Cada elemento permanece donde corresponde:</p>
+<pre class="text"><code>código y versiones       → repositorio
+
+ejecución y límites      → README cuando sea necesario documentarlos
+
+tareas y decisiones
+significativas del equipo → Scrum
+
+aprendizajes personales
+significativos            → diario
+
+versión evaluada          → identificada en la entrega de Moodle</code></pre>
+<p>No creéis otro documento para resumir esta sesión.</p>
+<hr />
+<h2 id="15-uso-de-ia">15. Uso de IA</h2>
+<p>La IA puede ayudar a revisar:</p>
+<ul>
+<li>si una instrucción del README resulta ambigua;</li>
+<li>si una explicación técnica puede expresarse con mayor claridad;</li>
+<li>si falta información necesaria para reproducir una ejecución.</li>
+</ul>
+<p>No le pidáis que invente pasos que no habéis comprobado.</p>
+<p>Cualquier propuesta debe contrastarse ejecutando realmente el
+proyecto.</p>
+<p>Si la intervención de la IA es significativa, registradla en la
+fuente correspondiente.</p>
+<p>No es necesario registrar consultas triviales.</p>
+<p>Nunca incluyáis datos personales, contraseñas, tokens ni claves API
+en el README ni en una consulta a IA.</p>
+<hr />
+<h2 id="16-si-os-bloqueáis">16. Si os bloqueáis</h2>
+<p>Ante un problema de reproducibilidad, separad:</p>
+<pre class="text"><code>¿El problema está en el código?
+
+¿El problema está en la configuración?
+
+¿El README omite un paso?
+
+¿La instrucción existe pero no se entiende?
+
+¿Estamos probando la versión correcta?
+
+¿El ejemplo del README coincide con el programa?</code></pre>
+<p>Corregid el problema en su fuente real.</p>
+<p>No añadáis una explicación extra en otro documento para compensar un
+README incompleto.</p>
+<hr />
+<h2 id="17-cierre">17. Cierre</h2>
+<p>Otro equipo debe intentar ejecutar vuestra versión una última
+vez.</p>
+<p>Después debéis poder responder:</p>
+<ol type="1">
+<li>¿qué necesita saber una persona para ejecutar H1?</li>
+<li>¿qué parte del README habéis mejorado después de la prueba?</li>
+<li>¿qué ejemplo permite comprobar el comportamiento?</li>
+<li>¿qué límite de H1 resulta importante explicar?</li>
+<li>¿qué versión exacta vais a presentar?</li>
+<li>¿podríais volver a localizar y ejecutar esa misma versión?</li>
+</ol>
+<p>La sesión está completada cuando otra persona puede entender y
+ejecutar H1 utilizando el README y el equipo puede identificar sin
+ambigüedad la versión estable que va a presentar.</p>
 
   </main>
 </body>

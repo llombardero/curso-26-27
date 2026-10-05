@@ -8,154 +8,581 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="capítulo-02--variables-constantes-y-entradasalida">Capítulo 02 —
 Variables, constantes y entrada/salida</h1>
-<h2 id="hitos-relacionados">Hitos relacionados</h2>
-<pre class="text"><code>H1</code></pre>
-<h2 id="qué-aprenderás">Qué aprenderás</h2>
+<h2 id="correspondencia">Correspondencia</h2>
+<pre class="text"><code>Tema 1 — Aspectos básicos de la programación
+RA principal: RA1
+H1 — Primer asistente por consola</code></pre>
+<p>Este capítulo continúa H1. MiniJarvis deja de limitarse a mostrar
+mensajes fijos: empieza a almacenar datos, recibir información de la
+persona usuaria y realizar cálculos sencillos.</p>
+<h2 id="1-qué-vas-a-aprender">1. Qué vas a aprender</h2>
+<p>Al terminar este capítulo podrás:</p>
 <ul>
-<li>variables</li>
-<li>tipos básicos</li>
-<li>constantes</li>
-<li>Scanner</li>
-<li>entrada por teclado</li>
-<li>salida por consola</li>
-<li>conversiones de texto a número</li>
-<li>operadores aritméticos y comparación</li>
+<li>explicar para qué sirve una variable;</li>
+<li>declarar, inicializar y modificar variables;</li>
+<li>elegir entre varios tipos de datos básicos según la información que
+necesites guardar;</li>
+<li>distinguir entre variable, constante y literal;</li>
+<li>utilizar nombres de variables claros y coherentes;</li>
+<li>leer texto introducido por teclado mediante
+<code>Scanner</code>;</li>
+<li>mostrar información utilizando <code>print</code> y
+<code>println</code>;</li>
+<li>combinar texto y datos en una misma salida;</li>
+<li>utilizar operadores de asignación, aritméticos, de comparación y
+booleanos;</li>
+<li>predecir el resultado de expresiones sencillas teniendo en cuenta su
+precedencia;</li>
+<li>convertir texto a valores numéricos cuando sea necesario;</li>
+<li>reconocer que una conversión puede producir un error si el contenido
+no tiene el formato esperado;</li>
+<li>realizar pequeños cálculos y comprobar sus resultados sin introducir
+todavía menús ni estructuras de repetición.</li>
 </ul>
-<h2 id="1-punto-de-partida">1. Punto de partida</h2>
-<p>MiniJarvis se construye por capas. Este capítulo trabaja una pieza
-concreta del proyecto y la conecta con evidencias reales: código,
-pruebas, documentación, defensa y uso responsable de IA si procede.</p>
-<p>La regla de estudio es siempre la misma:</p>
-<pre class="text"><code>Lee el concepto, ejecuta un ejemplo pequeño, aplícalo a MiniJarvis, documenta la evidencia y prepárate para defenderlo.</code></pre>
-<h2 id="2-conceptos-básicos-explicados">2. Conceptos básicos
-explicados</h2>
-<p>Una variable guarda un dato que puede cambiar. Una constante guarda
-un dato que no debería cambiar durante la ejecución. Java exige indicar
-el tipo: <code>String</code> para texto, <code>int</code> para enteros,
-<code>boolean</code> para verdadero/falso.</p>
-<p>La entrada permite que el usuario participe. Usaremos
-<code>Scanner</code> para leer texto desde teclado. La salida se realiza
-con <code>System.out.println</code> o <code>System.out.print</code>.
-Entrada y salida son la base de un asistente por consola.</p>
-<p>Cuando leemos con <code>scanner.nextLine()</code>, Java obtiene texto
-aunque el usuario escriba un número. Si necesitamos calcular, tendremos
-que convertir ese texto a número con métodos como
-<code>Integer.parseInt</code>. Esta conversión puede fallar si el texto
-no tiene forma de número.</p>
-<p>Los operadores permiten calcular y comparar: <code>+</code>,
-<code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>,
-<code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>,
-<code>&lt;=</code>, <code>==</code> y <code>!=</code>. En expresiones
-con varios operadores hay precedencia: por ejemplo, la multiplicación se
-calcula antes que la suma.</p>
-<h2 id="3-ejemplo-guiado-en-java">3. Ejemplo guiado en Java</h2>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;¿Cómo te llamas? &quot;</span><span class="op">);</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;. Soy &quot;</span> <span class="op">+</span> AGENT_NAME <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h2 id="4-caso-práctico-minijarvis">4. Caso práctico MiniJarvis</h2>
-<p>MiniJarvis debe pedir el nombre del usuario y responder con un saludo
-personalizado. Después añade una variable <code>courseYear</code> y
-muestra el curso ficticio.</p>
-<p>Amplía el caso: si el usuario deja el nombre vacío, de momento solo
-observa qué ocurre. La validación llegará después.</p>
-<p>Refuerzo de cobertura del Tema 1: añade una pregunta numérica.</p>
-<pre class="text"><code>¿Cuántas horas has estudiado Programación esta semana?</code></pre>
-<p>Lee la respuesta como texto, conviértela a <code>int</code>, calcula
-una recomendación sencilla y muestra un mensaje. Por ejemplo, si el
-número es menor que 3, MiniJarvis recomienda practicar más; si es mayor
-o igual que 3, felicita al usuario.</p>
-<h2 id="5-evidencia-de-entornos-de-desarrollo">5. Evidencia de Entornos
-de Desarrollo</h2>
-<p>Actualiza el README indicando que el programa requiere interacción
-por teclado. Añade una prueba manual: entrada usada y salida
-observada.</p>
-<h2 id="6-errores-frecuentes-y-cómo-corregirlos">6. Errores frecuentes y
-cómo corregirlos</h2>
+<h2 id="2-dónde-encaja">2. Dónde encaja</h2>
+<p>En el capítulo anterior MiniJarvis podía ejecutar instrucciones y
+mostrar mensajes.</p>
+<p>Ahora necesitamos que los datos puedan cambiar.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>nombre de la persona
+horas de estudio
+nombre del asistente
+curso
+resultado de un cálculo</code></pre>
+<p>No todos estos datos tienen las mismas características.</p>
+<p>Algunos cambian durante la ejecución. Otros deben permanecer
+constantes. Algunos son texto y otros son números.</p>
+<p>Por eso necesitamos comprender:</p>
+<pre class="text"><code>dato
+ ↓
+tipo
+ ↓
+variable o constante
+ ↓
+operación
+ ↓
+resultado</code></pre>
+<p>Todavía no vamos a construir un menú ni un programa que repita
+acciones. Eso llegará en H2.</p>
+<h2 id="3-variables">3. Variables</h2>
+<p>Una variable permite guardar un valor con un nombre.</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Podemos leerlo así:</p>
+<pre class="text"><code>tipo        nombre         valor inicial
+String      userName       &quot;Laura&quot;</code></pre>
+<p>El valor puede cambiar:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>userName <span class="op">=</span> <span class="st">&quot;Álex&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>La segunda instrucción no vuelve a declarar la variable. Le asigna un
+nuevo valor.</p>
+<h3 id="31-declarar-inicializar-y-asignar">3.1. Declarar, inicializar y
+asignar</h3>
+<p>Estas acciones están relacionadas, pero no significan exactamente lo
+mismo.</p>
+<p>Declarar:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours<span class="op">;</span></span></code></pre></div>
+<p>Inicializar:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>También podemos hacerlo a la vez:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>Y posteriormente cambiar el valor:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>studyHours <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span></code></pre></div>
+<h2 id="4-elegir-el-tipo-adecuado">4. Elegir el tipo adecuado</h2>
+<p>El tipo indica qué clase de dato puede almacenar una variable y qué
+operaciones podremos realizar con ella.</p>
+<p>En estos primeros programas utilizaremos especialmente:</p>
 <table>
 <thead>
 <tr class="header">
-<th>Error</th>
-<th>Síntoma</th>
-<th>Corrección</th>
+<th>Tipo</th>
+<th>Ejemplo de uso</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>No importar Scanner</td>
-<td>cannot find symbol Scanner</td>
-<td>Añadir <code>import java.util.Scanner;</code></td>
+<td><code>int</code></td>
+<td>número entero de intentos u horas</td>
 </tr>
 <tr class="even">
-<td>Confundir int y String</td>
-<td>Error de tipos</td>
-<td>Elegir tipo según dato</td>
+<td><code>double</code></td>
+<td>valor numérico con decimales</td>
 </tr>
 <tr class="odd">
-<td>No probar entrada vacía</td>
-<td>Caso límite no detectado</td>
-<td>Registrar qué ocurre</td>
+<td><code>boolean</code></td>
+<td>verdadero o falso</td>
 </tr>
 <tr class="even">
-<td>Convertir texto no numérico</td>
-<td><code>NumberFormatException</code></td>
-<td>Probar entradas válidas e inválidas</td>
+<td><code>char</code></td>
+<td>un único carácter</td>
 </tr>
 <tr class="odd">
-<td>Operación mal agrupada</td>
-<td>Resultado inesperado</td>
-<td>Usar paréntesis y explicar precedencia</td>
+<td><code>String</code></td>
+<td>texto</td>
 </tr>
 </tbody>
 </table>
-<h2 id="7-preguntas-de-repaso">7. Preguntas de repaso</h2>
+<p>Ejemplos:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> average <span class="op">=</span> <span class="fl">7.5</span><span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> active <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> option <span class="op">=</span> <span class="ch">&#39;A&#39;</span><span class="op">;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Observa que <code>String</code> comienza con mayúscula. No es un tipo
+primitivo como <code>int</code> o <code>boolean</code>, aunque en estos
+primeros programas lo utilizaremos continuamente para trabajar con
+texto.</p>
+<h2 id="5-literales">5. Literales</h2>
+<p>Un literal es un valor escrito directamente en el código.</p>
+<p>En:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p><code>4</code> es un literal entero.</p>
+<p>En:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> agentName <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p><code>"MiniJarvis"</code> es un literal de texto.</p>
+<p>Otros ejemplos:</p>
+<pre class="text"><code>7.5
+true
+&#39;A&#39;</code></pre>
+<p>Una variable tiene nombre. El literal es el valor escrito
+directamente.</p>
+<h2 id="6-constantes">6. Constantes</h2>
+<p>Cuando un valor no debe modificarse durante la ejecución podemos
+expresarlo mediante <code>final</code>.</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Así comunicamos dos ideas:</p>
 <ol type="1">
-<li>¿Qué es una variable?</li>
-<li>¿Qué aporta una constante?</li>
-<li>¿Para qué sirve Scanner?</li>
-<li>¿Qué prueba manual puedes escribir para entrada/salida?</li>
-<li>¿Por qué <code>scanner.nextLine()</code> devuelve texto aunque
-escribas un número?</li>
-<li>¿Qué puede ocurrir al usar <code>Integer.parseInt</code>?</li>
+<li>ese dato tiene un significado importante;</li>
+<li>no esperamos que cambie durante la ejecución.</li>
 </ol>
-<h2 id="8-para-tu-portfolio">8. Para tu portfolio</h2>
-<p>Copia y completa este bloque en tu portfolio:</p>
-<pre class="text"><code>Capítulo 02: Variables, constantes y entrada/salida
-Qué he aprendido:
-Código o documento que lo demuestra:
-Prueba realizada:
-Error que he corregido:
-Qué puedo defender oralmente:
-Uso de IA, si lo hubo, y cómo lo validé:</code></pre>
-<h2 id="9-estudio-paso-a-paso">9. Estudio paso a paso</h2>
-<p>Cuando uses variables, pregúntate tres cosas: qué dato quiero
-guardar, qué tipo tiene y si cambiará durante la ejecución. El nombre de
-la variable debe explicar su intención. <code>n</code> dice poco;
-<code>userName</code> ayuda más. Una constante como
-<code>AGENT_NAME</code> evita escribir el mismo texto en varios lugares
-y comunica que ese valor no debe cambiar.</p>
-<p>Caso de estudio: añade <code>String favoriteTopic</code> y pregunta
-al usuario qué parte de programación quiere practicar. MiniJarvis debe
-responder con una frase personalizada. Registra dos pruebas: una con
-texto normal y otra con entrada vacía. Todavía no tienes que resolver la
-entrada vacía, pero sí observarla.</p>
-<p>Caso de estudio de refuerzo: añade <code>int studyHours</code>. Debes
-demostrar en el portfolio una prueba con número válido y otra con texto
-no numérico. Si todavía no sabes controlar la excepción, al menos
-explica qué error aparece y por qué.</p>
+<p>En estos primeros programas utilizaremos nombres en mayúsculas para
+las constantes:</p>
+<pre class="text"><code>AGENT_NAME
+COURSE_YEAR</code></pre>
+<p>No conviertas en constante cualquier dato. El nombre de la persona
+usuaria, por ejemplo, debe poder variar.</p>
+<h2 id="7-nombres-claros">7. Nombres claros</h2>
+<p>Compara:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> n<span class="op">;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> h<span class="op">;</span></span></code></pre></div>
+<p>con:</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName<span class="op">;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours<span class="op">;</span></span></code></pre></div>
+<p>El segundo código permite comprender mejor qué representa cada
+dato.</p>
+<p>Un nombre debe ayudarnos a entender la intención del programa.</p>
+<h2 id="8-entrada-y-salida">8. Entrada y salida</h2>
+<h3 id="81-mostrar-información">8.1. Mostrar información</h3>
+<p>Ya conocemos:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">);</span></span></code></pre></div>
+<p><code>println</code> muestra el contenido y después pasa a una nueva
+línea.</p>
+<p>También podemos usar:</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;¿Cómo te llamas? &quot;</span><span class="op">);</span></span></code></pre></div>
+<p><code>print</code> permite que la entrada de la persona usuaria
+aparezca en la misma línea.</p>
+<h3 id="82-leer-desde-teclado">8.2. Leer desde teclado</h3>
+<p>Para leer datos utilizaremos <code>Scanner</code>.</p>
+<p>Primero importamos la clase:</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span></code></pre></div>
+<p>Después creamos un objeto:</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span></code></pre></div>
+<p>Y podemos leer una línea:</p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span></code></pre></div>
+<p>Aunque todavía no hayamos estudiado en profundidad clases, objetos y
+constructores, ya podemos reconocer que estamos utilizando una clase
+proporcionada por Java.</p>
+<p>Más adelante comprenderemos con mayor profundidad qué significa:</p>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">)</span></span></code></pre></div>
+<h3 id="83-un-primer-diálogo">8.3. Un primer diálogo</h3>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;¿Cómo te llamas? &quot;</span><span class="op">);</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Soy &quot;</span> <span class="op">+</span> AGENT_NAME <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Ahora la salida depende de un dato introducido durante la
+ejecución.</p>
+<p>MiniJarvis empieza a interactuar.</p>
+<h2 id="9-concatenación">9. Concatenación</h2>
+<p>El operador <code>+</code> también puede utilizarse para construir
+mensajes.</p>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, &quot;</span> <span class="op">+</span> userName <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Resultado:</p>
+<pre class="text"><code>Hola, Laura.</code></pre>
+<p>Observa la diferencia entre:</p>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">);</span></span></code></pre></div>
+<p>y:</p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Resultado: &quot;</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">);</span></span></code></pre></div>
+<p>Antes de ejecutar, intenta predecir ambas salidas.</p>
+<p>Cuando mezclamos texto y números debemos prestar atención al orden de
+evaluación.</p>
+<p>Podemos hacer explícita nuestra intención utilizando paréntesis:</p>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Resultado: &quot;</span> <span class="op">+</span> <span class="op">(</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">));</span></span></code></pre></div>
+<h2 id="10-operadores-y-expresiones">10. Operadores y expresiones</h2>
+<h3 id="101-asignación">10.1. Asignación</h3>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span></code></pre></div>
+<p>El <code>=</code> almacena el valor de la derecha en la variable de
+la izquierda.</p>
+<p>No significa «es igual que» en el sentido matemático.</p>
+<h3 id="102-operadores-aritméticos">10.2. Operadores aritméticos</h3>
+<p>Podemos realizar cálculos sencillos:</p>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> total <span class="op">=</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> difference <span class="op">=</span> <span class="dv">5</span> <span class="op">-</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> product <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> quotient <span class="op">=</span> <span class="dv">8</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> remainder <span class="op">=</span> <span class="dv">7</span> <span class="op">%</span> <span class="dv">2</span><span class="op">;</span></span></code></pre></div>
+<p>El operador <code>%</code> obtiene el resto de una división.</p>
+<h3 id="103-precedencia">10.3. Precedencia</h3>
+<p>No todos los operadores se evalúan al mismo tiempo.</p>
+<p>Compara:</p>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> result <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>con:</p>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> result <span class="op">=</span> <span class="op">(</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">)</span> <span class="op">*</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>Predice ambos valores antes de ejecutar.</p>
+<p>Los paréntesis permiten hacer explícito qué operación queremos
+realizar primero.</p>
+<h3 id="104-comparaciones">10.4. Comparaciones</h3>
+<p>Una comparación produce un valor booleano.</p>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> moreThanThree <span class="op">=</span> studyHours <span class="op">&gt;</span> <span class="dv">3</span><span class="op">;</span></span></code></pre></div>
+<p>Algunos operadores de comparación son:</p>
+<pre class="text"><code>&gt;    mayor que
+&lt;    menor que
+&gt;=   mayor o igual
+&lt;=   menor o igual
+==   igual
+!=   distinto</code></pre>
+<p>Podemos comprobar el resultado sin tomar todavía ninguna
+decisión:</p>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> enoughPractice <span class="op">=</span> studyHours <span class="op">&gt;=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>enoughPractice<span class="op">);</span></span></code></pre></div>
+<p>Resultado:</p>
+<pre class="text"><code>true</code></pre>
+<p>En el siguiente hito aprenderemos a utilizar ese <code>true</code> o
+<code>false</code> para decidir qué instrucciones ejecutar.</p>
+<h3 id="105-operadores-booleanos">10.5. Operadores booleanos</h3>
+<p>Podemos combinar condiciones:</p>
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> enoughHours <span class="op">=</span> studyHours <span class="op">&gt;=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> active <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> ready <span class="op">=</span> enoughHours <span class="op">&amp;&amp;</span> active<span class="op">;</span></span></code></pre></div>
+<p>Los operadores booleanos básicos son:</p>
+<pre class="text"><code>&amp;&amp;   y
+||   o
+!    no</code></pre>
+<p>No necesitamos construir todavía condiciones complejas. Lo importante
+es comprender que una expresión puede producir un valor
+<code>boolean</code>.</p>
+<h2 id="11-convertir-texto-a-número">11. Convertir texto a número</h2>
+<h3 id="111-el-problema">11.1. El problema</h3>
+<p><code>nextLine()</code> devuelve texto.</p>
+<div class="sourceCode" id="cb41"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> hoursText <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span></code></pre></div>
+<p>Si la persona escribe:</p>
+<pre class="text"><code>4</code></pre>
+<p>seguimos teniendo un texto que representa el número cuatro.</p>
+<p>Para calcular necesitamos convertirlo.</p>
+<h3 id="112-conversión-a-entero">11.2. Conversión a entero</h3>
+<div class="sourceCode" id="cb43"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>hoursText<span class="op">);</span></span></code></pre></div>
+<p>Ejemplo completo:</p>
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">&quot;Horas de estudio: &quot;</span><span class="op">);</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> hoursText <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>hoursText<span class="op">);</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> nextWeekGoal <span class="op">=</span> studyHours <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Objetivo siguiente: &quot;</span> <span class="op">+</span> nextWeekGoal<span class="op">);</span></span></code></pre></div>
+<h3 id="113-conversión-a-decimal">11.3. Conversión a decimal</h3>
+<p>Cuando necesitamos decimales podemos trabajar con
+<code>double</code>.</p>
+<div class="sourceCode" id="cb45"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> scoreText <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> score <span class="op">=</span> <span class="bu">Double</span><span class="op">.</span><span class="fu">parseDouble</span><span class="op">(</span>scoreText<span class="op">);</span></span></code></pre></div>
+<h3 id="114-una-conversión-puede-fallar">11.4. Una conversión puede
+fallar</h3>
+<p>¿Qué ocurrirá si intentamos convertir esto?</p>
+<pre class="text"><code>cuatro</code></pre>
+<p>mediante:</p>
+<div class="sourceCode" id="cb47"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span><span class="st">&quot;cuatro&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>La conversión no puede producir el entero esperado.</p>
+<p>En este momento debes:</p>
+<ul>
+<li>reconocer el problema;</li>
+<li>observar el error;</li>
+<li>entender por qué se ha producido.</li>
+</ul>
+<p>La forma de controlar estas excepciones se trabajará
+posteriormente.</p>
+<p>No adelantes una solución que todavía no comprendes.</p>
+<h2 id="12-conversión-entre-tipos-numéricos">12. Conversión entre tipos
+numéricos</h2>
+<p>Algunas conversiones entre tipos compatibles pueden realizarse
+automáticamente.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb48"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> decimalHours <span class="op">=</span> hours<span class="op">;</span></span></code></pre></div>
+<p>En otros casos una conversión puede requerir que indiquemos
+explícitamente nuestra intención.</p>
+<div class="sourceCode" id="cb49"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> value <span class="op">=</span> <span class="fl">7.8</span><span class="op">;</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> integerValue <span class="op">=</span> <span class="op">(</span><span class="dt">int</span><span class="op">)</span> value<span class="op">;</span></span></code></pre></div>
+<p>No interpretes el <code>casting</code> como un método para «arreglar»
+errores de tipos.</p>
+<p>Antes de convertir debes entender qué información puede cambiar o
+perderse.</p>
+<h2 id="13-llévalo-a-minijarvis">13. Llévalo a MiniJarvis</h2>
+<p>Amplía H1 de forma controlada.</p>
+<p>MiniJarvis debe:</p>
+<ol type="1">
+<li>mantener un nombre constante para el asistente;</li>
+<li>preguntar el nombre de la persona;</li>
+<li>guardar la respuesta en una variable;</li>
+<li>mostrar un saludo personalizado;</li>
+<li>preguntar cuántas horas ha dedicado a practicar Programación;</li>
+<li>leer la respuesta como texto;</li>
+<li>convertirla a <code>int</code>;</li>
+<li>realizar un cálculo sencillo;</li>
+<li>mostrar el resultado.</li>
+</ol>
+<p>Por ejemplo:</p>
+<pre class="text"><code>¿Cómo te llamas? Laura
+Hola, Laura. Soy MiniJarvis.
+¿Cuántas horas has practicado Programación? 4
+Si la próxima semana practicas una hora más, serán 5 horas.</code></pre>
+<p>Todavía <strong>no</strong> necesitas:</p>
+<ul>
+<li>decidir si 4 horas son muchas o pocas;</li>
+<li>mostrar mensajes diferentes según la cantidad;</li>
+<li>repetir preguntas;</li>
+<li>construir un menú.</li>
+</ul>
+<p>Eso pertenece al siguiente paso del proyecto.</p>
+<h2 id="14-comprueba-que-funciona">14. Comprueba que funciona</h2>
+<h3 id="prueba-1--texto-normal">Prueba 1 — Texto normal</h3>
+<pre class="text"><code>Nombre: Laura</code></pre>
+<p>Comprueba que el nombre aparece correctamente en el saludo.</p>
+<h3 id="prueba-2--nombre-diferente">Prueba 2 — Nombre diferente</h3>
+<p>Ejecuta de nuevo con otro nombre.</p>
+<p>Comprueba que no has dejado el nombre anterior escrito directamente
+en la salida.</p>
+<h3 id="prueba-3--número-válido">Prueba 3 — Número válido</h3>
+<pre class="text"><code>Horas: 4</code></pre>
+<p>Comprueba el cálculo.</p>
+<h3 id="prueba-4--otro-número-válido">Prueba 4 — Otro número válido</h3>
+<p>Utiliza un valor distinto y calcula previamente qué resultado
+esperas.</p>
+<p>Después compáralo con la ejecución.</p>
+<h3 id="prueba-5--texto-no-numérico">Prueba 5 — Texto no numérico</h3>
+<p>Introduce:</p>
+<pre class="text"><code>cuatro</code></pre>
+<p>Observa qué ocurre.</p>
+<p>En este momento no es obligatorio controlar el error. Sí debes poder
+explicar por qué la conversión no puede realizarse.</p>
+<p>No necesitas realizar capturas rutinarias de estas pruebas.</p>
+<h2 id="15-errores-frecuentes">15. Errores frecuentes</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Problema</th>
+<th>Qué observas</th>
+<th>Qué revisar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No importar <code>Scanner</code></td>
+<td>Java no reconoce la clase</td>
+<td><code>import java.util.Scanner;</code></td>
+</tr>
+<tr class="even">
+<td>Usar una variable antes de darle valor</td>
+<td>Error de compilación</td>
+<td>Declaración e inicialización</td>
+</tr>
+<tr class="odd">
+<td>Confundir <code>String</code> e <code>int</code></td>
+<td>Operación o asignación incompatible</td>
+<td>Tipo del dato</td>
+</tr>
+<tr class="even">
+<td>Olvidar comillas en un texto</td>
+<td>Error de sintaxis</td>
+<td>Literales <code>String</code></td>
+</tr>
+<tr class="odd">
+<td>Intentar modificar una constante</td>
+<td>Error de compilación</td>
+<td>Uso de <code>final</code></td>
+</tr>
+<tr class="even">
+<td>Concatenar sin pensar en el orden</td>
+<td>Resultado distinto al esperado</td>
+<td>Precedencia y paréntesis</td>
+</tr>
+<tr class="odd">
+<td>Convertir texto no numérico</td>
+<td>Error durante la ejecución</td>
+<td>Contenido recibido antes de <code>parseInt</code></td>
+</tr>
+<tr class="even">
+<td>Elegir nombres poco claros</td>
+<td>El código cuesta interpretar</td>
+<td>Intención de la variable</td>
+</tr>
+<tr class="odd">
+<td>Cambiar varias cosas a la vez</td>
+<td>No sabes qué cambio causó el problema</td>
+<td>Modificaciones pequeñas y comprobables</td>
+</tr>
+</tbody>
+</table>
+<h2 id="16-practica-y-razona">16. Practica y razona</h2>
+<h3 id="actividad-a--tipo-adecuado">Actividad A — Tipo adecuado</h3>
+<p>Elige un tipo para cada dato y explica por qué:</p>
+<ul>
+<li>nombre de usuario;</li>
+<li>número de intentos;</li>
+<li>nota media;</li>
+<li>programa activo o no;</li>
+<li>inicial del nombre.</li>
+</ul>
+<h3 id="actividad-b--predice-el-valor">Actividad B — Predice el
+valor</h3>
+<div class="sourceCode" id="cb54"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> b <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> result <span class="op">=</span> a <span class="op">+</span> b <span class="op">*</span> <span class="dv">3</span><span class="op">;</span></span></code></pre></div>
+<p>Predice <code>result</code>.</p>
+<p>Después prueba:</p>
+<div class="sourceCode" id="cb55"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> result <span class="op">=</span> <span class="op">(</span>a <span class="op">+</span> b<span class="op">)</span> <span class="op">*</span> <span class="dv">3</span><span class="op">;</span></span></code></pre></div>
+<p>Explica por qué cambia.</p>
+<h3 id="actividad-c--variable-o-constante">Actividad C — Variable o
+constante</h3>
+<p>Decide cuáles deberían ser constantes:</p>
+<pre class="text"><code>nombre del asistente
+nombre introducido por el usuario
+año del curso
+horas estudiadas esta semana</code></pre>
+<h3 id="actividad-d--comparaciones">Actividad D — Comparaciones</h3>
+<p>Con:</p>
+<div class="sourceCode" id="cb57"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>predice el valor de:</p>
+<div class="sourceCode" id="cb58"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>studyHours <span class="op">&gt;</span> <span class="dv">3</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>studyHours <span class="op">==</span> <span class="dv">4</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>studyHours <span class="op">!=</span> <span class="dv">4</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>studyHours <span class="op">&lt;=</span> <span class="dv">2</span></span></code></pre></div>
+<h3 id="actividad-e--conversión">Actividad E — Conversión</h3>
+<p>Explica qué diferencia hay entre:</p>
+<div class="sourceCode" id="cb59"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> hoursText <span class="op">=</span> <span class="st">&quot;4&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>y:</p>
+<div class="sourceCode" id="cb60"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span></code></pre></div>
+<p>¿Qué operación necesitas para pasar del primero al segundo?</p>
+<h2 id="17-comprueba-lo-aprendido">17. Comprueba lo aprendido</h2>
+<p>Intenta responder sobre tu propio código:</p>
+<ol type="1">
+<li>¿Qué diferencia hay entre declarar e inicializar?</li>
+<li>¿Por qué <code>userName</code> debe ser una variable?</li>
+<li>¿Por qué <code>AGENT_NAME</code> puede ser una constante?</li>
+<li>¿Qué diferencia hay entre variable y literal?</li>
+<li>¿Qué tipo utilizarías para un número entero?</li>
+<li>¿Qué tipo utilizarías para un valor verdadero/falso?</li>
+<li>¿Qué hace <code>scanner.nextLine()</code>?</li>
+<li>¿Por qué necesitamos convertir algunas entradas?</li>
+<li>¿Qué puede ocurrir si usamos <code>Integer.parseInt</code> con texto
+no numérico?</li>
+<li>¿Qué diferencia hay entre <code>=</code> y <code>==</code>?</li>
+<li>¿Qué produce una comparación como
+<code>studyHours &gt;= 3</code>?</li>
+<li>¿Por qué los paréntesis pueden cambiar el resultado de una
+expresión?</li>
+<li>Señala en tu programa una entrada, una variable, una constante, un
+cálculo y una salida.</li>
+</ol>
+<h2 id="18-si-vas-más-rápido">18. Si vas más rápido</h2>
+<p>Sin adelantar H2 puedes:</p>
+<ul>
+<li>utilizar también una variable <code>double</code>;</li>
+<li>probar conversiones entre <code>int</code> y
+<code>double</code>;</li>
+<li>comparar resultados con y sin casting;</li>
+<li>crear varias expresiones booleanas y predecir su valor;</li>
+<li>combinar condiciones con <code>&amp;&amp;</code>, <code>||</code> y
+<code>!</code> sin utilizarlas todavía para controlar el flujo;</li>
+<li>mejorar nombres de variables;</li>
+<li>localizar literales repetidos y decidir razonadamente si alguno
+merece convertirse en constante.</li>
+</ul>
+<p>No construyas todavía un menú ni añadas bucles solo por haber
+terminado antes.</p>
+<h2 id="19-qué-conservar">19. Qué conservar</h2>
+<p>La evidencia principal sigue siendo el programa H1 funcionando y
+comprensible.</p>
+<p>No necesitas crear:</p>
+<ul>
+<li>un portfolio de este capítulo;</li>
+<li>una tabla de pruebas independiente;</li>
+<li>capturas rutinarias;</li>
+<li>un informe de conversiones;</li>
+<li>una ficha específica de errores.</li>
+</ul>
+<p>Cuando se cierre H1, el README conservará la información técnica
+necesaria para ejecutar la versión evaluada.</p>
+<p>Si durante este capítulo aparece un aprendizaje individual
+especialmente significativo, puede anotarse brevemente en el diario.</p>
 
   </main>
 </body>

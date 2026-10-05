@@ -8,7 +8,7 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="sesión-213--ficha-de-trabajo-del-alumnado">Sesión 213 — Ficha de
 trabajo del alumnado</h1>
 <h2 id="limpieza-nombres-claros-y-simplicidad">Limpieza, nombres claros
@@ -17,70 +17,309 @@ y simplicidad</h2>
 <thead>
 <tr class="header">
 <th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Al terminar debes poder…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Mejorar legibilidad sin añadir complejidad.</td>
-<td>Código H1 limpio, simple y ejecutable.</td>
+<td>Revisar la versión H1 para hacerla más clara sin cambiar
+innecesariamente su comportamiento.</td>
+<td>Tener un programa H1 sencillo, ejecutable y comprensible, y poder
+justificar al menos una mejora realizada.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1. <strong>Modalidad:</strong> Equipo →
-comprobación individual.</p>
+<p><strong>Tiempo previsto:</strong> 45 minutos. <strong>Hito:</strong>
+H1. <strong>Fase HEXA:</strong> Ejecutar. <strong>Modalidad:</strong>
+Equipo → comprobación individual.</p>
+<hr />
 <h2 id="material-que-necesitas">Material que necesitas</h2>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
+<li>Un ordenador con JDK e IntelliJ disponibles.</li>
+<li>El proyecto H1 funcionando.</li>
+<li>La ficha de H1.</li>
+<li>Los capítulos 01 y 02 del libro como referencia.</li>
 </ul>
-<h2 id="organización-del-trabajo">Organización del trabajo</h2>
-<p>El equipo produce o demuestra el resultado compartido. Después, cada
-persona comprueba, modifica o explica una parte sin apoyo del resto.</p>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
-<ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Revisar el código H1 con una checklist
-sencilla.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
-</ol>
-<h2 id="comprobación-práctica">Comprobación práctica</h2>
-<p>Comprueba <strong>el resultado observable de la actividad</strong> en
-su fuente canónica y prepárate para explicarlo. Registra en diario o
-Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA
-significativo.</p>
-<h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
+<hr />
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>MiniJarvis ya ha crecido durante H1.</p>
+<p>La versión actual puede contener:</p>
 <ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
+<li>mensajes por consola;</li>
+<li>variables;</li>
+<li>tipos básicos;</li>
+<li>una constante;</li>
+<li><code>Scanner</code>;</li>
+<li>entrada de texto;</li>
+<li>conversión de texto a número;</li>
+<li>un cálculo sencillo;</li>
+<li>una comparación booleana.</li>
 </ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
+<p>Hoy no vamos a añadir una nueva capacidad.</p>
+<p>Vamos a revisar lo que ya existe.</p>
+<p>La idea es:</p>
+<pre class="text"><code>funciona
+   ↓
+reviso
+   ↓
+cambio una cosa
+   ↓
+vuelvo a ejecutar
+   ↓
+compruebo</code></pre>
+<hr />
+<h2 id="2-primero-comprueba-la-versión-actual">2. Primero comprueba la
+versión actual</h2>
+<p>Antes de limpiar nada, ejecuta MiniJarvis.</p>
+<p>Utiliza datos ficticios y comprueba que:</p>
+<pre class="text"><code>[ ] aparece la presentación;
+[ ] pide el nombre;
+[ ] utiliza el nombre introducido;
+[ ] pide el dato numérico previsto;
+[ ] realiza la conversión;
+[ ] realiza el cálculo;
+[ ] muestra el resultado esperado.</code></pre>
+<p>Esta ejecución es tu punto de referencia.</p>
+<p>Si el programa no funciona antes de empezar la revisión, resuelve
+primero ese problema.</p>
+<hr />
+<h2 id="3-revisa-los-nombres">3. Revisa los nombres</h2>
+<p>Localiza las variables y constantes de vuestro programa.</p>
+<p>Pregúntate:</p>
+<pre class="text"><code>¿El nombre explica qué dato contiene?
+
+¿Podría entenderlo otra persona?
+
+¿Mantiene una forma de escritura coherente?
+
+¿Hay nombres demasiado cortos o ambiguos?</code></pre>
+<p>Compara:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> n <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> h <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>hoursText<span class="op">);</span></span></code></pre></div>
+<p>con nombres como:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>hoursText<span class="op">);</span></span></code></pre></div>
+<p>No cambies nombres solo por cambiarlos.</p>
+<p>Hazlo cuando el nuevo nombre exprese mejor la intención.</p>
+<hr />
+<h2 id="4-revisa-variables-y-constantes">4. Revisa variables y
+constantes</h2>
+<p>Comprueba:</p>
+<pre class="text"><code>¿Los datos que cambian son variables?
+
+¿La constante representa realmente un dato que debe permanecer fijo?
+
+¿La constante utiliza final?
+
+¿Su nombre permite reconocerla fácilmente?</code></pre>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>No conviertas datos en constantes únicamente para aumentar su
+número.</p>
+<hr />
+<h2 id="5-revisa-los-mensajes">5. Revisa los mensajes</h2>
+<p>Ejecuta y lee la salida como si fueras una persona que utiliza
+MiniJarvis por primera vez.</p>
+<p>Comprueba:</p>
+<pre class="text"><code>¿Las preguntas se entienden?
+
+¿Los mensajes aparecen en un orden lógico?
+
+¿Hay frases repetidas sin necesidad?
+
+¿Los mensajes describen capacidades que realmente existen?
+
+¿La salida permite saber qué debe introducir la persona usuaria?</code></pre>
+<p>Cambia únicamente los mensajes que realmente necesiten una
+mejora.</p>
+<hr />
+<h2 id="6-revisa-la-estructura-visual-del-código">6. Revisa la
+estructura visual del código</h2>
+<p>Observa <code>Main.java</code>.</p>
+<p>Comprueba:</p>
+<pre class="text"><code>[ ] Las llaves permiten reconocer los bloques.
+[ ] Las instrucciones dentro de main están indentadas.
+[ ] Hay separación suficiente para leer el código.
+[ ] No hay líneas colocadas de forma que oculten la estructura.</code></pre>
+<p>La forma visual del código debe ayudarte a comprenderlo.</p>
+<p>No necesitas aplicar reglas avanzadas de estilo.</p>
+<hr />
+<h2 id="7-revisa-los-comentarios">7. Revisa los comentarios</h2>
+<p>Un comentario debe aportar información útil.</p>
+<p>Por ejemplo, normalmente no necesitamos:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Mostramos un mensaje</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>porque la instrucción ya permite comprenderlo.</p>
+<p>Un comentario puede tener sentido cuando explica una decisión que no
+resulta evidente.</p>
+<p>Revisa los comentarios existentes y pregúntate:</p>
+<pre class="text"><code>¿Aporta información?
+
+¿Explica algo que el código no deja claro?
+
+¿O simplemente repite la instrucción?</code></pre>
+<p>No añadas comentarios solo para cumplir una cantidad.</p>
+<hr />
+<h2 id="8-busca-complejidad-que-no-pertenece-a-h1">8. Busca complejidad
+que no pertenece a H1</h2>
+<p>Comprueba que no habéis añadido por iniciativa propia elementos que
+todavía no corresponden.</p>
+<p>En H1 no necesitamos:</p>
+<pre class="text"><code>menús
+switch
+bucles
+listas, sets o mapas
+varias clases propias
+ficheros
+persistencia
+try/catch
+servicios externos
+IA real integrada
+patrones de diseño</code></pre>
+<p>Si aparece algo que no habéis estudiado y no podéis explicar, revisad
+por qué está ahí.</p>
+<p>Una versión más compleja no es automáticamente una versión mejor.</p>
+<hr />
+<h2 id="9-cambia-una-sola-cosa-cada-vez">9. Cambia una sola cosa cada
+vez</h2>
+<p>Para cada mejora:</p>
+<pre class="text"><code>elige un cambio
+     ↓
+realízalo
+     ↓
+ejecuta
+     ↓
+comprueba
+     ↓
+continúa</code></pre>
+<p>Por ejemplo:</p>
+<pre class="text"><code>renombrar una variable
+        ↓
+ejecutar
+        ↓
+comprobar
+
+mejorar un mensaje
+        ↓
+ejecutar
+        ↓
+comprobar</code></pre>
+<p>No hagáis muchos cambios antes de volver a ejecutar.</p>
+<p>Si algo deja de funcionar, será más fácil localizar qué cambio lo
+provocó.</p>
+<hr />
+<h2 id="10-revisión-del-equipo">10. Revisión del equipo</h2>
+<p>Como equipo, revisad esta lista:</p>
+<pre class="text"><code>[ ] El programa sigue dentro del alcance de H1.
+[ ] Los nombres ayudan a comprender los datos.
+[ ] La constante tiene una función real.
+[ ] Los mensajes son claros.
+[ ] La indentación permite reconocer la estructura.
+[ ] Los comentarios, si existen, aportan información.
+[ ] No hay complejidad que no podamos explicar.
+[ ] El programa sigue compilando y ejecutándose.</code></pre>
+<p>No tenéis que crear una copia de esta checklist.</p>
+<p>Utilizadla para revisar el programa real.</p>
+<hr />
+<h2 id="11-comprobación-individual">11. Comprobación individual</h2>
+<p>Después de la revisión del equipo, cada persona debe realizar o
+explicar una pequeña modificación.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>renombrar una variable
+mejorar un mensaje
+localizar una constante
+explicar una conversión
+cambiar el cálculo manteniendo el mismo nivel</code></pre>
+<p>Después debe:</p>
 <ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
+<li>predecir qué efecto tendrá;</li>
+<li>realizar el cambio;</li>
+<li>ejecutar;</li>
+<li>comprobar el resultado;</li>
+<li>explicar qué ha modificado.</li>
 </ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Pregunta: ¿qué parte sobra o no sabes
-explicar?</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>El objetivo es comprobar que cada persona comprende el producto
+compartido.</p>
+<hr />
+<h2 id="12-resultado-observable">12. Resultado observable</h2>
+<p>Al terminar debéis poder demostrar directamente:</p>
+<pre class="text"><code>[ ] MiniJarvis compila y se ejecuta.
+[ ] Los nombres principales son comprensibles.
+[ ] Las variables y constantes tienen sentido.
+[ ] La salida es clara.
+[ ] El código mantiene una estructura visual legible.
+[ ] Los comentarios no repiten lo obvio.
+[ ] No hay complejidad innecesaria o adelantada.
+[ ] Hemos realizado mejoras pequeñas y comprobables.
+[ ] Cada persona puede explicar o modificar una parte.</code></pre>
+<p>La comprobación se realiza sobre el propio programa.</p>
+<p>No necesitáis capturas ni un informe de revisión.</p>
+<hr />
+<h2 id="13-fuente-canónica">13. Fuente canónica</h2>
+<p>Las mejoras permanecen en el código del proyecto H1.</p>
+<p>Si una decisión del equipo resulta realmente significativa para
+continuar el proyecto, puede registrarse en Scrum.</p>
+<p>Si una persona identifica un aprendizaje especialmente significativo,
+puede anotarlo brevemente en su diario.</p>
+<p>No creéis:</p>
+<ul>
+<li>un informe de limpieza;</li>
+<li>una checklist entregable;</li>
+<li>capturas del antes y el después;</li>
+<li>un documento de revisión;</li>
+<li>una copia del código fuera del repositorio.</li>
+</ul>
+<hr />
+<h2 id="14-uso-de-ia">14. Uso de IA</h2>
+<p>Antes de pedir una revisión a una IA, revisa tú mismo el código.</p>
+<p>Puedes utilizar IA para:</p>
+<ul>
+<li>preguntar por qué un nombre resulta confuso;</li>
+<li>pedir explicación de una línea que no comprendes;</li>
+<li>comparar dos nombres posibles;</li>
+<li>revisar una mejora concreta que ya hayas planteado.</li>
+</ul>
+<p>No aceptes una reescritura completa del programa.</p>
+<p>No introduzcas técnicas que todavía no hayas estudiado.</p>
+<p>Si la intervención de la IA es significativa, deja una anotación
+breve en la fuente correspondiente.</p>
+<p>No es necesario registrar consultas triviales.</p>
+<p>Nunca introduzcas datos personales, contraseñas, tokens ni claves
+API.</p>
+<hr />
+<h2 id="15-si-os-bloqueáis">15. Si os bloqueáis</h2>
+<p>Ante una parte que no entendéis, preguntad:</p>
+<pre class="text"><code>¿Qué hace esta línea?
+
+¿Dónde se utiliza este dato?
+
+¿Qué ocurriría si la elimino?
+
+¿Puedo predecir el resultado antes de cambiarla?
+
+¿Pertenece realmente a H1?
+
+¿Puedo explicarla con mis palabras?</code></pre>
+<p>No eliminéis código al azar.</p>
+<p>Realizad cambios pequeños y comprobadlos.</p>
+<hr />
+<h2 id="16-cierre">16. Cierre</h2>
+<p>Sobre vuestra versión real de H1, explicad:</p>
+<ol type="1">
+<li>qué mejora habéis realizado;</li>
+<li>por qué mejora la comprensión del programa;</li>
+<li>cómo habéis comprobado que no rompe el comportamiento;</li>
+<li>qué nombre de variable o constante podéis justificar;</li>
+<li>si habéis eliminado o evitado alguna complejidad innecesaria;</li>
+<li>qué parte del programa todavía os cuesta explicar.</li>
+</ol>
+<p>La sesión está completada cuando MiniJarvis sigue funcionando después
+de la revisión y cada persona puede explicar o modificar una parte
+concreta sin depender del resto del equipo.</p>
 
   </main>
 </body>

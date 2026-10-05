@@ -8,7 +8,7 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="sesión-215--ficha-de-trabajo-del-alumnado">Sesión 215 — Ficha de
 trabajo del alumnado</h1>
 <h2 id="defensa-y-cierre-h1">Defensa y cierre H1</h2>
@@ -16,74 +16,375 @@ trabajo del alumnado</h1>
 <thead>
 <tr class="header">
 <th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Al terminar debes poder…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Validar comprensión individual.</td>
-<td>Versión <code>h1-entrega</code> defendida y siguiente mejora
-individual identificada.</td>
+<td>Demostrar individualmente que comprendes la versión H1 que habéis
+construido.</td>
+<td>Ejecutar, explicar y modificar una parte sencilla de MiniJarvis,
+reconocer sus límites e identificar qué necesitas reforzar antes de
+continuar.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1. <strong>Modalidad:</strong> Equipo →
-comprobación individual.</p>
+<p><strong>Tiempo previsto:</strong> 45 minutos. <strong>Hito:</strong>
+H1. <strong>Fase HEXA:</strong> Comunicar. <strong>Modalidad:</strong>
+Equipo → defensa individual.</p>
+<hr />
 <h2 id="material-que-necesitas">Material que necesitas</h2>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
-<li>Proyector solo si habrá demostración colectiva; la defensa puede
-realizarse directamente en el equipo.</li>
+<li>Un ordenador con JDK e IntelliJ disponibles.</li>
+<li>La versión estable de H1 preparada en S214.</li>
+<li>El código real del proyecto.</li>
+<li>El <code>README.md</code> actualizado.</li>
 </ul>
-<h2 id="organización-del-trabajo">Organización del trabajo</h2>
-<p>El equipo produce o demuestra el resultado compartido. Después, cada
-persona comprueba, modifica o explica una parte sin apoyo del resto.</p>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
+<p>Utiliza únicamente datos ficticios durante las demostraciones.</p>
+<hr />
+<h2 id="1-qué-significa-defender-h1">1. Qué significa defender H1</h2>
+<p>Defender H1 no significa memorizar una explicación.</p>
+<p>Significa poder trabajar sobre el producto real y demostrar:</p>
+<pre class="text"><code>sé localizarlo
+      ↓
+sé ejecutarlo
+      ↓
+sé explicar qué hace
+      ↓
+sé señalar cómo lo hace
+      ↓
+sé comprobarlo
+      ↓
+puedo modificar una parte sencilla</code></pre>
+<p>El equipo ha construido un producto compartido.</p>
+<p>Pero cada persona debe poder demostrar qué ha aprendido.</p>
+<hr />
+<h2 id="2-producto-comprobación-y-defensa">2. Producto, comprobación y
+defensa</h2>
+<p>En H1 tenemos tres ideas relacionadas, pero diferentes.</p>
+<pre class="text"><code>PRODUCTO
+
+el programa MiniJarvis que habéis construido
+
+
+COMPROBACIÓN
+
+ejecutarlo y observar que produce el comportamiento esperado
+
+
+DEFENSA
+
+explicar el código, justificar decisiones
+y realizar una modificación sencilla</code></pre>
+<p>Que el programa funcione es necesario.</p>
+<p>Pero poder ejecutarlo no sustituye comprenderlo.</p>
+<hr />
+<h2 id="3-comprobación-final-del-equipo">3. Comprobación final del
+equipo</h2>
+<p>Antes de comenzar las defensas individuales, ejecutad una vez la
+versión estable de H1.</p>
+<p>Comprobad que:</p>
+<pre class="text"><code>[ ] abre y ejecuta correctamente;
+[ ] muestra la presentación prevista;
+[ ] pide información mediante Scanner;
+[ ] utiliza el nombre introducido;
+[ ] recibe el dato numérico;
+[ ] realiza la conversión prevista;
+[ ] realiza el cálculo;
+[ ] muestra un resultado coherente;
+[ ] coincide con lo explicado en el README;
+[ ] sigue dentro del alcance de H1.</code></pre>
+<p>Si aparece un problema técnico, corregidlo y volved a comprobar.</p>
+<hr />
+<h2 id="4-identifica-la-versión-que-estás-defendiendo">4. Identifica la
+versión que estás defendiendo</h2>
+<p>Debes saber qué versión concreta estás mostrando.</p>
+<p>Puede estar identificada mediante:</p>
+<pre class="text"><code>un tag de entrega
+
+o
+
+un commit estable</code></pre>
+<p>No necesitas utilizar ambos mecanismos.</p>
+<p>Debes poder localizar la versión que se presenta y distinguirla de
+cambios posteriores.</p>
+<hr />
+<h2 id="5-localiza-la-estructura-del-programa">5. Localiza la estructura
+del programa</h2>
+<p>Sobre el código real, debes poder señalar:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">// ...</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Y explicar con tus palabras:</p>
+<pre class="text"><code>qué es Main
+
+dónde empieza la ejecución
+
+qué instrucciones pertenecen a main
+
+en qué orden se ejecutan</code></pre>
+<p>No necesitas recitar una definición de memoria.</p>
+<p>Señala las partes directamente en tu código.</p>
+<hr />
+<h2 id="6-explica-una-variable">6. Explica una variable</h2>
+<p>Localiza una variable real del programa.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span></code></pre></div>
+<p>Debes poder explicar:</p>
+<pre class="text"><code>qué tipo tiene
+
+cómo se llama
+
+qué dato guarda
+
+de dónde procede su valor
+
+dónde vuelve a utilizarse</code></pre>
+<p>Si otra variable de vuestro programa sirve mejor para explicarlo,
+utiliza esa.</p>
+<hr />
+<h2 id="7-explica-constante-variable-y-literal">7. Explica constante,
+variable y literal</h2>
+<p>Localiza una constante.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Debes poder distinguir:</p>
+<pre class="text"><code>AGENT_NAME   → constante
+
+&quot;MiniJarvis&quot; → literal</code></pre>
+<p>y compararla con una variable como:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName<span class="op">;</span></span></code></pre></div>
+<p>Debes poder explicar por qué un dato tiene sentido como constante y
+otro como variable.</p>
+<hr />
+<h2 id="8-explica-la-entrada-mediante-scanner">8. Explica la entrada
+mediante Scanner</h2>
+<p>Localiza:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Scanner</span> scanner <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span></code></pre></div>
+<p>y alguna lectura como:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span></code></pre></div>
+<p>Debes poder explicar:</p>
+<pre class="text"><code>para qué utilizamos Scanner
+
+qué información recibe el programa
+
+qué devuelve nextLine()
+
+en qué variable queda guardada</code></pre>
+<p>No necesitas explicar todavía en profundidad cómo está construida
+internamente la clase <code>Scanner</code>.</p>
+<hr />
+<h2 id="9-explica-la-conversión">9. Explica la conversión</h2>
+<p>Localiza la conversión numérica de vuestro programa.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> hoursText <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="bu">Integer</span><span class="op">.</span><span class="fu">parseInt</span><span class="op">(</span>hoursText<span class="op">);</span></span></code></pre></div>
+<p>Debes poder explicar:</p>
+<pre class="text"><code>por qué hoursText es texto
+
+por qué necesitamos un int para realizar determinados cálculos
+
+qué hace Integer.parseInt
+
+qué ocurre si intentamos convertir un texto como &quot;cuatro&quot;</code></pre>
+<p>No necesitas controlar todavía ese error mediante excepciones.</p>
+<hr />
+<h2 id="10-explica-un-cálculo-y-una-comparación">10. Explica un cálculo
+y una comparación</h2>
+<p>Localiza un cálculo real.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> nextWeekGoal <span class="op">=</span> studyHours <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span></code></pre></div>
+<p>Explica:</p>
+<pre class="text"><code>qué valores intervienen
+
+qué operador utilizas
+
+qué resultado esperas</code></pre>
+<p>Si vuestro programa contiene una comparación como:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> enoughPractice <span class="op">=</span> studyHours <span class="op">&gt;=</span> <span class="dv">3</span><span class="op">;</span></span></code></pre></div>
+<p>debes poder explicar por qué produce:</p>
+<pre class="text"><code>true</code></pre>
+<p>o:</p>
+<pre class="text"><code>false</code></pre>
+<p>En H1 no utilizamos todavía ese resultado para seleccionar caminos
+distintos del programa.</p>
+<hr />
+<h2 id="11-realiza-una-modificación-sencilla">11. Realiza una
+modificación sencilla</h2>
+<p>Durante la defensa debes ser capaz de modificar una parte que ya
+comprendes.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>cambiar un mensaje
+
+renombrar una variable de forma coherente
+
+cambiar el valor de una constante durante el desarrollo
+
+cambiar el cálculo de +1 a +2
+
+utilizar una variable en otro mensaje</code></pre>
+<p>Antes de ejecutar:</p>
 <ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Defensa: <code>main</code>, variable,
-constante, <code>Scanner</code>, ejecución y límites de
-H1.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
+<li>explica qué vas a cambiar;</li>
+<li>predice qué efecto tendrá.</li>
 </ol>
-<h2 id="comprobación-práctica">Comprobación práctica</h2>
-<p>Comprueba <strong>el resultado observable de la actividad</strong> en
-su fuente canónica y prepárate para explicarlo. Registra en diario o
-Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA
-significativo.</p>
-<h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
+<p>Después:</p>
+<ol start="3" type="1">
+<li>realiza el cambio;</li>
+<li>ejecuta;</li>
+<li>comprueba el resultado;</li>
+<li>explica si ocurrió lo esperado.</li>
+</ol>
+<p>No añadas contenidos de otros hitos para demostrar más.</p>
+<hr />
+<h2 id="12-explica-los-límites-de-h1">12. Explica los límites de H1</h2>
+<p>Debes poder reconocer qué NO pretende hacer todavía esta versión.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>menús
+switch
+bucles
+memoria
+colecciones
+varias clases propias
+ficheros
+persistencia
+tratamiento completo de excepciones
+servicios externos
+IA real integrada</code></pre>
+<p>No saber hacer todavía estas cosas no es un defecto de H1.</p>
+<p>Forma parte de la progresión del proyecto.</p>
+<p>Una buena defensa distingue entre:</p>
+<pre class="text"><code>lo que el programa ya hace
+
+y
+
+lo que aprenderemos a incorporar más adelante</code></pre>
+<hr />
+<h2 id="13-si-utilizaste-ia">13. Si utilizaste IA</h2>
+<p>No necesitas preparar un discurso especial sobre IA.</p>
+<p>Si su intervención fue significativa, debes poder explicar:</p>
+<pre class="text"><code>para qué la utilizaste
+
+qué propuesta recibiste
+
+qué parte aceptaste o modificaste
+
+cómo comprobaste que funcionaba
+
+qué comprendiste antes de incorporarla</code></pre>
+<p>La existencia de una respuesta generada no sustituye tu
+explicación.</p>
+<p>Las consultas triviales no necesitan un registro independiente.</p>
+<p>Nunca muestres ni introduzcas datos personales, contraseñas, tokens
+ni claves API.</p>
+<hr />
+<h2 id="14-resultado-observable-individual">14. Resultado observable
+individual</h2>
+<p>Cada persona debe poder demostrar, sobre el producto real:</p>
+<pre class="text"><code>[ ] Puedo localizar Main y main.
+[ ] Puedo ejecutar la versión estable.
+[ ] Puedo explicar el recorrido básico del programa.
+[ ] Puedo explicar una variable.
+[ ] Puedo distinguir variable, constante y literal.
+[ ] Puedo explicar para qué usamos Scanner.
+[ ] Puedo explicar nextLine().
+[ ] Puedo explicar la conversión de texto a número.
+[ ] Puedo explicar un cálculo sencillo.
+[ ] Puedo interpretar una comparación booleana si aparece.
+[ ] Puedo realizar una modificación pequeña.
+[ ] Puedo comprobar el efecto de mi modificación.
+[ ] Puedo reconocer los límites de H1.
+[ ] Puedo explicar el código importante sin depender del resto del equipo.</code></pre>
+<p>No necesitas crear una ficha nueva para demostrarlo.</p>
+<p>La defensa se realiza directamente sobre el producto.</p>
+<hr />
+<h2 id="15-si-algo-todavía-no-puedes-explicar">15. Si algo todavía no
+puedes explicar</h2>
+<p>Que una parte no esté consolidada todavía no se resuelve memorizando
+una respuesta.</p>
+<p>Identifica con precisión qué necesitas reforzar.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>localizar main
+
+diferenciar variable y constante
+
+comprender nextLine()
+
+comprender Integer.parseInt()
+
+predecir un cálculo
+
+interpretar una comparación
+
+modificar código y volver a ejecutarlo</code></pre>
+<p>La mejora debe ser concreta.</p>
+<p>No escribas simplemente:</p>
+<pre class="text"><code>mejorar Java</code></pre>
+<p>o:</p>
+<pre class="text"><code>estudiar más</code></pre>
+<p>Si este diagnóstico supone un aprendizaje individual significativo,
+puedes anotarlo brevemente en tu diario.</p>
+<p>No necesitas crear un documento específico de recuperación de H1 en
+esta sesión.</p>
+<hr />
+<h2 id="16-fuente-canónica">16. Fuente canónica</h2>
+<p>Al cerrar H1:</p>
+<pre class="text"><code>código y versiones        → repositorio
+
+ejecución, uso y límites  → README cuando corresponda
+
+tareas, decisiones y
+bloqueos significativos   → Scrum
+
+aprendizajes individuales
+significativos             → diario
+
+versión evaluada           → identificada mediante la entrega correspondiente</code></pre>
+<p>La defensa no genera un documento adicional.</p>
+<p>No necesitas:</p>
 <ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
+<li>una presentación específica para defender H1;</li>
+<li>una captura de cada prueba;</li>
+<li>un informe de defensa;</li>
+<li>un cuestionario copiado en el diario;</li>
+<li>una copia del código en otro documento;</li>
+<li>un registro independiente de IA.</li>
 </ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
+<hr />
+<h2 id="17-cierre-del-hito">17. Cierre del hito</h2>
+<p>Al terminar, debes poder responder con tus propias palabras:</p>
 <ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
+<li>¿dónde empieza la ejecución de MiniJarvis?</li>
+<li>¿qué variable puedes explicar mejor?</li>
+<li>¿qué diferencia hay entre variable, constante y literal?</li>
+<li>¿cómo entra información desde el teclado?</li>
+<li>¿por qué convertimos una entrada textual a número?</li>
+<li>¿qué cálculo realiza vuestra versión?</li>
+<li>¿cómo has comprobado que funciona?</li>
+<li>¿qué pequeña modificación puedes realizar sin ayuda?</li>
+<li>¿qué no hace todavía H1?</li>
+<li>¿qué concepto necesitas reforzar antes de continuar?</li>
 </ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Decidir qué debe mejorar cada alumno
-antes de H2.</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>H1 está cerrado cuando existe una versión pequeña y estable de
+MiniJarvis que puede ejecutarse y comprobarse, y cada persona puede
+explicar y modificar las partes fundamentales que ha trabajado.</p>
+<p>La meta no es terminar con un programa complejo.</p>
+<p>La meta es poder decir:</p>
+<blockquote>
+<p>Puedo ejecutarlo, comprobarlo, explicarlo y cambiar una parte porque
+comprendo lo que he construido.</p>
+</blockquote>
 
   </main>
 </body>

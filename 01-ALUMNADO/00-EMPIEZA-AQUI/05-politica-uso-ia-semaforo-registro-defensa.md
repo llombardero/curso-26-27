@@ -1,4 +1,4 @@
-# Política de uso de IA — Semáforo, registro y defensa
+# Política de uso de IA — Semáforo, trazabilidad y defensa
 
 ## Programación — 1.º DAW — Curso 2026/2027
 
@@ -6,382 +6,512 @@
 
 ## 1. Propósito
 
-Esta política define cómo puede utilizar el alumnado herramientas de inteligencia artificial durante el curso.
+Esta política explica cómo puede utilizarse la inteligencia artificial como apoyo durante el módulo de Programación.
 
-La IA se entiende como una herramienta de apoyo al aprendizaje, no como sustituta del aprendizaje.
+La IA puede ayudar a:
 
-El objetivo es que el alumnado aprenda a usar IA de forma:
+- comprender conceptos;
+- estudiar;
+- contrastar alternativas;
+- interpretar errores;
+- revisar código;
+- proponer pruebas;
+- mejorar explicaciones;
+- analizar soluciones.
 
-- responsable;
-- ética;
-- trazable;
-- segura;
-- crítica;
-- defendible;
-- útil para aprender y resolver problemas.
+Pero no sustituye el aprendizaje.
+
+Durante el curso debes ser capaz de:
+
+```text
+comprender
+    ↓
+decidir
+    ↓
+construir
+    ↓
+comprobar
+    ↓
+explicar
+    ↓
+mejorar
+```
+
+aunque hayas utilizado IA durante alguna parte del proceso.
 
 ---
 
-## 2. Herramientas previstas
+## 2. Regla general
 
-Herramientas autorizadas inicialmente:
+No es obligatorio utilizar IA en todas las actividades.
 
-- Gemini, por acuerdo de la Junta de Andalucía con Google.
-- Jarvis, modelo propio disponible para consulta.
-- Otras herramientas autorizadas expresamente por el profesorado.
+Cuando se utilice, debe tratarse de una herramienta autorizada para esa actividad.
 
-Condición:
+Según el momento del curso pueden utilizarse herramientas como Gemini, Jarvis u otras que indique el profesorado.
 
-- cada alumno/a tendrá cuenta nominal propia;
-- no se compartirán contraseñas;
-- no se introducirán datos personales, credenciales ni información sensible;
-- cualquier uso en entregables evaluables debe registrarse.
+La regla principal es:
+
+> Puedes utilizar IA como apoyo para aprender y trabajar. No puedes utilizarla como autor oculto de algo que presentas como aprendizaje propio.
+
+Una respuesta de IA no se considera correcta simplemente porque haya sido generada.
+
+Debe revisarse y, cuando corresponda, comprobarse sobre el producto real.
 
 ---
 
-## 3. Principio general
+## 3. Antes de utilizar IA
 
-Se permite usar IA cuando ayuda a:
+Pregúntate:
 
-- comprender;
-- practicar;
-- contrastar;
-- revisar;
-- depurar;
-- mejorar;
-- documentar;
-- comparar alternativas;
-- preparar defensas.
+```text
+¿Qué problema estoy intentando resolver?
 
-No se permite usar IA para:
+¿Qué he intentado ya?
 
-- sustituir el trabajo propio;
-- ocultar falta de comprensión;
-- entregar código no entendido;
-- evitar pensar;
-- copiar soluciones completas;
-- introducir datos prohibidos;
-- falsear autoría.
+¿Qué parte no comprendo?
 
-Regla básica:
+¿Qué ayuda necesito exactamente?
 
-> Puedes usar IA como copiloto, tutor o revisor. No puedes usarla como autor oculto de tu entrega.
+¿Cómo comprobaré la respuesta?
+```
+
+Siempre que sea posible, realiza primero tu propio intento.
+
+Evita pedir una solución completa cuando una explicación, una pista o un ejemplo pequeño sean suficientes.
 
 ---
 
 ## 4. Semáforo de uso de IA
 
-### 4.1. Verde — Permitido y recomendado
+El semáforo ayuda a decidir qué tipo de uso estás haciendo.
 
-Usos que normalmente están permitidos sin autorización especial, aunque deben registrarse si afectan a un entregable evaluable.
+No clasifica una herramienta como buena o mala.
 
-| Uso verde | Ejemplos |
-|---|---|
-| Pedir explicaciones | “Explícame qué es una variable en Java con un ejemplo sencillo”. |
-| Pedir ejemplos pequeños | “Dame un ejemplo mínimo de Scanner”. |
-| Comparar conceptos | “Diferencia entre variable y constante”. |
-| Entender errores | “Qué significa este error de compilación”. |
-| Mejorar documentación | “Ayúdame a redactar un README más claro”. |
-| Preparar preguntas de estudio | “Hazme preguntas para repasar bucles”. |
-| Revisar ortografía o claridad | “Revisa este portfolio para que se entienda mejor”. |
-| Generar casos de prueba para revisar | “Propón casos de prueba para este menú”. |
-
-Condición:
-
-- El alumnado debe entender la respuesta.
-- Si se incorpora algo a una entrega, se registra.
+Clasifica **cómo la estás utilizando**.
 
 ---
 
-### 4.2. Amarillo — Permitido con registro, verificación y defensa
+### 4.1. Verde — Apoyo al aprendizaje
 
-Usos permitidos, pero con más control.
+Son usos que normalmente ayudan a comprender sin sustituir el trabajo principal.
 
-| Uso amarillo | Condiciones |
+| Uso | Ejemplo |
 |---|---|
-| Generar fragmentos de código | Debe adaptarse, probarse y explicarse. |
-| Refactorizar código | Debe compararse antes/después y justificarse. |
-| Traducir Java a Python para la comparación de casa | Debe defenderse la equivalencia y diferencias. |
-| Proponer diagramas UML | Deben revisarse contra el código real. |
-| Proponer tests | Deben ejecutarse o comprobarse manualmente. |
-| Ayudar a leer stack traces | El alumno debe explicar la causa y solución. |
-| Sugerir patrones de diseño | Solo se acepta si resuelve un problema real. |
-| Generar documentación técnica | Debe revisarse y ajustarse al proyecto real. |
-| Ayudar con configuración Docker/CI | Debe entenderse y no incluir secretos. |
+| Pedir una explicación | «Explícame qué es una variable en Java con un ejemplo sencillo». |
+| Aclarar vocabulario | «¿Qué significa inicializar una variable?». |
+| Pedir un ejemplo pequeño | «Muéstrame un ejemplo mínimo de `Scanner`». |
+| Comparar conceptos | «¿Qué diferencia hay entre variable y constante?». |
+| Comprender un error | «¿Qué significa este mensaje de compilación?». |
+| Preparar preguntas de estudio | «Hazme cinco preguntas para comprobar si entiendo este tema». |
+| Revisar claridad | «¿Se entiende esta explicación que he escrito?». |
+| Contrastar una predicción | «Creo que esta expresión produce `true`. Explícame si mi razonamiento es correcto». |
 
-Condiciones obligatorias:
+En estos casos debes seguir pensando y comprobando por ti mismo.
 
-1. Registro de uso de IA.
-2. Verificación humana.
-3. Defensa oral si el profesorado lo solicita.
-4. Capacidad de modificar o explicar el resultado.
+Una consulta verde y trivial no necesita quedar registrada de forma rutinaria.
+
+Si una consulta inicialmente sencilla termina influyendo de forma significativa en un producto evaluable, se aplica la regla de trazabilidad del apartado 5.
 
 ---
 
-### 4.3. Rojo — No permitido
+### 4.2. Amarillo — Apoyo generativo o técnico significativo
 
-Usos prohibidos.
+Son usos permitidos cuando la IA interviene de forma importante en algo que después utilizarás, modificarás o presentarás.
 
-| Uso rojo | Motivo |
+| Uso | Qué debes hacer |
 |---|---|
-| Entregar código completo generado por IA sin entenderlo | Sustituye el aprendizaje. |
-| Ocultar que se ha usado IA | Falsea la autoría. |
-| Usar IA en pruebas individuales si no está autorizado | Rompe las condiciones de evaluación. |
-| Introducir contraseñas, tokens o claves API | Riesgo de seguridad. |
-| Introducir datos personales propios o de terceros | Riesgo legal y ético. |
-| Subir `.env` o credenciales a GitHub | Riesgo crítico de seguridad. |
-| Pedir a la IA que haga la defensa oral | La defensa debe demostrar comprensión propia. |
-| Copiar soluciones de otros equipos con ayuda de IA | Plagio. |
-| Usar IA para saltarse restricciones del profesorado | Conducta no ética. |
-| Mantener código que no se puede explicar | Evidencia no válida. |
+| Generar un fragmento de código | Comprenderlo, adaptarlo, ejecutarlo y poder modificarlo. |
+| Proponer una refactorización | Comparar antes y después y comprobar que mantiene el comportamiento esperado. |
+| Proponer casos de prueba | Revisarlos y ejecutarlos o comprobarlos. |
+| Traducir un fragmento entre lenguajes | Comparar ambas versiones y explicar las diferencias. |
+| Proponer un diagrama | Contrastarlo con el código real. |
+| Ayudar a interpretar un error complejo | Explicar después cuál era la causa y cómo se comprobó. |
+| Proponer una decisión de diseño | Compararla con alternativas y justificar por qué se acepta o se rechaza. |
+| Generar documentación técnica | Revisarla para que describa el proyecto real. |
+| Proponer una mejora importante del código | Comprobar que pertenece al nivel del hito y que puedes explicarla. |
 
-Consecuencia posible:
-
-- repetición parcial o total de la entrega;
-- defensa reforzada;
-- prueba individual;
-- invalidación de la evidencia afectada;
-- aplicación de las normas del centro si procede.
-
----
-
-## 5. Registro obligatorio de uso de IA
-
-Todo entregable evaluable que use IA debe incluir un registro.
-
-Nombre recomendado:
+En un uso amarillo debes poder:
 
 ```text
-diario individual o Scrum, según autoría
+explicar para qué utilizaste la IA
+            ↓
+revisar lo que propuso
+            ↓
+aceptar, modificar o rechazar
+            ↓
+comprobar el resultado
+            ↓
+explicarlo y modificarlo
 ```
 
-### Plantilla
-
-```markdown
-# Registro de uso de IA
-
-Alumno/a:
-Equipo:
-Hito:
-Fecha:
-Herramienta usada: Gemini / Jarvis / otra autorizada
+Si la intervención ha sido significativa, debe quedar trazabilidad según el apartado 5.
 
 ---
 
-## Uso 1
+### 4.3. Rojo — Uso no permitido
 
-### Objetivo
+No son usos aceptables como forma de demostrar aprendizaje.
 
-¿Qué querías conseguir?
+| Uso | Problema |
+|---|---|
+| Entregar una solución completa generada por IA sin comprenderla | Sustituye el aprendizaje. |
+| Presentar como propio código que no puedes explicar | No demuestra comprensión ni autoría. |
+| Ocultar una intervención significativa de IA | Impide reconstruir cómo se obtuvo el resultado. |
+| Utilizar IA en una prueba individual cuando no esté autorizada | Incumple las condiciones de esa actividad. |
+| Pedir a una IA que realice por ti una defensa | La defensa debe demostrar comprensión individual. |
+| Copiar una solución de otro equipo mediante IA | No demuestra aprendizaje propio. |
+| Utilizar IA para saltarse las restricciones de una actividad | Sustituye el reto que debe resolver el alumnado. |
+| Mantener código generado que no puedes modificar | No existe comprensión suficiente de la solución. |
+| Inventar pruebas o resultados que realmente no se han ejecutado | La comprobación deja de ser válida. |
+| Introducir contraseñas, tokens o claves API | Expone secretos. |
+| Introducir datos personales propios o de terceras personas | Compromete privacidad y seguridad. |
+| Compartir ficheros de configuración con credenciales reales | Expone información sensible. |
 
-### Prompt o resumen del prompt
+Este documento no establece porcentajes, penalizaciones ni sanciones específicas.
+
+Las condiciones de evaluación y las normas aplicables serán las que correspondan al módulo, a la actividad y a las indicaciones comunicadas por el profesorado.
+
+---
+
+## 5. Cuándo un uso de IA necesita trazabilidad
+
+No se registra cada consulta realizada a una IA.
+
+La trazabilidad se exige cuando la intervención ha sido **significativa** para el trabajo evaluable.
+
+Por ejemplo, puede considerarse significativa cuando la IA:
+
+- genera o modifica una parte relevante del código;
+- ayuda a resolver un bloqueo técnico importante;
+- cambia una decisión del equipo;
+- propone una solución que finalmente se incorpora;
+- genera pruebas que se utilizan para validar el programa;
+- influye de forma importante en una explicación o documentación evaluable;
+- interviene en una comparación o actividad cuyo resultado forma parte del aprendizaje que se va a demostrar.
+
+Normalmente no necesita registrarse una consulta aislada como:
 
 ```text
-Escribe aquí el prompt o un resumen fiel.
+¿Qué significa esta palabra?
+
+¿Para qué sirve un int?
+
+Explícame este mensaje de error.
+
+Revisa la ortografía de esta frase.
 ```
 
-### Resultado obtenido
-
-¿Qué te devolvió la IA?
-
-### Qué acepté
-
-¿Qué parte usaste?
-
-### Qué modifiqué yo
-
-¿Qué cambiaste, corregiste o adaptaste?
-
-### Cómo lo verifiqué
-
-¿Cómo comprobaste que era correcto?
-
-### Qué aprendí
-
-¿Qué entiendes ahora que antes no entendías?
-
-### Riesgos detectados
-
-¿Había errores, inseguridad, código raro, datos sensibles o algo que no comprendías?
-```
+si su influencia en el producto o en una decisión evaluable ha sido trivial.
 
 ---
 
-## 6. Defensa oral sobre uso de IA
+## 6. Dónde se conserva la trazabilidad
 
-El profesorado podrá hacer preguntas individuales sobre cualquier entrega asistida por IA.
+No necesitas crear un **registro de IA independiente**.
 
-Preguntas tipo:
+Cuando el uso sea significativo, deja una anotación breve en la fuente que corresponda.
 
-- ¿Qué parte generó o sugirió la IA?
-- ¿Qué parte escribiste tú?
-- ¿Qué modificaste?
-- ¿Cómo verificaste que funcionaba?
-- ¿Qué error detectaste?
-- ¿Qué alternativa descartaste?
-- ¿Qué pasaría si cambio esta línea?
-- ¿Qué datos no debería recibir la IA?
-- ¿Dónde podría haber una vulnerabilidad?
-- ¿Qué harías si la IA entra en un bucle de errores?
+### Uso principalmente individual
 
-La defensa puede incluir:
+Se registra en el **diario individual** cuando está relacionado principalmente con:
 
-- explicar una función;
-- modificar un fragmento;
-- detectar un bug;
-- comparar Java y Python;
-- justificar un patrón;
-- explicar un test;
-- interpretar un stack trace.
+- tu aprendizaje;
+- una decisión personal;
+- una parte del trabajo que has realizado tú;
+- un bloqueo individual relevante.
+
+### Uso del equipo
+
+Se registra en **Scrum** cuando está relacionado principalmente con:
+
+- una decisión técnica del equipo;
+- una solución compartida;
+- un bloqueo colectivo;
+- un cambio importante acordado por el grupo.
+
+No copies la misma información en ambos lugares.
 
 ---
 
-## 7. Política específica para comparación Java ↔ Python
+## 7. Qué debe permitir explicar una anotación significativa
 
-Desde H2 hasta H7 habrá comparación Java ↔ Python como tarea de casa.
+La anotación no tiene que convertirse en un informe.
 
-Se permite usar IA de forma amplia para esta comparación, pero se exige:
-
-- registro;
-- comprensión;
-- verificación;
-- defensa.
-
-La comparación debe responder al menos:
+Debe permitir reconstruir lo esencial:
 
 ```text
-¿Qué hace el programa en Java?
-¿Cómo se expresa en Python?
-¿Qué cambia en sintaxis?
-¿Qué cambia en tipos/datos/estructura?
-¿Qué parte generó la IA?
-¿Qué he modificado yo?
-¿Cómo he comprobado que funciona?
+¿Para qué utilicé la IA?
+
+¿Qué aportó?
+
+¿Qué acepté, modifiqué o descarté?
+
+¿Cómo comprobé el resultado?
 ```
 
-No se evaluará memorizar Python, sino comprender diferencias y transferir conceptos.
+Cuando resulte útil para comprender el proceso, también puede conservarse:
+
+- el prompt utilizado;
+- un resumen fiel del prompt;
+- un error detectado;
+- una alternativa rechazada;
+- un aprendizaje importante.
+
+No es necesario copiar conversaciones completas con la IA.
 
 ---
 
-## 8. Política específica para código limpio y patrones
+## 8. Verificación humana
 
-La IA puede sugerir mejoras de código limpio o patrones de diseño, pero se aplicarán estas reglas:
+Una propuesta de IA debe comprobarse de acuerdo con el tipo de resultado.
 
-1. Primero se entiende el problema.
-2. Después se intenta una solución simple.
-3. Solo se introduce un patrón si resuelve un problema real.
-4. Toda sugerencia de IA debe ser revisada por el alumnado.
-5. El alumnado debe poder explicar por qué el cambio mejora o no mejora el código.
+### Si es código
 
-Preguntas de defensa:
+Debes poder:
 
-- ¿Qué problema tenía el código antes?
-- ¿Qué principio de código limpio aplicaste?
-- ¿La IA propuso algo demasiado complejo?
-- ¿Por qué aceptaste o rechazaste el patrón?
-- ¿Qué alternativa simple había?
+```text
+leerlo
+entenderlo
+ejecutarlo
+probarlo
+modificarlo
+explicarlo
+```
+
+### Si es una prueba
+
+Debes comprobar que realmente se ha ejecutado o que el resultado esperado está razonado correctamente.
+
+### Si es un README o documentación
+
+Debe describir el proyecto real.
+
+No debe inventar:
+
+- funciones;
+- resultados;
+- configuraciones;
+- pruebas;
+- decisiones que nunca existieron.
+
+### Si es un diagrama
+
+Debe corresponder con el código o con el diseño que realmente se está trabajando.
+
+### Si es una explicación
+
+Debes poder reformularla con tus propias palabras y relacionarla con tu código o actividad.
 
 ---
 
-## 9. Seguridad, privacidad y secretos
+## 9. Defensa de un trabajo asistido por IA
 
-Prohibido introducir en herramientas de IA:
+La defensa se realiza sobre el producto y las evidencias reales.
+
+No necesitas crear un documento específico para preparar cada defensa.
+
+El profesorado puede pedirte, por ejemplo:
+
+- señalar una parte del código;
+- explicar qué hace;
+- modificar una línea;
+- predecir qué ocurrirá;
+- ejecutar y comprobar;
+- explicar qué sugirió la IA;
+- indicar qué cambiaste tú;
+- justificar por qué aceptaste o rechazaste una propuesta;
+- localizar un error;
+- explicar cómo verificaste una respuesta.
+
+La finalidad no es recordar literalmente un prompt.
+
+La finalidad es comprobar que existe aprendizaje y comprensión.
+
+---
+
+## 10. Comparación Java ↔ Python
+
+Cuando una actividad del curso proponga comparar una solución Java con Python, la IA puede utilizarse como apoyo respetando el mismo semáforo.
+
+La comparación debe ayudarte a reconocer aspectos como:
+
+```text
+qué hace el programa
+
+cómo se expresa una idea equivalente
+
+qué cambia en la sintaxis
+
+qué cambia en los tipos o estructuras
+
+qué propuesta realizó la IA
+
+qué has revisado o modificado
+
+cómo has comprobado el resultado
+```
+
+La comparación es una actividad de aprendizaje.
+
+No necesita convertirse por defecto en un informe independiente.
+
+Si deja un aprendizaje individual significativo, puede integrarse en el diario o seleccionarse posteriormente para el portfolio cuando corresponda.
+
+---
+
+## 11. Código limpio, refactorización y decisiones de diseño
+
+La IA puede proponer mejoras, pero una solución más compleja no es automáticamente mejor.
+
+Utiliza esta secuencia:
+
+```text
+primero entiendo el problema
+          ↓
+intento una solución adecuada a mi nivel
+          ↓
+compruebo su comportamiento
+          ↓
+valoro una posible mejora
+          ↓
+solo incorporo lo que puedo justificar
+```
+
+No introduzcas técnicas de hitos posteriores únicamente porque una IA las haya sugerido.
+
+Cuando aparezcan patrones de diseño, refactorizaciones u otras técnicas avanzadas, deben responder a un problema real y al nivel trabajado en ese momento.
+
+---
+
+## 12. Seguridad, privacidad y secretos
+
+Nunca introduzcas en una herramienta de IA:
 
 - contraseñas;
 - tokens;
 - claves API;
-- ficheros `.env`;
+- credenciales;
+- ficheros `.env` con valores reales;
 - datos personales;
-- DNI, teléfonos o direcciones;
-- información privada de compañeros/as;
-- datos reales de empresas;
-- credenciales de GitHub, Moodle, Gemini o Jarvis.
+- DNI;
+- teléfonos;
+- direcciones;
+- datos privados de compañeros o compañeras;
+- información confidencial;
+- credenciales de servicios o plataformas.
 
-Regla para proyectos:
+Regla general:
 
 ```text
-Nunca se suben secretos al repositorio.
-Nunca se pegan secretos en una IA.
-Nunca se usan datos personales reales para probar.
+Nunca subas secretos al repositorio.
+Nunca pegues secretos en una IA.
+No utilices datos personales reales para hacer pruebas.
 ```
 
-Si se necesita simular:
+Cuando necesites ejemplos utiliza datos ficticios.
 
-- usar datos ficticios;
-- usar claves falsas como `API_KEY_EJEMPLO`;
-- usar `.env.example` sin valores reales;
-- documentar cómo configurarlo sin revelar secretos.
+Por ejemplo:
 
----
-
-## 10. Uso de IA por hitos
-
-| Hito | Uso recomendado | Límite |
-|---|---|---|
-| H0 | Preguntar qué es Scrum o cómo hacer retrospectiva. | No sustituir la reflexión del equipo. |
-| H1 | Explicar conceptos básicos: variable, constante, Scanner. | No generar un programa avanzado. |
-| H2 | Ayudar a entender errores, bucles, switch, casos de prueba. | No entregar menú completo sin entender. |
-| H3 | Comparar colecciones, sugerir pruebas de memoria. | No aceptar estructuras que no se puedan explicar. |
-| H4 | Revisar diseño OO o diagramas. | No usar UML generado sin contrastarlo con código. |
-| H5 | Sugerir refactorizaciones o patrones. | No aplicar patrones decorativos. |
-| H6 | Ayudar con ficheros, logs, README, Docker guiado. | No usar secretos ni configuraciones opacas. |
-| H7 | Diseñar prompts y validar IA real/simulada. | No delegar la responsabilidad del agente en la IA. |
-| HF | Preparar defensa y portfolio. | No sustituir la defensa personal. |
-
----
-
-## 11. Evaluación del uso de IA
-
-El uso de IA se valora positivamente cuando:
-
-- está declarado;
-- mejora el aprendizaje;
-- se verifica;
-- se corrige;
-- se explica;
-- se usa con criterio;
-- ayuda a comparar alternativas.
-
-El uso de IA se valora negativamente cuando:
-
-- está oculto;
-- sustituye el trabajo;
-- genera código no entendido;
-- introduce errores no detectados;
-- introduce riesgos de seguridad;
-- impide la defensa individual.
-
----
-
-## 12. Modelo de declaración breve en cada entrega
-
-Cada entrega puede incluir al final:
-
-```markdown
-## Declaración de uso de IA
-
-He usado IA: sí / no.
-
-Herramienta usada:
-
-Uso principal:
-
-Confirmo que:
-
-- he revisado el resultado;
-- puedo explicar el código o documento entregado;
-- no he incluido datos personales ni secretos;
-- he registrado los usos relevantes en `diario individual o Scrum, según autoría`.
+```text
+Nombre: Laura
+Horas: 4
+API_KEY_EJEMPLO
+usuario_ejemplo
 ```
 
----
-
-## 13. Mensaje para el alumnado
-
-La IA puede ayudarte mucho, pero no puede aprender por ti.
-
-En este curso se permite usar IA porque forma parte del trabajo profesional actual. Pero precisamente por eso debes aprender a usarla bien: con criterio, trazabilidad, seguridad y responsabilidad.
-
-Si una IA te da una solución que no entiendes, todavía no tienes una solución: tienes una tarea pendiente.
+Si en algún momento se trabaja con configuración externa, los ejemplos deben mostrar la estructura necesaria sin incluir credenciales reales.
 
 ---
+
+## 13. Cómo se aplica durante los hitos
+
+Esta política se mantiene durante todo el proyecto MiniJarvis.
+
+Cada hito indicará:
+
+- qué conocimientos se están trabajando;
+- qué tipo de ayuda resulta adecuada;
+- qué técnicas todavía no corresponden;
+- qué debe poder comprobarse;
+- qué debe poder defender cada persona.
+
+Una propuesta de IA no justifica adelantar contenidos.
+
+Por ejemplo, en H1 puedes utilizar IA para comprender:
+
+- la estructura de un programa;
+- una variable;
+- una constante;
+- `Scanner`;
+- una conversión;
+- un error sencillo.
+
+Pero H1 no se convierte por ello en un proyecto con una IA real integrada.
+
+MiniJarvis crecerá cuando también crezcan tus conocimientos.
+
+---
+
+## 14. Cómo se valora el uso de IA
+
+Un uso adecuado de IA ayuda a demostrar aprendizaje cuando:
+
+- parte de una necesidad comprensible;
+- puedes explicar para qué la utilizaste;
+- revisas la respuesta;
+- detectas y corriges errores cuando aparecen;
+- compruebas el resultado;
+- puedes modificar lo incorporado;
+- mantienes la seguridad y privacidad;
+- dejas trazabilidad cuando la intervención ha sido significativa.
+
+Un resultado asistido por IA queda incompleto como evidencia individual cuando no puedes:
+
+- explicar qué hace;
+- demostrar cómo se comprobó;
+- identificar qué parte has revisado o modificado;
+- realizar una modificación sencilla;
+- reconocer sus limitaciones.
+
+La calidad aparente de un resultado no sustituye la comprensión.
+
+---
+
+## 15. Antes de presentar un trabajo
+
+Comprueba:
+
+```text
+[ ] Puedo explicar el resultado.
+[ ] Puedo localizar las partes importantes.
+[ ] He comprobado lo que debía funcionar.
+[ ] Puedo modificar una parte adecuada a mi nivel.
+[ ] No he incorporado técnicas que no puedo explicar.
+[ ] Si la IA influyó significativamente, existe trazabilidad en diario o Scrum.
+[ ] No he creado un registro de IA independiente solo por rutina.
+[ ] No he incluido datos personales ni secretos.
+```
+
+Esta lista sirve para revisar.
+
+No tienes que copiarla ni entregarla como un documento adicional.
+
+---
+
+## 16. Idea clave
+
+La IA puede ayudarte a aprender, pero no puede demostrar el aprendizaje por ti.
+
+```text
+Pregunta.
+Contrasta.
+Comprueba.
+Modifica.
+Explica.
+```
+
+Si una IA te proporciona una solución que todavía no comprendes, el trabajo no ha terminado.
+
+La meta es que puedas decir:
+
+> Sé qué ayuda he recibido, sé qué he decidido yo y puedo comprobar y explicar el resultado.

@@ -9,6 +9,6 @@
 
 ## Regla de trabajo
 
-Moodle indica qué hacer y registra la entrega. Drive conserva evidencias, Sheets registra el proceso, Sites selecciona aprendizajes y GitHub conserva el código. No mantengas dos copias editables del código.
+Moodle indica qué hacer e identifica la entrega. GitHub conserva el código, el historial y las pruebas técnicas ligadas al proyecto. Sheets aloja el diario y Scrum cuando exista información significativa que registrar. Drive se reserva para evidencia no-code excepcional sin una fuente canónica mejor. Sites selecciona evidencias en C1, C2 y HF. No mantengas dos copias editables del código.
 
 Los ejemplos resueltos se mostrarán después del intento propio o de una primera versión defendible.

@@ -1,0 +1,1746 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introducción a Git y GitHub</title>
+  <link rel="stylesheet" href="../estilos-minijarvis.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar"><a href="../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
+<h1 id="introducción-a-git-y-github">Introducción a Git y GitHub</h1>
+<h2 id="programación--1º-daw">Programación — 1.º DAW</h2>
+<blockquote>
+<p><strong>Reconocimiento de autoría y fuente principal</strong></p>
+<p>Este manual ha sido elaborado tomando como <strong>fuente didáctica
+principal</strong> el curso en vídeo <strong>«Aprende Git y GitHub -
+Curso desde Cero»</strong>, creado por <strong>Estefania Cassingena
+Navone</strong> y publicado por <strong>freeCodeCamp
+Español</strong>.</p>
+<p>Vídeo original:</p>
+<p><a
+href="https://www.youtube.com/watch?v=mBYSUUnMt9M">https://www.youtube.com/watch?v=mBYSUUnMt9M</a></p>
+<p>La progresión conceptual y numerosos ejemplos generales de Git y
+GitHub de este manual se apoyan en dicho curso.</p>
+<p>El contenido se ha reorganizado, resumido, adaptado y ampliado para
+su utilización en <strong>Programación de 1.º DAW</strong> y para
+aplicarlo al proyecto <strong>MiniJarvis</strong>.</p>
+<p>Las secciones específicas sobre MiniJarvis, organización de
+evidencias, seguridad del proyecto, <code>.gitignore</code>,
+identificación de versiones evaluadas y determinadas recomendaciones
+para el trabajo en el aula son <strong>adaptaciones didácticas de este
+módulo</strong> y no deben atribuirse necesariamente al curso
+original.</p>
+<p>Este manual no pretende sustituir al vídeo original. El vídeo
+constituye una fuente de estudio recomendada y reconocida expresamente
+en este material.</p>
+</blockquote>
+<hr />
+<h1 id="1-para-qué-sirve-este-manual">1. Para qué sirve este manual</h1>
+<p>Durante el curso vas a modificar MiniJarvis muchas veces.</p>
+<p>Necesitamos poder responder preguntas como:</p>
+<pre class="text"><code>¿Qué he cambiado?
+
+¿Qué versión funcionaba?
+
+¿Qué cambió entre dos versiones?
+
+¿Quién realizó un cambio?
+
+¿Puedo probar algo sin destruir la versión estable?
+
+¿Cómo compartimos cambios?
+
+¿Qué versión concreta estamos evaluando?</code></pre>
+<p>Git y GitHub nos ayudarán a responderlas.</p>
+<p>Pero no necesitas aprender todo de una vez.</p>
+<p>Este manual está organizado en tres niveles.</p>
+<h2 id="núcleo">Núcleo</h2>
+<p>Debes ir dominando progresivamente:</p>
+<pre class="text"><code>repositorio
+status
+diff
+add
+commit
+log
+ramas
+push
+pull</code></pre>
+<h2 id="trabajo-colaborativo">Trabajo colaborativo</h2>
+<p>Cuando el proyecto lo necesite aparecerán:</p>
+<pre class="text"><code>merge
+conflictos
+remotos
+fetch
+pull requests</code></pre>
+<h2 id="ampliación">Ampliación</h2>
+<p>No necesitas dominar desde el principio:</p>
+<pre class="text"><code>forks
+issues
+operaciones avanzadas
+recuperación compleja del historial</code></pre>
+<p>La regla es la misma que utilizamos en MiniJarvis:</p>
+<blockquote>
+<p>Primero comprende. Después utiliza.</p>
+</blockquote>
+<hr />
+<h1 id="2-el-problema-trabajar-sin-control-de-versiones">2. El problema:
+trabajar sin control de versiones</h1>
+<p>Imagina que durante varias semanas guardas:</p>
+<pre class="text"><code>Main.java
+Main-bueno.java
+Main-final.java
+Main-final2.java
+Main-final-ahora-si.java
+Main-final-definitivo.java</code></pre>
+<p>Muy pronto aparecen problemas:</p>
+<pre class="text"><code>¿Cuál es la versión correcta?
+
+¿Qué diferencia hay entre ellas?
+
+¿Qué archivo funcionaba ayer?
+
+¿Quién hizo este cambio?
+
+¿Puedo recuperar una versión anterior?</code></pre>
+<p>Copiar archivos manualmente no proporciona un historial fiable.</p>
+<p>Para eso utilizamos un <strong>sistema de control de
+versiones</strong>.</p>
+<hr />
+<h1 id="3-qué-es-el-control-de-versiones">3. ¿Qué es el control de
+versiones?</h1>
+<p>Un sistema de control de versiones permite conservar la evolución de
+un proyecto.</p>
+<p>En lugar de guardar:</p>
+<pre class="text"><code>versión1
+versión2
+versión3
+versión-final</code></pre>
+<p>podemos conservar una historia:</p>
+<pre class="text"><code>A
+↓
+B
+↓
+C
+↓
+D</code></pre>
+<p>Cada punto representa un estado significativo del proyecto.</p>
+<p>Podemos saber:</p>
+<ul>
+<li>qué cambió;</li>
+<li>cuándo cambió;</li>
+<li>quién registró el cambio;</li>
+<li>qué existía antes;</li>
+<li>cómo ha evolucionado el proyecto.</li>
+</ul>
+<hr />
+<h1 id="4-qué-es-git">4. ¿Qué es Git?</h1>
+<p><strong>Git</strong> es un sistema de control de versiones.</p>
+<p>Git puede trabajar en tu propio ordenador.</p>
+<p>Permite:</p>
+<ul>
+<li>detectar cambios;</li>
+<li>seleccionar cambios;</li>
+<li>registrar versiones;</li>
+<li>consultar el historial;</li>
+<li>comparar estados;</li>
+<li>crear ramas;</li>
+<li>combinar trabajo;</li>
+<li>colaborar con otras personas.</li>
+</ul>
+<p>Puedes utilizar Git sin utilizar GitHub.</p>
+<p>Esta idea es fundamental:</p>
+<pre class="text"><code>Git ≠ GitHub</code></pre>
+<hr />
+<h1 id="5-qué-es-github">5. ¿Qué es GitHub?</h1>
+<p><strong>GitHub</strong> es un servicio que permite alojar
+repositorios Git y colaborar alrededor de ellos.</p>
+<p>Podemos simplificar así:</p>
+<pre class="text"><code>Git
+│
+├── controla versiones
+├── crea commits
+├── mantiene historial
+└── gestiona ramas
+
+GitHub
+│
+├── aloja repositorios Git
+├── facilita colaboración
+├── permite pull requests
+├── permite issues
+└── permite compartir el proyecto</code></pre>
+<p>Git trabaja con el repositorio.</p>
+<p>GitHub puede alojar una copia remota de ese repositorio.</p>
+<hr />
+<h1 id="6-git-y-github-ejemplo">6. Git y GitHub: ejemplo</h1>
+<p>En tu ordenador:</p>
+<pre class="text"><code>/mis-proyectos/minijarvis/</code></pre>
+<p>puedes tener un:</p>
+<pre class="text"><code>REPOSITORIO LOCAL</code></pre>
+<p>En GitHub puede existir:</p>
+<pre class="text"><code>REPOSITORIO REMOTO</code></pre>
+<p>Ambos pueden estar relacionados:</p>
+<pre class="text"><code>TU ORDENADOR
+repositorio local
+      │
+      │ Internet
+      ▼
+GITHUB
+repositorio remoto</code></pre>
+<p>Un commit no se sube automáticamente a GitHub.</p>
+<p>Primero se crea localmente.</p>
+<hr />
+<h1 id="7-vocabulario-fundamental">7. Vocabulario fundamental</h1>
+<p>Antes de utilizar comandos debemos comprender algunas palabras.</p>
+<hr />
+<h2 id="71-repositorio">7.1. Repositorio</h2>
+<p>Un <strong>repositorio</strong> es un proyecto cuyo historial está
+gestionado mediante Git.</p>
+<p>Puede ser:</p>
+<pre class="text"><code>local</code></pre>
+<p>o:</p>
+<pre class="text"><code>remoto</code></pre>
+<hr />
+<h2 id="72-directorio-de-trabajo">7.2. Directorio de trabajo</h2>
+<p>Es donde están los archivos que estás editando.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>minijarvis/
+├── README.md
+└── src/
+    └── Main.java</code></pre>
+<p>Cuando modificas <code>Main.java</code>, estás modificando tu
+directorio de trabajo.</p>
+<hr />
+<h2 id="73-área-de-preparación-o-staging">7.3. Área de preparación o
+staging</h2>
+<p>Git permite seleccionar qué cambios formarán parte del próximo
+commit.</p>
+<p>Ese espacio se denomina:</p>
+<pre class="text"><code>staging area</code></pre>
+<p>o:</p>
+<pre class="text"><code>área de preparación</code></pre>
+<p>Puedes imaginarlo como una bandeja.</p>
+<pre class="text"><code>ARCHIVOS MODIFICADOS
+       │
+       │ git add
+       ▼
+STAGING
+cambios seleccionados
+       │
+       │ git commit
+       ▼
+HISTORIAL</code></pre>
+<hr />
+<h2 id="74-commit">7.4. Commit</h2>
+<p>Un <strong>commit</strong> registra un estado significativo del
+proyecto.</p>
+<p>Ejemplos:</p>
+<pre class="text"><code>Añade saludo inicial de MiniJarvis
+
+Lee el nombre mediante Scanner
+
+Corrige cálculo del objetivo semanal
+
+Documenta ejecución de H1</code></pre>
+<p>Un commit debe ayudar a comprender la evolución del proyecto.</p>
+<hr />
+<h2 id="75-rama">7.5. Rama</h2>
+<p>Una <strong>rama</strong> o <em>branch</em> representa una línea de
+desarrollo.</p>
+<p>Permite trabajar sin modificar inmediatamente otra línea del
+proyecto.</p>
+<p>Ejemplo:</p>
+<pre class="text"><code>A---B---C  main
+     \
+      D---E  mejora-saludo</code></pre>
+<hr />
+<h2 id="76-merge">7.6. Merge</h2>
+<p>Un <strong>merge</strong> combina trabajo de distintas ramas.</p>
+<hr />
+<h2 id="77-conflicto">7.7. Conflicto</h2>
+<p>Un conflicto aparece cuando Git no puede decidir automáticamente cómo
+combinar algunos cambios.</p>
+<p>No significa que Git esté roto.</p>
+<p>Significa:</p>
+<pre class="text"><code>hay cambios incompatibles
+        ↓
+una persona debe revisar
+        ↓
+decidir el resultado correcto</code></pre>
+<hr />
+<h2 id="78-repositorio-remoto">7.8. Repositorio remoto</h2>
+<p>Es un repositorio accesible mediante una ubicación remota.</p>
+<p>En este curso puede estar alojado en GitHub.</p>
+<hr />
+<h2 id="79-clone">7.9. Clone</h2>
+<p><strong>Clonar</strong> significa obtener una copia local de un
+repositorio existente.</p>
+<hr />
+<h2 id="710-push">7.10. Push</h2>
+<p><code>push</code> envía commits locales al repositorio remoto.</p>
+<hr />
+<h2 id="711-pull">7.11. Pull</h2>
+<p><code>pull</code> obtiene cambios del remoto e intenta incorporarlos
+a tu trabajo local.</p>
+<hr />
+<h2 id="712-fetch">7.12. Fetch</h2>
+<p><code>fetch</code> obtiene información del remoto sin integrarla
+automáticamente en tu rama actual.</p>
+<hr />
+<h2 id="713-fork">7.13. Fork</h2>
+<p>Un <strong>fork</strong> crea en GitHub una copia de otro repositorio
+bajo otro espacio.</p>
+<p>No es lo mismo que clonar.</p>
+<pre class="text"><code>fork
+→ copia en GitHub
+
+clone
+→ copia en tu ordenador</code></pre>
+<hr />
+<h2 id="714-pull-request">7.14. Pull request</h2>
+<p>Un <strong>pull request</strong> es una propuesta para revisar e
+incorporar cambios.</p>
+<p>No confundas:</p>
+<pre class="text"><code>git pull</code></pre>
+<p>con:</p>
+<pre class="text"><code>pull request</code></pre>
+<p>Son conceptos diferentes.</p>
+<hr />
+<h2 id="715-issue">7.15. Issue</h2>
+<p>Un <strong>issue</strong> permite registrar y discutir:</p>
+<ul>
+<li>errores;</li>
+<li>tareas;</li>
+<li>propuestas;</li>
+<li>preguntas;</li>
+<li>mejoras.</li>
+</ul>
+<p>En MiniJarvis ya utilizamos Scrum para organizar el trabajo del
+equipo.</p>
+<p>Por eso no duplicaremos automáticamente cada tarea de Scrum como un
+issue.</p>
+<hr />
+<h1 id="8-las-tres-áreas-fundamentales-de-git">8. Las tres áreas
+fundamentales de Git</h1>
+<p>Este esquema es especialmente importante:</p>
+<pre class="text"><code>DIRECTORIO DE TRABAJO
+archivos que modificas
+          │
+          │ git add
+          ▼
+STAGING AREA
+cambios seleccionados
+          │
+          │ git commit
+          ▼
+REPOSITORIO LOCAL
+historial de commits</code></pre>
+<p>Si además existe un remoto:</p>
+<pre class="text"><code>REPOSITORIO LOCAL
+       │
+       │ git push
+       ▼
+REPOSITORIO REMOTO
+       GitHub</code></pre>
+<p>Recuerda:</p>
+<pre class="text"><code>editar ≠ add ≠ commit ≠ push</code></pre>
+<hr />
+<h1 id="9-comprobar-que-git-está-disponible">9. Comprobar que Git está
+disponible</h1>
+<p>En una terminal:</p>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div>
+<p>Debería aparecer una versión de Git.</p>
+<p>La instalación y configuración concreta dependerán de los equipos
+utilizados en el aula.</p>
+<p>Sigue las indicaciones del profesorado cuando sea necesario instalar
+o configurar herramientas.</p>
+<hr />
+<h1 id="10-terminal-cuatro-comandos-útiles">10. Terminal: cuatro
+comandos útiles</h1>
+<p>Antes de utilizar Git debes saber dónde estás.</p>
+<h2 id="directorio-actual">Directorio actual</h2>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<h2 id="ver-archivos">Ver archivos</h2>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<h2 id="entrar-en-una-carpeta">Entrar en una carpeta</h2>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> nombre-carpeta</span></code></pre></div>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> minijarvis</span></code></pre></div>
+<h2 id="subir-un-nivel">Subir un nivel</h2>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div>
+<p>Muchos errores con Git empiezan porque estamos trabajando en una
+carpeta distinta de la que creemos.</p>
+<hr />
+<h1 id="11-configurar-identidad">11. Configurar identidad</h1>
+<p>Git asocia cada commit con una identidad.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;Nombre Apellidos&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;correo@example.com&quot;</span></span></code></pre></div>
+<p>Puedes consultar:</p>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code></pre></div>
+<p>Utiliza la identidad que corresponda según las indicaciones del aula
+y de la cuenta utilizada.</p>
+<p>No compartas contraseñas, tokens ni credenciales.</p>
+<hr />
+<h1 id="12-crear-un-repositorio">12. Crear un repositorio</h1>
+<p>Supongamos que tenemos:</p>
+<pre class="text"><code>minijarvis/
+├── README.md
+└── src/
+    └── Main.java</code></pre>
+<p>Entramos:</p>
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> minijarvis</span></code></pre></div>
+<p>Si todavía no es un repositorio Git y la actividad indica que debemos
+crearlo:</p>
+<div class="sourceCode" id="cb41"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre></div>
+<p>A partir de ese momento Git puede empezar a seguir la evolución del
+proyecto.</p>
+<p>No ejecutes <code>git init</code> dentro de otro repositorio sin
+comprender qué estás haciendo.</p>
+<hr />
+<h1 id="13-el-comando-más-importante-para-empezar-git-status">13. El
+comando más importante para empezar: <code>git status</code></h1>
+<p>Ejecuta:</p>
+<div class="sourceCode" id="cb42"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Git puede informarte sobre:</p>
+<ul>
+<li>rama actual;</li>
+<li>archivos nuevos;</li>
+<li>archivos modificados;</li>
+<li>cambios preparados;</li>
+<li>cambios no preparados;</li>
+<li>estado respecto al remoto.</li>
+</ul>
+<p>Cuando algo no esté claro:</p>
+<pre class="text"><code>Primera pregunta:
+
+¿Qué dice git status?</code></pre>
+<p>No intentes arreglar el problema antes de leer el estado.</p>
+<hr />
+<h1 id="14-primer-ejemplo-con-minijarvis">14. Primer ejemplo con
+MiniJarvis</h1>
+<p>Supongamos:</p>
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Ejecuta:</p>
+<div class="sourceCode" id="cb45"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Si <code>Main.java</code> aparece como archivo nuevo o modificado,
+Git ha detectado el cambio.</p>
+<hr />
+<h1 id="15-preparar-un-cambio-con-git-add">15. Preparar un cambio con
+<code>git add</code></h1>
+<p>Para preparar únicamente <code>Main.java</code>:</p>
+<div class="sourceCode" id="cb46"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/Main.java</span></code></pre></div>
+<p>Ahora:</p>
+<div class="sourceCode" id="cb47"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>debería mostrar el cambio preparado.</p>
+<p>Pero todavía no existe un nuevo commit.</p>
+<hr />
+<h1 id="16-git-add-no-significa-hacer-commit">16. <code>git add</code>
+no significa hacer commit</h1>
+<p>Este recorrido debe quedar claro:</p>
+<pre class="text"><code>MODIFICO UN ARCHIVO
+       ↓
+git add
+       ↓
+PREPARO EL CAMBIO
+       ↓
+git commit
+       ↓
+REGISTRO UNA VERSIÓN</code></pre>
+<p>Mientras estás aprendiendo, es preferible seleccionar conscientemente
+los archivos.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb49"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/Main.java</span></code></pre></div>
+<p>o:</p>
+<div class="sourceCode" id="cb50"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add README.md</span></code></pre></div>
+<p>Antes de preparar muchos archivos a la vez, comprueba qué cambios
+existen.</p>
+<hr />
+<h1 id="17-crear-un-commit">17. Crear un commit</h1>
+<p>Una vez preparado el cambio:</p>
+<div class="sourceCode" id="cb51"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Añade saludo inicial de MiniJarvis&quot;</span></span></code></pre></div>
+<p>El commit queda registrado en el repositorio local.</p>
+<p>Todavía no significa que se haya enviado a GitHub.</p>
+<hr />
+<h1 id="18-mensajes-de-commit">18. Mensajes de commit</h1>
+<p>Evita:</p>
+<pre class="text"><code>cambios
+
+cosas
+
+final
+
+prueba
+
+ahora funciona</code></pre>
+<p>Prefiere:</p>
+<pre class="text"><code>Añade saludo inicial
+
+Lee nombre mediante Scanner
+
+Corrige conversión de horas
+
+Actualiza instrucciones de ejecución
+
+Mejora nombres de variables</code></pre>
+<p>Un buen mensaje ayuda a reconstruir la evolución.</p>
+<hr />
+<h1 id="19-consultar-el-historial">19. Consultar el historial</h1>
+<p>Puedes usar:</p>
+<div class="sourceCode" id="cb54"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code></pre></div>
+<p>Una vista más breve:</p>
+<div class="sourceCode" id="cb55"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div>
+<p>Ejemplo:</p>
+<pre class="text"><code>c142e5a Documenta ejecución de H1
+a39e172 Añade cálculo de horas
+ff82190 Lee nombre mediante Scanner
+81245aa Añade saludo inicial</code></pre>
+<p>Cada commit tiene un identificador.</p>
+<hr />
+<h1 id="20-revisar-qué-has-cambiado">20. Revisar qué has cambiado</h1>
+<h2 id="cambios-todavía-no-preparados">Cambios todavía no
+preparados</h2>
+<div class="sourceCode" id="cb57"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span></code></pre></div>
+<p>Esto permite revisar diferencias antes de hacer
+<code>git add</code>.</p>
+<h2 id="cambios-ya-preparados">Cambios ya preparados</h2>
+<div class="sourceCode" id="cb58"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--staged</span></span></code></pre></div>
+<p>Pregunta:</p>
+<pre class="text"><code>¿Es esto realmente lo que quiero incluir
+en el próximo commit?</code></pre>
+<hr />
+<h1 id="21-flujo-básico-recomendable">21. Flujo básico recomendable</h1>
+<p>Antes de un commit:</p>
+<pre class="text"><code>modifico
+   ↓
+ejecuto
+   ↓
+compruebo
+   ↓
+git status
+   ↓
+git diff
+   ↓
+git add archivo
+   ↓
+git status
+   ↓
+git diff --staged
+   ↓
+git commit</code></pre>
+<p>No necesitas ejecutar mecánicamente todos los comandos en todas las
+situaciones.</p>
+<p>Lo importante es comprender el estado antes de registrar cambios.</p>
+<hr />
+<h1 id="22-ramas">22. Ramas</h1>
+<p>Un proyecto puede tener varias líneas de trabajo.</p>
+<p>Comprueba las ramas:</p>
+<div class="sourceCode" id="cb61"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div>
+<p>La actual aparece marcada.</p>
+<p>También puedes consultar:</p>
+<div class="sourceCode" id="cb62"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<hr />
+<h1 id="23-crear-una-rama">23. Crear una rama</h1>
+<p>En este manual utilizaremos:</p>
+<div class="sourceCode" id="cb63"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> mejora-saludo</span></code></pre></div>
+<p>Eso crea la rama y cambia a ella.</p>
+<p>Puedes comprobar:</p>
+<div class="sourceCode" id="cb64"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<p>Resultado esperado:</p>
+<pre class="text"><code>mejora-saludo</code></pre>
+<blockquote>
+<p>En otros materiales, incluido el aprendizaje tradicional de Git,
+puedes encontrar <code>git checkout</code> para operaciones relacionadas
+con ramas. No memorices comandos alternativos sin comprender primero qué
+operación estás realizando.</p>
+</blockquote>
+<hr />
+<h1 id="24-ejemplo-de-trabajo-en-una-rama">24. Ejemplo de trabajo en una
+rama</h1>
+<p>Creamos:</p>
+<div class="sourceCode" id="cb66"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> mejora-saludo</span></code></pre></div>
+<p>Modificamos:</p>
+<div class="sourceCode" id="cb67"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Bienvenido a MiniJarvis.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Comprobamos el programa.</p>
+<p>Después:</p>
+<div class="sourceCode" id="cb68"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/Main.java</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Mejora mensaje de bienvenida&quot;</span></span></code></pre></div>
+<p>Ahora ese commit pertenece a la rama:</p>
+<pre class="text"><code>mejora-saludo</code></pre>
+<hr />
+<h1 id="25-cambiar-de-rama">25. Cambiar de rama</h1>
+<p>Para ir a una rama existente:</p>
+<div class="sourceCode" id="cb73"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch nombre-rama</span></code></pre></div>
+<p>Por ejemplo, si la rama principal de tu repositorio se llama
+<code>main</code>:</p>
+<div class="sourceCode" id="cb74"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch main</span></code></pre></div>
+<p>No todos los repositorios utilizan necesariamente el mismo nombre
+para su rama principal.</p>
+<p>Antes de cambiar de rama puedes consultar cuáles existen:</p>
+<div class="sourceCode" id="cb75"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div>
+<p>La rama actual aparecerá marcada.</p>
+<p>También puedes consultar directamente su nombre:</p>
+<div class="sourceCode" id="cb76"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<p>Antes de cambiar de rama comprueba el estado:</p>
+<div class="sourceCode" id="cb77"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>No cambies de rama a ciegas si tienes modificaciones que todavía no
+has revisado.</p>
+<hr />
+<h1 id="26-comprender-las-ramas-gráficamente">26. Comprender las ramas
+gráficamente</h1>
+<p>Ejemplo:</p>
+<pre class="text"><code>A---B---C  main
+     \
+      D---E  mejora-saludo</code></pre>
+<p>Ambas ramas comparten:</p>
+<pre class="text"><code>A
+B</code></pre>
+<p>Después evolucionaron de manera diferente.</p>
+<hr />
+<h1 id="27-fusionar-ramas">27. Fusionar ramas</h1>
+<p>Para fusionar dos ramas debes saber primero:</p>
+<pre class="text"><code>qué rama contiene el cambio
+
+qué rama debe recibirlo</code></pre>
+<p>Debes situarte en la rama que <strong>recibirá</strong> los
+cambios.</p>
+<p>Por ejemplo, supongamos que:</p>
+<pre class="text"><code>main
+→ debe recibir la mejora
+
+mejora-saludo
+→ contiene la mejora</code></pre>
+<p>Primero comprobamos las ramas:</p>
+<div class="sourceCode" id="cb82"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div>
+<p>Si la rama principal de este repositorio se llama <code>main</code>,
+cambiamos a ella:</p>
+<div class="sourceCode" id="cb83"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch main</span></code></pre></div>
+<p>Comprobamos:</p>
+<div class="sourceCode" id="cb84"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<p>y después incorporamos los cambios de <code>mejora-saludo</code>:</p>
+<div class="sourceCode" id="cb85"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge mejora-saludo</span></code></pre></div>
+<p>La idea puede representarse así:</p>
+<pre class="text"><code>mejora-saludo
+      │
+      │ git merge mejora-saludo
+      ▼
+rama actual</code></pre>
+<p>Por tanto:</p>
+<blockquote>
+<p><code>git merge otra-rama</code> incorpora en la rama actual los
+cambios de <code>otra-rama</code>.</p>
+</blockquote>
+<p>No hagas un <code>merge</code> sin saber qué rama está activa y cuál
+contiene los cambios que quieres incorporar.</p>
+<hr />
+<h1 id="28-conflictos">28. Conflictos</h1>
+<p>Imagina que dos ramas modifican la misma línea.</p>
+<p>Rama A:</p>
+<div class="sourceCode" id="cb87"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Bienvenido a MiniJarvis.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Rama B:</p>
+<div class="sourceCode" id="cb88"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis está preparado.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Git puede no saber automáticamente cuál de los dos cambios debe
+conservar.</p>
+<p>Puede mostrar marcas como:</p>
+<pre class="text"><code> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Bienvenido a MiniJarvis.
+ =======
+MiniJarvis está preparado.
+ &gt;&gt;&gt;&gt;&gt;&gt;&gt; otra-rama</code></pre>
+<p>Estas marcas indican las dos versiones que Git no ha podido combinar
+por sí solo.</p>
+<p>No deben quedarse dentro del programa terminado.</p>
+<h2 id="paso-1-consultar-el-estado">Paso 1. Consultar el estado</h2>
+<p>Empieza por:</p>
+<div class="sourceCode" id="cb90"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Git indicará qué archivos tienen conflictos.</p>
+<h2 id="paso-2-revisar-el-archivo">Paso 2. Revisar el archivo</h2>
+<p>Debes leer las alternativas y decidir cuál debe ser el resultado
+final.</p>
+<p>Por ejemplo, podrías decidir conservar:</p>
+<div class="sourceCode" id="cb91"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Bienvenido a MiniJarvis.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>o escribir una tercera solución:</p>
+<div class="sourceCode" id="cb92"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Bienvenido. MiniJarvis está preparado.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>La decisión no la toma Git por ti.</p>
+<h2 id="paso-3-eliminar-las-marcas-del-conflicto">Paso 3. Eliminar las
+marcas del conflicto</h2>
+<p>Debes eliminar del archivo:</p>
+<pre class="text"><code> &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+ =======
+ &gt;&gt;&gt;&gt;&gt;&gt;&gt;</code></pre>
+<p>y dejar únicamente el contenido correcto.</p>
+<h2 id="paso-4-ejecutar-y-comprobar">Paso 4. Ejecutar y comprobar</h2>
+<p>En MiniJarvis no basta con que desaparezcan las marcas.</p>
+<p>Debes comprobar que el programa sigue siendo correcto.</p>
+<pre class="text"><code>compilar
+   ↓
+ejecutar
+   ↓
+comprobar resultado</code></pre>
+<h2 id="paso-5-marcar-el-archivo-como-resuelto">Paso 5. Marcar el
+archivo como resuelto</h2>
+<p>Cuando el archivo ya contiene el resultado correcto:</p>
+<div class="sourceCode" id="cb95"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/Main.java</span></code></pre></div>
+<p>Aquí <code>git add</code> indica a Git que has revisado ese archivo y
+que esa es la versión que quieres conservar para continuar la
+resolución.</p>
+<h2 id="paso-6-volver-a-comprobar">Paso 6. Volver a comprobar</h2>
+<div class="sourceCode" id="cb96"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Si quedan más conflictos, deben resolverse antes de continuar.</p>
+<h2 id="paso-7-finalizar-el-merge">Paso 7. Finalizar el merge</h2>
+<p>Si el conflicto apareció durante un <code>merge</code>, cuando todos
+los archivos estén resueltos Git permitirá terminar la operación.</p>
+<p>Una forma habitual es:</p>
+<div class="sourceCode" id="cb97"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge <span class="at">--continue</span></span></code></pre></div>
+<p>Git puede solicitar completar o confirmar el mensaje correspondiente
+al merge.</p>
+<p>Al terminar, vuelve a comprobar:</p>
+<div class="sourceCode" id="cb98"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>El proceso completo puede resumirse así:</p>
+<pre class="text"><code>aparece conflicto
+       ↓
+git status
+       ↓
+leer ambas versiones
+       ↓
+decidir
+       ↓
+editar
+       ↓
+eliminar marcas
+       ↓
+compilar y ejecutar
+       ↓
+git add archivo
+       ↓
+git status
+       ↓
+git merge --continue
+       ↓
+git status</code></pre>
+<p>Resolver un conflicto no consiste en aceptar automáticamente una
+versión.</p>
+<p>Consiste en comprender los cambios y decidir cuál debe ser el
+resultado correcto.</p>
+<hr />
+<h1 id="29-antes-de-intentar-arreglar-git">29. Antes de intentar
+arreglar Git</h1>
+<p>Si aparece un problema:</p>
+<div class="sourceCode" id="cb100"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>después:</p>
+<div class="sourceCode" id="cb101"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<p>y:</p>
+<div class="sourceCode" id="cb102"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--decorate</span> <span class="at">-10</span></span></code></pre></div>
+<p>Si hay cambios:</p>
+<div class="sourceCode" id="cb103"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span></code></pre></div>
+<p>Primero recoge información.</p>
+<p>Después decide.</p>
+<hr />
+<h1 id="30-github-repositorio-remoto">30. GitHub: repositorio
+remoto</h1>
+<p>Cuando existe un proyecto en GitHub tenemos:</p>
+<pre class="text"><code>REPOSITORIO LOCAL
+en tu ordenador
+
+        ↕
+
+REPOSITORIO REMOTO
+en GitHub</code></pre>
+<p>El remoto permite compartir commits.</p>
+<hr />
+<h1 id="31-clonar-un-repositorio">31. Clonar un repositorio</h1>
+<p>Si el proyecto ya existe en GitHub, normalmente se obtiene
+mediante:</p>
+<div class="sourceCode" id="cb105"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO</span></code></pre></div>
+<p>Después:</p>
+<div class="sourceCode" id="cb106"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> nombre-del-repositorio</span></code></pre></div>
+<p>y:</p>
+<div class="sourceCode" id="cb107"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Un repositorio clonado ya conserva información sobre su remoto.</p>
+<hr />
+<h1 id="32-origin-y-la-conexión-con-un-remoto">32. <code>origin</code> y
+la conexión con un remoto</h1>
+<p>Consulta los remotos configurados:</p>
+<div class="sourceCode" id="cb108"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div>
+<p>Es frecuente encontrar:</p>
+<pre class="text"><code>origin</code></pre>
+<p><code>origin</code> es el nombre habitual que recibe el remoto
+principal cuando clonamos un repositorio.</p>
+<p>No significa:</p>
+<pre class="text"><code>GitHub</code></pre>
+<p>GitHub es el servicio.</p>
+<p><code>origin</code> es simplemente un nombre utilizado por Git para
+identificar un repositorio remoto.</p>
+<p>Por ejemplo, conceptualmente:</p>
+<pre class="text"><code>origin
+   ↓
+https://github.com/organizacion/minijarvis.git</code></pre>
+<h2 id="si-has-utilizado-git-clone">Si has utilizado
+<code>git clone</code></h2>
+<p>Cuando haces:</p>
+<div class="sourceCode" id="cb112"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO</span></code></pre></div>
+<p>Git configura normalmente el remoto <code>origin</code> de forma
+automática.</p>
+<p>Puedes comprobarlo:</p>
+<div class="sourceCode" id="cb113"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div>
+<p>Por tanto, normalmente no necesitas volver a añadirlo.</p>
+<h2 id="si-has-creado-primero-el-repositorio-local">Si has creado
+primero el repositorio local</h2>
+<p>La situación es diferente si has empezado en tu ordenador:</p>
+<div class="sourceCode" id="cb114"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> minijarvis</span>
+<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> minijarvis</span>
+<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre></div>
+<p>En ese caso puedes tener un repositorio Git local pero todavía ningún
+repositorio remoto asociado.</p>
+<p>Comprueba:</p>
+<div class="sourceCode" id="cb115"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div>
+<p>Si no aparece ningún remoto y la actividad indica que debes
+conectarlo con un repositorio de GitHub ya creado, una operación
+habitual es:</p>
+<div class="sourceCode" id="cb116"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin URL_DEL_REPOSITORIO</span></code></pre></div>
+<p>Después comprueba:</p>
+<div class="sourceCode" id="cb117"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div>
+<p>Podrías obtener algo parecido a:</p>
+<pre class="text"><code>origin  URL_DEL_REPOSITORIO (fetch)
+origin  URL_DEL_REPOSITORIO (push)</code></pre>
+<p>Esto indica que Git conoce un remoto llamado <code>origin</code>.</p>
+<h2 id="comprobar-antes-de-modificar-un-remoto">Comprobar antes de
+modificar un remoto</h2>
+<p>No ejecutes <code>git remote add origin ...</code> sin comprobar
+antes:</p>
+<div class="sourceCode" id="cb119"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div>
+<p>Si <code>origin</code> ya existe, intentar añadir otro con el mismo
+nombre producirá un error.</p>
+<p>Tampoco cambies ni elimines un remoto sin comprender para qué se está
+utilizando.</p>
+<h2 id="local-y-remoto-siguen-siendo-cosas-distintas">Local y remoto
+siguen siendo cosas distintas</h2>
+<p>Aunque estén conectados:</p>
+<pre class="text"><code>REPOSITORIO LOCAL
+       │
+       │ origin
+       ▼
+REPOSITORIO REMOTO</code></pre>
+<p>siguen siendo dos repositorios.</p>
+<p>Por eso:</p>
+<pre class="text"><code>git commit
+→ modifica el historial local</code></pre>
+<p>mientras:</p>
+<pre class="text"><code>git push
+→ comparte commits con el remoto</code></pre>
+<hr />
+<h1 id="33-git-push">33. <code>git push</code></h1>
+<p>Después de crear commits:</p>
+<div class="sourceCode" id="cb123"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+<p>envía al remoto los commits que correspondan.</p>
+<p>Recuerda:</p>
+<pre class="text"><code>git commit
+→ registra localmente
+
+git push
+→ envía al remoto</code></pre>
+<hr />
+<h1 id="34-primera-publicación-de-una-rama">34. Primera publicación de
+una rama</h1>
+<p>Una rama nueva puede no tener todavía una rama remota asociada.</p>
+<p>Git puede indicar algo parecido a:</p>
+<pre class="text"><code>The current branch has no upstream branch</code></pre>
+<p>Una operación habitual es:</p>
+<div class="sourceCode" id="cb126"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin nombre-rama</span></code></pre></div>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb127"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin mejora-saludo</span></code></pre></div>
+<p>Antes comprueba:</p>
+<div class="sourceCode" id="cb128"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<p>No copies comandos de error sin entender los nombres que
+contienen.</p>
+<hr />
+<h1 id="35-git-pull">35. <code>git pull</code></h1>
+<p>Si el remoto tiene cambios que tu copia local todavía no
+incorpora:</p>
+<div class="sourceCode" id="cb129"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div>
+<p>puede obtenerlos e intentar incorporarlos.</p>
+<p>Antes de hacerlo:</p>
+<div class="sourceCode" id="cb130"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Es importante saber si tienes trabajo local pendiente.</p>
+<hr />
+<h1 id="36-git-fetch">36. <code>git fetch</code></h1>
+<p><code>fetch</code> y <code>pull</code> no son exactamente lo
+mismo.</p>
+<p>Simplificando:</p>
+<pre class="text"><code>git fetch
+→ consulta y descarga información
+  sobre el remoto
+  sin incorporar automáticamente
+  esos cambios a tu rama actual</code></pre>
+<p>mientras:</p>
+<pre class="text"><code>git pull
+→ obtiene cambios
+  e intenta incorporarlos</code></pre>
+<p><code>fetch</code> puede ser útil cuando quieres observar antes de
+integrar.</p>
+<hr />
+<h1 id="37-flujo-sencillo-con-github">37. Flujo sencillo con GitHub</h1>
+<p>Un flujo orientativo:</p>
+<pre class="text"><code>git status
+     ↓
+actualizo si corresponde
+     ↓
+modifico
+     ↓
+ejecuto y compruebo
+     ↓
+git diff
+     ↓
+git add
+     ↓
+git commit
+     ↓
+git push</code></pre>
+<p>No existe una única secuencia válida para todas las situaciones.</p>
+<p>Debes comprender qué estado tiene el repositorio.</p>
+<hr />
+<h1 id="38-ejemplo-completo-con-minijarvis">38. Ejemplo completo con
+MiniJarvis</h1>
+<h2 id="antes">Antes</h2>
+<div class="sourceCode" id="cb134"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb134-2"><a href="#cb134-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb134-3"><a href="#cb134-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola.&quot;</span><span class="op">);</span></span>
+<span id="cb134-4"><a href="#cb134-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb134-5"><a href="#cb134-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="1-comprueba">1. Comprueba</h3>
+<div class="sourceCode" id="cb135"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb135-1"><a href="#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<h3 id="2-modifica">2. Modifica</h3>
+<div class="sourceCode" id="cb136"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb136-2"><a href="#cb136-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb136-3"><a href="#cb136-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb136-4"><a href="#cb136-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb136-5"><a href="#cb136-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="3-ejecuta-el-programa">3. Ejecuta el programa</h3>
+<p>Comprueba que el resultado es el esperado.</p>
+<h3 id="4-revisa">4. Revisa</h3>
+<div class="sourceCode" id="cb137"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb137-1"><a href="#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span></code></pre></div>
+<h3 id="5-prepara">5. Prepara</h3>
+<div class="sourceCode" id="cb138"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/Main.java</span></code></pre></div>
+<h3 id="6-vuelve-a-comprobar">6. Vuelve a comprobar</h3>
+<div class="sourceCode" id="cb139"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb139-1"><a href="#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<h3 id="7-crea-el-commit">7. Crea el commit</h3>
+<div class="sourceCode" id="cb140"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Presenta MiniJarvis por consola&quot;</span></span></code></pre></div>
+<h3 id="8-consulta-el-historial">8. Consulta el historial</h3>
+<div class="sourceCode" id="cb141"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb141-1"><a href="#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div>
+<h3 id="9-cuando-corresponda">9. Cuando corresponda</h3>
+<div class="sourceCode" id="cb142"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+<p>Debes poder explicar qué ha hecho cada paso.</p>
+<hr />
+<h1 id="39-pull-requests">39. Pull requests</h1>
+<p>GitHub permite proponer la incorporación de cambios mediante un
+<strong>pull request</strong>.</p>
+<p>Un flujo posible:</p>
+<pre class="text"><code>crear rama
+    ↓
+modificar
+    ↓
+comprobar
+    ↓
+commit
+    ↓
+push
+    ↓
+pull request
+    ↓
+revisión
+    ↓
+incorporación</code></pre>
+<p>Un pull request permite revisar cambios antes de fusionarlos.</p>
+<p>No todos los cambios de MiniJarvis requieren obligatoriamente un pull
+request.</p>
+<p>Se utilizará cuando el flujo de trabajo del curso lo necesite.</p>
+<hr />
+<h1 id="40-forks">40. Forks</h1>
+<p>Un fork crea otra copia del repositorio dentro de GitHub.</p>
+<p>Es frecuente cuando quieres colaborar con un proyecto sobre el que no
+trabajas directamente.</p>
+<pre class="text"><code>repositorio original
+       ↓
+      fork
+       ↓
+copia en tu GitHub
+       ↓
+     clone
+       ↓
+tu ordenador</code></pre>
+<p>En MiniJarvis no debes crear forks por rutina.</p>
+<p>Utilízalos cuando la actividad lo requiera.</p>
+<hr />
+<h1 id="41-issues">41. Issues</h1>
+<p>Un issue puede representar:</p>
+<pre class="text"><code>error
+mejora
+tarea
+pregunta
+propuesta</code></pre>
+<p>Ejemplo:</p>
+<pre class="text"><code>Título:
+El cálculo de horas muestra un resultado incorrecto
+
+Esperado:
+Entrada 4 → resultado 5
+
+Observado:
+Entrada 4 → resultado 4</code></pre>
+<p>Pero MiniJarvis utiliza Scrum para organizar el trabajo del
+equipo.</p>
+<p>No copies automáticamente todas las tareas de Scrum a GitHub
+Issues.</p>
+<p>Una herramienta debe resolver un problema, no duplicar otra.</p>
+<hr />
+<h1 id="42-adaptación-minijarvis--gitignore">42. Adaptación MiniJarvis —
+<code>.gitignore</code></h1>
+<p>Esta sección es una <strong>ampliación específica del manual para
+MiniJarvis</strong>.</p>
+<p>Hay archivos que no deben entrar en el repositorio.</p>
+<p>Git permite indicar patrones mediante:</p>
+<pre class="text"><code>.gitignore</code></pre>
+<p>Ejemplo:</p>
+<pre class="text"><code>.env
+*.key
+*.token</code></pre>
+<p>La configuración concreta dependerá del proyecto.</p>
+<p><code>.gitignore</code> ayuda a evitar que determinados archivos se
+añadan accidentalmente.</p>
+<p>Pero:</p>
+<blockquote>
+<p><code>.gitignore</code> no convierte un secreto publicado en
+seguro.</p>
+</blockquote>
+<p>La mejor protección es:</p>
+<pre class="text"><code>no subir nunca el secreto</code></pre>
+<hr />
+<h1 id="43-seguridad">43. Seguridad</h1>
+<p>Nunca subas a GitHub:</p>
+<ul>
+<li>contraseñas;</li>
+<li>claves API;</li>
+<li>tokens;</li>
+<li>credenciales;</li>
+<li><code>.env</code> con valores reales;</li>
+<li>datos personales innecesarios;</li>
+<li>ficheros privados;</li>
+<li>información sensible de otras personas.</li>
+</ul>
+<p>Tampoco pegues secretos en una IA.</p>
+<p>Utiliza datos ficticios para ejemplos y pruebas.</p>
+<hr />
+<h1 id="44-adaptación-minijarvis--identificar-la-versión-evaluada">44.
+Adaptación MiniJarvis — identificar la versión evaluada</h1>
+<p>En un hito debemos poder responder:</p>
+<pre class="text"><code>¿Qué versión exacta se está evaluando?</code></pre>
+<p>Un commit permite identificar un estado concreto.</p>
+<p>Consulta:</p>
+<div class="sourceCode" id="cb151"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb151-1"><a href="#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div>
+<p>Ejemplo:</p>
+<pre class="text"><code>4a81bc2 Prepara H1 para defensa</code></pre>
+<p><code>4a81bc2</code> identifica ese commit.</p>
+<hr />
+<h1 id="45-tags">45. Tags</h1>
+<p>Un <strong>tag</strong> permite asignar un nombre a un punto del
+historial.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb153"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb153-1"><a href="#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag h1-entrega</span></code></pre></div>
+<p>Comprueba:</p>
+<div class="sourceCode" id="cb154"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag</span></code></pre></div>
+<p>Puedes inspeccionarlo:</p>
+<div class="sourceCode" id="cb155"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb155-1"><a href="#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> show h1-entrega</span></code></pre></div>
+<p>Si la entrega requiere publicar también ese tag:</p>
+<div class="sourceCode" id="cb156"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb156-1"><a href="#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin h1-entrega</span></code></pre></div>
+<p>No crees tags de entrega por rutina.</p>
+<p>Utiliza el mecanismo indicado para cada hito.</p>
+<p>En H1 consulta:</p>
+<pre class="text"><code>ENTREGA-DIGITAL.md</code></pre>
+<p>La versión evaluada puede identificarse mediante el mecanismo allí
+establecido.</p>
+<hr />
+<h1 id="46-qué-pertenece-al-repositorio-minijarvis">46. Qué pertenece al
+repositorio MiniJarvis</h1>
+<p>GitHub no es el lugar donde debemos copiar todas las evidencias.</p>
+<p>El repositorio conserva principalmente:</p>
+<ul>
+<li>código;</li>
+<li>historial;</li>
+<li>versiones;</li>
+<li>README;</li>
+<li>pruebas técnicas cuando formen parte del proyecto;</li>
+<li>otros recursos técnicos cuando sean necesarios.</li>
+</ul>
+<p>No necesitas crear por defecto:</p>
+<pre class="text"><code>docs/
+├── portfolio
+├── registro-ia
+├── diario
+├── defensa
+└── capturas</code></pre>
+<p>solo para duplicar información.</p>
+<hr />
+<h1 id="47-fuentes-canónicas-de-minijarvis">47. Fuentes canónicas de
+MiniJarvis</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Información</th>
+<th>Fuente habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Código y versiones</td>
+<td>Repositorio</td>
+</tr>
+<tr class="even">
+<td>Ejecución y documentación técnica necesaria</td>
+<td>README</td>
+</tr>
+<tr class="odd">
+<td>Tareas, decisiones y bloqueos significativos</td>
+<td>Scrum</td>
+</tr>
+<tr class="even">
+<td>Aprendizaje individual significativo</td>
+<td>Diario</td>
+</tr>
+<tr class="odd">
+<td>Uso significativo de IA</td>
+<td>Diario o Scrum según autoría</td>
+</tr>
+<tr class="even">
+<td>Selección periódica de evidencias</td>
+<td>Site en los cierres establecidos</td>
+</tr>
+<tr class="odd">
+<td>Evidencia no-code excepcional</td>
+<td>Espacio previsto cuando no exista una fuente mejor</td>
+</tr>
+<tr class="even">
+<td>Versión evaluada</td>
+<td>Entrega Moodle</td>
+</tr>
+<tr class="odd">
+<td>Defensa</td>
+<td>Producto real</td>
+</tr>
+</tbody>
+</table>
+<p>Si la información ya existe y puede comprobarse, no la copies a otro
+lugar únicamente para volver a entregarla.</p>
+<hr />
+<h1 id="48-readme-y-git">48. README y Git</h1>
+<p>El README forma parte del repositorio.</p>
+<p>Su función no es reproducir Scrum ni el diario.</p>
+<p>Debe contener información técnica útil para comprender el
+proyecto.</p>
+<p>Según el hito puede explicar:</p>
+<ul>
+<li>qué hace;</li>
+<li>cómo ejecutarlo;</li>
+<li>cómo comprobarlo;</li>
+<li>limitaciones;</li>
+<li>decisiones técnicas necesarias.</li>
+</ul>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb159"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb159-1"><a href="#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># H1 — Primer asistente por consola</span></span>
+<span id="cb159-2"><a href="#cb159-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-3"><a href="#cb159-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Qué hace</span></span>
+<span id="cb159-4"><a href="#cb159-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-5"><a href="#cb159-5" aria-hidden="true" tabindex="-1"></a>MiniJarvis pide información sencilla y muestra resultados.</span>
+<span id="cb159-6"><a href="#cb159-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-7"><a href="#cb159-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cómo ejecutar</span></span>
+<span id="cb159-8"><a href="#cb159-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-9"><a href="#cb159-9" aria-hidden="true" tabindex="-1"></a>Abrir el proyecto y ejecutar Main.</span>
+<span id="cb159-10"><a href="#cb159-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-11"><a href="#cb159-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Comprobación</span></span>
+<span id="cb159-12"><a href="#cb159-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-13"><a href="#cb159-13" aria-hidden="true" tabindex="-1"></a>Introducir datos ficticios y observar el resultado.</span>
+<span id="cb159-14"><a href="#cb159-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-15"><a href="#cb159-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Límites</span></span>
+<span id="cb159-16"><a href="#cb159-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb159-17"><a href="#cb159-17" aria-hidden="true" tabindex="-1"></a>Esta versión todavía no incorpora menú, bucles ni IA real.</span></code></pre></div>
+<hr />
+<h1 id="49-errores-frecuentes">49. Errores frecuentes</h1>
+<h2 id="not-a-git-repository"><code>not a git repository</code></h2>
+<p>Probablemente Git no encuentra un repositorio en la ubicación
+actual.</p>
+<p>Comprueba:</p>
+<div class="sourceCode" id="cb160"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb160-1"><a href="#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb161-1"><a href="#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<p>y asegúrate de estar en la carpeta adecuada.</p>
+<hr />
+<h2 id="nothing-to-commit"><code>nothing to commit</code></h2>
+<p>Git no encuentra un nuevo cambio preparado para registrar.</p>
+<p>Consulta:</p>
+<div class="sourceCode" id="cb162"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb162-1"><a href="#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>No modifiques algo artificialmente solo para producir otro
+commit.</p>
+<hr />
+<h2 id="rama-sin-upstream">Rama sin upstream</h2>
+<p>Antes de actuar:</p>
+<div class="sourceCode" id="cb163"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb163-1"><a href="#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<p>Git puede sugerir una operación como:</p>
+<div class="sourceCode" id="cb164"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb164-1"><a href="#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin nombre-rama</span></code></pre></div>
+<p>Comprueba siempre que los nombres son los que esperas.</p>
+<hr />
+<h2 id="push-rechazado"><code>push</code> rechazado</h2>
+<p>No utilices inmediatamente un envío forzado.</p>
+<p>Primero:</p>
+<div class="sourceCode" id="cb165"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb165-1"><a href="#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<div class="sourceCode" id="cb166"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb166-1"><a href="#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<p>y comprueba si el remoto contiene trabajo que tu copia no tiene.</p>
+<hr />
+<h2 id="conflicto">Conflicto</h2>
+<p>Ejecuta:</p>
+<div class="sourceCode" id="cb167"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb167-1"><a href="#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Localiza exactamente qué archivos están afectados.</p>
+<p>Lee los cambios.</p>
+<p>Decide cuál debe ser el resultado.</p>
+<p>Después comprueba el programa.</p>
+<hr />
+<h2 id="rama-equivocada">Rama equivocada</h2>
+<p>Antes de continuar creando más cambios:</p>
+<div class="sourceCode" id="cb168"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb168-1"><a href="#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<div class="sourceCode" id="cb169"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb169-1"><a href="#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<div class="sourceCode" id="cb170"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb170-1"><a href="#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--decorate</span> <span class="at">-10</span></span></code></pre></div>
+<p>Comprende primero dónde están tus cambios.</p>
+<hr />
+<h1 id="50-comandos-con-los-que-debes-tener-especial-cuidado">50.
+Comandos con los que debes tener especial cuidado</h1>
+<p>No utilices sin saber exactamente qué efecto tendrán operaciones
+capaces de eliminar trabajo o reescribir historia.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>git reset --hard
+git clean -fd
+git push --force</code></pre>
+<p>Si aparece un problema, empieza por herramientas de observación:</p>
+<div class="sourceCode" id="cb172"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb172-1"><a href="#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb172-2"><a href="#cb172-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span>
+<span id="cb172-3"><a href="#cb172-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span>
+<span id="cb172-4"><a href="#cb172-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<p>Primero:</p>
+<pre class="text"><code>observar</code></pre>
+<p>después:</p>
+<pre class="text"><code>comprender</code></pre>
+<p>y finalmente:</p>
+<pre class="text"><code>actuar</code></pre>
+<hr />
+<h1 id="51-recuperar-cambios-introducción">51. Recuperar cambios:
+introducción</h1>
+<p>Esta es una <strong>ampliación didáctica</strong>.</p>
+<p>Si has modificado un archivo y quieres descartar una modificación
+local concreta, Git dispone de herramientas de restauración.</p>
+<p>Pero antes de utilizar cualquier operación de recuperación:</p>
+<div class="sourceCode" id="cb176"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb176-1"><a href="#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>y:</p>
+<div class="sourceCode" id="cb177"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb177-1"><a href="#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span></code></pre></div>
+<p>Debes saber qué vas a perder.</p>
+<p>La recuperación del historial puede ser sencilla o muy delicada según
+el estado del repositorio.</p>
+<p>Si tienes dudas, conserva el estado y pide ayuda antes de ejecutar
+comandos destructivos.</p>
+<hr />
+<h1 id="52-práctica-1--primer-commit">52. Práctica 1 — Primer
+commit</h1>
+<p>Partiendo de MiniJarvis:</p>
+<ol type="1">
+<li>consulta:</li>
+</ol>
+<div class="sourceCode" id="cb178"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb178-1"><a href="#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<ol start="2" type="1">
+<li><p>modifica un mensaje de <code>Main.java</code>;</p></li>
+<li><p>ejecuta el programa;</p></li>
+<li><p>revisa:</p></li>
+</ol>
+<div class="sourceCode" id="cb179"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb179-1"><a href="#cb179-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span></code></pre></div>
+<ol start="5" type="1">
+<li>prepara:</li>
+</ol>
+<div class="sourceCode" id="cb180"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb180-1"><a href="#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/Main.java</span></code></pre></div>
+<ol start="6" type="1">
+<li>comprueba:</li>
+</ol>
+<div class="sourceCode" id="cb181"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb181-1"><a href="#cb181-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<ol start="7" type="1">
+<li>crea:</li>
+</ol>
+<div class="sourceCode" id="cb182"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb182-1"><a href="#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Mejora mensaje inicial&quot;</span></span></code></pre></div>
+<ol start="8" type="1">
+<li>consulta:</li>
+</ol>
+<div class="sourceCode" id="cb183"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb183-1"><a href="#cb183-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div>
+<p>Debes poder explicar qué ocurrió en cada paso.</p>
+<hr />
+<h1 id="53-práctica-2--tres-commits-con-sentido">53. Práctica 2 — Tres
+commits con sentido</h1>
+<p>Realiza tres cambios independientes.</p>
+<p>Por ejemplo:</p>
+<pre class="text"><code>Commit 1
+Añade presentación de MiniJarvis
+
+Commit 2
+Añade lectura del nombre
+
+Commit 3
+Documenta cómo ejecutar</code></pre>
+<p>Después:</p>
+<div class="sourceCode" id="cb185"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb185-1"><a href="#cb185-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div>
+<p>Compara ese historial con un único commit llamado:</p>
+<pre class="text"><code>muchos cambios</code></pre>
+<p>¿Cuál permite comprender mejor la evolución?</p>
+<hr />
+<h1 id="54-práctica-3--rama-de-prueba">54. Práctica 3 — Rama de
+prueba</h1>
+<ol type="1">
+<li><p>comprueba la rama actual;</p></li>
+<li><p>crea:</p></li>
+</ol>
+<div class="sourceCode" id="cb187"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb187-1"><a href="#cb187-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> prueba-mensaje</span></code></pre></div>
+<ol start="3" type="1">
+<li><p>cambia un mensaje;</p></li>
+<li><p>ejecuta;</p></li>
+<li><p>crea un commit;</p></li>
+<li><p>consulta el historial;</p></li>
+<li><p>vuelve a la rama anterior;</p></li>
+<li><p>observa la diferencia.</p></li>
+</ol>
+<p>El objetivo no es crear muchas ramas.</p>
+<p>El objetivo es comprender qué problema resuelven.</p>
+<hr />
+<h1 id="55-práctica-4--trabajo-colaborativo">55. Práctica 4 — Trabajo
+colaborativo</h1>
+<p>Actividad guiada:</p>
+<pre class="text"><code>Persona A
+→ modifica
+→ comprueba
+→ commit
+→ push
+
+Persona B
+→ obtiene cambios
+→ localiza el nuevo commit
+→ ejecuta
+→ comprueba</code></pre>
+<p>Después intercambiad los papeles.</p>
+<p>Pregunta:</p>
+<pre class="text"><code>¿Qué operaciones pertenecen a Git?
+
+¿Qué parte necesita el repositorio remoto?</code></pre>
+<hr />
+<h1 id="56-práctica-5--leer-el-historial-de-minijarvis">56. Práctica 5 —
+Leer el historial de MiniJarvis</h1>
+<p>Ejecuta:</p>
+<div class="sourceCode" id="cb190"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb190-1"><a href="#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div>
+<p>Elige tres commits.</p>
+<p>Para cada uno intenta explicar:</p>
+<pre class="text"><code>¿Qué cambió?
+
+¿Por qué tenía sentido registrarlo?
+
+¿Podría localizar esa versión?
+
+¿El mensaje permite entender la intención?</code></pre>
+<hr />
+<h1 id="57-chuleta-básica">57. Chuleta básica</h1>
+<h2 id="estado">Estado</h2>
+<div class="sourceCode" id="cb192"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb192-1"><a href="#cb192-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<h2 id="diferencias-sin-preparar">Diferencias sin preparar</h2>
+<div class="sourceCode" id="cb193"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb193-1"><a href="#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span></code></pre></div>
+<h2 id="diferencias-preparadas">Diferencias preparadas</h2>
+<div class="sourceCode" id="cb194"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb194-1"><a href="#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--staged</span></span></code></pre></div>
+<h2 id="preparar-archivo">Preparar archivo</h2>
+<div class="sourceCode" id="cb195"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb195-1"><a href="#cb195-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add archivo</span></code></pre></div>
+<h2 id="crear-commit">Crear commit</h2>
+<div class="sourceCode" id="cb196"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb196-1"><a href="#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Mensaje&quot;</span></span></code></pre></div>
+<h2 id="historial-breve">Historial breve</h2>
+<div class="sourceCode" id="cb197"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb197-1"><a href="#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div>
+<h2 id="ramas">Ramas</h2>
+<div class="sourceCode" id="cb198"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb198-1"><a href="#cb198-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div>
+<h2 id="rama-actual">Rama actual</h2>
+<div class="sourceCode" id="cb199"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb199-1"><a href="#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span></code></pre></div>
+<h2 id="crear-y-cambiar-a-rama">Crear y cambiar a rama</h2>
+<div class="sourceCode" id="cb200"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb200-1"><a href="#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> nombre-rama</span></code></pre></div>
+<h2 id="cambiar-de-rama">Cambiar de rama</h2>
+<div class="sourceCode" id="cb201"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb201-1"><a href="#cb201-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch nombre-rama</span></code></pre></div>
+<h2 id="fusionar">Fusionar</h2>
+<div class="sourceCode" id="cb202"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb202-1"><a href="#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge nombre-rama</span></code></pre></div>
+<h2 id="remotos">Remotos</h2>
+<div class="sourceCode" id="cb203"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb203-1"><a href="#cb203-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div>
+<h2 id="clonar">Clonar</h2>
+<div class="sourceCode" id="cb204"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb204-1"><a href="#cb204-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone URL</span></code></pre></div>
+<h2 id="enviar">Enviar</h2>
+<div class="sourceCode" id="cb205"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb205-1"><a href="#cb205-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+<h2 id="asociar-primera-publicación-de-una-rama">Asociar primera
+publicación de una rama</h2>
+<div class="sourceCode" id="cb206"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb206-1"><a href="#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin nombre-rama</span></code></pre></div>
+<h2 id="incorporar-cambios">Incorporar cambios</h2>
+<div class="sourceCode" id="cb207"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb207-1"><a href="#cb207-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div>
+<h2 id="consultar-cambios-remotos">Consultar cambios remotos</h2>
+<div class="sourceCode" id="cb208"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb208-1"><a href="#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch</span></code></pre></div>
+<h2 id="tags">Tags</h2>
+<div class="sourceCode" id="cb209"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb209-1"><a href="#cb209-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag</span></code></pre></div>
+<hr />
+<h1 id="58-el-flujo-que-debes-comprender">58. El flujo que debes
+comprender</h1>
+<pre class="text"><code>MODIFICO
+   ↓
+EJECUTO
+   ↓
+COMPRUEBO
+   ↓
+git status
+   ↓
+git diff
+   ↓
+git add
+   ↓
+git status
+   ↓
+git commit
+   ↓
+git log
+   ↓
+git push
+cuando corresponda</code></pre>
+<p>No lo memorices como una receta automática.</p>
+<p>Cada comando responde a una pregunta distinta.</p>
+<hr />
+<h1 id="59-qué-debes-poder-explicar">59. Qué debes poder explicar</h1>
+<p>Al terminar esta introducción debes poder responder
+progresivamente:</p>
+<ol type="1">
+<li>¿qué problema resuelve un sistema de control de versiones?</li>
+<li>¿qué es Git?</li>
+<li>¿qué es GitHub?</li>
+<li>¿por qué Git y GitHub no son lo mismo?</li>
+<li>¿qué es un repositorio?</li>
+<li>¿qué es el directorio de trabajo?</li>
+<li>¿qué es staging?</li>
+<li>¿qué hace <code>git add</code>?</li>
+<li>¿qué es un commit?</li>
+<li>¿qué diferencia hay entre commit y push?</li>
+<li>¿para qué sirve <code>git status</code>?</li>
+<li>¿qué permite observar <code>git diff</code>?</li>
+<li>¿qué muestra <code>git log</code>?</li>
+<li>¿qué es una rama?</li>
+<li>¿para qué sirve un merge?</li>
+<li>¿qué es un conflicto?</li>
+<li>¿qué es un repositorio remoto?</li>
+<li>¿qué significa clonar?</li>
+<li>¿qué hace push?</li>
+<li>¿qué hace pull?</li>
+<li>¿qué diferencia básica hay entre pull y fetch?</li>
+<li>¿qué es un pull request?</li>
+<li>¿qué diferencia hay entre fork y clone?</li>
+<li>¿qué puede representar un issue?</li>
+<li>¿qué utilidad puede tener un tag?</li>
+<li>¿por qué no deben aparecer secretos en Git?</li>
+<li>¿qué información de MiniJarvis pertenece al repositorio?</li>
+<li>¿cómo localizarías una versión evaluada?</li>
+</ol>
+<hr />
+<h1 id="60-qué-no-necesitas-aprender-de-memoria">60. Qué no necesitas
+aprender de memoria</h1>
+<p>No necesitas memorizar todos los comandos.</p>
+<p>Debes aprender a razonar:</p>
+<pre class="text"><code>¿Qué quiero hacer?
+
+¿Dónde estoy?
+
+¿En qué rama estoy?
+
+¿Qué dice git status?
+
+¿Qué ha cambiado?
+
+¿Qué quiero conservar?
+
+¿Qué quiero compartir?
+
+¿Qué efecto tendrá el comando?</code></pre>
+<p>Aprender Git no consiste en lanzar comandos hasta que desaparezca el
+error.</p>
+<p>Consiste en comprender el estado del repositorio.</p>
+<hr />
+<h1 id="61-relación-con-minijarvis">61. Relación con MiniJarvis</h1>
+<p>Git acompañará la evolución del programa:</p>
+<pre class="text"><code>H1
+primera versión Java
+        ↓
+nuevos hitos
+        ↓
+nuevas capacidades
+        ↓
+versiones estables
+        ↓
+producto final</code></pre>
+<p>El historial debe ayudarnos a comprender esa evolución.</p>
+<p>No necesitamos registrar cada pulsación de teclado.</p>
+<p>Necesitamos conservar cambios significativos.</p>
+<hr />
+<h1 id="62-idea-clave">62. Idea clave</h1>
+<pre class="text"><code>Git conserva la historia.
+
+GitHub permite compartirla.
+
+status informa.
+
+diff compara.
+
+add prepara.
+
+commit registra.
+
+branch separa líneas de trabajo.
+
+merge combina.
+
+push envía.
+
+pull incorpora.
+
+fetch consulta el remoto.
+
+README explica el proyecto.
+
+El historial permite reconstruir su evolución.</code></pre>
+<p>Cuando algo no esté claro:</p>
+<div class="sourceCode" id="cb214"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb214-1"><a href="#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Lee primero.</p>
+<p>Decide después.</p>
+<hr />
+<h1 id="63-reconocimiento-y-fuente-principal">63. Reconocimiento y
+fuente principal</h1>
+<p>Este manual ha sido elaborado utilizando como <strong>fuente
+didáctica principal</strong>:</p>
+<p><strong>«Aprende Git y GitHub - Curso desde Cero»</strong></p>
+<p><strong>Autora del curso:</strong> Estefania Cassingena Navone
+<strong>Publicado por:</strong> freeCodeCamp Español
+<strong>Plataforma:</strong> YouTube <strong>Vídeo:</strong> <a
+href="https://www.youtube.com/watch?v=mBYSUUnMt9M">https://www.youtube.com/watch?v=mBYSUUnMt9M</a></p>
+<p>El curso original desarrolla progresivamente contenidos como:</p>
+<pre class="text"><code>introducción a Git y GitHub
+        ↓
+conceptos básicos
+        ↓
+instalación y configuración
+        ↓
+repositorios
+        ↓
+tres áreas de Git
+        ↓
+status
+        ↓
+commits
+        ↓
+ramas
+        ↓
+merge
+        ↓
+conflictos
+        ↓
+GitHub
+        ↓
+clone
+        ↓
+push
+        ↓
+pull y fetch
+        ↓
+forks
+        ↓
+pull requests
+        ↓
+issues</code></pre>
+<p>Esta progresión se ha utilizado como base para estructurar una parte
+importante del presente manual.</p>
+<p>El material original ha sido transformado didácticamente para:</p>
+<ul>
+<li>adaptarlo al nivel de 1.º DAW;</li>
+<li>utilizar ejemplos próximos al alumnado;</li>
+<li>relacionarlo con programas Java;</li>
+<li>aplicarlo al proyecto MiniJarvis;</li>
+<li>separar contenidos nucleares de contenidos que pueden introducirse
+posteriormente;</li>
+<li>incorporar prácticas de aula;</li>
+<li>integrar el trabajo con las fuentes canónicas de evidencias del
+módulo;</li>
+<li>incorporar recomendaciones específicas de seguridad;</li>
+<li>relacionar Git con la identificación de versiones evaluadas.</li>
+</ul>
+<p>Las secciones específicas sobre:</p>
+<pre class="text"><code>MiniJarvis
+fuentes canónicas
+Moodle
+diario
+Scrum
+Site
+seguridad del proyecto
+.gitignore
+tags de entrega
+identificación de versiones evaluadas</code></pre>
+<p>son adaptaciones propias del diseño didáctico del módulo y no deben
+interpretarse como contenido atribuido necesariamente al vídeo
+original.</p>
+<p>El reconocimiento de la fuente significa también que este manual
+<strong>no pretende sustituir el curso original</strong>.</p>
+<p>El vídeo puede utilizarse como recurso complementario para ver
+demostraciones más extensas y estudiar Git y GitHub con mayor
+profundidad.</p>
+<p>La relación entre ambos materiales puede resumirse así:</p>
+<pre class="text"><code>FUENTE PRINCIPAL
+
+Curso de Estefania Cassingena Navone
+publicado por freeCodeCamp Español
+             ↓
+       estudio y análisis
+             ↓
+ADAPTACIÓN DIDÁCTICA
+
+Introducción a Git y GitHub
+Programación — 1.º DAW
+Proyecto MiniJarvis</code></pre>
+
+  </main>
+</body>
+</html>

@@ -8,7 +8,7 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="sesión-211--ficha-de-trabajo-del-alumnado">Sesión 211 — Ficha de
 trabajo del alumnado</h1>
 <h2 id="constantes">Constantes</h2>
@@ -16,66 +16,255 @@ trabajo del alumnado</h1>
 <thead>
 <tr class="header">
 <th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Al terminar debes poder…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Diferenciar variable y constante.</td>
-<td>Código con al menos una constante bien usada.</td>
+<td>Diferenciar variables, constantes y literales.</td>
+<td>Crear y utilizar una constante con <code>final</code>, justificar
+por qué no debe cambiar y distinguirla de una variable.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1. <strong>Modalidad:</strong> Equipo.</p>
+<p><strong>Tiempo previsto:</strong> 45 minutos. <strong>Hito:</strong>
+H1. <strong>Fase HEXA:</strong> Ejecutar. <strong>Modalidad:</strong>
+Equipo.</p>
+<hr />
 <h2 id="material-que-necesitas">Material que necesitas</h2>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
+<li>Un ordenador con JDK e IntelliJ disponibles.</li>
+<li>El proyecto H1.</li>
+<li>El capítulo 02 del libro como referencia.</li>
 </ul>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
+<p>Utiliza únicamente datos ficticios en los ejemplos.</p>
+<hr />
+<h2 id="1-punto-de-partida">1. Punto de partida</h2>
+<p>En la sesión anterior utilizaste variables.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>El valor de <code>userName</code> puede cambiar:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>userName <span class="op">=</span> <span class="st">&quot;Álex&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Pero no todos los datos de un programa deberían cambiar durante la
+ejecución.</p>
+<p>Por ejemplo, podemos decidir que el nombre de esta versión del
+asistente permanezca fijo:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<hr />
+<h2 id="2-variable-y-constante">2. Variable y constante</h2>
+<p>Compara:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>con:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>En ambos casos tenemos:</p>
+<pre class="text"><code>tipo
+nombre
+valor</code></pre>
+<p>La diferencia importante es <code>final</code>.</p>
+<p>Cuando declaramos:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>estamos expresando que ese valor no debe cambiar después de
+inicializarse.</p>
+<hr />
+<h2 id="3-comprueba-la-diferencia">3. Comprueba la diferencia</h2>
+<p>Prueba primero:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>userName <span class="op">=</span> <span class="st">&quot;Álex&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Ejecuta y comprueba que puedes cambiar el valor.</p>
+<p>Después observa:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>AGENT_NAME <span class="op">=</span> <span class="st">&quot;Otro nombre&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Antes de probarlo, predice:</p>
+<pre class="text"><code>¿Permitirá Java la segunda asignación?
+
+¿Por qué?</code></pre>
+<p>Comprueba qué ocurre.</p>
+<p>Después elimina la asignación incorrecta y deja el programa
+funcionando de nuevo.</p>
+<hr />
+<h2 id="4-el-nombre-también-comunica">4. El nombre también comunica</h2>
+<p>En estos primeros programas utilizaremos una convención sencilla:</p>
+<pre class="text"><code>variables  → camelCase
+
+constantes → MAYÚSCULAS_CON_GUIONES_BAJOS</code></pre>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> userName <span class="op">=</span> <span class="st">&quot;Laura&quot;</span><span class="op">;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> studyHours <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>El nombre ayuda a reconocer rápidamente la intención del dato.</p>
+<p>La mayúscula no convierte por sí sola una variable en constante.</p>
+<p>Lo que impide reasignar el valor es:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span></span></code></pre></div>
+<hr />
+<h2 id="5-no-todo-debe-ser-constante">5. No todo debe ser constante</h2>
+<p>Decide si cada dato debería ser normalmente variable o constante en
+esta versión de MiniJarvis:</p>
+<pre class="text"><code>nombre del asistente
+nombre de la persona usuaria
+horas practicadas esta semana
+mensaje temporal escrito para una prueba</code></pre>
+<p>Explica por qué.</p>
+<p>No conviertas un dato en constante solo porque ahora mismo no lo
+estés modificando.</p>
+<p>La pregunta importante es:</p>
+<pre class="text"><code>¿Tiene sentido que este dato pueda cambiar durante la ejecución?</code></pre>
+<hr />
+<h2 id="6-constante-y-literal">6. Constante y literal</h2>
+<p>Observa:</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Aquí podemos distinguir:</p>
+<pre class="text"><code>AGENT_NAME</code></pre>
+<p>es el nombre de la constante.</p>
+<p>Mientras que:</p>
+<pre class="text"><code>&quot;MiniJarvis&quot;</code></pre>
+<p>es el literal que utilizamos para inicializarla.</p>
+<p>Una constante y un literal no son lo mismo.</p>
+<hr />
+<h2 id="7-evita-repetir-un-dato-importante">7. Evita repetir un dato
+importante</h2>
+<p>Compara este código:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis está empezando.&quot;</span><span class="op">);</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Esta versión de MiniJarvis funciona por consola.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>con:</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy &quot;</span> <span class="op">+</span> AGENT_NAME <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>AGENT_NAME <span class="op">+</span> <span class="st">&quot; está empezando.&quot;</span><span class="op">);</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Esta versión de &quot;</span> <span class="op">+</span> AGENT_NAME <span class="op">+</span> <span class="st">&quot; funciona por consola.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>En el segundo caso el dato importante tiene un nombre propio dentro
+del programa.</p>
+<p>Si necesitáramos cambiarlo durante el desarrollo, sabríamos dónde
+hacerlo.</p>
+<hr />
+<h2 id="8-llévalo-a-minijarvis">8. Llévalo a MiniJarvis</h2>
+<p>En vuestro proyecto H1:</p>
 <ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Añadir <code>ASSISTANT_NAME</code> y
-<code>COURSE_YEAR</code>.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
+<li>localizad el nombre del asistente;</li>
+<li>cread una constante para representarlo;</li>
+<li>utilizadla en varios mensajes;</li>
+<li>ejecutad;</li>
+<li>comprobad que la salida sigue siendo correcta.</li>
 </ol>
-<h2 id="comprobación-práctica">Comprobación práctica</h2>
-<p>Comprueba <strong>el resultado observable de la actividad</strong> en
-su fuente canónica y prepárate para explicarlo. Registra en diario o
-Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA
-significativo.</p>
-<h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy &quot;</span> <span class="op">+</span> AGENT_NAME <span class="op">+</span> <span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Podéis crear otra constante únicamente si existe un dato que
+realmente tenga sentido mantener fijo.</p>
+<p>No añadáis constantes solo para cumplir una cantidad.</p>
+<hr />
+<h2 id="9-comprueba-un-error">9. Comprueba un error</h2>
+<p>Después de declarar:</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">String</span> AGENT_NAME <span class="op">=</span> <span class="st">&quot;MiniJarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>intenta temporalmente:</p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>AGENT_NAME <span class="op">=</span> <span class="st">&quot;Jarvis&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>Observa qué ocurre.</p>
+<p>Después corrige el programa.</p>
+<p>Debes poder explicar:</p>
+<pre class="text"><code>qué intentaste cambiar
+por qué Java no lo permite
+qué función cumple final</code></pre>
+<hr />
+<h2 id="10-resultado-observable">10. Resultado observable</h2>
+<p>Al terminar debéis poder demostrar directamente:</p>
+<pre class="text"><code>[ ] El programa contiene al menos una constante útil.
+[ ] La constante utiliza final.
+[ ] Su nombre comunica que es una constante.
+[ ] Puedo señalar su tipo.
+[ ] Puedo señalar su valor.
+[ ] Puedo distinguir constante, variable y literal.
+[ ] Puedo justificar por qué ese dato no debe cambiar.
+[ ] He comprobado qué ocurre si intento reasignarlo.
+[ ] La constante se utiliza realmente en el programa.</code></pre>
+<p>La comprobación se realiza sobre el propio código.</p>
+<p>No necesitáis capturas ni una ficha adicional.</p>
+<hr />
+<h2 id="11-fuente-canónica">11. Fuente canónica</h2>
+<p>El resultado de esta sesión permanece en el proyecto H1.</p>
+<p>No creéis:</p>
 <ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
+<li>una tabla independiente de constantes;</li>
+<li>una captura del código;</li>
+<li>un informe sobre <code>final</code>;</li>
+<li>una copia del programa en otro documento.</li>
 </ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
+<p>Si el equipo toma una decisión significativa sobre qué datos deben
+permanecer fijos, puede conservarla en Scrum si resulta útil.</p>
+<p>Si aparece un aprendizaje individual especialmente significativo,
+puede anotarse brevemente en el diario.</p>
+<hr />
+<h2 id="12-uso-de-ia">12. Uso de IA</h2>
+<p>Antes de consultar una IA, intenta razonar:</p>
+<pre class="text"><code>¿este dato debe cambiar?
+
+¿por qué?
+
+¿es una variable, una constante o un literal?
+
+¿qué nombre expresa mejor su intención?</code></pre>
+<p>Puedes utilizar IA para:</p>
+<ul>
+<li>pedir una explicación de <code>final</code>;</li>
+<li>comprender un error al intentar reasignar una constante;</li>
+<li>comparar dos posibles nombres;</li>
+<li>revisar un razonamiento que ya hayas realizado.</li>
+</ul>
+<p>No la utilices para decidir automáticamente qué debe ser constante
+sin comprender el motivo.</p>
+<p>Si su intervención es significativa, deja una anotación breve en la
+fuente correspondiente.</p>
+<p>No es necesario registrar consultas triviales.</p>
+<p>Nunca introduzcas datos personales, contraseñas, tokens ni claves
+API.</p>
+<hr />
+<h2 id="13-si-os-bloqueáis">13. Si os bloqueáis</h2>
+<p>Antes de pedir ayuda, responded:</p>
+<pre class="text"><code>¿Qué dato queremos representar?
+
+¿Debe poder cambiar?
+
+¿Es variable o constante?
+
+¿Hemos utilizado final?
+
+¿Qué error aparece?
+
+¿Qué intentábamos hacer?</code></pre>
+<p>Después formulad una pregunta concreta.</p>
+<hr />
+<h2 id="14-cierre">14. Cierre</h2>
+<p>Sobre vuestro propio programa, explicad:</p>
 <ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
+<li>qué constante habéis creado;</li>
+<li>qué valor contiene;</li>
+<li>por qué ese dato debe permanecer fijo;</li>
+<li>qué función cumple <code>final</code>;</li>
+<li>en qué se diferencia de <code>userName</code>;</li>
+<li>en qué se diferencia la constante del literal que la
+inicializa;</li>
+<li>qué ocurrió al intentar cambiarla.</li>
 </ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Pregunta: ¿qué dato de nuestro programa
-debería ser constante?</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>La sesión está completada cuando podéis utilizar una constante real
+de MiniJarvis y justificar por qué ese dato no debe modificarse durante
+la ejecución.</p>
 
   </main>
 </body>

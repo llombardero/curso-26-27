@@ -2,52 +2,279 @@
 
 ## Salida por pantalla y mensajes del asistente
 
-| Hoy vas a… | Debe quedar… |
+| Hoy vas a… | Al terminar debes poder… |
 |---|---|
-| Usar `System.out.println` y construir salida legible. | Programa que muestra saludo, propósito y curso. |
+| Utilizar `System.out.println` para construir una salida clara y ordenada. | Diseñar, implementar y revisar una primera presentación por consola de MiniJarvis. |
 
-**Tiempo previsto:** 45 minutos.  
+**Tiempo previsto:** 45 minutos.
 **Hito:** H1.
+**Fase HEXA:** Idear.
 **Modalidad:** Equipo.
+
+---
 
 ## Material que necesitas
 
-- Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles y el proyecto del hito accesible.
-- Pizarra o una hoja reutilizable para bosquejar antes de modificar el proyecto.
-- Proyector solo si habrá demostración colectiva; la defensa puede realizarse directamente en el equipo.
+- Un ordenador con JDK e IntelliJ disponibles.
+- El proyecto H1.
+- El capítulo 01 del libro como referencia.
+- Pizarra, papel reutilizable o espacio temporal para bosquejar los mensajes antes de modificar el código.
 
-## Trabajo de hoy
+No necesitas crear un documento nuevo para conservar el bosquejo.
 
-1. Lee el objetivo y escribe con tus palabras qué debe quedar terminado.
-2. Atiende al ejemplo breve y anota una predicción, duda o decisión.
-3. Realiza esta tarea: **Diseñar el primer guion de presentación de MiniJarvis.**
-4. Comprueba el resultado con una prueba observable; no basta con decir “funciona”.
-5. Guarda o entrega la evidencia indicada y prepárate para explicarla.
+---
 
-## Comprobación práctica
+## 1. Punto de partida
 
-Comprueba **el resultado observable de la actividad** en su fuente canónica y prepárate para explicarlo. Registra en diario o Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA significativo.
+Hasta ahora MiniJarvis ya puede ejecutar instrucciones.
 
+Hoy vamos a trabajar cómo se presenta por consola.
 
-## Seguridad y uso de IA
+Una primera versión puede limitarse a mostrar mensajes fijos.
 
-- Trabaja únicamente con datos ficticios.
-- No escribas contraseñas, tokens, claves API ni datos personales.
-- Si utilizas IA en un uso permitido, registra qué pediste, qué recibiste, qué cambiaste y cómo lo comprobaste.
-- Los ejemplos de Laura solo se consultan después del intento propio.
+Por ejemplo:
 
-## Si te bloqueas
+```text
+Hola.
+Soy MiniJarvis.
+Esta es mi primera versión.
+Estoy aprendiendo a comunicarme por consola.
+```
 
-1. Copia el mensaje exacto o describe qué observas.
-2. Indica qué esperabas que ocurriera.
-3. Reduce el problema a una prueba pequeña.
-4. Pide ayuda mostrando esos tres datos; no pidas directamente la solución completa.
+Todavía no necesitamos:
 
-## Cierre
+- pedir datos;
+- utilizar variables;
+- tomar decisiones;
+- repetir acciones;
+- conectar una IA real.
 
-Responde sin copiar: **Revisar si la salida es comprensible para una persona usuaria.**
+---
 
-Respuesta:  
-................................................................................
+## 2. Una instrucción produce una salida
 
-La sesión está completada cuando la evidencia existe, se ha comprobado y puedes defenderla brevemente.
+Observa:
+
+```java
+System.out.println("Hola.");
+```
+
+La instrucción contiene el mensaje que aparecerá en la consola.
+
+Si añadimos varias:
+
+```java
+System.out.println("Hola.");
+System.out.println("Soy MiniJarvis.");
+System.out.println("Esta es mi primera versión.");
+```
+
+se ejecutarán en orden.
+
+Antes de probarlo, predice la salida.
+
+Después ejecútalo y comprueba si coincide.
+
+---
+
+## 3. Diseña el primer guion
+
+Antes de modificar el programa, el equipo debe decidir qué mensajes necesita esta primera presentación.
+
+El guion debe ser breve.
+
+Puede incluir:
+
+```text
+saludo
+nombre del programa
+qué versión es
+qué puede hacer ahora
+qué aprenderá más adelante
+```
+
+No escribáis todavía código.
+
+Primero decidid qué debería leer una persona usuaria.
+
+---
+
+## 4. Revisa el guion
+
+Comprobad vuestro diseño con estas preguntas:
+
+```text
+¿Se entiende quién habla?
+
+¿Los mensajes aparecen en un orden lógico?
+
+¿Hay información repetida?
+
+¿Algún mensaje promete algo que MiniJarvis todavía no puede hacer?
+
+¿Una persona que no conoce el proyecto entendería esta primera salida?
+```
+
+El objetivo no es hacer muchos mensajes.
+
+El objetivo es que los que existan sean útiles y comprensibles.
+
+---
+
+## 5. Llévalo al programa
+
+Convierte cada mensaje necesario en una instrucción.
+
+Por ejemplo:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hola.");
+        System.out.println("Soy MiniJarvis.");
+        System.out.println("Esta es mi primera versión.");
+    }
+}
+```
+
+Ejecuta después de introducir los cambios.
+
+Comprueba el resultado directamente en la consola.
+
+---
+
+## 6. Cambia el orden
+
+Elige dos mensajes e intercambia sus instrucciones.
+
+Antes de ejecutar, predice:
+
+```text
+¿Qué cambiará?
+
+¿Qué permanecerá igual?
+```
+
+Ejecuta.
+
+Comprueba tu predicción.
+
+Después decide qué orden comunica mejor la idea.
+
+No se trata solo de que el programa funcione.
+
+También debe resultar comprensible.
+
+---
+
+## 7. Mejora un mensaje
+
+Elige un mensaje de vuestro programa que pueda expresarse mejor.
+
+Por ejemplo, compara:
+
+```text
+Programa iniciado.
+```
+
+con:
+
+```text
+Hola. Soy MiniJarvis.
+```
+
+No hay una única frase correcta.
+
+Debéis poder justificar por qué una redacción resulta más adecuada para esta primera versión.
+
+Modificad únicamente el mensaje elegido y volved a ejecutar.
+
+---
+
+## 8. Resultado observable
+
+Al terminar la sesión debéis poder mostrar directamente una salida que:
+
+```text
+[ ] presenta MiniJarvis;
+[ ] utiliza varias instrucciones println;
+[ ] aparece en el orden previsto;
+[ ] resulta comprensible;
+[ ] no promete funciones que todavía no existen;
+[ ] puede modificarse y volver a comprobarse ejecutando el programa.
+```
+
+La consola es la comprobación principal.
+
+No necesitáis una captura de pantalla ni un informe adicional.
+
+---
+
+## 9. Fuente canónica
+
+El resultado técnico queda en el proyecto H1.
+
+Si el equipo toma una decisión significativa sobre cómo debe presentarse MiniJarvis, puede conservarla en Scrum si resulta útil para el trabajo posterior.
+
+No creéis:
+
+- un documento separado con los mensajes;
+- una captura de la consola;
+- un informe de la sesión;
+- una copia del código fuera del repositorio.
+
+---
+
+## 10. Uso de IA
+
+Primero diseñad y revisad vuestro propio guion.
+
+La IA puede utilizarse para:
+
+- aclarar qué hace `System.out.println`;
+- comprender un error;
+- revisar si un mensaje resulta claro.
+
+No la utilicéis para sustituir la decisión del equipo sobre cómo debe presentarse esta primera versión.
+
+Si su intervención es significativa, registradla en la fuente correspondiente:
+
+- diario individual, si afecta principalmente a un aprendizaje personal;
+- Scrum, si afecta a una decisión significativa del equipo.
+
+No es necesario registrar consultas triviales.
+
+Nunca introduzcáis datos personales, contraseñas, tokens ni claves API.
+
+---
+
+## 11. Si os bloqueáis
+
+Antes de pedir ayuda, comprobad:
+
+```text
+¿Qué mensaje esperábamos ver?
+
+¿Qué aparece realmente?
+
+¿En qué orden están las instrucciones?
+
+¿Hemos guardado el último cambio?
+
+¿Estamos ejecutando la versión correcta?
+```
+
+Cambiad una sola cosa cada vez.
+
+---
+
+## 12. Cierre
+
+Ejecutad vuestra versión y responded:
+
+1. ¿qué instrucción produce cada mensaje?
+2. ¿por qué habéis elegido ese orden?
+3. ¿qué mensaje habéis mejorado?
+4. ¿qué capacidad de MiniJarvis habéis evitado prometer porque todavía no existe?
+
+La sesión está completada cuando el equipo puede ejecutar la presentación de MiniJarvis, explicar el orden de los mensajes y modificar uno de ellos justificando el cambio.

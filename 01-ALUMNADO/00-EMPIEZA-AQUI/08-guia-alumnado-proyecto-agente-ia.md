@@ -49,20 +49,22 @@ Un hito es una entrega parcial con un objetivo claro.
 
 No se espera que el proyecto final aparezca de golpe. Se irá construyendo por versiones.
 
-| Hito | Fechas orientativas | Qué construiremos |
-|---|---|---|
-| H0. Bootcamp Scrum | 15-18 septiembre | Conoceremos el curso y Scrum, reconoceremos habilidades, prepararemos equipos provisionales de 3 o 4 y aplicaremos el sprint en la torre. |
-| H1. Primer asistente básico | 21 septiembre - 9 octubre | Programa Java básico por consola: saludo, nombre, variables, constantes y README. |
-| H2. Decisiones y depuración | 13 octubre - 6 noviembre | Agente con menú, comandos, bucles, gestión de errores, pruebas y depuración. |
-| H3. Memoria en colecciones | 9 noviembre - 4 diciembre | Agente que recuerda información durante la ejecución usando colecciones. |
-| C1. Cierre 1.ª evaluación | 9-22 diciembre | Demo parcial, portfolio, revisión de evidencias y recuperación si procede. |
-| H4. Agente orientado a objetos | 7 enero - 5 febrero | Rediseño con clases, objetos, responsabilidades y diagramas UML. |
-| H5. Herramientas, código limpio y patrones iniciales | 8 febrero - 19 marzo | Agente extensible, refactorización, Git profesional y patrones si tienen sentido. |
-| C2. Cierre 2.ª evaluación | 29-31 marzo | Demo parcial, revisión de repositorio, defensa y recuperación. |
-| H6. Persistencia y trazabilidad | 1-23 abril | Ficheros, logs, base de conocimiento simple, README reproducible y seguridad. |
-| H7. IA responsable opcional | 26-29 abril | Integración con Gemini/Jarvis o simulación robusta y defendible. |
-| FFEOE | 30 abril - 28 mayo | No hay clases ni entregas. El proyecto base debe quedar cerrado antes. |
-| HF. Presentación final | 31 mayo - 22 junio | Defensa final, portfolio final, demo, recuperación y mejora. |
+| Tramo | Qué construiremos o trabajaremos |
+|---|---|
+| H0. Bootcamp Scrum | Conoceremos el curso y Scrum, reconoceremos habilidades, prepararemos equipos provisionales de 3 o 4 y aplicaremos el sprint en la torre. |
+| H1. Primer asistente básico | Programa Java básico por consola: saludo, nombre, variables, constantes y README. |
+| H2. Decisiones y depuración | Agente con menú, comandos, bucles, gestión de errores, pruebas y depuración. |
+| H3. Memoria en colecciones | Agente que recuerda información durante la ejecución usando colecciones. |
+| C1. Cierre 1.ª evaluación | Demo parcial, selección de evidencias, revisión y recuperación si procede. |
+| H4. Agente orientado a objetos | Rediseño con clases, objetos, responsabilidades y diagramas UML. |
+| H5. Herramientas, código limpio y patrones iniciales | Agente extensible, refactorización y patrones cuando tengan sentido. |
+| C2. Cierre 2.ª evaluación | Demo parcial, revisión del producto, defensa y recuperación si procede. |
+| H6. Persistencia y trazabilidad | Persistencia, trazabilidad, reproducibilidad y seguridad según el alcance trabajado. |
+| H7. IA responsable opcional | Integración responsable de IA o simulación robusta y defendible, según el progreso del curso. |
+| FFEOE | Periodo sin clases ni entregas del módulo. |
+| HF. Presentación final | Defensa final, selección final de evidencias, demo, recuperación y mejora. |
+
+Esta tabla muestra la **secuencia del curso**, no un calendario cerrado. Las fechas concretas dependen de la temporalización vigente.
 
 ### H0 comienza antes de la torre
 
@@ -80,9 +82,8 @@ Cada hito tendrá:
 2. una lista de tareas;
 3. entregables concretos;
 4. relación con Programación;
-5. relación con Entornos de Desarrollo;
-6. normas de uso de IA;
-7. defensa oral o revisión técnica.
+5. normas de uso de IA;
+6. defensa oral o revisión técnica.
 
 Material de estudio:
 
@@ -102,56 +103,50 @@ Sirven para comparar, mejorar y preparar la defensa, no para copiar antes de pen
 
 ## 3. Qué se entrega
 
-Las entregas combinan trabajo de equipo y trabajo individual.
+No se crea un documento nuevo para cada actividad o evidencia. Cada resultado se conserva en su fuente canónica y se reutiliza cuando haya que demostrar el aprendizaje.
 
-### 3.1. Entregas de equipo
+### 3.1. Evidencias de equipo
 
-Normalmente el equipo entregará:
+Según el hito, el equipo puede dejar:
 
-- código del proyecto;
-- repositorio GitHub o entrega equivalente;
-- README;
-- pruebas o checklist;
-- documentación técnica;
+- código y versión estable en GitHub;
+- README con las instrucciones necesarias;
+- pruebas realizadas y resultados relevantes;
 - diagramas cuando correspondan;
-- evidencias de tablero, roles o Scrum;
-- informes de depuración, incidencias o refactorización;
-- registro de decisiones técnicas;
-- demo del producto.
+- Scrum actualizado cuando haya tareas, decisiones, bloqueos o retrospectiva relevantes;
+- demo o ejecución comprobable del producto;
+- evidencia no-code excepcional en Drive cuando no tenga una ubicación mejor.
 
-### 3.2. Entregas individuales
+No se copia el código, el README ni las pruebas a otros lugares solo para volver a entregarlos.
 
-Cada persona deberá entregar o defender evidencias propias, por ejemplo:
+### 3.2. Evidencias individuales
 
-- selección periódica en el Site personal;
-- uso significativo de IA en diario o Scrum;
-- comparación Java ↔ Python;
-- reflexión de aprendizaje;
-- defensa de una parte del código;
-- explicación de una decisión técnica;
-- recuperación individual si algún RA queda pendiente.
+Cada persona demuestra su aprendizaje mediante las evidencias existentes y su capacidad para explicarlas.
 
-### 3.3. Estructura recomendada del repositorio
+Según corresponda:
 
-La estructura crecerá poco a poco. Una estructura orientativa será:
+- registra en el diario un aprendizaje, aportación, decisión, bloqueo o uso de IA significativo;
+- selecciona evidencias para el Site personal en C1, C2 y HF;
+- explica una parte del código o una decisión técnica;
+- realiza la comparación Java ↔ Python y la integra en el diario o la selecciona posteriormente para el Site cuando aporte valor;
+- participa en la defensa individual;
+- realiza una recuperación específica cuando quede aprendizaje pendiente.
 
-```text
-hN-nombre-del-hito/
-├── README
-├── src/
-│   └── ...
-├── docs/
-│   ├── portfolio
-│   ├── registro-ia
-│   ├── pruebas
-│   ├── depuracion
-│   ├── retrospectiva
-│   ├── comparacion-java-python
-│   └── decisiones-tecnicas
-└── .gitignore
-```
+No hay un portfolio, registro de IA ni ficha de defensa independiente por cada hito.
 
-En los primeros hitos no hará falta tener todos los archivos. Se añadirán cuando tengan sentido.
+### 3.3. Estructura del repositorio
+
+El repositorio contiene principalmente el producto técnico y la información necesaria para comprenderlo y reproducirlo.
+
+Una estructura orientativa incluye:
+
+- README.md
+- src/
+- .gitignore
+
+Se incorporan pruebas, diagramas u otros recursos técnicos cuando el hito los necesita.
+
+No se crea una carpeta docs por defecto para duplicar diario, Scrum, defensa, incidencias o registros que ya tienen otra fuente canónica.
 
 ---
 
@@ -159,27 +154,27 @@ En los primeros hitos no hará falta tener todos los archivos. Se añadirán cua
 
 Una entrega válida debe permitir comprobar tres cosas:
 
-1. Que el producto funciona o se puede revisar.
-2. Que el proceso está documentado.
-3. Que cada alumno/a puede explicar lo que ha entregado.
+1. Que el producto funciona o puede revisarse.
+2. Que existe trazabilidad suficiente del proceso.
+3. Que cada alumno o alumna puede explicar su aportación y el producto trabajado.
 
-Por eso, no basta con subir código.
+No basta con subir código, pero tampoco es necesario duplicar evidencias en documentos separados.
 
-Una buena entrega debe incluir:
+Cada evidencia queda donde corresponde:
 
-- instrucciones para ejecutar;
-- explicación de qué se ha implementado;
-- pruebas realizadas;
-- errores encontrados y cómo se han corregido;
-- evidencias de Git o del proceso de trabajo;
-- registro de uso de IA, si se ha usado;
-- indicación de qué sabe defender cada integrante.
+- código, versiones y pruebas técnicas: repositorio;
+- instrucciones de ejecución y documentación técnica necesaria: README;
+- trabajo, decisiones, bloqueos y retrospectiva del equipo: Scrum;
+- aprendizaje y aportaciones individuales significativas: diario;
+- selección de evidencias: Site personal en C1, C2 y HF;
+- comprensión y autoría: defensa sobre el producto real;
+- evidencia no-code excepcional: Drive, solo cuando no tenga mejor ubicación.
+
+En Moodle se registra la versión evaluada y se confirma la actualización de las fuentes estables. No se vuelven a adjuntar rutinariamente README, capturas, registros de IA, PDF o XLSX.
 
 Regla práctica:
 
-```text
-Si no se puede ejecutar, revisar o defender, la evidencia queda incompleta.
-```
+Construye. Comprueba. Deja trazabilidad donde corresponde. Explica lo que has hecho. No dupliques evidencias.
 
 ---
 
@@ -215,31 +210,28 @@ No puedes usarla como autor oculto de tu entrega.
 | Color | Significado | Ejemplos |
 |---|---|---|
 | Verde | Permitido y recomendado | Pedir explicaciones, entender errores, revisar claridad, pedir ejemplos pequeños, generar preguntas de repaso. |
-| Amarillo | Permitido con registro, verificación y defensa | Generar fragmentos de código, proponer tests, refactorizar, traducir Java a Python, sugerir diagramas o patrones. |
+| Amarillo | Permitido con trazabilidad, verificación y defensa | Generar fragmentos de código, proponer tests, refactorizar, traducir Java a Python, sugerir diagramas o patrones. |
 | Rojo | No permitido | Copiar una solución completa sin entenderla, ocultar uso de IA, usar IA en pruebas no autorizadas, introducir datos personales, subir secretos o claves. |
 
-### 5.2. Registro obligatorio
+### 5.2. Trazabilidad del uso significativo de IA
 
-Si usas IA en una entrega evaluable, debes registrarlo.
+No necesitas crear un registro de IA independiente.
 
-Archivo recomendado:
+Cuando la IA haya influido de forma significativa en una actividad o producto evaluable, deja una nota breve:
 
-```text
-diario individual o Scrum, según autoría
-```
+- en el diario individual, si el uso y el aprendizaje son personales;
+- en Scrum, si el uso corresponde a una decisión o trabajo del equipo.
 
-El registro debe explicar:
+La nota debe permitir explicar:
 
-- herramienta usada;
-- fecha;
-- objetivo;
-- prompt o resumen fiel;
-- resultado obtenido;
-- qué aceptaste;
-- qué modificaste tú;
-- cómo lo verificaste;
-- qué aprendiste;
-- riesgos o errores detectados.
+- para qué se utilizó la IA;
+- qué aportó;
+- qué aceptaste, modificaste o descartaste;
+- cómo comprobaste el resultado.
+
+Si aporta valor para comprender el proceso, puedes conservar también el prompt o un resumen fiel.
+
+No es necesario registrar consultas triviales que no hayan influido de forma significativa en el trabajo.
 
 ### 5.3. Seguridad
 
@@ -267,17 +259,19 @@ mensaje de ejemplo sin datos personales
 
 ## 6. Cómo se evalúa
 
-La evaluación se apoya en Resultados de Aprendizaje y Criterios de Evaluación de Programación y Entornos de Desarrollo.
+La evaluación del módulo de Programación se apoya en sus Resultados de Aprendizaje y Criterios de Evaluación.
 
-Aunque el proyecto sea común, los módulos se evalúan por separado.
+MiniJarvis organiza buena parte del trabajo del curso, pero el proyecto no sustituye la evaluación propia del módulo.
 
-Una misma evidencia puede servir para ambos módulos, pero se mirará desde puntos de vista distintos.
+Las evidencias permiten comprobar tanto el funcionamiento del producto como el aprendizaje individual.
 
 Por ejemplo:
 
-- un menú en Java puede servir para Programación porque demuestra estructuras de control;
-- el plan de pruebas del mismo menú puede servir para Entornos;
-- una defensa puede confirmar si la evidencia grupal también demuestra aprendizaje individual.
+- el código permite comprobar la aplicación de los contenidos trabajados;
+- las pruebas permiten verificar el funcionamiento y detectar errores;
+- el README permite comprobar que el producto puede comprenderse y ejecutarse;
+- la trazabilidad permite reconstruir decisiones y cambios relevantes;
+- la defensa permite comprobar comprensión y autoría individual.
 
 ### 6.1. Qué se valora
 
@@ -313,66 +307,34 @@ Una entrega con buena apariencia técnica puede no ser válida si el alumno/a no
 
 ---
 
-## 7. Cómo usar las plantillas
+## 7. Cómo conservar las evidencias sin formularios paralelos
 
-Las plantillas están en dos lugares:
+No hay una plantilla nueva por sesión ni un documento independiente para cada tipo de evidencia.
 
-1. Documento general:
+El documento `07-plantillas-entregables` sirve para orientar dónde debe quedar cada resultado, no para obligarte a crear un archivo por cada actividad.
 
-```text
-07-plantillas-entregables
-```
-
-2. Carpeta de plantillas individuales:
-
-```text
-plantillas/
-```
-
-Plantillas disponibles:
-
-| Plantilla | Para qué sirve |
+| Si ocurre esto… | Normalmente queda en… |
 |---|---|
-| `README-plantilla` | Explicar qué hace el proyecto y cómo se ejecuta. |
-| `portfolio-plantilla` | Reflexionar individualmente sobre aportaciones y aprendizaje. |
-| `registro-ia-plantilla` | Declarar y analizar el uso de IA. |
-| `pruebas-plantilla` | Diseñar y registrar pruebas. |
-| `depuracion-plantilla` | Documentar un proceso de depuración. |
-| `incidencia-plantilla` | Registrar errores o problemas detectados. |
-| `retrospectiva-plantilla` | Revisar cómo ha trabajado el equipo. |
-| `comparacion-java-python-plantilla` | Comparar una solución Java con Python. |
-| `decision-tecnica-plantilla` | Justificar una decisión técnica. |
-| `patron-diseno-plantilla` | Registrar un patrón usado o descartado. |
-| `seguridad-datos-plantilla` | Revisar riesgos de datos, secretos y configuración. |
-| `defensa-individual-plantilla` | Preparar la defensa técnica individual. |
+| Código, versión o prueba técnica | GitHub |
+| Instrucciones para ejecutar o comprender el proyecto | README |
+| Tarea, decisión, bloqueo o retrospectiva del equipo | Scrum |
+| Aprendizaje o aportación individual significativa | Diario individual |
+| Uso significativo de IA | Diario o Scrum, según autoría |
+| Comparación Java ↔ Python | Diario o selección posterior para el Site cuando aporte valor |
+| Evidencia para un cierre periódico | Site personal o de equipo en C1, C2 o HF |
+| Defensa | Explicación oral o técnica sobre el producto; no requiere una plantilla escrita |
+| Evidencia no-code sin mejor ubicación | Drive |
+| Entrega oficial | Moodle, mediante la versión evaluada y las confirmaciones necesarias |
 
-### 7.1. Cómo copiar una plantilla
+### 7.1. Regla de mínima burocracia
 
-Para cada hito, copia solo las plantillas necesarias dentro de `docs/` y cambia el nombre para que se entienda.
+Antes de crear un archivo nuevo, comprueba si la evidencia ya existe en el código, README, Scrum, diario o producto.
 
-Ejemplo para H2:
+Si ya existe y puede revisarse, enlazarse o explicarse desde allí, no la copies a otro documento.
 
-```text
-docs/pruebas-h2
-README, sección de depuración H2
-diario individual o Scrum, según autoría
-diario o Site del checkpoint, si se selecciona
-```
+### 7.2. Cuándo crear documentación adicional
 
-### 7.2. Qué hacer si un apartado no aplica
-
-No borres apartados importantes sin más.
-
-Si algo no aplica, escribe:
-
-```text
-No aplica en este hito porque...
-```
-
-Esto ayuda a diferenciar entre:
-
-- algo que no era necesario;
-- algo que se ha olvidado.
+Solo crea documentación adicional cuando aporte información que no pueda conservarse adecuadamente en las fuentes anteriores o cuando la actividad lo indique expresamente.
 
 ---
 
@@ -427,7 +389,7 @@ Cuando aparezca un problema:
 4. buscad una hipótesis;
 5. usad depuración o pruebas;
 6. pedid ayuda si el bloqueo continúa;
-7. registrad la incidencia o el aprendizaje.
+7. registradlo en Scrum o diario únicamente si deja una decisión, bloqueo o aprendizaje significativo.
 
 No se penaliza tener errores.
 
@@ -445,18 +407,19 @@ Sí puede afectar negativamente:
 
 Antes de entregar un hito, revisad:
 
-```text
-[ ] El proyecto se puede abrir o ejecutar.
-[ ] El README explica qué hace y cómo se ejecuta.
-[ ] El código corresponde al nivel del hito.
-[ ] Hay pruebas o checklist si se piden.
-[ ] Hay evidencias de depuración, incidencias o decisiones si corresponden.
-[ ] El selección periódica en el Site personal está actualizado si se pide.
-[ ] El uso significativo de IA está en diario o Scrum, según autoría.
-[ ] No hay datos personales ni secretos.
-[ ] Cada integrante sabe qué parte puede defender.
-[ ] La entrega está subida o preparada en el lugar indicado.
-```
+- el proyecto se puede abrir, revisar o ejecutar;
+- el README contiene la información necesaria para comprenderlo y ejecutarlo;
+- el código corresponde al nivel del hito;
+- las pruebas solicitadas se han realizado y pueden reproducirse;
+- Scrum está actualizado si hubo tareas, decisiones, bloqueos o retrospectiva relevantes;
+- el diario recoge únicamente aprendizajes o aportaciones individuales significativas;
+- el uso significativo de IA está registrado en diario o Scrum, según autoría;
+- el Site está actualizado solo cuando corresponde a C1, C2 o HF;
+- no hay datos personales, contraseñas, tokens ni otros secretos;
+- cada integrante puede localizar, ejecutar y explicar su aportación;
+- Moodle contiene únicamente la versión evaluada, las confirmaciones necesarias y cualquier evidencia no-code excepcional.
+
+Esta lista sirve para revisar el trabajo. No hay que rellenarla, copiarla ni entregarla como documento independiente.
 
 ---
 

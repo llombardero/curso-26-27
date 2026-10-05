@@ -6,11 +6,21 @@
 
 ## 1. Propósito
 
-Este documento define rúbricas de evaluación por hitos para el proyecto anual:
+Este documento presenta las rúbricas de los hitos de **Programación de 1.º DAW** asociados al proyecto MiniJarvis.
 
-> Construcción progresiva de un pequeño agente IA propio.
+MiniJarvis se construye como un **programa Java progresivo**. Cada hito permite demostrar nuevos aprendizajes mediante el producto real, su comprobación, la documentación técnica necesaria, la explicación y la mejora.
 
-Las rúbricas están pensadas para evaluar evidencias de Programación y Entornos de Desarrollo manteniendo ambos módulos separados, aunque compartan proyecto, entregables y defensas.
+La rúbrica sirve para que sepas:
+
+- qué debe poder observarse en el producto;
+- qué conocimientos debes poder explicar;
+- qué comprobaciones deben haberse realizado;
+- qué evidencias permiten localizar el trabajo;
+- qué aspectos necesitan mejora.
+
+Este documento **no evalúa Entornos de Desarrollo** y no establece porcentajes, pesos, normas de asistencia ni sanciones.
+
+La rúbrica tampoco crea entregables adicionales. Una misma evidencia puede servir para comprobar varias dimensiones y debe conservarse en su fuente canónica.
 
 ---
 
@@ -18,34 +28,39 @@ Las rúbricas están pensadas para evaluar evidencias de Programación y Entorno
 
 | Nivel | Descriptor general |
 |---|---|
-| 4 — Excelente | Cumple lo pedido con autonomía, claridad, calidad técnica y defensa sólida. Mejora o justifica decisiones más allá del mínimo. |
-| 3 — Adecuado | Cumple los requisitos principales. Hay pequeños errores o aspectos mejorables, pero la evidencia es válida y defendible. |
-| 2 — Básico | Cumple parcialmente. Hay carencias importantes, pero se observa aprendizaje recuperable. Necesita revisión o mejora. |
-| 1 — Insuficiente | No cumple lo esencial, no funciona, falta evidencia o no puede defenderse. |
+| 4 — Excelente | Cumple con solidez lo esperado para el hito, puede comprobarse y explicarse con autonomía, y las decisiones están justificadas. |
+| 3 — Adecuado | Cumple lo esencial del hito y puede comprobarse y explicarse, aunque existan aspectos menores que mejorar. |
+| 2 — Básico | Demuestra parte del aprendizaje, pero existen carencias relevantes de funcionamiento, comprensión, comprobación o explicación que requieren mejora. |
+| 1 — Insuficiente | La evidencia disponible no permite demostrar suficientemente lo esencial de esa dimensión. |
 
-Uso recomendado:
+### Cómo utilizar la escala
 
-- La rúbrica explica la calidad esperada en las evidencias.
-- Programación y Entornos se califican por separado aunque compartan evidencias.
-- La defensa individual puede ajustar la validez de una evidencia grupal.
-- Si hay uso de IA no trazado, la evidencia puede quedar condicionada o invalidada.
+- Los niveles describen **calidad de la evidencia**, no porcentajes automáticos.
+- No todas las dimensiones tienen que aparecer con la misma intensidad en todos los hitos.
+- Una misma evidencia puede demostrar varios aprendizajes.
+- El trabajo de equipo no sustituye la comprensión individual: cada persona debe poder explicar y modificar lo que le corresponde.
+- Las pruebas se realizan sobre el producto real; no hace falta crear capturas, tablas o informes adicionales salvo que una actividad los necesite expresamente.
+- Si existe un uso significativo de IA, se aplica la política de trazabilidad de `05-politica-uso-ia-semaforo-registro-defensa.md` y `13-evidencias-ia-y-seguridad-digital.md`.
+- Si no existe un uso significativo de IA, no hay que crear una evidencia artificial para esa dimensión.
 
 ---
 
 ## 3. Dimensiones transversales
 
-Estas dimensiones pueden aparecer en todos los hitos, ajustadas al nivel.
+Estas dimensiones pueden utilizarse en distintos hitos, siempre adaptadas a los contenidos que ya se hayan trabajado.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
-| Funcionamiento técnico | El producto funciona, cubre casos previstos y se comporta de forma estable. | Funciona en lo principal con errores menores. | Funciona parcialmente o solo en casos simples. | No funciona o no puede ejecutarse. |
-| Ajuste al hito | El trabajo corresponde exactamente al nivel pedido y no introduce complejidad innecesaria. | Se ajusta al hito con alguna desviación menor. | Mezcla contenidos del hito con partes incompletas o prematuras. | No responde al hito planteado. |
-| Código limpio | Nombres claros, simplicidad, estructura legible, sin duplicación innecesaria. | Código comprensible con algunos aspectos mejorables. | Código difícil de seguir, con nombres pobres o duplicación. | Código confuso, copiado o no defendible. |
-| Documentación | README/portfolio/pruebas explican bien qué se ha hecho y cómo se ejecuta. | Documentación suficiente para entender la entrega. | Documentación incompleta o poco clara. | No hay documentación útil. |
-| Pruebas/verificación | Incluye pruebas, checklist o evidencias de comprobación coherentes. | Hay comprobación básica suficiente. | Comprobación superficial. | No se comprueba el funcionamiento. |
-| GitHub/trazabilidad | Historial, estructura y entregables permiten seguir el proceso. | Repositorio correcto con trazabilidad suficiente. | Repositorio desordenado o evidencias poco trazables. | No hay trazabilidad. |
-| IA responsable | Uso declarado, verificado y defendible; no hay riesgos de datos/secretos. | Uso declarado y razonablemente revisado. | Registro incompleto o comprensión parcial. | Uso oculto, no defendible o inseguro. |
-| Defensa oral | Explica decisiones, modifica o razona sobre el código/evidencia. | Explica lo principal con ayuda puntual. | Responde parcialmente o con inseguridad. | No puede explicar lo entregado. |
+| Producto y funcionamiento | El producto cumple lo pedido, se ejecuta de forma reproducible y su comportamiento esperado puede comprobarse. | Cumple lo esencial y funciona en los casos principales, con algún aspecto menor que mejorar. | Funciona parcialmente o presenta fallos relevantes, aunque permite observar parte del aprendizaje. | No hay un producto comprobable o la evidencia disponible no permite demostrar el funcionamiento esencial. |
+| Ajuste al hito | Utiliza los contenidos propios del momento y mantiene una solución simple y defendible. | Se ajusta al nivel con alguna ampliación menor que puede explicar. | Introduce elementos prematuros o deja sin resolver partes esenciales del hito. | La solución no responde al reto o depende de técnicas que no puede comprender o defender. |
+| Calidad del código | Código claro, nombres adecuados, estructura legible y decisiones sencillas y justificadas. | Código comprensible con aspectos menores de claridad u organización que mejorar. | Código difícil de seguir, con decisiones poco claras o inconsistentes. | El código disponible no permite comprender suficientemente la solución o no puede explicarse. |
+| Comprobación y mejora | Comprueba casos relevantes, interpreta los resultados, corrige errores y puede explicar alguna mejora realizada. | Realiza comprobaciones suficientes y corrige los problemas principales. | Las comprobaciones son escasas o poco sistemáticas y quedan errores importantes sin analizar. | No puede mostrar cómo se ha comprobado el comportamiento del producto. |
+| Documentación técnica | El README u otra documentación necesaria explica con claridad qué hace la versión, cómo ejecutarla y las limitaciones relevantes, sin duplicar evidencias. | La documentación permite comprender y ejecutar la versión con alguna carencia menor. | La documentación es incompleta, desactualizada o poco clara. | No existe información técnica suficiente para comprender o ejecutar la versión cuando es necesaria. |
+| Versión y trazabilidad | La versión evaluada es inequívoca, el historial es comprensible y las evidencias significativas se localizan en su fuente canónica. | La versión y las evidencias principales pueden localizarse con alguna dificultad menor. | Hay dudas sobre la versión, el historial o la ubicación de evidencias relevantes. | No puede identificarse con fiabilidad qué versión o qué evidencias corresponden al trabajo evaluado. |
+| Uso significativo de IA, si existe | El uso significativo está trazado en la fuente adecuada, ha sido revisado, comprobado y puede explicarse y modificarse; se respetan privacidad y seguridad. | La trazabilidad y verificación son suficientes, aunque podrían explicarse con mayor claridad. | La intervención de IA resulta difícil de reconstruir, comprobar o explicar y necesita aclaración o mejora. | No puede explicar o verificar una intervención significativa de IA, se oculta su influencia o se comprometen privacidad o secretos. |
+| Explicación y defensa individual | Explica decisiones y conceptos, localiza evidencias, razona sobre el comportamiento y realiza una modificación adecuada al nivel. | Explica lo esencial y puede realizar una modificación sencilla con ayuda puntual. | Comprende solo parte del producto o necesita mucha ayuda para relacionar código, comportamiento y decisiones. | No puede demostrar suficientemente la comprensión individual del trabajo presentado. |
+
+La rúbrica valora lo que puede **construirse, comprobarse, localizarse y explicarse**. No premia la acumulación de documentos ni la complejidad innecesaria.
 
 ---
 
@@ -65,15 +80,51 @@ No penalizar una necesidad de apoyo ni premiar saber programar de antemano. Si f
 
 ---
 
-## 5. H1 — Primer asistente básico
+## 5. H1 — Primer asistente por consola
+
+### Qué se evalúa en H1
+
+H1 debe producir una primera versión de MiniJarvis pequeña, ejecutable, comprobable y defendible.
+
+La referencia curricular principal es **RA1**:
+
+> Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.
+
+H1 también aporta evidencias iniciales de **RA2** mediante la escritura y prueba de un programa sencillo y el uso de objetos predefinidos como `Scanner`.
+
+No se valora adelantar contenidos de hitos posteriores. Un programa más complejo no es mejor si introduce técnicas que todavía no puedes explicar.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
-| Programa Java básico | Clase `Main` clara, entrada/salida correcta, variables y constantes bien usadas. | Programa ejecutable con entrada/salida y variables. | Programa muy incompleto o con errores menores. | No compila o no responde al hito. |
-| Ajuste al nivel | Mantiene la solución simple, sin menú ni complejidad prematura. | Alguna ampliación menor pero defendible. | Introduce código no trabajado que apenas entiende. | Entrega código avanzado no defendible o generado sin comprensión. |
-| IntelliJ y proyecto | Proyecto configurado, ejecutable y explicado. | Proyecto se abre y ejecuta con alguna ayuda. | Configuración confusa. | No puede ejecutarse en el entorno. |
-| README | Explica qué hace, cómo ejecutar y qué se entrega. | README suficiente. | README incompleto. | Sin README útil. |
-| Defensa | Explica `main`, variable, constante, `Scanner` y ejecución. | Explica lo principal. | Dudas importantes en conceptos básicos. | No puede explicar el código. |
+| Estructura y ejecución Java | Localiza y explica `Main.java`, la clase `Main`, `main` y la secuencia de instrucciones; el programa se ejecuta de forma reproducible. | El proyecto se ejecuta y reconoce correctamente sus elementos principales. | Hay errores o dudas relevantes sobre la estructura o la ejecución, aunque se reconoce parte del programa. | No puede mostrar suficientemente dónde comienza la ejecución ni cómo se organiza o ejecuta la versión presentada. |
+| Variables, constantes, literales y operadores | Utiliza nombres claros, tipos adecuados, al menos una constante y expresiones sencillas, y puede justificar cada elección. | Utiliza correctamente variables, constantes, literales y operadores necesarios para el programa. | Hay usos incorrectos o confusos, pero puede identificar parte de estos elementos. | No demuestra suficientemente que comprenda o utilice estos elementos básicos. |
+| Entrada con `Scanner` | Lee los datos necesarios de forma clara y puede explicar el objeto `Scanner`, qué información entra y dónde se almacena. | La entrada funciona y puede explicar su funcionamiento principal. | La lectura funciona solo parcialmente o existen dudas importantes sobre el dato leído y su almacenamiento. | No puede realizar o explicar suficientemente la entrada requerida. |
+| Conversión numérica y cálculo sencillo | Convierte una entrada textual a número, realiza un cálculo sencillo, muestra el resultado y explica cada paso y operador utilizado. | La conversión y el cálculo funcionan en el caso previsto y puede explicarlos. | La conversión o el cálculo presentan fallos relevantes, aunque existe evidencia parcial de comprensión. | No hay evidencia suficiente de la conversión numérica o del cálculo requerido. |
+| Ajuste al nivel de H1 | Mantiene una solución sencilla y completamente defendible sin adelantar menús, bucles, `switch`, colecciones, varias clases propias, ficheros, persistencia o IA real. | Se mantiene dentro del alcance de H1, con alguna ampliación menor que puede explicar. | Introduce técnicas prematuras que complican la solución o que comprende solo parcialmente. | La solución depende de contenidos no trabajados y no puede defenderse adecuadamente. |
+| Comprobación, errores y mejora | Construye de forma incremental, ejecuta tras cambios relevantes, comprueba resultados y puede explicar al menos un error o mejora real del proceso. | Realiza comprobaciones suficientes y corrige los errores principales. | Comprueba de forma irregular o tiene dificultades para explicar cómo detectó y corrigió problemas. | No puede mostrar cómo comprobó el programa ni cómo reaccionó ante errores básicos. |
+| README y versión evaluada | El README permite saber qué hace y cómo ejecutar H1; la versión evaluada se identifica claramente mediante el mecanismo indicado para la entrega. | README y versión evaluada son suficientes y localizables. | Falta información relevante en el README o existe alguna duda sobre la versión presentada. | No puede localizarse con claridad la versión evaluada o falta la información técnica mínima necesaria. |
+| Defensa individual | Explica `main`, variables, constante, literales, `Scanner`, conversión, cálculo y ejecución; puede predecir o realizar una modificación sencilla y comprobarla. | Explica los elementos esenciales y realiza una modificación sencilla con ayuda puntual. | Presenta dudas importantes o necesita mucha ayuda para relacionar el código con su comportamiento. | No puede demostrar suficientemente la comprensión individual del programa presentado. |
+
+### Evidencias que pueden utilizarse
+
+En H1 las evidencias habituales son:
+
+- el código de la versión real;
+- su ejecución y comprobación;
+- el README técnico;
+- el historial y la versión identificada mediante tag o commit, según corresponda;
+- la explicación y modificación durante la defensa;
+- Scrum o diario, incluida en ellos la trazabilidad de IA **solo cuando exista un uso significativo que conservar**.
+
+No necesitas crear para esta rúbrica un informe de pruebas, un documento de defensa, capturas rutinarias, un registro independiente de IA ni un portfolio específico de H1.
+
+### Idea clave de H1
+
+```text
+No se busca el programa más avanzado.
+Se busca un programa que puedas
+construir, comprobar, explicar y mejorar.
+```
 
 ---
 

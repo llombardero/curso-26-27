@@ -3,29 +3,204 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>H1 — Primer asistente básico</title>
+  <title>H1 — Primer asistente por consola</title>
   <link rel="stylesheet" href="../../estilos-minijarvis.css">
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
-<h1 id="h1--primer-asistente-básico">H1 — Primer asistente básico</h1>
-<h2 id="evidencia-que-debe-sobrevivir">Evidencia que debe
-sobrevivir</h2>
-<p>Código Java inicial, ejecución, pruebas y README; backlog/decisiones,
-diario significativo y defensa.</p>
-<h2 id="regla-común">Regla común</h2>
-<p>La ficha guía el aprendizaje; no hay un documento nuevo por sesión.
-Pruebas, decisiones e incidencias se integran en su fuente canónica. La
-comparación Java-Python se conserva como actividad y se registra en
-diario/portfolio cuando aporte valor. La defensa individual
-permanece.</p>
-<h2 id="hexa">HEXA</h2>
-<p>Activar se acredita con la reformulación del reto; Investigar con
-aprendizaje/prueba significativa; Idear con una decisión; Planificar con
-backlog/terminado; Ejecutar con producto, código, pruebas y README;
-Comunicar con demo, review, retrospectiva y defensa. Una evidencia puede
-cubrir varias fases.</p>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
+<h1 id="h1--primer-asistente-por-consola">H1 — Primer asistente por
+consola</h1>
+<h2 id="para-qué-sirve-esta-carpeta">Para qué sirve esta carpeta</h2>
+<p>Esta carpeta reúne los materiales del alumnado para H1.</p>
+<p>El reto consiste en construir la primera versión técnica de
+MiniJarvis: un programa Java pequeño, ejecutable por consola y
+suficientemente sencillo como para poder comprenderlo, comprobarlo,
+modificarlo y explicarlo.</p>
+<p>H1 establece también una forma de trabajo que se reutilizará en los
+siguientes hitos.</p>
+<hr />
+<h2 id="documentos-de-h1">Documentos de H1</h2>
+<h3
+id="13b-ficha-alumnado-h1-primer-asistentemd"><code>13B-ficha-alumnado-h1-primer-asistente.md</code></h3>
+<p>Es la guía principal del hito.</p>
+<p>Contiene:</p>
+<ul>
+<li>reto;</li>
+<li>alcance;</li>
+<li>ciclo HEXA;</li>
+<li>producto esperado;</li>
+<li>ruta técnica;</li>
+<li>criterios de aceptación;</li>
+<li>uso responsable de IA;</li>
+<li>defensa;</li>
+<li>checklist final.</li>
+</ul>
+<h3 id="entrega-digitalmd"><code>ENTREGA-DIGITAL.md</code></h3>
+<p>Indica qué debe quedar preparado para identificar y evaluar la
+versión final del hito.</p>
+<p>No sustituye a la ficha ni crea una segunda colección de
+evidencias.</p>
+<h3 id="este-readmemd">Este <code>README.md</code></h3>
+<p>Sirve para orientarte dentro de la carpeta y recordar dónde debe
+conservarse cada cosa.</p>
+<hr />
+<h2 id="producto-técnico">Producto técnico</h2>
+<p>La evidencia principal de H1 es el propio programa.</p>
+<p>Una estructura mínima es:</p>
+<pre class="text"><code>h1-primer-asistente/
+├── README.md
+└── src/
+    └── Main.java</code></pre>
+<p>El proyecto del alumnado debe permitir:</p>
+<pre class="text"><code>abrir
+  ↓
+ejecutar
+  ↓
+observar
+  ↓
+comprobar
+  ↓
+modificar
+  ↓
+volver a ejecutar
+  ↓
+explicar</code></pre>
+<p>No es necesario demostrar el funcionamiento mediante capturas
+rutinarias si puede reproducirse ejecutando el programa.</p>
+<blockquote>
+<p>El README del proyecto del alumnado no es este archivo. Este archivo
+pertenece a los materiales del curso; cada proyecto H1 tendrá su propio
+README técnico.</p>
+</blockquote>
+<hr />
+<h2 id="fuentes-canónicas">Fuentes canónicas</h2>
+<p>Cada evidencia se conserva donde tiene más sentido.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Qué necesitas conservar</th>
+<th>Dónde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Código y versiones</td>
+<td>Repositorio</td>
+</tr>
+<tr class="even">
+<td>Cómo ejecutar, límites y decisiones técnicas necesarias</td>
+<td>README del proyecto</td>
+</tr>
+<tr class="odd">
+<td>Tareas, decisiones, bloqueos, review y retrospectiva del equipo</td>
+<td>Scrum</td>
+</tr>
+<tr class="even">
+<td>Aprendizaje individual realmente significativo</td>
+<td>Diario individual</td>
+</tr>
+<tr class="odd">
+<td>Uso significativo de IA</td>
+<td>Diario o Scrum, según corresponda</td>
+</tr>
+<tr class="even">
+<td>Evidencia excepcional que no tenga una fuente natural</td>
+<td>Espacio no-code previsto</td>
+</tr>
+<tr class="odd">
+<td>Versión que debe evaluarse</td>
+<td>Mecanismo indicado en la entrega Moodle</td>
+</tr>
+</tbody>
+</table>
+<p>No copies la misma información en varios lugares sin necesidad.</p>
+<p>El Site personal no se actualiza por cada hito. Se utiliza para
+seleccionar evidencias en los cierres periódicos establecidos.</p>
+<hr />
+<h2 id="hexa-en-h1">HEXA en H1</h2>
+<p>H1 recorre un ciclo HEXA completo de seis fases.</p>
+<p><strong>Equipos es una dimensión transversal durante todo el
+hito</strong>, no una fase anterior o posterior a las demás.</p>
+<pre class="text"><code>Equipos — transversal durante todo H1
+
+Activar
+   ↓
+Investigar
+   ↓
+Idear
+   ↓
+Planificar
+   ↓
+Ejecutar
+   ↓
+Comunicar</code></pre>
+<h3 id="equipos--dimensión-transversal">Equipos — dimensión
+transversal</h3>
+<p>Durante todas las fases, el equipo organiza tareas, colaboración,
+decisiones y bloqueos cuando sean significativos.</p>
+<h3 id="activar">Activar</h3>
+<p>Comprender el reto y delimitar qué entra y qué no entra en H1.</p>
+<h3 id="investigar">Investigar</h3>
+<p>Aprender los conceptos necesarios para poder construirlo.</p>
+<h3 id="idear">Idear</h3>
+<p>Decidir cómo será la primera versión.</p>
+<h3 id="planificar">Planificar</h3>
+<p>Convertir la solución en tareas manejables dentro de Scrum.</p>
+<h3 id="ejecutar">Ejecutar</h3>
+<p>Construir, ejecutar, comprobar, corregir y mejorar.</p>
+<h3 id="comunicar">Comunicar</h3>
+<p>Mostrar el producto y explicar decisiones, código y aprendizaje.</p>
+<p>Una misma evidencia puede servir para varias fases.</p>
+<p><strong>HEXA no significa crear un documento por fase ni otro
+documento para Equipos.</strong></p>
+<hr />
+<h2 id="qué-debe-sobrevivir-al-terminar-h1">Qué debe sobrevivir al
+terminar H1</h2>
+<p>Al cerrar el hito deben poder localizarse:</p>
+<ul>
+<li>una versión identificable del código;</li>
+<li>un programa que pueda ejecutarse;</li>
+<li>un README técnico suficiente;</li>
+<li>las tareas y decisiones significativas del equipo;</li>
+<li>los aprendizajes individuales significativos, si los hubo;</li>
+<li>la trazabilidad de IA significativa, si existió;</li>
+<li>la posibilidad de realizar una demo y una defensa sobre el producto
+real.</li>
+</ul>
+<hr />
+<h2 id="qué-no-necesitas-crear">Qué no necesitas crear</h2>
+<p>H1 no requiere de forma rutinaria:</p>
+<ul>
+<li>un documento por sesión;</li>
+<li>un informe de ejecución;</li>
+<li>capturas de cada prueba;</li>
+<li>una tabla independiente de pruebas;</li>
+<li>un informe de errores;</li>
+<li>un documento para la defensa;</li>
+<li>un registro independiente de IA;</li>
+<li>un portfolio específico de H1;</li>
+<li>copias del código o del README en Drive;</li>
+<li>versiones PDF del README.</li>
+</ul>
+<p>Si algo ya existe en su fuente canónica, se enlaza o se comprueba
+allí.</p>
+<hr />
+<h2 id="orden-recomendado">Orden recomendado</h2>
+<p>Para trabajar H1:</p>
+<pre class="text"><code>1. Consulta la ficha 13B.
+2. Sigue las sesiones S206-S215.
+3. Utiliza los capítulos 01 y 02 del libro cuando necesites estudiar conceptos.
+4. Construye y comprueba MiniJarvis progresivamente.
+5. Mantén Scrum y el README solo cuando haya algo significativo que conservar.
+6. Revisa ENTREGA-DIGITAL al preparar el cierre.
+7. Ejecuta y defiende la versión real.</code></pre>
+<hr />
+<h2 id="idea-clave">Idea clave</h2>
+<pre class="text"><code>El equipo construye.
+Cada persona demuestra.
+La evidencia se conserva una sola vez
+en el lugar donde realmente pertenece.</code></pre>
 
   </main>
 </body>

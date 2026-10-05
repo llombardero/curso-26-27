@@ -8,116 +8,460 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="capítulo-01--primeros-programas-en-java">Capítulo 01 — Primeros
 programas en Java</h1>
-<h2 id="hitos-relacionados">Hitos relacionados</h2>
-<pre class="text"><code>H1</code></pre>
-<h2 id="qué-aprenderás">Qué aprenderás</h2>
+<h2 id="correspondencia">Correspondencia</h2>
+<pre class="text"><code>Tema 1 — Aspectos básicos de la programación
+RA1
+H1 — Primer asistente por consola</code></pre>
+<p>Este capítulo prepara las primeras sesiones técnicas de H1: crear y
+ejecutar el proyecto, reconocer la estructura mínima de un programa Java
+y producir las primeras salidas por consola.</p>
+<h2 id="1-qué-vas-a-aprender">1. Qué vas a aprender</h2>
+<p>Al terminar este capítulo podrás:</p>
 <ul>
-<li>estructura mínima de un programa Java</li>
-<li>clase Main</li>
-<li>método main</li>
-<li>compilación y ejecución</li>
-<li>primeros mensajes por consola</li>
+<li>explicar qué significa programar mediante una secuencia de
+instrucciones;</li>
+<li>reconocer los elementos básicos de un programa Java sencillo;</li>
+<li>localizar la clase <code>Main</code> y el método
+<code>main</code>;</li>
+<li>identificar dónde comienza la ejecución;</li>
+<li>distinguir código fuente, compilación y ejecución;</li>
+<li>escribir y modificar mensajes sencillos por consola;</li>
+<li>reconocer algunos elementos básicos de la sintaxis de Java;</li>
+<li>interpretar errores iniciales de compilación y realizar una
+corrección pequeña;</li>
+<li>utilizar el entorno de trabajo para editar, ejecutar y comprobar un
+programa;</li>
+<li>explicar qué puede hacer MiniJarvis en H1 y qué capacidades todavía
+no forman parte de esta versión.</li>
 </ul>
-<h2 id="1-punto-de-partida">1. Punto de partida</h2>
-<p>MiniJarvis se construye por capas. Este capítulo trabaja una pieza
-concreta del proyecto y la conecta con evidencias reales: código,
-pruebas, documentación, defensa y uso responsable de IA si procede.</p>
-<p>La regla de estudio es siempre la misma:</p>
-<pre class="text"><code>Lee el concepto, ejecuta un ejemplo pequeño, aplícalo a MiniJarvis, documenta la evidencia y prepárate para defenderlo.</code></pre>
-<h2 id="2-conceptos-básicos-explicados">2. Conceptos básicos
-explicados</h2>
-<p>Un programa Java básico necesita una clase. Para empezar usaremos una
-clase llamada <code>Main</code>. Dentro aparece el método
-<code>main</code>, que es el punto de entrada: por ahí comienza la
-ejecución.</p>
-<p>Compilar significa convertir el código fuente <code>.java</code> en
-bytecode <code>.class</code>. Ejecutar significa pedir a Java que
-arranque el programa. En este nivel debes entender el ciclo mínimo:
-escribir, compilar, ejecutar, observar, corregir.</p>
-<p>La consola será nuestra primera interfaz. MiniJarvis todavía no será
-inteligente: primero debe hablar de forma simple y predecible.</p>
-<h2 id="3-ejemplo-guiado-en-java">3. Ejemplo guiado en Java</h2>
+<h2 id="2-dónde-encaja">2. Dónde encaja</h2>
+<p>H0 ha servido para preparar la forma de trabajar.</p>
+<p>Ahora empieza la construcción técnica de MiniJarvis.</p>
+<p>En H1 no vamos a crear todavía un agente avanzado. El primer objetivo
+es mucho más pequeño:</p>
+<pre class="text"><code>crear
+  ↓
+ejecutar
+  ↓
+observar
+  ↓
+modificar
+  ↓
+volver a ejecutar
+  ↓
+explicar</code></pre>
+<p>Antes de añadir decisiones, memoria, clases, herramientas o una IA
+real necesitamos dominar este recorrido.</p>
+<p>Una versión pequeña que entiendes por completo es más útil para
+aprender que una versión compleja que no puedes explicar.</p>
+<h2 id="3-conceptos-fundamentales">3. Conceptos fundamentales</h2>
+<h3 id="31-qué-es-un-programa">3.1. ¿Qué es un programa?</h3>
+<p>En este nivel podemos pensar en un programa como un conjunto ordenado
+de instrucciones que el ordenador ejecutará.</p>
+<p>Por ejemplo:</p>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Estoy aprendiendo a funcionar por consola.&quot;</span><span class="op">);</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h2 id="4-caso-práctico-minijarvis">4. Caso práctico MiniJarvis</h2>
-<p>Crea <code>src/Main.java</code>. Haz que MiniJarvis muestre tres
-mensajes: saludo, nombre del proyecto y una frase sobre qué podrá hacer
-más adelante.</p>
-<p>Después compila y ejecuta:</p>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">javac</span> src/Main.java</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-cp</span> src Main</span></code></pre></div>
-<p>Guarda en tu portfolio qué comando has usado y qué salida
-esperabas.</p>
-<h2 id="5-evidencia-de-entornos-de-desarrollo">5. Evidencia de Entornos
-de Desarrollo</h2>
-<p>Documento mínimo: <code>README</code> con dos apartados: “Cómo
-compilar” y “Cómo ejecutar”. Añade una captura o copia de salida de
-consola. Si hay error, anota el mensaje exacto.</p>
-<h2 id="6-errores-frecuentes-y-cómo-corregirlos">6. Errores frecuentes y
-cómo corregirlos</h2>
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola.&quot;</span><span class="op">);</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Soy MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Este es mi primer paso.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Las instrucciones se ejecutan en el orden en que aparecen.</p>
+<p>Antes de ejecutar el ejemplo, intenta predecir:</p>
+<pre class="text"><code>¿Qué línea aparecerá primero?
+¿Qué línea aparecerá después?
+¿Qué cambiaría si intercambiamos dos instrucciones?</code></pre>
+<p>Modificar el orden es una forma sencilla de comprobar que el programa
+sigue una secuencia.</p>
+<h3 id="32-el-archivo-fuente">3.2. El archivo fuente</h3>
+<p>El código que escribimos se guarda en un archivo con extensión
+<code>.java</code>.</p>
+<p>En nuestro primer programa utilizaremos:</p>
+<pre class="text"><code>Main.java</code></pre>
+<p>Si declaramos una clase pública llamada <code>Main</code>, el nombre
+del archivo debe corresponder con el de la clase.</p>
+<h3 id="33-la-clase-main">3.3. La clase <code>Main</code></h3>
+<p>Observa:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>En esta primera etapa no necesitas dominar todavía todos los
+conceptos de programación orientada a objetos que hay detrás de una
+clase.</p>
+<p>Sí debes reconocer:</p>
+<ul>
+<li>dónde empieza la clase;</li>
+<li>dónde termina;</li>
+<li>su nombre;</li>
+<li>qué código queda dentro de sus llaves.</li>
+</ul>
+<p>Las clases y los objetos se estudiarán con mayor profundidad cuando
+corresponda.</p>
+<h3 id="34-el-método-main">3.4. El método <code>main</code></h3>
+<p>Nuestro programa necesita un punto por el que comenzar.</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Cuando ejecutes este programa, debes poder señalar en el código dónde
+comienza su ejecución.</p>
+<p>Por ahora no necesitas memorizar por separado el significado completo
+de <code>public</code>, <code>static</code>, <code>void</code> y
+<code>String[] args</code>.</p>
+<p>Sí necesitas reconocer correctamente la estructura y poder escribirla
+y utilizarla.</p>
+<p>Más adelante entenderemos mejor los elementos que ahora aparecen
+juntos.</p>
+<h3 id="35-la-estructura-mínima">3.5. La estructura mínima</h3>
+<p>Juntando las dos piezas:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Podemos verlo como cajas contenidas unas dentro de otras:</p>
+<pre class="text"><code>clase Main
+└── método main
+    └── instrucciones</code></pre>
+<p>Las llaves <code>{</code> y <code>}</code> permiten reconocer esos
+bloques.</p>
+<h3 id="36-una-primera-instrucción">3.6. Una primera instrucción</h3>
+<p>Añadamos una salida por consola:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>La instrucción:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>muestra un mensaje y después continúa con la siguiente
+instrucción.</p>
+<p>No necesitas estudiar todavía todos los elementos de
+<code>System.out.println</code>. En este capítulo debes aprender a
+utilizarlo correctamente y reconocer qué texto se mostrará.</p>
+<h3 id="37-algunos-signos-importan">3.7. Algunos signos importan</h3>
+<p>Java tiene una sintaxis que debemos respetar.</p>
+<p>En los primeros programas presta atención especialmente a:</p>
+<ul>
+<li>mayúsculas y minúsculas;</li>
+<li>llaves <code>{ }</code>;</li>
+<li>paréntesis <code>( )</code>;</li>
+<li>comillas <code>" "</code>;</li>
+<li>punto y coma <code>;</code>.</li>
+</ul>
+<p>No significan lo mismo:</p>
+<pre class="text"><code>Main
+main</code></pre>
+<p>ni tampoco:</p>
+<pre class="text"><code>System
+system</code></pre>
+<p>Cuando Java detecta que el código no respeta su sintaxis, la
+compilación puede fallar.</p>
+<h3 id="38-comentarios-útiles">3.8. Comentarios útiles</h3>
+<p>Un comentario permite escribir información para quien lee el código
+sin convertirla en una instrucción del programa.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Presentación inicial de MiniJarvis</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Un comentario debe ayudar a comprender algo.</p>
+<p>Evita comentarios que solo repitan exactamente lo que ya se ve:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Imprime Hola</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>A medida que mejoremos los nombres y la estructura del código, muchas
+líneas necesitarán poca explicación adicional.</p>
+<h2 id="4-java-paso-a-paso">4. Java paso a paso</h2>
+<h3 id="paso-1-programa-mínimo">Paso 1. Programa mínimo</h3>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis empieza.&quot;</span><span class="op">);</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Antes de ejecutarlo, comprueba:</p>
+<ul>
+<li>archivo <code>Main.java</code>;</li>
+<li>clase <code>Main</code>;</li>
+<li>método <code>main</code>;</li>
+<li>una instrucción;</li>
+<li>llaves equilibradas;</li>
+<li>punto y coma.</li>
+</ul>
+<p>Después ejecútalo.</p>
+<h3 id="paso-2-añadir-instrucciones">Paso 2. Añadir instrucciones</h3>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola.&quot;</span><span class="op">);</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Soy MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Todavía estoy aprendiendo.&quot;</span><span class="op">);</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Predice la salida antes de ejecutar.</p>
+<p>Después cambia el orden de dos instrucciones y vuelve a
+comprobarlo.</p>
+<h3 id="paso-3-modificar-sin-ampliar-el-nivel">Paso 3. Modificar sin
+ampliar el nivel</h3>
+<p>Cambia únicamente los textos:</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Bienvenido a MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Esta es mi primera versión.&quot;</span><span class="op">);</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Por ahora solo puedo mostrar mensajes.&quot;</span><span class="op">);</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>El programa ha cambiado, pero todavía utiliza los mismos
+conceptos.</p>
+<p>Eso es importante: mejorar un producto no siempre significa añadir
+una técnica nueva.</p>
+<h3 id="paso-4-provocar-un-error-controlado">Paso 4. Provocar un error
+controlado</h3>
+<p>Observa esta línea:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">)</span></span></code></pre></div>
+<p>Compárala con:</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, soy MiniJarvis.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Antes de utilizar la ayuda del entorno, intenta localizar la
+diferencia.</p>
+<p>Después corrige el programa y vuelve a ejecutarlo.</p>
+<p>El objetivo no es coleccionar errores, sino aprender a:</p>
+<pre class="text"><code>observar → localizar → corregir → volver a comprobar</code></pre>
+<h2 id="5-compilar-y-ejecutar">5. Compilar y ejecutar</h2>
+<p>Escribir código y ejecutarlo no son la misma acción.</p>
+<p>El recorrido básico es:</p>
+<pre class="text"><code>Main.java
+   ↓
+compilación
+   ↓
+programa preparado para ejecutarse
+   ↓
+ejecución
+   ↓
+salida observable</code></pre>
+<p>Durante el curso utilizarás el entorno de desarrollo para editar y
+ejecutar el proyecto.</p>
+<p>También puedes reconocer el proceso mediante los comandos:</p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">javac</span> src/Main.java</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-cp</span> src Main</span></code></pre></div>
+<p>Lo importante no es memorizar comandos sin comprenderlos, sino
+distinguir las dos acciones:</p>
+<p><strong>Compilar</strong> comprueba y prepara el código.</p>
+<p><strong>Ejecutar</strong> pone en marcha el programa que ha podido
+compilarse.</p>
+<p>Si modificas el código fuente, el programa debe volver a pasar por
+ese proceso para que el cambio llegue a la ejecución
+correspondiente.</p>
+<h2 id="6-llévalo-a-minijarvis">6. Llévalo a MiniJarvis</h2>
+<p>Construye una primera presentación por consola.</p>
+<p>La versión debe mantenerse deliberadamente pequeña.</p>
+<p>Por ejemplo, puede mostrar:</p>
+<ol type="1">
+<li>un saludo;</li>
+<li>el nombre MiniJarvis;</li>
+<li>una frase que explique que está comenzando;</li>
+<li>una capacidad que tendrá más adelante, sin implementarla
+todavía.</li>
+</ol>
+<p>Un posible resultado observable sería:</p>
+<pre class="text"><code>Hola.
+Soy MiniJarvis.
+Esta es mi primera versión.
+Más adelante aprenderé a interactuar contigo.</code></pre>
+<p>No necesitas todavía:</p>
+<ul>
+<li>menú;</li>
+<li>bucles;</li>
+<li>memoria;</li>
+<li>varias clases propias;</li>
+<li>conexión a servicios externos;</li>
+<li>una IA real.</li>
+</ul>
+<p>Esas capacidades llegarán cuando hayamos aprendido los conceptos
+necesarios.</p>
+<h2 id="7-comprueba-que-funciona">7. Comprueba que funciona</h2>
+<p>No basta con afirmar «funciona».</p>
+<p>Realiza estas comprobaciones sobre tu programa:</p>
+<ol type="1">
+<li>ejecútalo;</li>
+<li>comprueba que aparecen todos los mensajes;</li>
+<li>comprueba que aparecen en el orden previsto;</li>
+<li>modifica uno de ellos;</li>
+<li>vuelve a ejecutar;</li>
+<li>verifica que aparece el nuevo resultado;</li>
+<li>introduce voluntariamente un error sencillo;</li>
+<li>localízalo, corrígelo y vuelve a ejecutar.</li>
+</ol>
+<p>No necesitas hacer una captura rutinaria de cada ejecución.</p>
+<p>La propia ejecución reproducible permite comprobar el
+comportamiento.</p>
+<h2 id="8-errores-frecuentes-y-depuración-inicial">8. Errores frecuentes
+y depuración inicial</h2>
 <table>
 <thead>
 <tr class="header">
-<th>Error</th>
-<th>Síntoma</th>
-<th>Corrección</th>
+<th>Problema</th>
+<th>Qué puedes observar</th>
+<th>Qué revisar</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Nombre de archivo incorrecto</td>
-<td>Main.java no coincide con public class Main</td>
-<td>Alinear nombre de archivo y clase</td>
+<td>El archivo y la clase no tienen el mismo nombre</td>
+<td>El proyecto no compila correctamente</td>
+<td><code>Main.java</code> y <code>public class Main</code></td>
 </tr>
 <tr class="even">
-<td>Falta punto y coma</td>
-<td>Error de compilación</td>
-<td>Revisar final de cada instrucción</td>
+<td>Falta un <code>;</code></td>
+<td>Aparece un error de compilación</td>
+<td>Final de la instrucción</td>
 </tr>
 <tr class="odd">
-<td>Ejecutar desde carpeta equivocada</td>
-<td>No encuentra la clase</td>
-<td>Usar <code>java -cp src Main</code></td>
+<td>Falta una comilla</td>
+<td>Java interpreta mal el texto siguiente</td>
+<td>Inicio y final del mensaje</td>
+</tr>
+<tr class="even">
+<td>Falta una llave</td>
+<td>La estructura del programa queda incompleta</td>
+<td>Apertura y cierre de los bloques</td>
+</tr>
+<tr class="odd">
+<td>Se cambia una mayúscula</td>
+<td>Java no reconoce el nombre esperado</td>
+<td>Escritura exacta del identificador</td>
+</tr>
+<tr class="even">
+<td>La salida no corresponde al último cambio</td>
+<td>Ves una versión anterior o distinta de la esperada</td>
+<td>Guardar, compilar y ejecutar de nuevo</td>
+</tr>
+<tr class="odd">
+<td>Se cambian muchas cosas a la vez</td>
+<td>Es difícil descubrir qué provocó el problema</td>
+<td>Hacer cambios pequeños y probar</td>
 </tr>
 </tbody>
 </table>
-<h2 id="7-preguntas-de-repaso">7. Preguntas de repaso</h2>
+<p>Cuando encuentres un error, intenta evitar el impulso de cambiar
+varias líneas a la vez.</p>
+<p>Una estrategia inicial útil es:</p>
+<pre class="text"><code>¿Qué esperaba?
+      ↓
+¿Qué ha ocurrido?
+      ↓
+¿Qué línea puede explicarlo?
+      ↓
+Cambio una cosa
+      ↓
+Vuelvo a ejecutar</code></pre>
+<h2 id="9-practica-y-razona">9. Practica y razona</h2>
+<h3 id="actividad-a--predice">Actividad A — Predice</h3>
+<p>Sin ejecutar todavía:</p>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Uno&quot;</span><span class="op">);</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Dos&quot;</span><span class="op">);</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Tres&quot;</span><span class="op">);</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Predice la salida.</p>
+<p>Después ejecútalo y compárala con tu predicción.</p>
+<h3 id="actividad-b--reordena">Actividad B — Reordena</h3>
+<p>Haz que aparezca:</p>
+<pre class="text"><code>MiniJarvis
+empieza
+ahora</code></pre>
+<p>utilizando tres instrucciones.</p>
+<p>Después cambia únicamente el orden para obtener:</p>
+<pre class="text"><code>Ahora
+empieza
+MiniJarvis</code></pre>
+<p>Explica qué has cambiado y qué se ha mantenido igual.</p>
+<h3 id="actividad-c--encuentra-el-error">Actividad C — Encuentra el
+error</h3>
+<p>Localiza los problemas antes de ejecutar:</p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> main <span class="op">{</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola)</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Soy MiniJarvis&quot;</span><span class="op">);</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>No pruebes cambios al azar.</p>
+<p>Señala primero qué elementos de la sintaxis revisarías.</p>
+<h3 id="actividad-d--explica-el-código">Actividad D — Explica el
+código</h3>
+<p>Sobre tu propia versión, señala:</p>
+<ul>
+<li>el archivo fuente;</li>
+<li>la clase;</li>
+<li>el método por el que comienza la ejecución;</li>
+<li>las instrucciones;</li>
+<li>los bloques delimitados por llaves;</li>
+<li>los mensajes que llegarán a la consola.</li>
+</ul>
+<h2 id="10-comprueba-lo-aprendido">10. Comprueba lo aprendido</h2>
+<p>Intenta responder sin copiar definiciones:</p>
 <ol type="1">
-<li>¿Qué hace el método main?</li>
-<li>¿Qué diferencia hay entre compilar y ejecutar?</li>
-<li>¿Por qué usamos consola al principio?</li>
-<li>¿Qué evidencia demuestra que tu programa funciona?</li>
+<li>¿Dónde comienza la ejecución de este programa?</li>
+<li>¿Qué diferencia hay entre <code>Main</code> y <code>main</code> en
+nuestro ejemplo?</li>
+<li>¿Qué función cumplen las llaves?</li>
+<li>¿Por qué importa el punto y coma?</li>
+<li>¿Qué diferencia hay entre escribir código, compilarlo y
+ejecutarlo?</li>
+<li>¿Qué ocurrirá si intercambias dos instrucciones
+<code>println</code>?</li>
+<li>¿Por qué conviene cambiar una sola cosa cuando estás buscando un
+error?</li>
+<li>Señala en tu programa una instrucción y explica qué resultado
+observable produce.</li>
+<li>¿Qué capacidades tiene ya MiniJarvis?</li>
+<li>¿Qué capacidades hemos decidido no añadir todavía?</li>
 </ol>
-<h2 id="8-para-tu-portfolio">8. Para tu portfolio</h2>
-<p>Copia y completa este bloque en tu portfolio:</p>
-<pre class="text"><code>Capítulo 01: Primeros programas en Java
-Qué he aprendido:
-Código o documento que lo demuestra:
-Prueba realizada:
-Error que he corregido:
-Qué puedo defender oralmente:
-Uso de IA, si lo hubo, y cómo lo validé:</code></pre>
-<h2 id="9-estudio-paso-a-paso">9. Estudio paso a paso</h2>
-<p>Antes de avanzar, asegúrate de que puedes explicar el recorrido
-completo de un programa sencillo. Primero escribes el archivo
-<code>Main.java</code>. Después compilas con <code>javac</code>. Si hay
-errores, Java te indica una línea aproximada y un mensaje. No copies el
-mensaje sin leerlo: busca si falta una llave, un punto y coma o si el
-nombre de la clase no coincide. Cuando compila, ejecutas con
-<code>java -cp src Main</code>.</p>
-<p>Caso de estudio: cambia el mensaje de bienvenida tres veces y
-recompila cada vez. Comprueba que la salida cambia solo cuando vuelves a
-compilar. Esto te ayuda a entender la diferencia entre código fuente y
-programa compilado.</p>
+<p>Para la microdefensa debes poder abrir tu programa, localizar estas
+partes y modificar un mensaje sin depender de una respuesta
+memorizada.</p>
+<h2 id="11-si-vas-más-rápido">11. Si vas más rápido</h2>
+<p>Estas actividades amplían la práctica sin adelantar contenidos que
+todavía no corresponden:</p>
+<ul>
+<li>añade más mensajes manteniendo el programa simple;</li>
+<li>reorganiza los mensajes y predice la salida antes de
+ejecutarlos;</li>
+<li>introduce y corrige distintos errores de sintaxis de uno en
+uno;</li>
+<li>mejora comentarios poco útiles;</li>
+<li>compara dos versiones y explica exactamente qué ha cambiado;</li>
+<li>intenta reconstruir de memoria la estructura mínima y después
+compárala con una versión que funcione.</li>
+</ul>
+<p>No avances todavía hacia menús, bucles o estructuras complejas solo
+por terminar antes.</p>
+<h2 id="12-qué-conservar">12. Qué conservar</h2>
+<p>La evidencia técnica principal es el propio programa ejecutable.</p>
+<p>Cuando corresponda al cierre de H1, el README explicará cómo ejecutar
+la versión del proyecto.</p>
+<p>No necesitas:</p>
+<ul>
+<li>una captura rutinaria de la consola;</li>
+<li>un informe independiente de esta práctica;</li>
+<li>una ficha de errores;</li>
+<li>un portfolio de este capítulo.</li>
+</ul>
+<p>Si durante el trabajo has tenido un aprendizaje individual
+especialmente relevante, puedes reflejarlo brevemente en tu diario.</p>
+<p>Lo importante al terminar es que puedas ejecutar el programa,
+comprobar su resultado y explicar su estructura.</p>
 
   </main>
 </body>

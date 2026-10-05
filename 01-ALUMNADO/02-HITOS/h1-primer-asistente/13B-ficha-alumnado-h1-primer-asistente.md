@@ -1,135 +1,223 @@
-# H1 — Primer asistente básico
+# H1 — Primer asistente por consola
 
 ## Ficha para el alumnado
 
-Curso: 1.º DAW — Programación
+**Curso:** 1.º DAW — Programación
 
-Proyecto anual:
+**Proyecto anual:**
 
 ```text
-MiniJarvis: construcción progresiva de un pequeño agente IA propio
+MiniJarvis: programa Java progresivo que crecerá por hitos durante el curso
 ```
 
 ---
 
 ## 1. Reto
 
-Vas a crear la primera versión técnica de MiniJarvis.
+Vas a construir la primera versión técnica de MiniJarvis.
 
-Será un programa Java muy sencillo que se ejecuta por consola.
+Será un programa Java pequeño que se ejecutará por consola y que debes poder comprender completamente.
 
-El programa debe:
+Al terminar H1 debes ser capaz de:
 
-- mostrar un saludo inicial;
-- pedir tu nombre;
-- guardar tu nombre en una variable;
-- usar al menos una constante;
-- mostrar varios mensajes relacionados con el proyecto;
-- poder ejecutarse en IntelliJ;
-- tener un README básico.
+- localizar la estructura básica del programa;
+- explicar dónde comienza la ejecución;
+- mostrar mensajes por consola;
+- utilizar variables, constantes y literales;
+- recibir datos mediante `Scanner`;
+- convertir una entrada textual a un valor numérico;
+- realizar un cálculo sencillo;
+- ejecutar y comprobar el programa;
+- localizar y corregir errores básicos;
+- explicar cómo se ejecuta y qué hace.
+
+El objetivo no es crear un asistente avanzado.
+
+El objetivo es construir una primera versión **pequeña, ejecutable, comprobable y defendible**.
 
 ---
 
-## 2. Muy importante: qué NO entra todavía
+## 2. Qué NO entra todavía
 
-En H1 todavía NO debes incluir:
+En H1 todavía no debes incorporar:
 
 ```text
-[ ] Menú.
+[ ] Menús.
 [ ] Bucles.
 [ ] switch.
 [ ] Memoria.
-[ ] Listas o mapas.
-[ ] Clases propias adicionales.
+[ ] Listas, sets o mapas.
+[ ] Varias clases propias.
 [ ] Ficheros.
-[ ] Conexión con Gemini, Jarvis u otra IA real.
+[ ] Persistencia.
 [ ] Patrones de diseño.
+[ ] Conexiones con servicios externos.
+[ ] Gemini, Jarvis u otra IA real integrada en el programa.
 ```
 
-Esto se trabajará en hitos posteriores.
+Todo eso llegará cuando hayamos aprendido los conceptos necesarios.
 
-En H1 buscamos una versión pequeña, clara y defendible.
+No mejores MiniJarvis adelantando técnicas que todavía no puedes explicar.
 
 ---
 
-## 3. Producto esperado
+## 3. Resultado observable
 
-Ejemplo de ejecución orientativo:
+Tu programa debe realizar un diálogo sencillo.
+
+Por ejemplo:
 
 ```text
 Hola, soy MiniJarvis.
 ¿Cómo te llamas? Laura
-Encantada, Laura.
-Este curso vamos a crear un pequeño agente IA.
-Curso de inicio: 2026.
-Primer objetivo: aprender la estructura básica de un programa Java.
+Encantado de conocerte, Laura.
+¿Cuántas horas has practicado Programación? 4
+Si la próxima semana practicas una hora más, serán 5 horas.
 ```
 
-Tu salida puede tener otros mensajes, pero debe mantener el nivel básico del hito.
+La salida concreta puede ser diferente.
+
+Lo importante es que puedas explicar de dónde sale cada dato y cada mensaje.
+
+No necesitas todavía decidir si una cantidad es «buena» o «mala», repetir preguntas ni ejecutar acciones diferentes según la respuesta.
 
 ---
 
-## 4. Pasos de trabajo
+## 4. Cómo trabajaremos el hito
 
-### Paso 1 — Crear proyecto
+H1 recorre un ciclo HEXA completo.
 
-```text
-[ ] Crear un proyecto Java en IntelliJ.
-[ ] Crear la clase Main.
-[ ] Comprobar que el proyecto ejecuta.
-```
+### Equipos — Durante todo el hito
 
-### Paso 2 — Primer mensaje
+El equipo mantiene organizado el trabajo, las tareas y las decisiones significativas.
 
-```text
-[ ] Mostrar un saludo inicial con System.out.println.
-```
+Cada persona debe poder explicar y modificar el código aunque el producto sea compartido.
 
-### Paso 3 — Constantes y variables
+### Activar — Entender el reto
 
-```text
-[ ] Crear una constante para el nombre del asistente.
-[ ] Crear al menos otra constante sencilla si procede.
-[ ] Usar nombres claros.
-```
+Antes de programar debes tener claro:
 
-Ejemplos de nombres claros:
+- qué debe hacer esta primera versión;
+- qué no debe hacer todavía;
+- qué resultado podremos observar al ejecutarla.
+
+Pregunta clave:
 
 ```text
-ASSISTANT_NAME
-COURSE_YEAR
-userName
+¿Cuál es la versión más pequeña de MiniJarvis
+que podemos construir, comprobar y explicar?
 ```
 
-### Paso 4 — Entrada por teclado
+### Investigar — Aprender lo necesario
+
+Trabajaremos progresivamente:
+
+- proyecto Java;
+- `Main.java`;
+- clase `Main`;
+- método `main`;
+- instrucciones;
+- salida por consola;
+- variables;
+- tipos básicos;
+- constantes y literales;
+- operadores;
+- `Scanner`;
+- entrada por teclado;
+- conversión de texto a número;
+- errores iniciales de compilación y ejecución.
+
+No necesitas estudiar contenidos de hitos posteriores para completar H1.
+
+### Idear — Decidir tu primera versión
+
+Antes de escribir todo el programa, decide:
+
+- qué saludo mostrará;
+- qué datos preguntará;
+- qué nombres tendrán las variables;
+- qué dato será constante;
+- qué cálculo sencillo realizará;
+- qué mensajes formarán la salida.
+
+Mantén la solución pequeña.
+
+### Planificar — Organizar el trabajo
+
+Convierte lo anterior en tareas pequeñas.
+
+Por ejemplo:
 
 ```text
-[ ] Usar Scanner.
-[ ] Pedir el nombre de la persona usuaria.
-[ ] Guardar el nombre en una variable.
-[ ] Usar esa variable en un mensaje.
+Crear proyecto.
+        ↓
+Conseguir que Main se ejecute.
+        ↓
+Mostrar mensajes.
+        ↓
+Añadir variables y constantes.
+        ↓
+Leer datos.
+        ↓
+Convertir un dato numérico.
+        ↓
+Realizar un cálculo.
+        ↓
+Comprobar.
+        ↓
+Limpiar el código.
+        ↓
+Completar README.
+        ↓
+Preparar demo y defensa.
 ```
 
-### Paso 5 — Mensajes finales
+El equipo mantiene las tareas en su Scrum.
+
+No necesitas crear otro documento para repetir esta planificación.
+
+### Ejecutar — Construir y comprobar
+
+Implementa el programa de forma incremental.
+
+No escribas todo antes de ejecutarlo.
+
+Utiliza este ciclo:
 
 ```text
-[ ] Mostrar varios mensajes sobre el proyecto MiniJarvis.
-[ ] Comprobar que todo se entiende.
-[ ] Evitar añadir funciones que no son de H1.
+cambio pequeño
+     ↓
+ejecución
+     ↓
+observación
+     ↓
+corrección si hace falta
+     ↓
+siguiente cambio
 ```
 
-### Paso 6 — README
+### Comunicar — Demostrar lo aprendido
 
-```text
-[ ] Explicar qué hace el programa.
-[ ] Explicar cómo se ejecuta.
-[ ] Añadir ejemplo de ejecución.
-[ ] Indicar qué no incluye todavía.
-```
+Al cerrar H1 debes poder:
+
+- ejecutar MiniJarvis;
+- mostrar su funcionamiento;
+- localizar las partes principales del código;
+- explicar una variable y una constante;
+- explicar cómo entra la información;
+- explicar la conversión numérica;
+- modificar una parte sencilla;
+- explicar algún error que hayas encontrado y cómo lo resolviste.
+
+La defensa se realiza sobre el producto y sus evidencias reales.
+
+No necesitas crear un informe de defensa.
 
 ---
 
-## 5. Estructura mínima de entrega
+## 5. Producto esperado
+
+La versión H1 debe contener como mínimo:
 
 ```text
 h1-primer-asistente/
@@ -138,119 +226,303 @@ h1-primer-asistente/
     └── Main.java
 ```
 
-El README integra ejecución, pruebas y límites. El diario recoge solo aprendizaje individual significativo; Scrum conserva backlog, decisiones, review y retrospectiva. La defensa comprueba autoría sin generar un informe paralelo.
+`Main.java` debe incluir una solución adecuada al nivel del hito con:
+
+- clase `Main`;
+- método `main`;
+- mensajes por consola;
+- nombres claros;
+- al menos una variable de texto;
+- al menos una constante;
+- uso de `Scanner`;
+- entrada de texto;
+- entrada que pueda convertirse a número;
+- una conversión numérica;
+- un cálculo sencillo;
+- salida que muestre el resultado;
+- comentarios útiles cuando aporten contexto, evitando comentar lo obvio.
 
 ---
 
-## 6. README mínimo
+## 6. Ruta técnica
 
-Puedes usar esta estructura:
+### Paso 1 — Proyecto ejecutable
+
+```text
+[ ] Crear o abrir el proyecto Java.
+[ ] Localizar src/Main.java.
+[ ] Comprobar que Main se ejecuta.
+```
+
+### Paso 2 — Primera salida
+
+```text
+[ ] Mostrar un saludo.
+[ ] Mostrar varios mensajes en orden.
+[ ] Modificar uno y comprobar el cambio.
+```
+
+### Paso 3 — Variables y constantes
+
+```text
+[ ] Utilizar una variable con un nombre claro.
+[ ] Crear una constante para un dato que no debe cambiar.
+[ ] Reconocer los literales utilizados.
+```
+
+Ejemplos:
+
+```java
+final String AGENT_NAME = "MiniJarvis";
+String userName;
+```
+
+### Paso 4 — Entrada por teclado
+
+```text
+[ ] Crear un Scanner.
+[ ] Pedir el nombre.
+[ ] Guardarlo.
+[ ] Utilizarlo posteriormente en una salida.
+```
+
+### Paso 5 — Entrada numérica y cálculo
+
+```text
+[ ] Leer un número inicialmente como texto.
+[ ] Convertirlo a un tipo numérico.
+[ ] Realizar un cálculo sencillo.
+[ ] Mostrar el resultado.
+```
+
+No necesitas todavía tomar decisiones mediante `if`.
+
+### Paso 6 — Limpieza
+
+Revisa:
+
+```text
+[ ] Nombres claros.
+[ ] Indentación.
+[ ] Mensajes comprensibles.
+[ ] Comentarios útiles y no redundantes.
+[ ] Código que pertenece realmente a H1.
+```
+
+### Paso 7 — Comprobación
+
+Ejecuta la versión completa al menos con:
+
+```text
+un nombre
+otro nombre
+un número válido
+otro número válido
+una entrada no numérica para observar qué ocurre
+```
+
+En este momento no necesitas controlar todos los errores de entrada.
+
+Sí debes poder explicar qué ha ocurrido.
+
+---
+
+## 7. README del hito
+
+El README permite volver posteriormente al proyecto y saber qué versión es y cómo utilizarla.
+
+Debe contener únicamente información útil.
+
+Una estructura suficiente es:
 
 ```markdown
 # H1 — Primer asistente por consola
 
 ## Qué hace
 
-Este programa muestra un saludo, pide el nombre del usuario y muestra mensajes iniciales del proyecto MiniJarvis.
+Breve explicación de esta versión.
 
 ## Cómo ejecutar
 
-Desde IntelliJ:
+Pasos necesarios para ejecutar el programa.
 
-1. Abrir el proyecto.
-2. Abrir `src/Main.java`.
-3. Pulsar Run.
+## Comprobación
 
-## Ejemplo de ejecución
+Un ejemplo breve de entrada y salida que permita reconocer el funcionamiento.
 
-```text
-Hola, soy MiniJarvis.
-¿Cómo te llamas? Laura
-Encantada, Laura.
+## Límites de H1
+
+Qué funcionalidades todavía no incorpora.
 ```
 
-## Qué no incluye todavía
-
-No incluye menú, bucles, memoria ni IA real.
-```
+No necesitas añadir capturas de consola si el comportamiento puede reproducirse ejecutando el programa.
 
 ---
 
-## 7. Uso de IA en H1
+## 8. Criterios de aceptación
 
-Puedes usar IA para:
-
-- preguntar qué es una variable;
-- preguntar qué es una constante;
-- pedir explicación de `Scanner`;
-- entender un error;
-- revisar la claridad del README.
-
-No puedes usar IA para:
-
-- generar el programa completo y entregarlo sin entender;
-- añadir cosas que no pertenecen a H1;
-- ocultar que la has usado;
-- entregar código que no puedes explicar.
-
-Si usas IA de forma significativa para la entrega, deja una entrada en el diario o Scrum que permita explicar:
-
-```text
-Qué pediste.
-Qué aceptaste.
-Qué cambiaste tú.
-Cómo comprobaste que funcionaba.
-Qué aprendiste.
-```
-
----
-
-## 8. Preguntas de defensa
-
-Prepárate para responder:
-
-```text
-¿Dónde empieza el programa?
-¿Qué variable guarda el nombre?
-¿Qué constante has usado?
-¿Qué hace Scanner?
-¿Qué diferencia hay entre print y println?
-¿Cómo se ejecuta desde IntelliJ?
-¿Por qué todavía no hay menú?
-¿Has usado IA? ¿Para qué?
-```
-
----
-
-## 9. Checklist antes de entregar
+H1 está técnicamente preparado para su cierre cuando puedes demostrar que:
 
 ```text
 [ ] Existe src/Main.java.
-[ ] El programa se ejecuta.
-[ ] Hay una clase Main.
-[ ] Hay método main.
-[ ] El programa muestra un saludo.
-[ ] El programa pide el nombre.
-[ ] El nombre se guarda en una variable.
-[ ] Hay al menos una constante.
-[ ] Los nombres son claros.
-[ ] No hay menú, bucles, switch ni IA real.
-[ ] El README explica cómo ejecutar.
-[ ] Hay evidencia de ejecución.
-[ ] He registrado la IA si la he usado.
-[ ] Puedo explicar cada línea importante.
+[ ] La clase Main es reconocible.
+[ ] Existe el método main.
+[ ] El programa compila y se ejecuta.
+[ ] Muestra mensajes por consola.
+[ ] Recibe información mediante Scanner.
+[ ] Utiliza variables con nombres claros.
+[ ] Utiliza al menos una constante.
+[ ] Convierte una entrada textual a número.
+[ ] Realiza al menos un cálculo sencillo.
+[ ] El resultado puede comprobarse ejecutando el programa.
+[ ] El código se mantiene dentro del alcance de H1.
+[ ] El README explica qué hace y cómo se ejecuta.
+```
+
+Cumplir la lista no sustituye comprender el programa.
+
+---
+
+## 9. Uso de IA en H1
+
+La IA puede ayudarte a aprender, por ejemplo, para:
+
+- pedir una explicación de un concepto;
+- entender un mensaje de error;
+- comparar dos fragmentos;
+- revisar la claridad de una explicación;
+- formular preguntas sobre código que ya estás estudiando.
+
+No debes utilizarla para sustituir tu aprendizaje.
+
+No es válido:
+
+- generar el programa completo y entregarlo sin comprenderlo;
+- incorporar técnicas que todavía no has estudiado;
+- aceptar código sin probarlo;
+- presentar como propio algo que no puedes explicar o modificar.
+
+Si la IA ha tenido una **intervención significativa** en el producto evaluable, deja una anotación breve en la fuente correspondiente:
+
+- diario individual, si afecta principalmente a tu aprendizaje o trabajo;
+- Scrum, si forma parte de una decisión significativa del equipo.
+
+Debes poder explicar:
+
+```text
+qué necesitabas
+qué aportó la IA
+qué aceptaste, modificaste o descartaste
+cómo comprobaste el resultado
+```
+
+No necesitas registrar consultas triviales.
+
+Nunca introduzcas datos personales, contraseñas, tokens, claves API ni otros secretos.
+
+---
+
+## 10. Defensa
+
+La defensa se realiza sobre tu MiniJarvis.
+
+Prepárate para cuestiones como:
+
+```text
+¿Dónde empieza la ejecución?
+¿Qué representa Main?
+¿Qué hace esta instrucción?
+¿Qué variable almacena el nombre?
+¿Por qué este dato es una constante?
+¿Qué hace Scanner?
+¿Qué devuelve nextLine()?
+¿Por qué necesitas convertir este texto?
+¿Qué cálculo estás realizando?
+¿Qué ocurre si escribes texto donde esperabas un número?
+¿Cómo ejecutas esta versión?
+¿Por qué todavía no hay menú ni bucles?
+```
+
+También se te puede pedir una pequeña modificación.
+
+Por ejemplo:
+
+```text
+cambia un mensaje
+cambia el cálculo
+renombra una variable
+localiza una constante
+explica el resultado antes de ejecutar
+```
+
+La finalidad es comprobar comprensión y autoría, no memorizar respuestas.
+
+---
+
+## 11. Checklist final
+
+Antes de cerrar H1 comprueba:
+
+```text
+[ ] Puedo ejecutar la versión que voy a presentar.
+[ ] Puedo mostrar su resultado directamente.
+[ ] Puedo localizar Main y main.
+[ ] Puedo explicar mis variables.
+[ ] Puedo explicar mis constantes.
+[ ] Puedo explicar cómo entra la información.
+[ ] Puedo explicar la conversión numérica.
+[ ] Puedo explicar el cálculo.
+[ ] Puedo modificar una parte sencilla.
+[ ] No he adelantado contenidos de otros hitos.
+[ ] El README permite saber qué hace y cómo ejecutar esta versión.
+[ ] Si la IA tuvo una intervención significativa, está reflejada en diario o Scrum.
+[ ] Puedo explicar el código importante sin depender de una respuesta generada.
 ```
 
 ---
 
-## 10. Idea clave
+## 12. Qué conservar
 
-En H1 no buscamos un agente avanzado.
+La fuente principal de la evidencia técnica es el propio proyecto.
 
-Buscamos una primera versión pequeña que puedas entender completamente.
+Conserva:
 
-Frase clave:
+- código y versiones en el repositorio;
+- instrucciones de ejecución, límites y decisiones técnicas necesarias en el README;
+- tareas, decisiones y bloqueos significativos de equipo en Scrum;
+- aprendizajes individuales significativos en el diario.
+
+No necesitas crear para H1:
+
+- un informe de ejecución;
+- capturas rutinarias;
+- una tabla independiente de pruebas;
+- un documento de defensa;
+- un registro independiente de IA;
+- un portfolio específico del hito.
+
+La versión evaluada se identificará mediante el mecanismo de entrega indicado para el hito.
+
+---
+
+## 13. Idea clave
+
+H1 no pretende impresionar por su complejidad.
+
+Pretende establecer una forma de trabajar que repetiremos durante el curso:
 
 ```text
-Si puedo ejecutarlo, explicarlo y defenderlo, voy por buen camino.
+comprender
+    ↓
+construir
+    ↓
+ejecutar
+    ↓
+comprobar
+    ↓
+explicar
+    ↓
+mejorar
 ```
+
+Una primera versión pequeña que puedes ejecutar, modificar y explicar es la base sobre la que crecerá MiniJarvis.

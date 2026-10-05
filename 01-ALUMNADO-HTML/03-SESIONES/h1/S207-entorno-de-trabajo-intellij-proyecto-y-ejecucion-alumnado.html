@@ -8,7 +8,7 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">Inicio alumnado</nav>
+    <nav class="topbar"><a href="../../LEEME-ALUMNADO.html">Inicio alumnado</a></nav>
 <h1 id="sesión-207--ficha-de-trabajo-del-alumnado">Sesión 207 — Ficha de
 trabajo del alumnado</h1>
 <h2 id="entorno-de-trabajo-intellij-proyecto-y-ejecución">Entorno de
@@ -17,67 +17,199 @@ trabajo: IntelliJ, proyecto y ejecución</h2>
 <thead>
 <tr class="header">
 <th>Hoy vas a…</th>
-<th>Debe quedar…</th>
+<th>Al terminar debes poder…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Crear y ejecutar un proyecto Java mínimo.</td>
-<td>Proyecto Java mínimo ejecutado y localizado en el repositorio del
-equipo.</td>
+<td>Crear o abrir un proyecto Java mínimo, localizar sus elementos
+básicos y ejecutarlo desde IntelliJ.</td>
+<td>Encontrar <code>Main.java</code>, ejecutar el programa, modificar
+una salida y comprobar el cambio.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Tiempo previsto:</strong> 45 minutos.<br />
-<strong>Hito:</strong> H1. <strong>Modalidad:</strong> Individual.</p>
+<p><strong>Tiempo previsto:</strong> 45 minutos. <strong>Hito:</strong>
+H1. <strong>Fase HEXA:</strong> Investigar. <strong>Modalidad:</strong>
+Individual.</p>
+<hr />
 <h2 id="material-que-necesitas">Material que necesitas</h2>
 <ul>
-<li>Un ordenador por estudiante o pareja, con JDK e IntelliJ disponibles
-y el proyecto del hito accesible.</li>
+<li>Un ordenador con JDK e IntelliJ disponibles.</li>
+<li>El espacio de trabajo del proyecto H1.</li>
+<li>La ficha de H1 y el capítulo 01 del libro como referencia.</li>
 </ul>
-<h2 id="trabajo-de-hoy">Trabajo de hoy</h2>
-<ol type="1">
-<li>Lee el objetivo y escribe con tus palabras qué debe quedar
-terminado.</li>
-<li>Atiende al ejemplo breve y anota una predicción, duda o
-decisión.</li>
-<li>Realiza esta tarea: <strong>Crear proyecto en IntelliJ, clase
-<code>Main</code> y primer <code>println</code>.</strong></li>
-<li>Comprueba el resultado con una prueba observable; no basta con decir
-“funciona”.</li>
-<li>Guarda o entrega la evidencia indicada y prepárate para
-explicarla.</li>
-</ol>
-<h2 id="comprobación-práctica">Comprobación práctica</h2>
-<p>Comprueba <strong>el resultado observable de la actividad</strong> en
-su fuente canónica y prepárate para explicarlo. Registra en diario o
-Scrum únicamente si hubo un aprendizaje, decisión, bloqueo o uso de IA
-significativo.</p>
-<h2 id="seguridad-y-uso-de-ia">Seguridad y uso de IA</h2>
+<p>No necesitas utilizar datos personales, contraseñas, tokens ni claves
+API.</p>
+<hr />
+<h2 id="1-objetivo-de-hoy">1. Objetivo de hoy</h2>
+<p>Hoy no vamos a construir todavía todo MiniJarvis.</p>
+<p>El objetivo es dominar el recorrido mínimo:</p>
+<pre class="text"><code>abrir proyecto
+      ↓
+localizar código
+      ↓
+ejecutar
+      ↓
+observar resultado
+      ↓
+modificar
+      ↓
+volver a ejecutar</code></pre>
+<p>Si este ciclo no funciona, todavía no tiene sentido añadir más
+código.</p>
+<hr />
+<h2 id="2-localiza-el-proyecto">2. Localiza el proyecto</h2>
+<p>Abre el proyecto H1 en IntelliJ.</p>
+<p>Identifica:</p>
+<pre class="text"><code>proyecto
+└── src
+    └── Main.java</code></pre>
+<p>Comprueba que puedes responder:</p>
 <ul>
-<li>Trabaja únicamente con datos ficticios.</li>
-<li>No escribas contraseñas, tokens, claves API ni datos
-personales.</li>
-<li>Si utilizas IA en un uso permitido, registra qué pediste, qué
-recibiste, qué cambiaste y cómo lo comprobaste.</li>
-<li>Los ejemplos de Laura solo se consultan después del intento
-propio.</li>
+<li>¿cómo se llama el proyecto?</li>
+<li>¿dónde está la carpeta <code>src</code>?</li>
+<li>¿dónde está <code>Main.java</code>?</li>
+<li>¿qué archivo estás editando realmente?</li>
 </ul>
-<h2 id="si-te-bloqueas">Si te bloqueas</h2>
+<p>No continúes hasta poder localizar estas partes.</p>
+<hr />
+<h2 id="3-primera-ejecución">3. Primera ejecución</h2>
+<p>Abre <code>Main.java</code>.</p>
+<p>Utiliza un programa mínimo como punto de partida si todavía no
+existe:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, MiniJarvis.&quot;</span><span class="op">);</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Ejecuta el programa desde IntelliJ.</p>
+<p>Observa la consola.</p>
+<p>Debes poder localizar:</p>
+<pre class="text"><code>código fuente
+     ↓
+Run
+     ↓
+consola
+     ↓
+resultado</code></pre>
+<hr />
+<h2 id="4-comprueba-que-estás-ejecutando-tu-código">4. Comprueba que
+estás ejecutando tu código</h2>
+<p>Antes de seguir, predice qué ocurrirá si cambias:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hola, MiniJarvis.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>por:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis empieza ahora.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>Haz el cambio.</p>
+<p>Vuelve a ejecutar.</p>
+<p>Comprueba que la salida ha cambiado.</p>
+<p>Si la consola sigue mostrando el mensaje anterior, no añadas más
+código hasta averiguar por qué.</p>
+<hr />
+<h2 id="5-distingue-editar-y-ejecutar">5. Distingue editar y
+ejecutar</h2>
+<p>Completa oralmente o en tus notas de trabajo:</p>
+<pre class="text"><code>Editar significa...
+
+Ejecutar significa...
+
+La consola me permite...
+
+Main.java está...</code></pre>
+<p>No necesitas memorizar una definición exacta.</p>
+<p>Debes poder explicar qué haces en cada paso.</p>
+<hr />
+<h2 id="6-comprueba-un-error-sencillo">6. Comprueba un error
+sencillo</h2>
+<p>Introduce de forma controlada un error pequeño.</p>
+<p>Por ejemplo, elimina temporalmente el punto y coma:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis empieza ahora.&quot;</span><span class="op">)</span></span></code></pre></div>
+<p>Antes de ejecutar, predice:</p>
+<pre class="text"><code>¿Compilará?
+¿Se ejecutará?
+¿Qué crees que mostrará IntelliJ?</code></pre>
+<p>Comprueba qué ocurre.</p>
+<p>Después restaura:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;MiniJarvis empieza ahora.&quot;</span><span class="op">);</span></span></code></pre></div>
+<p>y vuelve a ejecutar.</p>
+<p>El objetivo no es memorizar mensajes de error.</p>
+<p>El objetivo es reconocer que IntelliJ puede ayudarte a localizar un
+problema antes de que el programa llegue a ejecutarse.</p>
+<hr />
+<h2 id="7-resultado-observable">7. Resultado observable</h2>
+<p>Al terminar la sesión debes poder demostrar directamente:</p>
+<pre class="text"><code>[ ] Sé abrir el proyecto H1.
+[ ] Sé localizar src/Main.java.
+[ ] Sé localizar la clase Main.
+[ ] Sé ejecutar el programa desde IntelliJ.
+[ ] Sé encontrar la consola.
+[ ] Sé modificar un mensaje.
+[ ] Sé volver a ejecutar y comprobar el cambio.
+[ ] He observado al menos un error sencillo y lo he corregido.</code></pre>
+<p>La propia ejecución es la comprobación principal.</p>
+<p>No necesitas realizar una captura de pantalla.</p>
+<hr />
+<h2 id="8-fuente-canónica">8. Fuente canónica</h2>
+<p>El resultado técnico de esta sesión permanece en el proyecto.</p>
+<p>No crees:</p>
+<ul>
+<li>un informe de ejecución;</li>
+<li>una captura para demostrar que IntelliJ funciona;</li>
+<li>un documento adicional de la sesión.</li>
+</ul>
+<p>Si aparece un bloqueo técnico importante que convenga conservar para
+el equipo, puede anotarse en Scrum.</p>
+<p>Si aparece un aprendizaje individual especialmente significativo,
+puede anotarse brevemente en el diario.</p>
+<hr />
+<h2 id="9-uso-de-ia">9. Uso de IA</h2>
+<p>Primero intenta ejecutar, observar el mensaje de IntelliJ y localizar
+el problema.</p>
+<p>Puedes utilizar IA para comprender un error o un concepto que no
+entiendas.</p>
+<p>No la utilices para sustituir el intento propio ni para generar
+código innecesariamente complejo.</p>
+<p>Si su intervención es significativa, deja una anotación breve en:</p>
+<ul>
+<li>diario individual, si afecta a tu aprendizaje;</li>
+<li>Scrum, si afecta a una decisión o bloqueo del equipo.</li>
+</ul>
+<p>No es necesario registrar consultas triviales.</p>
+<p>Nunca introduzcas datos personales, contraseñas, tokens ni claves
+API.</p>
+<hr />
+<h2 id="10-si-te-bloqueas">10. Si te bloqueas</h2>
+<p>Antes de pedir ayuda, identifica:</p>
+<pre class="text"><code>¿Qué esperaba que ocurriera?
+
+¿Qué ha ocurrido realmente?
+
+¿Qué mensaje muestra IntelliJ?
+
+¿Qué archivo estoy ejecutando?
+
+¿Qué fue lo último que cambié?</code></pre>
+<p>Después pide ayuda con esos datos.</p>
+<p>No cambies muchas cosas a la vez.</p>
+<hr />
+<h2 id="11-cierre">11. Cierre</h2>
+<p>Sin mirar una respuesta preparada, explica:</p>
 <ol type="1">
-<li>Copia el mensaje exacto o describe qué observas.</li>
-<li>Indica qué esperabas que ocurriera.</li>
-<li>Reduce el problema a una prueba pequeña.</li>
-<li>Pide ayuda mostrando esos tres datos; no pidas directamente la
-solución completa.</li>
+<li>dónde está <code>Main.java</code>;</li>
+<li>cómo ejecutas el programa;</li>
+<li>dónde observas la salida;</li>
+<li>qué cambio has realizado;</li>
+<li>cómo has comprobado que se estaba ejecutando la versión
+modificada.</li>
 </ol>
-<h2 id="cierre">Cierre</h2>
-<p>Responde sin copiar: <strong>Cada alumno localiza dónde está
-<code>Main.java</code>.</strong></p>
-<p>Respuesta:<br />
-................................................................................</p>
-<p>La sesión está completada cuando la evidencia existe, se ha
-comprobado y puedes defenderla brevemente.</p>
+<p>La sesión está completada cuando puedes abrir, ejecutar, modificar y
+volver a ejecutar el proyecto H1 sin necesitar una evidencia
+paralela.</p>
 
   </main>
 </body>
