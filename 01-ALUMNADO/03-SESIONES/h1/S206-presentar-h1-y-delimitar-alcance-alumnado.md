@@ -92,18 +92,20 @@ Ideas que debes clasificar:
 6. Convertir una entrada textual a número.
 7. Realizar un cálculo sencillo.
 8. Mostrar el resultado del cálculo.
-9. Crear un menú con varias opciones.
-10. Repetir acciones mediante bucles.
-11. Utilizar `switch`.
-12. Guardar varios datos en listas, sets o mapas.
-13. Crear varias clases propias.
-14. Guardar información en ficheros.
-15. Conservar información entre ejecuciones.
-16. Conectar MiniJarvis con un servicio externo.
-17. Integrar Gemini, Jarvis u otra IA real.
-18. Utilizar contraseñas o claves API reales en el código.
-19. Introducir datos personales reales para hacer pruebas.
-20. Incorporar código generado que no puedes explicar.
+9. Comparar el valor numérico y mostrar el resultado `boolean`.
+10. Utilizar ese resultado en un `if/else` para elegir entre dos caminos.
+11. Crear un menú con varias opciones.
+12. Repetir acciones mediante bucles.
+13. Utilizar `switch`.
+14. Guardar varios datos en listas, sets o mapas.
+15. Crear varias clases propias.
+16. Guardar información en ficheros.
+17. Conservar información entre ejecuciones.
+18. Conectar MiniJarvis con un servicio externo.
+19. Integrar Gemini, Jarvis u otra IA real.
+20. Utilizar contraseñas o claves API reales en el código.
+21. Introducir datos personales reales para hacer pruebas.
+22. Incorporar código generado que no puedes explicar.
 
 Antes de compararlo con otras personas, decide individualmente dónde colocarías cada idea.
 
@@ -148,6 +150,7 @@ Al terminar la puesta en común debes reconocer que H1 trabaja, de forma progres
 - entrada mediante `Scanner`;
 - conversión de texto a número;
 - un cálculo sencillo;
+- una comparación sencilla que produce y muestra `true` o `false` sin bifurcar el flujo;
 - comprobación mediante ejecución;
 - errores iniciales de compilación y ejecución;
 - README técnico básico.
@@ -164,6 +167,7 @@ Hoy solo necesitas comprender el alcance.
 
 No forman parte de H1:
 
+- decisiones con `if`, `if/else` y bifurcaciones;
 - menús;
 - `switch`;
 - bucles;

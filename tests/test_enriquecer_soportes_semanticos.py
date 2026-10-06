@@ -53,7 +53,7 @@ def test_scope_lists_have_explicit_source_markers_without_solving_proposals():
     _, _, after = prepared('206')
     scopes = [f for f in after if f.title == 'Alcance técnico de H1']
     assert any(any(a.kind == 'cards' for a in f.atoms) for f in scopes)
-    assert any('No todo debe aparecer necesariamente dentro de un único Main.java' in text(f) for f in scopes)
+    assert any('En el producto H1, el núcleo obligatorio debe aparecer integrado en Main.java' in text(f).replace('`', '') for f in scopes)
     assert any('H1 recorre fundamentos suficientes' in note[2] for f in scopes for note in f.notes)
     assert any('Quedan fuera del alcance actual:' in text(f) for f in scopes)
     assert any('contenidos posteriores' in text(f) for f in scopes)

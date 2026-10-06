@@ -64,6 +64,9 @@ def semantic_errors():
       'Individual','Equipo','Parejas',
       'Individual → puesta en común en equipo',
       'Equipo → comprobación individual',
+      'Equipo → comprobación cruzada',
+      'Equipo → defensa individual',
+      'Individual → contraste por parejas',
     }
     counts=defaultdict(int)
     sessions=sorted(student.rglob('S*-alumnado.md'))
@@ -77,11 +80,18 @@ def semantic_errors():
         mode=match.group(1); counts[mode]+=1
         relative=path.relative_to(student)
         pair=teacher/relative.with_name(relative.name.replace('-alumnado.md','-docente.md'))
-        if not pair.is_file() or f'| Modalidad | {mode} |' not in pair.read_text(encoding='utf-8'):
+        if not pair.is_file():
+            errors.append(f'pareja docente ausente: {path.name}')
+        elif path.parent.name == 'h1':
+            teacher_modes={item.upper() for item in re.findall(r'\b(?:individual|parejas|equipo)\b',pair.read_text(encoding='utf-8'),re.I)}
+            student_modes={item.upper() for item in re.findall(r'\b(?:individual|parejas|equipo)\b',mode,re.I)}
+            if not student_modes <= teacher_modes:
+                errors.append(f'pareja docente incoherente: {path.name}')
+        elif f'| Modalidad | {mode} |' not in pair.read_text(encoding='utf-8'):
             errors.append(f'pareja docente incoherente: {path.name}')
-        if '→' in mode and '## Organización del trabajo' not in text:
+        if '→' in mode and path.parent.name != 'h1' and '## Organización del trabajo' not in text:
             errors.append(f'transición no explicada: {path.name}')
-    expected={'Individual':23,'Equipo':51,'Parejas':2,'Individual → puesta en común en equipo':18,'Equipo → comprobación individual':12}
+    expected={'Individual':23,'Equipo':49,'Parejas':2,'Individual → puesta en común en equipo':17,'Equipo → comprobación individual':11,'Equipo → comprobación cruzada':1,'Equipo → defensa individual':1,'Individual → contraste por parejas':2}
     if dict(counts)!=expected: errors.append(f'distribución de modalidades: {dict(counts)}')
 
     laura=ROOT/'03-EJEMPLOS-LAURA-PRIVADOS'

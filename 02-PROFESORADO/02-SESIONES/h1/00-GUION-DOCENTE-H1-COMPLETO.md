@@ -6,7 +6,7 @@ Este documento está escrito para poder impartir H1 aunque sea la primera vez qu
 
 Puedes leer muchas partes literalmente en voz alta. Cuando aparezca `Di en voz alta`, es una formulación preparada para el aula. Cuando aparezca `Pide al alumnado`, es una acción concreta que debes ordenar. Cuando aparezca `Entrega`, indica exactamente qué deben entregar, cuándo, dónde y cómo.
 
-H1 no pretende que el alumnado haga una IA real. H1 pretende que construyan la primera versión ejecutable de MiniJarvis en Java: un programa pequeño de consola que saluda, usa datos, lee entrada, calcula o decide algo sencillo y puede explicarse.
+H1 no pretende que el alumnado haga una IA real. H1 pretende que construyan la primera versión ejecutable de MiniJarvis en Java: un programa pequeño, secuencial y de consola que saluda, usa datos, lee entrada, calcula, muestra una comparación booleana y puede explicarse.
 
 ## Producto final de H1
 
@@ -22,7 +22,7 @@ El producto debe incluir, como máximo razonable de H1:
 - al menos una operación útil;
 - entrada por teclado con `Scanner`;
 - una conversión sencilla si se pide un número como texto;
-- una comparación y una decisión `if/else` básica;
+- una comparación simple cuyo resultado `boolean` se almacena o utiliza de forma visible y se muestra;
 - README con alcance, límites, ejecución y ejemplo real;
 - evidencia de pruebas y explicación.
 
@@ -30,6 +30,7 @@ El producto no debe incluir todavía:
 
 - menú de comandos;
 - bucle principal;
+- decisiones con `if` o `if/else` y cualquier bifurcación;
 - `switch`;
 - colecciones;
 - ficheros;
@@ -49,8 +50,8 @@ H1 sigue el ciclo HEXA completo:
 - S209 - Idear: proponer mensajes claros antes de programarlos.
 - S210 - Planificar: organizar datos, tipos y nombres antes de escribir más código.
 - S211 - Ejecutar: crear con constantes, literales y operaciones.
-- S212 - Ejecutar: crear con entrada por teclado y conversiones.
-- S213 - Ejecutar: crear con comparaciones, booleanos y una decisión.
+- S212 - Ejecutar: crear con entrada por teclado, conversiones, cálculo y comparación booleana observable.
+- S213 - Ejecutar: limpiar nombres, comentarios y complejidad innecesaria sin añadir control de flujo.
 - S214 - Comunicar: documentar, seleccionar evidencias y preparar entrega.
 - S215 - Comunicar: defender, evaluar, reflexionar y cerrar.
 
@@ -176,11 +177,11 @@ Organización del trabajo:
 
 Di en voz alta:
 
-> H1 entra dentro del Tema 1. Vamos a tocar entorno, estructura básica de Java, salida por pantalla, variables, constantes, operaciones, entrada con Scanner, conversiones y una decisión sencilla. Pero no todo tiene que estar metido en el mismo `Main.java`. Algunas cosas serán microprácticas para aprender y defender.
+> H1 entra dentro del Tema 1. Vamos a tocar entorno, estructura básica de Java, salida por pantalla, variables, constantes, operaciones, entrada con Scanner, conversiones, cálculo y una comparación booleana observable. El núcleo obligatorio debe quedar integrado en `Main.java`.
 
 Di en voz alta:
 
-> En H1 sí entra: saludo, mensajes por consola, variables, constantes, entrada y salida, operaciones sencillas, comparación, una decisión básica y explicación. En H1 no entra: menús, bucles, memoria, ficheros, clases complejas, persistencia ni IA real. Eso llegará más adelante.
+> En H1 sí entra: saludo, mensajes por consola, variables, constantes, entrada y salida, operaciones sencillas, una comparación que muestra `true` o `false` y explicación. En H1 no entran `if/else`, bifurcaciones, menús, bucles, memoria, ficheros, clases complejas, persistencia ni IA real. Eso llegará más adelante.
 
 ### Explicación guiada: alcance y calidad de H1
 
@@ -240,7 +241,7 @@ Ideas para proyectar o dictar:
 - guardar en fichero;
 - usar una API de IA;
 - mostrar un mensaje final;
-- decidir si se ha alcanzado un objetivo.
+- mostrar el resultado booleano de comparar si se ha alcanzado un objetivo, sin decidir qué instrucciones se ejecutan.
 
 Trabajo en grupo:
 
@@ -270,8 +271,8 @@ Estado: hecho
 Evidencia: decisión S206 en Scrum
 
 Decisión S206:
-En H1 entra saludo, entrada/salida, variables, constantes, una operación y una decisión sencilla.
-Queda fuera menú, memoria, ficheros e IA real.
+En H1 entra saludo, entrada/salida, variables, constantes, una operación y una comparación booleana visible.
+Queda fuera if/else, bifurcaciones, menú, memoria, ficheros e IA real.
 ```
 
 Modelo que no debes aceptar:
@@ -1473,13 +1474,13 @@ Di en voz alta:
 
 > Una operación no está demostrada porque el código compile. Está demostrada cuando puedo predecir el resultado, ejecutarlo y explicar si coincide.
 
-## S212 - Ejecutar - Scanner y conversiones
+## S212 - Ejecutar - Scanner, conversiones, cálculo y comparación
 
 **Modalidad:** **INDIVIDUAL → PAREJAS**
 
 ### Objetivo de la sesión
 
-El alumnado debe leer entrada, guardarla, convertir texto a número cuando haga falta y reconocer errores de conversión.
+El alumnado debe leer entrada, guardarla, convertir texto a número cuando haga falta, realizar un cálculo y producir y mostrar una comparación booleana sin usarla para bifurcar el flujo.
 
 ### Apertura docente
 
@@ -1491,7 +1492,7 @@ Di en voz alta:
 
 Pide al alumnado:
 
-> En Scrum, añadid tareas: `leer nombre ficticio`, `usar entrada en salida`, `leer número como texto`, `convertir y calcular`, `probar entrada no válida`.
+> En Scrum, añadid solo las tareas reales que correspondan: `leer nombre ficticio`, `usar entrada en salida`, `leer número como texto`, `convertir y calcular`, `mostrar comparación booleana` o `probar entrada no válida`.
 
 Organización del trabajo:
 
@@ -1719,13 +1720,13 @@ Trabajo por parejas:
 
 Pide al alumnado:
 
-> Construid una prueba con entrada válida: por ejemplo horas como texto, conversión a `int`, cálculo de minutos y salida. Después probad una entrada no convertible y explicad cuándo falla: al compilar o al ejecutar.
+> Construid una prueba con entrada válida: por ejemplo horas como texto, conversión a `int`, cálculo de minutos, comparación con un valor de referencia y salida tanto del cálculo como del resultado `boolean`. La comparación no debe controlar qué instrucciones se ejecutan. Después probad una entrada no convertible y explicad cuándo falla: al compilar o al ejecutar.
 
 ### Evidencia técnica de S212
 
 Pide explícitamente:
 
-> La prueba debe incluir una entrada válida, resultado esperado, resultado obtenido y explicación de qué ocurre con una entrada no convertible.
+> La prueba debe incluir una entrada válida, cálculo esperado y obtenido, resultado booleano esperado y obtenido, y explicación de qué ocurre con una entrada no convertible.
 
 Dónde y cómo:
 
@@ -1747,7 +1748,10 @@ Prueba: conversión de horas.
 Entrada válida: 5
 Salida esperada: 300 minutos.
 Salida obtenida: 300 minutos.
-Demuestra: el texto leído se convierte a int y se usa en una operación.
+Comparación: 5 >= 4
+Resultado booleano esperado: true.
+Resultado booleano obtenido: true.
+Demuestra: el texto leído se convierte a int, se usa en una operación y produce un booleano visible sin bifurcación.
 
 Entrada no convertible: hola
 Resultado: error durante la ejecución al aplicar Integer.parseInt.
@@ -1758,372 +1762,136 @@ Demuestra: compilar no garantiza que cualquier entrada sea convertible.
 
 Di en voz alta:
 
-> Hoy MiniJarvis ya no solo muestra datos escritos por quien programa. Ahora reacciona a una entrada. Pero si la entrada viene como texto, debemos decidir cuándo convertir y cómo comprobar el resultado.
+> Hoy MiniJarvis ya no solo muestra datos escritos por quien programa. Ahora recibe texto, lo convierte, calcula y muestra el resultado de una comparación. El programa sigue siendo secuencial: usar ese booleano para decidir instrucciones corresponde a H2.
 
-## S213 - Ejecutar - Comparaciones, lógica y decisiones
+## S213 - Ejecutar - Limpieza, nombres claros y simplicidad
 
-**Modalidad:** **INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL**
+**Modalidad:** **INDIVIDUAL → PAREJAS**
 
 ### Objetivo de la sesión
 
-El alumnado debe construir booleanos, combinar condiciones y usar una decisión `if/else` con dos ramas probadas.
+El alumnado debe revisar el programa H1 ya construido para mejorar nombres, retirar comentarios innecesarios y eliminar complejidad que no pertenece al hito, conservando su comportamiento observable.
 
 ### Apertura docente
 
 Di en voz alta:
 
-> Hoy MiniJarvis empieza a decidir algo muy pequeño. No haremos menús ni bucles. Eso será H2. Hoy queremos entender que una comparación produce `true` o `false`, y que `if/else` usa ese resultado para elegir una rama.
+> Hoy no añadimos una capacidad nueva: hacemos que el MiniJarvis existente sea más claro y sencillo. La comparación booleana ya produce y muestra `true` o `false`, pero no decide qué instrucciones se ejecutan. `if/else` empieza en H2.
 
 ### Scrum del día
 
 Pide al alumnado:
 
-> En Scrum, cread o actualizad tareas como `crear comparación`, `guardar boolean`, `implementar if/else`, `probar caso true` o `probar caso false` únicamente cuando representen trabajo real del equipo. Registrad una mejora solo si existe una decisión o cambio concreto.
+> En Scrum, cread o actualizad una tarea solo si existe trabajo real de limpieza: mejorar un nombre confuso, retirar un comentario redundante o simplificar código sin cambiar el resultado.
 
 Dónde y cómo:
 
 - Sheet Scrum para tareas, estados, decisiones o bloqueos reales.
-- GitHub para el código y los casos de prueba reproducibles.
+- GitHub para el código limpio y la comprobación reproducible de que mantiene el comportamiento.
 
 ### Explicación docente
 
 Di en voz alta:
 
-> Comparar no devuelve uno de los operandos. Devuelve un booleano: `true` o `false`. `=` asigna. `==` compara. Para números podemos usar `==`, `!=`, `<`, `<=`, `>` y `>=`. En H1 no vamos a usar `==` para comparar textos.
+> Limpiar no significa reescribir por gusto. Significa que los nombres expresan la intención, los comentarios aportan contexto y cada línea necesaria sigue siendo comprensible y defendible.
 
-### Explicación guiada: comparadores, lógica, decisiones y elección de valor
+### Explicación guiada: nombres, comentarios y simplicidad
 
-Úsala antes de `if/else` y antes de pedir las dos pruebas.
+Úsala antes de revisar el programa completo.
 
 Di en voz alta:
 
-> Una comparación produce un booleano: `true` o `false`. `=` asigna; `==` compara. `if` necesita una condición booleana. En H1 hacemos decisiones pequeñas; menús y decisiones encadenadas vendrán en H2.
+> Una persona que no escribió el programa debe poder seguirlo de arriba abajo. En H1 el flujo es secuencial: entrada, conversión, cálculo, comparación, salida. No añadimos bifurcaciones para aparentar más complejidad.
 
-Empieza con comparadores:
+Empieza con un nombre poco expresivo y una alternativa clara:
 
-```text
-5 > 3 -> true
-2 < 1 -> false
-5 == 5 -> true
-5 == 4 -> false
-5 != 4 -> true
+```java
+int h = Integer.parseInt(text);
+int studyHours = Integer.parseInt(studyHoursText);
 ```
 
 Pregunta:
 
-> `5 > 3` devuelve 5, devuelve 3 o devuelve una respuesta lógica.
+> Qué versión permite anticipar mejor qué representa el dato.
 
-Contrasta asignar y comparar:
+Contrasta un comentario redundante con uno que aporta intención:
 
 ```java
-int hours = 4;  // asignación
-hours == 4      // comparación: true o false
+int studyMinutes = studyHours * 60; // multiplica por 60
+boolean enoughPractice = studyHours >= MINIMUM_HOURS; // criterio acordado para esta práctica
 ```
 
-Trabaja límites:
+Recuerda que la comparación ya integrada debe seguir siendo observable:
 
 ```java
-int hours = 4;
-hours > 4
-hours >= 4
+boolean enoughPractice = studyHours >= MINIMUM_HOURS;
+System.out.println("¿Práctica suficiente? " + enoughPractice);
 ```
 
 Pregunta:
 
-> Predice ambas expresiones.
+> Qué valor se mostrará para una entrada concreta y por qué.
 
-Recuerda:
+Límite que debes mantener:
 
-> En esta sesión no usamos `==` para comparar `String`.
-
-Ahora introduce `&&`, `||` y `!` desde lenguaje natural:
-
-```java
-boolean canStart = hasName && hasGoal;
-```
-
-Di:
-
-> MiniJarvis puede comenzar si tiene nombre y tiene objetivo.
-
-```java
-boolean needsHelp = missingConfig || hasError;
-```
-
-Di:
-
-> Necesita ayuda si falta configuración o existe un error.
-
-```java
-boolean finished = false;
-boolean pending = !finished;
-```
-
-Resultado esperado:
-
-```text
-pending -> true
-```
-
-Traduce en ambos sentidos:
-
-```text
-Puede continuar si tiene nombre y objetivo -> hasName && hasGoal
-No hay error -> !hasError
-```
-
-Pasa del booleano a la decisión:
-
-```java
-int hours = 5;
-boolean enough = hours >= 4;
-
-if (enough) {
-    System.out.println("Objetivo alcanzado");
-}
-```
-
-Y después condición directa:
-
-```java
-if (hours >= 4) {
-    System.out.println("Objetivo alcanzado");
-}
-```
-
-Pregunta:
-
-> Qué produce `hours >= 4`.
-
-Contrasta con lo que no sirve:
-
-```java
-if (hours) {
-    System.out.println("Objetivo alcanzado");
-}
-```
-
-Pregunta:
-
-> `hours` contiene un `int`. La condición de `if` responde true/false.
-
-Ahora trabaja dos caminos:
-
-```java
-if (hours >= 4) {
-    System.out.println("Objetivo alcanzado");
-} else {
-    System.out.println("Objetivo pendiente");
-}
-```
-
-Casos obligatorios:
-
-```text
-Caso A: hours = 5
-Caso B: hours = 2
-```
-
-Otro ejemplo cercano a MiniJarvis:
-
-```java
-if (hasName) {
-    System.out.println("Nombre configurado");
-} else {
-    System.out.println("Falta configurar el nombre");
-}
-```
-
-Dato sencillo para validar:
-
-```java
-if (studyHours >= 0) {
-    System.out.println("Dato aceptado");
-} else {
-    System.out.println("Las horas no pueden ser negativas");
-}
-```
-
-Predicción antes de ejecutar:
-
-```java
-int score = 5;
-if (score >= 5) {
-    System.out.println("Superado");
-} else {
-    System.out.println("Pendiente");
-}
-```
-
-Pregunta:
-
-> Qué bloque se ejecutará. Cambia `score` a 4 y vuelve a predecir.
-
-Reconoce un `if` anidado sin profundizar:
-
-```java
-if (hasName) {
-    if (hasGoal) {
-        System.out.println("MiniJarvis está preparado");
-    }
-}
-```
-
-Pregunta:
-
-> Qué condición se comprueba primero y cuándo se llega a comprobar `hasGoal`.
-
-Otro anidado:
-
-```java
-if (hours >= 4) {
-    if (tasks >= 2) {
-        System.out.println("Objetivo completo");
-    }
-}
-```
-
-Explica oralmente:
-
-```text
-hours >= 4?
-  si -> tasks >= 2?
-          si -> mensaje
-```
-
-Di:
-
-> Aquí basta con reconocer y leer la idea. No vamos a convertir H1 en una sesión de condicionales complejos.
-
-Por último, muestra la asignación condicional `?:` como elección sencilla de valor:
-
-```java
-String message;
-if (hours >= 4) {
-    message = "Objetivo alcanzado";
-} else {
-    message = "Objetivo pendiente";
-}
-```
-
-Misma elección con `?:`:
-
-```java
-String message = hours >= 4
-        ? "Objetivo alcanzado"
-        : "Objetivo pendiente";
-```
-
-Despieza:
-
-```text
-hours >= 4 -> condición
-"Objetivo alcanzado" -> valor si true
-"Objetivo pendiente" -> valor si false
-```
-
-Más ejemplos para leer, no para complicar:
-
-```java
-String status = tasks > 0
-        ? "Hay tareas"
-        : "No hay tareas";
-
-String result = score >= 5
-        ? "Superado"
-        : "Pendiente";
-```
-
-Predicción:
-
-```java
-int hours = 2;
-String message = hours >= 4
-        ? "Objetivo alcanzado"
-        : "Objetivo pendiente";
-```
-
-Pregunta:
-
-> Qué valor termina almacenado en `message`.
-
-Pregunta al alumnado:
-
-> Qué pasa con `hours = 5`, qué pasa con `hours = 2`, qué rama se ejecuta y qué evidencia demuestra cada caso.
-
-Error frecuente que debes cortar:
-
-> Probar solo el caso `true` no demuestra el `else`.
-
-No presentes `?:` como sustituto de cualquier `if`. En H1 solo interesa leer una elección sencilla de valor.
+> `if`, `if/else`, el operador condicional `?:`, los operadores lógicos complejos y cualquier bifurcación se trabajan a partir de H2. En H1 el `boolean` se calcula y se muestra, pero no controla el flujo.
 
 ### Investigación del alumnado
 
 Pide al alumnado:
 
-> Investigad tres operadores lógicos con ejemplos verbales: `&&`, `||` y `!`. No memoricéis símbolos: traducidle el significado a una persona que no programa.
+> Localizad un nombre mejorable, un comentario que no aporte información o una línea cuya intención cueste explicar. Proponed una mejora concreta sin cambiar el comportamiento.
 
 Trabajo individual:
 
-- Predecir comparaciones.
-- Cambiar un valor para obtener `true` y `false`.
+- Localizar una mejora de claridad.
+- Predecir si la modificación conserva la salida.
 
 Trabajo por parejas:
 
-- Traducir condiciones a lenguaje natural.
-- Comprobar si se han probado ambas ramas.
+- Contrastar nombres y comentarios.
+- Ejecutar antes y después para comprobar que el comportamiento se conserva.
 
 ### Actividad central
 
 Pide al alumnado:
 
-> Construid una práctica defendible: dato, comparación, boolean, `if/else` y salida. Debéis probar dos casos: uno que entre por `if` y otro que entre por `else`.
+> Revisad el `Main.java` de H1: mejorad solo lo necesario, conservad la comparación booleana observable y comprobad que el programa sigue compilando y mostrando el cálculo y el `boolean` esperados.
 
 ### Evidencia técnica y comprobación individual de S213
 
 Pide explícitamente:
 
-> La prueba debe demostrar dos ramas. No basta con probar el caso favorable. Cada persona debe poder explicar y comprobar ambos recorridos.
+> La comprobación debe demostrar que la limpieza conserva la entrada, la conversión, el cálculo, la comparación booleana y la salida. Cada persona debe poder explicar la mejora realizada.
 
 Dónde y cómo:
 
-- GitHub: código con comparación e `if/else` y casos reproducibles.
+- GitHub: código H1 limpio y comprobación reproducible.
 - Diario individual: solo si la diferencia entre predicción y resultado, el error o la mejora han producido aprendizaje significativo.
 - Scrum: actualizar pruebas o mejora únicamente cuando sean tareas, decisiones o cambios reales del equipo.
 
 Qué debe poder defender cada persona:
 
-- Qué comparación se evalúa.
-- Qué significa `true`.
-- Qué significa `false`.
-- Qué rama se ejecuta en cada caso.
-- Qué mejora concreta hizo en el código o nombres.
+- Qué nombre o comentario se ha mejorado y por qué.
+- Qué comparación produce el `boolean`.
+- Qué significan `true` y `false` en ese resultado.
+- Cómo se comprobó que la limpieza no cambió el comportamiento.
 
 Modelo de uso de evidencia S213:
 
 ```text
-Prueba de decisión if/else
-
-Condición: studyHours >= 4
-
-Caso A:
-Valor usado: studyHours = 5
-Salida esperada: Objetivo alcanzado.
-Salida obtenida: Objetivo alcanzado.
-Demuestra: se ejecuta la rama true.
-
-Caso B:
-Valor usado: studyHours = 2
-Salida esperada: Objetivo pendiente.
-Salida obtenida: Objetivo pendiente.
-Demuestra: se ejecuta la rama false.
+Mejora: sustituir `h` por `studyHours` y retirar un comentario que repetía el código.
+Entrada: 5
+Salida esperada antes y después: cálculo 300; comparación true.
+Salida obtenida antes y después: cálculo 300; comparación true.
+Demuestra: el código es más claro y conserva el comportamiento secuencial de H1.
 ```
 
 ### Cierre docente
 
 Di en voz alta:
 
-> H1 ya tiene una decisión pequeña. Si hoy alguien solo puede decir `funciona`, todavía no basta. Debe poder señalar la condición, explicar las dos ramas y demostrar que ambas se han probado.
+> H1 ya tiene un programa pequeño, secuencial y comprensible. La comparación produce un `boolean` visible; no abre ramas. La limpieza está demostrada cuando el código se entiende mejor y conserva su comportamiento.
 
 ## S214 - Comunicar - README, evidencias y preparación del cierre
 
@@ -2161,10 +1929,10 @@ Estructura mínima:
 
 ```markdown
 ## Qué hace
-MiniJarvis saluda y pide un nombre ficticio.
+MiniJarvis saluda, pide datos ficticios, convierte una entrada numérica, calcula y muestra una comparación booleana.
 
 ## Límites de H1
-No incluye menú, memoria, ficheros ni IA real.
+No incluye `if/else`, bifurcaciones, menú, memoria, ficheros ni IA real.
 
 ## Cómo ejecutar
 1. Abre el proyecto.
@@ -2172,8 +1940,8 @@ No incluye menú, memoria, ficheros ni IA real.
 3. Introduce datos ficticios.
 
 ## Ejemplo de ejecución
-Entrada: Laura
-Salida: Hola, Laura.
+Entradas: Laura y 4
+Salida comprobable: saludo a Laura, cálculo 5 y comparación true.
 ```
 
 Di:
@@ -2253,10 +2021,10 @@ Modelo de uso del README H1:
 # MiniJarvis H1
 
 ## Qué hace
-MiniJarvis saluda, pide un nombre ficticio, calcula minutos a partir de horas y muestra si se alcanza un objetivo.
+MiniJarvis saluda, pide un nombre ficticio, calcula minutos a partir de horas y muestra el resultado booleano de compararlas con una referencia.
 
 ## Límites de H1
-No incluye menú, memoria, ficheros ni IA real.
+No incluye `if/else`, bifurcaciones, menú, memoria, ficheros ni IA real.
 
 ## Cómo ejecutar
 1. Abrir el proyecto en IntelliJ.
@@ -2264,8 +2032,8 @@ No incluye menú, memoria, ficheros ni IA real.
 3. Introducir datos ficticios.
 
 ## Pruebas
-Caso A: hours = 5 -> Objetivo alcanzado.
-Caso B: hours = 2 -> Objetivo pendiente.
+Caso A: horas = 5 -> minutos = 300; comparación `horas >= 4` = true.
+Caso B: horas = 2 -> minutos = 120; comparación `horas >= 4` = false.
 Entrada no convertible: "hola" falla durante la ejecución con parseInt.
 ```
 
@@ -2284,9 +2052,9 @@ Mejora siguiente: probar mejor entradas no válidas en H2.
 El equipo también podrá seleccionar posteriormente una síntesis del incremento:
 
 ```text
-Incremento conseguido: MiniJarvis saluda, pide nombre, calcula minutos y decide si se alcanza un objetivo.
-Decisiones: no incluimos menú ni memoria porque no pertenecen a H1.
-Pruebas: saludo, conversión, caso true, caso false y entrada no convertible.
+Incremento conseguido: MiniJarvis saluda, pide nombre, calcula minutos y muestra si se alcanza un valor de referencia.
+Decisiones: no incluimos if/else, bifurcaciones, menú ni memoria porque no pertenecen a H1.
+Pruebas: saludo, conversión, cálculo, resultados booleanos true y false sin ramas, y entrada no convertible.
 Review: el incremento cumple el alcance de S206.
 Retrospectiva: debemos actualizar Scrum cuando exista un cambio real, no reconstruirlo al final.
 ```
@@ -2323,7 +2091,7 @@ El alumnado debe defender individualmente, cerrar retrospectiva y realizar la en
 
 Di en voz alta:
 
-> Hoy cerramos H1. La defensa no es un castigo ni una exposición larga. Es la comprobación de que entendéis vuestro propio producto. Vais a señalar código, explicar decisiones, ejecutar, predecir y, si hace falta, modificar algo pequeño.
+> Hoy cerramos H1. La defensa no es un castigo ni una exposición larga. Es la comprobación de que entendéis vuestro propio producto. Vais a señalar código, explicar datos y operaciones, ejecutar, predecir y, si hace falta, modificar algo pequeño.
 
 ### Scrum del día
 
@@ -2352,7 +2120,8 @@ Preguntas de defensa que puedes usar:
 - Explica una conversión.
 - Provoca o explica un error de conversión.
 - Señala una comparación.
-- Ejecuta un caso `true` y un caso `false`.
+- Predice y comprueba el `boolean` que mostrará para una entrada concreta.
+- Explica por qué ese resultado no cambia el flujo de ejecución en H1.
 - Explica qué queda fuera de H1 y por qué.
 - Cambia un mensaje o valor pequeño y predice el efecto.
 
@@ -2455,8 +2224,8 @@ Fecha: cierre H1
 Sesión: S215
 Objetivo: cerrar H1 y preparar H2.
 Acción realizada: defendí mi código, revisé enlaces y entregué en Moodle.
-Prueba y resultado: expliqué Scanner, parseInt y las dos ramas del if/else.
-Evidencia enlazada: enlace a README y prueba S213.
+Prueba y resultado: expliqué Scanner, parseInt, el cálculo y la comparación booleana sin bifurcación.
+Evidencia enlazada: enlace al README y a la versión estable del código.
 Bloqueo: necesito practicar errores de entrada.
 Siguiente paso: en H2 probar comandos y depuración.
 ```
@@ -2499,7 +2268,7 @@ Registra tú:
 
 Di en voz alta:
 
-> H1 queda cerrado cuando existe producto, pruebas, documentación, reflexión y entrega oficial. Hemos pasado por todo HEXA: activamos el reto, investigamos Java básico, ideamos la salida, planificamos datos, ejecutamos código y comunicamos evidencias. En H2 evolucionaremos esto hacia decisiones más completas, comandos, repetición, pruebas y depuración.
+> H1 queda cerrado cuando existe producto, pruebas, documentación, reflexión y entrega oficial. Hemos pasado por todo HEXA: activamos el reto, investigamos Java básico, ideamos la salida, planificamos datos, ejecutamos código y comunicamos evidencias. En H2 utilizaremos comparaciones para introducir decisiones con `if/else`, bifurcaciones, comandos y repetición.
 
 ## Lista rápida de comprobación docente H1
 
@@ -2507,6 +2276,7 @@ Antes de cerrar H1, comprueba:
 
 - Cada equipo tiene repositorio accesible.
 - Cada equipo tiene README H1.
+- El programa compila, se ejecuta y contiene variables y tipos comprensibles, al menos una constante, `Scanner`, lectura textual, conversión, cálculo, salida y comparación booleana visible sin bifurcación.
 - Cada equipo tiene Scrum con backlog, decisiones, review y retrospectiva reales.
 - El diario de cada persona contiene solo las entradas relevantes que hayan sido necesarias.
 - Cada persona puede defender al menos una parte técnica.
@@ -2566,8 +2336,8 @@ Cuando una defensa es vaga:
 | S209 | Diseñar, contrastar e implementar mensajes | Decisión real en Scrum y código en GitHub | PAREJAS → EQUIPO |
 | S210 | Practicar variables, planificar datos e integrarlos en MiniJarvis | Código en GitHub; planificación junto al trabajo; diario/Scrum solo cuando corresponda | INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL |
 | S211 | Predecir y comprobar constantes, literales y operaciones | Código o micropráctica en GitHub; reflexión solo si produjo aprendizaje significativo | INDIVIDUAL → PAREJAS |
-| S212 | Leer, convertir y probar entradas válidas y no convertibles | Código y pruebas reproducibles en GitHub; README opcional hasta su consolidación en S214 | INDIVIDUAL → PAREJAS |
-| S213 | Construir y probar las dos ramas de una decisión | Código y casos reproducibles en GitHub; comprobación individual de comprensión | INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL |
+| S212 | Leer, convertir, calcular y mostrar una comparación booleana sin bifurcación | Código y pruebas reproducibles en GitHub; README opcional hasta su consolidación en S214 | INDIVIDUAL → PAREJAS |
+| S213 | Limpiar nombres, comentarios y complejidad conservando el comportamiento | Código limpio y comprobación reproducible en GitHub | INDIVIDUAL → PAREJAS |
 | S214 | Consolidar README, localizar pruebas, preparar enlaces y comprobar permisos | README y pruebas en GitHub; no hay entrega oficial Moodle | INDIVIDUAL → EQUIPO → PAREJAS |
 | S215 | Defender, revisar, hacer retrospectiva y cerrar H1 | Defensa individual; review/retrospectiva en Scrum; entrega oficial en Moodle con enlaces a GitHub/README | INDIVIDUAL + PAREJAS + EQUIPO |
 

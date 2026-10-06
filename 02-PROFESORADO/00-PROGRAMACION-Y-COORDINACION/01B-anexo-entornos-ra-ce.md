@@ -46,9 +46,7 @@ Criterio didáctico:
 
 Referencia principal de objetivos por módulos:
 
-```text
-documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf
-```
+`../04-RECURSOS-NORMATIVOS-Y-TEMARIOS/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`
 
 Para Entornos de Desarrollo, esto implica que el módulo debe garantizar el flujo profesional del proyecto:
 
@@ -78,7 +76,7 @@ Cada entregable debe indicar explícitamente qué debe entregar el alumnado, en 
 | Hito | Qué entrega el alumnado | Formato esperado | Verificación |
 |---|---|---|---|
 | H0 | Tablero Scrum inicial, contrato de equipo y retrospectiva de la torre de papel. | Foto o captura del tablero, Markdown/PDF breve, Moodle o GitHub. | Revisión de roles, backlog, acuerdos y retrospectiva. |
-| H1 | Proyecto IntelliJ configurado, repositorio GitHub inicial y README de ejecución. | Repositorio GitHub + README.md + captura de ejecución. | Se clona/abre el proyecto, se ejecuta y se comprueba la estructura. |
+| H1 | Proyecto IntelliJ configurado, programa secuencial H1, repositorio GitHub y README reproducible. | Repositorio GitHub + `README.md` + tag `h1-entrega` o commit estable. | Se clona/abre, compila y ejecuta; se comprueban entrada textual, conversión, cálculo y comparación booleana sin bifurcación. |
 | H2 | Plan de pruebas manuales, informe de depuración e incidencias del agente con menú. | `README, sección `Pruebas H2``, capturas de breakpoints, checklist. | Se reproducen casos de prueba y se pregunta por el proceso de depuración. |
 | H3 | Pruebas de memoria temporal y documentación de casos límite. | Tests si procede, checklist, README actualizado. | Se comprueba que la memoria añade, lista, busca y gestiona errores. |
 | H4 | Diagrama de clases y al menos un diagrama de comportamiento del agente. | PlantUML, Mermaid, draw.io exportado o imagen + fuente editable. | Se contrasta diagrama contra código y se defiende una relación/clase. |
@@ -104,7 +102,7 @@ Hitos principales:
 
 | CE | Criterio | Evidencia propuesta | Instrumentos |
 |---|---|---|---|
-| a | Se ha reconocido la relación de los programas con componentes del sistema informático. | Explicación de cómo el agente usa memoria, procesador, entrada/salida y almacenamiento. | Portfolio, defensa. |
+| a | Se ha reconocido la relación de los programas con componentes del sistema informático. | Explicación de cómo el agente usa memoria, procesador, entrada/salida y almacenamiento. | README o defensa; diario solo si genera aprendizaje significativo. |
 | b | Se han identificado las fases de desarrollo de una aplicación informática. | Mapa de fases aplicado al agente: idea, análisis, diseño, implementación, pruebas, despliegue, mantenimiento. | Actividad, portfolio. |
 | c | Se han diferenciado código fuente, objeto y ejecutable. | Explicación sobre `.java`, `.class`, ejecución en JVM y salida del proyecto. | Defensa, README. |
 | d | Se ha reconocido la generación de código intermedio para máquinas virtuales. | Relación entre Java, bytecode y JVM. | Preguntas orales, esquema. |
@@ -166,8 +164,8 @@ Debe entregar:
 - Repositorio GitHub del equipo.
 - Proyecto IntelliJ con SDK correcto.
 - README con instrucciones para ejecutar el agente.
-- Captura de ejecución.
-- Captura o explicación de configuración básica del IDE.
+- Comprobación reproducible de la ejecución en el README.
+- Explicación de la configuración básica del IDE; captura solo si demuestra un ajuste que no pueda conservarse mejor.
 - Tabla breve: IntelliJ frente a terminal/otro editor.
 
 ---
@@ -349,7 +347,7 @@ A partir de ahora se generarán ejemplos reales de entregables como si los elabo
 Ejemplo inicial creado para orientar el nivel esperado:
 
 ```text
-99-ejemplos-alumna/h1-primer-asistente/
+../../../03-EJEMPLOS-LAURA-PRIVADOS/h1-primer-asistente/
 ```
 
 Este ejemplo no debe entregarse al alumnado como solución cerrada sin adaptación. Su función es servir al docente para calibrar:
@@ -357,8 +355,7 @@ Este ejemplo no debe entregarse al alumnado como solución cerrada sin adaptaci�
 - nivel de detalle esperado;
 - estructura de repositorio;
 - README;
-- portfolio;
-- registro de IA;
+- diario o Scrum, solo cuando exista algo significativo que conservar;
 - defensa mínima;
 - calidad realista de una primera entrega.
 

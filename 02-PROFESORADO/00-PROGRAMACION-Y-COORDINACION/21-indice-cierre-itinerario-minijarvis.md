@@ -47,10 +47,11 @@ La carpeta `../../../03-EJEMPLOS-LAURA-PRIVADOS/` permanece oculta al comenzar c
 Cada hito combina, según corresponda:
 
 - producto ejecutable o artefacto del reto;
-- README y documentación técnica;
-- pruebas, incidencias o depuración;
-- portfolio individual;
-- registro de uso de IA;
+- repositorio, README y versión evaluada desde H1;
+- pruebas, incidencias o depuración conservadas en su fuente técnica;
+- diario individual solo para aprendizajes, decisiones, bloqueos o uso de IA significativos;
+- Scrum para tareas, decisiones, bloqueos, review, retrospectiva o uso colectivo de IA significativo;
+- Sites como selección periódica en C1, C2 y HF, no como portfolio duplicado por hito;
 - review y retrospectiva;
 - defensa individual.
 

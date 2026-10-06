@@ -27,11 +27,11 @@ Documentos anexos:
 2. Programación aporta el núcleo de construcción del agente.
 3. Entornos aporta la profesionalización del proceso: IDE, GitHub, pruebas, depuración, refactorización, UML, documentación y CI/Docker si procede.
 4. Los RA imprescindibles de Programación son RA1, RA2, RA3, RA4, RA5 y RA6.
-5. Los RA7, RA8 y RA9 de Programación son no imprescindibles, pero evaluables según avance del grupo.
+5. **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA:** clasificación, obligatoriedad, profundidad, peso y efectos de superación de RA7, RA8 y RA9.
 6. En Entornos se intentan cubrir todos los RA de forma distribuida, porque el módulo tiene una carga menor pero muy conectada con el proyecto.
 7. La IA puede usarse, pero toda evidencia asistida por IA exige registro, comprensión y defensa.
 8. Cada hito debe producir evidencias técnicas, de proceso y de reflexión.
-9. La referencia principal de objetivos por módulos es `documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`; los temas del curso 2025/2026 se usan como referencia de secuencia y contenidos, no como eje principal del nuevo diseño.
+9. La referencia principal de objetivos por módulos es `../04-RECURSOS-NORMATIVOS-Y-TEMARIOS/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`; los temas del curso 2025/2026 se usan como referencia de secuencia y contenidos, no como eje principal del nuevo diseño.
 10. Aunque la propuesta de objetivos aparece como Programación + Entornos de Desarrollo, este trabajo mantendrá separación documental y evaluativa entre ambos módulos.
 11. El itinerario debe formar AI-Enhanced Developers capaces de resolver problemas: comprender qué construir, construirlo con apoyo crítico de IA y asegurar que funciona mediante Git, pruebas, Docker/CI y revisión.
 
@@ -41,15 +41,15 @@ Documentos anexos:
 
 | Hito | Periodo orientativo | Producto guía | Scrum/HEXA | Resultado esperado |
 |---|---|---|---|---|
-| H0 | Semana 1 | Diagnóstico + equipos provisionales + torre + tablero | H–E–X–A completo | Comprender Scrum, reconocer aportaciones y validar equipos de 3 o 4. |
-| H1 | Sept-oct | Primer asistente por consola | H–E–X–A completo | Programa Java muy básico con entrada, salida, variables y constantes; sin menú ni estructuras de control avanzadas. |
-| H2 | Oct-nov | Agente con decisiones y depuración | H–E–X–A completo | Comandos, menús, estructuras de control, pruebas manuales y depuración. |
-| H3 | Nov-dic | Agente con memoria en colecciones | H–E–X–A completo | Memoria temporal con arrays/listas/mapas y búsquedas. |
-| H4 | Ene-feb | Agente orientado a objetos | H–E–X–A completo | Modelo de clases: Agent, Message, Memory, Tool, Command. |
-| H5 | Feb-mar | Agente extensible con herramientas | H–E–X–A completo | Interfaces, composición/herencia, refactorización y GitHub colaborativo. |
-| H6 | Abr-inicio mayo | Agente persistente y trazable | H–E–X–A completo | Ficheros, logs, base de conocimiento, registro de IA, Docker guiado. |
-| H7 | Antes de FFEOE si procede | Integración IA responsable | H–E–X–A completo | Conexión opcional con Gemini/Jarvis o simulación robusta. |
-| HF | Después FFEOE | Presentación/recuperación | H–E–X–A completo | Defensa, portfolio final, recuperación o mejora. |
+| H0 | Semana 1 | Diagnóstico + equipos provisionales + torre + tablero | Fase 0 transversal + ciclo completo | Comprender Scrum, reconocer aportaciones y validar equipos de 3 o 4. |
+| H1 | Sept-oct | Primer asistente por consola | Fase 0 transversal + ciclo completo | Programa Java secuencial con entrada textual, conversión, cálculo y comparación booleana observable; sin bifurcaciones. |
+| H2 | Oct-nov | Agente con decisiones y depuración | Fase 0 transversal + ciclo completo | Comandos, menús, estructuras de control, pruebas manuales y depuración. |
+| H3 | Nov-dic | Agente con memoria en colecciones | Fase 0 transversal + ciclo completo | Memoria temporal con arrays/listas/mapas y búsquedas. |
+| H4 | Ene-feb | Agente orientado a objetos | Fase 0 transversal + ciclo completo | Modelo de clases: Agent, Message, Memory, Tool, Command. |
+| H5 | Feb-mar | Agente extensible con herramientas | Fase 0 transversal + ciclo completo | Interfaces, composición/herencia, refactorización y GitHub colaborativo. |
+| H6 | Abr-inicio mayo | Agente persistente y trazable | Fase 0 transversal + ciclo completo | Ficheros, logs, base de conocimiento, registro de IA, Docker guiado. |
+| H7 | Antes de FFEOE si procede | Integración IA responsable | Fase 0 transversal + ciclo completo | Conexión opcional con Gemini/Jarvis o simulación robusta. |
+| HF | Después FFEOE | Presentación/recuperación | Fase 0 transversal + ciclo completo | Defensa, portfolio final, recuperación o mejora. |
 
 ---
 
@@ -71,13 +71,13 @@ Documentos anexos:
 
 | Elemento | Detalle |
 |---|---|
-| Producto | Programa Java muy básico de consola que recibe una entrada simple y muestra varias respuestas. No incluye aún menú, bucles ni `switch`. |
+| Producto | Programa Java pequeño y secuencial que recibe texto, convierte una entrada numérica, calcula, produce y muestra una comparación booleana. No usa `if`, `if/else` ni bifurcaciones. |
 | Programación | PR RA1; PR RA2 inicial. |
 | Entornos | ED RA1; ED RA2: IntelliJ, proyecto, fuente, ejecutable, configuración básica. |
-| Evidencias | Repositorio inicial, código Java sencillo, capturas de ejecución, README básico, primer portfolio individual. |
-| Tareas | Crear proyecto en IntelliJ; escribir programa básico; usar variables y constantes; leer entrada; mostrar mensajes; comentar solo si aporta claridad; subir a GitHub. |
+| Evidencias | Repositorio e historial, código Java, README con comprobación reproducible, versión evaluada y defensa; diario o Scrum solo si existe aprendizaje, decisión, bloqueo o uso de IA significativo. |
+| Tareas | Crear proyecto en IntelliJ; escribir el programa; usar variables, tipos y una constante; leer texto con `Scanner`, convertir, calcular, comparar y mostrar el `boolean`; comprobarlo, documentarlo y subirlo a GitHub. |
 | CE dominantes | PR RA1 a,b,c,d,e,f,i; PR RA2 b,i; ED RA1 a,b,c,e,f; ED RA2 a,g. |
-| Defensa | Explicar estructura del programa, variables usadas, flujo de ejecución y cómo se ejecuta desde IntelliJ. |
+| Defensa | Explicar estructura, variables/tipos, constante, entrada, conversión, cálculo, comparación booleana sin bifurcación y ejecución desde IntelliJ. |
 | IA | Verde: pedir explicación de sintaxis. Amarillo: pedir ejemplos, registrarlos y adaptarlos. Rojo: entregar programa completo sin entender. |
 
 ### H2. Agente con decisiones y depuración
@@ -124,7 +124,7 @@ Documentos anexos:
 | Elemento | Detalle |
 |---|---|
 | Producto | Agente con herramientas internas: calculadora, buscador en memoria, ayuda, resumen, validador u otras. |
-| Programación | PR RA7 no imprescindible, con alcance adaptable. Refuerzo de PR RA4 y RA6. |
+| Programación | **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA** para PR RA7; refuerzo de PR RA4 y RA6. |
 | Entornos | ED RA4: refactorización, control de versiones, repositorios remotos, documentación, integración continua si procede. |
 | Evidencias | Interfaces o clases abstractas; composición/herencia; pull requests o ramas; revisión de código; refactorización documentada. |
 | Tareas | Definir interfaz Tool; implementar varias herramientas; refactorizar código repetido; usar ramas; revisar código; documentar clases; crear checklist de calidad. |
@@ -137,7 +137,7 @@ Documentos anexos:
 | Elemento | Detalle |
 |---|---|
 | Producto | Agente que guarda/recupera información en ficheros, mantiene logs y consulta una pequeña base de conocimiento. Docker guiado si procede. |
-| Programación | PR RA5 imprescindible. PR RA8/RA9 no imprescindibles si se introduce persistencia avanzada o BD. |
+| Programación | PR RA5; **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA** para PR RA8/RA9. |
 | Entornos | ED RA4: repositorio, documentación, CI/Docker guiado. ED RA3: pruebas de persistencia. |
 | Evidencias | Lectura/escritura de ficheros; logs; base de conocimiento; prueba de recuperación; documentación de ejecución; registro IA. |
 | Tareas | Guardar historial; cargar memoria; gestionar errores de fichero; crear formato de intercambio simple; preparar ejecución reproducible; usar contenedor preparado. |
@@ -150,7 +150,7 @@ Documentos anexos:
 | Elemento | Detalle |
 |---|---|
 | Producto | Integración opcional con Gemini/Jarvis o simulación robusta de LLM si el grupo no está preparado para API real. |
-| Programación | Consolidación de RA imprescindibles; RA7/RA8/RA9 según alcance. |
+| Programación | Consolidación de RA1–RA6; **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA** para RA7/RA8/RA9. |
 | Entornos | Seguridad, documentación, pruebas, configuración, trazabilidad. |
 | Evidencias | Registro de prompts, validación humana, control de datos, pruebas de respuesta, limitaciones documentadas. |
 | Tareas | Definir casos de uso; preparar prompts; evitar datos personales; gestionar respuestas; validar; registrar; comparar modo simulado vs modo real; realizar en casa comparación Java ↔ Python de la integración o simulación. |
@@ -181,9 +181,9 @@ Cada hito, salvo H0 si se decide simplificar, deberá indicar con claridad qué 
 | Código funcional | Equipo con trazabilidad individual | Proyecto ejecutable, código fuente organizado y versión etiquetada o identificable en GitHub. | Producto técnico. |
 | Commits GitHub | Individual/equipo | Historial de commits con mensajes comprensibles; ramas/issues si procede. | Autoría, progreso, colaboración. |
 | README o documentación técnica | Equipo | Instrucciones de instalación/ejecución, descripción del hito, comandos, limitaciones y ejemplos. | Instalación, uso y decisiones. |
-| Portfolio individual | Individual | Reflexión personal sobre qué hizo, qué aprendió, qué problemas tuvo y qué sabe defender. | Comprensión y evolución. |
-| Registro de uso de IA | Individual/equipo según uso | Herramienta usada, prompt/resumen, resultado aceptado, cambios propios, verificación y riesgos. | Trazabilidad y ética. |
-| Pruebas/checklist | Equipo | Tabla de casos de prueba, resultado esperado, resultado obtenido e incidencias detectadas. | Calidad y validación. |
+| Diario individual | Individual | Aprendizaje, decisión, bloqueo o uso individual de IA significativo. | Comprensión y evolución sin cuota ni portfolio por hito. |
+| Scrum del equipo | Equipo | Tareas, decisiones, bloqueos, review, retrospectiva o uso colectivo de IA significativo. | Proceso y trazabilidad sin registro paralelo. |
+| Pruebas/checklist | Equipo | Casos reproducibles conservados en código o README; tabla separada solo si la actividad la necesita. | Calidad y validación. |
 | Demo/review | Equipo | Presentación breve del incremento funcionando y explicación de decisiones. | Comunicación técnica. |
 | Defensa oral | Individual | Respuestas a preguntas, modificación o explicación de fragmentos del entregable. | Comprensión real y autoría. |
 | Retrospectiva | Equipo + individual | Qué funcionó, qué no funcionó, qué se cambiará en el siguiente sprint. | Mejora continua. |
@@ -191,7 +191,7 @@ Cada hito, salvo H0 si se decide simplificar, deberá indicar con claridad qué 
 Ejemplo real de entregable elaborado como alumna:
 
 ```text
-99-ejemplos-alumna/h1-primer-asistente/
+../../../03-EJEMPLOS-LAURA-PRIVADOS/h1-primer-asistente/
 ```
 
 ---
@@ -243,9 +243,9 @@ Preguntas de defensa:
 | RA4 | Tema 5 / UD5 — Programación básica de clases | Imprescindible | H4 | Clases propias, métodos, visibilidad, constructores, objetos. |
 | RA5 | Tema 8 / UD8 — Interfaces gráficas de escritorio | Imprescindible | H6 | Entrada/salida, ficheros, posible interfaz simple si procede. |
 | RA6 | Tema 4 / UD4 — Estructuras de datos; Tema 7 / UD7 — Programación funcional como apoyo | Imprescindible | H3 | Arrays, listas, mapas, iteradores, búsquedas, JSON si procede. |
-| RA7 | Tema 6 / UD6 — Programación avanzada de clases | No imprescindible | H5-H7 | Herencia, interfaces, composición, jerarquías, extensibilidad y patrones si procede. |
-| RA8 | Tema 10 / UD10 — Introducción a JPA | No imprescindible | H6-H7 | Persistencia orientada a objetos si el nivel lo permite. |
-| RA9 | Tema 9 / UD9 — Introducción a JDBC | No imprescindible | H6-H7 | Gestión de datos en BD si el nivel lo permite. |
+| RA7 | Tema 6 / UD6 — Programación avanzada de clases | Pendiente de validación | H5-H7, ubicación provisional | Herencia, interfaces, composición, jerarquías, extensibilidad y patrones. |
+| RA8 | Tema 10 / UD10 — Introducción a JPA | Pendiente de validación | H6-H7, ubicación provisional | Persistencia orientada a objetos. |
+| RA9 | Tema 9 / UD9 — Introducción a JDBC | Pendiente de validación | H6-H7, ubicación provisional | Gestión de datos en BD. |
 
 ### 7.2. Entornos
 
@@ -267,9 +267,9 @@ La matriz no fija todavía porcentajes definitivos de instrumentos, pero propone
 1. Cada RA se califica con evidencias asociadas a criterios concretos.
 2. Cada hito puede aportar evidencias a varios RA.
 3. Las defensas individuales pueden ajustar o validar la calificación de evidencias grupales.
-4. El portfolio individual sirve para detectar aprendizaje real, evolución y uso responsable de IA.
+4. El diario individual recoge aprendizaje, evolución y uso responsable de IA cuando sean significativos; Sites selecciona evidencias en C1, C2 y HF.
 5. Una prueba individual puntual puede usarse cuando haya dudas razonables sobre comprensión o autoría.
-6. RA7, RA8 y RA9 de Programación deben estar visibles en el diseño, pero no bloquearán la superación si no son imprescindibles y el grupo no permite un desarrollo profundo.
+6. **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA:** clasificación, obligatoriedad, profundidad, peso y efectos de superación de RA7, RA8 y RA9.
 
 ---
 

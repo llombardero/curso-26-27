@@ -9,7 +9,7 @@
 **Tiempo previsto:** 45 minutos.
 **Hito:** H1.
 **Fase HEXA:** Ejecutar.
-**Modalidad:** Equipo.
+**Modalidad:** Individual → contraste por parejas.
 
 ---
 

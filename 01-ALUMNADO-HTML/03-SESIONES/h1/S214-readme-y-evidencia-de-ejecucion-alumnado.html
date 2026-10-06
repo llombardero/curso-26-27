@@ -133,8 +133,8 @@ MiniJarvis recuerda conversaciones.</code></pre>
 sabéis utilizarla, podéis documentarla.</p>
 <p>Por ejemplo:</p>
 <div class="sourceCode" id="cb6"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">javac</span> src/Main.java</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-cp</span> src Main</span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">javac</span> <span class="at">-d</span> out src/Main.java</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-cp</span> out Main</span></code></pre></div>
 <p>No incluyáis instrucciones que no hayáis comprobado.</p>
 <hr />
 <h2 id="6-añade-una-comprobación-reproducible">6. Añade una comprobación
@@ -148,7 +148,8 @@ esperado.</p>
 ¿Cómo te llamas? Laura
 Hola, Laura.
 ¿Cuántas horas has practicado Programación? 4
-Si la próxima semana practicas una hora más, serán 5 horas.</code></pre>
+Si la próxima semana practicas una hora más, serán 5 horas.
+¿Has alcanzado 4 horas de práctica? true</code></pre>
 <p>El ejemplo debe coincidir con vuestra versión real.</p>
 <p>No tiene que ser idéntico al de esta ficha.</p>
 <hr />
@@ -156,7 +157,9 @@ Si la próxima semana practicas una hora más, serán 5 horas.</code></pre>
 <p>El README también debe evitar crear expectativas falsas.</p>
 <p>Podéis indicar que esta versión todavía no incorpora, por
 ejemplo:</p>
-<pre class="text"><code>menús
+<pre class="text"><code>if / if-else
+bifurcaciones
+menús
 bucles
 memoria persistente
 varias clases propias
@@ -181,7 +184,8 @@ README.</li>
 <pre class="text"><code>una ejecución con un nombre ficticio
 otra ejecución con otro nombre
 una entrada numérica válida
-otra entrada numérica válida diferente</code></pre>
+otra entrada numérica válida diferente
+un resultado booleano esperado para cada entrada numérica</code></pre>
 <p>Podéis observar también una entrada no numérica si forma parte de la
 comprobación realizada en S212.</p>
 <p>No necesitáis controlar todavía ese error.</p>

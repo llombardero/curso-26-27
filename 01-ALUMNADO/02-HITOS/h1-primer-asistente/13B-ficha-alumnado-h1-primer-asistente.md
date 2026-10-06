@@ -27,6 +27,7 @@ Al terminar H1 debes ser capaz de:
 - recibir datos mediante `Scanner`;
 - convertir una entrada textual a un valor numérico;
 - realizar un cálculo sencillo;
+- producir y mostrar una comparación booleana sin cambiar el flujo del programa;
 - ejecutar y comprobar el programa;
 - localizar y corregir errores básicos;
 - explicar cómo se ejecuta y qué hace.
@@ -44,6 +45,8 @@ En H1 todavía no debes incorporar:
 ```text
 [ ] Menús.
 [ ] Bucles.
+[ ] Decisiones con if o if/else.
+[ ] Bifurcaciones.
 [ ] switch.
 [ ] Memoria.
 [ ] Listas, sets o mapas.
@@ -73,6 +76,7 @@ Hola, soy MiniJarvis.
 Encantado de conocerte, Laura.
 ¿Cuántas horas has practicado Programación? 4
 Si la próxima semana practicas una hora más, serán 5 horas.
+¿Has alcanzado 4 horas de práctica? true
 ```
 
 La salida concreta puede ser diferente.
@@ -161,7 +165,7 @@ Leer datos.
         ↓
 Convertir un dato numérico.
         ↓
-Realizar un cálculo.
+Realizar un cálculo y mostrar una comparación booleana.
         ↓
 Comprobar.
         ↓
@@ -206,6 +210,7 @@ Al cerrar H1 debes poder:
 - explicar una variable y una constante;
 - explicar cómo entra la información;
 - explicar la conversión numérica;
+- explicar el cálculo y el resultado `boolean` de la comparación;
 - modificar una parte sencilla;
 - explicar algún error que hayas encontrado y cómo lo resolviste.
 
@@ -240,6 +245,8 @@ h1-primer-asistente/
 - una conversión numérica;
 - un cálculo sencillo;
 - salida que muestre el resultado;
+- una comparación sencilla cuyo resultado `boolean` se almacene o utilice de forma visible y se muestre;
+- flujo secuencial, sin `if`, `if/else` ni bifurcaciones;
 - comentarios útiles cuando aporten contexto, evitando comentar lo obvio.
 
 ---
@@ -286,13 +293,16 @@ String userName;
 [ ] Utilizarlo posteriormente en una salida.
 ```
 
-### Paso 5 — Entrada numérica y cálculo
+### Paso 5 — Entrada numérica, cálculo y comparación
 
 ```text
 [ ] Leer un número inicialmente como texto.
 [ ] Convertirlo a un tipo numérico.
 [ ] Realizar un cálculo sencillo.
 [ ] Mostrar el resultado.
+[ ] Realizar una comparación sencilla con el valor numérico.
+[ ] Guardar o utilizar de forma visible su resultado booleano.
+[ ] Mostrar `true` o `false` sin decidir qué instrucciones se ejecutan.
 ```
 
 No necesitas todavía tomar decisiones mediante `if`.
@@ -374,7 +384,8 @@ H1 está técnicamente preparado para su cierre cuando puedes demostrar que:
 [ ] Utiliza al menos una constante.
 [ ] Convierte una entrada textual a número.
 [ ] Realiza al menos un cálculo sencillo.
-[ ] El resultado puede comprobarse ejecutando el programa.
+[ ] Produce y muestra una comparación booleana sin bifurcación.
+[ ] El cálculo y el resultado booleano pueden comprobarse ejecutando el programa.
 [ ] El código se mantiene dentro del alcance de H1.
 [ ] El README explica qué hace y cómo se ejecuta.
 ```
@@ -438,6 +449,8 @@ Prepárate para cuestiones como:
 ¿Qué devuelve nextLine()?
 ¿Por qué necesitas convertir este texto?
 ¿Qué cálculo estás realizando?
+¿Qué comparación estás realizando y cuándo produce true o false?
+¿Por qué esa comparación no decide el flujo en H1?
 ¿Qué ocurre si escribes texto donde esperabas un número?
 ¿Cómo ejecutas esta versión?
 ¿Por qué todavía no hay menú ni bucles?
@@ -472,6 +485,8 @@ Antes de cerrar H1 comprueba:
 [ ] Puedo explicar cómo entra la información.
 [ ] Puedo explicar la conversión numérica.
 [ ] Puedo explicar el cálculo.
+[ ] Puedo localizar la comparación y predecir el resultado booleano.
+[ ] Puedo explicar que H1 no utiliza ese resultado para bifurcar el flujo.
 [ ] Puedo modificar una parte sencilla.
 [ ] No he adelantado contenidos de otros hitos.
 [ ] El README permite saber qué hace y cómo ejecutar esta versión.

@@ -24,7 +24,7 @@ Los cierres C1/C2 regulan o recuperan fases; no sustituyen el ciclo del hito.
 | Hito | Reto | Expediente HEXA mínimo |
 |---|---|---|
 | H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
-| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
+| H1 | Construir el primer MiniJarvis Java por consola, pequeño, secuencial, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/tipos/constante/Scanner/conversión/cálculo/comparación, programa, README, evidencia y defensa |
 | H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
 | H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
 | H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
@@ -48,7 +48,7 @@ Documentos relacionados:
 - `01A-anexo-programacion-ra-ce.md`
 - `01B-anexo-entornos-ra-ce.md`
 - `02-calendario-hitos-sprints-2026-2027.md`
-- `04A-enunciados-y-entregables-alumnado.md`
+- `../../../01-ALUMNADO/00-EMPIEZA-AQUI/04A-enunciados-y-entregables-alumnado.md`
 - `04B-modelo-entregables-laura.md`
 - `05-politica-uso-ia-semaforo-registro-defensa.md`
 
@@ -130,11 +130,12 @@ RA/CE principales:
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |
 |---|---|---|---|---|
-| Programa Java básico | Clase `Main` clara, entrada/salida correcta, variables y constantes bien usadas. | Programa ejecutable con entrada/salida y variables. | Programa muy incompleto o con errores menores. | No compila o no responde al hito. |
-| Ajuste al nivel | Mantiene la solución simple, sin menú ni complejidad prematura. | Alguna ampliación menor pero defendible. | Introduce código no trabajado que apenas entiende. | Entrega código avanzado no defendible o generado sin comprensión. |
+| Programa Java básico | Clase `Main` clara; compila y ejecuta; integra variables/tipos, constante, `Scanner`, `nextLine()`, conversión, cálculo y salida comprobable. | Programa ejecutable con los elementos principales y resultado reproducible. | Programa incompleto o con errores que limitan la comprobación. | No compila, no ejecuta o no responde al hito. |
+| Comparación booleana observable | Produce y muestra una comparación simple, explica `true`/`false` y mantiene el flujo secuencial. | La comparación y su salida funcionan y puede explicarlas. | La comparación o su salida son parciales o confusas. | No existe comparación observable o se exige control de flujo de H2. |
+| Ajuste al nivel | Mantiene la solución simple, sin `if/else`, bifurcaciones, menú ni complejidad prematura. | Alguna ampliación menor pero defendible. | Introduce código no trabajado que apenas entiende. | Entrega código avanzado no defendible o generado sin comprensión. |
 | IntelliJ y proyecto | Proyecto configurado, ejecutable y explicado. | Proyecto se abre y ejecuta con alguna ayuda. | Configuración confusa. | No puede ejecutarse en el entorno. |
-| README | Explica qué hace, cómo ejecutar y qué se entrega. | README suficiente. | README incompleto. | Sin README útil. |
-| Defensa | Explica `main`, variable, constante, `Scanner` y ejecución. | Explica lo principal. | Dudas importantes en conceptos básicos. | No puede explicar el código. |
+| README | Explica qué hace, límites, cómo ejecutar y una comprobación reproducible; identifica la versión evaluada. | README y versión suficientes y localizables. | README incompleto o versión dudosa. | Sin README útil o sin versión identificable. |
+| Defensa | Explica `main`, variables/tipos, constante, `Scanner`, lectura textual, conversión, cálculo, salida y comparación booleana sin bifurcación. | Explica lo principal, incluido el `boolean`. | Dudas importantes en conceptos básicos. | No puede explicar el código. |
 
 ---
 
@@ -196,7 +197,7 @@ RA/CE principales:
 
 RA/CE principales:
 
-- Programación PR RA7 no imprescindible/evaluable.
+- Programación PR RA7: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 - Entornos ED RA4.
 - Entornos ED RA6 si procede.
 
@@ -216,7 +217,7 @@ RA/CE principales:
 RA/CE principales:
 
 - Programación PR RA5.
-- Programación PR RA8/RA9 como ampliación.
+- Programación PR RA8/RA9: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 - Entornos ED RA3.
 - Entornos ED RA4.
 
@@ -236,7 +237,7 @@ RA/CE principales:
 RA/CE principales:
 
 - Consolidación Programación PR RA1-RA6.
-- Programación PR RA7/RA8/RA9 si procede.
+- Programación PR RA7/RA8/RA9: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 - Entornos ED RA3/RA4 aplicados a validación, seguridad y documentación.
 
 | Dimensión | 4 — Excelente | 3 — Adecuado | 2 — Básico | 1 — Insuficiente |

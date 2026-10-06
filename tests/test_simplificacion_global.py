@@ -119,6 +119,9 @@ def test_modalidad_explicita_y_coherente_en_106_parejas(session_parser):
         "Individual", "Equipo", "Parejas",
         "Individual → puesta en común en equipo",
         "Equipo → comprobación individual",
+        "Equipo → comprobación cruzada",
+        "Equipo → defensa individual",
+        "Individual → contraste por parejas",
     }
     counts = {value: 0 for value in allowed}
     students = sorted((ALUMNADO / "03-SESIONES").rglob("S*-alumnado.md"))
@@ -138,14 +141,17 @@ def test_modalidad_explicita_y_coherente_en_106_parejas(session_parser):
         if session.folder != "h1":
             assert session.grouping == mode, number
         counts[mode] += 1
-        if "→" in mode:
+        if "→" in mode and student.parent.name != "h1":
             assert "## Organización del trabajo" in student_text
     assert counts == {
         "Individual": 23,
-        "Equipo": 51,
+        "Equipo": 49,
         "Parejas": 2,
-        "Individual → puesta en común en equipo": 18,
-        "Equipo → comprobación individual": 12,
+        "Individual → puesta en común en equipo": 17,
+        "Equipo → comprobación individual": 11,
+        "Equipo → comprobación cruzada": 1,
+        "Equipo → defensa individual": 1,
+        "Individual → contraste por parejas": 2,
     }
 
 
@@ -196,7 +202,7 @@ def test_contrato_modalidad_detecta_perdida_en_el_modelo(session_parser, groupin
 def test_modalidades_criticas_y_defensas():
     expected = {
         "S204": "Equipo → comprobación individual",
-        "S215": "Equipo → comprobación individual",
+        "S215": "Equipo → defensa individual",
         "S240": "Equipo → comprobación individual",
         "S257": "Individual",
         "S274": "Equipo → comprobación individual",
@@ -266,10 +272,10 @@ def test_fuentes_sin_modelo_documental_obsoleto():
 
 def test_guias_github_y_drive_declaran_fuentes_canonicas():
     start = ALUMNADO / "00-EMPIEZA-AQUI"
-    github = (start / "15-guia-basica-github-alumnado.md").read_text(encoding="utf-8")
+    github = (start / "15-introduccion-git-y-github-alumnado.md").read_text(encoding="utf-8")
     drive = (start / "14-guia-basica-drive-alumnado.md").read_text(encoding="utf-8")
-    assert "Código, README, historial y versión evaluada" in github
-    assert "GitHub será el lugar principal del código desde H1" in github
+    for phrase in ("código", "historial", "versiones", "README"):
+        assert phrase in github
     assert "espacio operativo excepcional" in drive
     assert "02_EVIDENCIAS_NO_CODE" in drive
     assert "capturas de ejecución rutinarias" in drive

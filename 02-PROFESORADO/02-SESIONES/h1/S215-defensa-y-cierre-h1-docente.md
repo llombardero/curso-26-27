@@ -103,12 +103,13 @@ Elige preguntas según el código de cada persona y la evidencia que necesites c
 - Explica qué entrada podría provocar un error de ejecución y por qué.
 - Recorre el flujo desde teclado hasta el uso del dato en la salida.
 
-### Comparaciones y decisiones
+### Comparación booleana sin bifurcación
 
 - Señala una comparación y predice su resultado para un valor concreto.
-- Señala la condición de una decisión.
-- Ejecuta o explica un caso que recorra la rama `true` y otro que recorra la rama `false`.
-- Cambia un valor sencillo, predice qué rama se recorrerá y compruébalo.
+- Explica qué significan `true` y `false` en esa comparación.
+- Ejecuta o explica dos valores que produzcan resultados booleanos distintos, sin ramas.
+- Cambia un valor sencillo, predice qué `boolean` se mostrará y compruébalo.
+- Explica por qué el resultado no decide qué instrucciones se ejecutan en H1.
 
 ### Alcance de H1
 
@@ -185,30 +186,18 @@ S215 contiene la única entrega oficial de H1. Si no está en la tarea Moodle de
 
 ### Contenido de la entrega
 
-Pega enlaces profundos, no carpetas genéricas, e incluye únicamente los campos canónicos:
+La entrega Moodle contiene únicamente:
 
-```text
-Equipo:
-Integrantes:
+1. el tag `h1-entrega` o un commit estable de la versión evaluada;
+2. la confirmación de que diario y Scrum están actualizados en los enlaces estables ya registrados;
+3. una evidencia no-code excepcional, solo si existe.
 
-Repositorio GitHub:
-README H1:
-Scrum equipo H1, si corresponde:
-
-Permisos comprobados: sí/no
-Observaciones o bloqueo pendiente:
-```
-
-Añade la confirmación:
-
-```text
-Confirmo que los enlaces llevan a evidencias concretas de H1 y que he comprobado los permisos de acceso.
-```
+No volver a copiar URLs estables ni adjuntar README, capturas, registro IA o PDF/XLSX rutinarios.
 
 - **GitHub y README:** localizan el código, las pruebas reproducibles y la explicación técnica.
 - **Scrum:** se enlaza solo cuando la tarea lo necesita para localizar review, retrospectiva, una decisión, un cambio o un bloqueo real.
 - **Diario individual:** se usa solo para aprendizaje o siguiente paso significativo; no forma parte rutinaria de la entrega.
-- **Moodle:** contiene la entrega oficial breve con los enlaces canónicos y la confirmación de permisos.
+- **Moodle:** identifica la versión evaluada y confirma las fuentes estables sin volver a copiar sus URLs.
 - **Site:** no se actualiza ni se enlaza en S215; H1 podrá seleccionarse posteriormente durante C1.
 - **Drive:** no sustituye GitHub ni README y no se usa para copiar código o ejecución rutinaria.
 
@@ -233,7 +222,7 @@ Durante la defensa y el trabajo paralelo, observa específicamente:
 - que la persona demuestra autoría y comprensión individual;
 - que localiza en el código aquello que explica;
 - que formula una predicción concreta;
-- que explica valores, tipos, operaciones o condiciones con precisión suficiente;
+- que explica valores, tipos, operaciones y la comparación booleana con precisión suficiente;
 - que realiza una modificación sencilla cuando procede;
 - que ejecuta y contrasta el resultado;
 - que distingue lo logrado en H1 de contenidos posteriores;
@@ -249,7 +238,7 @@ No des la explicación en lugar del alumnado. Utiliza la ayuda mínima:
 - **Respuesta vaga:** pide volver a una línea concreta.
 - **No sabe predecir:** aísla los valores y la expresión antes de ejecutar.
 - **No sabe explicar una variable:** pide tipo, nombre, valor actual y posible cambio.
-- **No entiende una decisión:** prueba un valor para cada rama y pide anticipar el recorrido.
+- **No entiende la comparación:** aísla operandos y operador, prueba un valor que produzca `true` y otro que produzca `false`, y recuerda que H1 no abre ramas.
 - **No sabe explicar la entrada:** recorre teclado → `String` → conversión, si procede → uso.
 - **No justifica una constante:** pregunta qué ocurriría si cambiara durante la ejecución.
 - **Dice solo «funciona»:** pide entrada, salida esperada, salida obtenida y lugar donde se comprueba.

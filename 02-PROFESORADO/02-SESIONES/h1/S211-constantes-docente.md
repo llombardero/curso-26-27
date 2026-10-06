@@ -140,7 +140,7 @@ horas >= 4                  -> boolean
 "Hola, " + nombreUsuario    -> String
 ```
 
-Antes de ejecutar, pregunta por el valor y el tipo esperado. Las expresiones booleanas se utilizan aquí solo para reconocer que una expresión produce un resultado tipado; comparaciones, lógica y decisiones se desarrollan en S213.
+Antes de ejecutar, pregunta por el valor y el tipo esperado. Las expresiones booleanas se utilizan aquí solo para reconocer que una expresión produce un resultado tipado; la comparación obligatoria se integra en S212 y las decisiones con control de flujo comienzan en H2.
 
 ### Operar, almacenar y utilizar
 
@@ -398,7 +398,7 @@ Cierra en voz alta:
 
 ## Límite de la sesión
 
-S211 parte de variables y tipos ya trabajados en S210. No introduce `Scanner`, parseo ni casting como contenido central; la entrada y las conversiones corresponden a S212. Las expresiones lógicas aparecen solo para reconocer resultados con tipo y no adelantan el trabajo de decisiones de S213.
+S211 parte de variables y tipos ya trabajados en S210. No introduce `Scanner`, parseo ni casting como contenido central; la entrada, las conversiones, el cálculo y la comparación booleana observable corresponden a S212. Las expresiones lógicas aparecen solo para reconocer resultados con tipo y no adelantan las decisiones con control de flujo de H2.
 
 ## Al terminar
 

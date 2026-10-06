@@ -147,8 +147,8 @@ Si vuestro proyecto permite además una ejecución por terminal y ya sabéis uti
 Por ejemplo:
 
 ```bash
-javac src/Main.java
-java -cp src Main
+javac -d out src/Main.java
+java -cp out Main
 ```
 
 No incluyáis instrucciones que no hayáis comprobado.
@@ -173,6 +173,7 @@ Hola, soy MiniJarvis.
 Hola, Laura.
 ¿Cuántas horas has practicado Programación? 4
 Si la próxima semana practicas una hora más, serán 5 horas.
+¿Has alcanzado 4 horas de práctica? true
 ```
 
 El ejemplo debe coincidir con vuestra versión real.
@@ -188,6 +189,8 @@ El README también debe evitar crear expectativas falsas.
 Podéis indicar que esta versión todavía no incorpora, por ejemplo:
 
 ```text
+if / if-else
+bifurcaciones
 menús
 bucles
 memoria persistente
@@ -219,6 +222,7 @@ una ejecución con un nombre ficticio
 otra ejecución con otro nombre
 una entrada numérica válida
 otra entrada numérica válida diferente
+un resultado booleano esperado para cada entrada numérica
 ```
 
 Podéis observar también una entrada no numérica si forma parte de la comprobación realizada en S212.

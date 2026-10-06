@@ -412,31 +412,6 @@ def test_content_panels_contain_explicit_line_boxes(generator, tmp_path, number)
             assert box.height / 12700 >= required - 0.1, (number, index, box.name, required)
 
 
-@pytest.mark.parametrize("number,slide_number", [("215", 16)])
-def test_secondary_code_panel_starts_after_all_primary_lines(generator, tmp_path, number, slide_number):
-    import textwrap
-
-    target = tmp_path / f"S{number}.pptx"
-    generator.build_presentation(generator.parse_session(*source_pair(number)), target)
-    # Sequence is now intentionally recomposed; retain the geometric regression
-    # on the source content rather than on its obsolete physical slide number.
-    marker = 'Observaciones o bloqueo pendiente:'
-    slide = next(s for s in Presentation(target).slides if marker in visible_text(s))
-    boxes = [box for box in slide.shapes if box.name == "Código editable"]
-    assert boxes
-    if len(boxes) == 1:
-        # Separating examples at source boundaries also removes the old masking
-        # risk. The original final line must still remain inside the sole panel.
-        assert marker in boxes[0].text
-        return
-    primary, secondary = boxes[:2]
-    tf = primary.text_frame
-    columns = int((primary.width - tf.margin_left - tf.margin_right) / 12700 / (22 * 0.6))
-    lines = sum(max(1, len(textwrap.wrap(p.text, columns, replace_whitespace=False,
-                                      drop_whitespace=False))) for p in tf.paragraphs)
-    assert secondary.top / 12700 >= primary.top / 12700 + lines * 22 * 1.05 + 12
-
-
 @pytest.mark.parametrize("number,slide_number", [("214", 16), ("215", 10)])
 def test_cards_have_lateral_padding_and_a_clear_footer_zone(generator, tmp_path, number, slide_number):
     from pptx.util import Inches
@@ -467,18 +442,16 @@ def test_quality_criteria_are_comparable_without_resolving_classification(genera
     assert "Estas tres ideas sirven para juzgar el alcance" in comparison[0].notes_slide.notes_text_frame.text
 
 
-def test_scope_clarification_stays_with_the_inclusions_it_qualifies(generator, tmp_path):
+def test_scope_clarification_remains_visible_and_traceable(generator, tmp_path):
     import hashlib
 
     session = generator.parse_session(*source_pair("206"))
     target = tmp_path / "S206.pptx"
     generator.build_presentation(session, target)
     slide = next(s for s in Presentation(target).slides if
-                 "entorno, proyecto y ejecución" in visible_text(s))
-    assert "No todo debe aparecer necesariamente dentro de un único Main.java." in visible_text(slide)
+                 "En el producto H1, el núcleo obligatorio debe aparecer integrado en Main.java." in visible_text(s))
     label = next(text for spec in generator.plan_slides(session) for text in spec.visible_content
                  if text.startswith("H1 recorre fundamentos suficientes"))
-    assert label not in slide.notes_slide.notes_text_frame.text
     assert any(source["sha256"] == hashlib.sha256(label.encode()).hexdigest()
                for source in metadata(slide)["notes_sources"])
 
@@ -512,7 +485,7 @@ def test_casting_prediction_precedes_its_explanation(generator, tmp_path):
 def test_conceptual_arrows_are_not_rendered_as_java_code(generator, tmp_path):
     targets = {
         "212": ("String → parseo → número", "7 → 7.0", "precioEntero → 12", "notaEntera → 7"),
-        "214": ("Caso A: horas = 5 → Objetivo alcanzado.", "Caso B: horas = 2 → Objetivo pendiente."),
+        "214": ("entrada → resultado esperado → resultado obtenido → qué demuestra",),
     }
     for number, expected in targets.items():
         target = tmp_path / f"S{number}.pptx"

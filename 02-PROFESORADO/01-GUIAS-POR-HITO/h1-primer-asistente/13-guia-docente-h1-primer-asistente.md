@@ -30,7 +30,7 @@ Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra
 | 5 — Ejecutar | S211–S212–S213 | Producto construido, probado y mejorado. |
 | 6 — Comunicar | S214–S215 | Defensa, evaluación, reflexión y mejora. |
 
-**Expediente HEXA mínimo del hito:** ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa.
+**Expediente HEXA mínimo del hito:** ficha del reto, salida diseñada, explicación de Main/variables/tipos/constante/Scanner/conversión/cálculo/comparación, programa, README, evidencia y defensa.
 
 Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecutar no se considera completada si faltan evidencias de Activar, Investigar, Idear o Planificar. Comunicar exige presentar, evaluar y reflexionar. Si falta una fase, se recuperan esa fase y su evidencia; no se repite automáticamente todo el hito.
 
@@ -66,7 +66,7 @@ Este hito no busca complejidad. Busca base sólida.
 Producto esperado:
 
 ```text
-MiniJarvis H1: programa Java básico que pide el nombre de la persona usuaria y muestra varios mensajes iniciales.
+MiniJarvis H1: programa Java básico y secuencial que lee texto, convierte una entrada numérica, calcula y muestra una comparación booleana sin bifurcar el flujo.
 ```
 
 El hito debe servir para comprobar que el alumnado empieza a comprender:
@@ -75,7 +75,10 @@ El hito debe servir para comprobar que el alumnado empieza a comprender:
 - método `main`;
 - variables;
 - constantes;
-- entrada por teclado;
+- entrada por teclado con `Scanner` y `nextLine()`;
+- conversión de texto a número;
+- cálculo sencillo;
+- comparación booleana observable sin control de flujo;
 - salida por pantalla;
 - ejecución en IntelliJ;
 - README básico;
@@ -91,6 +94,7 @@ En H1 NO debe incluirse:
 
 - menú;
 - bucles;
+- `if`, `if/else` y bifurcaciones;
 - `switch`;
 - listas o mapas;
 - clases propias adicionales;
@@ -152,6 +156,9 @@ Evidencias H1:
 - variable `String` para nombre;
 - constante con `final`;
 - uso básico de `Scanner`;
+- lectura textual con `nextLine()` y conversión numérica;
+- cálculo y salida de su resultado;
+- comparación simple y salida del resultado `boolean` sin bifurcación;
 - mensajes por pantalla;
 - defensa individual.
 
@@ -183,9 +190,12 @@ El programa debe:
 4. Pedir el nombre de la persona usuaria.
 5. Guardar el nombre en una variable.
 6. Usar al menos una constante.
-7. Mostrar varios mensajes relacionados con el proyecto MiniJarvis.
-8. Ejecutarse en IntelliJ.
-9. Tener un README básico.
+7. Leer una entrada numérica primero como texto y convertirla.
+8. Realizar y mostrar un cálculo sencillo.
+9. Realizar y mostrar una comparación booleana sin usarla para decidir qué instrucciones se ejecutan.
+10. Mostrar varios mensajes relacionados con el proyecto MiniJarvis.
+11. Compilar y ejecutarse en IntelliJ.
+12. Tener un README con instrucciones y una comprobación reproducible.
 
 Ejemplo de comportamiento esperado:
 
@@ -193,9 +203,9 @@ Ejemplo de comportamiento esperado:
 Hola, soy MiniJarvis.
 ¿Cómo te llamas? Laura
 Encantada, Laura.
-Este curso vamos a crear un pequeño agente IA.
-Curso de inicio: 2026.
-Primer objetivo: aprender la estructura básica de un programa Java.
+¿Cuántas horas has practicado Programación? 4
+Si la próxima semana practicas una hora más, serán 5 horas.
+¿Has alcanzado 4 horas de práctica? true
 ```
 
 ---
@@ -209,21 +219,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        final String ASSISTANT_NAME = "MiniJarvis";
-        final int COURSE_YEAR = 2026;
+        final String NOMBRE_ASISTENTE = "MiniJarvis";
+        final int HORAS_REFERENCIA = 4;
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Hola, soy " + ASSISTANT_NAME + ".");
+        System.out.println("Hola, soy " + NOMBRE_ASISTENTE + ".");
         System.out.print("¿Cómo te llamas? ");
-        String userName = scanner.nextLine();
+        String nombreUsuario = teclado.nextLine();
 
-        System.out.println("Encantada, " + userName + ".");
-        System.out.println("Este curso vamos a crear un pequeño agente IA.");
-        System.out.println("Curso de inicio: " + COURSE_YEAR + ".");
-        System.out.println("Primer objetivo: aprender la estructura básica de un programa Java.");
+        System.out.print("¿Cuántas horas has practicado Programación? ");
+        String textoHoras = teclado.nextLine();
+        int horasEstudio = Integer.parseInt(textoHoras);
+        int horasProximaSemana = horasEstudio + 1;
+        boolean alcanzaReferencia = horasEstudio >= HORAS_REFERENCIA;
 
-        scanner.close();
+        System.out.println("Encantada, " + nombreUsuario + ".");
+        System.out.println("La próxima semana serán " + horasProximaSemana + " horas.");
+        System.out.println("¿Has alcanzado " + HORAS_REFERENCIA + " horas? " + alcanzaReferencia);
+
+        teclado.close();
     }
 }
 ```
@@ -234,9 +249,12 @@ Puntos que debe poder defender el alumnado:
 - dónde empieza el programa;
 - qué es una constante;
 - qué es una variable;
-- qué hace `scanner.nextLine()`;
+- qué devuelve `teclado.nextLine()`;
+- por qué `Integer.parseInt` convierte el texto antes del cálculo;
+- qué cálculo se realiza;
+- qué comparación produce el `boolean` y por qué no bifurca el flujo;
 - para qué sirve `System.out.println`;
-- por qué todavía no hay menú ni bucles.
+- por qué todavía no hay `if/else`, menú ni bucles.
 
 ---
 
@@ -249,7 +267,7 @@ Puntos que debe poder defender el alumnado:
 | 1 | Presentar H1 y analizar ejemplo de salida | Idea clara del producto mínimo. |
 | 2 | Crear proyecto en IntelliJ y clase `Main` | Proyecto ejecutable con primer mensaje. |
 | 3 | Variables, constantes y salida por pantalla | Mensajes con datos fijos y variables. |
-| 4 | Entrada con `Scanner` | Nombre leído por teclado. |
+| 4 | Entrada con `Scanner`, conversión, cálculo y comparación | Texto leído, valor convertido, cálculo y `boolean` visible sin bifurcación. |
 | 5 | Limpieza, nombres claros y ejecución | Código H1 completo y simple. |
 | 6 | README y evidencia de ejecución | Documentación mínima. |
 | 7 | Revisión, defensa y recuperación | Validación individual. |
@@ -270,7 +288,7 @@ Objetivo:
 Mensaje docente:
 
 ```text
-En H1 vamos a construir la primera versión mínima de MiniJarvis. Será muy sencilla. No tendrá menú, memoria ni IA real. Queremos entender bien la estructura básica de un programa Java.
+En H1 vamos a construir la primera versión mínima y secuencial de MiniJarvis. Leerá texto, convertirá un número, calculará y mostrará una comparación booleana. No tendrá if/else, bifurcaciones, menú, memoria ni IA real.
 ```
 
 Actividad breve:
@@ -337,11 +355,11 @@ Objetivo:
 Código progresivo:
 
 ```java
-final String ASSISTANT_NAME = "MiniJarvis";
-final int COURSE_YEAR = 2026;
+final String NOMBRE_ASISTENTE = "MiniJarvis";
+final int CURSO_INICIO = 2026;
 
-System.out.println("Hola, soy " + ASSISTANT_NAME + ".");
-System.out.println("Curso de inicio: " + COURSE_YEAR + ".");
+System.out.println("Hola, soy " + NOMBRE_ASISTENTE + ".");
+System.out.println("Curso de inicio: " + CURSO_INICIO + ".");
 ```
 
 Ideas clave:
@@ -364,11 +382,11 @@ Explicación:
 
 ---
 
-### Bloque 4 — Entrada por teclado con Scanner
+### Bloque 4 — Entrada, conversión, cálculo y comparación
 
 Objetivo:
 
-- Leer el nombre de la persona usuaria.
+- Leer texto con `Scanner`, convertir una entrada numérica, calcular y mostrar una comparación booleana sin bifurcación.
 
 Código:
 
@@ -377,8 +395,15 @@ import java.util.Scanner;
 
 Scanner scanner = new Scanner(System.in);
 System.out.print("¿Cómo te llamas? ");
-String userName = scanner.nextLine();
-System.out.println("Encantada, " + userName + ".");
+String nombreUsuario = scanner.nextLine();
+System.out.print("¿Cuántas horas has practicado? ");
+String textoHoras = scanner.nextLine();
+int horasEstudio = Integer.parseInt(textoHoras);
+int horasProximaSemana = horasEstudio + 1;
+boolean alcanzaReferencia = horasEstudio >= 4;
+System.out.println("Encantada, " + nombreUsuario + ".");
+System.out.println("Horas la próxima semana: " + horasProximaSemana);
+System.out.println("¿Alcanza 4 horas? " + alcanzaReferencia);
 scanner.close();
 ```
 
@@ -387,6 +412,9 @@ Puntos a explicar:
 - `Scanner` es una clase de la biblioteca de Java;
 - `System.in` representa la entrada por teclado;
 - `nextLine()` lee una línea completa;
+- `Integer.parseInt` convierte el texto numérico a `int`;
+- el cálculo produce un nuevo valor numérico;
+- la comparación produce un `boolean` que se muestra pero no controla el flujo;
 - `System.out.print` no salta de línea;
 - `System.out.println` sí salta de línea;
 - `scanner.close()` cierra el recurso.
@@ -406,6 +434,7 @@ Criterios H1:
 - nombres claros;
 - programa corto;
 - sin funciones prematuras;
+- sin `if`, `if/else` ni bifurcaciones;
 - sin menú;
 - sin bucles;
 - sin código copiado que no se entiende;
@@ -442,7 +471,7 @@ README mínimo:
 
 ## Qué hace
 
-Este programa muestra un saludo, pide el nombre del usuario y muestra mensajes iniciales del proyecto MiniJarvis.
+Este programa muestra un saludo, lee nombre y horas como texto, convierte las horas, realiza un cálculo y muestra el resultado de una comparación booleana.
 
 ## Cómo ejecutar
 
@@ -458,18 +487,17 @@ Desde IntelliJ:
 Hola, soy MiniJarvis.
 ¿Cómo te llamas? Laura
 Encantada, Laura.
+¿Cuántas horas has practicado? 4
+Horas la próxima semana: 5
+¿Alcanza 4 horas? true
 ```
 
 ## Qué no incluye todavía
 
-No incluye menú, bucles, memoria ni IA real.
+No incluye `if/else`, bifurcaciones, menú, bucles, memoria ni IA real.
 ```
 
-Evidencia de ejecución:
-
-- captura;
-- o bloque de salida copiado en README;
-- o explicación validada en clase.
+La comprobación reproducible queda en el README mediante una entrada concreta y la salida esperada u obtenida. No se exige una captura rutinaria ni un documento paralelo.
 
 ---
 
@@ -493,6 +521,10 @@ Preguntas esenciales:
 ¿Qué variable guarda el nombre?
 ¿Qué constante has usado?
 ¿Qué hace Scanner?
+¿Qué devuelve nextLine() y cómo conviertes el texto a número?
+¿Qué cálculo realiza el programa?
+¿Qué comparación produce el boolean y qué valor esperas para esta entrada?
+¿Por qué ese boolean no bifurca el flujo en H1?
 ¿Qué diferencia hay entre print y println?
 ¿Cómo ejecutas el proyecto en IntelliJ?
 ¿Por qué no hay menú todavía?
@@ -575,16 +607,22 @@ Mínimos imprescindibles:
 
 ```text
 [ ] Existe `src/Main.java`.
-[ ] Compila o se ejecuta en IntelliJ.
+[ ] Compila y se ejecuta en IntelliJ.
 [ ] Tiene clase `Main`.
 [ ] Tiene método `main`.
 [ ] Muestra mensajes por pantalla.
-[ ] Pide el nombre al usuario.
-[ ] Guarda el nombre en una variable.
+[ ] Utiliza variables y tipos comprensibles.
 [ ] Usa al menos una constante.
+[ ] Usa una instancia de `Scanner` y lee texto con `nextLine()`.
+[ ] Convierte una entrada textual a número.
+[ ] Realiza y muestra un cálculo sencillo.
+[ ] Produce y muestra una comparación booleana sin bifurcación.
+[ ] La salida permite comprobar el comportamiento.
+[ ] El código es claro y se mantiene dentro del alcance de H1.
 [ ] No introduce complejidad fuera de H1.
-[ ] README explica cómo ejecutar.
-[ ] El alumno/a puede defender lo básico.
+[ ] El README explica qué hace, cómo ejecutar y cómo comprobar la versión.
+[ ] Existe una versión estable identificable para Moodle.
+[ ] El alumno/a puede defender estructura, datos, entrada, conversión, cálculo y comparación.
 ```
 
 ---
@@ -593,11 +631,11 @@ Mínimos imprescindibles:
 
 | Dimensión | Excelente | Adecuado | Básico | Insuficiente |
 |---|---|---|---|---|
-| Programa Java básico | Claro, ejecutable, con entrada/salida, variable y constante bien usadas. | Ejecutable con los elementos principales. | Incompleto o con errores menores. | No compila o no responde al hito. |
+| Programa Java básico | Claro y ejecutable; integra variables/tipos, constante, `Scanner`, lectura textual, conversión, cálculo, salida y comparación booleana sin bifurcación. | Compila y ejecuta con esos elementos principales y un resultado comprobable. | Falta algún elemento o hay errores menores que limitan la comprobación. | No compila, no ejecuta o no responde al contrato H1. |
 | Ajuste al nivel | Simple y sin complejidad prematura. | Alguna ampliación menor defendible. | Introduce código no trabajado con comprensión parcial. | Código avanzado no defendible. |
 | IntelliJ y ejecución | Configura y ejecuta con autonomía. | Ejecuta con poca ayuda. | Necesita ayuda importante. | No puede ejecutarlo. |
-| README | Explica qué hace y cómo ejecutar. | Suficiente. | Incompleto. | No útil o inexistente. |
-| Defensa | Explica `main`, variable, constante, `Scanner` y ejecución. | Explica lo principal. | Dudas importantes. | No puede explicar el código. |
+| README | Explica qué hace, límites, ejecución y una comprobación reproducible. | Permite identificar, ejecutar y comprobar la versión. | Incompleto o poco reproducible. | No útil o inexistente. |
+| Defensa | Explica `main`, variables/tipos, constante, `Scanner`, conversión, cálculo, salida y resultado booleano sin bifurcación. | Explica y predice los elementos principales sobre su código. | Dudas importantes sobre el recorrido del dato o la autoría. | No puede explicar ni modificar el código. |
 
 ---
 
@@ -608,7 +646,7 @@ Mínimos imprescindibles:
 - Plantilla inicial con huecos.
 - Parejas de explicación.
 - Ejemplo de salida antes del código.
-- Lista de vocabulario: clase, método, variable, constante, entrada, salida.
+- Lista de vocabulario: clase, método, variable, tipo, constante, entrada, conversión, cálculo, comparación, `boolean` y salida.
 - Ejecución guiada en IntelliJ.
 
 ### Ampliación sin romper H1
@@ -626,10 +664,10 @@ Propuestas de ampliación permitidas:
 
 ### Recuperación
 
-Para alumnado con dificultades, pedir una versión mínima:
+Para alumnado con dificultades, dividir el contrato H1 en pasos guiados sin eliminar sus mínimos:
 
 ```text
-Clase Main + main + saludo + variable nombre + una constante + ejecución.
+Main + main + variables/tipos + constante + Scanner/nextLine + conversión + cálculo + comparación booleana visible + salida + compilación y ejecución.
 ```
 
 La defensa puede hacerse con apoyo visual del propio código.
@@ -645,9 +683,10 @@ Sé crear y ejecutar un programa Java básico.
 Sé dónde empieza el programa.
 Sé guardar un dato en una variable.
 Sé usar una constante sencilla.
-Sé pedir un dato por teclado.
-Sé mostrar mensajes por pantalla.
-Sé explicar por qué esta versión todavía no tiene menú ni IA real.
+Sé pedir texto por teclado y convertir una entrada numérica.
+Sé realizar y mostrar un cálculo.
+Sé producir, mostrar y explicar una comparación booleana sin bifurcar el flujo.
+Sé explicar por qué esta versión todavía no tiene if/else, menú ni IA real.
 ```
 
 ---
@@ -661,13 +700,14 @@ Antes de pasar a H2, comprobar:
 - si puede ejecutar en IntelliJ;
 - si sabe leer un error básico;
 - si puede explicar `Scanner` a nivel inicial;
+- si puede seguir el recorrido texto → conversión → cálculo → comparación booleana → salida;
 - si README y evidencia de ejecución están integrados.
 
 H2 introducirá:
 
 - menú;
 - comandos;
-- decisiones;
+- decisiones con `if/else` y bifurcaciones;
 - bucles;
 - entradas no válidas;
 - depuración;

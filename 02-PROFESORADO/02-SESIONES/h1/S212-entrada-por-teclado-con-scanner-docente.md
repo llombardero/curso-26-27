@@ -11,7 +11,7 @@
 
 ## Qué vas a aprender
 
-Al terminar, cada persona debe poder pedir un dato, leerlo con una instancia reutilizable de `Scanner`, guardarlo, convertirlo cuando corresponda y utilizarlo en el programa. También debe distinguir parseo, conversión implícita y casting, y explicar por qué una entrada no convertible puede provocar una `NumberFormatException` durante la ejecución.
+Al terminar, cada persona debe poder pedir un dato, leerlo con una instancia reutilizable de `Scanner`, guardarlo, convertirlo, realizar un cálculo y producir y mostrar una comparación booleana sin bifurcar el flujo. También debe distinguir parseo, conversión implícita y casting, y explicar por qué una entrada no convertible puede provocar una `NumberFormatException` durante la ejecución.
 
 ## Antes de entrar en clase
 
@@ -36,7 +36,7 @@ Pregunta inicial:
 |---|---|
 | 0–4 min | Presentar el flujo completo y predecir qué devuelve `nextLine()`. |
 | 4–12 min | Explicar importación, instancia reutilizable, petición, lectura, almacenamiento y uso. |
-| 12–22 min | Núcleo práctico individual: usar `Scanner`, pedir, leer con `nextLine()`, almacenar, parsear con `Integer.parseInt` o `Double.parseDouble`, utilizar el dato y comprobar una entrada válida. |
+| 12–22 min | Núcleo práctico individual: usar `Scanner`, leer con `nextLine()`, almacenar, parsear, calcular y mostrar una comparación booleana sin bifurcación. |
 | 22–30 min | Núcleo práctico por parejas: comparar implementaciones, contrastar predicciones y analizar una entrada no convertible. |
 | 30–36 min | Contraste guiado: distinguir conversión implícita y casting; usar `(int) 3.999` como predicción central sobre pérdida de información. |
 | 36–40 min | Caso breve de análisis: reconocer `NumberFormatException` y distinguir error de compilación y de ejecución. |
@@ -149,14 +149,20 @@ Aplícala a una lectura real:
 String texto = teclado.nextLine();
 int horas = Integer.parseInt(texto);
 int minutos = horas * 60;
+boolean alcanzaReferencia = horas >= 4;
 System.out.println(minutos);
+System.out.println(alcanzaReferencia);
 ```
 
 Antes de ejecutar, pregunta:
 
-> Si la entrada es `2`, ¿qué guarda `texto`, qué guarda `horas` y qué salida esperas?
+> Si la entrada es `2`, ¿qué guarda `texto`, qué guarda `horas`, qué cálculo se muestra y qué valor tiene `alcanzaReferencia`?
 
 Después de ejecutar, contrasta la salida observada con la predicción.
+
+Aclara el límite:
+
+> `horas >= 4` produce un `boolean`. En H1 lo almacenamos y mostramos; no lo utilizamos con `if` ni para elegir caminos de ejecución.
 
 ### `parseDouble` y `parseBoolean`
 
@@ -306,7 +312,7 @@ Antes de contrastar con otra persona, cada estudiante realiza un intento propio:
 
 Núcleo práctico sugerido:
 
-> Pide unas horas como texto, conviértelas a `int`, calcula los minutos y muestra el resultado. Predice primero la salida para una entrada válida. Después prueba una entrada no convertible y explica qué instrucción falla y por qué.
+> Pide unas horas como texto, conviértelas a `int`, calcula los minutos, compara las horas con una referencia y muestra tanto el cálculo como el resultado `boolean`. No utilices ese resultado para decidir instrucciones. Predice primero la salida para una entrada válida. Después prueba una entrada no convertible y explica qué instrucción falla y por qué.
 
 ### Comparar, probar y explicar — PAREJAS
 
@@ -324,12 +330,12 @@ Después del intento individual, las parejas:
 No basta con que una persona escriba y la otra observe. Ambas deben poder recorrer verbalmente:
 
 ```text
-petición -> lectura -> almacenamiento -> conversión -> uso -> salida
+petición -> lectura -> almacenamiento -> conversión -> cálculo -> comparación booleana -> salida
 ```
 
 ## Evidencia que permanece
 
-- **GitHub:** código con `Scanner`, lectura almacenada, conversión cuando proceda y pruebas reproducibles con una entrada válida y otra no convertible.
+- **GitHub:** código con `Scanner`, lectura almacenada, conversión, cálculo, comparación booleana visible sin bifurcación y pruebas reproducibles con una entrada válida y otra no convertible.
 - **Scrum:** solo si cambia una tarea o aparece una decisión o bloqueo real.
 - **Diario individual:** solo si el error o la diferencia entre predicción y resultado produjo aprendizaje significativo.
 - **README:** puede recoger anticipadamente un ejemplo si resulta útil; su consolidación formal corresponde a S214.
@@ -344,7 +350,9 @@ Prueba: conversión de horas.
 Entrada válida: 5
 Salida esperada: 300 minutos.
 Salida obtenida: 300 minutos.
-Demuestra: el texto leído se convierte a int y se usa en una operación.
+Comparación: 5 >= 4
+Resultado booleano esperado y obtenido: true.
+Demuestra: el texto leído se convierte a int, se usa en una operación y produce un booleano visible sin bifurcación.
 
 Entrada no convertible: hola
 Resultado: error durante la ejecución al aplicar Integer.parseInt.
@@ -361,6 +369,8 @@ Durante el intento individual y el contraste por parejas, observa específicamen
 - que crea una instancia razonablemente reutilizable de `Scanner`;
 - que diferencia `String` de un tipo numérico;
 - que reconoce cuándo necesita `Integer.parseInt` o `Double.parseDouble`;
+- que realiza un cálculo y muestra su resultado;
+- que produce y muestra una comparación booleana sin usarla para decidir el flujo;
 - que explica la diferencia entre parseo, conversión implícita y casting;
 - que predice la pérdida de información antes de ejecutar el casting;
 - que distingue error de compilación y error de ejecución;
@@ -383,13 +393,13 @@ No proporciones inmediatamente la solución completa. Utiliza la ayuda mínima n
 
 ## Límite de la sesión
 
-Los valores de prueba sirven para comprobar que la lectura y la conversión funcionan. Comparadores, operadores lógicos, decisiones e `if/else` se trabajan en S213; no son el objetivo curricular de S212.
+Los valores de prueba sirven para comprobar lectura, conversión, cálculo y una comparación booleana observable. Los operadores lógicos complejos, `if`, `if/else` y cualquier bifurcación comienzan en H2; no forman parte de S212.
 
 ## Comprueba lo aprendido
 
 Pregunta principal:
 
-> ¿Qué devuelve `nextLine()`, dónde se almacena, cuándo necesitas parsear y por qué `Integer.parseInt("hola")` puede provocar una `NumberFormatException` durante la ejecución aunque el programa compile?
+> ¿Qué devuelve `nextLine()`, dónde se almacena, cuándo necesitas parsear, qué cálculo y comparación se realizan, qué `boolean` se muestra y por qué `Integer.parseInt("hola")` puede provocar una `NumberFormatException` durante la ejecución aunque el programa compile?
 
 Pregunta complementaria:
 
@@ -397,7 +407,7 @@ Pregunta complementaria:
 
 Cierra en voz alta:
 
-> Hoy MiniJarvis ya no solo muestra datos escritos por quien programa. Ahora reacciona a una entrada. Como esa entrada llega mediante `nextLine()` en forma de texto, debemos decidir cuándo convertirla y comprobar qué ocurre tanto con una entrada válida como con otra no convertible.
+> Hoy MiniJarvis recibe texto con `nextLine()`, lo convierte, calcula y muestra una comparación booleana. El programa sigue siendo secuencial: utilizar ese resultado para decidir instrucciones corresponde a H2. También comprobamos qué ocurre con una entrada no convertible.
 
 ## Al terminar
 

@@ -24,13 +24,13 @@ Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra
 | Fase | Sesiones de referencia | Puerta de salida |
 |---|---|---|
 | 1 — Activar | S206 | Reto comprendido y criterios visibles. |
-| 2 — Investigar | S207–S208 y S212 | Conocimientos necesarios contrastados. |
+| 2 — Investigar | S207–S208 | Conocimientos necesarios contrastados. |
 | 3 — Idear | S209 | Solución seleccionada y argumentada. |
 | 4 — Planificar | S210 | Plan, responsabilidades y comprobaciones visibles. |
-| 5 — Ejecutar | S211 y S213 | Producto construido, probado y mejorado. |
+| 5 — Ejecutar | S211–S213 | Producto construido, probado y mejorado; S212 integra entrada, conversión, cálculo y comparación. |
 | 6 — Comunicar | S214–S215 | Defensa, evaluación, reflexión y mejora. |
 
-**Expediente HEXA mínimo del hito:** ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa.
+**Expediente HEXA mínimo del hito:** ficha del reto, salida diseñada, explicación de Main/variables/tipos/constante/Scanner/conversión/cálculo/comparación, programa, README, evidencia y defensa.
 
 Regla de avance: puede haber prototipos durante Investigar o Idear, pero Ejecutar no se considera completada si faltan evidencias de Activar, Investigar, Idear o Planificar. Comunicar exige presentar, evaluar y reflexionar. Si falta una fase, se recuperan esa fase y su evidencia; no se repite automáticamente todo el hito.
 
@@ -90,12 +90,15 @@ Repositorio o ubicación:
 | Existe `src/Main.java` | | | | |
 | La clase principal se llama `Main` | | | | |
 | Existe método `public static void main(String[] args)` | | | | |
-| El programa compila o se ejecuta en IntelliJ | | | | |
-| Muestra un saludo inicial | | | | |
-| Pide el nombre de la persona usuaria | | | | |
-| Guarda el nombre en una variable | | | | |
+| El programa compila y se ejecuta en IntelliJ | | | | |
+| Utiliza variables y tipos comprensibles | | | | |
 | Usa al menos una constante con `final` | | | | |
-| Muestra mensajes relacionados con MiniJarvis | | | | |
+| Crea y reutiliza una instancia de `Scanner` | | | | |
+| Lee entrada textual mediante `nextLine()` | | | | |
+| Convierte una entrada textual a número | | | | |
+| Realiza y muestra un cálculo sencillo | | | | |
+| Produce y muestra una comparación booleana sin bifurcación | | | | |
+| La salida permite comprobar el comportamiento | | | | |
 | Cierra o gestiona razonablemente el `Scanner` | | | | |
 
 ---
@@ -106,6 +109,7 @@ Repositorio o ubicación:
 |---|---|---|---|---|
 | No incluye menú | | | | |
 | No incluye bucles | | | | |
+| No incluye `if`, `if/else` ni bifurcaciones | | | | |
 | No incluye `switch` | | | | |
 | No incluye memoria, listas o mapas | | | | |
 | No incluye IA real | | | | |
@@ -144,7 +148,8 @@ Si hay complejidad extra, anotar:
 | README presente | | | | |
 | README explica qué hace el programa | | | | |
 | README explica cómo ejecutar | | | | |
-| Incluye ejemplo o evidencia de ejecución | | | | |
+| README incluye una comprobación reproducible del cálculo y del `boolean` | | | | |
+| La versión evaluada está identificada mediante tag o commit estable | | | | |
 | Repositorio o entrega organizada | | | | |
 
 ---
@@ -153,11 +158,9 @@ Si hay complejidad extra, anotar:
 
 | Ítem | Sí | Parcial | No / No aplica | Observaciones |
 |---|---|---|---|---|
-| Declara si ha usado IA | | | | |
-| Incluye registro IA si procede | | | | |
-| Explica para qué la usó | | | | |
-| Indica qué aceptó o modificó | | | | |
-| Verificó el resultado | | | | |
+| Si hubo uso significativo de IA, queda anotado en diario o Scrum según corresponda | | | | |
+| Si procede, explica para qué la usó y qué aceptó, modificó o descartó | | | | |
+| Si procede, verificó el resultado | | | | |
 | Puede defender el código asistido | | | | |
 | No hay uso oculto evidente | | | | |
 
@@ -181,6 +184,10 @@ Marcar las que se han preguntado y anotar resultado.
 | ¿Qué constante has usado? | | | | |
 | ¿Qué hace `Scanner`? | | | | |
 | ¿Qué hace `nextLine()`? | | | | |
+| ¿Cómo conviertes el texto a número? | | | | |
+| ¿Qué cálculo realizas y qué salida esperas? | | | | |
+| ¿Qué comparación produce el `boolean` y cuándo muestra `true` o `false`? | | | | |
+| ¿Por qué ese resultado no bifurca el flujo en H1? | | | | |
 | ¿Qué diferencia hay entre `print` y `println`? | | | | |
 | ¿Cómo ejecutas desde IntelliJ? | | | | |
 | ¿Por qué todavía no hay menú? | | | | |

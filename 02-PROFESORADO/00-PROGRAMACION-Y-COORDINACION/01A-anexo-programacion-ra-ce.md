@@ -25,24 +25,9 @@ Su función es servir de base para:
 
 ## 2. Criterio de superación del módulo
 
-La nueva programación modifica el criterio anterior.
+Este anexo no fija por sí mismo el criterio formal de superación. La programación aprobada es la autoridad curricular.
 
-Redacción propuesta:
-
-> Para superar el módulo de Programación será imprescindible superar cada Resultado de Aprendizaje imprescindible con calificación mayor o igual a 5. Los Resultados de Aprendizaje 7, 8 y 9 no tendrán carácter imprescindible, aunque deberán ser tenidos en cuenta en la evaluación según el avance real del grupo, el desarrollo del proyecto y las evidencias disponibles.
-
-Clasificación:
-
-| Tipo | RA | Consecuencia |
-|---|---|---|
-| Imprescindibles | RA1, RA2, RA3, RA4, RA5, RA6 | Deben superarse con calificación ≥ 5 para superar el módulo. |
-| No imprescindibles, pero evaluables | RA7, RA8, RA9 | Se trabajan como ampliación, consolidación o profundización cuando el ritmo lo permita. No bloquean por sí solos la superación si los RA imprescindibles están superados. |
-
-Criterio de seguridad evaluativa:
-
-- Aunque RA7, RA8 y RA9 no sean imprescindibles, no deben desaparecer del diseño.
-- Deben quedar visibles en hitos, tareas de ampliación, evidencias opcionales o actividades de consolidación.
-- Si se trabajan con suficiente profundidad, sus evidencias podrán mejorar la calificación y enriquecer el proyecto final.
+> **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA:** clasificación, obligatoriedad, profundidad, peso y efectos de superación de RA7, RA8 y RA9.
 
 ---
 
@@ -56,9 +41,9 @@ Criterio de seguridad evaluativa:
 | RA4 | Imprescindible | H4 | Diseño OO del agente: clases, atributos, métodos, constructores, visibilidad y objetos. |
 | RA5 | Imprescindible | H6 | Entrada/salida, ficheros, logs, base de conocimiento y posible interfaz simple. |
 | RA6 | Imprescindible | H3 | Memoria temporal con arrays, listas, mapas, iteradores, búsquedas y tratamiento de datos. |
-| RA7 | No imprescindible | H5-H7 | Agente extensible: herencia, interfaces, composición, jerarquías y herramientas. |
-| RA8 | No imprescindible | H6-H7 | Persistencia orientada a objetos si el ritmo permite profundizar. |
-| RA9 | No imprescindible | H6-H7 | Gestión de información en base de datos si el ritmo permite profundizar. |
+| RA7 | Pendiente de validación | H5-H7, ubicación provisional | Agente extensible: herencia, interfaces, composición, jerarquías y herramientas. |
+| RA8 | Pendiente de validación | H6-H7, ubicación provisional | Persistencia orientada a objetos. |
+| RA9 | Pendiente de validación | H6-H7, ubicación provisional | Gestión de información en base de datos. |
 
 ### 3.1. Correspondencia con temas/unidades del curso 2025/2026
 
@@ -68,7 +53,7 @@ Criterio aportado por el docente:
 
 Matiz posterior:
 
-> Los temas son una referencia de contenidos y secuencia. La referencia principal de objetivos por módulos es `documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`.
+> Los temas son una referencia de contenidos y secuencia. La referencia principal de objetivos por módulos es `../04-RECURSOS-NORMATIVOS-Y-TEMARIOS/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`.
 
 Esta correspondencia se tendrá en cuenta al diseñar hitos, tareas, entregables y materiales de apoyo, aunque el nuevo curso se organice mediante el proyecto guía del agente IA.
 
@@ -88,7 +73,7 @@ Esta correspondencia se tendrá en cuenta al diseñar hitos, tareas, entregables
 Nota didáctica:
 
 - La correspondencia Tema N → RA N se toma como referencia principal.
-- En los temas 7-10 se ajusta el alcance porque RA7, RA8 y RA9 no son imprescindibles en la nueva programación.
+- El tratamiento formal de RA7, RA8 y RA9 queda pendiente de decisión docente y validación normativa.
 - El proyecto del agente IA no elimina la secuencia de contenidos anterior: la reorganiza como progresión de producto.
 
 ---
@@ -100,8 +85,8 @@ Nota didáctica:
 | Código Java funcional | Evidencia técnica principal del RA correspondiente. |
 | Repositorio GitHub | Historial, autoría, evolución, colaboración y trazabilidad. |
 | README técnico | Explicación de instalación, ejecución, decisiones y limitaciones. |
-| Portfolio individual | Reflexión, comprensión, incidencias, aprendizajes y decisiones. |
-| Registro de uso de IA | Trazabilidad de Gemini/Jarvis u otras herramientas autorizadas. |
+| Diario individual | Aprendizajes, decisiones, bloqueos o uso individual de IA significativos. |
+| Scrum del equipo | Tareas, decisiones, bloqueos, review, retrospectiva o uso colectivo de IA significativo. |
 | Checklist de funcionamiento | Validación de requisitos mínimos del hito. |
 | Pruebas manuales o unitarias | Validación de comportamiento y detección de errores. |
 | Defensa oral individual | Comprobación de comprensión, autoría y capacidad de modificación. |
@@ -132,7 +117,7 @@ Producto asociado:
 
 | CE | Criterio | Evidencia propuesta | Instrumentos |
 |---|---|---|---|
-| a | Se han identificado los bloques que componen la estructura de un programa informático. | Código Java con clase principal, método `main`, bloques y explicación en portfolio. | Código, defensa, portfolio. |
+| a | Se han identificado los bloques que componen la estructura de un programa informático. | Código Java con clase principal, método `main`, bloques y explicación sobre el producto real. | Código, README y defensa. |
 | b | Se han creado proyectos de desarrollo de aplicaciones. | Proyecto creado en IntelliJ con estructura organizada. | Repositorio, captura, checklist. |
 | c | Se han utilizado entornos integrados de desarrollo. | Uso de IntelliJ para editar, ejecutar y revisar errores. | Observación, defensa, captura. |
 | d | Se han identificado los distintos tipos de variables y su utilidad. | Variables usadas en el asistente: texto, opciones, contadores, estado. | Código, preguntas orales. |
@@ -182,7 +167,7 @@ Hitos principales:
 
 | CE | Criterio | Evidencia propuesta | Instrumentos |
 |---|---|---|---|
-| a | Se han identificado los fundamentos de la programación orientada a objetos. | Explicación inicial de clase, objeto, método y atributo, aunque el diseño OO completo se profundice en H4. | Portfolio, defensa. |
+| a | Se han identificado los fundamentos de la programación orientada a objetos. | Explicación inicial de clase, objeto, método y atributo, aunque el diseño OO completo se profundice en H4. | Código, README o defensa; diario solo si genera aprendizaje significativo. |
 | b | Se han escrito programas simples. | Asistente por consola funcional. | Código, checklist. |
 | c | Se han instanciado objetos a partir de clases predefinidas. | Uso de `Scanner`, `String`, colecciones básicas cuando proceda. | Código, defensa. |
 | d | Se han utilizado métodos y propiedades de los objetos. | Uso de métodos de `String`, `Scanner` u objetos básicos. | Código. |
@@ -334,7 +319,7 @@ Hito principal:
 
 ## 10. RA7 — Características avanzadas de POO y entorno
 
-Tipo: no imprescindible, pero evaluable.
+Tipo y efectos de evaluación: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 
 Peso anterior de referencia: 10%.
 
@@ -364,8 +349,7 @@ Hitos principales:
 
 ### 10.2. Criterio de alcance
 
-- Si el grupo avanza bien, RA7 se desarrollará mediante interfaces, composición, jerarquías y herramientas internas.
-- Si el grupo necesita más tiempo para RA imprescindibles, RA7 se mantendrá como ampliación con evidencias parciales.
+La posible ubicación didáctica en H5–H7 es provisional. **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA** para RA7.
 
 ### 10.3. Comparación Java ↔ Python para casa
 
@@ -412,7 +396,7 @@ Hito principal:
 
 ## 12. RA8 — Bases de datos orientadas a objetos
 
-Tipo: no imprescindible, pero evaluable.
+Tipo y efectos de evaluación: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 
 Peso anterior de referencia: 5%.
 
@@ -427,7 +411,7 @@ Hitos posibles:
 
 ### 12.1. Tratamiento didáctico
 
-RA8 se propone como ampliación condicionada al ritmo del grupo.
+La posible ubicación didáctica en H6–H7 es provisional. **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA** para RA8.
 
 Posibles evidencias:
 
@@ -453,7 +437,7 @@ Posibles evidencias:
 
 ## 13. RA9 — Gestión de información en bases de datos
 
-Tipo: no imprescindible, pero evaluable.
+Tipo y efectos de evaluación: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 
 Peso anterior de referencia: 5%.
 
@@ -468,7 +452,7 @@ Hitos posibles:
 
 ### 13.1. Tratamiento didáctico
 
-RA9 se propone como alternativa o ampliación práctica de persistencia si el grupo ya domina RA1-RA6.
+La posible ubicación didáctica en H6–H7 es provisional. **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA** para RA9.
 
 Posibles evidencias:
 
@@ -509,8 +493,7 @@ Estrategias:
 
 RA7, RA8 y RA9:
 
-- Si se han trabajado y el alumnado no alcanza el nivel esperado, podrán plantearse actividades de mejora.
-- Al no ser imprescindibles, su recuperación no debe bloquear la superación cuando RA1-RA6 estén superados, salvo que la programación final establezca una condición adicional que deba validarse normativamente.
+- **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA:** actividades de recuperación, obligatoriedad y efectos sobre la superación.
 
 ---
 

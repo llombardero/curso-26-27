@@ -80,10 +80,10 @@ Presenta este modelo como ejemplo de información necesaria, no como texto para 
 # MiniJarvis H1
 
 ## Qué hace
-MiniJarvis saluda, pide un nombre ficticio, calcula minutos a partir de horas y muestra si se alcanza un objetivo.
+MiniJarvis saluda, pide un nombre ficticio, calcula minutos a partir de horas y muestra el resultado booleano de comparar las horas con una referencia.
 
 ## Límites de H1
-No incluye menú, memoria, ficheros ni IA real.
+No incluye `if/else`, bifurcaciones, menú, memoria, ficheros ni IA real.
 
 ## Cómo ejecutar
 1. Abrir el proyecto en IntelliJ.
@@ -91,8 +91,8 @@ No incluye menú, memoria, ficheros ni IA real.
 3. Introducir datos ficticios.
 
 ## Pruebas
-Caso A: horas = 5 -> Objetivo alcanzado.
-Caso B: horas = 2 -> Objetivo pendiente.
+Caso A: horas = 5 -> minutos = 300; comparación `horas >= 4` = true.
+Caso B: horas = 2 -> minutos = 120; comparación `horas >= 4` = false.
 Entrada no convertible: "hola" falla durante la ejecución con parseInt.
 ```
 
@@ -103,7 +103,7 @@ Antes de aceptar una formulación, pregunta:
 - ¿se puede seguir sin haber estado en clase?
 - ¿distingue capacidad actual y límite?
 
-Los casos del modelo muestran dos recorridos de una decisión y una entrada no convertible. Solo deben documentarse como pruebas del equipo si esos comportamientos existen realmente en su incremento y pueden reproducirse. S214 no vuelve a enseñar decisiones, `Scanner` o conversiones.
+Los casos del modelo muestran dos resultados observables de una comparación, sin ramas, y una entrada no convertible. Solo deben documentarse como pruebas del equipo si esos comportamientos existen realmente en su incremento y pueden reproducirse. S214 no vuelve a enseñar comparación, `Scanner` o conversiones.
 
 ## Qué convierte una prueba en reproducible
 

@@ -24,7 +24,7 @@ Los cierres C1/C2 regulan o recuperan fases; no sustituyen el ciclo del hito.
 | Hito | Reto | Expediente HEXA mínimo |
 |---|---|---|
 | H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
-| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
+| H1 | Construir el primer MiniJarvis Java por consola, pequeño, secuencial, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/tipos/constante/Scanner/conversión/cálculo/comparación, programa, README, versión evaluada y defensa |
 | H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
 | H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
 | H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
@@ -162,9 +162,7 @@ Objetivo de la semana:
 
 Documento principal para objetivos por módulos:
 
-```text
-documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf
-```
+`../04-RECURSOS-NORMATIVOS-Y-TEMARIOS/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`
 
 Este documento se considera la referencia prioritaria para orientar los objetivos de Programación + Entornos de Desarrollo, manteniendo no obstante la separación documental entre ambos módulos.
 
@@ -269,22 +267,9 @@ Programacion Didactica Programacion1ºGS DAW.pdf
 
 Nota importante sobre la nueva programación:
 
-La programación del curso 2026/2027 modificará el criterio de superación respecto a la programación anterior:
+La tabla anterior conserva los RA y pesos de la programación previa como antecedente documental. Su traslado a los criterios de superación de 2026/2027 no se cierra en este mapa.
 
-> Para superar el módulo será imprescindible superar cada Resultado de Aprendizaje imprescindible con calificación mayor o igual a 5.
-
-Clasificación inicial de RA:
-
-| Tipo | RA | Implicación |
-|---|---|---|
-| Imprescindibles | RA1, RA2, RA3, RA4, RA5, RA6 | Deben superarse con calificación mayor o igual a 5 para superar el módulo. |
-| No imprescindibles, pero evaluables | RA7, RA8, RA9 | Deben tenerse en cuenta, pero su profundidad y alcance dependerán del avance real del grupo. |
-
-Criterio didáctico:
-
-- RA7, RA8 y RA9 se integrarán preferentemente como ampliación, consolidación o itinerario avanzado del proyecto del agente IA.
-- Si el ritmo del grupo lo permite, se trabajarán mediante herramientas extensibles, persistencia y gestión de datos.
-- Si el ritmo del grupo no lo permite, se recogerán evidencias mínimas o parciales sin comprometer la superación del módulo cuando los RA imprescindibles estén superados.
+> **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA:** clasificación, obligatoriedad, profundidad, peso y efectos de superación de RA7, RA8 y RA9.
 
 ### 4.2. Entornos de Desarrollo
 
@@ -436,8 +421,8 @@ Esta propuesta debe revisarse después con la matriz RA/CE detallada.
 | 2. Agente con decisiones y depuración | Oct-nov | Agente con comandos, menús, control de flujo y manejo básico de errores | RA3 | RA3: depuración, puntos de ruptura, casos de prueba |
 | 3. Agente con memoria en colecciones | Nov-dic | Memoria temporal usando arrays/listas/mapas y búsqueda simple | RA6 inicial | RA3: pruebas unitarias básicas, documentación de incidencias |
 | 4. Agente orientado a objetos | Ene-feb | Modelo de clases: Agent, Message, Memory, Tool, Command | RA4 | RA5/RA6: diagramas de clases y comportamiento |
-| 5. Agente extensible con herramientas | Feb-mar | Herramientas internas mediante interfaces, composición/herencia y plugins simples | RA7 | RA4: refactorización, GitHub, revisión de código |
-| 6. Agente persistente y trazable | Abr-inicio mayo | Ficheros/base de conocimiento, logs, registro de IA, posible Docker guiado | RA5, RA8/RA9 según alcance | RA4: repos remoto, CI básica opcional, Docker guiado |
+| 5. Agente extensible con herramientas | Feb-mar | Herramientas internas mediante interfaces, composición/herencia y plugins simples | RA7: ubicación provisional, pendiente de decisión docente y validación normativa | RA4: refactorización, GitHub, revisión de código |
+| 6. Agente persistente y trazable | Abr-inicio mayo | Ficheros/base de conocimiento, logs, registro de IA, posible Docker guiado | RA5; RA8/RA9 pendientes de decisión docente y validación normativa | RA4: repos remoto, CI básica opcional, Docker guiado |
 | 7. Integración IA responsable | Antes FFEOE, si el ritmo lo permite | Integración opcional con Gemini/Jarvis o simulación robusta de LLM | Consolidación RA | Validación, seguridad, documentación, pruebas |
 | Presentación final | Después FFEOE | Demo, defensa oral, portfolio final, recuperación/mejora | Recuperación o mejora | Recuperación o mejora |
 
@@ -616,8 +601,7 @@ Resultado esperado:
 ### 13.1. Decisiones tomadas
 
 1. Criterio de superación de Programación:
-   - RA1, RA2, RA3, RA4, RA5 y RA6 son imprescindibles.
-   - RA7, RA8 y RA9 no son imprescindibles, aunque deben tenerse en cuenta según avance del grupo.
+   - **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA:** clasificación, obligatoriedad, profundidad, peso y efectos de superación de RA7, RA8 y RA9.
 2. Entornos de Desarrollo será asumido en este diseño como módulo plenamente coordinado con Programación.
 3. En este proceso de diseño, Hermes asumirá el papel de profesor de Entornos para proponer secuencias, evidencias y rúbricas coordinadas.
 4. El alumnado usará IntelliJ IDEA como IDE principal para Java.

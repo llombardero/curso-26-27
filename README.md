@@ -48,3 +48,22 @@ python3 exportar_alumnado_html.py
 ```
 
 Los ZIP no son copias restaurables `.mbz`. La copia `.mbz` se genera desde Moodle después de configurar y probar el aula, sin usuarios ni datos de usuario.
+
+## Validación técnica
+
+La puerta de calidad se ha verificado con Python 3.13.5. Para preparar un entorno aislado desde un clon limpio:
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+python3 -m pip install -r requirements-dev.txt
+```
+
+Con el entorno activado, ejecuta la suite completa y el validador:
+
+```bash
+python3 -m pytest -q
+python3 validar_simplificacion.py
+```
+
+`requirements-dev.txt` declara solo las dependencias Python directas usadas por las pruebas y las herramientas que estas cargan.

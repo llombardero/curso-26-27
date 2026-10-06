@@ -326,8 +326,8 @@ Durante el curso utilizarás el entorno de desarrollo para editar y ejecutar el 
 También puedes reconocer el proceso mediante los comandos:
 
 ```bash
-javac src/Main.java
-java -cp src Main
+javac -d out src/Main.java
+java -cp out Main
 ```
 
 Lo importante no es memorizar comandos sin comprenderlos, sino distinguir las dos acciones:

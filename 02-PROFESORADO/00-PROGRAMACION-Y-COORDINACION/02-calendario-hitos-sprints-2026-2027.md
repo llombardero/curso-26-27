@@ -24,7 +24,7 @@ Los cierres C1/C2 regulan o recuperan fases; no sustituyen el ciclo del hito.
 | Hito | Reto | Expediente HEXA mínimo |
 |---|---|---|
 | H0 | Organizar y completar una torre de papel mediante un sprint Scrum y transferir lo aprendido a MiniJarvis. | ficha inicial, autoevaluación privada, microprueba, equipos razonados, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual |
-| H1 | Construir el primer MiniJarvis Java por consola, pequeño, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/Scanner, programa, README, evidencia y defensa |
+| H1 | Construir el primer MiniJarvis Java por consola, pequeño, secuencial, ejecutable y defendible. | ficha del reto, salida diseñada, explicación de Main/variables/tipos/constante/Scanner/conversión/cálculo/comparación, programa, README, versión evaluada y defensa |
 | H2 | Transformar MiniJarvis en un programa interactivo con decisiones, repetición y depuración reproducible. | mapa de comandos, hipótesis de flujo, explicación de condiciones/bucle, menú funcional, pruebas, depuración y defensa |
 | H3 | Añadir memoria temporal mediante una colección adecuada y demostrar su comportamiento y límites. | requisitos de memoria, comparación de alternativas, explicación de ArrayList/casos límite, código, pruebas y defensa |
 | H4 | Reorganizar MiniJarvis con orientación a objetos y responsabilidades que coincidan con el código y los diagramas. | diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa |
@@ -63,9 +63,7 @@ El calendario mantiene separados los módulos de Programación y Entornos de Des
 
 La referencia principal para los objetivos por módulos es:
 
-```text
-documentacion/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf
-```
+`../04-RECURSOS-NORMATIVOS-Y-TEMARIOS/Propuesta Ciclos Superiores IESHLanz 2026-27.pdf`
 
 Objetivo final:
 
@@ -190,6 +188,8 @@ Cada periodo lectivo dura 45 minutos.
 | FFEOE | 30 abril - 28 mayo | 0 | 0 | Sin clases ni entregas. |
 | HF. Presentación final y recuperación | 31 mayo - 22 junio | 29 | 12 | Defensa, portfolio final, recuperación y mejora. |
 
+La asignación de H1 suma 33 periodos entre ambos módulos, mientras que la secuencia operativa vigente S206–S215 contiene 10 sesiones. **PENDIENTE DE DECISIÓN DOCENTE:** concretar la correspondencia temporal sin inventar actividades ni alterar la secuencia.
+
 ### 5.1. Vista global RA por bloque y módulo
 
 Esta tabla se añade para que el calendario sea útil tanto para Programación como para Entornos de Desarrollo. Programación y Entornos mantienen documentación, RA/CE y evaluación separada, aunque compartan proyecto.
@@ -202,10 +202,10 @@ Esta tabla se añade para que el calendario sea útil tanto para Programación c
 | H3. Memoria en colecciones | PR RA6, refuerzo PR RA3 | ED RA3 | Pruebas de memoria, casos límite, documentación de incidencias, checklist de comportamiento. |
 | C1. Cierre 1.ª evaluación | Consolidación PR RA1, RA2, RA3, RA6 | Consolidación ED RA1, RA2, RA3 inicial | Revisión de repositorio, portfolio técnico, defensa parcial, recuperación de evidencias. |
 | H4. Agente orientado a objetos | PR RA4, refuerzo PR RA2 | ED RA5, ED RA6 | Diagrama de clases, diagrama de comportamiento, relación diagrama-código, defensa de diseño. |
-| H5. Herramientas, clean code y patrones iniciales | PR RA7 no imprescindible, refuerzo PR RA4/RA6 | ED RA4, ED RA6 | Ramas/PRs, revisión de código, informe de refactorización, documentación de patrón si procede. |
-| C2. Cierre 2.ª evaluación | Consolidación PR RA4 y ampliación PR RA7 | Consolidación ED RA4, RA5, RA6 | Demo parcial, revisión GitHub, defensa individual, plan de mejora. |
-| H6. Persistencia y trazabilidad | PR RA5, PR RA8/RA9 como ampliación | ED RA3, ED RA4 | README reproducible, pruebas de persistencia, logs, Docker guiado si procede, documentación técnica. |
-| H7. IA responsable opcional | Consolidación PR RA1-RA6; PR RA7/RA8/RA9 si procede | ED RA3, ED RA4 aplicados a seguridad, validación y trazabilidad | Documento de configuración segura, registro de prompts, validación humana, riesgos. |
+| H5. Herramientas, clean code y patrones iniciales | PR RA7: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**; refuerzo PR RA4/RA6 | ED RA4, ED RA6 | Ramas/PRs, revisión de código, informe de refactorización, documentación de patrón si procede. |
+| C2. Cierre 2.ª evaluación | Consolidación PR RA4; PR RA7 pendiente de decisión docente y validación normativa | Consolidación ED RA4, RA5, RA6 | Demo parcial, revisión GitHub, defensa individual, plan de mejora. |
+| H6. Persistencia y trazabilidad | PR RA5; PR RA8/RA9: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA** | ED RA3, ED RA4 | README reproducible, pruebas de persistencia, logs, Docker guiado si procede, documentación técnica. |
+| H7. IA responsable opcional | Consolidación PR RA1-RA6; PR RA7/RA8/RA9: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA** | ED RA3, ED RA4 aplicados a seguridad, validación y trazabilidad | Documento de configuración segura, registro de prompts, validación humana, riesgos. |
 | HF. Presentación final y recuperación | Recuperación/mejora de RA pendientes | Recuperación/mejora de RA pendientes | Portfolio final técnico, defensa individual, revisión de repositorio y evidencias. |
 
 ---
@@ -270,10 +270,13 @@ HEXA:
 
 | Fase | Tiempo/actividad | Puerta de salida |
 |---|---|---|
-| H | Presentación del curso y reto; 35 min integrados. | Reto y criterios comprendidos. |
-| E | Scrum, autoevaluación y microprueba; 50 min integrados. | Hipótesis, backlog, bloqueo y equipos razonados. |
-| X | Explicación formal de sprint, backlog, rol, prueba, review y retrospectiva; 30 min integrados. | Explicación individual y glosario. |
-| A | Torre, prueba, review, retrospectiva, contrato y transferencia; resto de H0. | Producto y proceso comprobados; equipo revisado. |
+| Fase 0 — Equipos | Organización transversal durante H0. | Equipos, funciones, acuerdos y herramientas de organización revisables. |
+| Activar | Presentación del curso, reto y criterios. | Reto y criterios comprendidos. |
+| Investigar | Scrum, autoevaluación, microprueba y vocabulario necesario. | Base conceptual e hipótesis contrastadas. |
+| Idear | Alternativas de organización, torre y prueba. | Propuesta elegida con criterio. |
+| Planificar | Backlog, funciones, tiempos y comprobaciones. | Plan visible y responsabilidades acordadas. |
+| Ejecutar | Construcción, prueba y mejora de la torre. | Producto y proceso comprobados. |
+| Comunicar | Review, retrospectiva, revisión del equipo y transferencia. | Aprendizajes, ajustes y siguiente paso comunicados. |
 
 ---
 
@@ -287,14 +290,15 @@ Fechas:
 
 Objetivo:
 
-- Crear una primera versión muy básica del asistente.
-- No introducir aún menú, bucles ni `switch`.
-- Centrar el aprendizaje en estructura de programa, variables, constantes, entrada/salida e IntelliJ.
+- Crear una primera versión pequeña y secuencial del asistente.
+- Integrar entrada textual, conversión numérica, cálculo y comparación booleana observable.
+- No utilizar `if`, `if/else`, bifurcaciones, menú, bucles ni `switch`.
+- Centrar el aprendizaje en estructura, variables/tipos, constante, entrada/salida, comprobación e IntelliJ.
 
 Producto:
 
 ```text
-MiniJarvis H1: programa Java básico que pide el nombre y muestra mensajes iniciales.
+MiniJarvis H1: programa Java secuencial que recibe texto, convierte, calcula y muestra una comparación booleana sin bifurcar el flujo.
 ```
 
 Entregables:
@@ -303,9 +307,9 @@ Entregables:
 |---|---|---|
 | Código Java básico | Equipo o individual según decidas | `src/Main.java` en GitHub. |
 | README de ejecución | Equipo | `README.md`. |
-| Captura o evidencia de ejecución | Equipo | Imagen o bloque de salida. |
-| Portfolio H1 | Individual | Markdown. |
-| Registro de IA si se usa | Individual | Markdown. |
+| Comprobación reproducible | Equipo | Caso documentado en el README; captura solo si demuestra algo que no pueda conservarse mejor. |
+| Diario o Scrum | Individual/equipo según autoría | Solo aprendizajes, decisiones, bloqueos o uso de IA significativos; sin registro paralelo. |
+| Versión evaluada | Equipo | Tag `h1-entrega` o commit estable identificado en Moodle. |
 
 RA/CE principales:
 
@@ -335,15 +339,11 @@ Código limpio:
 
 Ejemplo docente-alumna:
 
-```text
-99-ejemplos-alumna/h1-primer-asistente/
-```
+`../../../03-EJEMPLOS-LAURA-PRIVADOS/h1-primer-asistente/`
 
 Estado del ejemplo:
 
-```text
-Dado por verificado definitivamente por decisión del docente.
-```
+Referencia privada y diferida. La ficha H1 y las sesiones S206–S215 determinan el contrato vigente; el calendario no autoaprueba el ejemplo.
 
 ---
 
@@ -586,7 +586,7 @@ RA/CE principales:
 
 Programación:
 
-- PR RA7, no imprescindible pero evaluable.
+- PR RA7: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 - Refuerzo PR RA4 y PR RA6.
 
 Entornos de Desarrollo:
@@ -649,7 +649,7 @@ RA/CE principales:
 Programación:
 
 - Consolidación PR RA4.
-- PR RA7 como ampliación/no imprescindible.
+- PR RA7: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 
 Entornos de Desarrollo:
 
@@ -693,7 +693,7 @@ RA/CE principales:
 Programación:
 
 - PR RA5.
-- PR RA8/RA9 como ampliación si procede.
+- PR RA8/RA9: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 
 Entornos de Desarrollo:
 
@@ -750,7 +750,7 @@ RA/CE principales:
 Programación:
 
 - Consolidación de RA imprescindibles.
-- PR RA7/RA8/RA9 si procede.
+- PR RA7/RA8/RA9: **PENDIENTE DE DECISIÓN DOCENTE / VALIDACIÓN NORMATIVA**.
 
 Entornos de Desarrollo:
 
@@ -840,7 +840,7 @@ Programación:
 | RA | Papel en la evaluación | Evidencias principales |
 |---|---|---|
 | PR RA4 | Principal | H4: clases, objetos, constructores, visibilidad y diseño OO. |
-| PR RA7 | No imprescindible/evaluable | H5: extensibilidad, interfaces/herencia/composición si procede. |
+| PR RA7 | Pendiente de validación | Ubicación provisional en H5: extensibilidad, interfaces/herencia/composición. |
 | PR RA2, RA3, RA6 | Refuerzo | Evolución del agente y defensa técnica. |
 
 Entornos de Desarrollo:
@@ -858,8 +858,8 @@ Programación:
 | RA | Papel en la evaluación | Evidencias principales |
 |---|---|---|
 | PR RA5 | Principal | H6: entrada/salida, ficheros, logs, persistencia simple. |
-| PR RA8 | No imprescindible/evaluable | H6-H7: persistencia orientada a objetos si el ritmo lo permite. |
-| PR RA9 | No imprescindible/evaluable | H6-H7: gestión de datos/BD si el ritmo lo permite. |
+| PR RA8 | Pendiente de validación | Ubicación provisional en H6-H7: persistencia orientada a objetos. |
+| PR RA9 | Pendiente de validación | Ubicación provisional en H6-H7: gestión de datos/BD. |
 | PR RA1-RA6 | Consolidación | Cierre del proyecto base antes de FFEOE. |
 
 Entornos de Desarrollo:
@@ -896,21 +896,10 @@ Entornos de Desarrollo:
 
 ---
 
-## 9. Estado de verificación del ejemplo H1
+## 9. Estado de la referencia del ejemplo H1
 
 El ejemplo:
 
-```text
-99-ejemplos-alumna/h1-primer-asistente/
-```
+`../../../03-EJEMPLOS-LAURA-PRIVADOS/h1-primer-asistente/`
 
-queda marcado como:
-
-```text
-Verificado definitivamente por decisión del docente.
-```
-
-Nota de trazabilidad:
-
-- La verificación automática ad-hoc no pudo ejecutarse por bloqueo del sistema de permisos.
-- El docente ha decidido dar por verificado el ejemplo para no bloquear el diseño didáctico.
+es el sucesor real de la antigua ruta `99-ejemplos-alumna/h1-primer-asistente/`. Su contrato vigente se comprueba en la ficha H1, las sesiones S206–S215 y la guía docente específica; este calendario no lo autoaprueba.

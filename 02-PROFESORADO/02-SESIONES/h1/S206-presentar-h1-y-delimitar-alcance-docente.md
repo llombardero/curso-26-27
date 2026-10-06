@@ -60,14 +60,15 @@ H1 recorre fundamentos suficientes para construir, comprobar y explicar un prime
 - operaciones sencillas;
 - entrada mediante `Scanner`;
 - conversiones;
-- comparación;
-- una decisión sencilla;
+- cálculo;
+- comparación sencilla cuyo resultado `boolean` se muestra sin bifurcar el flujo;
 - explicación y defensa de lo construido.
 
-No todo debe aparecer necesariamente dentro de un único `Main.java`. Algunas partes pueden trabajarse mediante microprácticas para aprender los conceptos, comprobarlos y poder defenderlos.
+En el producto H1, el núcleo obligatorio debe aparecer integrado en `Main.java`. Las microprácticas pueden apoyar el aprendizaje, pero no sustituyen el producto obligatorio.
 
 Quedan fuera del alcance actual:
 
+- decisiones con `if`, `if/else` y bifurcaciones;
 - menú de comandos, bucle principal y `switch`;
 - memoria y colecciones;
 - ficheros y persistencia;

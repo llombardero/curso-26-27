@@ -116,6 +116,14 @@ un commit estable
 
 No necesitas utilizar ambos mecanismos.
 
+La entrega Moodle contiene únicamente:
+
+1. el tag `h1-entrega` o un commit estable de la versión evaluada;
+2. la confirmación de que diario y Scrum están actualizados en los enlaces estables ya registrados;
+3. una evidencia no-code excepcional, solo si existe.
+
+No vuelvas a copiar URLs estables ni adjuntes README, capturas, registro IA o PDF/XLSX rutinarios.
+
 Debes poder localizar la versión que se presenta y distinguirla de cambios posteriores.
 
 ---
@@ -283,10 +291,10 @@ qué operador utilizas
 qué resultado esperas
 ```
 
-Si vuestro programa contiene una comparación como:
+Localiza la comparación obligatoria de vuestro programa. Por ejemplo:
 
 ```java
-boolean enoughPractice = studyHours >= 3;
+boolean practicaSuficiente = horasEstudio >= 3;
 ```
 
 debes poder explicar por qué produce:
@@ -346,6 +354,8 @@ Debes poder reconocer qué NO pretende hacer todavía esta versión.
 Por ejemplo:
 
 ```text
+if / if-else
+bifurcaciones
 menús
 switch
 bucles
@@ -415,7 +425,8 @@ Cada persona debe poder demostrar, sobre el producto real:
 [ ] Puedo explicar nextLine().
 [ ] Puedo explicar la conversión de texto a número.
 [ ] Puedo explicar un cálculo sencillo.
-[ ] Puedo interpretar una comparación booleana si aparece.
+[ ] Puedo localizar la comparación booleana, predecir su resultado y explicar `true` o `false`.
+[ ] Puedo explicar por qué ese `boolean` no bifurca el flujo en H1.
 [ ] Puedo realizar una modificación pequeña.
 [ ] Puedo comprobar el efecto de mi modificación.
 [ ] Puedo reconocer los límites de H1.

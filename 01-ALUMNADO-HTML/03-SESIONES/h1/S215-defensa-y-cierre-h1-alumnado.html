@@ -106,6 +106,16 @@ o
 
 un commit estable</code></pre>
 <p>No necesitas utilizar ambos mecanismos.</p>
+<p>La entrega Moodle contiene únicamente:</p>
+<ol type="1">
+<li>el tag <code>h1-entrega</code> o un commit estable de la versión
+evaluada;</li>
+<li>la confirmación de que diario y Scrum están actualizados en los
+enlaces estables ya registrados;</li>
+<li>una evidencia no-code excepcional, solo si existe.</li>
+</ol>
+<p>No vuelvas a copiar URLs estables ni adjuntes README, capturas,
+registro IA o PDF/XLSX rutinarios.</p>
 <p>Debes poder localizar la versión que se presenta y distinguirla de
 cambios posteriores.</p>
 <hr />
@@ -210,9 +220,10 @@ class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href=
 qué operador utilizas
 
 qué resultado esperas</code></pre>
-<p>Si vuestro programa contiene una comparación como:</p>
+<p>Localiza la comparación obligatoria de vuestro programa. Por
+ejemplo:</p>
 <div class="sourceCode" id="cb19"><pre
-class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> enoughPractice <span class="op">=</span> studyHours <span class="op">&gt;=</span> <span class="dv">3</span><span class="op">;</span></span></code></pre></div>
+class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> practicaSuficiente <span class="op">=</span> horasEstudio <span class="op">&gt;=</span> <span class="dv">3</span><span class="op">;</span></span></code></pre></div>
 <p>debes poder explicar por qué produce:</p>
 <pre class="text"><code>true</code></pre>
 <p>o:</p>
@@ -251,7 +262,9 @@ utilizar una variable en otro mensaje</code></pre>
 <h2 id="12-explica-los-límites-de-h1">12. Explica los límites de H1</h2>
 <p>Debes poder reconocer qué NO pretende hacer todavía esta versión.</p>
 <p>Por ejemplo:</p>
-<pre class="text"><code>menús
+<pre class="text"><code>if / if-else
+bifurcaciones
+menús
 switch
 bucles
 memoria
@@ -301,7 +314,8 @@ individual</h2>
 [ ] Puedo explicar nextLine().
 [ ] Puedo explicar la conversión de texto a número.
 [ ] Puedo explicar un cálculo sencillo.
-[ ] Puedo interpretar una comparación booleana si aparece.
+[ ] Puedo localizar la comparación booleana, predecir su resultado y explicar `true` o `false`.
+[ ] Puedo explicar por qué ese `boolean` no bifurca el flujo en H1.
 [ ] Puedo realizar una modificación pequeña.
 [ ] Puedo comprobar el efecto de mi modificación.
 [ ] Puedo reconocer los límites de H1.

@@ -1079,7 +1079,7 @@ def test_teacher_delivery_instructions_stay_presenter_only_in_learning_context(g
 
 @pytest.mark.parametrize("number,heading,expected", [
     ("214", "Localización y comprensión — INDIVIDUAL", [2]),
-    ("215", "Contenido de la entrega", [3, 4]),
+    ("215", "Contenido de la entrega", [4]),
     ("215", "Comprobación de enlaces y permisos", [3]),
     ("215", "Entrega oficial Moodle y evidencias que permanecen", [4]),
 ])
@@ -1177,7 +1177,7 @@ def test_source_registration_and_delivery_template_keep_their_real_intervals():
     defense = module.parse_session(*source_pair("215"))
     units = module.build_pedagogical_units(defense)
     template = next(u for u in units if u.source_refs[0].heading == "Contenido de la entrega")
-    assert template.timeline_refs == [3, 4], "Preparar y después entregar usan el mismo soporte"
+    assert template.timeline_refs == [4], "La entrega mínima se realiza en el intervalo oficial"
     central = next(u for u in units if u.function == "defense")
     assert central.timeline_refs == [1, 2, 3, 4], "Las defensas continúan durante el trabajo paralelo"
 
