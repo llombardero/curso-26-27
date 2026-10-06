@@ -1,4 +1,4 @@
-# Sesión 207 — Ficha de trabajo del alumnado
+# H1.2 — Entorno de trabajo, IntelliJ, proyecto y ejecución
 
 ## Entorno de trabajo: IntelliJ, proyecto y ejecución
 

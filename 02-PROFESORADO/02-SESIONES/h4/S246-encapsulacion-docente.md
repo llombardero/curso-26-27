@@ -1,4 +1,4 @@
-# Sesión 246 — Guía operativa del profesorado
+# H4.5 — Encapsulación
 
 ## Encapsulación
 

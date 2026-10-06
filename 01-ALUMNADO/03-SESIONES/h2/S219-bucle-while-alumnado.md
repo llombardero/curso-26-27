@@ -1,4 +1,4 @@
-# Sesión 219 — Ficha de trabajo del alumnado
+# H2.4 — Bucle `while`
 
 ## Bucle `while`
 

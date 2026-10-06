@@ -1,4 +1,4 @@
-# Sesión 262 — Guía operativa del profesorado
+# H5.5 — Interfaz `Tool`
 
 ## Interfaz `Tool`
 

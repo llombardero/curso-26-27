@@ -9,104 +9,104 @@ Clasificación revisada sobre las 106 parejas de fuentes. No es una entrega del 
 | S276 | C2 | Individual |
 | S277 | C2 | Individual |
 | S278 | C2 | Equipo |
-| S201 | H0 | Individual → puesta en común en equipo |
-| S202 | H0 | Individual |
-| S203 | H0 | Individual → puesta en común en equipo |
-| S204 | H0 | Equipo → comprobación individual |
-| S205 | H0 | Individual → puesta en común en equipo |
-| S206 | H1 | Individual → puesta en común en equipo |
-| S207 | H1 | Individual |
-| S208 | H1 | Individual |
-| S209 | H1 | Equipo |
-| S210 | H1 | Individual |
-| S211 | H1 | Equipo |
-| S212 | H1 | Individual → puesta en común en equipo |
-| S213 | H1 | Equipo → comprobación individual |
-| S214 | H1 | Equipo |
-| S215 | H1 | Equipo → comprobación individual |
-| S216 | H2 | Equipo |
-| S217 | H2 | Equipo |
-| S218 | H2 | Individual → puesta en común en equipo |
-| S219 | H2 | Individual → puesta en común en equipo |
-| S220 | H2 | Individual → puesta en común en equipo |
-| S221 | H2 | Individual |
-| S222 | H2 | Equipo |
-| S223 | H2 | Individual |
-| S224 | H2 | Equipo |
-| S225 | H2 | Individual |
-| S226 | H2 | Individual |
-| S227 | H2 | Individual |
-| S228 | H2 | Equipo → comprobación individual |
-| S229 | H3 | Equipo |
-| S230 | H3 | Equipo |
-| S231 | H3 | Individual |
-| S232 | H3 | Individual |
-| S233 | H3 | Equipo |
-| S234 | H3 | Equipo |
-| S235 | H3 | Equipo |
-| S236 | H3 | Individual → puesta en común en equipo |
-| S237 | H3 | Equipo |
-| S238 | H3 | Equipo |
-| S239 | H3 | Individual |
-| S240 | H3 | Equipo → comprobación individual |
-| S242 | H4 | Equipo |
-| S243 | H4 | Individual → puesta en común en equipo |
-| S244 | H4 | Equipo |
-| S245 | H4 | Individual → puesta en común en equipo |
-| S246 | H4 | Equipo |
-| S247 | H4 | Equipo |
-| S248 | H4 | Equipo |
-| S249 | H4 | Equipo |
-| S250 | H4 | Equipo |
-| S251 | H4 | Equipo |
-| S252 | H4 | Equipo |
-| S253 | H4 | Equipo |
-| S254 | H4 | Individual |
-| S255 | H4 | Equipo |
-| S256 | H4 | Equipo |
-| S257 | H4 | Individual |
-| S258 | H5 | Equipo |
-| S259 | H5 | Individual → puesta en común en equipo |
-| S260 | H5 | Equipo |
-| S261 | H5 | Equipo |
-| S262 | H5 | Equipo → comprobación individual |
-| S263 | H5 | Equipo |
-| S264 | H5 | Equipo |
-| S265 | H5 | Equipo |
-| S266 | H5 | Equipo |
-| S267 | H5 | Parejas |
-| S268 | H5 | Equipo → comprobación individual |
-| S269 | H5 | Equipo |
-| S270 | H5 | Individual |
-| S271 | H5 | Equipo |
-| S272 | H5 | Equipo |
-| S273 | H5 | Individual → puesta en común en equipo |
-| S274 | H5 | Equipo → comprobación individual |
-| S279 | H6 | Equipo |
-| S280 | H6 | Equipo |
-| S281 | H6 | Equipo |
-| S282 | H6 | Equipo |
-| S283 | H6 | Equipo |
-| S284 | H6 | Individual → puesta en común en equipo |
-| S285 | H6 | Equipo |
-| S286 | H6 | Equipo |
-| S287 | H6 | Equipo |
-| S288 | H6 | Equipo |
-| S289 | H6 | Individual |
-| S290 | H6 | Individual → puesta en común en equipo |
-| S291 | H6 | Equipo → comprobación individual |
-| S292 | H7 | Equipo |
-| S293 | H7 | Individual → puesta en común en equipo |
-| S294 | H7 | Equipo |
-| S295 | H7 | Individual → puesta en común en equipo |
-| S296 | H7 | Equipo → comprobación individual |
-| S297 | HF | Individual → puesta en común en equipo |
-| S298 | HF | Equipo |
-| S299 | HF | Individual |
-| S300 | HF | Equipo |
-| S301 | HF | Individual |
-| S302 | HF | Individual |
-| S303 | HF | Individual |
-| S304 | HF | Parejas |
-| S305 | HF | Equipo |
-| S306 | HF | Individual |
+| H0.1 | H0 | Individual → puesta en común en equipo |
+| H0.2 | H0 | Individual |
+| H0.3 | H0 | Individual → puesta en común en equipo |
+| H0.4 | H0 | Equipo → comprobación individual |
+| H0.5 | H0 | Individual → puesta en común en equipo |
+| H1.1 | H1 | Individual → puesta en común en equipo |
+| H1.2 | H1 | Individual |
+| H1.3 | H1 | Individual |
+| H1.4 | H1 | Equipo |
+| H1.5 | H1 | Individual |
+| H1.6 | H1 | Equipo |
+| H1.7 | H1 | Individual → puesta en común en equipo |
+| H1.8 | H1 | Equipo → comprobación individual |
+| H1.9 | H1 | Equipo |
+| H1.10 | H1 | Equipo → comprobación individual |
+| H2.1 | H2 | Equipo |
+| H2.2 | H2 | Equipo |
+| H2.3 | H2 | Individual → puesta en común en equipo |
+| H2.4 | H2 | Individual → puesta en común en equipo |
+| H2.5 | H2 | Individual → puesta en común en equipo |
+| H2.6 | H2 | Individual |
+| H2.7 | H2 | Equipo |
+| H2.8 | H2 | Individual |
+| H2.9 | H2 | Equipo |
+| H2.10 | H2 | Individual |
+| H2.11 | H2 | Individual |
+| H2.12 | H2 | Individual |
+| H2.13 | H2 | Equipo → comprobación individual |
+| H3.1 | H3 | Equipo |
+| H3.2 | H3 | Equipo |
+| H3.3 | H3 | Individual |
+| H3.4 | H3 | Individual |
+| H3.5 | H3 | Equipo |
+| H3.6 | H3 | Equipo |
+| H3.7 | H3 | Equipo |
+| H3.8 | H3 | Individual → puesta en común en equipo |
+| H3.9 | H3 | Equipo |
+| H3.10 | H3 | Equipo |
+| H3.11 | H3 | Individual |
+| H3.12 | H3 | Equipo → comprobación individual |
+| H4.1 | H4 | Equipo |
+| H4.2 | H4 | Individual → puesta en común en equipo |
+| H4.3 | H4 | Equipo |
+| H4.4 | H4 | Individual → puesta en común en equipo |
+| H4.5 | H4 | Equipo |
+| H4.6 | H4 | Equipo |
+| H4.7 | H4 | Equipo |
+| H4.8 | H4 | Equipo |
+| H4.9 | H4 | Equipo |
+| H4.10 | H4 | Equipo |
+| H4.11 | H4 | Equipo |
+| H4.12 | H4 | Equipo |
+| H4.13 | H4 | Individual |
+| H4.14 | H4 | Equipo |
+| H4.15 | H4 | Equipo |
+| H4.16 | H4 | Individual |
+| H5.1 | H5 | Equipo |
+| H5.2 | H5 | Individual → puesta en común en equipo |
+| H5.3 | H5 | Equipo |
+| H5.4 | H5 | Equipo |
+| H5.5 | H5 | Equipo → comprobación individual |
+| H5.6 | H5 | Equipo |
+| H5.7 | H5 | Equipo |
+| H5.8 | H5 | Equipo |
+| H5.9 | H5 | Equipo |
+| H5.10 | H5 | Parejas |
+| H5.11 | H5 | Equipo → comprobación individual |
+| H5.12 | H5 | Equipo |
+| H5.13 | H5 | Individual |
+| H5.14 | H5 | Equipo |
+| H5.15 | H5 | Equipo |
+| H5.16 | H5 | Individual → puesta en común en equipo |
+| H5.17 | H5 | Equipo → comprobación individual |
+| H6.1 | H6 | Equipo |
+| H6.2 | H6 | Equipo |
+| H6.3 | H6 | Equipo |
+| H6.4 | H6 | Equipo |
+| H6.5 | H6 | Equipo |
+| H6.6 | H6 | Individual → puesta en común en equipo |
+| H6.7 | H6 | Equipo |
+| H6.8 | H6 | Equipo |
+| H6.9 | H6 | Equipo |
+| H6.10 | H6 | Equipo |
+| H6.11 | H6 | Individual |
+| H6.12 | H6 | Individual → puesta en común en equipo |
+| H6.13 | H6 | Equipo → comprobación individual |
+| H7.1 | H7 | Equipo |
+| H7.2 | H7 | Individual → puesta en común en equipo |
+| H7.3 | H7 | Equipo |
+| H7.4 | H7 | Individual → puesta en común en equipo |
+| H7.5 | H7 | Equipo → comprobación individual |
+| HF.1 | HF | Individual → puesta en común en equipo |
+| HF.2 | HF | Equipo |
+| HF.3 | HF | Individual |
+| HF.4 | HF | Equipo |
+| HF.5 | HF | Individual |
+| HF.6 | HF | Individual |
+| HF.7 | HF | Individual |
+| HF.8 | HF | Parejas |
+| HF.9 | HF | Equipo |
+| HF.10 | HF | Individual |

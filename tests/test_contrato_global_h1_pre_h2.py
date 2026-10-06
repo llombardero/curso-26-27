@@ -53,7 +53,7 @@ def test_s212_is_executar_in_h1_instruments():
         H1_TEACHER / "13C-checklist-correccion-h1.md",
     ):
         text = read(path)
-        row = next(line for line in text.splitlines() if "S212" in line and line.startswith("|"))
+        row = next(line for line in text.splitlines() if "H1.7" in line and line.startswith("|"))
         assert "Ejecutar" in row, path
         assert "Investigar" not in row, path
 

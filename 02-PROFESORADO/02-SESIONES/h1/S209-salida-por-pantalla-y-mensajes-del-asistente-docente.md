@@ -1,4 +1,4 @@
-# S209 — Mensajes de consola, literales y concatenación
+# H1.4 — Salida por pantalla y mensajes del asistente
 
 | Dato | Valor |
 |---|---|
@@ -234,7 +234,7 @@ Resultado: 23
 
 En la primera línea, los operandos son números y `+` suma. En la segunda, la evaluación ya está construyendo texto: concatena `2` y después `3` con el literal inicial.
 
-No desarrolles aquí una teoría extensa de precedencia. La cuestión de S209 es qué mensaje aparecerá y por qué. La profundización en operaciones corresponde a S211.
+No desarrolles aquí una teoría extensa de precedencia. La cuestión de H1.4 es qué mensaje aparecerá y por qué. La profundización en operaciones corresponde a H1.6.
 
 Pregunta:
 
@@ -296,7 +296,7 @@ El equipo escucha, contrasta la interpretación con su intención y revisa el te
 - **GitHub:** código con los mensajes finalmente implementados y ejecutables.
 - **Scrum:** alternativa elegida y motivo solo si constituye una decisión de diseño relevante para el trabajo posterior.
 - **Diario individual:** únicamente si cambiar o defender una decisión produjo aprendizaje significativo.
-- **README / Moodle / Drive / Site:** sin actualización o entrega específica en S209.
+- **README / Moodle / Drive / Site:** sin actualización o entrega específica en H1.4.
 
 No se crea captura, documento paralelo, ficha de validación ni microentrega. La alternativa descartada puede explicarse durante la actividad; solo necesita persistir si ayuda al equipo a comprender una decisión real.
 
@@ -338,7 +338,7 @@ Cierra en voz alta:
 
 > Hoy hemos ideado antes de programar. La salida de consola no se improvisa al final: se diseña, se ejecuta y se revisa para que alguien comprenda qué ocurre.
 
-## Límites de S209
+## Límites de H1.4
 
 Esta sesión no desarrolla operaciones aritméticas, constantes, `Scanner`, decisiones ni clean code como temas centrales. Se concentra en diseñar mensajes, usar literales y concatenar datos para construir la primera interfaz de MiniJarvis.
 

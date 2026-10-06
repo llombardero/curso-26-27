@@ -1,4 +1,4 @@
-# Sesión 243 — Guía operativa del profesorado
+# H4.2 — Clase y objeto
 
 ## Clase y objeto
 

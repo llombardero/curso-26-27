@@ -1,4 +1,4 @@
-# Sesión 205 — Ficha de trabajo del alumnado
+# H0.5 — De la torre a MiniJarvis: equipo, contrato y rotación
 
 ## De la torre a MiniJarvis: equipo, contrato y rotación
 
@@ -21,9 +21,9 @@ Primero completa la reflexión individual; después acordad el contrato en equip
 ## 1. Material que necesitáis
 
 - Resultado HADA individual, que puede mantenerse privado.
-- Mapa y funciones acordadas en S203.
+- Mapa y funciones acordadas en H0.3.
 - Tablero, pruebas, review y retrospectiva de la torre.
-- Cierres individuales de S204.
+- Cierres individuales de H0.4.
 - Esta ficha.
 
 No empecéis decidiendo si el equipo “funcionó bien o mal”. Primero reunid hechos.

@@ -1,4 +1,4 @@
-# Sesión 202 — Ficha de trabajo del alumnado
+# H0.2 — Scrum mínimo y perfil HADA
 
 ## Scrum mínimo y perfil HADA
 

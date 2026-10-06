@@ -57,6 +57,28 @@ COLORS = {
     "hf": RGBColor(109, 87, 37),
 }
 
+PUBLIC_SESSION_RANGES = {
+    "h0": (201, 205),
+    "h1": (206, 215),
+    "h2": (216, 228),
+    "h3": (229, 240),
+    "h4": (242, 257),
+    "h5": (258, 274),
+    "h6": (279, 291),
+    "h7": (292, 296),
+    "hf": (297, 306),
+}
+
+
+def public_session_label(number: str, folder: str) -> str:
+    """Devuelve la numeración pública sin alterar el identificador técnico."""
+    bounds = PUBLIC_SESSION_RANGES.get(folder.lower())
+    numeric = int(number)
+    if bounds is None or not bounds[0] <= numeric <= bounds[1]:
+        return f"S{number}"
+    prefix = "HF" if folder.lower() == "hf" else folder.upper()
+    return f"{prefix}.{numeric - bounds[0] + 1}"
+
 
 @dataclass
 class TimelineBlock:
@@ -423,7 +445,11 @@ SEMANTIC_CATEGORIES = (
 
 def primary_session_title(text: str, fallback: str) -> tuple[str, str]:
     """Obtiene el tema canónico y conserva compatibilidad con guías antiguas."""
-    match = re.search(r"^#\s+S\d{3}\s*[—-]\s*(.+?)\s*$", text, flags=re.MULTILINE)
+    match = re.search(
+        r"^#\s+(?:S\d{3}|H(?:[0-7]|F)\.\d+)\s*[—-]\s*(.+?)\s*$",
+        text,
+        flags=re.MULTILINE,
+    )
     if match:
         return clean(match.group(1)), "teacher"
     headings = re.findall(r"^##\s+(.+)$", text, flags=re.MULTILINE)
@@ -1925,7 +1951,8 @@ def add_footer(slide, session: Session, accent: RGBColor) -> None:
     bar.fill.solid()
     bar.fill.fore_color.rgb = accent
     bar.line.fill.background()
-    add_text(slide, Inches(0.45), Inches(7.25), Inches(12.3), Inches(0.18), f"MiniJarvis · 1.º DAW · Sesión {session.number} · {session.hito}", 9, WHITE)
+    public_label = public_session_label(session.number, session.folder)
+    add_text(slide, Inches(0.45), Inches(7.25), Inches(12.3), Inches(0.18), f"MiniJarvis · 1.º DAW · {public_label} · {session.hito}", 9, WHITE)
 
 
 def base_slide(prs: Presentation, session: Session, title: str, kicker: str = ""):
@@ -1954,11 +1981,12 @@ def rounded_card(slide, x, y, w, h, fill=WHITE, line=SOFT):
 def render_title(prs: Presentation, session: Session, spec: SlideSpec) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     accent = COLORS.get(session.folder, RGBColor(47, 91, 168))
+    public_label = public_session_label(session.number, session.folder)
     add_full_background(slide, DARK)
     stripe = slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.RECTANGLE, 0, 0, Inches(0.28), SLIDE_H)
     stripe.fill.solid(); stripe.fill.fore_color.rgb = accent; stripe.line.fill.background()
     badge = rounded_card(slide, Inches(0.72), Inches(0.62), Inches(2.05), Inches(0.62), accent, accent)
-    add_text(slide, Inches(0.8), Inches(0.75), Inches(1.88), Inches(0.25), f"SESIÓN {session.number}", 14, WHITE, True, PP_ALIGN.CENTER)
+    add_text(slide, Inches(0.8), Inches(0.75), Inches(1.88), Inches(0.25), public_label, 14, WHITE, True, PP_ALIGN.CENTER)
     title_size = 38 if len(spec.title) < 65 else 32
     add_text(slide, Inches(0.75), Inches(1.62), Inches(11.8), Inches(1.85), spec.title, title_size, WHITE, True)
     add_text(slide, Inches(0.78), Inches(4.05), Inches(11.4), Inches(0.45), spec.subtitle, 19, RGBColor(190, 200, 214), True)
@@ -2226,7 +2254,8 @@ def generate_index(generated: list[tuple[Session, Path, int]], output_root: Path
     ]
     for session, target, count in generated:
         relative = target.relative_to(output_root).as_posix()
-        lines.append(f"| {session.number} | {session.hito} | {session.topic} | {count} | `{relative}` |")
+        label = public_session_label(session.number, session.folder)
+        lines.append(f"| {label} | {session.hito} | {session.topic} | {count} | `{relative}` |")
     (output_root / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

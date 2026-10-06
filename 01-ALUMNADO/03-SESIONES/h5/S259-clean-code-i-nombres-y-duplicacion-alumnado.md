@@ -1,4 +1,4 @@
-# Sesión 259 — Ficha de trabajo del alumnado
+# H5.2 — Clean code I: nombres y duplicación
 
 ## Clean code I: nombres y duplicación
 

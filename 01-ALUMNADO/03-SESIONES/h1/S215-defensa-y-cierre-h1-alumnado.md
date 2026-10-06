@@ -1,4 +1,4 @@
-# Sesión 215 — Ficha de trabajo del alumnado
+# H1.10 — Defensa y cierre de H1
 
 ## Defensa y cierre H1
 
@@ -16,7 +16,7 @@
 ## Material que necesitas
 
 - Un ordenador con JDK e IntelliJ disponibles.
-- La versión estable de H1 preparada en S214.
+- La versión estable de H1 preparada en H1.9.
 - El código real del proyecto.
 - El `README.md` actualizado.
 

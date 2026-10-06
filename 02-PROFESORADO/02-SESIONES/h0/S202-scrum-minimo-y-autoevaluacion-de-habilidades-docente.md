@@ -1,4 +1,4 @@
-# Sesión 202 — Guía docente autónoma
+# H0.2 — Scrum mínimo y perfil HADA
 
 ## Scrum mínimo y perfil HADA
 
@@ -10,7 +10,7 @@
 | Fase HEXA del hito | Fase 0 — Equipos + Investigar — aprender lo necesario |
 | Agrupamiento | Trabajo individual, breve contraste conceptual y cierre privado |
 | Producto principal | Ficha HADA puntuada, sumas por perfil y diagrama personal |
-| Uso del producto | Preparar equipos provisionales equilibrados para S203 |
+| Uso del producto | Preparar equipos provisionales equilibrados para H0.3 |
 | Carácter | Diagnóstico formativo, sin calificación y revisable mediante la torre |
 
 > Esta guía permite impartir la sesión sin reconstruir instrucciones desde otros documentos. La ficha del alumnado contiene el instrumento que debe cumplimentarse.
@@ -19,7 +19,7 @@
 
 ## 1. Sentido de la sesión dentro de H0
 
-En S201 el alumnado conoció que MiniJarvis crecerá por incrementos y que las evidencias deben permitir reconstruir el proceso. H0 debe convertir esas ideas en una experiencia concreta: formar un equipo, organizar un sprint, construir una torre de papel, comprobarla y revisar cómo ha trabajado el equipo.
+En H0.1 el alumnado conoció que MiniJarvis crecerá por incrementos y que las evidencias deben permitir reconstruir el proceso. H0 debe convertir esas ideas en una experiencia concreta: formar un equipo, organizar un sprint, construir una torre de papel, comprobarla y revisar cómo ha trabajado el equipo.
 
 Antes de crear los equipos hace falta una primera hipótesis sobre qué puede aportar cada persona. Para ello se utiliza HADA, una herramienta de análisis de composición de equipos difundida por Tknika. HADA no diagnostica personalidad ni determina capacidades fijas. Describe preferencias declaradas en cuatro direcciones de contribución:
 
@@ -28,7 +28,7 @@ Antes de crear los equipos hace falta una primera hipótesis sobre qué puede ap
 - Desarrollador: ideas, alternativas, creatividad y cambio.
 - Analista: precisión, objetividad, organización y comprobación.
 
-La torre de S204 servirá para contrastar esa autopercepción con conductas observables. Un resultado HADA es, por tanto, una hipótesis inicial; no es una sentencia ni un cargo permanente.
+La torre de H0.4 servirá para contrastar esa autopercepción con conductas observables. Un resultado HADA es, por tanto, una hipótesis inicial; no es una sentencia ni un cargo permanente.
 
 ---
 
@@ -58,7 +58,7 @@ Evidencia mínima:
 
 ### Material
 
-- Una ficha de alumnado S202 por persona.
+- Una ficha de alumnado H0.2 por persona.
 - Lápiz o bolígrafo; se recomienda lápiz si el alumnado puede necesitar corregir una fila.
 - Pizarra o proyector.
 - Un sobre, carpeta o procedimiento equivalente para recoger resultados sin exponerlos.
@@ -88,7 +88,7 @@ Sprint | Backlog | Bloqueo | Review | Retrospectiva
 
 - Cómo recogerás o consultarás los resultados sin proyectar nombres y puntuaciones.
 - Qué alumnado necesita versión ampliada, más tiempo de lectura o apoyo para comprender formulaciones.
-- Cuándo prepararás la propuesta de equipos entre S202 y S203.
+- Cuándo prepararás la propuesta de equipos entre H0.2 y H0.3.
 - Qué información previa puede afectar a la agrupación: accesibilidad, ausencias previstas o incompatibilidades pedagógicas conocidas.
 
 No envíes nombres, respuestas o puntuaciones a una IA ni a servicios externos.
@@ -331,7 +331,7 @@ Prioriza equipos de cuatro. Usa equipos de tres cuando el número total lo requi
 
 ### Paso 3 — Buscar diversidad, no perfección
 
-Intenta que cada equipo tenga presencia relativa de las cuatro tendencias. No es obligatorio que haya cuatro perfiles dominantes distintos. Si falta una tendencia, se compensará mediante una función explícita en S203.
+Intenta que cada equipo tenga presencia relativa de las cuatro tendencias. No es obligatorio que haya cuatro perfiles dominantes distintos. Si falta una tendencia, se compensará mediante una función explícita en H0.3.
 
 ### Paso 4 — Aplicar salvaguardas
 
@@ -354,7 +354,7 @@ Función que podría compensarla:
 Qué observaremos durante la torre:
 ```
 
-La composición seguirá siendo provisional hasta la retrospectiva de S205.
+La composición seguirá siendo provisional hasta la retrospectiva de H0.5.
 
 ---
 
@@ -402,7 +402,7 @@ Prioriza:
 2. calcular las cuatro sumas;
 3. comprobar el total 60.
 
-El diagrama puede completarse al inicio de S203. No elimines la comprobación matemática ni el ticket conceptual.
+El diagrama puede completarse al inicio de H0.3. No elimines la comprobación matemática ni el ticket conceptual.
 
 ---
 
@@ -416,7 +416,7 @@ La sesión está cerrada cuando:
 - [ ] las cuatro columnas suman 60;
 - [ ] no se han publicado puntuaciones nominales;
 - [ ] cada persona entiende que el resultado es provisional;
-- [ ] el docente dispone de información suficiente para proponer equipos antes de S203.
+- [ ] el docente dispone de información suficiente para proponer equipos antes de H0.3.
 
 No califiques la puntuación, el perfil ni la coincidencia con la observación posterior.
 
@@ -434,8 +434,8 @@ Conserva esta atribución en las copias de aula. No presentes HADA como creació
 
 ---
 
-## 12. Puente a S203
+## 12. Puente a H0.3
 
-Comienza S203 con la idea:
+Comienza H0.3 con la idea:
 
 > Ayer formulasteis una hipótesis individual. Hoy veremos cómo se combinan esas preferencias, qué capacidad necesita compensación y qué función asumirá inicialmente cada integrante antes de poner el equipo a prueba con la torre.

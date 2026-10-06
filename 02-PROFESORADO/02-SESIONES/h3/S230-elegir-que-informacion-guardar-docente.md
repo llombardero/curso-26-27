@@ -1,4 +1,4 @@
-# Sesión 230 — Guía operativa del profesorado
+# H3.2 — Elegir qué información guardar
 
 ## Elegir qué información guardar
 

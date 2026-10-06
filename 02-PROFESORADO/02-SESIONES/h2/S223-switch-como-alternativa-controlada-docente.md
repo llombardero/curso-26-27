@@ -1,4 +1,4 @@
-# Sesión 223 — Guía operativa del profesorado
+# H2.8 — `switch` como alternativa controlada
 
 ## `switch` como alternativa controlada
 

@@ -1,4 +1,4 @@
-# Sesión 247 — Ficha de trabajo del alumnado
+# H4.6 — Extraer clase `Memory`
 
 ## Extraer clase `Memory`
 

@@ -1,4 +1,4 @@
-# Sesión 281 — Ficha de trabajo del alumnado
+# H6.3 — Escritura de ficheros
 
 ## Escritura de ficheros
 

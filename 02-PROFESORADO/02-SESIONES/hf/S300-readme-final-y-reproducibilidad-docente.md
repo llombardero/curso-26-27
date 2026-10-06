@@ -1,4 +1,4 @@
-# Sesión 300 — Guía operativa del profesorado
+# HF.4 — README final y reproducibilidad
 
 ## README final y reproducibilidad
 

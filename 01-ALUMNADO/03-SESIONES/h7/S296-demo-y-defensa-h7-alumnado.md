@@ -1,4 +1,4 @@
-# Sesión 296 — Ficha de trabajo del alumnado
+# H7.5 — Demo y defensa H7
 
 ## Demo y defensa H7
 

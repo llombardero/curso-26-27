@@ -1,4 +1,4 @@
-# Sesión 246 — Ficha de trabajo del alumnado
+# H4.5 — Encapsulación
 
 ## Encapsulación
 

@@ -1,4 +1,4 @@
-# Sesión 221 — Ficha de trabajo del alumnado
+# H2.6 — Comparación de textos en Java
 
 ## Comparación de textos en Java
 

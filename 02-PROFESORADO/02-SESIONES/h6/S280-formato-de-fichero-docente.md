@@ -1,4 +1,4 @@
-# Sesión 280 — Guía operativa del profesorado
+# H6.2 — Formato de fichero
 
 ## Formato de fichero
 

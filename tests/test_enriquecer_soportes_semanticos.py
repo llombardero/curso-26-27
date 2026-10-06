@@ -44,7 +44,7 @@ def test_reproducible_example_question_and_chain_share_view():
 
 def test_prepare_deliver_boundary_is_prominent_exact_source():
     _, _, frames = prepared('214')
-    exact = 'Moodle: S214 prepara enlaces, permisos y documentación; S215 realiza la entrega oficial de H1.'
+    exact = 'Moodle: H1.9 prepara enlaces, permisos y documentación; H1.10 realiza la entrega oficial de H1.'
     assert any(a.text == exact and a.kind == 'boundary' for f in frames for a in f.atoms)
 
 

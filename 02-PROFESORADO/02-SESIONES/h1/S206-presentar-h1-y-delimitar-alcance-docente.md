@@ -1,4 +1,4 @@
-# S206 — Presentar H1 y delimitar su alcance
+# H1.1 — Presentar H1 y delimitar alcance
 
 | Dato | Valor |
 |---|---|
@@ -9,7 +9,7 @@
 
 ## Finalidad de la sesión
 
-S206 abre H1. La sesión permite seguir este recorrido:
+H1.1 abre H1. La sesión permite seguir este recorrido:
 
 ```text
 entender el reto
@@ -185,14 +185,14 @@ Primeras tareas reales:
 ...
 ```
 
-No se añaden tareas ni campos para demostrar que S206 ocurrió. Una frase como `hacer que funcione` no es suficiente: debe indicar un comportamiento comprobable.
+No se añaden tareas ni campos para demostrar que H1.1 ocurrió. Una frase como `hacer que funcione` no es suficiente: debe indicar un comportamiento comprobable.
 
 ## Persistencia mínima
 
 - **Scrum:** conserva el alcance, backlog, decisión o bloqueo real del equipo.
-- **Diario individual:** solo interviene si surge un aprendizaje, duda, bloqueo o cambio de criterio personal significativo; no hay fila S206 obligatoria.
+- **Diario individual:** solo interviene si surge un aprendizaje, duda, bloqueo o cambio de criterio personal significativo; no hay fila H1.1 obligatoria.
 - **GitHub:** solo recibe un artefacto técnico si el equipo lo crea realmente dentro del flujo del proyecto; el ejemplo docente no genera una entrega de código.
-- **Moodle:** no hay entrega en S206.
+- **Moodle:** no hay entrega en H1.1.
 - **Drive y Sites:** no se crean ni actualizan; tampoco se producen capturas o documentos paralelos.
 - **IA:** H1 no integra servicios ni API de IA en MiniJarvis y no genera un registro separado por defecto. Nunca se introducen claves, tokens, credenciales ni datos personales reales.
 
@@ -231,7 +231,7 @@ No resuelvas la clasificación por el equipo. Devuelve la decisión a los criter
 | 18–30 min | Comparar criterios y clasificar las propuestas en equipo. |
 | 30–38 min | Acordar frase de alcance, requisitos comprobables y justificaciones. |
 | 38–42 min | Registrar únicamente alcance, backlog, decisión o bloqueo real en Scrum. |
-| 42–45 min | Comprobar respuestas finales y conectar con S207. |
+| 42–45 min | Comprobar respuestas finales y conectar con H1.2. |
 
 ## Cierre
 

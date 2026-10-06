@@ -1,4 +1,4 @@
-# Sesión 289 — Ficha de trabajo del alumnado
+# H6.11 — Comparación Java-Python H6
 
 ## Comparación Java-Python H6
 

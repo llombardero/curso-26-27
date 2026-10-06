@@ -1,4 +1,4 @@
-# Sesión 282 — Guía operativa del profesorado
+# H6.4 — Lectura de ficheros
 
 ## Lectura de ficheros
 

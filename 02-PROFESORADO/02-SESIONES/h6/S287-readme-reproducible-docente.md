@@ -1,4 +1,4 @@
-# Sesión 287 — Guía operativa del profesorado
+# H6.9 — README reproducible
 
 ## README reproducible
 

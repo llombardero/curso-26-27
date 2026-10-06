@@ -1,4 +1,4 @@
-# Sesión 298 — Guía operativa del profesorado
+# HF.2 — Preparar demo final
 
 ## Preparar demo final
 

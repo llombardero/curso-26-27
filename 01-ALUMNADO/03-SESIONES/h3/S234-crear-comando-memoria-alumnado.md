@@ -1,4 +1,4 @@
-# Sesión 234 — Ficha de trabajo del alumnado
+# H3.6 — Crear comando `memoria`
 
 ## Crear comando `memoria`
 

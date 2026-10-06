@@ -1,4 +1,4 @@
-# Sesión 235 — Guía operativa del profesorado
+# H3.7 — Caso límite: memoria vacía
 
 ## Caso límite: memoria vacía
 

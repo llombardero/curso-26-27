@@ -1,4 +1,4 @@
-# Sesión 294 — Guía operativa del profesorado
+# H7.3 — Implementar simulación o integración
 
 ## Implementar simulación o integración
 

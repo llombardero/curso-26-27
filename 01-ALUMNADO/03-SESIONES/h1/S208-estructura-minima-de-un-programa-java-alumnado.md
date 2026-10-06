@@ -1,4 +1,4 @@
-# Sesión 208 — Ficha de trabajo del alumnado
+# H1.3 — Estructura mínima de un programa Java
 
 ## Estructura mínima de un programa Java
 

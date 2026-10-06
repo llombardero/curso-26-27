@@ -100,6 +100,21 @@ def test_parser_accepts_numbered_and_unnumbered_headings(generator):
     assert session.closure
 
 
+@pytest.mark.parametrize("number, folder, expected", [
+    ("201", "h0", "H0.1"),
+    ("206", "h1", "H1.1"),
+    ("212", "h1", "H1.7"),
+    ("215", "h1", "H1.10"),
+    ("216", "h2", "H2.1"),
+    ("306", "hf", "HF.10"),
+    ("241", "c1", "S241"),
+])
+def test_public_session_label_preserves_internal_ids_and_special_blocks(
+    generator, number, folder, expected
+):
+    assert generator.public_session_label(number, folder) == expected
+
+
 def test_s213_title_is_aligned_with_the_approved_clean_code_scope(generator):
     teacher, student = source_pair("213")
 
@@ -203,7 +218,7 @@ def test_s213_scope_contract_uses_existing_unit_roles_without_promoting_h2(gener
 
     session = generator.parse_session(teacher, student)
     source = teacher.read_text(encoding="utf-8")
-    assert "## Contrato curricular de S213" in source
+    assert "## Contrato curricular de H1.8" in source
     assert all(marker in source for marker in ("core", "recognition", "out_of_scope"))
 
     units = generator.build_pedagogical_units(session)
@@ -1025,7 +1040,7 @@ def test_critical_plan_contracts_bind_source_units_roles_and_destinations(genera
         assert slide.relations["unit_relations"][unit.unit_id]["reproducible_test"] == ("input", "expected", "obtained", "meaning")
         projected("Modelo pedagógico de README")
         projected("Comprobación externa — PAREJAS")
-        assert "S214 prepara enlaces, permisos y documentación; S215 realiza la entrega oficial de H1." in visible
+        assert "H1.9 prepara enlaces, permisos y documentación; H1.10 realiza la entrega oficial de H1." in visible
     else:
         for heading in ("Protocolo básico", "Ensayo y revisión por parejas", "Review del incremento H1 — EQUIPO", "Retrospectiva H1 — EQUIPO", "Contenido de la entrega", "Comprobación de enlaces y permisos", "Cierre de H1"):
             projected(heading)

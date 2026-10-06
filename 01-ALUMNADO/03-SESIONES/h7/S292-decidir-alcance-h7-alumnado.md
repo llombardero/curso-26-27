@@ -1,4 +1,4 @@
-# Sesión 292 — Ficha de trabajo del alumnado
+# H7.1 — Decidir alcance H7
 
 ## Decidir alcance H7
 

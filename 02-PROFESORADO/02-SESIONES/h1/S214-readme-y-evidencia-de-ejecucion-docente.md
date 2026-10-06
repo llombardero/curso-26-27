@@ -1,4 +1,4 @@
-# S214 — README, pruebas reproducibles y preparación del cierre
+# H1.9 — README y evidencia de ejecución
 
 | Dato | Valor |
 |---|---|
@@ -15,7 +15,7 @@ H1 debe quedar comprensible, reproducible, documentado, verificable y enlazable.
 
 > Otra persona debe poder entender, ejecutar y comprobar H1 sin depender de una explicación oral del equipo.
 
-S214 prepara el cierre mediante documentación y pruebas accesibles. Documentar bien no sustituye la defensa práctica posterior.
+H1.9 prepara el cierre mediante documentación y pruebas accesibles. Documentar bien no sustituye la defensa práctica posterior.
 
 ## Antes de entrar en clase
 
@@ -103,7 +103,7 @@ Antes de aceptar una formulación, pregunta:
 - ¿se puede seguir sin haber estado en clase?
 - ¿distingue capacidad actual y límite?
 
-Los casos del modelo muestran dos resultados observables de una comparación, sin ramas, y una entrada no convertible. Solo deben documentarse como pruebas del equipo si esos comportamientos existen realmente en su incremento y pueden reproducirse. S214 no vuelve a enseñar comparación, `Scanner` o conversiones.
+Los casos del modelo muestran dos resultados observables de una comparación, sin ramas, y una entrada no convertible. Solo deben documentarse como pruebas del equipo si esos comportamientos existen realmente en su incremento y pueden reproducirse. H1.9 no vuelve a enseñar comparación, `Scanner` o conversiones.
 
 ## Qué convierte una prueba en reproducible
 
@@ -217,14 +217,14 @@ La pregunta de control es:
 
 > ¿Podría otra persona ejecutar y comprobar el proyecto siguiendo únicamente la documentación?
 
-## Arquitectura de evidencias y límite de S214
+## Arquitectura de evidencias y límite de H1.9
 
 - **GitHub:** fuente canónica para código, README, evolución técnica, pruebas localizables y enlaces técnicos.
-- **Scrum:** solo registra una tarea, decisión, cambio, bloqueo o planificación real; no se actualiza para demostrar que ocurrió S214.
-- **Diario individual:** únicamente si surge un aprendizaje, dificultad o decisión personal significativa; no se exige fila S214 ni revisión administrativa.
+- **Scrum:** solo registra una tarea, decisión, cambio, bloqueo o planificación real; no se actualiza para demostrar que ocurrió H1.9.
+- **Diario individual:** únicamente si surge un aprendizaje, dificultad o decisión personal significativa; no se exige fila H1.9 ni revisión administrativa.
 - **Drive:** solo para una evidencia excepcional no-code sin una ubicación más natural; no duplica código, consola, capturas, pruebas técnicas o README.
 - **Sites:** no se crean ni actualizan durante H1. Una evidencia significativa podrá seleccionarse posteriormente durante C1.
-- **Moodle:** S214 prepara enlaces, permisos y documentación; S215 realiza la entrega oficial de H1.
+- **Moodle:** H1.9 prepara enlaces, permisos y documentación; H1.10 realiza la entrega oficial de H1.
 
 No se crea una evidencia de ejecución separada cuando las pruebas y su explicación ya están localizadas desde GitHub o README.
 
@@ -269,7 +269,7 @@ No reescribas el README por el equipo. Utiliza una pregunta específica:
 | 38–42 min | Corregir bloqueos, enlaces y permisos descubiertos. |
 | 42–45 min | Comprobar el cierre y preparar la transición hacia la defensa. |
 
-## Transición a S215
+## Transición a H1.10
 
 Documentar no sustituye defender. La documentación preparada debe permitir encontrar rápidamente aquello que después habrá que señalar, explicar, ejecutar y comprobar.
 

@@ -1,4 +1,4 @@
-# Sesión 291 — Guía operativa del profesorado
+# H6.13 — Demo y defensa H6
 
 ## Demo y defensa H6
 

@@ -1,4 +1,4 @@
-# Sesión 301 — Guía operativa del profesorado
+# HF.5 — Registro IA final y seguridad
 
 ## Registro IA final y seguridad
 

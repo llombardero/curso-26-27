@@ -1,4 +1,4 @@
-# Sesión 224 — Guía operativa del profesorado
+# H2.9 — Pruebas manuales
 
 ## Pruebas manuales
 

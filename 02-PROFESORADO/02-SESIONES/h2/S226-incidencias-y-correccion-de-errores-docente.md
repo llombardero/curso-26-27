@@ -1,4 +1,4 @@
-# Sesión 226 — Guía operativa del profesorado
+# H2.11 — Incidencias y corrección de errores
 
 ## Incidencias y corrección de errores
 

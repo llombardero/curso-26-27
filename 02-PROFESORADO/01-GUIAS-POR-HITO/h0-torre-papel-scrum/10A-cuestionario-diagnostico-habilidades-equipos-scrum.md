@@ -12,11 +12,11 @@ Fuente local de referencia:
 
 ## 1. Encaje dentro del ciclo HEXA de H0
 
-- H: S201 presenta el reto H0: diseñar un equipo, ponerlo a prueba con una torre y transferir lo aprendido a MiniJarvis.
-- E: S202 utiliza HADA para formular una hipótesis individual de contribución.
-- X: S203 combina perfiles, compensa desequilibrios y formaliza funciones, backlog y criterios.
-- A: S204 ejecuta dos ciclos de la torre y contrasta la hipótesis con conductas observables.
-- A/transferencia: S205 revisa equipo y funciones, acuerda rotaciones y crea el contrato de MiniJarvis.
+- H: H0.1 presenta el reto H0: diseñar un equipo, ponerlo a prueba con una torre y transferir lo aprendido a MiniJarvis.
+- E: H0.2 utiliza HADA para formular una hipótesis individual de contribución.
+- X: H0.3 combina perfiles, compensa desequilibrios y formaliza funciones, backlog y criterios.
+- A: H0.4 ejecuta dos ciclos de la torre y contrasta la hipótesis con conductas observables.
+- A/transferencia: H0.5 revisa equipo y funciones, acuerda rotaciones y crea el contrato de MiniJarvis.
 
 HADA no sustituye la observación. La torre es la experiencia que permite contrastar y revisar la composición inicial.
 
@@ -253,7 +253,7 @@ Esta relación es una hipótesis para conversar. El equipo decide funciones aten
 
 ---
 
-## 13. Protocolo de S203
+## 13. Protocolo de H0.3
 
 Cada equipo:
 
@@ -270,7 +270,7 @@ Cada equipo:
 
 ## 14. Protocolo de contraste en la torre
 
-Durante S204 se observan hechos:
+Durante H0.4 se observan hechos:
 
 | Alumno/a | Hace visible función | Participa | Integra ideas | Comunica bloqueo | Usa criterios | Adapta | Explica |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -282,7 +282,7 @@ El docente registra conductas, no etiquetas. La torre utiliza dos ciclos para qu
 
 ## 15. Revisión y transferencia
 
-En S205 cada equipo compara:
+En H0.5 cada equipo compara:
 
 ```text
 Hipótesis HADA → conducta observada → aprendizaje → decisión

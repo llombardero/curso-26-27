@@ -1,4 +1,4 @@
-# Sesión 269 — Ficha de trabajo del alumnado
+# H5.12 — Git profesional II: revisión de código
 
 ## Git profesional II: revisión de código
 

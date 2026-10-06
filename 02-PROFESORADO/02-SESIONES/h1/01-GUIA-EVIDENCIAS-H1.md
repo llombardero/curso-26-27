@@ -4,12 +4,12 @@
 
 | Sesiones | Trabajo | Evidencia que sobrevive |
 |---|---|---|
-| S206 | alcance y backlog | Scrum + Activar |
-| S207-S208 | entorno y estructura | código/commits + aprendizaje significativo |
-| S209 | diseñar salida | decisión de equipo |
-| S210 | planificar datos | backlog y criterio de terminado |
-| S211-S213 | programar y probar | código, commits, pruebas y reflexión significativa |
-| S214-S215 | documentar, comunicar y defender | README, review/retro, Moodle y defensa |
+| H1.1 | alcance y backlog | Scrum + Activar |
+| H1.2-S208 | entorno y estructura | código/commits + aprendizaje significativo |
+| H1.4 | diseñar salida | decisión de equipo |
+| H1.5 | planificar datos | backlog y criterio de terminado |
+| H1.6-S213 | programar y probar | código, commits, pruebas y reflexión significativa |
+| H1.9-S215 | documentar, comunicar y defender | README, review/retro, Moodle y defensa |
 
 Las sesiones intermedias generan aprendizaje y código; no generan automáticamente un documento. GitHub contiene código e historial; README, ejecución/pruebas/límites; diario, proceso individual significativo; Scrum, trabajo real; Site, selección C1; Moodle, tag/commit y confirmación; defensa, autoría.
 

@@ -1,4 +1,4 @@
-# Sesión 252 — Guía operativa del profesorado
+# H4.11 — Diagrama de comportamiento
 
 ## Diagrama de comportamiento
 

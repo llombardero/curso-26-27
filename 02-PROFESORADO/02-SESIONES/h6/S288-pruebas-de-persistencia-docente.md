@@ -1,4 +1,4 @@
-# Sesión 288 — Guía operativa del profesorado
+# H6.10 — Pruebas de persistencia
 
 ## Pruebas de persistencia
 

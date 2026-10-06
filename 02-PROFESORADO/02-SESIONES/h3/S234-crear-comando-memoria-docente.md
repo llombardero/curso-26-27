@@ -1,4 +1,4 @@
-# Sesión 234 — Guía operativa del profesorado
+# H3.6 — Crear comando `memoria`
 
 ## Crear comando `memoria`
 

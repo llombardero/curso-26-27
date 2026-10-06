@@ -1,4 +1,4 @@
-# S207 — Del código fuente a la primera ejecución
+# H1.2 — Entorno de trabajo, IntelliJ, proyecto y ejecución
 
 | Dato | Valor |
 |---|---|
@@ -115,7 +115,7 @@ Antes de ejecutar, pide que cada persona señale:
 - qué texto espera ver exactamente;
 - dónde buscará ese texto.
 
-No desarrolles aún toda la estructura de clase, delimitadores o identificadores. S208 profundiza en esas reglas.
+No desarrolles aún toda la estructura de clase, delimitadores o identificadores. H1.3 profundiza en esas reglas.
 
 ## Actividad central
 
@@ -194,14 +194,14 @@ con:
 cambios
 ```
 
-El primer mensaje identifica el cambio realizado; el segundo no permite saber qué ocurrió. No conviertas S207 en una sesión de Git ni crees un commit artificial solo para evidenciarla.
+El primer mensaje identifica el cambio realizado; el segundo no permite saber qué ocurrió. No conviertas H1.2 en una sesión de Git ni crees un commit artificial solo para evidenciarla.
 
 ## Evidencia que permanece
 
 - **GitHub:** código ejecutable y evolución técnica real cuando corresponda al flujo del proyecto.
 - **Scrum:** únicamente una tarea o bloqueo técnico real.
 - **Diario individual:** solo si el error o descubrimiento produjo aprendizaje significativo.
-- **README / Moodle / Drive / Site:** sin actualización o entrega específica en S207.
+- **README / Moodle / Drive / Site:** sin actualización o entrega específica en H1.2.
 
 No se crea captura, copia de consola, frase obligatoria, documento de ejecución ni microentrega. La primera ejecución se comprueba ejecutando el código y relacionando predicción, salida y explicación.
 
@@ -255,9 +255,9 @@ Cierra en voz alta:
 
 > Hoy no hemos aprendido solo a pulsar ejecutar. Hemos comprendido el recorrido entre escribir, compilar, ejecutar y observar. Cuando algo falla, primero leemos el diagnóstico, decidimos si apunta al código o a la configuración y formulamos una hipótesis.
 
-## Límite respecto a S208
+## Límite respecto a H1.3
 
-S207 introduce el programa mínimo, el recorrido hasta la consola y un primer error sencillo. S208 profundiza en clase, `main`, delimitadores, errores sintácticos, identificadores, comentarios y depuración inicial.
+H1.2 introduce el programa mínimo, el recorrido hasta la consola y un primer error sencillo. H1.3 profundiza en clase, `main`, delimitadores, errores sintácticos, identificadores, comentarios y depuración inicial.
 
 ## Al terminar
 

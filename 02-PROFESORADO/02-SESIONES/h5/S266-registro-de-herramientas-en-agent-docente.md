@@ -1,4 +1,4 @@
-# Sesión 266 — Guía operativa del profesorado
+# H5.9 — Registro de herramientas en `Agent`
 
 ## Registro de herramientas en `Agent`
 

@@ -1,4 +1,4 @@
-# Sesión 237 — Guía operativa del profesorado
+# H3.9 — Comando `estado` con memoria
 
 ## Comando `estado` con memoria
 

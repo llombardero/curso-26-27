@@ -1,4 +1,4 @@
-# Sesión 260 — Guía operativa del profesorado
+# H5.3 — Refactorización controlada
 
 ## Refactorización controlada
 

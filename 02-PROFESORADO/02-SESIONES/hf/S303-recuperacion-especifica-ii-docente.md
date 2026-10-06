@@ -1,4 +1,4 @@
-# Sesión 303 — Guía operativa del profesorado
+# HF.7 — Recuperación específica II
 
 ## Recuperación específica II
 

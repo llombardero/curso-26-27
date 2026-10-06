@@ -1,4 +1,4 @@
-# Sesión 213 — Ficha de trabajo del alumnado
+# H1.8 — Limpieza, nombres claros y simplicidad
 
 ## Limpieza, nombres claros y simplicidad
 

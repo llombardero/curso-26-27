@@ -1,4 +1,4 @@
-# Sesión 214 — Ficha de trabajo del alumnado
+# H1.9 — README y evidencia de ejecución
 
 ## README y ejecución reproducible
 
@@ -225,7 +225,7 @@ otra entrada numérica válida diferente
 un resultado booleano esperado para cada entrada numérica
 ```
 
-Podéis observar también una entrada no numérica si forma parte de la comprobación realizada en S212.
+Podéis observar también una entrada no numérica si forma parte de la comprobación realizada en H1.7.
 
 No necesitáis controlar todavía ese error.
 

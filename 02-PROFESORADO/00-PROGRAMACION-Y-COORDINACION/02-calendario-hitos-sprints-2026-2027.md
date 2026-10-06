@@ -188,7 +188,7 @@ Cada periodo lectivo dura 45 minutos.
 | FFEOE | 30 abril - 28 mayo | 0 | 0 | Sin clases ni entregas. |
 | HF. Presentación final y recuperación | 31 mayo - 22 junio | 29 | 12 | Defensa, portfolio final, recuperación y mejora. |
 
-La asignación de H1 suma 33 periodos entre ambos módulos, mientras que la secuencia operativa vigente S206–S215 contiene 10 sesiones. **PENDIENTE DE DECISIÓN DOCENTE:** concretar la correspondencia temporal sin inventar actividades ni alterar la secuencia.
+La asignación de H1 suma 33 periodos entre ambos módulos, mientras que la secuencia operativa vigente H1.1–H1.10 contiene 10 sesiones. **PENDIENTE DE DECISIÓN DOCENTE:** concretar la correspondencia temporal sin inventar actividades ni alterar la secuencia.
 
 ### 5.1. Vista global RA por bloque y módulo
 
@@ -343,7 +343,7 @@ Ejemplo docente-alumna:
 
 Estado del ejemplo:
 
-Referencia privada y diferida. La ficha H1 y las sesiones S206–S215 determinan el contrato vigente; el calendario no autoaprueba el ejemplo.
+Referencia privada y diferida. La ficha H1 y las sesiones H1.1–H1.10 determinan el contrato vigente; el calendario no autoaprueba el ejemplo.
 
 ---
 
@@ -902,4 +902,4 @@ El ejemplo:
 
 `../../../03-EJEMPLOS-LAURA-PRIVADOS/h1-primer-asistente/`
 
-es el sucesor real de la antigua ruta `99-ejemplos-alumna/h1-primer-asistente/`. Su contrato vigente se comprueba en la ficha H1, las sesiones S206–S215 y la guía docente específica; este calendario no lo autoaprueba.
+es el sucesor real de la antigua ruta `99-ejemplos-alumna/h1-primer-asistente/`. Su contrato vigente se comprueba en la ficha H1, las sesiones H1.1–H1.10 y la guía docente específica; este calendario no lo autoaprueba.

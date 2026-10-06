@@ -1,4 +1,4 @@
-# Sesión 251 — Guía operativa del profesorado
+# H4.10 — Diagrama de clases II: relación código-diagrama
 
 ## Diagrama de clases II: relación código-diagrama
 

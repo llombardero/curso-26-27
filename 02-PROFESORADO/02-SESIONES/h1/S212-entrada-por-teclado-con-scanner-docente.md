@@ -1,4 +1,4 @@
-# S212 — Scanner, lectura, conversiones y errores de ejecución
+# H1.7 — Entrada por teclado con Scanner
 
 | Dato | Valor |
 |---|---|
@@ -338,8 +338,8 @@ petición -> lectura -> almacenamiento -> conversión -> cálculo -> comparació
 - **GitHub:** código con `Scanner`, lectura almacenada, conversión, cálculo, comparación booleana visible sin bifurcación y pruebas reproducibles con una entrada válida y otra no convertible.
 - **Scrum:** solo si cambia una tarea o aparece una decisión o bloqueo real.
 - **Diario individual:** solo si el error o la diferencia entre predicción y resultado produjo aprendizaje significativo.
-- **README:** puede recoger anticipadamente un ejemplo si resulta útil; su consolidación formal corresponde a S214.
-- **Moodle / Drive / Site:** sin entrega o actualización específica en S212.
+- **README:** puede recoger anticipadamente un ejemplo si resulta útil; su consolidación formal corresponde a H1.9.
+- **Moodle / Drive / Site:** sin entrega o actualización específica en H1.7.
 
 No se crean capturas rutinarias, filas obligatorias, documentos paralelos de pruebas ni microentregas.
 
@@ -393,7 +393,7 @@ No proporciones inmediatamente la solución completa. Utiliza la ayuda mínima n
 
 ## Límite de la sesión
 
-Los valores de prueba sirven para comprobar lectura, conversión, cálculo y una comparación booleana observable. Los operadores lógicos complejos, `if`, `if/else` y cualquier bifurcación comienzan en H2; no forman parte de S212.
+Los valores de prueba sirven para comprobar lectura, conversión, cálculo y una comparación booleana observable. Los operadores lógicos complejos, `if`, `if/else` y cualquier bifurcación comienzan en H2; no forman parte de H1.7.
 
 ## Comprueba lo aprendido
 

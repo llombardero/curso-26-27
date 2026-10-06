@@ -44,16 +44,16 @@ El producto no debe incluir todavía:
 
 H1 sigue el ciclo HEXA completo:
 
-- S206 - Activar: entender el reto y sus límites.
-- S207 - Investigar: entender entorno, proyecto, compilación, ejecución y consola.
-- S208 - Investigar: entender estructura mínima de Java, sintaxis y errores.
-- S209 - Idear: proponer mensajes claros antes de programarlos.
-- S210 - Planificar: organizar datos, tipos y nombres antes de escribir más código.
-- S211 - Ejecutar: crear con constantes, literales y operaciones.
-- S212 - Ejecutar: crear con entrada por teclado, conversiones, cálculo y comparación booleana observable.
-- S213 - Ejecutar: limpiar nombres, comentarios y complejidad innecesaria sin añadir control de flujo.
-- S214 - Comunicar: documentar, seleccionar evidencias y preparar entrega.
-- S215 - Comunicar: defender, evaluar, reflexionar y cerrar.
+- H1.1 - Activar: entender el reto y sus límites.
+- H1.2 - Investigar: entender entorno, proyecto, compilación, ejecución y consola.
+- H1.3 - Investigar: entender estructura mínima de Java, sintaxis y errores.
+- H1.4 - Idear: proponer mensajes claros antes de programarlos.
+- H1.5 - Planificar: organizar datos, tipos y nombres antes de escribir más código.
+- H1.6 - Ejecutar: crear con constantes, literales y operaciones.
+- H1.7 - Ejecutar: crear con entrada por teclado, conversiones, cálculo y comparación booleana observable.
+- H1.8 - Ejecutar: limpiar nombres, comentarios y complejidad innecesaria sin añadir control de flujo.
+- H1.9 - Comunicar: documentar, seleccionar evidencias y preparar entrega.
+- H1.10 - Comunicar: defender, evaluar, reflexionar y cerrar.
 
 Di en voz alta al comienzo de H1:
 
@@ -91,7 +91,7 @@ Di en voz alta al inicio de cada sesión:
 
 Usa siempre estos espacios. No crees entregables duplicados si la información ya está en su fuente correcta.
 
-- Moodle: una única entrega oficial de H1 en S215; S206-S213 no generan entregas Moodle individuales y S214 prepara el cierre.
+- Moodle: una única entrega oficial de H1 en H1.10; H1.1-S213 no generan entregas Moodle individuales y H1.9 prepara el cierre.
 - GitHub: código, README, historial y microprácticas si se guardan como archivos.
 - Diario individual en Sheets: aprendizaje individual significativo, como un error relevante, un bloqueo, una decisión personal, una diferencia entre predicción y resultado, un uso relevante de IA o un siguiente paso especialmente significativo. No se completa una fila por sesión.
 - Scrum de equipo en Sheets: backlog, tareas reales, estados, decisiones, cambios, bloqueos, review y retrospectiva. No se actualiza solo porque termine una sesión.
@@ -132,7 +132,7 @@ Cuando utilices un ejemplo técnico, sigue esta secuencia breve:
 
 Puedes convertir cualquier ejemplo en una de estas tarjetas rápidas de aula: proyecta y predice, error para localizar, modifica una línea, microdefensa, contraste de alternativas o traza del valor paso a paso.
 
-## S206 - Activar - Presentar H1 y delimitar alcance
+## H1.1 - Activar - Presentar H1 y delimitar alcance
 
 **Modalidad:** **INDIVIDUAL → EQUIPO**
 
@@ -142,7 +142,7 @@ El alumnado debe entender qué es H1, qué entra, qué no entra y cómo se demos
 
 ### Antes de empezar
 
-Ten abierta la presentación S206 y localizable el Sheet Scrum de los equipos.
+Ten abierta la presentación H1.1 y localizable el Sheet Scrum de los equipos.
 
 ### Apertura docente
 
@@ -171,7 +171,7 @@ Organización del trabajo:
 - Qué: primeras tareas de backlog H1 y roles provisionales.
 - Cuándo: durante los primeros 10 minutos.
 - Dónde: Sheet Scrum del equipo.
-- Cómo: filas concretas con tarea, responsable o pareja responsable, estado inicial y sesión S206.
+- Cómo: filas concretas con tarea, responsable o pareja responsable, estado inicial y sesión H1.1.
 
 ### Explicación docente
 
@@ -248,7 +248,7 @@ Trabajo en grupo:
 - Cada equipo clasifica.
 - Cada equipo justifica dos decisiones.
 
-### Registro del trabajo de S206
+### Registro del trabajo de H1.1
 
 Pide explícitamente:
 
@@ -257,10 +257,10 @@ Pide explícitamente:
 Dónde y cómo:
 
 - Scrum de equipo: sección de decisiones o backlog.
-- Formato: texto breve, fechado como S206.
+- Formato: texto breve, fechado como H1.1.
 - No aceptar: frases como `hacer que funcione` sin comprobar.
 
-Modelo de uso del Scrum en S206:
+Modelo de uso del Scrum en H1.1:
 
 ```text
 Backlog H1 - Equipo Ada
@@ -283,7 +283,7 @@ Responsable: todos
 Estado: más o menos
 ```
 
-El alcance y las decisiones del equipo ya quedan en Scrum. No pidas una entrada individual por haber terminado S206. El diario solo se utiliza si una persona necesita conservar un aprendizaje, una duda, un bloqueo o una decisión individual significativa.
+El alcance y las decisiones del equipo ya quedan en Scrum. No pidas una entrada individual por haber terminado H1.1. El diario solo se utiliza si una persona necesita conservar un aprendizaje, una duda, un bloqueo o una decisión individual significativa.
 
 ### Cierre docente
 
@@ -291,7 +291,7 @@ Di en voz alta:
 
 > Cerramos Activar. Para avanzar, cada equipo debe poder explicar qué va a construir y qué no va a construir. Mañana o en la siguiente sesión investigaremos cómo se pasa de escribir código a verlo ejecutarse en consola.
 
-## S207 - Investigar - Entorno Java, IntelliJ, proyecto y ejecución
+## H1.2 - Investigar - Entorno Java, IntelliJ, proyecto y ejecución
 
 **Modalidad:** **INDIVIDUAL → PAREJAS**
 
@@ -397,7 +397,7 @@ Después pide:
 
 > Ahora romped algo a propósito: quitad un punto y coma o una comilla. Antes de corregir, leed el error. No borréis todo. Localizad el primer lugar donde el IDE os da información.
 
-### Evidencia técnica de S207
+### Evidencia técnica de H1.2
 
 Pide explícitamente:
 
@@ -409,7 +409,7 @@ Dónde y cómo:
 - Comprobación reproducible: ejecutar el código y contrastar la salida con la predicción.
 - Scrum de equipo: marcar la tarea `primera ejecución` como hecha o bloqueada.
 
-Modelo de uso de GitHub/evidencia en S207:
+Modelo de uso de GitHub/evidencia en H1.2:
 
 ```text
 Repositorio: minijarvis-h1
@@ -435,7 +435,7 @@ Di en voz alta:
 
 > Hoy no hemos aprendido solo a pulsar ejecutar. Hemos aprendido el recorrido: escribir, compilar, ejecutar y observar. Si algo falla, primero leemos el error y formulamos una hipótesis.
 
-## S208 - Investigar - Estructura mínima de un programa Java
+## H1.3 - Investigar - Estructura mínima de un programa Java
 
 **Modalidad:** **INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL**
 
@@ -458,7 +458,7 @@ Pide al alumnado:
 Dónde y cómo:
 
 - Sheet Scrum del equipo.
-- Estado de la tarea y bloqueo si alguien no pudo ejecutar en S207.
+- Estado de la tarea y bloqueo si alguien no pudo ejecutar en H1.2.
 
 ### Explicación docente
 
@@ -654,7 +654,7 @@ Recuerda:
 
 > Un comentario útil no repite lo obvio. No escribimos `// imprime hola` encima de `println("Hola")`. Escribimos contexto o intención.
 
-### Evidencia técnica y comprobación de S208
+### Evidencia técnica y comprobación de H1.3
 
 Pide explícitamente:
 
@@ -672,7 +672,7 @@ Qué debe contener la evidencia:
 - Salida observada.
 - Explicación de una regla sintáctica.
 
-Modelo de uso de evidencia S208:
+Modelo de uso de evidencia H1.3:
 
 ```text
 Archivo: practicas-h1/S208-estructura-minima.java
@@ -687,9 +687,9 @@ Resultado: compila y muestra los mensajes esperados.
 
 Di en voz alta:
 
-> Para cerrar S208, cada persona debe poder señalar dónde empieza la ejecución, qué instrucción muestra texto y una regla cuya ruptura impide compilar.
+> Para cerrar H1.3, cada persona debe poder señalar dónde empieza la ejecución, qué instrucción muestra texto y una regla cuya ruptura impide compilar.
 
-## S209 - Idear - Salida por pantalla y mensajes del asistente
+## H1.4 - Idear - Salida por pantalla y mensajes del asistente
 
 **Modalidad:** **PAREJAS → EQUIPO**
 
@@ -862,7 +862,7 @@ Después:
 
 > Programad la salida elegida. Ejecutadla. Pedid a otra persona que lea solo la consola y os diga si entiende qué hace MiniJarvis.
 
-### Conservación del trabajo de S209
+### Conservación del trabajo de H1.4
 
 Pide explícitamente:
 
@@ -895,7 +895,7 @@ Di en voz alta:
 
 > Hemos ideado antes de programar. Esa es la clave de hoy. La salida de consola no se improvisa al final: se diseña para que alguien entienda qué ocurre.
 
-## S210 - Planificar - Variables
+## H1.5 - Planificar - Variables
 
 **Modalidad:** **INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL**
 
@@ -1180,7 +1180,7 @@ Di en voz alta:
 
 > Cerramos Planificar con un plan de datos. La próxima sesión entraremos más fuerte en Ejecutar: constantes, literales y operaciones.
 
-## S211 - Ejecutar - Constantes, literales y operaciones
+## H1.6 - Ejecutar - Constantes, literales y operaciones
 
 **Modalidad:** **INDIVIDUAL → PAREJAS**
 
@@ -1441,7 +1441,7 @@ Pide al alumnado:
 
 > En vuestro MiniJarvis o en una micropráctica, usad una constante, una variable, una operación, una actualización y una salida que permita comprobar el resultado.
 
-### Evidencia técnica y reflexión de S211
+### Evidencia técnica y reflexión de H1.6
 
 Pide explícitamente:
 
@@ -1459,7 +1459,7 @@ Qué debe contener:
 - Una operación comprobable.
 - Evidencia de resultado.
 
-Modelo de uso de predicción S211:
+Modelo de uso de predicción H1.6:
 
 ```text
 Predicción: si hours vale 5, minutes será 300.
@@ -1474,7 +1474,7 @@ Di en voz alta:
 
 > Una operación no está demostrada porque el código compile. Está demostrada cuando puedo predecir el resultado, ejecutarlo y explicar si coincide.
 
-## S212 - Ejecutar - Scanner, conversiones, cálculo y comparación
+## H1.7 - Ejecutar - Scanner, conversiones, cálculo y comparación
 
 **Modalidad:** **INDIVIDUAL → PAREJAS**
 
@@ -1722,7 +1722,7 @@ Pide al alumnado:
 
 > Construid una prueba con entrada válida: por ejemplo horas como texto, conversión a `int`, cálculo de minutos, comparación con un valor de referencia y salida tanto del cálculo como del resultado `boolean`. La comparación no debe controlar qué instrucciones se ejecutan. Después probad una entrada no convertible y explicad cuándo falla: al compilar o al ejecutar.
 
-### Evidencia técnica de S212
+### Evidencia técnica de H1.7
 
 Pide explícitamente:
 
@@ -1731,7 +1731,7 @@ Pide explícitamente:
 Dónde y cómo:
 
 - GitHub: código con `Scanner` o micropráctica de conversión y pruebas reproducibles.
-- README: puede documentarse antes si resulta útil, pero su consolidación formal ocurre en S214.
+- README: puede documentarse antes si resulta útil, pero su consolidación formal ocurre en H1.9.
 - Diario individual: solo si la conversión o el error han producido un aprendizaje o bloqueo significativo.
 - Scrum: actualizar la tarea de entrada o conversión únicamente si su estado, planificación o bloqueo ha cambiado.
 
@@ -1741,7 +1741,7 @@ Qué no aceptar:
 - Código que lee una variable pero no la usa.
 - Decir `no funciona` sin distinguir compilación y ejecución.
 
-Modelo de uso de evidencia S212:
+Modelo de uso de evidencia H1.7:
 
 ```text
 Prueba: conversión de horas.
@@ -1764,7 +1764,7 @@ Di en voz alta:
 
 > Hoy MiniJarvis ya no solo muestra datos escritos por quien programa. Ahora recibe texto, lo convierte, calcula y muestra el resultado de una comparación. El programa sigue siendo secuencial: usar ese booleano para decidir instrucciones corresponde a H2.
 
-## S213 - Ejecutar - Limpieza, nombres claros y simplicidad
+## H1.8 - Ejecutar - Limpieza, nombres claros y simplicidad
 
 **Modalidad:** **INDIVIDUAL → PAREJAS**
 
@@ -1858,7 +1858,7 @@ Pide al alumnado:
 
 > Revisad el `Main.java` de H1: mejorad solo lo necesario, conservad la comparación booleana observable y comprobad que el programa sigue compilando y mostrando el cálculo y el `boolean` esperados.
 
-### Evidencia técnica y comprobación individual de S213
+### Evidencia técnica y comprobación individual de H1.8
 
 Pide explícitamente:
 
@@ -1877,7 +1877,7 @@ Qué debe poder defender cada persona:
 - Qué significan `true` y `false` en ese resultado.
 - Cómo se comprobó que la limpieza no cambió el comportamiento.
 
-Modelo de uso de evidencia S213:
+Modelo de uso de evidencia H1.8:
 
 ```text
 Mejora: sustituir `h` por `studyHours` y retirar un comentario que repetía el código.
@@ -1893,7 +1893,7 @@ Di en voz alta:
 
 > H1 ya tiene un programa pequeño, secuencial y comprensible. La comparación produce un `boolean` visible; no abre ramas. La limpieza está demostrada cuando el código se entiende mejor y conserva su comportamiento.
 
-## S214 - Comunicar - README, evidencias y preparación del cierre
+## H1.9 - Comunicar - README, evidencias y preparación del cierre
 
 **Modalidad:** **INDIVIDUAL → EQUIPO → PAREJAS**
 
@@ -1917,7 +1917,7 @@ Registro durante la sesión:
 
 - Las tareas reales conservan su estado y responsable en Scrum.
 - Las decisiones, cambios y bloqueos se registran cuando ocurren.
-- Scrum no constituye una evidencia independiente por el mero hecho de acabar S214.
+- Scrum no constituye una evidencia independiente por el mero hecho de acabar H1.9.
 
 ### Explicación docente
 
@@ -1954,7 +1954,7 @@ Di:
 
 Di en voz alta:
 
-> Documentar no significa copiar la misma información en muchos sitios. Cada espacio responde a una pregunta: GitHub conserva el código y su evolución; README explica qué hace el incremento, sus límites, cómo ejecutarlo y cómo comprobarlo; el diario conserva solo aprendizaje personal significativo; Scrum conserva trabajo y decisiones reales del equipo; Moodle recogerá en S215 los enlaces oficiales. El aprendizaje y el incremento de H1 podrán seleccionarse posteriormente para el portfolio durante C1.
+> Documentar no significa copiar la misma información en muchos sitios. Cada espacio responde a una pregunta: GitHub conserva el código y su evolución; README explica qué hace el incremento, sus límites, cómo ejecutarlo y cómo comprobarlo; el diario conserva solo aprendizaje personal significativo; Scrum conserva trabajo y decisiones reales del equipo; Moodle recogerá en H1.10 los enlaces oficiales. El aprendizaje y el incremento de H1 podrán seleccionarse posteriormente para el portfolio durante C1.
 
 Ejemplo de evidencia verificable:
 
@@ -1991,7 +1991,7 @@ Trabajo en equipo — **EQUIPO**:
 
 - Completar README.
 - Localizar en GitHub el código y las pruebas reproducibles.
-- Preparar los enlaces que se entregarán oficialmente en Moodle durante S215.
+- Preparar los enlaces que se entregarán oficialmente en Moodle durante H1.10.
 - Comprobar que las decisiones o bloqueos reales están en Scrum, sin forzar una actualización.
 
 Trabajo por parejas — **PAREJAS**:
@@ -1999,7 +1999,7 @@ Trabajo por parejas — **PAREJAS**:
 - Una persona intenta seguir el README de otra sin explicación oral.
 - Revisar enlaces y permisos con otra persona.
 
-### Preparación del cierre en S214
+### Preparación del cierre en H1.9
 
 Pide explícitamente, en este orden:
 
@@ -2007,13 +2007,13 @@ Pide explícitamente, en este orden:
 2. Comprobar que el código y las pruebas son reproducibles y están localizables desde GitHub/README.
 3. Preparar enlaces profundos para la entrega oficial.
 4. Comprobar permisos.
-5. Dejar S215 preparado para la defensa y la entrega oficial Moodle.
+5. Dejar H1.10 preparado para la defensa y la entrega oficial Moodle.
 
-No se crea una evidencia separada de ejecución si el código, las pruebas y su explicación ya son localizables desde GitHub/README. Drive solo se utiliza ante una evidencia no-code excepcional sin una fuente más natural. S214 no realiza la entrega oficial de Moodle.
+No se crea una evidencia separada de ejecución si el código, las pruebas y su explicación ya son localizables desde GitHub/README. Drive solo se utiliza ante una evidencia no-code excepcional sin una fuente más natural. H1.9 no realiza la entrega oficial de Moodle.
 
 Di en voz alta:
 
-> Hoy no vamos a copiar la misma información en varios soportes ni a entregar todavía. Vamos a consolidar el README, localizar el código y las pruebas, comprobar enlaces y permisos, y dejar preparado el cierre oficial de S215. El aprendizaje y el incremento de H1 podrán seleccionarse posteriormente para el portfolio durante C1.
+> Hoy no vamos a copiar la misma información en varios soportes ni a entregar todavía. Vamos a consolidar el README, localizar el código y las pruebas, comprobar enlaces y permisos, y dejar preparado el cierre oficial de H1.10. El aprendizaje y el incremento de H1 podrán seleccionarse posteriormente para el portfolio durante C1.
 
 Modelo de uso del README H1:
 
@@ -2059,13 +2059,13 @@ Review: el incremento cumple el alcance de S206.
 Retrospectiva: debemos actualizar Scrum cuando exista un cambio real, no reconstruirlo al final.
 ```
 
-Estos textos preservan la reflexión y la selección razonada, pero no son entregables de S214 ni S215.
+Estos textos preservan la reflexión y la selección razonada, pero no son entregables de H1.9 ni H1.10.
 
 ### Comprobación de permisos
 
 Pide al alumnado:
 
-> Antes de preparar la entrega oficial de S215, comprobad permisos. Un enlace que solo abre el propietario no será una entrega válida.
+> Antes de preparar la entrega oficial de H1.10, comprobad permisos. Un enlace que solo abre el propietario no será una entrega válida.
 
 Cómo comprobar:
 
@@ -2079,7 +2079,7 @@ Di en voz alta:
 
 > Mañana o en la siguiente sesión defenderéis. Defender no es recitar el README. Defender es señalar, ejecutar, predecir, modificar una parte pequeña y explicar qué demuestra vuestra evidencia.
 
-## S215 - Comunicar - Defensa y cierre H1
+## H1.10 - Comunicar - Defensa y cierre H1
 
 **Modalidad combinada:** defensa **INDIVIDUAL**; ensayo y revisión por **PAREJAS**; review, retrospectiva y entrega en **EQUIPO**.
 
@@ -2148,7 +2148,7 @@ Trabajo en equipo — **EQUIPO**:
 - Review y retrospectiva Scrum.
 - Entrega oficial Moodle H1.
 
-### Entrega final de S215
+### Entrega final de H1.10
 
 Pide explícitamente:
 
@@ -2215,7 +2215,7 @@ Pide al alumnado que piense:
 
 > Identifica una cosa que ya puedes hacer sin ayuda, una cosa para la que todavía necesitas apoyo, una evidencia que lo demuestra y un siguiente paso para H2.
 
-La reflexión forma parte del cierre individual. Solo se conserva en el diario cuando contiene aprendizaje significativo; no se obliga a crear una entrada S215 ni un documento separado.
+La reflexión forma parte del cierre individual. Solo se conserva en el diario cuando contiene aprendizaje significativo; no se obliga a crear una entrada H1.10 ni un documento separado.
 
 Modelo de una reflexión significativa que sí podría conservarse en el diario:
 
@@ -2330,16 +2330,16 @@ Cuando una defensa es vaga:
 
 | Sesión | Actividad pedagógica principal | Evidencia que persiste y fuente canónica | Modalidad |
 |---|---|---|---|
-| S206 | Delimitar alcance, clasificar requisitos y crear backlog inicial | Alcance, tareas y decisiones reales en Scrum | INDIVIDUAL → EQUIPO |
-| S207 | Comprender código, compilación, ejecución y consola | Código de la primera ejecución en GitHub; estado o bloqueo real en Scrum | INDIVIDUAL → PAREJAS |
-| S208 | Reconstruir estructura mínima, provocar y corregir un error | Código o micropráctica en GitHub; diario solo ante aprendizaje significativo | INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL |
-| S209 | Diseñar, contrastar e implementar mensajes | Decisión real en Scrum y código en GitHub | PAREJAS → EQUIPO |
-| S210 | Practicar variables, planificar datos e integrarlos en MiniJarvis | Código en GitHub; planificación junto al trabajo; diario/Scrum solo cuando corresponda | INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL |
-| S211 | Predecir y comprobar constantes, literales y operaciones | Código o micropráctica en GitHub; reflexión solo si produjo aprendizaje significativo | INDIVIDUAL → PAREJAS |
-| S212 | Leer, convertir, calcular y mostrar una comparación booleana sin bifurcación | Código y pruebas reproducibles en GitHub; README opcional hasta su consolidación en S214 | INDIVIDUAL → PAREJAS |
-| S213 | Limpiar nombres, comentarios y complejidad conservando el comportamiento | Código limpio y comprobación reproducible en GitHub | INDIVIDUAL → PAREJAS |
-| S214 | Consolidar README, localizar pruebas, preparar enlaces y comprobar permisos | README y pruebas en GitHub; no hay entrega oficial Moodle | INDIVIDUAL → EQUIPO → PAREJAS |
-| S215 | Defender, revisar, hacer retrospectiva y cerrar H1 | Defensa individual; review/retrospectiva en Scrum; entrega oficial en Moodle con enlaces a GitHub/README | INDIVIDUAL + PAREJAS + EQUIPO |
+| H1.1 | Delimitar alcance, clasificar requisitos y crear backlog inicial | Alcance, tareas y decisiones reales en Scrum | INDIVIDUAL → EQUIPO |
+| H1.2 | Comprender código, compilación, ejecución y consola | Código de la primera ejecución en GitHub; estado o bloqueo real en Scrum | INDIVIDUAL → PAREJAS |
+| H1.3 | Reconstruir estructura mínima, provocar y corregir un error | Código o micropráctica en GitHub; diario solo ante aprendizaje significativo | INDIVIDUAL → PAREJAS → comprobación INDIVIDUAL |
+| H1.4 | Diseñar, contrastar e implementar mensajes | Decisión real en Scrum y código en GitHub | PAREJAS → EQUIPO |
+| H1.5 | Practicar variables, planificar datos e integrarlos en MiniJarvis | Código en GitHub; planificación junto al trabajo; diario/Scrum solo cuando corresponda | INDIVIDUAL → EQUIPO → comprobación INDIVIDUAL |
+| H1.6 | Predecir y comprobar constantes, literales y operaciones | Código o micropráctica en GitHub; reflexión solo si produjo aprendizaje significativo | INDIVIDUAL → PAREJAS |
+| H1.7 | Leer, convertir, calcular y mostrar una comparación booleana sin bifurcación | Código y pruebas reproducibles en GitHub; README opcional hasta su consolidación en H1.9 | INDIVIDUAL → PAREJAS |
+| H1.8 | Limpiar nombres, comentarios y complejidad conservando el comportamiento | Código limpio y comprobación reproducible en GitHub | INDIVIDUAL → PAREJAS |
+| H1.9 | Consolidar README, localizar pruebas, preparar enlaces y comprobar permisos | README y pruebas en GitHub; no hay entrega oficial Moodle | INDIVIDUAL → EQUIPO → PAREJAS |
+| H1.10 | Defender, revisar, hacer retrospectiva y cerrar H1 | Defensa individual; review/retrospectiva en Scrum; entrega oficial en Moodle con enlaces a GitHub/README | INDIVIDUAL + PAREJAS + EQUIPO |
 
 ## Cierre para el profesor
 

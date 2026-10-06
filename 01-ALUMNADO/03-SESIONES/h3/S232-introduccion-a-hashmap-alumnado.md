@@ -1,4 +1,4 @@
-# Sesión 232 — Ficha de trabajo del alumnado
+# H3.4 — Introducción a `HashMap`
 
 ## Introducción a `HashMap`
 

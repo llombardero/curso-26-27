@@ -1,4 +1,4 @@
-# Sesión 245 — Guía operativa del profesorado
+# H4.4 — Constructor y estado inicial
 
 ## Constructor y estado inicial
 

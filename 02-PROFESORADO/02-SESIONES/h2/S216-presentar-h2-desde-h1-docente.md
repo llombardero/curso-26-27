@@ -1,4 +1,4 @@
-# Sesión 216 — Guía operativa del profesorado
+# H2.1 — Presentar H2 desde H1
 
 ## Presentar H2 desde H1
 

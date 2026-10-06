@@ -170,7 +170,9 @@ def enrich(r, session, frames):
             if atom.kind != 'cards':
                 continue
             for line in atom.text.splitlines():
-                if re.search(r'\bS\d+ prepara\b', line) and re.search(r'\bS\d+ realiza la entrega oficial\b', line):
+                public_or_internal = r'(?:S\d+|H(?:[0-7]|F)\.\d+)'
+                if (re.search(rf'\b{public_or_internal} prepara\b', line)
+                        and re.search(rf'\b{public_or_internal} realiza la entrega oficial\b', line)):
                     atoms.remove(atom)
                     remainder = [t for t in atom.text.splitlines() if t != line]
                     atoms.insert(0, r.RenderAtom(line, atom.source_indices, 'boundary'))

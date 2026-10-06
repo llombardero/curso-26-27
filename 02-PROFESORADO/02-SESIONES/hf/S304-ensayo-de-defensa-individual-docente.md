@@ -1,4 +1,4 @@
-# Sesión 304 — Guía operativa del profesorado
+# HF.8 — Ensayo de defensa individual
 
 ## Ensayo de defensa individual
 

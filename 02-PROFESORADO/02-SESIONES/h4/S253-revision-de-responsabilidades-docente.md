@@ -1,4 +1,4 @@
-# Sesión 253 — Guía operativa del profesorado
+# H4.12 — Revisión de responsabilidades
 
 ## Revisión de responsabilidades
 

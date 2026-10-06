@@ -1,4 +1,4 @@
-# Sesión 282 — Ficha de trabajo del alumnado
+# H6.4 — Lectura de ficheros
 
 ## Lectura de ficheros
 

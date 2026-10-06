@@ -1,4 +1,4 @@
-# Sesión 284 — Ficha de trabajo del alumnado
+# H6.6 — Errores de fichero
 
 ## Errores de fichero
 

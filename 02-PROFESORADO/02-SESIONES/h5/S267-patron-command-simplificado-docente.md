@@ -1,4 +1,4 @@
-# Sesión 267 — Guía operativa del profesorado
+# H5.10 — Patrón Command simplificado o decisión de no patrón
 
 ## Patrón Command simplificado o decisión de no patrón
 

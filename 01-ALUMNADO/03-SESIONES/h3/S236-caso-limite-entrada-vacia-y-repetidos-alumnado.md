@@ -1,4 +1,4 @@
-# Sesión 236 — Ficha de trabajo del alumnado
+# H3.8 — Caso límite: entrada vacía y repetidos
 
 ## Caso límite: entrada vacía y repetidos
 

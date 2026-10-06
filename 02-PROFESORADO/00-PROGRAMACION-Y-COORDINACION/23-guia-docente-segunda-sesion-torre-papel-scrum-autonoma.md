@@ -23,12 +23,12 @@ Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra
 
 | Fase | Sesiones de referencia | Puerta de salida |
 |---|---|---|
-| 1 — Activar | S201 | Reto comprendido y criterios visibles. |
-| 2 — Investigar | S202 | Conocimientos necesarios contrastados. |
-| 3 — Idear | S203 | Solución seleccionada y argumentada. |
-| 4 — Planificar | S203–S204 | Plan, responsabilidades y comprobaciones visibles. |
-| 5 — Ejecutar | S204 | Producto construido, probado y mejorado. |
-| 6 — Comunicar | S204–S205 | Defensa, evaluación, reflexión y mejora. |
+| 1 — Activar | H0.1 | Reto comprendido y criterios visibles. |
+| 2 — Investigar | H0.2 | Conocimientos necesarios contrastados. |
+| 3 — Idear | H0.3 | Solución seleccionada y argumentada. |
+| 4 — Planificar | H0.3–H0.4 | Plan, responsabilidades y comprobaciones visibles. |
+| 5 — Ejecutar | H0.4 | Producto construido, probado y mejorado. |
+| 6 — Comunicar | H0.4–H0.5 | Defensa, evaluación, reflexión y mejora. |
 
 **Expediente HEXA mínimo del hito:** ficha inicial, autoevaluación privada, microprueba, criterio de formación de equipos, backlog, torre comprobada, review, retrospectiva, revisión del equipo y aportación individual.
 

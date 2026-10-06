@@ -1,4 +1,4 @@
-# Sesión 225 — Guía operativa del profesorado
+# H2.10 — Depuración con breakpoint
 
 ## Depuración con breakpoint
 

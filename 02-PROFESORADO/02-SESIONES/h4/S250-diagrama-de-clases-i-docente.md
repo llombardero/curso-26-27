@@ -1,4 +1,4 @@
-# Sesión 250 — Guía operativa del profesorado
+# H4.9 — Diagrama de clases I
 
 ## Diagrama de clases I
 

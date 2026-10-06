@@ -1,4 +1,4 @@
-# Sesión 201 — Guía docente autónoma
+# H0.1 — Curso, narrativa MiniJarvis y evidencias
 
 ## Curso, narrativa MiniJarvis y evidencias
 
@@ -73,7 +73,7 @@ No exijas que memoricen esta frase. Comprueba que conservan la idea.
 
 ### Preparación imprescindible
 
-- [ ] Tener disponible una ficha S201 por estudiante, en papel o formato digital.
+- [ ] Tener disponible una ficha H0.1 por estudiante, en papel o formato digital.
 - [ ] Preparar en la pizarra el título `MiniJarvis: aprender construyendo y demostrando`.
 - [ ] Reservar espacio para dibujar la evolución del proyecto.
 - [ ] Tener visibles las tres categorías del semáforo de IA: verde, ámbar y rojo.
@@ -364,7 +364,7 @@ El ticket debe contener:
 
 Pruebas, explicación, decisiones, registro del proceso, autoría y posibilidad de demostrar o reproducir el resultado. No es obligatorio que enumeren todos los elementos.
 
-#### Frase de enlace con S202
+#### Frase de enlace con H0.2
 
 > Ya sabemos qué proyecto construiremos y qué evidencias necesitaremos. Nuestro primer reto será diseñar un equipo, asignar funciones, construir una torre con dos ciclos Scrum y revisar qué organización funciona. En la próxima sesión aprenderemos el vocabulario mínimo y utilizaremos HADA para formular una primera hipótesis de contribución; no será una nota ni un rol permanente.
 
@@ -460,7 +460,7 @@ La sesión puede cerrarse cuando:
 - [ ] las dudas pendientes están localizadas para retomarlas;
 - [ ] nadie ha tenido que utilizar datos personales, credenciales ni una IA real.
 
-Si faltan tickets, no los sustituyas por una respuesta colectiva. Permite completarlos al inicio de S202.
+Si faltan tickets, no los sustituyas por una respuesta colectiva. Permite completarlos al inicio de H0.2.
 
 ---
 
@@ -474,9 +474,9 @@ Dedica dos o tres minutos a clasificar los tickets sin poner nota:
 - dudas sobre IA y privacidad;
 - alumnado que necesita apoyo de comprensión o expresión.
 
-Anota solamente qué explicación debe recuperarse en S202. No publiques respuestas, no introduzcas datos del alumnado en una IA y no utilices el ticket para fijar equipos o responsabilidades.
+Anota solamente qué explicación debe recuperarse en H0.2. No publiques respuestas, no introduzcas datos del alumnado en una IA y no utilices el ticket para fijar equipos o responsabilidades.
 
-### Puente preparado para S202
+### Puente preparado para H0.2
 
 Comienza la siguiente sesión recuperando una o dos dudas anónimas y diciendo:
 

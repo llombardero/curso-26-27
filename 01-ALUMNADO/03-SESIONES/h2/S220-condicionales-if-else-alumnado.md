@@ -1,4 +1,4 @@
-# Sesión 220 — Ficha de trabajo del alumnado
+# H2.5 — Condicionales `if/else`
 
 ## Condicionales `if/else`
 

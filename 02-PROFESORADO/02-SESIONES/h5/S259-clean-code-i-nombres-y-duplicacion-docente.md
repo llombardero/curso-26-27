@@ -1,4 +1,4 @@
-# Sesión 259 — Guía operativa del profesorado
+# H5.2 — Clean code I: nombres y duplicación
 
 ## Clean code I: nombres y duplicación
 

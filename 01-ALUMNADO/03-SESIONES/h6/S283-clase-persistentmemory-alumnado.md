@@ -1,4 +1,4 @@
-# Sesión 283 — Ficha de trabajo del alumnado
+# H6.5 — Clase `PersistentMemory`
 
 ## Clase `PersistentMemory`
 

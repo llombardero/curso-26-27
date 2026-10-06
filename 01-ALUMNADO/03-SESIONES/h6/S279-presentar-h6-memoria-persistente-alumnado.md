@@ -1,4 +1,4 @@
-# Sesión 279 — Ficha de trabajo del alumnado
+# H6.1 — Presentar H6: memoria persistente
 
 ## Presentar H6: memoria persistente
 

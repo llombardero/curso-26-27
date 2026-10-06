@@ -1,4 +1,4 @@
-# Sesión 225 — Ficha de trabajo del alumnado
+# H2.10 — Depuración con breakpoint
 
 ## Depuración con breakpoint
 

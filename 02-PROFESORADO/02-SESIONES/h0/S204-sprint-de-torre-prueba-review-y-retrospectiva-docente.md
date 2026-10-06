@@ -1,4 +1,4 @@
-# Sesión 204 — Guía docente autónoma
+# H0.4 — Torre de papel: construir, probar, inspeccionar y adaptar
 
 ## Torre de papel: dos ciclos Scrum, prueba, review y retrospectiva
 
@@ -8,7 +8,7 @@
 | Modalidad | Equipo → comprobación individual |
 | Duración | 90 minutos |
 | Fase HEXA del hito | Ejecutar — crear → Comunicar — evaluar y reflexionar |
-| Agrupamiento | Equipos provisionales de tres o cuatro definidos en S203 |
+| Agrupamiento | Equipos provisionales de tres o cuatro definidos en H0.3 |
 | Producto | Torre autoportante, tablero inicial/final, dos pruebas, review, retrospectiva y evidencias de funciones |
 | Pregunta central | ¿La composición y distribución de funciones ayudan al equipo a producir, comprobar y mejorar? |
 | Carácter | Experiencia formativa no calificable; no es un concurso de altura ni una prueba de personalidad |
@@ -19,7 +19,7 @@
 
 ## 1. Sentido de la sesión
 
-En S202 cada persona formuló una hipótesis HADA. En S203 el equipo analizó su composición, detectó una capacidad que podía necesitar compensación y acordó funciones. S204 somete esa organización a una situación limitada por tiempo, materiales y criterios observables.
+En H0.2 cada persona formuló una hipótesis HADA. En H0.3 el equipo analizó su composición, detectó una capacidad que podía necesitar compensación y acordó funciones. H0.4 somete esa organización a una situación limitada por tiempo, materiales y criterios observables.
 
 La sesión utiliza dos ciclos breves. El primero permite actuar con la hipótesis inicial. La inspección intermedia obliga a revisar producto y proceso por separado. El segundo permite adaptar diseño, backlog o forma de colaboración. Sin este segundo intento, la retrospectiva quedaría en una declaración sin aplicación inmediata.
 
@@ -60,8 +60,8 @@ El éxito no exige construir la torre más alta. Exige poder responder con evide
 - 1 folio de planificación que no forma parte de la torre.
 - 8–12 notas adhesivas o recortes para el tablero.
 - Un rotulador.
-- Una ficha S204.
-- El mapa de composición, funciones, backlog y definición de terminado de S203.
+- Una ficha H0.4.
+- El mapa de composición, funciones, backlog y definición de terminado de H0.3.
 
 ### Material común
 
@@ -353,7 +353,7 @@ Formula la pregunta decisiva:
 
 > ¿Qué evidencia justifica mantener o revisar la asignación, sin convertir el perfil en una etiqueta?
 
-No se decide todavía un cambio definitivo de equipo. Las solicitudes se registran y se analizan en S205.
+No se decide todavía un cambio definitivo de equipo. Las solicitudes se registran y se analizan en H0.5.
 
 ### Tramo 11 — Cierre individual y recogida, 88–90 minutos
 
@@ -383,7 +383,7 @@ Usa códigos breves: `0 = no observado`, `1 = con apoyo`, `2 = autónomo`. No ca
 
 Por equipo:
 
-| Equipo | Hipótesis HADA | Conducta que la apoya o contradice | Función compensatoria | ¿Se ejerció? | Ajuste para S205 |
+| Equipo | Hipótesis HADA | Conducta que la apoya o contradice | Función compensatoria | ¿Se ejerció? | Ajuste para H0.5 |
 |---|---|---|---|---|---|
 | | | | | | |
 
@@ -472,7 +472,7 @@ La sesión está consolidada cuando:
 
 ---
 
-## 11. Puente a S205
+## 11. Puente a H0.5
 
 No anuncies cambios definitivos al acabar. Cierra con:
 

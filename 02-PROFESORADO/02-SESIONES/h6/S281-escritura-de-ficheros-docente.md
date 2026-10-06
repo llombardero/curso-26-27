@@ -1,4 +1,4 @@
-# Sesión 281 — Guía operativa del profesorado
+# H6.3 — Escritura de ficheros
 
 ## Escritura de ficheros
 

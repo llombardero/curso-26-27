@@ -1,4 +1,4 @@
-# Sesión 244 — Guía operativa del profesorado
+# H4.3 — Atributos y métodos
 
 ## Atributos y métodos
 

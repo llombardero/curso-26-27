@@ -1,4 +1,4 @@
-# Sesión 237 — Ficha de trabajo del alumnado
+# H3.9 — Comando `estado` con memoria
 
 ## Comando `estado` con memoria
 

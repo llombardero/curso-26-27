@@ -1,4 +1,4 @@
-# Sesión 251 — Ficha de trabajo del alumnado
+# H4.10 — Diagrama de clases II: relación código-diagrama
 
 ## Diagrama de clases II: relación código-diagrama
 

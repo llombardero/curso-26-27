@@ -22,7 +22,7 @@ H0 → H1 → H2 → H3 → H4 → H5 → H6 → H7 → HF
 
 - `00-PROGRAMACION-Y-COORDINACION/`: mapa maestro, RA/CE, calendario, evaluación, política de IA y mapas curriculares.
 - `../01-GUIAS-POR-HITO/`: guía y checklist privado de cada hito.
-- `../02-SESIONES/`: 106 guías operativas, de S201 a S306.
+- `../02-SESIONES/`: 106 guías operativas, de H0.1 a HF.10.
 - `../03-PRESENTACIONES/`: presentación inicial y presentaciones H0 seleccionadas.
 - `../04-RECURSOS-NORMATIVOS-Y-TEMARIOS/`: normativa y fuentes de consulta.
 
@@ -33,7 +33,7 @@ La carpeta `../../../01-ALUMNADO/` contiene:
 - orientación inicial, entregables, rúbricas y política de IA;
 - libro de Programación por hitos;
 - fichas y plantillas de cada reto;
-- 106 fichas de sesión, de S201 a S306;
+- 106 fichas de sesión, de H0.1 a HF.10;
 - plantillas globales de evidencias.
 
 El libro se publica por capítulos asociados al hito activo, no como obligación completa al inicio del curso.

@@ -1,4 +1,4 @@
-# Sesión 240 — Guía operativa del profesorado
+# H3.12 — Selección C1 y defensa H3
 
 ## Selección C1 y defensa H3
 

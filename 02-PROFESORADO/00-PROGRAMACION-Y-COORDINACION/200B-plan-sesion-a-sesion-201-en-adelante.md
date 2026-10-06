@@ -85,7 +85,7 @@ No avanzar a la siguiente sesión si la evidencia mínima de la sesión actual n
 | Evidencia | Mapa HADA sin puntuaciones, funciones justificadas, backlog y cierre individual. |
 | Cierre | ¿Qué función compensa qué necesidad y qué conducta permitirá comprobarla? |
 
-Los resultados individuales no tienen nota, no son psicométricos y no se publican. Los equipos se preparan entre S202 y S203 combinando HADA, accesibilidad, asistencia y criterio docente. La torre contrastará la hipótesis antes de consolidar acuerdos.
+Los resultados individuales no tienen nota, no son psicométricos y no se publican. Los equipos se preparan entre H0.2 y H0.3 combinando HADA, accesibilidad, asistencia y criterio docente. La torre contrastará la hipótesis antes de consolidar acuerdos.
 
 ### Sesión 204 — Dos ciclos de torre, prueba, review y retrospectiva
 

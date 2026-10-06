@@ -1,4 +1,4 @@
-# Sesión 249 — Guía operativa del profesorado
+# H4.8 — Relaciones entre clases
 
 ## Relaciones entre clases
 

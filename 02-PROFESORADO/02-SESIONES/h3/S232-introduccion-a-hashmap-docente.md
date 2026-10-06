@@ -1,4 +1,4 @@
-# Sesión 232 — Guía operativa del profesorado
+# H3.4 — Introducción a `HashMap`
 
 ## Introducción a `HashMap`
 

@@ -1,4 +1,4 @@
-# Sesión 289 — Guía operativa del profesorado
+# H6.11 — Comparación Java-Python H6
 
 ## Comparación Java-Python H6
 

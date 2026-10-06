@@ -1,4 +1,4 @@
-# Sesión 217 — Ficha de trabajo del alumnado
+# H2.2 — Diseño de comandos antes de programar
 
 ## Diseño de comandos antes de programar
 

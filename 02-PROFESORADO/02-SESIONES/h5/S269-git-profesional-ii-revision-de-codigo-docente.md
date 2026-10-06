@@ -1,4 +1,4 @@
-# Sesión 269 — Guía operativa del profesorado
+# H5.12 — Git profesional II: revisión de código
 
 ## Git profesional II: revisión de código
 

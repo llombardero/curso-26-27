@@ -1,4 +1,4 @@
-# Sesión 285 — Guía operativa del profesorado
+# H6.7 — Logs e historial
 
 ## Logs e historial
 

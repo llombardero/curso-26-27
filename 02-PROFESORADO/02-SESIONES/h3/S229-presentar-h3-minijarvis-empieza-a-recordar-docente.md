@@ -1,4 +1,4 @@
-# Sesión 229 — Guía operativa del profesorado
+# H3.1 — Presentar H3: MiniJarvis empieza a recordar
 
 ## Presentar H3: MiniJarvis empieza a recordar
 

@@ -1,4 +1,4 @@
-# Sesión 297 — Ficha de trabajo del alumnado
+# HF.1 — Reentrada tras FFEOE y diagnóstico final
 
 ## Reentrada tras FFEOE y diagnóstico final
 

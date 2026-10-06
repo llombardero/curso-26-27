@@ -1,4 +1,4 @@
-# Sesión 243 — Ficha de trabajo del alumnado
+# H4.2 — Clase y objeto
 
 ## Clase y objeto
 

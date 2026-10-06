@@ -1,4 +1,4 @@
-# Sesión 220 — Guía operativa del profesorado
+# H2.5 — Condicionales `if/else`
 
 ## Condicionales `if/else`
 

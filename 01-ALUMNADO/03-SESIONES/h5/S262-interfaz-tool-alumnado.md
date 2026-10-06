@@ -1,4 +1,4 @@
-# Sesión 262 — Ficha de trabajo del alumnado
+# H5.5 — Interfaz `Tool`
 
 ## Interfaz `Tool`
 

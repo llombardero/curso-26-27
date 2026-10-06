@@ -1,4 +1,4 @@
-# Sesión 283 — Guía operativa del profesorado
+# H6.5 — Clase `PersistentMemory`
 
 ## Clase `PersistentMemory`
 

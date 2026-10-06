@@ -1,4 +1,4 @@
-# Sesión 218 — Guía operativa del profesorado
+# H2.3 — Booleanos y variable de control
 
 ## Booleanos y variable de control
 

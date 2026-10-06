@@ -23,12 +23,12 @@ Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra
 
 | Fase | Sesiones de referencia | Puerta de salida |
 |---|---|---|
-| 1 — Activar | S297 | Reto comprendido y criterios visibles. |
-| 2 — Investigar | S298 | Conocimientos necesarios contrastados. |
-| 3 — Idear | S299 | Solución seleccionada y argumentada. |
-| 4 — Planificar | S300 | Plan, responsabilidades y comprobaciones visibles. |
-| 5 — Ejecutar | S301–S303 | Producto construido, probado y mejorado. |
-| 6 — Comunicar | S304–S306 | Defensa, evaluación, reflexión y mejora. |
+| 1 — Activar | HF.1 | Reto comprendido y criterios visibles. |
+| 2 — Investigar | HF.2 | Conocimientos necesarios contrastados. |
+| 3 — Idear | HF.3 | Solución seleccionada y argumentada. |
+| 4 — Planificar | HF.4 | Plan, responsabilidades y comprobaciones visibles. |
+| 5 — Ejecutar | HF.5–HF.7 | Producto construido, probado y mejorado. |
+| 6 — Comunicar | HF.8–HF.10 | Defensa, evaluación, reflexión y mejora. |
 
 **Expediente HEXA mínimo del hito:** mapa de evidencias, selección razonada, explicación del progreso, portfolio, demo, defensa, recuperación y plan de mejora.
 

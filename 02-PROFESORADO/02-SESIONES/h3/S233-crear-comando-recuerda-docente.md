@@ -1,4 +1,4 @@
-# Sesión 233 — Guía operativa del profesorado
+# H3.5 — Crear comando `recuerda`
 
 ## Crear comando `recuerda`
 

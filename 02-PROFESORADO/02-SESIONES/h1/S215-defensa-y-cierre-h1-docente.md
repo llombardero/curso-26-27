@@ -1,4 +1,4 @@
-# S215 — Defensa y cierre de H1
+# H1.10 — Defensa y cierre de H1
 
 | Dato | Valor |
 |---|---|
@@ -178,11 +178,11 @@ Pide una reflexión breve, oral o de trabajo:
 - ¿Qué evidencia demuestra mi aprendizaje?
 - ¿Cuál es mi siguiente paso en H2?
 
-Solo se conserva en el diario si contiene un aprendizaje, dificultad, decisión o siguiente paso significativo. No se crea una fila S215 por rutina.
+Solo se conserva en el diario si contiene un aprendizaje, dificultad, decisión o siguiente paso significativo. No se crea una fila H1.10 por rutina.
 
 ## Entrega oficial Moodle y evidencias que permanecen
 
-S215 contiene la única entrega oficial de H1. Si no está en la tarea Moodle de H1, no está entregado oficialmente.
+H1.10 contiene la única entrega oficial de H1. Si no está en la tarea Moodle de H1, no está entregado oficialmente.
 
 ### Contenido de la entrega
 
@@ -198,7 +198,7 @@ No volver a copiar URLs estables ni adjuntar README, capturas, registro IA o PDF
 - **Scrum:** se enlaza solo cuando la tarea lo necesita para localizar review, retrospectiva, una decisión, un cambio o un bloqueo real.
 - **Diario individual:** se usa solo para aprendizaje o siguiente paso significativo; no forma parte rutinaria de la entrega.
 - **Moodle:** identifica la versión evaluada y confirma las fuentes estables sin volver a copiar sus URLs.
-- **Site:** no se actualiza ni se enlaza en S215; H1 podrá seleccionarse posteriormente durante C1.
+- **Site:** no se actualiza ni se enlaza en H1.10; H1 podrá seleccionarse posteriormente durante C1.
 - **Drive:** no sustituye GitHub ni README y no se usa para copiar código o ejecución rutinaria.
 
 No se adjuntan capturas, formularios, portfolios, documentos de ejecución ni copias separadas de pruebas cuando GitHub y README ya permiten localizarlas.

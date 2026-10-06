@@ -1,4 +1,4 @@
-# Sesión 260 — Ficha de trabajo del alumnado
+# H5.3 — Refactorización controlada
 
 ## Refactorización controlada
 

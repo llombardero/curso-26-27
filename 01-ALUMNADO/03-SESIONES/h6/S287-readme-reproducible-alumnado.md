@@ -1,4 +1,4 @@
-# Sesión 287 — Ficha de trabajo del alumnado
+# H6.9 — README reproducible
 
 ## README reproducible
 

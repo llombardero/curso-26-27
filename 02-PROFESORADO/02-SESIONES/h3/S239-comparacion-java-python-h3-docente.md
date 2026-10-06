@@ -1,4 +1,4 @@
-# Sesión 239 — Guía operativa del profesorado
+# H3.11 — Comparación Java-Python H3
 
 ## Comparación Java-Python H3
 

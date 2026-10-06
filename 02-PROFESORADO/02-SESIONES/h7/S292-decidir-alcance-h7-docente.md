@@ -1,4 +1,4 @@
-# Sesión 292 — Guía operativa del profesorado
+# H7.1 — Decidir alcance H7
 
 ## Decidir alcance H7
 

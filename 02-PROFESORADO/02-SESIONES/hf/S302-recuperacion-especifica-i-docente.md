@@ -1,4 +1,4 @@
-# Sesión 302 — Guía operativa del profesorado
+# HF.6 — Recuperación específica I
 
 ## Recuperación específica I
 

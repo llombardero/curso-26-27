@@ -1,4 +1,4 @@
-# Sesión 294 — Ficha de trabajo del alumnado
+# H7.3 — Implementar simulación o integración
 
 ## Implementar simulación o integración
 

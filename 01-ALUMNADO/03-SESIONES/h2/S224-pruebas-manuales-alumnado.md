@@ -1,4 +1,4 @@
-# Sesión 224 — Ficha de trabajo del alumnado
+# H2.9 — Pruebas manuales
 
 ## Pruebas manuales
 

@@ -1,4 +1,4 @@
-# Sesión 203 — Guía docente autónoma
+# H0.3 — Composición HADA, equipo provisional y funciones para la torre
 
 ## Composición HADA, equipos provisionales y funciones para la torre
 
@@ -13,7 +13,7 @@
 | Evidencia individual | Aportación inicial, función que se desea practicar y criterio para revisar la asignación |
 | Carácter | Diagnóstico formativo no calificable; agrupamiento provisional y funciones explícitas, compensatorias y rotatorias |
 
-> Esta sesión convierte los perfiles individuales de S202 en una hipótesis de funcionamiento colectivo. No se construye todavía la torre: se diseña el equipo que la construirá y se deja preparado su primer sprint.
+> Esta sesión convierte los perfiles individuales de H0.2 en una hipótesis de funcionamiento colectivo. No se construye todavía la torre: se diseña el equipo que la construirá y se deja preparado su primer sprint.
 
 ---
 
@@ -27,7 +27,7 @@ HADA no termina cuando cada estudiante obtiene cuatro sumas. Su finalidad en H0 
 
 El equipo no debe buscar que cada persona encaje en una etiqueta. Debe acordar una distribución de responsabilidades que haga visible el trabajo y permita comprobar después si la hipótesis funcionó.
 
-S203 prepara S204. Si hoy no quedan claras las funciones, el backlog y las reglas de participación, la torre se convertirá en una manualidad improvisada y no en una experiencia Scrum.
+H0.3 prepara H0.4. Si hoy no quedan claras las funciones, el backlog y las reglas de participación, la torre se convertirá en una manualidad improvisada y no en una experiencia Scrum.
 
 ---
 
@@ -51,8 +51,8 @@ Al finalizar, cada equipo debe disponer de:
 
 ### Material
 
-- Una ficha S203 por equipo, más una copia individual del cierre si se trabaja en papel.
-- Resultados HADA privados de S202.
+- Una ficha H0.3 por equipo, más una copia individual del cierre si se trabaja en papel.
+- Resultados HADA privados de H0.2.
 - Propuesta de equipos preparada por el docente.
 - Seis u ocho notas adhesivas o recortes por equipo.
 - Pizarra o proyector.
@@ -327,7 +327,7 @@ Usa `0 = no observado todavía`, `1 = aparece con apoyo`, `2 = aparece de forma 
 
 Añade por equipo:
 
-| Equipo | Fortaleza prevista | Capacidad por compensar | Función acordada | Evidencia que se observará en S204 |
+| Equipo | Fortaleza prevista | Capacidad por compensar | Función acordada | Evidencia que se observará en H0.4 |
 |---|---|---|---|---|
 | | | | | |
 
@@ -349,7 +349,7 @@ Si no hay acuerdo en dos minutos, sortea entre candidaturas compatibles y regist
 
 ### Nadie quiere una función
 
-Pregunta qué riesgo aparecería si nadie la cubre. Permite compartirla durante S204, pero exige una persona que recuerde hacerla visible.
+Pregunta qué riesgo aparecería si nadie la cubre. Permite compartirla durante H0.4, pero exige una persona que recuerde hacerla visible.
 
 ### Alguien utiliza HADA para etiquetar
 
@@ -381,13 +381,13 @@ Prioriza:
 3. definición de terminado;
 4. backlog mínimo.
 
-Completa la defensa cruzada al inicio de S204. No empieces a construir sin funciones y criterio de aceptación.
+Completa la defensa cruzada al inicio de H0.4. No empieces a construir sin funciones y criterio de aceptación.
 
 ---
 
 ## 9. Criterios de cierre
 
-S203 está consolidada cuando:
+H0.3 está consolidada cuando:
 
 - [ ] cada equipo conoce que su composición es provisional;
 - [ ] no se han publicado puntuaciones nominales;
@@ -402,7 +402,7 @@ S203 está consolidada cuando:
 
 ---
 
-## 10. Preparación de S204
+## 10. Preparación de H0.4
 
 Recoge o fotografía únicamente las evidencias de equipo necesarias. Prepara cada puesto con materiales idénticos y sitúa junto a él:
 
@@ -411,7 +411,7 @@ Recoge o fotografía únicamente las evidencias de equipo necesarias. Prepara ca
 - backlog inicial;
 - definición de terminado.
 
-En S204 no vuelvas a negociar desde cero. El propósito es probar la organización acordada y producir evidencias para revisarla.
+En H0.4 no vuelvas a negociar desde cero. El propósito es probar la organización acordada y producir evidencias para revisarla.
 
 ---
 

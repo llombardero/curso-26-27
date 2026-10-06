@@ -1,4 +1,4 @@
-# Sesión 266 — Ficha de trabajo del alumnado
+# H5.9 — Registro de herramientas en `Agent`
 
 ## Registro de herramientas en `Agent`
 

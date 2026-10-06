@@ -1,4 +1,4 @@
-# Sesión 231 — Ficha de trabajo del alumnado
+# H3.3 — Introducción a `ArrayList`
 
 ## Introducción a `ArrayList`
 

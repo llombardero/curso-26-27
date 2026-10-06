@@ -1,4 +1,4 @@
-# Sesión 230 — Ficha de trabajo del alumnado
+# H3.2 — Elegir qué información guardar
 
 ## Elegir qué información guardar
 

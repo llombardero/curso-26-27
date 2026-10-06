@@ -1,4 +1,4 @@
-# Sesión 219 — Guía operativa del profesorado
+# H2.4 — Bucle `while`
 
 ## Bucle `while`
 

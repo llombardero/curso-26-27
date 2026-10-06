@@ -1,4 +1,4 @@
-# Sesión 256 — Guía operativa del profesorado
+# H4.15 — README y revisión técnica H4
 
 ## README y revisión técnica H4
 

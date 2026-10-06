@@ -1,4 +1,4 @@
-# Sesión 222 — Guía operativa del profesorado
+# H2.7 — Comando `salir` y cierre controlado
 
 ## Comando `salir` y cierre controlado
 

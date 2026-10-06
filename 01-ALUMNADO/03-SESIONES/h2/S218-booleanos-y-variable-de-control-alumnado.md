@@ -1,4 +1,4 @@
-# Sesión 218 — Ficha de trabajo del alumnado
+# H2.3 — Booleanos y variable de control
 
 ## Booleanos y variable de control
 

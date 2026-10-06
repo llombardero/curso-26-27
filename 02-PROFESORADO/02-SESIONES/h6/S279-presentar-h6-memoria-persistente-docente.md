@@ -1,4 +1,4 @@
-# Sesión 279 — Guía operativa del profesorado
+# H6.1 — Presentar H6: memoria persistente
 
 ## Presentar H6: memoria persistente
 

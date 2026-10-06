@@ -1,4 +1,4 @@
-# Sesión 201 — Ficha de trabajo del alumnado
+# H0.1 — Curso, narrativa MiniJarvis y evidencias
 
 ## Curso, narrativa MiniJarvis y evidencias
 
@@ -33,11 +33,11 @@ Primero, individualmente, interpreta el itinerario; después contrasta por parej
 Antes de programar MiniJarvis, diseñaremos y pondremos a prueba nuestra forma de trabajar:
 
 ```text
-S201: comprender el proyecto y el reto.
-S202: conocer Scrum mínimo y formular una hipótesis HADA.
-S203: formar equipos provisionales y acordar funciones.
-S204: construir y mejorar una torre de papel mediante dos ciclos Scrum.
-S205: revisar el equipo y transferir acuerdos a MiniJarvis.
+H0.1: comprender el proyecto y el reto.
+H0.2: conocer Scrum mínimo y formular una hipótesis HADA.
+H0.3: formar equipos provisionales y acordar funciones.
+H0.4: construir y mejorar una torre de papel mediante dos ciclos Scrum.
+H0.5: revisar el equipo y transferir acuerdos a MiniJarvis.
 ```
 
 La torre no será únicamente una competición de altura. Servirá para comprobar si el equipo hace visible el trabajo, distribuye funciones, comunica bloqueos, prueba el producto y aplica una mejora.

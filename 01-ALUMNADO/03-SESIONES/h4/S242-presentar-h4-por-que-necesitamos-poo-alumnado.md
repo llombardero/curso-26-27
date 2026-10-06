@@ -1,4 +1,4 @@
-# Sesión 242 — Ficha de trabajo del alumnado
+# H4.1 — Presentar H4: por qué necesitamos POO
 
 ## Presentar H4: por qué necesitamos POO
 

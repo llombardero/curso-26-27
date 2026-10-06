@@ -1,4 +1,4 @@
-# Sesión 248 — Ficha de trabajo del alumnado
+# H4.7 — Extraer clase `Agent`
 
 ## Extraer clase `Agent`
 

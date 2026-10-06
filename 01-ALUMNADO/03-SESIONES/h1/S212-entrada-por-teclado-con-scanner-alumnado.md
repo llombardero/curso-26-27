@@ -1,4 +1,4 @@
-# Sesión 212 — Ficha de trabajo del alumnado
+# H1.7 — Entrada por teclado con Scanner
 
 ## Entrada por teclado con Scanner
 
@@ -358,7 +358,7 @@ por qué no pudo obtener un int
 
 ## 12. Qué NO hacemos todavía
 
-En S212 no necesitas:
+En H1.7 no necesitas:
 
 ```text
 [ ] usar if;

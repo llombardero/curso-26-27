@@ -1,4 +1,4 @@
-# Sesión 205 — Guía docente autónoma
+# H0.5 — De la torre a MiniJarvis: equipo, contrato y rotación
 
 ## De la torre a MiniJarvis: revisión del equipo, contrato y rotación de funciones
 
@@ -13,7 +13,7 @@
 | Evidencia central | Comparación entre hipótesis HADA y conductas observadas en la torre |
 | Carácter | Cierre formativo no calificable de H0 y transición al trabajo técnico; no produce una etiqueta |
 
-> S205 no consiste en “firmar un contrato” sin análisis. Primero convierte la torre en evidencia sobre el funcionamiento del equipo; después decide qué conservar, qué compensar y qué practicar en MiniJarvis.
+> H0.5 no consiste en “firmar un contrato” sin análisis. Primero convierte la torre en evidencia sobre el funcionamiento del equipo; después decide qué conservar, qué compensar y qué practicar en MiniJarvis.
 
 ---
 
@@ -56,10 +56,10 @@ Cada equipo debe terminar con:
 
 ### Material
 
-- Ficha S205 por equipo.
+- Ficha H0.5 por equipo.
 - Resultados HADA individuales disponibles de forma privada.
-- Ficha S203 con composición y funciones iniciales.
-- Evidencias S204: tablero inicial/final, pruebas, review, retrospectiva y cierres individuales.
+- Ficha H0.3 con composición y funciones iniciales.
+- Evidencias H0.4: tablero inicial/final, pruebas, review, retrospectiva y cierres individuales.
 - Matriz docente de observación.
 - Pizarra o proyector.
 
@@ -176,7 +176,7 @@ Ninguna función autoriza a:
 
 ### Tramo 1 — Recuperar evidencias, 0–5 minutos
 
-Entrega o pide abrir las evidencias de S202–S204. Indica:
+Entrega o pide abrir las evidencias de H0.2–H0.4. Indica:
 
 > No empecéis por decidir si el equipo “funcionó bien”. Primero reunid hechos. Una conclusión sin evidencia no permite mejorar.
 

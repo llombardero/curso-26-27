@@ -1,4 +1,4 @@
-# Sesión 217 — Guía operativa del profesorado
+# H2.2 — Diseño de comandos antes de programar
 
 ## Diseño de comandos antes de programar
 

@@ -1,4 +1,4 @@
-# Sesión 295 — Guía operativa del profesorado
+# H7.4 — Registro de prompts y validación humana
 
 ## Registro de prompts y validación humana
 

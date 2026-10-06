@@ -1,4 +1,4 @@
-# S208 — Estructura mínima de un programa Java
+# H1.3 — Estructura mínima de un programa Java
 
 | Dato | Valor |
 |---|---|
@@ -350,7 +350,7 @@ Si se le propone una modificación pequeña, debe predecir el efecto antes de ej
 - **GitHub:** código de la estructura mínima y correcciones técnicas reproducibles.
 - **Scrum:** solo si existe una tarea, decisión, cambio o bloqueo real.
 - **Diario individual:** solo si un error o descubrimiento produjo aprendizaje individual significativo.
-- **README / Moodle / Drive / Site:** sin actualización o entrega específica en S208.
+- **README / Moodle / Drive / Site:** sin actualización o entrega específica en H1.3.
 
 No se crean capturas rutinarias, filas obligatorias ni documentos separados del error.
 

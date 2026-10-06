@@ -1,4 +1,4 @@
-# Sesión 235 — Ficha de trabajo del alumnado
+# H3.7 — Caso límite: memoria vacía
 
 ## Caso límite: memoria vacía
 

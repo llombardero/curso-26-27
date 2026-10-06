@@ -1,4 +1,4 @@
-# Sesión 263 — Guía operativa del profesorado
+# H5.6 — Implementar `HelpTool`
 
 ## Implementar `HelpTool`
 

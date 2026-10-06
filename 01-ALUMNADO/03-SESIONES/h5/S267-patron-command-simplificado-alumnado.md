@@ -1,4 +1,4 @@
-# Sesión 267 — Ficha de trabajo del alumnado
+# H5.10 — Patrón Command simplificado o decisión de no patrón
 
 ## Patrón Command simplificado o decisión de no patrón
 

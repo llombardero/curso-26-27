@@ -1,4 +1,4 @@
-# Sesión 280 — Ficha de trabajo del alumnado
+# H6.2 — Formato de fichero
 
 ## Formato de fichero
 

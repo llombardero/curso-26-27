@@ -1,4 +1,4 @@
-# Sesión 228 — Guía operativa del profesorado
+# H2.13 — Demo, defensa y cierre H2
 
 ## Demo, defensa y cierre H2
 

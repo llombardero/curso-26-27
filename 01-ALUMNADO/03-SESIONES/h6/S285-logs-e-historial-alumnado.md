@@ -1,4 +1,4 @@
-# Sesión 285 — Ficha de trabajo del alumnado
+# H6.7 — Logs e historial
 
 ## Logs e historial
 

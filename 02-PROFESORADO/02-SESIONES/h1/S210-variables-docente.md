@@ -1,4 +1,4 @@
-# S210 - Planificar - Variables
+# H1.5 — Variables
 
 | Dato | Valor |
 |---|---|
@@ -255,8 +255,8 @@ Estos momentos organizan el trabajo de la sesión. No se convierten en documento
 - **Equipo — GitHub:** código del incremento con variables, tipos y nombres significativos, al menos una reasignación y ejecución comprobada.
 - **Equipo — Scrum:** solo si aparece una decisión, un cambio de planificación o un bloqueo real.
 - **Individual — Diario:** solo si existe un aprendizaje, error, bloqueo, decisión o uso relevante de IA que merezca conservarse.
-- **README:** no requiere actualización específica en S210.
-- **Moodle / Drive / Site:** no hay entrega o actualización específica en S210.
+- **README:** no requiere actualización específica en H1.5.
+- **Moodle / Drive / Site:** no hay entrega o actualización específica en H1.5.
 
 ## Observación docente
 

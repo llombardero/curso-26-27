@@ -1,4 +1,4 @@
-# Sesión 293 — Ficha de trabajo del alumnado
+# H7.2 — Caso de uso IA y seguridad de prompts
 
 ## Caso de uso IA y seguridad de prompts
 

@@ -1,4 +1,4 @@
-# Sesión 306 — Guía operativa del profesorado
+# HF.10 — Defensa final, cierre y retrospectiva del curso
 
 ## Defensa final, cierre y retrospectiva del curso
 

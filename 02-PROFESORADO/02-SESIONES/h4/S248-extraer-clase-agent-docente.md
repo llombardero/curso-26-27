@@ -1,4 +1,4 @@
-# Sesión 248 — Guía operativa del profesorado
+# H4.7 — Extraer clase `Agent`
 
 ## Extraer clase `Agent`
 

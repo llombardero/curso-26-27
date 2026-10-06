@@ -1,4 +1,4 @@
-# Sesión 288 — Ficha de trabajo del alumnado
+# H6.10 — Pruebas de persistencia
 
 ## Pruebas de persistencia
 

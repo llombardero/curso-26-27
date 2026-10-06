@@ -1,4 +1,4 @@
-# Sesión 263 — Ficha de trabajo del alumnado
+# H5.6 — Implementar `HelpTool`
 
 ## Implementar `HelpTool`
 

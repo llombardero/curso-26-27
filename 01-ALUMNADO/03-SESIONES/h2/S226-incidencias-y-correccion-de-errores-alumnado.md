@@ -1,4 +1,4 @@
-# Sesión 226 — Ficha de trabajo del alumnado
+# H2.11 — Incidencias y corrección de errores
 
 ## Incidencias y corrección de errores
 

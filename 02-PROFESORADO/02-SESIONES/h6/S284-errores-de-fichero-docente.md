@@ -1,4 +1,4 @@
-# Sesión 284 — Guía operativa del profesorado
+# H6.6 — Errores de fichero
 
 ## Errores de fichero
 

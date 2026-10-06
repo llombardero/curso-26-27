@@ -1,4 +1,4 @@
-# Sesión 254 — Guía operativa del profesorado
+# H4.13 — Comparación Java-Python H4
 
 ## Comparación Java-Python H4
 

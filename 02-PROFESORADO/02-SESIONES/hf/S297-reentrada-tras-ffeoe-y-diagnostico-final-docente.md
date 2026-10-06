@@ -1,4 +1,4 @@
-# Sesión 297 — Guía operativa del profesorado
+# HF.1 — Reentrada tras FFEOE y diagnóstico final
 
 ## Reentrada tras FFEOE y diagnóstico final
 

@@ -1,4 +1,4 @@
-# S213 — Limpieza, nombres claros y simplicidad
+# H1.8 — Limpieza, nombres claros y simplicidad
 
 | Dato | Valor |
 |---|---|
@@ -13,7 +13,7 @@
 
 Al terminar, debes revisar el incremento H1 para mejorar sus nombres significativos, conservar solo comentarios útiles y aplicar simplicidad eliminando complejidad innecesaria. Debes comprobar que el código sigue funcionando y defender cada decisión de limpieza sin cambiar el comportamiento observable.
 
-## Contrato curricular de S213
+## Contrato curricular de H1.8
 
 ### Núcleo — core
 
@@ -38,7 +38,7 @@ Estos elementos se reconocen en contexto. No se amplía su dificultad ni se conv
 - menús;
 - control de flujo como contenido central.
 
-Su consolidación corresponde a H2. No se introduce material nuevo de H2 para compensar lo que queda fuera de S213.
+Su consolidación corresponde a H2. No se introduce material nuevo de H2 para compensar lo que queda fuera de H1.8.
 
 ## Antes de entrar en clase
 
@@ -261,7 +261,7 @@ Para reconocer:
 - **README:** solo se modifica si la limpieza cambia una explicación técnica que ya debía mantenerse allí.
 - **Scrum:** solo si existe una tarea, decisión, mejora o bloqueo real del equipo.
 - **Diario individual:** solo si la revisión produjo un aprendizaje o decisión significativa.
-- **Moodle / Drive / Site:** sin nueva entrega específica en S213.
+- **Moodle / Drive / Site:** sin nueva entrega específica en H1.8.
 
 No se crean capturas rutinarias, formularios ni documentos paralelos de limpieza.
 

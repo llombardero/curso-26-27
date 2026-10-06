@@ -1,4 +1,4 @@
-# Sesión 231 — Guía operativa del profesorado
+# H3.3 — Introducción a `ArrayList`
 
 ## Introducción a `ArrayList`
 

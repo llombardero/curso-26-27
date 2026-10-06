@@ -1,4 +1,4 @@
-# Sesión 295 — Ficha de trabajo del alumnado
+# H7.4 — Registro de prompts y validación humana
 
 ## Registro de prompts y validación humana
 

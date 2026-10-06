@@ -1,4 +1,4 @@
-# Sesión 268 — Guía operativa del profesorado
+# H5.11 — Git profesional I: commits y ramas
 
 ## Git profesional I: commits y ramas
 

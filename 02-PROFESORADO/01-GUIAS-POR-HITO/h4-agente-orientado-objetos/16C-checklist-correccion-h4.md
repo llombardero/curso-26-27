@@ -23,12 +23,12 @@ Las fases siguen el orden canónico y pueden solaparse cuando una sesión cierra
 
 | Fase | Sesiones de referencia | Puerta de salida |
 |---|---|---|
-| 1 — Activar | S242 | Reto comprendido y criterios visibles. |
-| 2 — Investigar | S243–S246 | Conocimientos necesarios contrastados. |
-| 3 — Idear | S247 | Solución seleccionada y argumentada. |
-| 4 — Planificar | S248 | Plan, responsabilidades y comprobaciones visibles. |
-| 5 — Ejecutar | S249–S253 | Producto construido, probado y mejorado. |
-| 6 — Comunicar | S254–S257 | Defensa, evaluación, reflexión y mejora. |
+| 1 — Activar | H4.1 | Reto comprendido y criterios visibles. |
+| 2 — Investigar | H4.2–H4.5 | Conocimientos necesarios contrastados. |
+| 3 — Idear | H4.6 | Solución seleccionada y argumentada. |
+| 4 — Planificar | H4.7 | Plan, responsabilidades y comprobaciones visibles. |
+| 5 — Ejecutar | H4.8–H4.12 | Producto construido, probado y mejorado. |
+| 6 — Comunicar | H4.13–H4.16 | Defensa, evaluación, reflexión y mejora. |
 
 **Expediente HEXA mínimo del hito:** diagnóstico de Main, alternativas de reparto, explicación POO/encapsulación, clases, diagramas, relación diagrama-código y defensa.
 

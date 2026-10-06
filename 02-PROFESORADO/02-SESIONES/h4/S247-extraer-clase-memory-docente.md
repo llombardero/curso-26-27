@@ -1,4 +1,4 @@
-# Sesión 247 — Guía operativa del profesorado
+# H4.6 — Extraer clase `Memory`
 
 ## Extraer clase `Memory`
 

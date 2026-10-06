@@ -1,4 +1,4 @@
-# Sesión 296 — Guía operativa del profesorado
+# H7.5 — Demo y defensa H7
 
 ## Demo y defensa H7
 

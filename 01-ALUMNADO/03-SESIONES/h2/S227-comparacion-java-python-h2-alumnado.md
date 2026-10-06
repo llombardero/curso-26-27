@@ -1,4 +1,4 @@
-# Sesión 227 — Ficha de trabajo del alumnado
+# H2.12 — Comparación Java-Python H2
 
 ## Comparación Java-Python H2
 

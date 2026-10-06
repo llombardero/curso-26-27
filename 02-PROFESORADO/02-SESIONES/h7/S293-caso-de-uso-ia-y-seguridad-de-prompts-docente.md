@@ -1,4 +1,4 @@
-# Sesión 293 — Guía operativa del profesorado
+# H7.2 — Caso de uso IA y seguridad de prompts
 
 ## Caso de uso IA y seguridad de prompts
 

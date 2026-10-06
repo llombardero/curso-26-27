@@ -1,4 +1,4 @@
-# Sesión 302 — Ficha de trabajo del alumnado
+# HF.6 — Recuperación específica I
 
 ## Recuperación específica I
 

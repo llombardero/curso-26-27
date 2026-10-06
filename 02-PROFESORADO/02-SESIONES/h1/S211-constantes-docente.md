@@ -1,4 +1,4 @@
-# S211 — Constantes, literales, expresiones, operaciones y actualizaciones
+# H1.6 — Constantes
 
 | Dato | Valor |
 |---|---|
@@ -140,7 +140,7 @@ horas >= 4                  -> boolean
 "Hola, " + nombreUsuario    -> String
 ```
 
-Antes de ejecutar, pregunta por el valor y el tipo esperado. Las expresiones booleanas se utilizan aquí solo para reconocer que una expresión produce un resultado tipado; la comparación obligatoria se integra en S212 y las decisiones con control de flujo comienzan en H2.
+Antes de ejecutar, pregunta por el valor y el tipo esperado. Las expresiones booleanas se utilizan aquí solo para reconocer que una expresión produce un resultado tipado; la comparación obligatoria se integra en H1.7 y las decisiones con control de flujo comienzan en H2.
 
 ### Operar, almacenar y utilizar
 
@@ -206,7 +206,7 @@ Preguntas:
 
 Con enteros, `5 / 2` da `2`, no `2.5`. La parte decimal no aparece porque los dos operandos de esa división son enteros. En `5 / 2.0`, el literal decimal hace que la operación produzca un resultado real.
 
-No adelantes casting ni conversión de entrada: se trabajarán en S212. Aquí basta con razonar sobre los tipos de los operandos escritos en la expresión.
+No adelantes casting ni conversión de entrada: se trabajarán en H1.7. Aquí basta con razonar sobre los tipos de los operandos escritos en la expresión.
 
 ### Precedencia y paréntesis
 
@@ -338,7 +338,7 @@ El contraste por parejas no sustituye el intento individual. No todos los ejempl
 - **GitHub:** código integrado o micropráctica con resultado reproducible.
 - **Scrum:** solo si existe una tarea, decisión, cambio o bloqueo real.
 - **Diario individual:** solo si una predicción errónea, un error o un descubrimiento produjo aprendizaje individual significativo.
-- **README / Moodle / Drive / Site:** sin actualización o entrega específica en S211.
+- **README / Moodle / Drive / Site:** sin actualización o entrega específica en H1.6.
 
 La predicción es obligatoria como actividad pedagógica, no como documento. No se crean capturas rutinarias, documentos paralelos ni microentregas.
 
@@ -398,7 +398,7 @@ Cierra en voz alta:
 
 ## Límite de la sesión
 
-S211 parte de variables y tipos ya trabajados en S210. No introduce `Scanner`, parseo ni casting como contenido central; la entrada, las conversiones, el cálculo y la comparación booleana observable corresponden a S212. Las expresiones lógicas aparecen solo para reconocer resultados con tipo y no adelantan las decisiones con control de flujo de H2.
+H1.6 parte de variables y tipos ya trabajados en H1.5. No introduce `Scanner`, parseo ni casting como contenido central; la entrada, las conversiones, el cálculo y la comparación booleana observable corresponden a H1.7. Las expresiones lógicas aparecen solo para reconocer resultados con tipo y no adelantan las decisiones con control de flujo de H2.
 
 ## Al terminar
 

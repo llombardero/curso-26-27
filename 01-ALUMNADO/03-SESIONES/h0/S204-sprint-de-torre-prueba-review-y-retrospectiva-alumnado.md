@@ -1,4 +1,4 @@
-# Sesión 204 — Ficha de trabajo del alumnado
+# H0.4 — Torre de papel: construir, probar, inspeccionar y adaptar
 
 ## Torre de papel: construir, probar, inspeccionar y adaptar
 
@@ -42,7 +42,7 @@ Por equipo:
 - 1 folio de planificación que no forma parte de la torre;
 - notas o recortes para el tablero;
 - un rotulador;
-- esta ficha y el trabajo de S203.
+- esta ficha y el trabajo de H0.3.
 
 Herramientas compartidas: tijeras escolares, regla, lápiz, perforadora, cronómetro y cinta métrica. Son herramientas: no pueden formar parte de la torre.
 
@@ -69,7 +69,7 @@ La altura se mide con la carga colocada cuando la torre supera la prueba de esta
 
 ## 4. Recuperad el diseño del equipo
 
-### Hipótesis de S203
+### Hipótesis de H0.3
 
 **Fortaleza prevista:**  
 ................................................................................
@@ -98,7 +98,7 @@ Recordatorio: todas las personas aportan ideas, construyen, comprueban y pueden 
 
 ## 5. Preparad el tablero
 
-Usad el backlog de S203 y actualizadlo antes de empezar.
+Usad el backlog de H0.3 y actualizadlo antes de empezar.
 
 | Prioridad | Tarea | Responsable provisional | Criterio de Hecho | Estado |
 |---:|---|---|---|---|
