@@ -1,5 +1,9 @@
 from pathlib import Path
+import hashlib
 import re
+import shutil
+import subprocess
+import sys
 from zipfile import ZipFile
 
 from openpyxl import load_workbook
@@ -249,6 +253,31 @@ def test_entregas_laura_replican_el_contrato_moodle_minimo():
         assert "`XLSX adjunto`" not in text
     final = (examples / "HF-entrega.md").read_text(encoding="utf-8")
     assert "`hf-final`" in final and "Site personal final" in final and "Site de equipo final" in final
+
+
+def test_generador_laura_reproduce_exactamente_la_salida_canonica(tmp_path):
+    canonical = ROOT / "03-EJEMPLOS-LAURA-PRIVADOS"
+    shutil.copy2(ROOT / "generar_evidencias_laura.py", tmp_path)
+    shutil.copytree(canonical, tmp_path / canonical.name)
+
+    subprocess.run(
+        [sys.executable, "generar_evidencias_laura.py"],
+        cwd=tmp_path,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    expected = {
+        path.relative_to(canonical): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in canonical.rglob("*") if path.is_file()
+    }
+    generated = {
+        path.relative_to(tmp_path / canonical.name): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in (tmp_path / canonical.name).rglob("*") if path.is_file()
+    }
+    assert len(generated) == 72
+    assert generated == expected
 
 
 def test_fuentes_sin_modelo_documental_obsoleto():

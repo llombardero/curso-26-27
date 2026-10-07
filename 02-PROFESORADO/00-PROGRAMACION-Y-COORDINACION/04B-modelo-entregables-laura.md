@@ -14,7 +14,7 @@ La fuente regenerable es `generar_evidencias_laura.py` y la salida vive en `03-E
 ├── FUENTES-CURSO/
 │   ├── 01-Diario-individual-MiniJarvis.xlsx
 │   └── 02-Scrum-equipo-MiniJarvis.xlsx
-├── ENTREGA-MOODLE/
+├── ENTREGAS-MOODLE/
 │   └── una entrega mínima por H0-H7 y HF
 ├── PORTFOLIOS-PERIODICOS/
 │   └── Site personal y de equipo para C1, C2 y HF
