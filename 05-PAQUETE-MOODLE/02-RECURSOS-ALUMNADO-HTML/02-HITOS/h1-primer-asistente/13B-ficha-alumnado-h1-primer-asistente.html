@@ -29,6 +29,8 @@ debes poder comprender completamente.</p>
 <li>recibir datos mediante <code>Scanner</code>;</li>
 <li>convertir una entrada textual a un valor numérico;</li>
 <li>realizar un cálculo sencillo;</li>
+<li>producir y mostrar una comparación booleana sin cambiar el flujo del
+programa;</li>
 <li>ejecutar y comprobar el programa;</li>
 <li>localizar y corregir errores básicos;</li>
 <li>explicar cómo se ejecuta y qué hace.</li>
@@ -41,6 +43,8 @@ ejecutable, comprobable y defendible</strong>.</p>
 <p>En H1 todavía no debes incorporar:</p>
 <pre class="text"><code>[ ] Menús.
 [ ] Bucles.
+[ ] Decisiones con if o if/else.
+[ ] Bifurcaciones.
 [ ] switch.
 [ ] Memoria.
 [ ] Listas, sets o mapas.
@@ -62,7 +66,8 @@ explicar.</p>
 ¿Cómo te llamas? Laura
 Encantado de conocerte, Laura.
 ¿Cuántas horas has practicado Programación? 4
-Si la próxima semana practicas una hora más, serán 5 horas.</code></pre>
+Si la próxima semana practicas una hora más, serán 5 horas.
+¿Has alcanzado 4 horas de práctica? true</code></pre>
 <p>La salida concreta puede ser diferente.</p>
 <p>Lo importante es que puedas explicar de dónde sale cada dato y cada
 mensaje.</p>
@@ -137,7 +142,7 @@ Leer datos.
         ↓
 Convertir un dato numérico.
         ↓
-Realizar un cálculo.
+Realizar un cálculo y mostrar una comparación booleana.
         ↓
 Comprobar.
         ↓
@@ -173,6 +178,8 @@ aprendido</h3>
 <li>explicar una variable y una constante;</li>
 <li>explicar cómo entra la información;</li>
 <li>explicar la conversión numérica;</li>
+<li>explicar el cálculo y el resultado <code>boolean</code> de la
+comparación;</li>
 <li>modificar una parte sencilla;</li>
 <li>explicar algún error que hayas encontrado y cómo lo resolviste.</li>
 </ul>
@@ -200,6 +207,10 @@ del hito con:</p>
 <li>una conversión numérica;</li>
 <li>un cálculo sencillo;</li>
 <li>salida que muestre el resultado;</li>
+<li>una comparación sencilla cuyo resultado <code>boolean</code> se
+almacene o utilice de forma visible y se muestre;</li>
+<li>flujo secuencial, sin <code>if</code>, <code>if/else</code> ni
+bifurcaciones;</li>
 <li>comentarios útiles cuando aporten contexto, evitando comentar lo
 obvio.</li>
 </ul>
@@ -227,12 +238,15 @@ class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href=
 [ ] Pedir el nombre.
 [ ] Guardarlo.
 [ ] Utilizarlo posteriormente en una salida.</code></pre>
-<h3 id="paso-5--entrada-numérica-y-cálculo">Paso 5 — Entrada numérica y
-cálculo</h3>
+<h3 id="paso-5--entrada-numérica-cálculo-y-comparación">Paso 5 — Entrada
+numérica, cálculo y comparación</h3>
 <pre class="text"><code>[ ] Leer un número inicialmente como texto.
 [ ] Convertirlo a un tipo numérico.
 [ ] Realizar un cálculo sencillo.
-[ ] Mostrar el resultado.</code></pre>
+[ ] Mostrar el resultado.
+[ ] Realizar una comparación sencilla con el valor numérico.
+[ ] Guardar o utilizar de forma visible su resultado booleano.
+[ ] Mostrar `true` o `false` sin decidir qué instrucciones se ejecutan.</code></pre>
 <p>No necesitas todavía tomar decisiones mediante <code>if</code>.</p>
 <h3 id="paso-6--limpieza">Paso 6 — Limpieza</h3>
 <p>Revisa:</p>
@@ -291,7 +305,8 @@ que:</p>
 [ ] Utiliza al menos una constante.
 [ ] Convierte una entrada textual a número.
 [ ] Realiza al menos un cálculo sencillo.
-[ ] El resultado puede comprobarse ejecutando el programa.
+[ ] Produce y muestra una comparación booleana sin bifurcación.
+[ ] El cálculo y el resultado booleano pueden comprobarse ejecutando el programa.
 [ ] El código se mantiene dentro del alcance de H1.
 [ ] El README explica qué hace y cómo se ejecuta.</code></pre>
 <p>Cumplir la lista no sustituye comprender el programa.</p>
@@ -342,6 +357,8 @@ ni otros secretos.</p>
 ¿Qué devuelve nextLine()?
 ¿Por qué necesitas convertir este texto?
 ¿Qué cálculo estás realizando?
+¿Qué comparación estás realizando y cuándo produce true o false?
+¿Por qué esa comparación no decide el flujo en H1?
 ¿Qué ocurre si escribes texto donde esperabas un número?
 ¿Cómo ejecutas esta versión?
 ¿Por qué todavía no hay menú ni bucles?</code></pre>
@@ -365,6 +382,8 @@ respuestas.</p>
 [ ] Puedo explicar cómo entra la información.
 [ ] Puedo explicar la conversión numérica.
 [ ] Puedo explicar el cálculo.
+[ ] Puedo localizar la comparación y predecir el resultado booleano.
+[ ] Puedo explicar que H1 no utiliza ese resultado para bifurcar el flujo.
 [ ] Puedo modificar una parte sencilla.
 [ ] No he adelantado contenidos de otros hitos.
 [ ] El README permite saber qué hace y cómo ejecutar esta versión.

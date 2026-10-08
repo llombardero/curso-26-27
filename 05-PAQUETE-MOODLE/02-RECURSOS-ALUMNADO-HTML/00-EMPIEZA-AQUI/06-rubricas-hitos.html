@@ -344,10 +344,23 @@ existe evidencia parcial de comprensión.</td>
 requerido.</td>
 </tr>
 <tr class="odd">
+<td>Comparación booleana observable</td>
+<td>Produce, almacena o utiliza de forma visible y muestra una
+comparación simple; explica <code>true</code> y <code>false</code> sin
+bifurcar el flujo.</td>
+<td>La comparación produce y muestra el <code>boolean</code> previsto y
+puede explicarla.</td>
+<td>La comparación o su salida presentan fallos, aunque existe evidencia
+parcial de comprensión.</td>
+<td>No hay comparación booleana observable o se sustituye por control de
+flujo no requerido.</td>
+</tr>
+<tr class="even">
 <td>Ajuste al nivel de H1</td>
 <td>Mantiene una solución sencilla y completamente defendible sin
-adelantar menús, bucles, <code>switch</code>, colecciones, varias clases
-propias, ficheros, persistencia o IA real.</td>
+adelantar <code>if/else</code>, bifurcaciones, menús, bucles,
+<code>switch</code>, colecciones, varias clases propias, ficheros,
+persistencia o IA real.</td>
 <td>Se mantiene dentro del alcance de H1, con alguna ampliación menor
 que puede explicar.</td>
 <td>Introduce técnicas prematuras que complican la solución o que
@@ -355,7 +368,7 @@ comprende solo parcialmente.</td>
 <td>La solución depende de contenidos no trabajados y no puede
 defenderse adecuadamente.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Comprobación, errores y mejora</td>
 <td>Construye de forma incremental, ejecuta tras cambios relevantes,
 comprueba resultados y puede explicar al menos un error o mejora real
@@ -367,7 +380,7 @@ detectó y corrigió problemas.</td>
 <td>No puede mostrar cómo comprobó el programa ni cómo reaccionó ante
 errores básicos.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>README y versión evaluada</td>
 <td>El README permite saber qué hace y cómo ejecutar H1; la versión
 evaluada se identifica claramente mediante el mecanismo indicado para la
@@ -378,13 +391,14 @@ la versión presentada.</td>
 <td>No puede localizarse con claridad la versión evaluada o falta la
 información técnica mínima necesaria.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Defensa individual</td>
-<td>Explica <code>main</code>, variables, constante, literales,
-<code>Scanner</code>, conversión, cálculo y ejecución; puede predecir o
-realizar una modificación sencilla y comprobarla.</td>
-<td>Explica los elementos esenciales y realiza una modificación sencilla
-con ayuda puntual.</td>
+<td>Explica <code>main</code>, variables/tipos, constante, literales,
+<code>Scanner</code>, conversión, cálculo, salida y comparación booleana
+sin bifurcación; puede predecir o realizar una modificación sencilla y
+comprobarla.</td>
+<td>Explica los elementos esenciales, incluido el <code>boolean</code>,
+y realiza una modificación sencilla con ayuda puntual.</td>
 <td>Presenta dudas importantes o necesita mucha ayuda para relacionar el
 código con su comportamiento.</td>
 <td>No puede demostrar suficientemente la comprensión individual del
