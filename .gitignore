@@ -6,3 +6,6 @@ Minijarvis-presentaciones-sesiones.zip
 # Artefactos generados por Python
 __pycache__/
 *.pyc
+
+.obsidian/
+.~lock.*#
